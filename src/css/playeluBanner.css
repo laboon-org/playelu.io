@@ -1,0 +1,300 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('http://fonts.cdnfonts.com/css/boldenvan');
+body{
+    overflow: hidden;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+::placeholder { 
+    font-family: 'BoldenVan', sans-serif;  
+    color: #114F8C;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    font-family: 'BoldenVan', sans-serif;  
+    color: #114F8C;
+}
+
+::-ms-input-placeholder { 
+    font-family: 'BoldenVan', sans-serif;  
+    color: #114F8C;
+}
+.w-70 {
+    width: 70%!important;
+}
+
+.playelu{
+    background: url("../img/backgrounTop.png") no-repeat center /cover;
+    height: 100vh;
+    z-index: -2;
+    background-position-y: 72%;
+    position: relative;
+    overflow: hidden;
+}
+.background-bottom{
+    position: absolute;
+    z-index: -1;
+    bottom: -10vh;
+    width: 100%;
+}
+.background__bottom-img{
+    width: 100%;
+}
+.sound{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vh;
+}
+.sound-on,.sound-off{
+    display: none;
+    width: 100%;
+}
+.sound-on.active,.sound-off.active{
+    display: block;
+}
+.mobile-discord{
+    position: absolute;
+    top: 35vh;
+    right: -15px;
+    width: 8vh;
+}
+.small-discord{
+    width: 100%;
+    display: none;
+}
+.playelu-all{
+    width: 50%;
+    margin:0 auto;
+    padding-top: 6vh;
+}
+.playelu-img{
+    width: 90%;
+   margin: auto;
+}
+
+.playelu-img img{
+    width: 100%;
+}
+.playelu-tittle{
+padding-bottom:  calc(100vh*2/100);
+   width: 100%;
+   text-align: center;
+}
+.playelu-tittle h1{
+    font-family: 'BoldenVan', sans-serif;                                         
+    color: #fff;
+    font-size: calc(100vh*5/100);
+}
+.playelu-btn{
+    margin: auto;
+    position: relative;
+}
+
+.playelu-btn button{
+    font-weight: 500;
+    font-family: 'BoldenVan', sans-serif;  
+    background-image: radial-gradient(circle, #FBD426, #FAB517);
+    position: absolute;
+    right: 0;
+    letter-spacing: 3px;
+    width: calc(100vw*13/100);
+    height: calc(100vh*7/100);
+    border-radius: calc(100vh*5.572/100);
+    color:#114F8C;
+    font-size: calc(100vh*3/100);
+    margin: calc(100vh*0.286/100);
+    border: calc(100vh*0.226/100) solid #114F8C;
+   
+}
+
+.playelu-btn input{
+    font-family: 'BoldenVan', sans-serif;  
+    width: 100%;
+    margin: auto;
+    letter-spacing: 3px;
+    height: calc(100vh*7.572/100);
+    border-radius: calc(100vh*5.572/100);
+    border: none;
+    font-size: calc(100vh*3/100);
+    color: #114F8C;
+    padding-left: calc(100vw*5/100);
+    position: absolute;
+}
+.iconEmail{
+    color: #114F8C;
+    position: absolute;
+    font-size: calc(100vh*5/100);
+    left: calc(100vw*1/100);
+    margin-top: calc(100vh*1.3/100);
+}
+.playelu-input{
+    width: 100%;
+}
+
+.playelu__link{
+    width: 20vw;
+    display: flex;
+}
+.playelu__link-ele img{
+    width: 100%;
+}
+.discord{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.discord img{
+    width: 11vw;
+    height: 9vw;
+}
+
+
+@media screen and (max-width: 739.8px){
+    .small-discord{
+        display: block;
+    }
+    .background-bottom{
+        bottom: 0;
+    }
+    .playelu-all{
+        width: 100%;
+        margin:0 auto;
+        padding-top: 8vh;
+    }
+    .playelu-tittle{
+           width: 93vw;
+           text-align: center;
+        }
+        .playelu-btn{
+           width: 95vw;
+        }
+    .playelu-btn button{
+        width: calc(100vw*30/100);
+        height: calc(100vh*6/100);
+        border-radius: calc(100vh*5.572/100);
+        font-size: calc(100vh*2.3/100);
+        letter-spacing: 2px;
+    }
+    
+    .playelu-btn input{
+        height: calc(100vh*6.572/100);
+        border-radius: calc(100vh*5.572/100);
+        font-size: calc(100vh*2.7/100);
+        padding-left: calc(100vw*12/100);
+        letter-spacing: 2px;
+    }
+    .iconEmail{
+        font-size: calc(100vh*4/100);
+        left: calc(100vw*3/100);
+        margin-top: calc(100vh*1.3/100);
+    }
+    .playelu-input{
+        width: 100%;
+    }
+    
+    .playelu__link{
+        width: 50vw;
+        display: flex;
+    }
+    .playelu__link-ele img{
+        width: 100%;
+    }
+    .discord{
+        display: none;
+    }
+
+}
+@media screen and (min-width: 740px) and (max-width: 1024px){
+    .background-bottom{
+        bottom: 0;
+    }
+
+    .playelu-all{
+        width: 80%;
+        margin:0 auto;
+        padding-top: 4vh;
+    }
+
+    .playelu-tittle h1{
+        font-size: calc(100vh*5.5/100);
+    }
+   
+    .playelu-btn button{
+        width: calc(100vw*20/100);
+        font-size: calc(100vh*2.3/100);
+        letter-spacing: 3px;
+    }
+    
+    .playelu-btn input{
+        padding-left: calc(100vw*8.7/100);
+        font-size: calc(100vh*2.8/100);
+    }
+    .iconEmail{
+        color: #158fa5;
+        position: absolute;
+        font-size: calc(100vh*4.5/100);
+        left: calc(100vw*2/100);
+
+    }
+    
+    .playelu__link{
+        width: 40vw;
+    }
+
+    
+}
+@media screen and (min-width: 1024px) and (max-width: 1365px){
+    .background-bottom{
+        bottom: 0;
+    }
+    .playelu-all{
+        width: 60%;
+        margin:0 auto;
+        padding-top: 4vh;
+    }
+
+    .playelu-tittle h1{
+        font-size: calc(100vh*5.5/100);
+    }
+   
+    .playelu-btn button{
+        width: calc(100vw*20/100);
+        font-size: calc(100vh*2.3/100);
+        letter-spacing: 3px;
+    }
+    
+    .playelu-btn input{
+        padding-left: calc(100vw*7/100);
+        font-size: calc(100vh*2.7/100);
+    }
+    .iconEmail{
+        color: #158fa5;
+        position: absolute;
+        font-size: calc(100vh*4/100);
+        left: calc(100vw*2/100);
+        margin-top: calc(100vh*1.7/100);
+    }
+    
+    .playelu__link{
+        width: 30vw;
+    }
+
+}
+
+@media screen and (min-width: 1900px){
+    .playelu-img{
+        width: 80%;
+    }
+    .playelu-btn{
+        width: 75%;
+    }
+}
+
+
