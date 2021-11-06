@@ -33,7 +33,7 @@ function PlayeluLink() {
             id: 6,
             img: twitter
         },
-
+ 
     ]
     return (
         <div className='playelu__link  '>

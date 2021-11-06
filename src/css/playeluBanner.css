@@ -34,12 +34,11 @@ body{
     height: 100vh;
     z-index: -2;
     background-position-y: 72%;
-    position: relative;
     overflow: hidden;
 }
 .background-bottom{
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     bottom: -10vh;
     width: 100%;
 }
@@ -51,6 +50,7 @@ body{
     top: 0;
     left: 0;
     width: 10vh;
+    z-index: 5;
 }
 .sound-on,.sound-off{
     display: none;
@@ -70,6 +70,7 @@ body{
     display: none;
 }
 .playelu-all{
+
     width: 50%;
     margin:0 auto;
     padding-top: 6vh;
@@ -126,6 +127,7 @@ padding-bottom:  calc(100vh*2/100);
     color: #114F8C;
     padding-left: calc(100vw*5/100);
     position: absolute;
+
 }
 .iconEmail{
     color: #114F8C;
@@ -133,9 +135,11 @@ padding-bottom:  calc(100vh*2/100);
     font-size: calc(100vh*5/100);
     left: calc(100vw*1/100);
     margin-top: calc(100vh*1.3/100);
+    z-index : 4;
 }
 .playelu-input{
-    width: 100%;
+    z-index : 4;
+    width : 100%;
 }
 
 .playelu__link{
@@ -144,6 +148,9 @@ padding-bottom:  calc(100vh*2/100);
 }
 .playelu__link-ele img{
     width: 100%;
+}
+.playelu-bottom {
+    z-index: 3;
 }
 .discord{
     position: absolute;
@@ -154,14 +161,18 @@ padding-bottom:  calc(100vh*2/100);
     width: 11vw;
     height: 9vw;
 }
-
-
+.subcribe__playelu-btn{
+    z-index: 4;
+}
+.playelu-top{
+    z-index: 5;
+}
 @media screen and (max-width: 739.8px){
     .small-discord{
         display: block;
     }
     .background-bottom{
-        bottom: 0;
+ 
     }
     .playelu-all{
         width: 100%;
@@ -181,6 +192,7 @@ padding-bottom:  calc(100vh*2/100);
         border-radius: calc(100vh*5.572/100);
         font-size: calc(100vh*2.3/100);
         letter-spacing: 2px;
+      
     }
     
     .playelu-btn input{
