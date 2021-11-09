@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import playeluImg from "../img/eluLogo.png";
 import discord from "../img/eluDiscord.png";
 import PlayeluLink from "./playeluLink";
@@ -7,6 +8,13 @@ import soundOff from "../img/soundOff.png";
 import smallDiscord from "../img/smallDiscord.png";
 import backgroundBottom from "../img/backgroundBottom.png";
 import axios from "axios";
+import Background from "./background";
+import BackgroundStar from "./backgroundStar";
+import Modal from 'react-bootstrap/Modal';
+import modalImg from '../img/modal.png'
+import closeModal from '../img/closeModal.png'
+
+
 const controlSound = () => {
   const soundOn = document.querySelector(".sound-on");
   const soundOff = document.querySelector(".sound-off");
@@ -26,21 +34,34 @@ window.addEventListener("click", (event) => {
 });
 
 export default function PlayeluBaner() {
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const [email, setEmail] = React.useState("");
-  const URI ="https://script.google.com/macros/s/AKfycbzzpbtc6C2W3ju_gS5GFd34KB_LqnhXVCC67A7tR3-Q5NQAcbkMWWj2XEQyQdHJt5I/exec";
+  const URI = "https://script.google.com/macros/s/AKfycbzzpbtc6C2W3ju_gS5GFd34KB_LqnhXVCC67A7tR3-Q5NQAcbkMWWj2XEQyQdHJt5I/exec";
   const onPress = React.useCallback(() => {
-    axios
-      .get(URI, {
-        data: {
-          email,
-        },
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    handleShow()
   }, [email]);
-  return (
+  return (<>
+
     <div className="playelu">
+      <Modal
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered show={show} onHide={handleClose}>
+        <Modal.Header >
+          <div className='close-modal' onClick={() => handleClose()}>
+            <img src={closeModal} alt="" />
+          </div>
+
+
+          <img src={modalImg} alt="" />
+          <p className='name-email'>sầefqwrfvr</p>
+        </Modal.Header>
+      </Modal>
+      <Background />
+      <BackgroundStar />
       <div className="background-bottom">
         <img className="background__bottom-img" src={backgroundBottom} alt="" />
       </div>
@@ -64,11 +85,11 @@ export default function PlayeluBaner() {
           </div>
           <div className="playelu-btn">
             <input
-                onChange={(e) => {
+              onChange={(e) => {
                 setEmail(e.target.value);
               }}
               className="playelu-input "
-              type="text"
+              type="email"
               placeholder="Your Email here"
             ></input>
             <i className="iconEmail fas fa-envelope"></i>
@@ -76,9 +97,11 @@ export default function PlayeluBaner() {
               type="submit"
               className=" subcribe__playelu-btn"
               onClick={onPress}
+              onClick={handleShow}
             >
               Subscribe
             </button>
+
           </div>
         </div>
         <div className="playelu-bottom mt-auto mb-5 d-flex justify-content-center">
@@ -86,5 +109,6 @@ export default function PlayeluBaner() {
         </div>
       </div>
     </div>
+  </>
   );
 }

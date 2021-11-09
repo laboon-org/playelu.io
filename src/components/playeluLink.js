@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import facebook from '../img/iconFacebook.png'
 import insta from '../img/iconInsta.png'
 import opensea from '../img/iconOpensea.png'
@@ -33,7 +33,7 @@ function PlayeluLink() {
             id: 6,
             img: twitter
         },
- 
+
     ]
     return (
         <div className='playelu__link  '>

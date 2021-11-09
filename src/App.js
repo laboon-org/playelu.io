@@ -26,7 +26,7 @@ import PlayeluBaner from './components/playeluBaner';
 function App() {
 
   return (
-    <div className='playelu-body'>
+    <div>
       <PlayeluBaner />
     </div>
 
