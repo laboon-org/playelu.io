@@ -55,11 +55,7 @@ body{
     width: 100%;
 }
 .sound{
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 10vh;
-    z-index: 5;
 }
 .sound-on,.sound-off{
     display: none;
@@ -80,9 +76,50 @@ body{
     display: none;
 }
 .playelu-all{
-    width: 50%;
+    width: 45%;
     margin:0 auto;
-    padding-top: 6vh;
+
+}
+.playelu__header{
+    width: 90%;
+    margin: auto;
+   position: relative;
+}
+.playelu__header .playelu__header-big{
+    width: 100%;
+}
+.playelu__header-small{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    margin: 0 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.playelu__header-element{
+    display: flex;
+}
+.playelu__header-element-img{
+    position: relative;
+}
+.playelu__header-element img{
+    width: 90px;
+}
+.playelu__header-element-img h4{
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    line-height: 600%;
+    color: #fff;
+    font-family: 'BoldenVan', sans-serif;
+    font-weight: 400;
 }
 .playelu-img{
     width: 90%;
@@ -209,6 +246,8 @@ padding-bottom:  calc(100vh*2/100);
     position: absolute;
     bottom: 5%;
 }
+
+
 @media screen and (max-width: 739.8px){
     .background-bottom{
         bottom: 0;
@@ -270,8 +309,6 @@ padding-bottom:  calc(100vh*2/100);
         border-radius: 13px;
     }
     .modal-header{
-        display: block;
-        border: none;
         padding: 2px;
     }
     .close-modal{
@@ -283,6 +320,10 @@ padding-bottom:  calc(100vh*2/100);
     .name-email{
         font-size: 28px;
         bottom: 0;
+    }
+
+    .playelu__header{
+        display: none;
     }
 
 }
@@ -321,6 +362,25 @@ padding-bottom:  calc(100vh*2/100);
     
     .playelu__link{
         width: 40vw;
+    }
+
+
+
+    .playelu__header{
+        width: 90%;
+    }
+    .playelu__header-small{
+        margin: 6% 10%;
+        width: 80%;
+
+    }
+
+    .playelu__header-element img{
+        width: 85px;
+    }
+    .playelu__header-element-img h4{
+        font-size: 10px;
+        line-height: 680%;
     }
 
     

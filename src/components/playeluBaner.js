@@ -1,18 +1,23 @@
 import React, { useState } from "react";
-
-import playeluImg from "../img/eluLogo.png";
-import discord from "../img/eluDiscord.png";
+import Navbar from "./navbar";
 import PlayeluLink from "./playeluLink";
-import soundOn from "../img/sound.png";
-import soundOff from "../img/soundOff.png";
-import smallDiscord from "../img/smallDiscord.png";
-import backgroundBottom from "../img/backgroundBottom.png";
 import axios from "axios";
 import Background from "./background";
 import BackgroundStar from "./backgroundStar";
 import Modal from 'react-bootstrap/Modal';
+
+import playeluImg from "../img/eluLogo.png";
+import discord from "../img/eluDiscord.png";
+import soundOn from "../img/sound.png";
+import soundOff from "../img/soundOff.png";
+import smallDiscord from "../img/smallDiscord.png";
+import backgroundBottom from "../img/backgroundBottom.png";
 import modalImg from '../img/modal.png'
 import closeModal from '../img/closeModal.png'
+import playeluHeader1 from '../img/playeluHeader1.png'
+import playeluHeader2 from '../img/playeluHeader2.png'
+
+
 
 
 const controlSound = () => {
@@ -46,28 +51,30 @@ export default function PlayeluBaner() {
   return (<>
 
     <div className="playelu">
+      <div className='navbar'>
+        <div className="sound">
+          <img className="sound-on active" src={soundOn} alt="" />
+          <img className="sound-off" src={soundOff} alt="" />
+        </div>
+        <Navbar />
+      </div>
+
       <Modal
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered show={show} onHide={handleClose}>
-        <Modal.Header >
-          <div className='close-modal' onClick={() => handleClose()}>
-            <img src={closeModal} alt="" />
-          </div>
 
+        <div className='close-modal' onClick={() => handleClose()}>
+          <img src={closeModal} alt="" />
+        </div>
+        <img src={modalImg} alt="" />
+        <p className='name-email'></p>
 
-          <img src={modalImg} alt="" />
-          <p className='name-email'>sầefqwrfvr</p>
-        </Modal.Header>
       </Modal>
       <Background />
       <BackgroundStar />
       <div className="background-bottom">
         <img className="background__bottom-img" src={backgroundBottom} alt="" />
-      </div>
-      <div className="sound">
-        <img className="sound-on active" src={soundOn} alt="" />
-        <img className="sound-off" src={soundOff} alt="" />
       </div>
       <div className="discord">
         <img className="discord" src={discord} alt="" />
@@ -77,6 +84,33 @@ export default function PlayeluBaner() {
       </div>
       <div className="playelu-all d-flex flex-column h-100 justify-content-center">
         <div className="playelu-top">
+          <div className='playelu__header'>
+            <img className='playelu__header-big' src={playeluHeader1} alt="" />
+            <div className='playelu__header-small'>
+              <div className='playelu__header-element'>
+                <div className='playelu__header-element-img'>
+                  <img src={playeluHeader2} alt="" />
+                  <h4>ROADMAP</h4>
+                </div>
+                <div className='playelu__header-element-img'>
+                  <img src={playeluHeader2} alt="" />
+                  <h4>TOKENOMIC</h4>
+                </div>
+              </div>
+              <div className='playelu__header-element'>
+                <div className='playelu__header-element-img'>
+                  <img src={playeluHeader2} alt="" />
+                  <h4>GAMEPLAY</h4>
+                </div>
+                <div className='playelu__header-element-img'>
+                  <img src={playeluHeader2} alt="" />
+                  <h4>LITEPAPER</h4>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
           <div className="playelu-img">
             <img src={playeluImg} alt="" />
           </div>

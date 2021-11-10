@@ -99,7 +99,7 @@ export default function BackgroundStar() {
                         position: 'absolute',
                         marginTop: getRandomNumberMinMax(window.innerHeight * 1 / 100, window.innerHeight * 60 / 100),
                         marginLeft: parseInt(window.innerWidth * (5 / 100) * (key + 1)) - window.innerWidth * 5 / 100,
-                        width: key === 3 ? window.innerWidth * 8 / 100 : getRandomNumberMinMax(window.innerWidth * 2 / 100, window.innerWidth * 8 / 100),
+                        width: key === 3 ? window.innerWidth * 7 / 100 : getRandomNumberMinMax(window.innerWidth * 2 / 100, window.innerWidth * 6 / 100),
                         zIndex: getRandomNumberMinMax(0, 6),
                         opacity: Math.random(0.95, 1)
                     };
