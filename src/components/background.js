@@ -3,8 +3,6 @@ import cloud1 from '../img/cloud1.png'
 import cloud2 from '../img/cloud2.png'
 import cloud3 from '../img/cloud3.png'
 import cloud4 from '../img/cloud4.png'
-import square from '../img/square.png'
-import triangle from '../img/triangle.png'
 
 
 const getRandomNumberMinMax = (min, max) => {
