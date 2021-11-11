@@ -80,7 +80,7 @@ export default function PlayeluBaner() {
           <img src={closeModal} alt="" />
         </div>
         <img src={modalImg} alt="" />
-        <p className='name-email'></p>
+        <p className='name-email'>{email}</p>
 
       </Modal>
       <Background />

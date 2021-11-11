@@ -249,6 +249,7 @@ padding-bottom:  calc(100vh*2/100);
     width: 100%;
 }
 .name-email{
+    font-family: 'BoldenVan', sans-serif;  
     width: 100%;
     color: #fff;
     font-size: 32px;
