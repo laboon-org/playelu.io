@@ -11,12 +11,13 @@
 .modal-dialog{
     margin: 0;
 }
-.modal-content{
+.modal-100w  > .modal-content{
     background: url('../img/backgroundModalNavbar.png')no-repeat center /cover;
     height: 100vh;
     border-radius: 0;
     margin: 0;
 }
+
 .header__modal-navbar{
     margin: 20px 10px;
     display: flex;

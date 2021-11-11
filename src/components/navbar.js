@@ -15,7 +15,7 @@ export default function Navbar() {
     const handleShow = () => setShow(true);
 
     return (
-        <div>
+        <div >
             <div className='navbar-btn' onClick={() => setShow(true)}>
                 <img src={NavbarBtn} alt="" />
             </div>
@@ -52,6 +52,7 @@ export default function Navbar() {
                 </div>
 
             </Modal>
-        </div>
+
+        </div >
     );
 }

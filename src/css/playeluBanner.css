@@ -76,12 +76,13 @@ body{
     display: none;
 }
 .playelu-all{
+    max-width: 1280px;
     width: 45%;
     margin:0 auto;
 
 }
 .playelu__header{
-    width: 90%;
+    width: 80%;
     margin: auto;
    position: relative;
 }
@@ -95,20 +96,21 @@ body{
     left: 0;
     right: 0;
     align-items: center;
-    margin: 0 10%;
-    width: 80%;
+    margin: 0 7.5%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
 }
 
 .playelu__header-element{
     display: flex;
+    justify-content: space-around;
 }
 .playelu__header-element-img{
     position: relative;
 }
 .playelu__header-element img{
-    width: 90px;
+    width: 100px;
 }
 .playelu__header-element-img h4{
     position: absolute;
@@ -116,7 +118,7 @@ body{
     font-size: 12px;
     text-align: center;
     width: 100%;
-    line-height: 600%;
+    line-height: 700%;
     color: #fff;
     font-family: 'BoldenVan', sans-serif;
     font-weight: 400;
@@ -142,6 +144,7 @@ padding-bottom:  calc(100vh*2/100);
 .playelu-btn{
     margin: auto;
     position: relative;
+    height: 8vh;
 }
 
 .playelu-btn button{
@@ -189,7 +192,7 @@ padding-bottom:  calc(100vh*2/100);
 }
 
 .playelu__link{
-    width: 20vw;
+    width: 30%;
     display: flex;
 }
 .playelu__link-ele img{
@@ -214,7 +217,14 @@ padding-bottom:  calc(100vh*2/100);
 .playelu-top{
     z-index: 5;
 }
-
+.modal-thankyou{
+    display: flex;
+    justify-content: center;
+    min-width: 100vw;
+}
+.modal-thankyou > .modal-content{
+    width: 50vw;
+}
 .modal-content{
     border-radius: 25px;
 }
@@ -305,6 +315,9 @@ padding-bottom:  calc(100vh*2/100);
     .discord{
         display: none;
     }
+    .modal-thankyou > .modal-content{
+        width: 100vw;
+    }
     .modal-content{
         border-radius: 13px;
     }
@@ -383,6 +396,14 @@ padding-bottom:  calc(100vh*2/100);
         line-height: 680%;
     }
 
+    .modal-thankyou > .modal-content{
+        width: 70vw;
+    }
+    .playelu__header-element img{
+        width: 80px;
+     margin: 0 5px;
+    }
+
     
 }
 @media screen and (min-width: 1024px) and (max-width: 1365px){
@@ -419,6 +440,11 @@ padding-bottom:  calc(100vh*2/100);
     
     .playelu__link{
         width: 30vw;
+    }
+  
+    .playelu__header-element img{
+        width: 90px;
+     margin: 0 5px;
     }
 
 }
