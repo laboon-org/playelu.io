@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./navbar";
 import PlayeluLink from "./playeluLink";
 import axios from "axios";
-import Background from "./background";
+import BackgroundCloud from "./background";
 import BackgroundStar from "./backgroundStar";
 import Modal from 'react-bootstrap/Modal';
 
@@ -37,7 +37,8 @@ const controlSound = () => {
 window.addEventListener("click", (event) => {
   controlSound();
 });
-
+const BackgroundStar1 = <BackgroundStar />
+const BackgroundCloud1 = <BackgroundCloud />
 export default function PlayeluBaner() {
 
   const [show, setShow] = useState(false);
@@ -61,6 +62,7 @@ export default function PlayeluBaner() {
 
       <Modal
         size="lg"
+
         dialogClassName="modal-thankyou"
         aria-labelledby="contained-modal-title-vcenter"
         centered show={show} onHide={handleClose}>
@@ -72,8 +74,8 @@ export default function PlayeluBaner() {
         <p className='name-email'></p>
 
       </Modal>
-      <Background />
-      <BackgroundStar />
+      {BackgroundCloud1}
+      {BackgroundStar1}
       <div className="background-bottom">
         <img className="background__bottom-img" src={backgroundBottom} alt="" />
       </div>
