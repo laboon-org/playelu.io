@@ -45,8 +45,19 @@ export default function PlayeluBaner() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [email, setEmail] = React.useState("");
-  const URI = "https://script.google.com/macros/s/AKfycbzzpbtc6C2W3ju_gS5GFd34KB_LqnhXVCC67A7tR3-Q5NQAcbkMWWj2XEQyQdHJt5I/exec";
+  const URI = "https://api.playelu.io/subemail";
   const onPress = React.useCallback(() => {
+    fetch(URI, {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email })
+    }).then(
+      response => console.log(response)
+    ).catch(err => console.log(err))
+
     handleShow()
   }, [email]);
   return (<>
@@ -71,7 +82,7 @@ export default function PlayeluBaner() {
           <img src={closeModal} alt="" />
         </div>
         <img src={modalImg} alt="" />
-        <p className='name-email'></p>
+        <p className='name-email'>{email}</p>
 
       </Modal>
       {BackgroundCloud1}
@@ -134,7 +145,6 @@ export default function PlayeluBaner() {
               type="submit"
               className=" subcribe__playelu-btn"
               onClick={onPress}
-              onClick={handleShow}
             >
               Subscribe
             </button>
