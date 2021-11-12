@@ -6,7 +6,6 @@
 }
 @import url('http://fonts.cdnfonts.com/css/boldenvan');
 body{
-
     overflow: hidden;
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
@@ -30,7 +29,50 @@ body{
 .w-70 {
     width: 70%!important;
 }
+.shooting-star{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
 
+}
+.my_star-all{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.my-star{
+   width: 100%;
+   transform: rotate(-45deg);
+   position: relative;
+}
+.my-star img{
+    animation: twirl 0.00001s ease 0s infinite;
+    -webkit-animation: twirl 4s linear 0s infinite;
+    -moz-animation: twirl 4s linear 0s infinite;
+    -o-animation: twirl 4s linear 0s infinite;
+    width: 100%;
+ }
+ /* .my-star::before{
+     content: '';
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 50px;
+     height: 1px;
+     background: linear-gradient(0deg,rgba(255,255,255,0), #dfbb39 12%, rgba(246,246,237,0));
+ } */
+.star-trail{
+    position: absolute;
+    top: -130%;
+    left: 40%;
+    height: 50px;
+    border-radius: 8px;
+    width: 20%;
+    background: linear-gradient(0deg,rgba(255,255,255,0), #dfbb39 12%, rgba(246,246,237,0));
+}
 .playelu{
     background: url("../img/backgrounTop.png") no-repeat center /cover;
     height: 100vh;
@@ -57,7 +99,7 @@ body{
     width: 100%;
 }
 .sound{
-    width: 10vh;
+    width: 7vh;
 }
 .sound-on,.sound-off{
     display: none;
@@ -73,57 +115,54 @@ body{
     right: 0;
     width: 12vw;
 }
-.small-discord{
+.mobile__discord-img{
     width: 100%;
     display: none;
 }
 .playelu-all{
-    max-width: 1280px;
+    max-width: 1920px;
     width: 45%;
     margin:0 auto;
 
 }
-.playelu__header{
-    width: 80%;
-    margin: auto;
-   position: relative;
-}
-.playelu__header .playelu__header-big{
-    width: 100%;
-}
-.playelu__header-small{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    align-items: center;
-    margin: 0 7.5%;
-    width: 85%;
-    display: flex;
-    justify-content: space-between;
+.playelu-menu{
+    background: url('../img/playeluHeader1.png') no-repeat center /contain;
+    margin-top: 5px;
+    height: 19vh;
+
+
 }
 
-.playelu__header-element{
+.menu{
+    width: 89%;
+    margin: auto;
+    height: 19vh;
+    align-items: center;
     display: flex;
     justify-content: space-around;
 }
-.playelu__header-element-img{
+
+.playelu__menu-element{
+    width: 20%;
+    text-align: center;
     position: relative;
+    cursor: pointer;
 }
-.playelu__header-element img{
-    width: 100px;
+.playelu__menu-element img{
+    margin: auto;
+    width: 80%;
 }
-.playelu__header-element-img h4{
+.playelu__menu-element h4{
     position: absolute;
     top: 0;
-    font-size: 12px;
+    font-size: 14px;
+    letter-spacing: 1.6px;
     text-align: center;
     width: 100%;
-    line-height: 700%;
+    top: 50%;
     color: #fff;
     font-family: 'BoldenVan', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
 }
 .playelu-img{
     width: 90%;
@@ -134,9 +173,9 @@ body{
     width: 100%;
 }
 .playelu-tittle{
-padding-bottom:  calc(100vh*2/100);
-   width: 100%;
-   text-align: center;
+    padding-bottom:  calc(100vh*2/100);
+    width: 100%;
+    text-align: center;
 }
 .playelu-tittle h1{
     font-family: 'BoldenVan', sans-serif;                                         
@@ -194,7 +233,7 @@ padding-bottom:  calc(100vh*2/100);
 }
 
 .playelu__link{
-    width: 30%;
+    width: 40%;
     display: flex;
 }
 .playelu__link-ele img{
@@ -208,6 +247,7 @@ padding-bottom:  calc(100vh*2/100);
     bottom: 0;
     right: 0;
     z-index: 2;
+    cursor: pointer;
 }
 .discord img{
     width: 11vw;
@@ -259,7 +299,32 @@ padding-bottom:  calc(100vh*2/100);
     position: absolute;
     bottom: 5%;
 }
+.background-star{
+    animation: twirl 10s linear 0s infinite;
+    -webkit-animation: twirl 10s linear 0s infinite;
+    -moz-animation: twirl 10s linear 0s infinite;
+    -o-animation: twirl 10s linear 0s infinite;
+}
 
+
+
+@keyframes twirl{
+    from{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+
+  
+ 
 
 @media screen and (max-width: 739.8px){
     :root{
@@ -268,19 +333,19 @@ padding-bottom:  calc(100vh*2/100);
     .background-bottom{
         bottom: 0;
     }
-    .small-discord{
+    .mobile__discord-img{
         display: block;
     }
-    .background-bottom{
- 
-    }
+
     .playelu-all{
         width: 100%;
         margin:0 auto;
         padding-top: 8vh;
     }
+
     .playelu-tittle{
-           width: 93vw;
+           width: 70vw;
+           margin: 0 15%;
            text-align: center;
         }
         .playelu-btn{
@@ -292,7 +357,6 @@ padding-bottom:  calc(100vh*2/100);
         border-radius: calc(100vh*5.572/100);
         font-size: calc(100vh*2.3/100);
         letter-spacing: 2px;
-      
     }
     
     .playelu-btn input{
@@ -303,46 +367,55 @@ padding-bottom:  calc(100vh*2/100);
         padding-left: calc(100vw*12/100);
         letter-spacing: 2px;
     }
+
     .iconEmail{
         font-size: calc(100vh*4/100);
         left: calc(100vw*3/100);
         margin-top: calc(100vh*1.3/100);
     }
+
     .playelu-input{
         width: 100%;
     }
     
     .playelu__link{
-        width: 50vw;
+        width: 50%;
         display: flex;
     }
+
     .playelu__link-ele img{
         width: 100%;
     }
+
     .discord{
         display: none;
     }
+
     .modal-thankyou > .modal-content{
         width: 100vw;
     }
+
     .modal-content{
         border-radius: 13px;
     }
+
     .modal-header{
         padding: 2px;
     }
+
     .close-modal{
         width: 25px;
         height: 25px;
         top: 15px;
         right: 15px;
     }
+
     .name-email{
         font-size: 28px;
         bottom: 0;
     }
 
-    .playelu__header{
+    .playelu-menu{
         display: none;
     }
 
@@ -356,9 +429,8 @@ padding-bottom:  calc(100vh*2/100);
     }
 
     .playelu-all{
-        width: 80%;
+        width: 90%;
         margin:0 auto;
-        padding-top: 4vh;
     }
 
     .playelu-tittle h1{
@@ -381,38 +453,18 @@ padding-bottom:  calc(100vh*2/100);
         position: absolute;
         font-size: calc(100vh*4.5/100);
         left: calc(100vw*2/100);
-
     }
     
     .playelu__link{
-        width: 40vw;
+        width: 40%;
     }
 
-
-
-    .playelu__header{
-        width: 90%;
-    }
-    .playelu__header-small{
-        margin: 6% 10%;
-        width: 80%;
-
-    }
-
-    .playelu__header-element img{
-        width: 85px;
-    }
-    .playelu__header-element-img h4{
-        font-size: 10px;
-        line-height: 680%;
+    .playelu-menu{
+        width: 100%;
     }
 
     .modal-thankyou > .modal-content{
         width: 70vw;
-    }
-    .playelu__header-element img{
-        width: 80px;
-     margin: 0 5px;
     }
 
     
@@ -425,9 +477,8 @@ padding-bottom:  calc(100vh*2/100);
         bottom: 0;
     }
     .playelu-all{
-        width: 60%;
-        margin:0 auto;
-        padding-top: 4vh;
+        width: 70%;
+        /* margin:0 auto; */
     }
 
     .playelu-tittle h1{
@@ -454,13 +505,13 @@ padding-bottom:  calc(100vh*2/100);
     }
     
     .playelu__link{
-        width: 30vw;
+        width: 35%;
     }
-  
-    .playelu__header-element img{
-        width: 90px;
-     margin: 0 5px;
+    .discord img{
+        width: 16vw;
+        height: 13vw;
     }
+ 
 
 }
 
@@ -472,5 +523,7 @@ padding-bottom:  calc(100vh*2/100);
         width: 75%;
     }
 }
+
+
 
 

@@ -5,6 +5,8 @@ import axios from "axios";
 import BackgroundCloud from "./background";
 import BackgroundStar from "./backgroundStar";
 import Modal from 'react-bootstrap/Modal';
+import BackgroundComet from "./bacgroundComet";
+import Stars from "./backgrounDecor/Stars";
 
 import playeluImg from "../img/eluLogo.png";
 import discord from "../img/eluDiscord.png";
@@ -14,8 +16,8 @@ import smallDiscord from "../img/smallDiscord.png";
 import backgroundBottom from "../img/backgroundBottom.png";
 import modalImg from '../img/modal.png'
 import closeModal from '../img/closeModal.png'
-import playeluHeader1 from '../img/playeluHeader1.png'
 import playeluHeader2 from '../img/playeluHeader2.png'
+import star5 from "../img/star5.png"
 
 
 
@@ -37,6 +39,7 @@ const controlSound = () => {
 window.addEventListener("click", (event) => {
   controlSound();
 });
+const BackgroundComet1 = <BackgroundComet />
 const BackgroundStar1 = <BackgroundStar />
 const BackgroundCloud1 = <BackgroundCloud />
 export default function PlayeluBaner() {
@@ -63,6 +66,7 @@ export default function PlayeluBaner() {
   return (<>
 
     <div className="playelu">
+
       <div className='navbar'>
         <div className="sound">
           <img className="sound-on active" src={soundOn} alt="" />
@@ -85,7 +89,24 @@ export default function PlayeluBaner() {
         <p className='name-email'>{email}</p>
 
       </Modal>
+      <div className='shooting-star'>
+        <Stars imgUrl={star5} />
+        <Stars imgUrl={star5} />
+        <Stars imgUrl={star5} />
+        <Stars imgUrl={star5} />
+        <Stars imgUrl={star5} />
+        <Stars imgUrl={star5} />
+        {/* <Stars imgUrl={star5} />
+        <Stars imgUrl={star5} />
+        <Stars imgUrl={star5} />
+        <Stars imgUrl={star5} />
+        <Stars imgUrl={star5} />
+        <Stars imgUrl={star5} />
+        <Stars imgUrl={star5} /> */}
+      </div>
+
       {BackgroundCloud1}
+      {BackgroundComet1}
       {BackgroundStar1}
       <div className="background-bottom">
         <img className="background__bottom-img" src={backgroundBottom} alt="" />
@@ -94,36 +115,31 @@ export default function PlayeluBaner() {
         <img className="discord" src={discord} alt="" />
       </div>
       <div className="mobile-discord">
-        <img className="small-discord" src={smallDiscord} alt="" />
+        <img className="mobile__discord-img" src={smallDiscord} alt="" />
       </div>
       <div className="playelu-all d-flex flex-column h-100 justify-content-center">
         <div className="playelu-top">
-          <div className='playelu__header'>
-            <img className='playelu__header-big' src={playeluHeader1} alt="" />
-            <div className='playelu__header-small'>
-              <div className='playelu__header-element'>
-                <div className='playelu__header-element-img'>
-                  <img src={playeluHeader2} alt="" />
-                  <h4>ROADMAP</h4>
-                </div>
-                <div className='playelu__header-element-img'>
-                  <img src={playeluHeader2} alt="" />
-                  <h4>TOKENOMIC</h4>
-                </div>
+          <div className='playelu-menu'>
+            <div className='menu'>
+              <div className='playelu__menu-element'>
+                <img src={playeluHeader2} alt="" />
+                <h4>ROADMAP</h4>
               </div>
-              <div className='playelu__header-element'>
-                <div className='playelu__header-element-img'>
-                  <img src={playeluHeader2} alt="" />
-                  <h4>GAMEPLAY</h4>
-                </div>
-                <div className='playelu__header-element-img'>
-                  <img src={playeluHeader2} alt="" />
-                  <h4>LITEPAPER</h4>
-                </div>
+              <div className='playelu__menu-element'>
+                <img src={playeluHeader2} alt="" />
+                <h4>TOKENOMIC</h4>
               </div>
-
+              <div className='playelu__menu-element'>
+              </div>
+              <div className='playelu__menu-element'>
+                <img src={playeluHeader2} alt="" />
+                <h4>GAMEPLAY</h4>
+              </div>
+              <div className='playelu__menu-element'>
+                <img src={playeluHeader2} alt="" />
+                <h4>LITEPAPER</h4>
+              </div>
             </div>
-
           </div>
           <div className="playelu-img">
             <img src={playeluImg} alt="" />
@@ -148,7 +164,6 @@ export default function PlayeluBaner() {
             >
               Subscribe
             </button>
-
           </div>
         </div>
         <div className="playelu-bottom mt-auto mb-5 d-flex justify-content-center">

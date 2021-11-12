@@ -2,8 +2,8 @@ import React from 'react'
 
 import star5 from '../img/star5.png'
 import star4 from '../img/star4.png'
-import comet from '../img/comet.png'
 import starDeviated from '../img/starDeviated.png'
+
 
 
 
@@ -18,7 +18,7 @@ const stars = [
     },
     {
         id: 2,
-        img: comet
+        img: starDeviated
     },
     {
         id: 3,
@@ -34,7 +34,7 @@ const stars = [
     },
     {
         id: 6,
-        img: comet
+        img: star4
     },
     {
         id: 7,
@@ -82,7 +82,7 @@ const stars = [
     },
     {
         id: 18,
-        img: comet
+        img: star5
     },
     {
         id: 19,
@@ -105,7 +105,7 @@ export default function BackgroundStar() {
                     };
 
                     return (
-                        <img src={star.img} style={starStyles} alt="" />
+                        <img className='background-star' src={star.img} style={starStyles} alt="" />
                     )
                 }
                 )

@@ -24,7 +24,7 @@
     justify-content: space-between;
 }
 .header__modal-navbar>img{
-    width: 20vh;
+    height: 70px;
 }
 .navbar-btn{
     display: none;
