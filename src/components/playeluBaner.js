@@ -122,7 +122,7 @@ export default function PlayeluBaner() {
           <div className='playelu-menu'>
             <div className='menu'>
               <div className='playelu__menu-element'>
-                <a href="https://bit.ly/3c75Cns">
+                <a href="">
                   <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
                   <h4>ROADMAP</h4>
                 </a>
