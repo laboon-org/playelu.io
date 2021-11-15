@@ -41,12 +41,26 @@ body{
 .my_star-all{
     position: relative;
     width: 100%;
-    height: 100%;
+    // height: 100%;
+    transform: rotate(140deg);
+   height: 20px;
 }
 .my-star{
    width: 100%;
-   transform: rotate(-45deg);
-   position: relative;
+    position: absolute;
+    bottom: 0;
+}
+
+.my-star::before{
+    content: '';
+    position: absolute;
+    // transform: translateY(-70%);
+    left: 40%;
+    // width: 50px;
+    width: 20%;
+    border-radius: 80%;
+    height: 170px;
+    background: linear-gradient(180deg,rgba(255,255,255,0), #dfbb39 12%, rgba(246,246,237,0));
 }
 .my-star img{
     animation: twirl 0.00001s ease 0s infinite;
@@ -66,15 +80,82 @@ body{
  } */
 .star-trail{
     position: absolute;
-    top: -130%;
+    bottom: 20%;
     left: 40%;
-    height: 50px;
+    height: 70px;
     border-radius: 8px;
     width: 20%;
     background: linear-gradient(0deg,rgba(255,255,255,0), #dfbb39 12%, rgba(246,246,237,0));
 }
+.background-cloud{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+
+}
+.my-cloud{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: url('../img/cloud.png');
+    animation: cloudanimation 60s linear infinite;
+}
+.cloud{
+    width: 15%;
+    animation: cloud 25s infinite linear;
+    position:relative;
+    display: flex;
+}
+.cloud2{
+    margin-left: 50vw;
+}
+.cloud img{
+    width: 100%;
+}
+.x1{
+    animation: cloud 21s infinite linear;
+    opacity: 1;  
+    }
+    
+    .x2{
+        animation: cloud 20s infinite linear;
+    opacity:0.9;
+    transform: scale(0.7);
+    top:0;
+    left: 10%;
+    }
+    
+    .x3{
+        animation: cloud 22s infinite linear;
+        top:15%;
+        transform: scale(0.6);
+    }
+    
+    .x4{
+        animation: cloud 24s infinite linear;
+        top:0;
+        transform: scale(0.9);
+    }
+    
+    .x5{
+        animation: cloud 25s infinite linear;
+    opacity:0.6;
+    transform: scale(1.0);
+    bottom:20vh;
+    left: 10%;
+    }
+    .x6{
+        animation: cloud 21s infinite linear;
+        opacity: 1;  
+        left: 20%;
+    }
 .playelu{
-    background: url("../img/backgrounTop.png") no-repeat center /cover;
+    background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/backgrounTop.png") no-repeat center /cover;
     height: 100vh;
     z-index: -2;
     background-position-y: 72%;
@@ -155,14 +236,17 @@ body{
 .playelu__menu-element h4{
     position: absolute;
     top: 0;
-    font-size: 14px;
-    letter-spacing: 1.6px;
+    font-size: 12px;
+    letter-spacing: 1.4px;
     text-align: center;
     width: 100%;
     top: 50%;
     color: #fff;
     font-family: 'BoldenVan', sans-serif;
     font-weight: 300;
+}
+.playelu__menu-element h4:hover{
+    color: #fabb1a;
 }
 .playelu-img{
     width: 90%;
@@ -259,12 +343,14 @@ body{
 .playelu-top{
     z-index: 5;
 }
-.modal-thankyou{
+
+
+.modal-thankyou,.modal-comingsoon{
     display: flex;
     justify-content: center;
     min-width: 100vw;
 }
-.modal-thankyou > .modal-content{
+.modal-thankyou > .modal-content,.modal-comingsoon > .modal-content{
     width: 50vw;
 }
 .modal-content{
@@ -305,9 +391,20 @@ body{
     -moz-animation: twirl 10s linear 0s infinite;
     -o-animation: twirl 10s linear 0s infinite;
 }
+@keyframes cloudanimation{
+    0%      {
+        background-position: 0px;
+    }
+    100%    {
+        background-position: 5440px;
+    }
+}
+@keyframes cloud {
 
-
-
+    0%      {margin-left: 0;}
+    100%    {margin-left:100%;}
+    
+}
 @keyframes twirl{
     from{
         -webkit-transform: rotate(0deg);
@@ -329,6 +426,9 @@ body{
 @media screen and (max-width: 739.8px){
     :root{
         --btnWidth:30vw
+    }
+    .my-star::before{
+        height: 50px;
     }
     .background-bottom{
         bottom: 0;
@@ -392,7 +492,7 @@ body{
     }
 
     .modal-thankyou > .modal-content{
-        width: 100vw;
+        width: 80vw;
     }
 
     .modal-content{
@@ -463,7 +563,7 @@ body{
         width: 100%;
     }
 
-    .modal-thankyou > .modal-content{
+    .modal-thankyou > .modal-content,.modal-comingsoon > .modal-content{
         width: 70vw;
     }
 
@@ -505,22 +605,25 @@ body{
     }
     
     .playelu__link{
-        width: 35%;
+        width: 40%;
     }
+
     .discord img{
         width: 16vw;
         height: 13vw;
     }
- 
 
 }
-
 @media screen and (min-width: 1900px){
     .playelu-img{
         width: 80%;
     }
+
     .playelu-btn{
         width: 75%;
+    }
+    .playelu__menu-element h4{
+        font-size: 16px;
     }
 }
 

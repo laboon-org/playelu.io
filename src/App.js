@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import './css/playeluBanner.css'
+import './css/playeluBanner.scss'
 import PlayeluBaner from './components/playeluBaner';
 
 

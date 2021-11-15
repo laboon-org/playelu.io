@@ -8,24 +8,15 @@ import Modal from 'react-bootstrap/Modal';
 import BackgroundComet from "./bacgroundComet";
 import Stars from "./backgrounDecor/Stars";
 
-import playeluImg from "../img/eluLogo.png";
+
 import discord from "../img/eluDiscord.png";
 import soundOn from "../img/sound.png";
 import soundOff from "../img/soundOff.png";
-import smallDiscord from "../img/smallDiscord.png";
-import backgroundBottom from "../img/backgroundBottom.png";
-import modalImg from '../img/modal.png'
-import closeModal from '../img/closeModal.png'
-import playeluHeader2 from '../img/playeluHeader2.png'
 import star5 from "../img/star5.png"
-
-
-
 
 const controlSound = () => {
   const soundOn = document.querySelector(".sound-on");
   const soundOff = document.querySelector(".sound-off");
-
   soundOn.addEventListener("click", () => {
     soundOff.classList.add("active");
     soundOn.classList.remove("active");
@@ -35,7 +26,6 @@ const controlSound = () => {
     soundOn.classList.add("active");
   });
 };
-//
 window.addEventListener("click", (event) => {
   controlSound();
 });
@@ -44,11 +34,17 @@ const BackgroundStar1 = <BackgroundStar />
 const BackgroundCloud1 = <BackgroundCloud />
 export default function PlayeluBaner() {
 
+  const [showComingSoon, setShowComingSoon] = useState(false);
+  const handleCloseComingSoon = () => setShowComingSoon(false);
+  const handleShowComingSoon = () => setShowComingSoon(true);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [email, setEmail] = React.useState("");
   const URI = "https://api.playelu.io/subemail";
+  const onPressMenu = () => {
+    handleShowComingSoon()
+  }
   const onPress = React.useCallback(() => {
     fetch(URI, {
       method: "POST",
@@ -60,13 +56,12 @@ export default function PlayeluBaner() {
     }).then(
       response => console.log(response)
     ).catch(err => console.log(err))
-
     handleShow()
   }, [email]);
+
   return (<>
-
     <div className="playelu">
-
+      {/* <div className='my-cloud'></div> */}
       <div className='navbar'>
         <div className="sound">
           <img className="sound-on active" src={soundOn} alt="" />
@@ -74,18 +69,29 @@ export default function PlayeluBaner() {
         </div>
         <Navbar />
       </div>
-
       <Modal
         size="lg"
 
+        dialogClassName="modal-comingsoon"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered show={showComingSoon} onHide={handleCloseComingSoon}>
+
+        <div className='close-modal' onClick={() => handleCloseComingSoon()}>
+          <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/closeModal.png' alt="" />
+        </div>
+        <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/modal.png' alt="" />
+
+      </Modal>
+      <Modal
+        size="lg"
         dialogClassName="modal-thankyou"
         aria-labelledby="contained-modal-title-vcenter"
         centered show={show} onHide={handleClose}>
 
         <div className='close-modal' onClick={() => handleClose()}>
-          <img src={closeModal} alt="" />
+          <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/closeModal.png' alt="" />
         </div>
-        <img src={modalImg} alt="" />
+        <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/modal.png' alt="" />
         <p className='name-email'>{email}</p>
 
       </Modal>
@@ -96,53 +102,53 @@ export default function PlayeluBaner() {
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
-        {/* <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
-        <Stars imgUrl={star5} />
-        <Stars imgUrl={star5} />
-        <Stars imgUrl={star5} />
-        <Stars imgUrl={star5} /> */}
       </div>
-
       {BackgroundCloud1}
       {BackgroundComet1}
       {BackgroundStar1}
       <div className="background-bottom">
-        <img className="background__bottom-img" src={backgroundBottom} alt="" />
+        <img className="background__bottom-img" src='https://storage.googleapis.com/laboon-img-storage/play-elu/backgroundBottom.png' alt="" />
       </div>
       <div className="discord">
         <img className="discord" src={discord} alt="" />
       </div>
       <div className="mobile-discord">
-        <img className="mobile__discord-img" src={smallDiscord} alt="" />
+        <img className="mobile__discord-img" src='https://storage.googleapis.com/laboon-img-storage/play-elu/smallDiscord.png' alt="" />
       </div>
       <div className="playelu-all d-flex flex-column h-100 justify-content-center">
         <div className="playelu-top">
           <div className='playelu-menu'>
             <div className='menu'>
               <div className='playelu__menu-element'>
-                <img src={playeluHeader2} alt="" />
-                <h4>ROADMAP</h4>
+                <a href="https://bit.ly/3c75Cns">
+                  <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
+                  <h4>ROADMAP</h4>
+                </a>
+
               </div>
-              <div className='playelu__menu-element'>
-                <img src={playeluHeader2} alt="" />
+              <div className='playelu__menu-element' onClick={onPressMenu}>
+                <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
                 <h4>TOKENOMIC</h4>
               </div>
-              <div className='playelu__menu-element'>
+              <div className='playelu__menu-element' onClick={onPressMenu}>
               </div>
-              <div className='playelu__menu-element'>
-                <img src={playeluHeader2} alt="" />
-                <h4>GAMEPLAY</h4>
+              <div className='playelu__menu-element' onClick={onPressMenu}>
+                <a href="">
+                  <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
+                  <h4 style={{ color: '#fabb1a' }}>GAMEPLAY</h4>
+                </a>
+
               </div>
-              <div className='playelu__menu-element'>
-                <img src={playeluHeader2} alt="" />
+              <div className='playelu__menu-element' onClick={onPressMenu}>
+                <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
                 <h4>LITEPAPER</h4>
               </div>
             </div>
           </div>
           <div className="playelu-img">
-            <img src={playeluImg} alt="" />
+            <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/eluLogo.png' alt="" />
           </div>
           <div className="playelu-tittle">
             <h1>Play-to-Earn NFT Game</h1>
