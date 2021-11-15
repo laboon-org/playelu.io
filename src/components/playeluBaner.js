@@ -90,7 +90,7 @@ export default function PlayeluBaner() {
         <p className='name-email'>{email}</p>
 
       </Modal>
-      {/* <div className='shooting-star'>
+      <div className='shooting-star'>
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
@@ -99,10 +99,10 @@ export default function PlayeluBaner() {
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
-      </div> */}
-      {/* {BackgroundCloud1}
+      </div>
+      {BackgroundCloud1}
       {BackgroundComet1}
-      {BackgroundStar1} */}
+      {BackgroundStar1}
       <div className="background-bottom">
         <img className="background__bottom-img" src='https://storage.googleapis.com/laboon-img-storage/play-elu/backgroundBottom.png' alt="" />
       </div>
