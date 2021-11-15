@@ -6,7 +6,6 @@ import tele from '../img/iconTele.png'
 import twitter from '../img/iconTwitter.png'
 import graphic from '../img/graphic.png'
 
-
 function PlayeluLink() {
     const elementLinks = [
         {
@@ -33,7 +32,6 @@ function PlayeluLink() {
             id: 6,
             img: twitter
         },
-
     ]
     return (
         <div className='playelu__link  '>
@@ -43,7 +41,6 @@ function PlayeluLink() {
                         <a href="">
                             <img src={elementLink.img} alt="" />
                         </a>
-
                     </div>
                 )
                 )

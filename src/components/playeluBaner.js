@@ -7,11 +7,6 @@ import BackgroundStar from "./backgroundStar";
 import Modal from 'react-bootstrap/Modal';
 import BackgroundComet from "./bacgroundComet";
 import Stars from "./backgrounDecor/Stars";
-
-
-import discord from "../img/eluDiscord.png";
-import soundOn from "../img/sound.png";
-import soundOff from "../img/soundOff.png";
 import star5 from "../img/star5.png"
 
 const controlSound = () => {
@@ -64,8 +59,8 @@ export default function PlayeluBaner() {
       {/* <div className='my-cloud'></div> */}
       <div className='navbar'>
         <div className="sound">
-          <img className="sound-on active" src={soundOn} alt="" />
-          <img className="sound-off" src={soundOff} alt="" />
+          <img className="sound-on active" src='https://storage.googleapis.com/laboon-img-storage/play-elu/sound.png' alt="" />
+          <img className="sound-off" src='https://storage.googleapis.com/laboon-img-storage/play-elu/soundOff.png' alt="" />
         </div>
         <Navbar />
       </div>
@@ -95,7 +90,7 @@ export default function PlayeluBaner() {
         <p className='name-email'>{email}</p>
 
       </Modal>
-      <div className='shooting-star'>
+      {/* <div className='shooting-star'>
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
@@ -104,15 +99,15 @@ export default function PlayeluBaner() {
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
-      </div>
-      {BackgroundCloud1}
+      </div> */}
+      {/* {BackgroundCloud1}
       {BackgroundComet1}
-      {BackgroundStar1}
+      {BackgroundStar1} */}
       <div className="background-bottom">
         <img className="background__bottom-img" src='https://storage.googleapis.com/laboon-img-storage/play-elu/backgroundBottom.png' alt="" />
       </div>
       <div className="discord">
-        <img className="discord" src={discord} alt="" />
+        <img className="discord" src='https://storage.googleapis.com/laboon-img-storage/play-elu/eluDiscord.png' alt="" />
       </div>
       <div className="mobile-discord">
         <img className="mobile__discord-img" src='https://storage.googleapis.com/laboon-img-storage/play-elu/smallDiscord.png' alt="" />

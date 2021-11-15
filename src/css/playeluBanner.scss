@@ -160,6 +160,7 @@ body{
     z-index: -2;
     background-position-y: 72%;
     overflow: hidden;
+    position: relative;
 }
 .star-cloud{
     position: absolute;
@@ -423,7 +424,7 @@ body{
   
  
 
-@media screen and (max-width: 739.8px){
+@media screen and (max-width: 739.9px){
     :root{
         --btnWidth:30vw
     }
@@ -432,6 +433,7 @@ body{
     }
     .background-bottom{
         bottom: 0;
+
     }
     .mobile__discord-img{
         display: block;
@@ -480,7 +482,6 @@ body{
     
     .playelu__link{
         width: 50%;
-        display: flex;
     }
 
     .playelu__link-ele img{
