@@ -16,7 +16,7 @@ jobs:
       with:
         node-version: '12.x'
     - run: yarn
-    - run: yarn run build
+    - run: CI=false yarn run build
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
