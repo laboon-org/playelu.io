@@ -1,5 +1,6 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import Modal from 'react-bootstrap/Modal';
+import { Link } from 'react-router-dom';
 
 
 export default function Menu() {
@@ -8,7 +9,7 @@ export default function Menu() {
     const handleShowComingSoon = () => setShowComingSoon(true);
     const onPressMenu = () => {
         handleShowComingSoon()
-      }
+    }
     return (
         <div className='playelu-menu'>
             <Modal
@@ -17,7 +18,7 @@ export default function Menu() {
                 aria-labelledby="contained-modal-title-vcenter"
                 centered show={showComingSoon} onHide={handleCloseComingSoon}>
                 <div className='close-modal' onClick={() => handleCloseComingSoon()}>
-                <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/closeModal.png' alt="" />
+                    <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/closeModal.png' alt="" />
                 </div>
                 <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/modal.png' alt="" />
 
@@ -25,10 +26,10 @@ export default function Menu() {
 
             <div className='menu'>
                 <div className='playelu__menu-element'>
-                <a href="">
-                    <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
-                    <h4>ROADMAP</h4>
-                </a>
+                    <a href="">
+                        <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
+                        <h4>ROADMAP</h4>
+                    </a>
                 </div>
 
                 <div className='playelu__menu-element' onClick={onPressMenu}>
@@ -39,11 +40,11 @@ export default function Menu() {
                 <div className='playelu__menu-element' onClick={onPressMenu}>
                 </div>
 
-                <div className='playelu__menu-element' onClick={onPressMenu}>
-                <a href="">
-                    <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
-                    <h4 style={{ color: '#fabb1a' }}>GAMEPLAY</h4>
-                </a>
+                <div className='playelu__menu-element'>
+                    <Link to='/gameplay'>
+                        <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
+                        <h4 style={{ color: '#fabb1a' }}>GAMEPLAY</h4>
+                    </Link>
                 </div>
 
                 <div className='playelu__menu-element' onClick={onPressMenu}>
@@ -52,6 +53,6 @@ export default function Menu() {
                 </div>
             </div>
         </div>
-        
+
     )
 }
