@@ -1,16 +1,11 @@
 import React from 'react'
-
 import star5 from '../img/star5.png'
 import star4 from '../img/star4.png'
 import starDeviated from '../img/starDeviated.png'
 
-
-
-
 const getRandomNumberMinMax = (min, max) => {
     return parseInt(Math.random() * 100 * min) % max + min
 }
-
 const stars = [
     {
         id: 1,
@@ -89,7 +84,6 @@ const stars = [
         img: star5
     }
 ]
-
 export default function BackgroundStar() {
     return (
         <div style={{ position: 'relative' }}>
@@ -103,7 +97,6 @@ export default function BackgroundStar() {
                         zIndex: getRandomNumberMinMax(0, 6),
                         opacity: Math.random(0.95, 1)
                     };
-
                     return (
                         <img className='background-star' src={star.img} style={starStyles} alt="" />
                     )

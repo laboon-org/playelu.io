@@ -8,6 +8,7 @@ import Modal from 'react-bootstrap/Modal';
 import BackgroundComet from "./bacgroundComet";
 import Stars from "./backgrounDecor/Stars";
 import star5 from "../img/star5.png"
+import Menu from "./Menu";
 
 const controlSound = () => {
   const soundOn = document.querySelector(".sound-on");
@@ -29,17 +30,13 @@ const BackgroundStar1 = <BackgroundStar />
 const BackgroundCloud1 = <BackgroundCloud />
 export default function PlayeluBaner() {
 
-  const [showComingSoon, setShowComingSoon] = useState(false);
-  const handleCloseComingSoon = () => setShowComingSoon(false);
-  const handleShowComingSoon = () => setShowComingSoon(true);
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [email, setEmail] = React.useState("");
   const URI = "https://api.playelu.io/subemail";
-  const onPressMenu = () => {
-    handleShowComingSoon()
-  }
+
   const onPress = React.useCallback(() => {
     fetch(URI, {
       method: "POST",
@@ -64,19 +61,7 @@ export default function PlayeluBaner() {
         </div>
         <Navbar />
       </div>
-      <Modal
-        size="lg"
-
-        dialogClassName="modal-comingsoon"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered show={showComingSoon} onHide={handleCloseComingSoon}>
-
-        <div className='close-modal' onClick={() => handleCloseComingSoon()}>
-          <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/closeModal.png' alt="" />
-        </div>
-        <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/modal.png' alt="" />
-
-      </Modal>
+   
       <Modal
         size="lg"
         dialogClassName="modal-thankyou"
@@ -88,9 +73,8 @@ export default function PlayeluBaner() {
         </div>
         <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/modal.png' alt="" />
         <p className='name-email'>{email}</p>
-
       </Modal>
-      {/* <div className='shooting-star'>
+      <div className='shooting-star'>
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
@@ -99,10 +83,10 @@ export default function PlayeluBaner() {
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
         <Stars imgUrl={star5} />
-      </div> */}
-      {/* {BackgroundCloud1}
+      </div>
+      {BackgroundCloud1}
       {BackgroundComet1}
-      {BackgroundStar1} */}
+      {BackgroundStar1}
       <div className="background-bottom">
         <img className="background__bottom-img" src='https://storage.googleapis.com/laboon-img-storage/play-elu/backgroundBottom.png' alt="" />
       </div>
@@ -114,34 +98,7 @@ export default function PlayeluBaner() {
       </div>
       <div className="playelu-all d-flex flex-column h-100 justify-content-center">
         <div className="playelu-top">
-          <div className='playelu-menu'>
-            <div className='menu'>
-              <div className='playelu__menu-element'>
-                <a href="">
-                  <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
-                  <h4>ROADMAP</h4>
-                </a>
-
-              </div>
-              <div className='playelu__menu-element' onClick={onPressMenu}>
-                <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
-                <h4>TOKENOMIC</h4>
-              </div>
-              <div className='playelu__menu-element' onClick={onPressMenu}>
-              </div>
-              <div className='playelu__menu-element' onClick={onPressMenu}>
-                <a href="">
-                  <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
-                  <h4 style={{ color: '#fabb1a' }}>GAMEPLAY</h4>
-                </a>
-
-              </div>
-              <div className='playelu__menu-element' onClick={onPressMenu}>
-                <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/playeluHeader2.png' alt="" />
-                <h4>LITEPAPER</h4>
-              </div>
-            </div>
-          </div>
+        <Menu />
           <div className="playelu-img">
             <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/eluLogo.png' alt="" />
           </div>
@@ -155,6 +112,7 @@ export default function PlayeluBaner() {
               }}
               className="playelu-input "
               type="email"
+              maxLength='50'
               placeholder="Your Email here"
             ></input>
             <i className="iconEmail fas fa-envelope"></i>

@@ -8,22 +8,19 @@
 body{
     overflow: hidden;
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'BoldenVan', sans-serif; 
 }
 
 ::placeholder { 
-    font-family: 'BoldenVan', sans-serif;  
     color: #114F8C;
-    opacity: 1;
+    opacity: 0.8;
 }
 
 :-ms-input-placeholder {
-    font-family: 'BoldenVan', sans-serif;  
     color: #114F8C;
 }
 
-::-ms-input-placeholder { 
-    font-family: 'BoldenVan', sans-serif;  
+::-ms-input-placeholder {  
     color: #114F8C;
 }
 .w-70 {
@@ -41,7 +38,6 @@ body{
 .my_star-all{
     position: relative;
     width: 100%;
-    // height: 100%;
     transform: rotate(140deg);
    height: 20px;
 }
@@ -54,12 +50,10 @@ body{
 .my-star::before{
     content: '';
     position: absolute;
-    // transform: translateY(-70%);
     left: 40%;
-    // width: 50px;
     width: 20%;
     border-radius: 80%;
-    height: 170px;
+    height: 140px;
     background: linear-gradient(180deg,rgba(255,255,255,0), #dfbb39 12%, rgba(246,246,237,0));
 }
 .my-star img{
@@ -69,33 +63,15 @@ body{
     -o-animation: twirl 4s linear 0s infinite;
     width: 100%;
  }
- /* .my-star::before{
-     content: '';
-     position: absolute;
-     top: 50%;
-     transform: translateY(-50%);
-     width: 50px;
-     height: 1px;
-     background: linear-gradient(0deg,rgba(255,255,255,0), #dfbb39 12%, rgba(246,246,237,0));
- } */
-.star-trail{
-    position: absolute;
-    bottom: 20%;
-    left: 40%;
-    height: 70px;
-    border-radius: 8px;
-    width: 20%;
-    background: linear-gradient(0deg,rgba(255,255,255,0), #dfbb39 12%, rgba(246,246,237,0));
-}
+
 .background-cloud{
     overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-
-
 }
+
 .my-cloud{
     position: absolute;
     top: 0;
@@ -105,18 +81,22 @@ body{
     background: url('../img/cloud.png');
     animation: cloudanimation 60s linear infinite;
 }
+
 .cloud{
     width: 15%;
     animation: cloud 25s infinite linear;
     position:relative;
     display: flex;
 }
+
 .cloud2{
     margin-left: 50vw;
 }
+
 .cloud img{
     width: 100%;
 }
+
 .x1{
     animation: cloud 21s infinite linear;
     opacity: 1;  
@@ -160,7 +140,6 @@ body{
     z-index: -2;
     background-position-y: 72%;
     overflow: hidden;
-    position: relative;
 }
 .star-cloud{
     position: absolute;
@@ -197,22 +176,22 @@ body{
     right: 0;
     width: 12vw;
 }
+
 .mobile__discord-img{
     width: 100%;
     display: none;
 }
+
 .playelu-all{
     max-width: 1920px;
     width: 45%;
     margin:0 auto;
-
 }
+
 .playelu-menu{
     background: url('../img/playeluHeader1.png') no-repeat center /contain;
     margin-top: 5px;
     height: 19vh;
-
-
 }
 
 .menu{
@@ -243,7 +222,6 @@ body{
     width: 100%;
     top: 50%;
     color: #fff;
-    font-family: 'BoldenVan', sans-serif;
     font-weight: 300;
 }
 .playelu__menu-element h4:hover{
@@ -262,8 +240,7 @@ body{
     width: 100%;
     text-align: center;
 }
-.playelu-tittle h1{
-    font-family: 'BoldenVan', sans-serif;                                         
+.playelu-tittle h1{                                      
     color: #fff;
     font-size: calc(100vh*5/100);
 }
@@ -274,8 +251,7 @@ body{
 }
 
 .playelu-btn button{
-    font-weight: 500;
-    font-family: 'BoldenVan', sans-serif;  
+    font-weight: 500; 
     background-image: radial-gradient(circle, #FBD426, #FAB517);
     position: absolute;
     right: 0;
@@ -287,11 +263,9 @@ body{
     font-size: calc(100vh*3/100);
     margin: calc(100vh*0.286/100);
     border: calc(100vh*0.226/100) solid #114F8C;
-   
 }
 
-.playelu-btn input{
-    font-family: 'BoldenVan', sans-serif;  
+.playelu-btn input{ 
     width: 100%;
     margin: auto;
     letter-spacing: 3px;
@@ -345,12 +319,12 @@ body{
     z-index: 5;
 }
 
-
 .modal-thankyou,.modal-comingsoon{
     display: flex;
     justify-content: center;
     min-width: 100vw;
 }
+
 .modal-thankyou > .modal-content,.modal-comingsoon > .modal-content{
     width: 50vw;
 }
@@ -377,14 +351,19 @@ body{
 .close-modal img{
     width: 100%;
 }
-.name-email{
-    font-family: 'BoldenVan', sans-serif;  
+.modal-thankyou > .modal-content p{
+    display: block;
+    width: 90%;
+    margin: 0 5%;
+}
+.name-email{ 
     width: 100%;
     color: #fff;
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
     position: absolute;
     bottom: 5%;
+    word-wrap: break-word;
 }
 .background-star{
     animation: twirl 10s linear 0s infinite;
@@ -401,10 +380,8 @@ body{
     }
 }
 @keyframes cloud {
-
     0%      {margin-left: 0;}
     100%    {margin-left:100%;}
-    
 }
 @keyframes twirl{
     from{
@@ -414,219 +391,11 @@ body{
     }
     to{
         -webkit-transform: rotate(360deg);
-    
         -moz-transform: rotate(360deg);
         -o-transform: rotate(360deg);
     }
 }
 
-
-  
- 
-
-@media screen and (max-width: 739.9px){
-    :root{
-        --btnWidth:30vw
-    }
-    .my-star::before{
-        height: 50px;
-    }
-    .background-bottom{
-        bottom: 0;
-
-    }
-    .mobile__discord-img{
-        display: block;
-    }
-
-    .playelu-all{
-        width: 100%;
-        margin:0 auto;
-        padding-top: 8vh;
-    }
-
-    .playelu-tittle{
-           width: 70vw;
-           margin: 0 15%;
-           text-align: center;
-        }
-        .playelu-btn{
-           width: 95vw;
-        }
-    .playelu-btn button{
-        width: calc(100vw*30/100);
-        height: calc(100vh*6/100);
-        border-radius: calc(100vh*5.572/100);
-        font-size: calc(100vh*2.3/100);
-        letter-spacing: 2px;
-    }
-    
-    .playelu-btn input{
-        padding-right: var(--btnWidth);
-        height: calc(100vh*6.572/100);
-        border-radius: calc(100vh*5.572/100);
-        font-size: calc(100vh*2.7/100);
-        padding-left: calc(100vw*12/100);
-        letter-spacing: 2px;
-    }
-
-    .iconEmail{
-        font-size: calc(100vh*4/100);
-        left: calc(100vw*3/100);
-        margin-top: calc(100vh*1.3/100);
-    }
-
-    .playelu-input{
-        width: 100%;
-    }
-    
-    .playelu__link{
-        width: 50%;
-    }
-
-    .playelu__link-ele img{
-        width: 100%;
-    }
-
-    .discord{
-        display: none;
-    }
-
-    .modal-thankyou > .modal-content{
-        width: 80vw;
-    }
-
-    .modal-content{
-        border-radius: 13px;
-    }
-
-    .modal-header{
-        padding: 2px;
-    }
-
-    .close-modal{
-        width: 25px;
-        height: 25px;
-        top: 15px;
-        right: 15px;
-    }
-
-    .name-email{
-        font-size: 28px;
-        bottom: 0;
-    }
-
-    .playelu-menu{
-        display: none;
-    }
-
-}
-@media screen and (min-width: 740px) and (max-width: 1024px){
-    :root{
-        --btnWidth:20vw
-    }
-    .background-bottom{
-        bottom: 0;
-    }
-
-    .playelu-all{
-        width: 90%;
-        margin:0 auto;
-    }
-
-    .playelu-tittle h1{
-        font-size: calc(100vh*5.5/100);
-    }
-   
-    .playelu-btn button{
-        width: calc(100vw*20/100);
-        font-size: calc(100vh*2.3/100);
-        letter-spacing: 3px;
-    }
-    
-    .playelu-btn input{
-        padding-right: var(--btnWidth);;
-        padding-left: calc(100vw*8.7/100);
-        font-size: calc(100vh*2.8/100);
-    }
-    .iconEmail{
-        color: #158fa5;
-        position: absolute;
-        font-size: calc(100vh*4.5/100);
-        left: calc(100vw*2/100);
-    }
-    
-    .playelu__link{
-        width: 40%;
-    }
-
-    .playelu-menu{
-        width: 100%;
-    }
-
-    .modal-thankyou > .modal-content,.modal-comingsoon > .modal-content{
-        width: 70vw;
-    }
-
-    
-}
-@media screen and (min-width: 1024px) and (max-width: 1365px){
-    :root{
-        --btnWidth:20vw
-    }
-    .background-bottom{
-        bottom: 0;
-    }
-    .playelu-all{
-        width: 70%;
-        /* margin:0 auto; */
-    }
-
-    .playelu-tittle h1{
-        font-size: calc(100vh*5.5/100);
-    }
-   
-    .playelu-btn button{
-        width: calc(100vw*20/100);
-        font-size: calc(100vh*2.3/100);
-        letter-spacing: 3px;
-    }
-    
-    .playelu-btn input{
-        padding-left: calc(100vw*7/100);
-        padding-right: var(--btnWidth);
-        font-size: calc(100vh*2.7/100);
-    }
-    .iconEmail{
-        color: #158fa5;
-        position: absolute;
-        font-size: calc(100vh*4/100);
-        left: calc(100vw*2/100);
-        margin-top: calc(100vh*1.7/100);
-    }
-    
-    .playelu__link{
-        width: 40%;
-    }
-
-    .discord img{
-        width: 16vw;
-        height: 13vw;
-    }
-
-}
-@media screen and (min-width: 1900px){
-    .playelu-img{
-        width: 80%;
-    }
-
-    .playelu-btn{
-        width: 75%;
-    }
-    .playelu__menu-element h4{
-        font-size: 16px;
-    }
-}
 
 
 
