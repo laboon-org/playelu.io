@@ -1,19 +1,27 @@
-
 import './App.css';
 import './css/playeluBanner.scss'
 import './css/responsive.scss'
-import PlayeluBaner from './components/playeluBaner';
+import PlayeluBaner from './pages/banner/playeluBaner';
 import Gameplay from './pages/gameplay/gameplay';
-import { BrowserRouter, Switch, Route, Routes } from 'react-router-dom';
+import {
+  Routes,
+  BrowserRouter as Router,
+  Route
+} from "react-router-dom";
+
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <PlayeluBaner />
+    <Router>
       <Routes>
-        <Route path='/gameplay' component={Gameplay}></Route>
+        {/* <PlayeluBaner/> */}
+        <Route path='/' element={<PlayeluBaner />}>
+        </Route>
+        <Route path='/gameplay' element={<Gameplay />}>
+        </Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 export default App;
