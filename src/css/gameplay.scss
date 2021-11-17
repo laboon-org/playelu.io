@@ -1,9 +1,55 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.gameplay-body {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.sky {
+  background: url("../img/skyBackground.webp") no-repeat center / cover;
+  .sky-top {
+    width: 100vw;
+    height: 100vh;
+    .gameplay-selection {
+      height: 50vh;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
-.sky-top{
-    background: url('../img/img-gameplay/backgroundSky.png') no-repeat center /cover;
+.rune {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+
+  .gameplay__rune-img {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+  .gameplay__boonmoon-img {
+    position: absolute;
+    width: 40%;
+    bottom: 45%;
+    z-index: 0;
+  }
+}
+.gameplay__selection-img {
+  width: 100%;
+}
+.gameplay-logo {
+  width: 33vw;
+  margin: auto;
+}
+
+.gameplay__logo-img {
+  width: 100%;
 }
