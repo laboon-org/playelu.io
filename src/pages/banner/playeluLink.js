@@ -8,22 +8,22 @@ function PlayeluLink() {
         {
             id: 1,
             img: urlConstant.image.twitter
-          
+
         },
         {
             id: 2,
             img: urlConstant.image.graphic
-           
+
         },
         {
             id: 3,
             img: urlConstant.image.insta
-           
+
         },
         {
             id: 4,
             img: urlConstant.image.facebook
-           
+
         },
         {
             id: 5,

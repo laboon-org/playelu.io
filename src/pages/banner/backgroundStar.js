@@ -9,7 +9,7 @@ const getRandomNumberMinMax = (min, max) => {
 const stars = [
     {
         id: 1,
-        img:urlConstant.image.star4
+        img: urlConstant.image.star4
     },
     {
         id: 2,
@@ -25,11 +25,11 @@ const stars = [
     },
     {
         id: 5,
-        img:urlConstant.image.star4
+        img: urlConstant.image.star4
     },
     {
         id: 6,
-        img:urlConstant.image.star4
+        img: urlConstant.image.star4
     },
     {
         id: 7,
@@ -37,7 +37,7 @@ const stars = [
     },
     {
         id: 8,
-        img:urlConstant.image.star4
+        img: urlConstant.image.star4
     },
     {
         id: 9,
@@ -53,7 +53,7 @@ const stars = [
     },
     {
         id: 12,
-        img:urlConstant.image.star4
+        img: urlConstant.image.star4
     },
     {
         id: 13,

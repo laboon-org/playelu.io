@@ -51,9 +51,17 @@ export default function PlayeluBaner() {
   }, [email]);
 
   return (<>
- 
+
     <div className="playelu">
-      {/* <div className='my-cloud'></div> */}
+      <div className='playelu-background'>
+        {/* <div className='my-cloud'></div> */}
+        {BackgroundCloud1}
+        {BackgroundComet1}
+        {BackgroundStar1}
+        <div className="background-bottom">
+          <img className="background__bottom-img" src={urlConstant.image.backgroundBottom} alt="" />
+        </div>
+      </div>
       <div className='navbar'>
         <div className="sound" onClick={controlSound}>
           <img className="sound-on active" src={urlConstant.image.soundOn} alt="" />
@@ -83,12 +91,6 @@ export default function PlayeluBaner() {
         <Stars imgUrl={urlConstant.image.star5} />
         <Stars imgUrl={urlConstant.image.star5} />
         <Stars imgUrl={urlConstant.image.star5} />
-      </div>
-      {BackgroundCloud1}
-      {BackgroundComet1}
-      {BackgroundStar1}
-      <div className="background-bottom">
-        <img className="background__bottom-img" src={urlConstant.image.backgroundBottom} alt="" />
       </div>
       <div className="discord">
         <img className="discord" src={urlConstant.image.discord} alt="" />
@@ -127,6 +129,17 @@ export default function PlayeluBaner() {
         </div>
         <div className="playelu-bottom mt-auto mb-5 d-flex justify-content-center">
           <PlayeluLink></PlayeluLink>
+          <div className='policy'>
+            <a className='privacy-policy' href={urlConstant.docs.privacyPolicy}>
+              Privacy Policy
+            </a>
+            |
+            {/* <p>|</p> */}
+            <a href={urlConstant.docs.conditions}>
+              Terms & Conditions
+            </a>
+          </div>
+
         </div>
       </div>
     </div>

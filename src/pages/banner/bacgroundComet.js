@@ -41,7 +41,7 @@ export default function BackgroundComet() {
         <div style={{ position: 'relative' }}>
             {
                 comets.map((comet, index) => {
-                    const cometStyles = { 
+                    const cometStyles = {
                         position: 'absolute',
                         top: -10,
                         marginLeft: parseInt(window.innerWidth * (15 / 100) * (index + 1)) - window.innerWidth * 5 / 100,
