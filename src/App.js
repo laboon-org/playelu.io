@@ -18,8 +18,8 @@ function App() {
         {/* <PlayeluBaner/> */}
         <Route path='/' element={<PlayeluBaner />}>
         </Route>
-        {/* <Route path='/gameplay' element={<Gameplay />}>
-        </Route> */}
+        <Route path='/gameplay' element={<Gameplay />}>
+        </Route>
       </Routes>
     </Router>
   );

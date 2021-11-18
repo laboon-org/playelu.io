@@ -1,9 +1,43 @@
 @media screen and (max-width: 740px) {
+  .sky {
+    .sky-top {
+      .gameplay-selection {
+        height: 25vh;
+      }
+    }
+  }
+  .sky__center-islands {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+
+  }
   .sky__center-frames {
     position: relative;
     width: 100px;
     height: 100px;
     transform: perspective(1000px) rotateX(-12deg) rotateY(0deg) rotateZ(0deg);
+    .island:nth-child(1) {
+      transform: rotateY(0deg) translateZ(300px);
+    }
+    .island:nth-child(2) {
+      transform: rotateY(0deg) translateZ(150px);
+      margin-left: 80%;
+    }
+    .island:nth-child(3) {
+      transform: rotateY(180deg) translateZ(300px);
+    }
+    .island:nth-child(4) {
+      transform: rotateY(180deg) translateZ(550px);
+    }
+    .island:nth-child(5) {
+      transform: rotateY(180deg) translateZ(300px);
+    }
+    .island:nth-child(6) {
+      transform: rotateY(0deg) translateZ(150px);
+      margin-left: -80%;
+    }
   }
 }
 @media screen and (min-width: 740px) and (max-width: 1024px) {
