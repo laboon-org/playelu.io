@@ -1,0 +1,43 @@
+@media screen and (max-width: 740px) {
+  .sky__center-frames {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform: perspective(1000px) rotateX(-12deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+  .sky {
+    .sky-top {
+      .gameplay-selection {
+        height: 35vh;
+      }
+    }
+  }
+  .sky__center-frames {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    transform: perspective(1000px) rotateX(-12deg) rotateY(0deg) rotateZ(0deg);
+    .island:nth-child(1) {
+      transform: rotateY(0deg) translateZ(580px);
+    }
+    .island:nth-child(2) {
+      transform: rotateY(0deg) translateZ(350px);
+      margin-left: 100%;
+    }
+    .island:nth-child(3) {
+      transform: rotateY(180deg) translateZ(250px);
+    }
+    .island:nth-child(4) {
+      transform: rotateY(180deg) translateZ(750px);
+    }
+    .island:nth-child(5) {
+      transform: rotateY(180deg) translateZ(250px);
+    }
+    .island:nth-child(6) {
+      transform: rotateY(0deg) translateZ(350px);
+      margin-left: -100%;
+    }
+  }
+}

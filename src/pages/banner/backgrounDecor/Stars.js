@@ -67,9 +67,6 @@ export default function (props) {
                     style={{
                     }}
                     alt="" />
-                {/* <div className='star-trail'
-                >
-                </div> */}
             </div>
         </div>
     )

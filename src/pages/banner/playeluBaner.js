@@ -127,7 +127,7 @@ export default function PlayeluBaner() {
             </button>
           </div>
         </div>
-        <div className="playelu-bottom mt-auto mb-5 d-flex justify-content-center">
+        <div className="playelu-bottom mt-auto d-flex justify-content-center">
           <PlayeluLink></PlayeluLink>
           <div className='policy'>
             <a className='privacy-policy' href={urlConstant.docs.privacyPolicy}>

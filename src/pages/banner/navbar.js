@@ -41,7 +41,7 @@ export default function Navbar() {
                     </div>
                     <div className='modal-element'>
                         <img src={urlConstant.image.modalNavbarEle} alt="" />
-                        <h2>GAMEPLAY</h2>
+                        <h2 style={{ color: '#fabb1a' }}>GAMEPLAY</h2>
                     </div>
                 </div>
             </Modal>

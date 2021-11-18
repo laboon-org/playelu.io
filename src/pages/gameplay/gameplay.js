@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../css/gameplay.scss'
+import '../../css/responsiveGameplay.scss'
 import urlConstant from '../../urlConstant'
 
 export default function Gameplay() {
@@ -33,6 +34,28 @@ export default function Gameplay() {
                     </div>
                 </div>
                 <div className='sky-center'>
+                    <div className='sky__center-islands'>
+                        <div className='sky__center-frames'>
+                            <div className='island'>
+
+                            </div>
+                            <div className='island'>
+
+                            </div>
+                            <div className='island'>
+
+                            </div>
+                            <div className='island'>
+
+                            </div>
+                            <div className='island'>
+
+                            </div>
+                            <div className='island'>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className='sky-bottom'>
 
@@ -41,9 +64,10 @@ export default function Gameplay() {
             </div>
             <div>
                 <div className='ocean'>
-
+                    {/* <img className="gameplay__ocean-img" src={urlConstant.imageGamePlay.backgroundOcean} alt="" /> */}
                 </div>
                 <div className='land'>
+                    <img className="gameplay__land-img" src={urlConstant.imageGamePlay.backgroundLand} alt="" />
 
                 </div>
             </div>

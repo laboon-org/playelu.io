@@ -91,6 +91,12 @@
   .header {
     display: none;
   }
+  .policy {
+    width: 77%;
+  }
+  .policy a {
+    font-size: 13px;
+  }
 }
 @media screen and (min-width: 740px) and (max-width: 1024px) {
   :root {
@@ -114,7 +120,7 @@
 
   .playelu-btn button {
     width: calc(100vw * 20 / 100);
-    font-size: calc(100vh * 2.3 / 100);
+    font-size: calc(100vh * 2 / 100);
     letter-spacing: 3px;
   }
 
@@ -131,9 +137,12 @@
   }
 
   .playelu__link {
-    width: 40%;
+    width: 60%;
   }
 
+  .policy {
+    width: 48%;
+  }
   .header {
     width: 100%;
   }
@@ -181,7 +190,11 @@
   }
 
   .playelu__link {
-    width: 40%;
+    width: 60%;
+  }
+
+  .policy {
+    width: 48%;
   }
 
   .discord img {
