@@ -29,21 +29,23 @@ export default function Gameplay() {
                         <img className="gameplay__logo-img" src={urlConstant.image.eluLogo} alt="" />
                     </div>
                     <div className='gameplay-cloud'>
-
+                        <img className="gameplay__logo-img" src='' alt="" />
                     </div>
                 </div>
                 <div className='sky-center'>
-
                 </div>
                 <div className='sky-bottom'>
 
+
                 </div>
             </div>
-            <div className='ocean'>
+            <div>
+                <div className='ocean'>
 
-            </div>
-            <div className='land'>
+                </div>
+                <div className='land'>
 
+                </div>
             </div>
         </div>
     )

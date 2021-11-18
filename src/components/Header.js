@@ -41,7 +41,7 @@ export default function Header() {
                 </li>
 
                 <li className='playelu__menu-element' onClick={onPressMenu}>
-                    
+
                 </li>
 
                 <li className='playelu__menu-element'>
@@ -56,7 +56,7 @@ export default function Header() {
                     <h4>LITEPAPER</h4>
                 </li>
             </ul>
-           
+
         </div>
 
     )

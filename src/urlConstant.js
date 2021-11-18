@@ -33,6 +33,7 @@ export default {
         rune: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/rune.webp',
         boonMoon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boonMoon.webp',
     },
+
     docs: {
         privacyPolicy: 'https://storage.googleapis.com/laboon-img-storage/play-elu/docs/elu-verse-privacy-policy.pdf',
         conditions: 'https://storage.googleapis.com/laboon-img-storage/play-elu/docs/elu-verse-website-terms-and-conditions.pdf'

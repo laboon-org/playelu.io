@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 @import url("http://fonts.cdnfonts.com/css/boldenvan");
+
 body {
-  // overflow: hidden;
+  height: 100%;
   font-family: "BoldenVan", sans-serif;
 }
 ul {
@@ -144,6 +145,7 @@ li {
   opacity: 1;
   left: 20%;
 }
+
 .playelu-body {
   position: absolute;
   top: 0;
@@ -152,6 +154,7 @@ li {
   height: 100vh;
   overflow: hidden;
 }
+
 .playelu {
   background: rgb(81, 179, 229);
   background: radial-gradient(
@@ -165,6 +168,15 @@ li {
   background-position-y: 72%;
   overflow: hidden;
 }
+
+.playelu-background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .star-cloud {
   position: absolute;
   z-index: 4;
@@ -219,7 +231,6 @@ li {
   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/playeluHeader1.webp")
     no-repeat center / cover;
   background-size: 100% auto;
-  // margin-top: 5px;
 }
 
 .menu {
@@ -323,6 +334,8 @@ li {
   width: 50%;
   margin: auto;
   justify-content: center;
+  margin: auto;
+  width: 50%;
   display: flex;
 }
 .playelu__link-ele {
@@ -343,8 +356,21 @@ li {
   text-decoration: none;
   margin: 0 5px;
   letter-spacing: 1px;
+  margin: auto;
+  padding-top: 10px;
+  display: flex;
+  font-size: 14px;
+  color: #fff;
+  justify-content: center;
 }
+.policy a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+}
+
 .playelu-bottom {
+  text-align: center;
   flex-direction: column;
   z-index: 3;
 }

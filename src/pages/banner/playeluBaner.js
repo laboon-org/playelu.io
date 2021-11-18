@@ -50,6 +50,7 @@ export default function PlayeluBaner() {
     handleShow()
   }, [email]);
 
+
   return (<div className='playelu-body'>
     <div className="playelu">
       <div className='playelu-background'>
