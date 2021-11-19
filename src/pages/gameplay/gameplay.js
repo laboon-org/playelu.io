@@ -1,4 +1,5 @@
 import React from 'react'
+import SkyCenter from './skyCenter'
 import '../../css/gameplay.scss'
 import '../../css/responsiveGameplay.scss'
 import urlConstant from '../../urlConstant'
@@ -33,42 +34,18 @@ export default function Gameplay() {
                         <img className="gameplay__logo-img" src='' alt="" />
                     </div>
                 </div>
-                <div className='sky-center'>
-                    <div className='sky__center-islands'>
-                        <div className='sky__center-frames'>
-                            <div className='island'>
-
-                            </div>
-                            <div className='island'>
-
-                            </div>
-                            <div className='island'>
-
-                            </div>
-                            <div className='island'>
-
-                            </div>
-                            <div className='island'>
-
-                            </div>
-                            <div className='island'>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <SkyCenter />
                 <div className='sky-bottom'>
 
 
                 </div>
             </div>
-            <div>
+            <div className='beach'>
                 <div className='ocean'>
                     {/* <img className="gameplay__ocean-img" src={urlConstant.imageGamePlay.backgroundOcean} alt="" /> */}
                 </div>
                 <div className='land'>
                     <img className="gameplay__land-img" src={urlConstant.imageGamePlay.backgroundLand} alt="" />
-
                 </div>
             </div>
         </div>
