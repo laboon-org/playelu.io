@@ -32,9 +32,14 @@ export default {
         lightColumn: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/lightColumn.webp',
         rune: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/rune.webp',
         boonMoon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boonMoon.webp',
-        backgroundOcean: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/Thi%E1%BA%BFt%20k%E1%BA%BF%20kh%C3%B4ng%20t%C3%AAn(1).png',
+        backgroundOcean: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/backgroundOcean.png',
         backgroundLand: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/backgroundLand.webp',
-        islandWater: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islandWater.webp'
+        islandWater: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islandWater.webp',
+        bone: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/bone.png',
+        oceanIsland: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/oceanIsland.webp',
+        boulder: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boulder.webp',
+        tree: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/tree.webp',
+        oceanIslandGrass: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/oceanIslandGrass.webp'
     },
 
     docs: {

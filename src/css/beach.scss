@@ -1,0 +1,54 @@
+.beach {
+}
+.beach img {
+  width: 100%;
+}
+.ocean {
+  position: relative;
+  width: 100vw;
+  margin-top: -1%;
+  .oceanIsland {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    .oceanIsland-element {
+      position: relative;
+      width: 100%;
+      .oceanIsland-img {
+        width: 100%;
+      }
+      .tree-img {
+        position: absolute;
+        left: 0;
+        top: -25%;
+        z-index: 1;
+      }
+      .oceanIsland-grass {
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+      }
+    }
+  }
+  .boulder-img {
+    position: absolute;
+    left: 0;
+    top: -60%;
+    width: 30%;
+  }
+}
+
+.land {
+  position: relative;
+  margin-top: -10%;
+  .bone-img {
+    width: 35%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .core {
+    width: 70%;
+  }
+}

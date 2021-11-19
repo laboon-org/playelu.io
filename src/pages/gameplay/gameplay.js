@@ -3,6 +3,7 @@ import SkyCenter from './skyCenter'
 import '../../css/gameplay.scss'
 import '../../css/responsiveGameplay.scss'
 import urlConstant from '../../urlConstant'
+import Beach from './Beach'
 
 export default function Gameplay() {
     return (
@@ -40,14 +41,7 @@ export default function Gameplay() {
 
                 </div>
             </div>
-            <div className='beach'>
-                <div className='ocean'>
-                    {/* <img className="gameplay__ocean-img" src={urlConstant.imageGamePlay.backgroundOcean} alt="" /> */}
-                </div>
-                <div className='land'>
-                    <img className="gameplay__land-img" src={urlConstant.imageGamePlay.backgroundLand} alt="" />
-                </div>
-            </div>
+            <Beach />
         </div>
     )
 }
