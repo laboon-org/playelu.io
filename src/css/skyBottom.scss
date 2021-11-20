@@ -1,0 +1,41 @@
+.skyBottom {
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+  .skyBottom-left {
+    width: 55%;
+    display: flex;
+
+    justify-content: space-between;
+    .sailboat-left1 {
+      margin-left: 5%;
+      width: 70%;
+    }
+    .sailboat-left2 {
+      width: 10%;
+    }
+  }
+  .skyBottom-right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    .sailboat-right1 {
+      width: 10%;
+      margin-bottom: 50%;
+    }
+    .sailboat-right2 {
+      position: relative;
+      float: right;
+      right: 0;
+      width: 100%;
+      .sailboat-right2 img {
+        position: absolute;
+        width: 50%;
+        right: 0;
+      }
+    }
+  }
+}
+.skyBottom img {
+  width: 100%;
+}

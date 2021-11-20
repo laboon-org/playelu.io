@@ -11,14 +11,13 @@
   width: 100vw;
 }
 .sky {
-  background: url("../img/skyBackground.webp") no-repeat center / cover;
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/skyBackground.webp")
+    no-repeat center / cover;
   .sky-top {
-    width: 100vw;
-    height: 100vh;
-    max-height: 1280px;
+    width: 80vw;
+    margin: auto;
     .gameplay-selection {
-      max-height: 545px;
-      height: 45vh;
+      height: 60vh;
       display: flex;
       align-items: center;
     }
@@ -55,65 +54,45 @@
 .gameplay__logo-img {
   width: 100%;
 }
+
 .sky-center {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 600px;
 }
-.sky__center-islands {
+.eluDrop-btn {
   position: absolute;
-  left: 50%;
-  bottom: -25%;
-  height: 100%;
-  transform: translate((-50%, -50%));
+  bottom: 0;
+  width: 10%;
+  margin-left: 45%;
 }
-.sky__center-frames {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  transition: all 1s ease-in-out;
-  transform: perspective(1000px) rotateX(-12deg) rotateY(0deg) rotateZ(0deg);
-  transform-style: preserve-3d;
-}
-.island {
-  position: absolute;
+
+.island1,
+.island2,
+.island3 {
   margin: auto;
-  width: 100%;
+  width: 30%;
   height: 100%;
+  .isLand-img {
+    width: 100%;
+  }
 }
-.island:nth-child(1) {
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islandWater.webp")
-    no-repeat center / cover;
-  transform: rotateY(0deg) translateZ(650px);
+.island1 .isLand-img:nth-child(1) {
+  width: 50%;
+  margin-left: 52%;
 }
-.island:nth-child(2) {
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/island.webp")
-    no-repeat center / cover;
-  transform: rotateY(0deg) translateZ(300px);
-  margin-left: 130%;
+.island3 .isLand-img:nth-child(1) {
+  width: 60%;
+  margin-right: 30%;
 }
-.island:nth-child(3) {
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/island.webp")
-    no-repeat center / cover;
-  transform: rotateY(180deg) translateZ(300px);
-  margin-left: 90%;
+.island2 .isLand-img:nth-child(1) {
+  width: 50%;
+  margin-left: 25%;
 }
-.island:nth-child(4) {
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/island.webp")
-    no-repeat center / cover;
-  transform: rotateY(180deg) translateZ(750px);
-}
-.island:nth-child(5) {
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/island.webp")
-    no-repeat center / cover;
-  transform: rotateY(180deg) translateZ(300px);
-  margin-left: -90%;
-}
-.island:nth-child(6) {
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/island.webp")
-    no-repeat center / cover;
-  transform: rotateY(0deg) translateZ(300px);
-  margin-left: -130%;
+.island1 .isLand-img:nth-child(2),
+.island3 .isLand-img:nth-child(2) {
+  width: 70%;
+  margin-bottom: 15%;
+  margin-left: 15%;
 }

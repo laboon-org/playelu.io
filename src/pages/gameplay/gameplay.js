@@ -4,12 +4,13 @@ import '../../css/gameplay.scss'
 import '../../css/responsiveGameplay.scss'
 import urlConstant from '../../urlConstant'
 import Beach from './Beach'
+import SkyBottom from './skyBottom'
 
 export default function Gameplay() {
     return (
         <div className='gameplay-body'>
             <div className='sky'>
-                <div className='sky-top container'>
+                <div className='sky-top'>
                     <div className='gameplay-selection'>
                         <div className='col drop'>
                             <img className="gameplay__selection-img" src={urlConstant.imageGamePlay.drop} alt="" />
@@ -36,10 +37,8 @@ export default function Gameplay() {
                     </div>
                 </div>
                 <SkyCenter />
-                <div className='sky-bottom'>
 
-
-                </div>
+                <div> <SkyBottom /></div>
             </div>
             <Beach />
         </div>
