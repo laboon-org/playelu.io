@@ -262,9 +262,13 @@ li {
   top: 50%;
   color: #fff;
   font-weight: 300;
+  animation: swing;
+  animation-duration: 2s;
 }
 .playelu__menu-element h4:hover {
   color: #fabb1a;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgb(0 0 0 / 0%);
 }
 .playelu-img {
   width: 90%;

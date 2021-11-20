@@ -21,38 +21,31 @@ export default function Header() {
                     <img src={urlConstant.image.closeModal} alt="" />
                 </div>
                 <img src={urlConstant.image.modal} alt="" />
-
             </Modal>
             <ul className='menu'>
                 <li className='playelu__menu-element'>
-                    <a href="https://bit.ly/3qWnt9s">
+                    <a href="https://bit.ly/3nvuPP3">
                         <img src={urlConstant.image.playeluHeader2} alt="" />
                         <h4>ROADMAP</h4>
                     </a>
                 </li>
-
                 <li className='playelu__menu-element'>
-                    <a href='https://bit.ly/3FDBLjz'>
+                    <a href='https://bit.ly/3HIpdcy'>
                         <img src={urlConstant.image.playeluHeader2} alt="" />
                         <h4>TOKENOMIC</h4>
                     </a>
-
                 </li>
-
                 <li className='playelu__menu-element' onClick={onPressMenu}>
-
                 </li>
-
                 <li className='playelu__menu-element'>
                     <Link to='/gameplay'>
                         <img src={urlConstant.image.playeluHeader2} alt="" />
                         <h4 style={{ color: '#fabb1a' }}>GAMEPLAY</h4>
                     </Link>
                 </li>
-
                 <li className='playelu__menu-element' onClick={onPressMenu}>
                     <img src={urlConstant.image.playeluHeader2} alt="" />
-                    <h4>LITEPAPER</h4>
+                    <h4 >LITEPAPER</h4>
                 </li>
             </ul>
 
