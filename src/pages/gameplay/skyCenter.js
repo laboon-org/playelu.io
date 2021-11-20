@@ -1,149 +1,122 @@
 import React, { useRef, useEffect } from 'react'
 import './css/skyCenter.scss'
-import { useSpring, animated, to } from '@react-spring/web'
+import { useSprings, useSpring, animated, to } from '@react-spring/web'
 import { useGesture, useDrag } from '@use-gesture/react'
 import {
     useWindowSize,
 } from '@react-hook/window-size'
 const img_urls = [
     {
-        url: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islandWater.webp'
+        url: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/water_island.webp'
     },
     {
-        url: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/island.webp',
-    },
-    {
-        url: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/island.webp'
+        url: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/fountain.webp',
     },
     {
         url: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/island.webp'
     },
     {
-        url: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/island.webp'
+        url: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islandBlank1.webp'
     },
     {
-        url: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/island.webp'
+        url: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islanBlank3.webp'
+    },
+    {
+        url: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islandBlank2.webp'
     }
 ]
-const calcPer = (val, per) => {
-    return val * per / 100;
-}
-const calcYInElip = (a, b, x) => {
-    const b_2 = Math.pow(b, 2);
-    const right = (Math.pow(x - a, 2) * b_2) / Math.pow(a, 2);
-    return {
-        positive: Math.sqrt(b_2 - right) + b / 2,
-        negative: -Math.sqrt(b_2 - right)
+const calcZIndex = (deg) => {
+    let zIndex;
+    if (deg >= 0 && deg <= 60) {
+        if (deg >= 30)
+            zIndex = 2
+        else
+            zIndex = 1
+        return zIndex
     }
 
+    if (deg <= 120) {
+        if (deg >= 90)
+            zIndex = 3
+        else
+            zIndex = 2
+        return zIndex
+    }
+
+    if (deg <= 180) {
+        if (deg >= 150)
+            zIndex = 4
+        else
+            zIndex = 3
+        return zIndex
+    }
+
+    if(deg<=240){
+        if(deg>=210)
+            zIndex =3
+        else
+        zIndex = 4
+        return zIndex
+    }
 }
 export default function SkyCenter() {
     const [widthW, heightW] = useWindowSize()
+    const [islands, set] = useSprings(img_urls.length, (key) => ({
+        transformOfCircle: `rotateX(75deg) rotateZ(${key * 60}deg)`,
+        transformOfIsland: `rotateX(270deg) rotateY(${key * 60}deg)`,
+        rotateZOfCircle: key * 60,
+        rotateYOfIsland: key * 60,
+        zIndex: 1
+    }))
 
-    const [{ x, y, checkState, prevMx, scale, width, height }, set] =
-        useSpring(() => ({ x: calcPer(widthW, 35), y: calcPer(heightW, 10), checkState: 'down', prevMx: 0, scale: 1, width: '20vw', height: '20vw' }))
-    const a = calcPer(widthW, 35)
-    const b = calcPer(heightW, 10)
-    const focus = 100
-    const bind = useDrag(({ down, movement: [mx, my] }) => {
-        let calcNearPercent=0.5
-       
-        console.log("NEAR", calcNearPercent)
-        if (Math.abs(prevMx.get() - mx) <= 100)
-            return
-        if (!down) {
-            set({ preMx: mx })
-            return
-        }
-
-        let ep = 0;
-        if (prevMx.get() > mx) {
-            ep = -focus
-        }
-        if (prevMx.get() < mx) {
-            ep = focus
-        }
-        let xnew = x.get() + ep//+a
-
-        let getCheckState = checkState.get()
-        let ynew;
-
-
-        if (xnew <= 0 || xnew >= a * 2) {
-            if (getCheckState == 'up')
-                getCheckState = 'down'
-            else
-                getCheckState = 'up'
-        }
-        if (xnew >= a * 2) {
-            xnew = a * 2 - 1
-        }
-        if (xnew <= 0)
-            xnew = 0
-        const calc = calcYInElip(a, b, xnew)
-        if (getCheckState == 'down')
-            ynew = calc.positive
-        else
-            ynew = calc.negative
-        if (getCheckState != checkState.get()) {
-            if (xnew <= 0) {
-                xnew = 10
+    const bind = useGesture({
+        onDrag: (state) => {
+            let focus = -30
+            // console.log(state.direction)
+            // console.log(state.xy)
+            if (state.direction[0] == -1) {
+                focus = 30
             }
-            if (xnew >= a * 2) {
-                xnew = a * 2 - 10
-            }
+
+            set.start((key) => {
+                let rotateZAfter = islands[key].rotateZOfCircle.get() + focus
+                let rotateYAfter = islands[key].rotateYOfIsland.get() + focus
+                // rotateZAfter = rotateZAfter > 0 ? rotateZAfter : 360 + rotateZAfter
+                // rotateYAfter=rotateYAfter > 0 ? rotateYAfter : 360 + rotateYAfter
+                return {
+                    transformOfCircle: 'rotateX(75deg) rotateZ(' + rotateZAfter + 'deg)',
+                    transformOfIsland: 'rotateX(270deg) rotateY(' + rotateYAfter + 'deg)',
+                    rotateZOfCircle: rotateZAfter,
+                    rotateYOfIsland: rotateYAfter,
+                    zIndex: (Math.abs(rotateZAfter) % 360 >= 90) && (Math.abs(rotateZAfter) % 360 <= 270) ? 2 : 1
+                }
+            })
         }
-        if(checkState.get() === 'down'){
-            calcNearPercent=1
-        }
-        if(xnew>a+100 || xnew<a-100 )
-            calcNearPercent=0.5
-        
-        // if (checkState.get() != getCheckState) {
-        //     if (getCheckState == 'down')
-        //         ynew = calc.negative
-        //     else
-        //         ynew = calc.positive
-        // }
-        //console.log("X,Y", xnew, ynew, getCheckState)
-        console.log( calcNearPercent*20)
-        set({ x: xnew, y: ynew, checkState: getCheckState, preMx: mx, scale: calcNearPercent,width: calcNearPercent*20+'vw',height:calcNearPercent*20+'vw' })
     })
-    const renderIsland = img_urls.map((obj, key) => {
-        console.log(obj)
-        return (<div
-            key={key}
-            style={{
-                background: `url("${obj.url}") no-repeat center / contain`,
-                height: "200px",
-                width: "200px",
-                position: 'absolute'
-            }}
 
-        ></div>)
+
+    const renderIsland = islands.map(({ transformOfCircle, transformOfIsland, zIndex }, key) => {
+        return (
+            <animated.div className='sky-center__islands' style={{
+                transform: transformOfCircle,
+                zIndex
+            }}>
+                <animated.div
+                    key={key}
+                    className='island'
+                    style={{
+                        transform: transformOfIsland,
+                        background: `url("${img_urls[key].url}") no-repeat center / contain`,
+                        height: "40vh",
+                        width: "40vh",
+                    }}></animated.div>
+            </animated.div>)
     })
     return (
-        <div className='sky-center'>
-            <div className='sky-center__islands'>
-                <div style={{
-                    width: calcPer(widthW, 80),
-                    height: calcPer(heightW, 20),
-                    border: "1px solid",
-                    borderRadius: "50%",
-                }}>
-                    <animated.div  {...bind()}
-                        style={{
-                            background: `url("${img_urls[0].url}") no-repeat center / contain`,
-                            width,
-                            height,
-                            x,
-                            y,
-                            touchAction: 'none',
-                            position: 'absolute'
-                        }} />
-                </div>
-                {/* {renderIsland} */}
-            </div>
-        </div>
+
+        <animated.div className='sky-center' {...bind()}>
+            {renderIsland}
+        </animated.div>
+
     )
 }
