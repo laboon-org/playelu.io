@@ -1,4 +1,9 @@
-@media screen and (max-width: 739.9px) {
+@media screen and (max-width: 576px){
+  .playelu-frame .playelu-all{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 740px) {
   :root {
     --btnWidth: 30vw;
   }
@@ -8,45 +13,51 @@
   .background-bottom {
     bottom: 0;
   }
-  .mobile__discord-img {
-    display: block;
+  .discord {
+    right: -68px;
+    transform: scale(.25) translateY(-180%);
+    .discord-img {
+   display: none;
+     }
+     .mobile__discord-img {
+      display: block;
+    }
   }
-
-  .playelu-all {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 8vh;
+  .playelu-frame .playelu-all{
+    width: 90%;
   }
-
+.playelu-top{
+  margin-top: 70px;
+}
   .playelu-tittle {
-    width: 70vw;
-    margin: 0 15%;
-    text-align: center;
+    width: 80%;
+    margin: 0 10%;
   }
   .playelu-btn {
-    width: 95vw;
+    max-width: 420px;
+    width: 96%;
   }
   .playelu-btn button {
-    width: calc(100vw * 30 / 100);
-    height: calc(100vh * 6 / 100);
-    border-radius: calc(100vh * 5.572 / 100);
-    font-size: calc(100vh * 2.3 / 100);
-    letter-spacing: 2px;
+    width:30%;
+    height: 42px;
+    border-radius: 5.572vh;
+    font-size:15px;
+    letter-spacing: 1.2px;
   }
 
   .playelu-btn input {
-    padding-right: var(--btnWidth);
-    height: calc(100vh * 6.572 / 100);
-    border-radius: calc(100vh * 5.572 / 100);
-    font-size: calc(100vh * 2.7 / 100);
-    padding-left: calc(100vw * 12 / 100);
+    padding-right: 30.5%;
+    height: 46px;
+    border-radius: 5.572vh;
+    font-size: 18px;
+    padding-left: 37px;
     letter-spacing: 2px;
   }
 
   .iconEmail {
-    font-size: calc(100vh * 4 / 100);
-    left: calc(100vw * 3 / 100);
-    margin-top: calc(100vh * 1.3 / 100);
+    font-size: 26px;
+    left: 10px;
+    margin-top: 10px;
   }
   .name-email {
     font-size: 18px;
@@ -58,17 +69,13 @@
   }
 
   .playelu__link {
+    max-width: 350px;
     width: 70%;
   }
 
   .playelu__link-ele img {
     width: 90%;
   }
-
-  .discord {
-    display: none;
-  }
-
   .modal-thankyou > .modal-content {
     width: 80vw;
   }
@@ -92,23 +99,45 @@
     display: none;
   }
   .policy {
-    width: 77%;
+    width: 230px;
   }
   .policy a {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 740px) and (max-width: 1024px) {
   :root {
     --btnWidth: 20vw;
   }
+  .discord {
+    right: -58px;
+    transform: scale(.4) translateY(-100%);
+    .discord-img {
+   display: none;
+     }
+     .mobile__discord-img {
+      display: block;
+    }
+  }
   .background-bottom {
     bottom: 0;
   }
-
-  .playelu-all {
-    width: 80%;
-    margin: 0 auto;
+  .playelu-frame{
+    .playelu-all {
+      width: 60%;
+    }
+  }
+ 
+  .menu {
+    width: 95%;
+    .playelu__menu-element {
+       h4 {
+      
+        font-size: 10px;
+        letter-spacing: 0.5px;
+  
+      }
+    }
   }
 
   .playelu-img {
@@ -117,31 +146,32 @@
   .playelu-tittle h1 {
     font-size: calc(100vh * 5.5 / 100);
   }
-
+  .playelu-btn{
+    max-width: 530px;
+  }
   .playelu-btn button {
-    width: calc(100vw * 20 / 100);
-    font-size: calc(100vh * 2 / 100);
-    letter-spacing: 3px;
+    width: 25%;
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 
   .playelu-btn input {
-    padding-right: var(--btnWidth);
-    padding-left: calc(100vw * 8.7 / 100);
-    font-size: calc(100vh * 2.8 / 100);
+    padding-right: 25.5%;
+    padding-left: 52px;
+    font-size: 20px;
   }
   .iconEmail {
-    color: #158fa5;
-    position: absolute;
-    font-size: calc(100vh * 4.5 / 100);
-    left: calc(100vw * 2 / 100);
+    font-size: 33px;
+    left: 15px;
   }
 
   .playelu__link {
-    width: 60%;
+    max-width: 420px;
+    width: 80%;
   }
 
   .policy {
-    width: 48%;
+    width: 300px;
   }
   .header {
     width: 100%;
@@ -169,38 +199,36 @@
   .playelu-tittle h1 {
     font-size: calc(100vh * 5.5 / 100);
   }
-
+  .playelu-btn{
+    max-width: 540px;
+  }
   .playelu-btn button {
-    width: calc(100vw * 20 / 100);
-    font-size: calc(100vh * 2.3 / 100);
+    width: 22%;
+    font-size:15px;
     letter-spacing: 3px;
   }
 
   .playelu-btn input {
-    padding-left: calc(100vw * 7 / 100);
-    padding-right: var(--btnWidth);
-    font-size: calc(100vh * 2.7 / 100);
+    padding-left: 60px;
+    padding-right: 22.5%;
+    font-size: 20px;
   }
   .iconEmail {
-    color: #158fa5;
     position: absolute;
-    font-size: calc(100vh * 4 / 100);
-    left: calc(100vw * 2 / 100);
-    margin-top: calc(100vh * 1.7 / 100);
+    font-size: 35px;
+    left: 20px;
+    margin-top: 7.5px;
   }
 
   .playelu__link {
+    max-width: 450px;
     width: 60%;
   }
 
   .policy {
-    width: 48%;
+    width: 300px;
   }
 
-  .discord img {
-    width: 16vw;
-    height: 13vw;
-  }
 }
 @media screen and (min-width: 1900px) {
   .playelu-img {

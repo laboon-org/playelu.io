@@ -20,52 +20,54 @@
       height: 60vh;
       display: flex;
       align-items: center;
+      .rune {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+      
+        .gameplay__rune-img {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+        }
+        .gameplay__boonmoon-img {
+          position: absolute;
+          width: 40%;
+          bottom: 45%;
+          z-index: 0;
+        }
+      }
     }
-  }
-}
-
-.rune {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 100%;
-
-  .gameplay__rune-img {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-  }
-  .gameplay__boonmoon-img {
-    position: absolute;
-    width: 40%;
-    bottom: 45%;
-    z-index: 0;
+    .gameplay-logo {
+      width: 40%;
+      margin: auto;
+      .gameplay__logo-img {
+        width: 100%;
+      }
+    }
   }
 }
 .gameplay__selection-img {
   width: 100%;
 }
-.gameplay-logo {
-  width: 45%;
-  margin: auto;
-}
-
-.gameplay__logo-img {
-  width: 100%;
-}
 
 .sky-center {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-.eluDrop-btn {
-  position: absolute;
-  bottom: 0;
-  width: 10%;
-  margin-left: 45%;
+  margin: auto;
+  width: 90%;
+  
+  .island{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .eluDrop-btn {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
 }
 
 .island1,
@@ -78,6 +80,7 @@
     width: 100%;
   }
 }
+
 .island1 .isLand-img:nth-child(1) {
   width: 50%;
   margin-left: 52%;

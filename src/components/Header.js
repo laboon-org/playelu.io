@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Modal from 'react-bootstrap/Modal';
 import { Link } from 'react-router-dom';
 import urlConstant from '../urlConstant';
-
+import '../css/responsive.scss'
 export default function Header() {
     const [showComingSoon, setShowComingSoon] = useState(false);
     const handleCloseComingSoon = () => setShowComingSoon(false);
