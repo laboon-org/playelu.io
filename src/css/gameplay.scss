@@ -13,11 +13,14 @@
 .sky {
   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/skyBackground.webp")
     no-repeat center / cover;
+  position: relative;
   .sky-top {
+    max-width: 1280px;
     width: 80vw;
     margin: auto;
     .gameplay-selection {
-      height: 60vh;
+      max-height: 600px;
+      height: 55vh;
       display: flex;
       align-items: center;
       .rune {
@@ -26,7 +29,7 @@
         align-items: center;
         position: relative;
         height: 100%;
-      
+
         .gameplay__rune-img {
           position: absolute;
           z-index: 1;
@@ -41,23 +44,42 @@
       }
     }
     .gameplay-logo {
-      width: 40%;
+      width: 35%;
       margin: auto;
       .gameplay__logo-img {
         width: 100%;
+      }
+    }
+    .gameplay-cloud {
+      position: absolute;
+      top: 10%;
+      z-index: 0;
+      display: flex;
+      justify-content: space-between;
+      .gameplay-cloud1-img {
+        width: 20%;
+      }
+      .gameplay-cloud2-img {
+        width: 20%;
       }
     }
   }
 }
 .gameplay__selection-img {
   width: 100%;
+  transform: scale(1);
+  cursor: pointer;
+}
+.gameplay__selection-img:hover {
+  transform: scale(0.9);
 }
 
 .sky-center {
+  max-width: 1280px;
   margin: auto;
   width: 90%;
-  
-  .island{
+
+  .island {
     display: flex;
     align-items: center;
     width: 100%;
@@ -67,6 +89,11 @@
     display: flex;
     justify-content: center;
     margin: auto;
+    transform: scale(1);
+    cursor: pointer;
+  }
+  .eluDrop-btn:hover {
+    transform: scale(0.9);
   }
 }
 

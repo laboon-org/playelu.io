@@ -2,6 +2,7 @@ export default {
     image: {
         closeModal: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/closeModal.webp',
         modal: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/modal.webp',
+        modalCommingSoon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/modalComingSoon.webp',
         backgroundBottom: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/backgroundBottom.webp',
         soundOn: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/sound.webp',
         soundOff: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/soundOff.webp',
@@ -19,9 +20,12 @@ export default {
         navbarBtn: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/navbarBtn.webp',
         modalNavbarEle: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/modalNavbarEle.webp',
         startDeviated: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/starDeviated.webp',
-        cloud1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/cloud1.webp',
-        cloud2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/cloud2.webp',
-        cloud3: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/cloud3.webp',
+        cloud_1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/cloud_1.png',
+        cloud_2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/cloud_2.png',
+        cloud_3: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/cloud_3.png',
+        cloud_4: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/cloud_4.png',
+        cloud_5: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/cloud_5.png',
+        cloud_6: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/cloud_6.png',
         playeluHeader2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/playeluHeader2.webp'
     },
     imageGamePlay: {
@@ -60,6 +64,8 @@ export default {
         islandBlank1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islandBlank1.webp',
         islandBlank2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islandBlank2.webp',
         islandBlank3: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islanBlank3.webp',
+        cloud1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/cloud1.webp',
+        cloud2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/cloud2.webp'
 
     },
     docs: {

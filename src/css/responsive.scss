@@ -1,5 +1,5 @@
-@media screen and (max-width: 576px){
-  .playelu-frame .playelu-all{
+@media screen and (max-width: 576px) {
+  .playelu-frame .playelu-all {
     width: 100%;
   }
 }
@@ -14,34 +14,37 @@
     bottom: 0;
   }
   .discord {
-    right: -68px;
-    transform: scale(.25) translateY(-180%);
+    right: -72px;
+    transform: scale(0.23) translateY(-200vh);
     .discord-img {
-   display: none;
-     }
-     .mobile__discord-img {
+      display: none;
+    }
+    .mobile__discord-img {
       display: block;
     }
   }
-  .playelu-frame .playelu-all{
+  .playelu-frame .playelu-all {
     width: 90%;
   }
-.playelu-top{
-  margin-top: 70px;
-}
+  .playelu-top {
+    margin-top: 70px;
+  }
   .playelu-tittle {
     width: 80%;
     margin: 0 10%;
+  }
+  .playelu-tittle h1 {
+    font-size: 36px;
   }
   .playelu-btn {
     max-width: 420px;
     width: 96%;
   }
   .playelu-btn button {
-    width:30%;
+    width: 30%;
     height: 42px;
     border-radius: 5.572vh;
-    font-size:15px;
+    font-size: 14px;
     letter-spacing: 1.2px;
   }
 
@@ -49,7 +52,7 @@
     padding-right: 30.5%;
     height: 46px;
     border-radius: 5.572vh;
-    font-size: 18px;
+    font-size: 16px;
     padding-left: 37px;
     letter-spacing: 2px;
   }
@@ -100,6 +103,7 @@
   }
   .policy {
     width: 230px;
+    margin-top: 20px;
   }
   .policy a {
     font-size: 12px;
@@ -111,31 +115,29 @@
   }
   .discord {
     right: -58px;
-    transform: scale(.4) translateY(-100%);
+    transform: scale(0.4) translateY(-100%);
     .discord-img {
-   display: none;
-     }
-     .mobile__discord-img {
+      display: none;
+    }
+    .mobile__discord-img {
       display: block;
     }
   }
   .background-bottom {
     bottom: 0;
   }
-  .playelu-frame{
+  .playelu-frame {
     .playelu-all {
       width: 60%;
     }
   }
- 
+
   .menu {
     width: 95%;
     .playelu__menu-element {
-       h4 {
-      
+      h4 {
         font-size: 10px;
         letter-spacing: 0.5px;
-  
       }
     }
   }
@@ -143,10 +145,8 @@
   .playelu-img {
     width: 80%;
   }
-  .playelu-tittle h1 {
-    font-size: calc(100vh * 5.5 / 100);
-  }
-  .playelu-btn{
+
+  .playelu-btn {
     max-width: 530px;
   }
   .playelu-btn button {
@@ -171,7 +171,7 @@
   }
 
   .policy {
-    width: 300px;
+    width: 280px;
   }
   .header {
     width: 100%;
@@ -197,14 +197,14 @@
     width: 80%;
   }
   .playelu-tittle h1 {
-    font-size: calc(100vh * 5.5 / 100);
+    font-size: 40px;
   }
-  .playelu-btn{
+  .playelu-btn {
     max-width: 540px;
   }
   .playelu-btn button {
     width: 22%;
-    font-size:15px;
+    font-size: 15px;
     letter-spacing: 3px;
   }
 
@@ -217,7 +217,7 @@
     position: absolute;
     font-size: 35px;
     left: 20px;
-    margin-top: 7.5px;
+    margin-top: 8px;
   }
 
   .playelu__link {
@@ -226,19 +226,6 @@
   }
 
   .policy {
-    width: 300px;
-  }
-
-}
-@media screen and (min-width: 1900px) {
-  .playelu-img {
-    width: 80%;
-  }
-
-  .playelu-btn {
-    width: 75%;
-  }
-  .playelu__menu-element h4 {
-    font-size: 16px;
+    width: 280px;
   }
 }
