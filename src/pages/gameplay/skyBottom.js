@@ -1,14 +1,15 @@
 import React from 'react'
 import '../../css/skyBottom.scss'
+import boat from './boatImg/boat.gif'
 
 export default function SkyBottom() {
     return (
         <div className='skyBottom'>
             <div className='boat__animation2'>
-                <img src="https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sailboatLeft2.webp" alt="" />
+                <img src={boat} alt="" />
             </div>
             <div className='boat__animation1'>
-                <img src="https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sailboatLeft2.webp" alt="" />
+                <img src={boat} alt="" />
             </div>
 
             <div className='sailboat'>

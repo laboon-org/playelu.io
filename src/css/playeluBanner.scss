@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-@import url("http://fonts.cdnfonts.com/css/boldenvan");
+@import url("https://fonts.cdnfonts.com/css/boldenvan");
 
 body {
   height: 100%;
@@ -128,6 +128,7 @@ li {
 .x4 {
   animation: cloud 24s infinite linear;
   top: 0;
+  left: -5%;
   transform: scale(0.9);
 }
 
@@ -136,12 +137,12 @@ li {
   opacity: 0.6;
   transform: scale(1);
   bottom: 20vh;
-  left: 10%;
+  left: -12%;
 }
 .x6 {
   animation: cloud 21s infinite linear;
   opacity: 1;
-  left: 20%;
+  left: -15%;
 }
 
 .playelu-body {
@@ -260,18 +261,8 @@ li {
   font-weight: 300;
   animation: shine 3s infinite linear;
 }
-@keyframes shine {
-  0% {
-    transform: rotateZ(5deg);
-  }
-  50% {
-    transform: rotateZ(-5deg);
-  }
-  100% {
-    transform: rotateZ(5deg);
-  }
-}
-.playelu__menu-element h4:hover {
+
+.playelu__menu-element:hover h4 {
   color: #fabb1a;
 }
 .playelu-tittle {
@@ -446,6 +437,17 @@ li {
   -moz-animation: twirl 10s linear 0s infinite;
   -o-animation: twirl 10s linear 0s infinite;
 }
+@keyframes shine {
+  0% {
+    transform: rotateZ(5deg);
+  }
+  50% {
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(5deg);
+  }
+}
 @keyframes heartbeat {
   0% {
     transform: scale(1);
@@ -481,7 +483,7 @@ li {
     margin-left: 0;
   }
   100% {
-    margin-left: 100%;
+    margin-left: 110%;
   }
 }
 @keyframes twirl {

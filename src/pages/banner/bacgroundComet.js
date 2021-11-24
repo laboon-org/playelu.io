@@ -1,14 +1,9 @@
 import React from 'react'
 import urlConstant from '../../urlConstant'
 
-
-
-
-
 const getRandomNumberMinMax = (min, max) => {
     return parseInt(Math.random() * 100 * min) % max + min
 }
-
 const comets = [
     {
         id: 1,
@@ -35,7 +30,6 @@ const comets = [
         img: urlConstant.image.star5
     }
 ]
-
 export default function BackgroundComet() {
     return (
         <div style={{ position: 'relative' }}>
@@ -51,7 +45,7 @@ export default function BackgroundComet() {
                     };
 
                     return (
-                        <img className='background-comet' src={comet.img} style={cometStyles} alt="" />
+                        <img key={comet.id} className='background-comet' src={comet.img} style={cometStyles} alt="" />
                     )
                 }
                 )

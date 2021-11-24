@@ -24,13 +24,13 @@ export default function Header() {
             </Modal>
             <ul className='menu'>
                 <li className='playelu__menu-element' style={{ marginRight: '5px' }}>
-                    <a href="https://bit.ly/3nvuPP3">
+                    <a href="https://bit.ly/3nvuPP3" target='_blank'>
                         <img src={urlConstant.image.playeluHeader2} alt="" />
                         <h4>ROADMAP</h4>
                     </a>
                 </li>
                 <li className='playelu__menu-element' style={{ marginRight: 'auto' }}>
-                    <a href='https://bit.ly/3HIpdcy'>
+                    <a href='https://bit.ly/3HIpdcy' target='_blank'>
                         <img src={urlConstant.image.playeluHeader2} alt="" />
                         <h4>TOKENOMIC</h4>
                     </a>

@@ -6,13 +6,17 @@
     position: absolute;
     z-index: 0;
     width: 8%;
-    animation: boat 75s ease infinite;
+    animation: boat 65s ease infinite;
   }
   .boat__animation2 {
     position: absolute;
     z-index: 0;
     width: 5%;
-    animation: boat 70s ease infinite;
+    transform: rotateY(180deg);
+    animation: boat2 75s ease infinite;
+    // img {
+    //   width: 100%;
+    // }
   }
   .sailboat {
     padding-top: 10%;
@@ -31,6 +35,15 @@
 }
 .skyBottom img {
   width: 100%;
+}
+@keyframes boat2 {
+  0% {
+    right: -7%;
+  }
+
+  100% {
+    right: 100vw;
+  }
 }
 @keyframes boat {
   0% {

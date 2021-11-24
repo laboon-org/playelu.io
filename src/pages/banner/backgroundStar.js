@@ -98,7 +98,7 @@ export default function BackgroundStar() {
                         opacity: Math.random(0.95, 1)
                     };
                     return (
-                        <img className='background-star' src={star.img} style={starStyles} alt="" />
+                        <img key={star.id} className='background-star' src={star.img} style={starStyles} alt="" />
                     )
                 }
                 )
