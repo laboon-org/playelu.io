@@ -26,6 +26,7 @@
         top: 15%;
         width: 40%;
         z-index: -1;
+        animation: pinwheel 5s linear infinite;
       }
     }
     .boulder-img {
@@ -155,5 +156,13 @@
         top: 0;
       }
     }
+  }
+}
+@keyframes pinwheel {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
   }
 }
