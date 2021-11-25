@@ -41,14 +41,14 @@ export default function Navbar() {
                         </a>
                     </div>
                     <div className='modal-element'>
-                        <img src={urlConstant.image.modalNavbarEle} alt="" />
-                        <h2>LITEPAPER</h2>
-                    </div>
-                    <div className='modal-element'>
                         <Link to='/gameplay'>
                             <img src={urlConstant.image.modalNavbarEle} alt="" />
                             <h2 style={{ color: '#fabb1a' }}>GAMEPLAY</h2>
                         </Link>
+                    </div>
+                    <div className='modal-element'>
+                        <img src={urlConstant.image.modalNavbarEle} alt="" />
+                        <h2>LITEPAPER</h2>
                     </div>
                 </div>
             </Modal>
