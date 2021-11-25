@@ -132,7 +132,7 @@ export default function PlayeluBaner() {
               <a className='privacy-policy' href={urlConstant.docs.privacyPolicy}>
                 Privacy Policy
               </a>
-              <a href=''>|</a>
+              <a href='#'>&nbsp;|&nbsp;</a>
               <a href={urlConstant.docs.conditions}>
                 Terms & Conditions
               </a>
