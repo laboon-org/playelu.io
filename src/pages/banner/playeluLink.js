@@ -41,7 +41,7 @@ function PlayeluLink() {
         <div className='playelu__link  '>
             {
                 elementLinks.map(elementLink => (
-                    <div key={elementLink.id} className='playelu__link-ele col'>
+                    <div key={elementLink.id} className='playelu__link-ele'>
                         <a href={elementLink.href}>
                             <img src={elementLink.img} alt="" />
                         </a>

@@ -23,20 +23,24 @@ export default function Header() {
                 <img src={urlConstant.image.modalCommingSoon} alt="" />
             </Modal>
             <ul className='menu'>
-                <li className='playelu__menu-element' style={{ marginRight: '5px' }}>
+                <li className='playelu__menu-element'>
                     <a href="https://bit.ly/3nvuPP3" target='_blank'>
                         <img src={urlConstant.image.playeluHeader2} alt="" />
                         <h4 style={{ animation: 'shine 2.5s infinite linear' }}>ROADMAP</h4>
                     </a>
                 </li>
-                <li className='playelu__menu-element' style={{ marginRight: 'auto' }}>
+                <li className='playelu__menu-element'>
                     <a href='https://bit.ly/3HIpdcy' target='_blank'>
                         <img src={urlConstant.image.playeluHeader2} alt="" />
                         <h4 style={{ animation: 'shine 1.5s infinite linear' }}>TOKENOMIC</h4>
                     </a>
                 </li>
-
-                <li className='playelu__menu-element' style={{ marginRight: '5px' }}>
+                <li className='playelu__menu-element'>
+                    <a href='#'>
+                        <h4></h4>
+                    </a>
+                </li>
+                <li className='playelu__menu-element'>
                     <Link to='/gameplay'>
                         <img src={urlConstant.image.playeluHeader2} alt="" />
                         <h4 style={{ color: '#fabb1a', animation: 'shine 1s infinite linear' }}>GAMEPLAY</h4>

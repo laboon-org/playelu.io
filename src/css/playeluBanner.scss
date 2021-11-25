@@ -204,45 +204,44 @@ li {
 }
 
 .playelu-frame {
-  height: 100vh;
-  max-width: 1280px;
-  display: flex;
   justify-content: center;
-  margin: auto;
+  display: flex;
+  height: 100vh;
   .playelu-all {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 980px;
+    // max-height: 980px;
     align-items: center;
-    height: 98%;
-    width: 50%;
-    margin: auto;
+    width: 1280px;
     .header {
-      background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/playeluHeader1.webp")
-        no-repeat center / cover;
-      background-size: 100% auto;
+      background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/playeluHeader1.webp");
+      background-repeat: no-repeat;
+      background-size: 960px auto;
+      margin-top: 12px;
+      height: 200px;
       .menu {
-        width: 90%;
+        width: 960px;
         margin: auto;
-        max-height: 150px;
-        height: 20vh;
         align-items: center;
         display: flex;
         justify-content: space-between;
+        padding-top: 64px;
+        padding-left: 52px;
+        padding-right: 52px;
       }
     }
     .playelu-img {
-      width: 90%;
-      margin: auto;
+      margin: 0 auto;
+      text-align: center;
       img {
-        width: 100%;
+        width: 360px;
       }
     }
   }
 }
 .playelu__menu-element {
-  width: 19%;
+  width: 160px;
   text-align: center;
   position: relative;
   cursor: pointer;
@@ -251,14 +250,14 @@ li {
   }
 }
 .playelu__menu-element h4 {
-  position: absolute;
-  font-size: 12px;
+  font-size: 18px;
   letter-spacing: 1.4px;
   text-align: center;
   width: 100%;
   top: 50%;
   color: #fff;
   font-weight: 300;
+  margin-top: -36px;
 }
 
 .playelu__menu-element:hover h4 {
@@ -270,12 +269,13 @@ li {
 }
 .playelu-tittle h1 {
   color: #fff;
-  font-size: 38px;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 .playelu-btn {
   margin: auto;
   position: relative;
+  width: 480px;
   input {
     width: 100%;
     margin: auto;
@@ -283,9 +283,9 @@ li {
     height: 60px;
     border-radius: calc(100vh * 5.572 / 100);
     border: none;
-    font-size: 27px;
+    font-size: 18px;
     color: #114f8c;
-    padding-left: 60px;
+    padding-left: 64px;
   }
 }
 
@@ -294,37 +294,35 @@ li {
   background-image: radial-gradient(circle, #fbd426, #fab517);
   position: absolute;
   right: 0;
-  letter-spacing: 3px;
-  width: 26%;
-  height: 56px;
-  border-radius: calc(100vh * 5.572 / 100);
+  letter-spacing: 2px;
+  width: 28%;
+  height: calc(100% - 10px);
+  border-radius: 5.572vh;
   color: #114f8c;
-  font-size: 28px;
-  margin: 2px;
-  border: calc(100vh * 0.226 / 100) solid #114f8c;
+  font-size: 18px;
+  margin: 4px;
+  border: 1.5px solid #114f8c;
 }
 
 .iconEmail {
   color: #114f8c;
   position: absolute;
-  font-size: 38px;
+  font-size: 28px;
   left: 20px;
-  margin-top: 11px;
+  margin-top: 16px;
 }
 .playelu-input {
   width: 100%;
 }
 
 .playelu__link {
-  width: 60%;
-  margin: auto;
-  justify-content: center;
-  margin: auto;
-  display: flex;
+  width: 480px;
+  text-align: center;
 }
 .playelu__link-ele {
   margin: 0 5px;
-  box-shadow: #ccc 10px;
+  width: 48px;
+  display: inline-block;
 }
 .playelu__link-ele:hover {
   opacity: 0.7;
@@ -342,23 +340,21 @@ li {
   margin-bottom: 15px;
 }
 .policy a {
-  color: #fff;
-  -webkit-text-stroke: 1px #000;
   text-decoration: none;
   letter-spacing: 0.5px;
   margin: auto;
-  font-size: 14px;
-  color: #fff;
+  font-size: 16px;
+  color: #fbb518;
   justify-content: center;
+  text-shadow: 1px 1px 2px #114f8c;
 }
 .policy a:hover {
-  color: #ccc;
+  color: #fbb518;
 }
 .playelu-bottom {
   text-align: center;
   flex-direction: column;
   z-index: 3;
-  margin-bottom: 10px !important;
 }
 .discord {
   position: absolute;
@@ -366,7 +362,7 @@ li {
   right: 0;
   z-index: 100;
   cursor: pointer;
-  width: 180px;
+  width: 240px;
   transform: scale(1) translateY(0);
   animation: all ease 0.7s;
   .discord-img {
