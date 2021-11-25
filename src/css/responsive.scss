@@ -1,9 +1,19 @@
+// Mini Mobile
 @media screen and (max-width: 576px) {
   .playelu-frame .playelu-all {
     // width: 100%;
   }
 }
+
+// Mobile
 @media screen and (max-width: 740px) {
+
+  .playelu__link-ele {
+    width: 24px;
+  }
+  .playelu-frame .playelu-all .playelu-img img {
+    width: calc(100% - 36px);
+  }
   :root {
     --btnWidth: 30vw;
   }
@@ -14,7 +24,7 @@
     bottom: 0;
   }
   .discord {
-    right: -72px;
+    right: -96px;
     transform: scale(0.23) translateY(-200vh);
     .discord-img {
       display: none;
@@ -22,6 +32,7 @@
     .mobile__discord-img {
       display: block;
     }
+    bottom: -240px;
   }
 
   .playelu-frame .playelu-all {
@@ -31,21 +42,17 @@
     margin-top: 70px;
   }
   .playelu-tittle {
-    width: 80%;
-    margin: 0 10%;
   }
   .playelu-tittle h1 {
-    font-size: 36px;
+    font-size: 24px;
   }
   .playelu-btn {
-    max-width: 420px;
-    width: 96%;
+    width: calc(100% - 36px);
   }
   .playelu-btn button {
     width: 30%;
-    height: 42px;
     border-radius: 5.572vh;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 1.2px;
   }
 
@@ -53,8 +60,8 @@
     padding-right: 30.5%;
     height: 46px;
     border-radius: 5.572vh;
-    font-size: 16px;
-    padding-left: 37px;
+    font-size: 14px;
+    padding-left: 44px;
     letter-spacing: 2px;
   }
 
@@ -73,8 +80,7 @@
   }
 
   .playelu__link {
-    max-width: 350px;
-    width: 70%;
+    width: 100%;
   }
 
   .playelu__link-ele img {
@@ -166,7 +172,6 @@
   }
 
   .policy {
-    width: 280px;
   }
   .header {
     width: 100%;
@@ -177,7 +182,19 @@
     width: 70vw;
   }
 }
+
+// iPad / Tablet
 @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  .discord {
+    right: -92px;
+    transform: scale(0.23) translateY(-200vh);
+    .discord-img {
+      display: none;
+    }
+    .mobile__discord-img {
+      display: block;
+    }
+  }
   :root {
     --btnWidth: 20vw;
   }
@@ -209,8 +226,6 @@
   }
   .playelu__link {
   }
-
   .policy {
-    width: 280px;
   }
 }
