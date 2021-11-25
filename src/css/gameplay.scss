@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  cursor: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/logo192.png"),
+    auto;
 }
 .gameplay-body {
   position: absolute;
@@ -11,54 +13,118 @@
   width: 100vw;
 }
 .sky {
-  background: url("../img/skyBackground.webp") no-repeat center / cover;
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/skyBackground.webp")
+    no-repeat center / cover;
+  position: relative;
   .sky-top {
-    width: 100vw;
-    height: 100vh;
-    max-height: 1280px;
+    max-width: 1280px;
+    width: 80vw;
+    margin: auto;
     .gameplay-selection {
-      max-height: 545px;
-      height: 45vh;
+      max-height: 600px;
+      height: 55vh;
       display: flex;
       align-items: center;
+      .rune {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+
+        .gameplay__rune-img {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+        }
+        .gameplay__boonmoon-img {
+          position: absolute;
+          width: 40%;
+          bottom: 45%;
+          z-index: 0;
+        }
+      }
     }
-  }
-}
-
-.rune {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 100%;
-
-  .gameplay__rune-img {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-  }
-  .gameplay__boonmoon-img {
-    position: absolute;
-    width: 40%;
-    bottom: 45%;
-    z-index: 0;
+    .gameplay-logo {
+      width: 35%;
+      margin: auto;
+      .gameplay__logo-img {
+        width: 100%;
+      }
+    }
+    .gameplay-cloud {
+      position: absolute;
+      top: 10%;
+      z-index: 0;
+      display: flex;
+      justify-content: space-between;
+      .gameplay-cloud1-img {
+        width: 20%;
+      }
+      .gameplay-cloud2-img {
+        width: 20%;
+      }
+    }
   }
 }
 .gameplay__selection-img {
   width: 100%;
+  transform: scale(1);
+  cursor: pointer;
 }
-.gameplay-logo {
-  width: 45%;
-  margin: auto;
+.gameplay__selection-img:hover {
+  transform: scale(0.9);
 }
 
-.gameplay__logo-img {
-  width: 100%;
+.sky-center {
+  max-width: 1280px;
+  margin: auto;
+  width: 90%;
+
+  .island {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .eluDrop-btn {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    transform: scale(1);
+    cursor: pointer;
+  }
+  .eluDrop-btn:hover {
+    transform: scale(0.9);
+  }
 }
-.beach {
+
+.island1,
+.island2,
+.island3 {
+  margin: auto;
+  width: 30%;
+  height: 100%;
+  .isLand-img {
+    width: 100%;
+  }
 }
-.beach img {
-  width: 100%;
+
+.island1 .isLand-img:nth-child(1) {
+  width: 50%;
+  margin-left: 52%;
 }
-.ocean {
+.island3 .isLand-img:nth-child(1) {
+  width: 60%;
+  margin-right: 30%;
+}
+.island2 .isLand-img:nth-child(1) {
+  width: 50%;
+  margin-left: 25%;
+}
+.island1 .isLand-img:nth-child(2),
+.island3 .isLand-img:nth-child(2) {
+  width: 70%;
+  margin-bottom: 15%;
+  margin-left: 15%;
 }

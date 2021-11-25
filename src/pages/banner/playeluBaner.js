@@ -52,12 +52,25 @@ export default function PlayeluBaner() {
 
 
   return (<div className='playelu-body'>
+    <div className="discord">
+      <img className="discord-img" src={urlConstant.image.discord} alt="" />
+      <img className="mobile__discord-img" src={urlConstant.image.mobileDiscord} alt="" />
+    </div>
     <div className="playelu">
       <div className='playelu-background'>
-        {/* <div className='my-cloud'></div> */}
         {BackgroundCloud1}
         {BackgroundComet1}
         {BackgroundStar1}
+        <div className='shooting-star'>
+          <Stars imgUrl={urlConstant.image.star5} />
+          <Stars imgUrl={urlConstant.image.star5} />
+          <Stars imgUrl={urlConstant.image.star5} />
+          <Stars imgUrl={urlConstant.image.star5} />
+          <Stars imgUrl={urlConstant.image.star5} />
+          <Stars imgUrl={urlConstant.image.star5} />
+          <Stars imgUrl={urlConstant.image.star5} />
+          <Stars imgUrl={urlConstant.image.star5} />
+        </div>
         <div className="background-bottom">
           <img className="background__bottom-img" src={urlConstant.image.backgroundBottom} alt="" />
         </div>
@@ -69,7 +82,6 @@ export default function PlayeluBaner() {
         </div>
         <Navbar />
       </div>
-
       <Modal
         size="lg"
         dialogClassName="modal-thankyou"
@@ -82,64 +94,53 @@ export default function PlayeluBaner() {
         <img src={urlConstant.image.modal} alt="" />
         <p className='name-email'>{email}</p>
       </Modal>
-      <div className='shooting-star'>
-        <Stars imgUrl={urlConstant.image.star5} />
-        <Stars imgUrl={urlConstant.image.star5} />
-        <Stars imgUrl={urlConstant.image.star5} />
-        <Stars imgUrl={urlConstant.image.star5} />
-        <Stars imgUrl={urlConstant.image.star5} />
-        <Stars imgUrl={urlConstant.image.star5} />
-        <Stars imgUrl={urlConstant.image.star5} />
-        <Stars imgUrl={urlConstant.image.star5} />
-      </div>
-      <div className="discord">
-        <img className="discord" src={urlConstant.image.discord} alt="" />
-      </div>
-      <div className="mobile-discord">
-        <img className="mobile__discord-img" src={urlConstant.image.mobileDiscord} alt="" />
-      </div>
-      <div className="playelu-all d-flex flex-column h-100 justify-content-center">
-        <div className="playelu-top">
-          <Header />
-          <div className="playelu-img">
-            <img src={urlConstant.image.eluLogo} alt="" />
+      <div className='playelu-frame'>
+        <div className="playelu-all">
+          <div className="playelu-top">
+            <Header />
+            <div className="playelu-img">
+              <img src={urlConstant.image.eluLogo} alt="" />
+            </div>
+            <div className="playelu-tittle">
+              <h1>Play-to-Earn NFT Game</h1>
+            </div>
+            <div className="playelu-btn">
+              <input
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                className="playelu-input "
+                type="email"
+                maxLength='50'
+                placeholder="Your Email here"
+              >
+
+              </input>
+              <i className="iconEmail fas fa-envelope"></i>
+              <button
+                type="submit"
+                className=" subcribe__playelu-btn"
+                onClick={onPress}
+              >
+                Subscribe
+              </button>
+            </div>
           </div>
-          <div className="playelu-tittle">
-            <h1>Play-to-Earn NFT Game</h1>
-          </div>
-          <div className="playelu-btn">
-            <input
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-              className="playelu-input "
-              type="email"
-              maxLength='50'
-              placeholder="Your Email here"
-            ></input>
-            <i className="iconEmail fas fa-envelope"></i>
-            <button
-              type="submit"
-              className=" subcribe__playelu-btn"
-              onClick={onPress}
-            >
-              Subscribe
-            </button>
-          </div>
-        </div>
-        <div className="playelu-bottom mt-auto d-flex justify-content-center">
-          <PlayeluLink></PlayeluLink>
-          <div className='policy'>
-            <a className='privacy-policy' href={urlConstant.docs.privacyPolicy}>
-              Privacy Policy
-            </a>
-            |
-            <a href={urlConstant.docs.conditions}>
-              Terms & Conditions
-            </a>
+          <div className="playelu-bottom mt-auto d-flex justify-content-center">
+            <PlayeluLink></PlayeluLink>
+            <div className='policy'>
+              <a className='privacy-policy' href={urlConstant.docs.privacyPolicy}>
+                Privacy Policy
+              </a>
+              <a href=''>|</a>
+              <a href={urlConstant.docs.conditions}>
+                Terms & Conditions
+              </a>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
   );

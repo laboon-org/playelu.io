@@ -3,12 +3,14 @@ import SkyCenter from './skyCenter'
 import '../../css/gameplay.scss'
 import '../../css/responsiveGameplay.scss'
 import urlConstant from '../../urlConstant'
+import Beach from './Beach'
+import SkyBottom from './skyBottom'
 
 export default function Gameplay() {
     return (
         <div className='gameplay-body'>
             <div className='sky'>
-                <div className='sky-top container'>
+                <div className='sky-top'>
                     <div className='gameplay-selection'>
                         <div className='col drop'>
                             <img className="gameplay__selection-img" src={urlConstant.imageGamePlay.drop} alt="" />
@@ -30,24 +32,16 @@ export default function Gameplay() {
                     <div className='gameplay-logo'>
                         <img className="gameplay__logo-img" src={urlConstant.image.eluLogo} alt="" />
                     </div>
-                    <div className='gameplay-cloud'>
-                        <img className="gameplay__logo-img" src='' alt="" />
-                    </div>
+                    {/* <div className='gameplay-cloud'>
+                        <img className="gameplay-cloud1-img" src={urlConstant.imageGamePlay.cloud1} alt="" />
+                        <img className="gameplay-cloud2-img" src={urlConstant.imageGamePlay.cloud2} alt="" />
+                    </div> */}
                 </div>
                 <SkyCenter />
-                <div className='sky-bottom'>
 
-
-                </div>
+                <div> <SkyBottom /></div>
             </div>
-            <div className='beach'>
-                <div className='ocean'>
-                    {/* <img className="gameplay__ocean-img" src={urlConstant.imageGamePlay.backgroundOcean} alt="" /> */}
-                </div>
-                <div className='land'>
-                    <img className="gameplay__land-img" src={urlConstant.imageGamePlay.backgroundLand} alt="" />
-                </div>
-            </div>
+            <Beach />
         </div>
     )
 }
