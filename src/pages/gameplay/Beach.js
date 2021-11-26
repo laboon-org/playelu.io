@@ -1,6 +1,6 @@
 import React from 'react'
 import urlConstant from '../../urlConstant'
-import '../../css/beach.scss'
+import '../../css/gameplay/beach.scss'
 
 export default function Beach() {
     return (

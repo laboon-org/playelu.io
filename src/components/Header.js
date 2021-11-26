@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Modal from 'react-bootstrap/Modal';
 import { Link } from 'react-router-dom';
 import urlConstant from '../urlConstant';
-import '../css/responsive.scss'
+import '../css/reponsiveness/home/responsive.scss'
 export default function Header() {
     const [showComingSoon, setShowComingSoon] = useState(false);
     const handleCloseComingSoon = () => setShowComingSoon(false);
@@ -30,7 +30,7 @@ export default function Header() {
                     </a>
                 </li>
                 <li className='playelu__menu-element'>
-                    <a href='https://bit.ly/3HIpdcy' target='_blank'>
+                    <a href='https://bit.ly/3HUYOYZ' target='_blank'>
                         <img src={urlConstant.image.playeluHeader2} alt="" />
                         <h4 style={{ animation: 'shine 1.5s infinite linear' }}>TOKENOMIC</h4>
                     </a>

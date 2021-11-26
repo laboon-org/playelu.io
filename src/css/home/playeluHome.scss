@@ -9,6 +9,9 @@ body {
   height: 100%;
   font-family: "BoldenVan", sans-serif;
 }
+a {
+  text-decoration: none;
+}
 ul {
   padding-left: 0;
 }
@@ -213,22 +216,26 @@ li {
     justify-content: space-between;
     // max-height: 980px;
     align-items: center;
-    width: 1280px;
+    max-width: 1280px;
     .header {
-      background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/playeluHeader1.webp");
-      background-repeat: no-repeat;
-      background-size: 960px auto;
+      width: 80%;
+      background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/playeluHeader1.webp")
+        no-repeat 50% / cover;
+      background-size: 100% auto;
+      // background-repeat: no-repeat;
+      // background-size: 960px auto;
       margin-top: 12px;
+      margin: auto;
       height: 200px;
       .menu {
-        width: 960px;
+        // width: 960px;
         margin: auto;
-        align-items: center;
         display: flex;
         justify-content: space-between;
-        padding-top: 64px;
-        padding-left: 52px;
-        padding-right: 52px;
+        padding-top: 74px;
+        margin: 0 20px;
+        // padding-left: 52px;
+        // padding-right: 52px;
       }
     }
     .playelu-img {
@@ -242,6 +249,7 @@ li {
 }
 .playelu__menu-element {
   width: 160px;
+  margin: 0 5px;
   text-align: center;
   position: relative;
   cursor: pointer;
@@ -250,14 +258,14 @@ li {
   }
 }
 .playelu__menu-element h4 {
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: 1.4px;
   text-align: center;
   width: 100%;
   top: 50%;
   color: #fff;
   font-weight: 300;
-  margin-top: -36px;
+  margin-top: -26px;
 }
 
 .playelu__menu-element:hover h4 {
@@ -296,11 +304,11 @@ li {
   right: 0;
   letter-spacing: 2px;
   width: 28%;
-  height: calc(100% - 10px);
+  height: calc(100% - 6px);
   border-radius: 5.572vh;
   color: #114f8c;
   font-size: 18px;
-  margin: 4px;
+  margin: 3px;
   border: 1.5px solid #114f8c;
 }
 
@@ -362,7 +370,7 @@ li {
   right: 0;
   z-index: 100;
   cursor: pointer;
-  width: 240px;
+  width: 220px;
   transform: scale(1) translateY(0);
   animation: all ease 0.7s;
   .discord-img {

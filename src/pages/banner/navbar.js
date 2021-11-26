@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import urlConstant from '../../urlConstant';
 
-import '../../css/modalNavbar.scss'
+import '../../css/home/modalNavbar.scss'
 
 
 export default function Navbar() {

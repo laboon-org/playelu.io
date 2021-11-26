@@ -1,13 +1,9 @@
 // Mini Mobile
 @media screen and (max-width: 576px) {
-  .playelu-frame .playelu-all {
-    // width: 100%;
-  }
 }
 
 // Mobile
 @media screen and (max-width: 740px) {
-
   .playelu__link-ele {
     width: 24px;
   }
@@ -35,9 +31,6 @@
     bottom: -240px;
   }
 
-  .playelu-frame .playelu-all {
-    // width: 90%;
-  }
   .playelu-top {
     margin-top: 70px;
   }
@@ -124,10 +117,10 @@
     right: -72px;
     transform: scale(0.4) translateY(-100%);
     .discord-img {
-      display: none;
+      display: block;
     }
     .mobile__discord-img {
-      display: block;
+      display: none;
     }
   }
 
@@ -139,7 +132,9 @@
       width: 60%;
     }
   }
-
+  .header {
+    width: 90%;
+  }
   .menu {
     width: 95%;
     .playelu__menu-element {

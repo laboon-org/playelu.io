@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../css/skyBottom.scss'
+import '../../css/gameplay/skyBottom.scss'
 import boat from './boatImg/boat.gif'
 
 export default function SkyBottom() {

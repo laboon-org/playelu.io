@@ -1,6 +1,6 @@
 import './App.css';
-import './css/playeluBanner.scss'
-import './css/responsive.scss'
+import './css/home/playeluHome.scss'
+import './css/reponsiveness/home/responsive.scss'
 import PlayeluBaner from './pages/banner/playeluBaner';
 import Gameplay from './pages/gameplay/gameplay';
 import {

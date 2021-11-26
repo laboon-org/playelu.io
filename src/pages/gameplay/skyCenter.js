@@ -7,7 +7,7 @@ export default function SkyCenter() {
             <div className='island'>
                 <div className='island1'>
                     <img className="isLand-img" src={urlConstant.imageGamePlay.islandBlank1} alt="" />
-                    <img className="isLand-img" src={urlConstant.imageGamePlay.islandFire} alt="" />
+                    <img className="isLand-img" src={urlConstant.imageGamePlay.fire_island} alt="" />
                 </div>
                 <div className='island2'>
                     <img className="isLand-img" src={urlConstant.imageGamePlay.islandBlank2} alt="" />
