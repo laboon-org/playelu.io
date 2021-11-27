@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import SkyCenter from './skyCenter'
-import '../../css/gameplay/gameplay.scss'
-import '../../css/reponsiveness/gameplay/responsiveGameplay.scss'
+import '../../scss/gameplay/gameplay.scss'
+import '../../scss/reponsiveness/gameplay/responsiveGameplay.scss'
 import urlConstant from '../../urlConstant'
 import Beach from './Beach'
 import SkyBottom from './skyBottom'
@@ -20,7 +20,7 @@ export default function Gameplay() {
     return (
 
         <div>
-            {isLoading == true ? <Loading /> :
+            {isLoading ? <Loading /> :
                 <div className='gameplay-body'>
                     <div className='sky'>
                         <div className='sky-top'>
@@ -52,7 +52,7 @@ export default function Gameplay() {
                         </div>
                         <SkyCenter />
 
-                        <div> <SkyBottom /></div>
+                        <SkyBottom />
                     </div>
                     <Beach />
                 </div>

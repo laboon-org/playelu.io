@@ -1,6 +1,6 @@
 import React from 'react'
 import urlConstant from '../../urlConstant'
-import '../../css/gameplay/beach.scss'
+import '../../scss/gameplay/beach.scss'
 
 export default function Beach() {
     return (
@@ -23,8 +23,6 @@ export default function Beach() {
                             <img className="tree-img" src={urlConstant.imageGamePlay.tree} alt="" />
                             <div className='tree-accessory'>
                                 <img className="oceanIsland-grass" src={urlConstant.imageGamePlay.oceanIslandGrass} alt="" />
-                                <img className="oceanIsland-boon__left" src={urlConstant.imageGamePlay.boon1} alt="" />
-                                <img className="oceanIsland-boon__right" src={urlConstant.imageGamePlay.boon2} alt="" />
                             </div>
                         </div>
 

@@ -4,21 +4,6 @@
 
 // Mobile
 @media screen and (max-width: 740px) {
-  .playelu__link-ele {
-    width: 24px;
-  }
-  .playelu-frame .playelu-all .playelu-img img {
-    width: calc(100% - 36px);
-  }
-  :root {
-    --btnWidth: 30vw;
-  }
-  .my-star::before {
-    height: 50px;
-  }
-  .background-bottom {
-    bottom: 0;
-  }
   .discord {
     right: -96px;
     transform: scale(0.23) translateY(-200vh);
@@ -30,12 +15,23 @@
     }
     bottom: -240px;
   }
+  .playelu__link-ele {
+    width: 24px;
+  }
+  .playelu-frame .playelu-all .playelu-img img {
+    width: calc(100% - 36px);
+  }
+  .my-star::before {
+    height: 50px;
+  }
+  .background-bottom {
+    bottom: 0;
+  }
 
   .playelu-top {
     margin-top: 70px;
   }
-  .playelu-tittle {
-  }
+
   .playelu-tittle h1 {
     font-size: 24px;
   }
@@ -110,12 +106,9 @@
   }
 }
 @media screen and (min-width: 740px) and (max-width: 1024px) {
-  :root {
-    --btnWidth: 20vw;
-  }
   .discord {
-    right: -72px;
-    transform: scale(0.4) translateY(-100%);
+    right: -5%;
+    transform: scale(0.7) translateY(25%);
     .discord-img {
       display: block;
     }
@@ -137,10 +130,6 @@
   }
   .menu {
     width: 95%;
-    .playelu__menu-element {
-      h4 {
-      }
-    }
   }
 
   .playelu-img {
@@ -161,13 +150,7 @@
     padding-left: 52px;
     font-size: 20px;
   }
-  .iconEmail {
-  }
-  .playelu__link {
-  }
 
-  .policy {
-  }
   .header {
     width: 100%;
   }
@@ -181,17 +164,14 @@
 // iPad / Tablet
 @media screen and (min-width: 1024px) and (max-width: 1365px) {
   .discord {
-    right: -92px;
-    transform: scale(0.23) translateY(-200vh);
+    right: -2%;
+    transform: scale(0.8) translateY(10%);
     .discord-img {
-      display: none;
-    }
-    .mobile__discord-img {
       display: block;
     }
-  }
-  :root {
-    --btnWidth: 20vw;
+    .mobile__discord-img {
+      display: none;
+    }
   }
   .background-bottom {
     bottom: 0;
@@ -209,18 +189,10 @@
   .playelu-btn {
     max-width: 540px;
   }
-  .playelu-btn button {
-  }
 
   .playelu-btn input {
     padding-left: 60px;
     padding-right: 22.5%;
     font-size: 20px;
-  }
-  .iconEmail {
-  }
-  .playelu__link {
-  }
-  .policy {
   }
 }

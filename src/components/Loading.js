@@ -1,9 +1,9 @@
 import React from 'react'
-import '../css/component/loading.scss'
+import '../scss/component/loading.scss'
 
 export default function Loading() {
     return (
-        <div className='loading-container'>
+        <div id='loading'>
             <div className='loading-outer'>
                 <div className='loading-inner'>
                     <div className='loading-inner1'>

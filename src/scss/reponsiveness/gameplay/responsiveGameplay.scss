@@ -1,0 +1,20 @@
+//Mobile
+@media screen and (max-width: 740px) {
+  .sky {
+    .sky-top {
+      .gameplay-selection {
+        height: 20vh;
+      }
+    }
+  }
+}
+//IPad /Tablet
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+  .sky {
+    .sky-top {
+      .gameplay-selection {
+        height: 35vh;
+      }
+    }
+  }
+}

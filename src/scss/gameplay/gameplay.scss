@@ -69,11 +69,11 @@
 }
 .gameplay__selection-img {
   width: 100%;
-  transform: scale(1);
+  transform: scale(0.9);
   cursor: pointer;
 }
 .gameplay__selection-img:hover {
-  transform: scale(0.9);
+  transform: scale(1);
 }
 
 .sky-center {
@@ -91,11 +91,11 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    transform: scale(1);
+    transform: scale(0.9);
     cursor: pointer;
   }
   .eluDrop-btn:hover {
-    transform: scale(0.9);
+    transform: scale(1);
   }
 }
 
