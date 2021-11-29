@@ -9,6 +9,7 @@ export default {
         discord: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluDiscord.webp',
         mobileDiscord: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/smallDiscord.webp',
         eluLogo: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluLogo.webp',
+        eluLogo1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluLogo1.webp',
         star5: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/star5.webp',
         star4: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/star4.webp',
         twitter: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/iconTwitter.webp',

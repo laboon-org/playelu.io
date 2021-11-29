@@ -12,7 +12,7 @@ export default function Loading() {
 
             </div>
             <div className='loading-logo'>
-                <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/logo1.webp' className='loading-img' />
+                <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/logo1.webp' className='loading-img' alt='logoElu' />
             </div>
         </div>
 

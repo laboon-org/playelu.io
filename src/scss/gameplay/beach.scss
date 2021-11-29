@@ -112,7 +112,9 @@
         margin: 0 35%;
         bottom: 160%;
         transform: scale(0.9);
-        cursor: pointer;
+        img {
+          cursor: pointer;
+        }
       }
       .eluNestBtn:hover {
         transform: scale(1);

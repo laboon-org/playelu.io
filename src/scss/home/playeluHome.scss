@@ -16,6 +16,7 @@ ul {
 }
 li {
   list-style-type: none;
+  cursor: pointer;
 }
 
 ::placeholder {
@@ -261,6 +262,7 @@ li {
   color: #fff;
   font-weight: 300;
   margin-top: -26px;
+  cursor: pointer;
 }
 
 .playelu__menu-element:hover h4 {
@@ -333,6 +335,7 @@ li {
 .playelu__link-ele img {
   margin: auto;
   width: 80%;
+  cursor: pointer;
 }
 .policy {
   width: 320px;
@@ -350,6 +353,7 @@ li {
   color: #fbb518;
   justify-content: center;
   text-shadow: 1px 1px 2px #114f8c;
+  cursor: pointer;
 }
 .policy a:hover {
   color: #fbb518;

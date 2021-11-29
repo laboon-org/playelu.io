@@ -40,7 +40,7 @@ export default function Stars(props) {
             setStateWidth(getRandomNumberMinMax(window.innerWidth * 0.6 / 100, window.innerWidth * 1.2 / 100))
             setIsFirst(true)
         }
-    })
+    }, [])
     React.useEffect(() => {
         if (isFirst) {
             setIsFirst(false)
@@ -53,7 +53,7 @@ export default function Stars(props) {
                 }
             }, 28)
         }
-    })
+    }, [])
     return (
         <div className='my_star-all' style={{
             ...starStyles,
@@ -71,5 +71,3 @@ export default function Stars(props) {
         </div>
     )
 }
-
-
