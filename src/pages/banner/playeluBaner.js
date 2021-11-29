@@ -8,6 +8,8 @@ import BackgroundComet from "./bacgroundComet";
 import Stars from "./backgrounDecor/Stars";
 import Header from "../../components/Header";
 import urlConstant from "../../urlConstant";
+import CloudBottom from "./backgrounDecor/BackgroundBottom";
+
 
 
 
@@ -71,9 +73,7 @@ export default function PlayeluBaner() {
           <Stars imgUrl={urlConstant.image.star5} />
           <Stars imgUrl={urlConstant.image.star5} />
         </div>
-        <div className="background-bottom">
-          <img className="background__bottom-img" src={urlConstant.image.backgroundBottom} alt="" />
-        </div>
+        <CloudBottom />
       </div>
       <div className='navbar'>
         <div className="sound" onClick={controlSound}>
@@ -99,7 +99,7 @@ export default function PlayeluBaner() {
           <div className="playelu-top">
             <Header />
             <div className="playelu-img">
-              <img src={urlConstant.image.eluLogo} alt="" />
+              <img src={urlConstant.image.eluLogo1} alt="" />
             </div>
             <div className="playelu-tittle">
               <h1>Play-to-Earn NFT Game</h1>
