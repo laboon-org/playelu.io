@@ -5,6 +5,9 @@
   cursor: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/logo192.png"),
     auto;
 }
+*::-webkit-scrollbar {
+  display: none;
+}
 
 html {
   scroll-behavior: smooth;
@@ -40,6 +43,7 @@ html {
   left: 0;
   width: 100vw;
 }
+
 .sky {
   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/skyBackground.webp")
     no-repeat center / cover;
