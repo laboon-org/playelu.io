@@ -1,209 +1,128 @@
-.background-bottom-cloud {
+$bgColorCloud: (1: #A9E2EC, 2:#F1FAFC, 3:#61CADC);
+$bgColorCloud:(1: #ffffff, 2:#61B0E7,3:#A9E2EC );
+@function get-vw($target) {
+    $vw-context: (1300 * 0.01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+}
+
+.background-bottom-cloud_background {
     position: relative;
-    height: 20vh;
+    width: 100vw;
+    background: var(--bgColor);
+    height: 20vh
+}
 
-    @keyframes cloud_moving {
-        0% {
-            margin-left: -10%;
-        }
-
-        100% {
-            margin-left: 110%
-        }
-    }
+.background-bottom-position {
+    position: relative;
+    height: 30vh //Khung 1
+}
 
 
-    @mixin calcAnimationOfCloudResize($cloudSize, $order) {
-        @if $order%2==0 {
-            @keyframes cloud_resize {
-                0% {
-                    margin-top:#{$cloudSize}px;
-                }
-
-                25% {
-                    margin-top: 0;
-                }
-
-                50% {
-                    margin-top:#{$cloudSize}px;
-                }
-
-                75% {
-                    margin-top: 0;
-                }
-
-                100% {
-                    margin-top:#{$cloudSize}px;
-                }
-            }
-        }
-
-        @else {
-            @keyframes cloud_resize {
-                0% {
-                    margin-top: 0;
-
-                }
-
-                25% {
-                    margin-top:#{$cloudSize}px;
-                }
-
-                50% {
-                    margin-top: 0;
-                }
-
-                75% {
-                    margin-top:#{$cloudSize}px;
-                }
-
-                100% {
-                    margin-top: 0;
-                }
-            }
-        }
-    }
-
-
-    $i: 1;
-
-    //$sizeCloud: 0;
-    $cloudPerMode:3; //Chắc chắn phải là số lẻ
-    $cloudColor:white;
-
-    @while $i < 100 {
-        // Chọn chế độ
-        $ranMode: random(100)+1;
-        $mode: "dud"; //down up down
-
-        @if $ranMode%2==0 {
-            $mode: "udu"; // up down up
-        }
-
-        $half:round($cloudPerMode/2);
-
-        @if true {
-            $z: 0;
-
-            @for $j from $i through $i+$half {
-                //Duyệt tới 1 nửa thì trừ ngược
-                $sizeCloud: 0;
-
-                $cloudDelayAppear: $j *0.3;
-
-                @if $i+$half==$j {
-                    $sizeCloud: random(20) + 40;
-
-                    //@include calcAnimationOfCloudResize($sizeCloud, 1);
-                    @keyframes cloud_resize {
+@for $t from 1 through 3 {
+  
+    .background-bottom-cloud__#{$t} {
+        position: absolute;
+        height:#{$t * 30vh}; //Khung 2
+        --bgColor: #{map-get($map:$bgColorCloud , $key:$t )};
+        margin-top: #{6*($t - 1)}vh;
+        .background-bottom-cloud {
+            position: relative;
+            margin-top: 2vh;
+            height: 6vh; //Chiều cao của cloud
+            $i: 1;
+            $cloudColor: var(--bgColor);
+            $startWidth:0;
+            $sumCloud: 50;
+            @while $i <=$sumCloud {
+                // Chọn chế độ
+                $ranMode: random(100)+1;
+                $ranUp:random(20)+25;
+                $ranDown:random(5)+10;
+                @if $ranMode%2==0 {
+                    @keyframes cloud_resize_#{$t}_#{$i} {
                         #{ 0+'%'} {
-                            margin-top: 0;
+                            margin-top: #{$ranDown}px;
                         }
+    
                         #{ random(10)+15 +'%'} {
-                            margin-top:10px;
+                            margin-top: #{$ranUp}px;
                         }
-
+    
                         #{ random(15)+35 +'%'} {
-                            margin-top: 0;
+                            margin-top:  #{$ranDown}px;
                         }
-
+    
                         #{ random(15)+60 +'%'} {
-                            margin-top:10px;
+                            margin-top: #{$ranUp}px;
                         }
-
-                        #{ random(20)+80 +'%'} {
-                            margin-top: 0;
-                        }
+    
+                        #{ 100 +'%'} {
+                            margin-top:  #{$ranDown}px;
+                        }     
                     }
-
-                    div:nth-child(#{$j}) {
-                        background: #{$cloudColor};
-                        width: #{$sizeCloud}px;
-                        height: #{$sizeCloud}px;
-                        border-radius: 50%;
-                        position: absolute;
-                        animation: cloud_moving 20s linear #{$cloudDelayAppear}s infinite,
-                        cloud_resize 20s linear infinite;
-                    }
-                }
-
-                @else {
-                    $sizeCloudA: random(20) +35;
-
-                    @keyframes cloud_resizeA {
-                        0% {
-                            margin-top:10px;
+                }@else{
+                    @keyframes cloud_resize_#{$t}_#{$i} {
+                        #{ 0+'%'} {
+                            margin-top: #{$ranUp}px;
                         }
-
-                        25% {
-                            margin-top: 0;
+    
+                        #{ random(10)+15 +'%'} {
+                            margin-top:  #{$ranDown}px;
                         }
-
-                        50% {
-                            margin-top:10px;
+    
+                        #{ random(15)+35 +'%'} {
+                            margin-top: #{$ranUp}px;
                         }
-
-                        75% {
-                            margin-top: 0;
+    
+                        #{ random(15)+60 +'%'} {
+                            margin-top:  #{$ranDown}px;
                         }
-
-                        100% {
-                            margin-top:10px;
-                        }
-                    }
-
-                    //@include calcAnimationOfCloudResize($sizeCloudA, 2);
-                    div:nth-child(#{$j}) {
-                        background: #{$cloudColor};
-                        border-radius: 50%;
-                        width: #{$sizeCloudA}px;
-                        height: #{$sizeCloudA}px;
-                        position: absolute;
-                        animation: cloud_moving 20s linear #{$cloudDelayAppear}s infinite,
-                        cloud_resizeA 20s linear infinite;
-                    }
-
-                    $sizeCloudB: random(20)+35;
-
-                    //@include calcAnimationOfCloudResize($sizeCloudB, 2);
-                    @keyframes cloud_resizeB {
-                        0% {
-                            margin-top:10px;
-                        }
-
-                        25% {
-                            margin-top: 0;
-                        }
-
-                        50% {
-                            margin-top:10px;
-                        }
-
-                        75% {
-                            margin-top: 0;
-                        }
-
-                        100% {
-                            margin-top:10px;
-                        }
-                    }
-
-                    div:nth-child(#{ $j+2}) {
-                        background: #{$cloudColor};
-                        border-radius: 50%;
-                        width: #{$sizeCloudB}px;
-                        height: #{$sizeCloudB}px;
-                        position: absolute;
-                        animation: cloud_moving 20s linear #{$cloudDelayAppear}s infinite,
-                        cloud_resizeB 20s linear infinite;
+    
+                        #{ 100 +'%'} {
+                            margin-top: #{$ranUp}px;
+                        }     
                     }
                 }
+                $sizeCloud: random(5) + 15;
 
-                $z: $z+1;
+                //$marginLeft: 30 * ($j - 1)  ;
+        
+   
+                @keyframes cloud_moving_#{$t}_#{$i} {
+                    0%{
+                        margin-left: #{$startWidth - 5}vh;
+                    }
+                    #{  100 - ((100 * $i) / $sumCloud  ) +'%'}{
+                        margin-left:#{110}vw;
+                        visibility: hidden;
+                    }
+                    #{ 100 - ((100 * $i) / ($sumCloud)  ) + 1 +'%'}{
+                        margin-left:-10vw;
+                        visibility: hidden;
+                    }
+                    
+                    100%{
+                        margin-left: #{$startWidth - 5}vh;
+                        visibility: visible;
+                    }
+                }
+                
+
+                div:nth-child(#{$i}) {
+                    background: #{$cloudColor};
+                    width: #{$sizeCloud}vh;
+                    height: #{$sizeCloud}vh;
+                    margin-left: #{$startWidth }vw;
+                    border-radius: 50%;
+                    position: absolute;
+                    animation: cloud_moving_#{$t}_#{$i}  20s linear  infinite,
+                    cloud_resize_#{$t}_#{$i} 20s ease-out infinite;
+                }
+                $startWidth:$startWidth + $sizeCloud/2;
+                $i: $i+1;
             }
         }
 
-        //Tăng i
-        $i: $i+3;
     }
 }
+
