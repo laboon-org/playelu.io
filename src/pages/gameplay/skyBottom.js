@@ -13,10 +13,10 @@ export default function SkyBottom() {
             </div>
 
             <div className='sailboat'>
-                <div className='sailboat-left'>
+                <div className='sailboat-left reveal'>
                     <img src="https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sailboatLeft.webp" alt="" />
                 </div>
-                <div className='sailboat-right'>
+                <div className='sailboat-right reveal'>
                     <img src="https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sailboatRight.webp" alt="" />
                 </div>
             </div>

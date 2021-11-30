@@ -6,6 +6,19 @@ import urlConstant from '../../urlConstant'
 import Beach from './Beach'
 import SkyBottom from './skyBottom'
 
+window.addEventListener('scroll', reveal)
+function reveal() {
+    var reveal = document.querySelectorAll('.reveal')
+    for (var i = 0; i < reveal.length; i++) {
+        var windowHeght = window.innerHeight;
+        var revealTop = reveal[i].getBoundingClientRect().top;
+        if (revealTop < windowHeght) {
+            reveal[i].classList.add('active')
+        } else {
+            reveal[i].classList.remove('active')
+        }
+    }
+}
 
 export default function Gameplay() {
     return (
@@ -31,9 +44,11 @@ export default function Gameplay() {
                                 <img className="gameplay__selection-img" src={urlConstant.imageGamePlay.metaVerse} alt="" />
                             </div>
                         </div>
+
                         <div className='gameplay-logo'>
                             <img className="gameplay__logo-img" src={urlConstant.image.eluLogo} alt="" />
                         </div>
+
                         {/* <div className='gameplay-cloud'>
                         <img className="gameplay-cloud1-img" src={urlConstant.imageGamePlay.cloud1} alt="" />
                         <img className="gameplay-cloud2-img" src={urlConstant.imageGamePlay.cloud2} alt="" />
@@ -45,6 +60,5 @@ export default function Gameplay() {
                 <Beach />
             </div>
         </div>
-
     )
 }

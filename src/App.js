@@ -1,8 +1,6 @@
 import './App.css';
 import './scss/home/playeluHome.scss'
 import './scss/reponsiveness/home/responsive.scss'
-// import PlayeluBaner from './pages/banner/playeluBaner';
-// import Gameplay from './pages/gameplay/gameplay';
 import React from 'react';
 import {
   Routes,

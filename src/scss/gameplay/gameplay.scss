@@ -5,6 +5,34 @@
   cursor: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/logo192.png"),
     auto;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+.reveal {
+  transform: translateY(150px) scale(0.9);
+
+  opacity: 0;
+}
+.reveal.active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  transition: all 1s ease;
+}
+.zoom {
+  transform: scale(0.3);
+  transition: all 1s ease;
+}
+.zoom.active {
+  transform: scale(0.9);
+}
+.beach-zoom {
+  transform: scale(0.5);
+  transition: all 1s ease;
+}
+.beach-zoom.active {
+  transform: scale(1);
+}
 .gameplay-body {
   position: absolute;
   overflow: hidden;
@@ -48,6 +76,7 @@
     .gameplay-logo {
       width: 35%;
       margin: auto;
+      margin-bottom: 100px;
       .gameplay__logo-img {
         width: 100%;
       }
@@ -91,7 +120,6 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    transform: scale(0.9);
     cursor: pointer;
   }
   .eluDrop-btn:hover {

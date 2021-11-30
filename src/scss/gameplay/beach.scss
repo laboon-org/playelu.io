@@ -45,8 +45,11 @@
     .tree {
       position: absolute;
       left: -5%;
-      top: -40%;
+      top: -35%;
       z-index: 1;
+      width: 105%;
+      img {
+      }
       .tree-accessory {
         position: absolute;
         top: 0;
