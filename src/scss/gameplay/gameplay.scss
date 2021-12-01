@@ -29,12 +29,12 @@ html {
 .zoom.active {
   transform: scale(0.9);
 }
-.beach-zoom {
-  transform: scale(0.5);
-  transition: all 1s ease;
+.opacity {
+  opacity: 0.5;
+  transition: all 3s ease;
 }
-.beach-zoom.active {
-  transform: scale(1);
+.opacity.active {
+  opacity: 1;
 }
 .gameplay-body {
   position: absolute;
@@ -168,4 +168,8 @@ html {
   width: 70%;
   margin-bottom: 15%;
   margin-left: 15%;
+}
+.mr-bottom {
+  padding-bottom: 10%;
+  margin-top: -19%;
 }

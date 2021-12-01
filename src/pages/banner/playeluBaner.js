@@ -8,7 +8,7 @@ import BackgroundComet from "./bacgroundComet";
 import Stars from "./backgrounDecor/Stars";
 import Header from "../../components/Header";
 import urlConstant from "../../urlConstant";
-import CloudBottom from "./backgrounDecor/BackgroundBottom";
+// import CloudBottom from "./backgrounDecor/BackgroundBottom";
 
 
 
@@ -73,7 +73,7 @@ export default function PlayeluBaner() {
           <Stars imgUrl={urlConstant.image.star5} />
           <Stars imgUrl={urlConstant.image.star5} />
         </div>
-        <CloudBottom />
+        {/* <CloudBottom /> */}
       </div>
       <div className='navbar'>
         <div className="sound" onClick={controlSound}>

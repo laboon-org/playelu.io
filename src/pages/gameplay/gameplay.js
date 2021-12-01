@@ -28,10 +28,14 @@ export default function Gameplay() {
                     <div className='sky-top'>
                         <div className='gameplay-selection'>
                             <div className='col drop'>
-                                <img className="gameplay__selection-img" src={urlConstant.imageGamePlay.drop} alt="" />
+                                <a href='#drop'>
+                                    <img className="gameplay__selection-img" src={urlConstant.imageGamePlay.drop} alt="" />
+                                </a>
                             </div>
                             <div className='col nest'>
-                                <img className="gameplay__selection-img" src={urlConstant.imageGamePlay.nest} alt="" />
+                                <a href='#nest'>
+                                    <img className="gameplay__selection-img" src={urlConstant.imageGamePlay.nest} alt="" />
+                                </a>
                             </div>
                             <div className='col-6 rune'>
                                 <img className="gameplay__rune-img" src={urlConstant.imageGamePlay.rune} alt="" />

@@ -31,7 +31,7 @@ export default function SkyCenter() {
 
     return (
         <div>
-            <div className='sky-center'>
+            <div className='sky-center' id='drop'>
                 <div className='island reveal'>
                     <div className='island1'>
                         <img className="isLand-img" src={urlConstant.imageGamePlay.islandBlank1} alt="" />
@@ -43,10 +43,9 @@ export default function SkyCenter() {
                     </div>
                     <div className='island3'>
                         <img className="isLand-img" src={urlConstant.imageGamePlay.islandBlank3} alt="" />
-                        <img className="isLand-img" src={urlConstant.imageGamePlay.islandWater} alt="" />
+                        <img className="isLand-img mr-bottom" src={urlConstant.imageGamePlay.islandWater} alt="" />
                     </div>
                 </div>
-
             </div>
             <div>
                 {
