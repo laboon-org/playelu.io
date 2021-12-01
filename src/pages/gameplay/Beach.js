@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import urlConstant from '../../urlConstant'
 import '../../scss/gameplay/beach.scss'
 
@@ -18,7 +18,16 @@ function opacity() {
         }
     }
 }
+
+
+
+
 export default function Beach() {
+    const [nestShow, setNestShow] = useState(false)
+
+    const onPressShowNest = () => {
+        setNestShow(true)
+    }
     return (
         <div className='beach' id='nest'>
             <div className='ocean'>
@@ -46,6 +55,8 @@ export default function Beach() {
                 </div>
             </div>
             <div className='land'>
+                {nestShow && < div className={"nest_onBoarding"} />}
+
                 <img className="land-img" src={urlConstant.imageGamePlay.backgroundLand} alt="" />
                 <div className='bone rightEntrance'>
                     <img className='bone-img' src={urlConstant.imageGamePlay.bone} alt='' />
@@ -56,7 +67,9 @@ export default function Beach() {
                         <img className='circle-img' src={urlConstant.imageGamePlay.circle} alt='' />
                         <img className='effigy-img' src={urlConstant.imageGamePlay.effigy} alt='' />
                         <img className='lightColumn-img' src={urlConstant.imageGamePlay.lightColumn} alt='' />
-                        <div className='eluNestBtn'>
+                        <div className='eluNestBtn' onClick={() => {
+                            onPressShowNest()
+                        }}>
                             <img className='eluNestBtn-img' src={urlConstant.imageGamePlay.eluNestBtn} alt='' />
                         </div>
                     </div>

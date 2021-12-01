@@ -22,6 +22,21 @@ const OnBoarding = () => {
 
         </div>)
 }
+
+const listIslandUrl = [
+    {
+        url1: urlConstant.imageGamePlay.islandBlank1,
+        url2: urlConstant.imageGamePlay.fire_island
+    },
+    {
+        url1: urlConstant.imageGamePlay.islandBlank2,
+        url2: urlConstant.imageGamePlay.fountain
+    },
+    {
+        url1: urlConstant.imageGamePlay.islandBlank3,
+        url2: urlConstant.imageGamePlay.islandWater
+    }
+]
 export default function SkyCenter() {
 
     const [dropShow, setDropShow] = useState(false);
@@ -29,22 +44,27 @@ export default function SkyCenter() {
         setDropShow(true);
     })
 
+    const islands = listIslandUrl.map((value, key) => {
+        let isFinalItem = listIslandUrl.length - 1 == key;
+        let finalClass = isFinalItem ? 'mr-bottom' : '';
+        return (
+            <div className={`island${key + 1}`} key={key}>
+                <img
+                    className="isLand-img"
+                    src={value.url1}
+                    alt="" />
+                <img
+                    className={`isLand-img ${finalClass}`}
+                    src={value.url2}
+                    alt="" />
+            </div>
+        )
+    })
     return (
         <div>
             <div className='sky-center' id='drop'>
                 <div className='island reveal'>
-                    <div className='island1'>
-                        <img className="isLand-img" src={urlConstant.imageGamePlay.islandBlank1} alt="" />
-                        <img className="isLand-img" src={urlConstant.imageGamePlay.fire_island} alt="" />
-                    </div>
-                    <div className='island2'>
-                        <img className="isLand-img" src={urlConstant.imageGamePlay.islandBlank2} alt="" />
-                        <img className="isLand-img" src={urlConstant.imageGamePlay.fountain} alt="" />
-                    </div>
-                    <div className='island3'>
-                        <img className="isLand-img" src={urlConstant.imageGamePlay.islandBlank3} alt="" />
-                        <img className="isLand-img mr-bottom" src={urlConstant.imageGamePlay.islandWater} alt="" />
-                    </div>
+                    {islands}
                 </div>
             </div>
             <div>

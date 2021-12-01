@@ -10,9 +10,6 @@ import Header from "../../components/Header";
 import urlConstant from "../../urlConstant";
 // import CloudBottom from "./backgrounDecor/BackgroundBottom";
 
-
-
-
 const controlSound = () => {
   const soundOn = document.querySelector(".sound-on");
   const soundOff = document.querySelector(".sound-off");
@@ -37,6 +34,8 @@ export default function PlayeluBaner() {
   const handleShow = () => setShow(true);
   const [email, setEmail] = React.useState("");
   const URI = "https://api.playelu.io/subemail";
+
+
 
   const onPress = React.useCallback(() => {
     fetch(URI, {

@@ -67,10 +67,22 @@
     }
   }
 }
-
+//land
 .land {
   position: relative;
   margin-top: -10%;
+  .nest_onBoarding {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 90vw;
+    margin: 0 5%;
+    height: 60vh;
+    background: white;
+    z-index: 99;
+    animation: zoomIn;
+    animation-duration: 1.5s;
+  }
   .bone {
     width: 35%;
     position: absolute;
@@ -106,6 +118,7 @@
         bottom: 50%;
         left: 0;
       }
+
       .eluNestBtn {
         position: absolute;
         width: 30%;
