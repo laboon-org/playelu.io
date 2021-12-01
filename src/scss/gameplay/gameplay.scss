@@ -119,16 +119,25 @@ html {
     align-items: center;
     width: 100%;
   }
-  .eluDrop-btn {
-    width: 15%;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    cursor: pointer;
-  }
-  .eluDrop-btn:hover {
-    transform: scale(1);
-  }
+  
+}
+
+.sky-center_onBoarding {
+  width: 100vw;
+  height: 20vh;
+  background: white;
+  animation: bounceIn;
+  animation-duration: 0.5s
+}
+.eluDrop-btn {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  cursor: pointer;
+}
+.eluDrop-btn:hover {
+  transform: scale(1);
 }
 
 .island1,
