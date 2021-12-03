@@ -2,8 +2,16 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  cursor: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/logo192.png"),
+    auto;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   height: 100%;
   font-family: "BoldenVan", sans-serif;
@@ -30,9 +38,6 @@ li {
 
 ::-ms-input-placeholder {
   color: #114f8c;
-}
-.w-70 {
-  width: 70% !important;
 }
 .shooting-star {
   position: absolute;
@@ -77,15 +82,6 @@ li {
   width: 100%;
 }
 
-.background-cloud {
-  overflow: hidden;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 .cloud {
   width: 15%;
   animation: cloud 25s infinite linear;
@@ -98,44 +94,45 @@ li {
 }
 
 .x1 {
-  animation: cloud 21s infinite linear;
+  animation: cloud 18s infinite linear;
   opacity: 1;
-  left: -10%;
+  left: -15%;
 }
 
 .x2 {
-  animation: cloud 20s infinite linear;
+  animation: cloud 21s infinite linear;
   opacity: 0.9;
   transform: scale(0.7);
   top: 0;
-  left: -10%;
+  left: -20%;
 }
 
 .x3 {
-  animation: cloud 22s infinite linear;
-  top: 15%;
+  animation: cloud 26s infinite linear;
+  top: 25%;
   transform: scale(0.6);
-  left: -10%;
+  left: -15%;
 }
 
 .x4 {
-  animation: cloud 24s infinite linear;
-  top: 0;
-  left: -5%;
+  animation: cloud 22s infinite linear;
+  top: 30%;
+  left: -25%;
   transform: scale(0.9);
 }
 
 .x5 {
-  animation: cloud 25s infinite linear;
+  animation: cloud 21s infinite linear;
   opacity: 0.6;
   transform: scale(1);
   bottom: 20vh;
-  left: -12%;
+  left: -40%;
 }
 .x6 {
-  animation: cloud 21s infinite linear;
+  animation: cloud 25s infinite linear;
   opacity: 1;
-  left: -15%;
+  top: 40%;
+  left: -40%;
 }
 
 .playelu-body {
@@ -161,16 +158,25 @@ li {
     top: 0;
     left: 0;
     z-index: -1;
-    .background-bottom {
+    .background-cloud {
+      overflow: hidden;
       position: absolute;
-      left: 0;
+      z-index: 1;
+      top: 0;
       bottom: 0;
-      z-index: 2;
-      width: 100%;
-      .background__bottom-img {
-        width: 100%;
-      }
+      left: 0;
+      right: 0;
     }
+    // .background-bottom {
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 0;
+    //   z-index: 2;
+    //   width: 100%;
+    //   .background__bottom-img {
+    //     width: 100%;
+    //   }
+    // }
   }
 }
 .discord {
@@ -263,6 +269,7 @@ li {
   font-weight: 300;
   margin-top: -26px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .playelu__menu-element:hover h4 {
@@ -319,7 +326,12 @@ li {
 .playelu-input {
   width: 100%;
 }
-
+.error-email {
+  color: rgb(245, 209, 9);
+  width: 468px;
+  text-align: center;
+  margin: 10px auto;
+}
 .playelu__link {
   width: 480px;
   text-align: center;
@@ -451,20 +463,12 @@ li {
     animation-timing-function: ease-out;
   }
 }
-@keyframes cloudanimation {
-  0% {
-    background-position: 0px;
-  }
-  100% {
-    background-position: 5440px;
-  }
-}
 @keyframes cloud {
   0% {
     margin-left: 0;
   }
   100% {
-    margin-left: 110%;
+    margin-left: 140%;
   }
 }
 @keyframes twirl {

@@ -9,79 +9,79 @@ const getRandomNumberMinMax = (min, max) => {
 const stars = [
     {
         id: 1,
-        img: urlConstant.image.star4
+        img: urlConstant.image.homeBackground.star4
     },
     {
         id: 2,
-        img: urlConstant.image.startDeviated
+        img: urlConstant.image.homeBackground.startDeviated
     },
     {
         id: 3,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 4,
-        img: urlConstant.image.startDeviated
+        img: urlConstant.image.homeBackground.startDeviated
     },
     {
         id: 5,
-        img: urlConstant.image.star4
+        img: urlConstant.image.homeBackground.star4
     },
     {
         id: 6,
-        img: urlConstant.image.star4
+        img: urlConstant.image.homeBackground.star4
     },
     {
         id: 7,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 8,
-        img: urlConstant.image.star4
+        img: urlConstant.image.homeBackground.star4
     },
     {
         id: 9,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 10,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 11,
-        img: urlConstant.image.startDeviated
+        img: urlConstant.image.homeBackground.startDeviated
     },
     {
         id: 12,
-        img: urlConstant.image.star4
+        img: urlConstant.image.homeBackground.star4
     },
     {
         id: 13,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 14,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 15,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 16,
-        img: urlConstant.image.startDeviated
+        img: urlConstant.image.homeBackground.startDeviated
     },
     {
         id: 17,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 18,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 19,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     }
 ]
 export default function BackgroundStar() {

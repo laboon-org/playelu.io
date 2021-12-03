@@ -7,27 +7,27 @@ const getRandomNumberMinMax = (min, max) => {
 const comets = [
     {
         id: 1,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 2,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 3,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 4,
-        img: urlConstant.image.star4
+        img: urlConstant.image.homeBackground.star4
     },
     {
         id: 5,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     },
     {
         id: 6,
-        img: urlConstant.image.star5
+        img: urlConstant.image.homeBackground.star5
     }
 ]
 export default function BackgroundComet() {

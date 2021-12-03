@@ -7,33 +7,32 @@ function PlayeluLink() {
     const elementLinks = [
         {
             id: 1,
-            img: urlConstant.image.twitter,
+            img: urlConstant.image.social.twitter,
             href: 'https://twitter.com/eluverse'
-
         },
         {
             id: 2,
-            img: urlConstant.image.graphic,
+            img: urlConstant.image.social.graphic,
             href: 'https://discord.io/EluVerse'
         },
         {
             id: 3,
-            img: urlConstant.image.insta,
+            img: urlConstant.image.social.insta,
             href: 'https://www.instagram.com/eluverse/    - instagram'
         },
         {
             id: 4,
-            img: urlConstant.image.facebook,
+            img: urlConstant.image.social.facebook,
             href: '#'
         },
         {
             id: 5,
-            img: urlConstant.image.tele,
+            img: urlConstant.image.social.tele,
             href: 'https://t.me/eluverse     - telegram'
         },
         {
             id: 6,
-            img: urlConstant.image.opensea,
+            img: urlConstant.image.social.opensea,
             href: '#'
         },
     ]

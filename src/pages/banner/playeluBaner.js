@@ -8,6 +8,8 @@ import BackgroundComet from "./bacgroundComet";
 import Stars from "./backgrounDecor/Stars";
 import Header from "../../components/Header";
 import urlConstant from "../../urlConstant";
+import '../../scss/reponsiveness/home/home_Ipad.scss'
+import '../../scss/reponsiveness/home/home_mobile.scss'
 // import CloudBottom from "./backgrounDecor/BackgroundBottom";
 
 const controlSound = () => {
@@ -33,11 +35,17 @@ export default function PlayeluBaner() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [email, setEmail] = React.useState("");
+  const [error, setError] = useState(null);
   const URI = "https://api.playelu.io/subemail";
 
 
+  const validateEmail = (email) => {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
+  const onPress = React.useCallback((e) => {
 
-  const onPress = React.useCallback(() => {
     fetch(URI, {
       method: "POST",
       headers: {
@@ -48,9 +56,17 @@ export default function PlayeluBaner() {
     }).then(
       response => console.log(response)
     ).catch(err => console.log(err))
-    handleShow()
+    if (!validateEmail(email)) {
+      setError('Wrong email format message');
+    } else {
+      handleShow()
+      setError('');
+    }
   }, [email]);
-
+  const handleSubmit = e => {
+    e.preventDefault();
+    onPress()
+  }
 
   return (<div className='playelu-body'>
     <div className="discord">
@@ -59,18 +75,21 @@ export default function PlayeluBaner() {
     </div>
     <div className="playelu">
       <div className='playelu-background'>
+        {/* <BackgroundCloud />
+        <BackgroundComet />
+        <BackgroundStar /> */}
         {BackgroundCloud1}
         {BackgroundComet1}
         {BackgroundStar1}
         <div className='shooting-star'>
-          <Stars imgUrl={urlConstant.image.star5} />
-          <Stars imgUrl={urlConstant.image.star5} />
-          <Stars imgUrl={urlConstant.image.star5} />
-          <Stars imgUrl={urlConstant.image.star5} />
-          <Stars imgUrl={urlConstant.image.star5} />
-          <Stars imgUrl={urlConstant.image.star5} />
-          <Stars imgUrl={urlConstant.image.star5} />
-          <Stars imgUrl={urlConstant.image.star5} />
+          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
+          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
+          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
+          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
+          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
+          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
+          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
+          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
         </div>
         {/* <CloudBottom /> */}
       </div>
@@ -88,9 +107,9 @@ export default function PlayeluBaner() {
         centered show={show} onHide={handleClose}>
 
         <div className='close-modal' onClick={() => handleClose()}>
-          <img src={urlConstant.image.closeModal} alt="" />
+          <img src={urlConstant.image.modal.closeModal} alt="" />
         </div>
-        <img src={urlConstant.image.modal} alt="" />
+        <img src={urlConstant.image.modal.modal} alt="" />
         <p className='name-email'>{email}</p>
       </Modal>
       <div className='playelu-frame'>
@@ -103,13 +122,15 @@ export default function PlayeluBaner() {
             <div className="playelu-tittle">
               <h1>Play-to-Earn NFT Game</h1>
             </div>
-            <div className="playelu-btn">
+            <form className="playelu-btn" onSubmit={handleSubmit}>
               <input
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
                 className="playelu-input "
                 type="email"
+                placeholder='Email'
+                value={email}
                 maxLength='50'
                 placeholder="Your Email here"
               >
@@ -123,7 +144,8 @@ export default function PlayeluBaner() {
               >
                 Subscribe
               </button>
-            </div>
+            </form>
+            {error && <div className='error-email'>{error}</div>}
           </div>
           <div className="playelu-bottom mt-auto d-flex justify-content-center">
             <PlayeluLink></PlayeluLink>

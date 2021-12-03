@@ -1,0 +1,91 @@
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+  .discord {
+    right: -5%;
+    transform: scale(0.7) translateY(25%);
+    .discord-img {
+      display: block;
+    }
+    .mobile__discord-img {
+      display: none;
+    }
+  }
+
+  .background-bottom {
+    bottom: 0;
+  }
+  .playelu-frame {
+    .playelu-all {
+      width: 60%;
+    }
+  }
+  .header {
+    width: 90%;
+  }
+  .menu {
+    width: 95%;
+  }
+
+  .playelu-img {
+    width: 80%;
+  }
+
+  .playelu-btn {
+    max-width: 530px;
+  }
+  .playelu-btn button {
+    width: 25%;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .playelu-btn input {
+    padding-right: 25.5%;
+    padding-left: 52px;
+    font-size: 20px;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .modal-thankyou > .modal-content,
+  .modal-comingsoon > .modal-content {
+    width: 70vw;
+  }
+}
+
+// iPad / Tablet
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  .discord {
+    right: -2%;
+    transform: scale(0.8) translateY(10%);
+    .discord-img {
+      display: block;
+    }
+    .mobile__discord-img {
+      display: none;
+    }
+  }
+  .background-bottom {
+    bottom: 0;
+  }
+  .playelu-all {
+    width: 60%;
+  }
+
+  .playelu-img {
+    width: 80%;
+  }
+  .playelu-tittle h1 {
+    font-size: 40px;
+  }
+  .playelu-btn {
+    max-width: 540px;
+  }
+
+  .playelu-btn input {
+    padding-left: 60px;
+    padding-right: 22.5%;
+    font-size: 20px;
+  }
+}

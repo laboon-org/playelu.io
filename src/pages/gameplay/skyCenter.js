@@ -25,16 +25,16 @@ const OnBoarding = () => {
 
 const listIslandUrl = [
     {
-        url1: urlConstant.imageGamePlay.islandBlank1,
-        url2: urlConstant.imageGamePlay.fire_island
+        url1: urlConstant.imageGamePlay.skyCenter.islandBlank1,
+        url2: urlConstant.imageGamePlay.skyCenter.fire_island
     },
     {
-        url1: urlConstant.imageGamePlay.islandBlank2,
-        url2: urlConstant.imageGamePlay.fountain
+        url1: urlConstant.imageGamePlay.skyCenter.islandBlank2,
+        url2: urlConstant.imageGamePlay.skyCenter.fountain
     },
     {
-        url1: urlConstant.imageGamePlay.islandBlank3,
-        url2: urlConstant.imageGamePlay.islandWater
+        url1: urlConstant.imageGamePlay.skyCenter.islandBlank3,
+        url2: urlConstant.imageGamePlay.skyCenter.islandWater
     }
 ]
 export default function SkyCenter() {
@@ -63,7 +63,7 @@ export default function SkyCenter() {
     return (
         <div>
             <div className='sky-center' id='drop'>
-                <div className='island reveal'>
+                <div className='island zoom'>
                     {islands}
                 </div>
             </div>
@@ -71,7 +71,7 @@ export default function SkyCenter() {
                 {
                     !dropShow ? <img className="eluDrop-btn zoom" onClick={() => {
                         onPressShowEluDrop();
-                    }} src={urlConstant.imageGamePlay.eluDropBtn} alt="" /> :
+                    }} src={urlConstant.imageGamePlay.skyCenter.eluDropBtn} alt="" /> :
                         <OnBoarding />
                 }
             </div>

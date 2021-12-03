@@ -1,6 +1,5 @@
 import './App.css';
 import './scss/home/playeluHome.scss'
-import './scss/reponsiveness/home/responsive.scss'
 import React from 'react';
 import {
   Routes,

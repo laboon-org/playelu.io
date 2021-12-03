@@ -48,8 +48,6 @@
       top: -35%;
       z-index: 1;
       width: 105%;
-      img {
-      }
       .tree-accessory {
         position: absolute;
         top: 0;
@@ -74,14 +72,39 @@
   .nest_onBoarding {
     position: absolute;
     left: 0;
-    bottom: 100%;
-    width: 90vw;
-    margin: 0 5%;
-    height: 60vh;
-    background: white;
+    top: -100%;
+    width: 100vw;
+    height: 100%;
     z-index: 99;
     animation: zoomIn;
     animation-duration: 1.5s;
+    display: flex;
+    align-items: center;
+    .nest-frame {
+      background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/Popupback.png")
+        no-repeat center / contain;
+      position: relative;
+      max-width: 1272px;
+      width: 50vw;
+      margin: auto;
+      max-height: 768px;
+      height: 30vw;
+      .onBoarding-btn_close {
+        position: absolute;
+        top: -2%;
+        right: 2%;
+        margin: 0;
+        max-width: 74px;
+        width: 8%;
+      }
+      .onBoarding-title {
+        position: absolute;
+        left: 20%;
+        top: -2%;
+        width: 60%;
+        margin: auto;
+      }
+    }
   }
   .bone {
     width: 35%;

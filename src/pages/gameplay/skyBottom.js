@@ -1,18 +1,17 @@
 import React from 'react'
 import '../../scss/gameplay/skyBottom.scss'
-import boat from './boatImg/boat.gif'
+import urlConstant from '../../urlConstant'
 
 
-window.addEventListener('scroll', leftEntrance)
+window.addEventListener('scroll', entrance)
 
-function leftEntrance() {
+function entrance() {
     var leftEntrance = document.querySelectorAll('.leftEntrance')
     var rightEntrance = document.querySelectorAll('.rightEntrance')
     for (var i = 0; i < leftEntrance.length; i++) {
         var windowHeght = window.innerHeight;
-        var leftEntranceLeft = leftEntrance[i].getBoundingClientRect().top;
-        var leftEntrancepoin = 300;
-        if (leftEntranceLeft < windowHeght + leftEntrancepoin) {
+        var leftEntranceTop = leftEntrance[i].getBoundingClientRect().top;
+        if (leftEntranceTop < windowHeght) {
             leftEntrance[i].classList.add('active')
             rightEntrance[i].classList.add('active')
         }
@@ -26,18 +25,18 @@ export default function SkyBottom() {
     return (
         <div className='skyBottom'>
             <div className='boat__animation2'>
-                <img src={boat} alt="" />
+                <img src={urlConstant.imageGamePlay.skyBottom.boat} alt="" />
             </div>
             <div className='boat__animation1'>
-                <img src={boat} alt="" />
+                <img src={urlConstant.imageGamePlay.skyBottom.boat} alt="" />
             </div>
 
             <div className='sailboat'>
                 <div className='sailboat-left leftEntrance'>
-                    <img src="https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sailboatLeft.webp" alt="" />
+                    <img src={urlConstant.imageGamePlay.skyBottom.sailboatLeft} alt="sailboat-left" />
                 </div>
                 <div className='sailboat-right rightEntrance'>
-                    <img src="https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sailboatRight.webp" alt="" />
+                    <img src={urlConstant.imageGamePlay.skyBottom.sailboatRight} alt="sailboat-right" />
                 </div>
             </div>
 

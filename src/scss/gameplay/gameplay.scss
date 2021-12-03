@@ -1,41 +1,22 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  cursor: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/logo192.png"),
-    auto;
-}
-*::-webkit-scrollbar {
-  display: none;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-.reveal {
-  transform: translateY(150px) scale(0.9);
-
-  opacity: 0;
-}
-.reveal.active {
-  transform: translateY(0) scale(1);
-  opacity: 1;
-  transition: all 1s ease;
-}
-.zoom {
-  transform: scale(0.3);
-  transition: all 1s ease;
-}
 .zoom.active {
-  transform: scale(0.9);
+  animation: zoom 2s ease;
 }
 .opacity {
   opacity: 0.5;
-  transition: all 3s ease;
+  transition: all 2s ease;
 }
 .opacity.active {
   opacity: 1;
 }
+@keyframes zoom {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
 .gameplay-body {
   position: absolute;
   overflow: hidden;
@@ -63,7 +44,6 @@ html {
         align-items: center;
         position: relative;
         height: 100%;
-
         .gameplay__rune-img {
           position: absolute;
           z-index: 1;
@@ -85,26 +65,28 @@ html {
         width: 100%;
       }
     }
-    .gameplay-cloud {
-      position: absolute;
-      top: 10%;
-      z-index: 0;
-      display: flex;
-      justify-content: space-between;
-      .gameplay-cloud1-img {
-        width: 20%;
-      }
-      .gameplay-cloud2-img {
-        width: 20%;
-      }
-    }
+    // .gameplay-cloud {
+    //   position: absolute;
+    //   top: 10%;
+    //   z-index: 0;
+    //   display: flex;
+    //   justify-content: space-between;
+    //   .gameplay-cloud1-img {
+    //     width: 20%;
+    //   }
+    //   .gameplay-cloud2-img {
+    //     width: 20%;
+    //   }
+    // }
   }
 }
+
 .gameplay__selection-img {
   width: 100%;
   transform: scale(0.9);
   cursor: pointer;
 }
+
 .gameplay__selection-img:hover {
   transform: scale(1);
 }
@@ -113,22 +95,21 @@ html {
   max-width: 1280px;
   margin: auto;
   width: 90%;
-
   .island {
     display: flex;
     align-items: center;
     width: 100%;
   }
-  
 }
 
 .sky-center_onBoarding {
   width: 100vw;
   height: 20vh;
-  background: white;
+  // background: #177db8;
   animation: bounceIn;
-  animation-duration: 0.5s
+  animation-duration: 0.5s;
 }
+
 .eluDrop-btn {
   width: 15%;
   display: flex;
@@ -136,6 +117,7 @@ html {
   margin: auto;
   cursor: pointer;
 }
+
 .eluDrop-btn:hover {
   transform: scale(1);
 }
@@ -155,20 +137,24 @@ html {
   width: 50%;
   margin-left: 52%;
 }
+
 .island3 .isLand-img:nth-child(1) {
   width: 60%;
   margin-right: 30%;
 }
+
 .island2 .isLand-img:nth-child(1) {
   width: 50%;
   margin-left: 25%;
 }
+
 .island1 .isLand-img:nth-child(2),
 .island3 .isLand-img:nth-child(2) {
   width: 70%;
   margin-bottom: 15%;
   margin-left: 15%;
 }
+
 .mr-bottom {
   padding-bottom: 10%;
   margin-top: -19%;

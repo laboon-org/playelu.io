@@ -6,10 +6,9 @@ import urlConstant from '../../urlConstant';
 import '../../scss/home/modalNavbar.scss'
 
 
-export default function Navbar() {
+export default function Navbar(props) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    // const handleShow = () => setShow(true);
     return (
         <div >
             <div className='navbar-btn' onClick={() => setShow(true)}>
@@ -24,30 +23,30 @@ export default function Navbar() {
                 <div className='header__modal-navbar'>
                     <img src={urlConstant.image.eluLogo} alt="" />
                     <div className='close__modal-navbar' onClick={() => handleClose()}>
-                        <img src={urlConstant.image.closeModal} alt="" />
+                        <img src={urlConstant.image.modal.closeModal} alt="" />
                     </div>
                 </div>
                 <div className='body__modal-navbar'>
                     <div className='modal-element'>
-                        <a href="https://bit.ly/3qWnt9s">
-                            <img src={urlConstant.image.modalNavbarEle} alt="" />
+                        <a href="https://bit.ly/3qWnt9s" target='_blank'>
+                            <img src={urlConstant.image.modal.modalNavbarEle} alt="" />
                             <h2>ROADMAP</h2>
                         </a>
                     </div>
                     <div className='modal-element'>
-                        <a href='https://bit.ly/3FDBLjz'>
-                            <img src={urlConstant.image.modalNavbarEle} alt="" />
+                        <a href='https://bit.ly/3FDBLjz' target='_blank'>
+                            <img src={urlConstant.image.modal.modalNavbarEle} alt="" />
                             <h2>TOKENOMIC</h2>
                         </a>
                     </div>
                     <div className='modal-element'>
                         <Link to='/gameplay'>
-                            <img src={urlConstant.image.modalNavbarEle} alt="" />
+                            <img src={urlConstant.image.modal.modalNavbarEle} alt="" />
                             <h2 style={{ color: '#fabb1a' }}>GAMEPLAY</h2>
                         </Link>
                     </div>
                     <div className='modal-element'>
-                        <img src={urlConstant.image.modalNavbarEle} alt="" />
+                        <img src={urlConstant.image.modal.modalNavbarEle} alt="" />
                         <h2>LITEPAPER</h2>
                     </div>
                 </div>

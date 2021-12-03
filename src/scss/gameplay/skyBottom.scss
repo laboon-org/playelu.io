@@ -35,10 +35,10 @@
 }
 
 .leftEntrance.active {
-  animation: leftEntrance 5s ease;
+  animation: leftEntrance 2s ease;
 }
 .rightEntrance.active {
-  animation: rightEntrance 5s ease;
+  animation: rightEntrance 2s ease;
 }
 @keyframes rightEntrance {
   0% {
