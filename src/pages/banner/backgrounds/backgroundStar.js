@@ -1,7 +1,5 @@
 import React from 'react'
-import urlConstant from '../../urlConstant'
-
-
+import urlConstant from '../../../urlConstant'
 
 const getRandomNumberMinMax = (min, max) => {
     return parseInt(Math.random() * 100 * min) % max + min

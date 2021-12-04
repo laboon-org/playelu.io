@@ -1,6 +1,5 @@
 import React from 'react'
-import urlConstant from "../../../urlConstant";
-import cloudscss from './clouds.scss'
+import '../backgrounDecor/clouds.scss'
 
 export default function CloudBottom() {
     let clouds = []

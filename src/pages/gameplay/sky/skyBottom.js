@@ -1,6 +1,6 @@
 import React from 'react'
-import '../../scss/gameplay/skyBottom.scss'
-import urlConstant from '../../urlConstant'
+import '../../../scss/gameplay/skyScss/skyBottom.scss'
+import urlConstant from '../../../urlConstant'
 
 
 window.addEventListener('scroll', entrance)

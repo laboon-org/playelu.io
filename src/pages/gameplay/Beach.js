@@ -7,10 +7,10 @@ window.addEventListener('scroll', opacity)
 function opacity() {
     var opacity = document.querySelectorAll('.opacity')
     for (var i = 0; i < opacity.length; i++) {
-        var windowHeght = window.innerHeight;
-        var scaleTop = opacity[i].getBoundingClientRect().top;
-        var scalepoin = 300;
-        if (scaleTop < windowHeght + scalepoin) {
+        var windowHeight = window.innerHeight;
+        var opacityTop = opacity[i].getBoundingClientRect().top;
+        var opacitypoint = 300;
+        if (opacityTop < windowHeight + opacitypoint) {
             opacity[i].classList.add('active')
         }
         else {
@@ -18,10 +18,6 @@ function opacity() {
         }
     }
 }
-
-
-
-
 export default function Beach() {
     const [nestShow, setNestShow] = useState(false)
 
@@ -81,8 +77,10 @@ export default function Beach() {
                         <img className='lightColumn-img' src={urlConstant.imageGamePlay.land.core.lightColumn} alt='' />
                         <div className='eluNestBtn' onClick={() => {
                             onPressShowNest()
-                        }}>
-                            <img className='eluNestBtn-img' src={urlConstant.imageGamePlay.land.core.eluNestBtn} alt='' />
+                        }}> <div className='nest-btn'>
+                                <h2>ELU NEST</h2>
+                                <div className='btn-shadow'></div>
+                            </div>
                         </div>
                     </div>
                 </div>

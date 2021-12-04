@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import Navbar from "./navbar";
 import PlayeluLink from "./playeluLink";
-import BackgroundCloud from "./background";
-import BackgroundStar from "./backgroundStar";
+
 import Modal from 'react-bootstrap/Modal';
-import BackgroundComet from "./bacgroundComet";
-import Stars from "./backgrounDecor/Stars";
+
 import Header from "../../components/Header";
 import urlConstant from "../../urlConstant";
 import '../../scss/reponsiveness/home/home_Ipad.scss'
 import '../../scss/reponsiveness/home/home_mobile.scss'
+import Background from "./backgrounds/background";
 // import CloudBottom from "./backgrounDecor/BackgroundBottom";
 
 const controlSound = () => {
@@ -25,9 +24,6 @@ const controlSound = () => {
   });
 };
 
-const BackgroundComet1 = <BackgroundComet />
-const BackgroundStar1 = <BackgroundStar />
-const BackgroundCloud1 = <BackgroundCloud />
 export default function PlayeluBaner() {
 
 
@@ -37,7 +33,6 @@ export default function PlayeluBaner() {
   const [email, setEmail] = React.useState("");
   const [error, setError] = useState(null);
   const URI = "https://api.playelu.io/subemail";
-
 
   const validateEmail = (email) => {
     const re =
@@ -67,32 +62,13 @@ export default function PlayeluBaner() {
     e.preventDefault();
     onPress()
   }
-
   return (<div className='playelu-body'>
     <div className="discord">
       <img className="discord-img" src={urlConstant.image.discord} alt="" />
       <img className="mobile__discord-img" src={urlConstant.image.mobileDiscord} alt="" />
     </div>
     <div className="playelu">
-      <div className='playelu-background'>
-        {/* <BackgroundCloud />
-        <BackgroundComet />
-        <BackgroundStar /> */}
-        {BackgroundCloud1}
-        {BackgroundComet1}
-        {BackgroundStar1}
-        <div className='shooting-star'>
-          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-          <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-        </div>
-        {/* <CloudBottom /> */}
-      </div>
+      <Background />
       <div className='navbar'>
         <div className="sound" onClick={controlSound}>
           <img className="sound-on active" src={urlConstant.image.soundOn} alt="" />

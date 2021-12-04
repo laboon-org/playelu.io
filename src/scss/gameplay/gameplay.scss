@@ -1,96 +1,7 @@
-.zoom.active {
-  animation: zoom 2s ease;
-}
-.opacity {
-  opacity: 0.5;
-  transition: all 2s ease;
-}
-.opacity.active {
-  opacity: 1;
-}
-@keyframes zoom {
-  0% {
-    transform: scale(0.1);
-  }
-  100% {
-    transform: scale(0.9);
-  }
-}
-
 .gameplay-body {
-  position: absolute;
   overflow: hidden;
-  top: 0;
-  left: 0;
   width: 100vw;
 }
-
-.sky {
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/skyBackground.webp")
-    no-repeat center / cover;
-  position: relative;
-  .sky-top {
-    max-width: 1280px;
-    width: 80vw;
-    margin: auto;
-    .gameplay-selection {
-      max-height: 600px;
-      height: 55vh;
-      display: flex;
-      align-items: center;
-      .rune {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        height: 100%;
-        .gameplay__rune-img {
-          position: absolute;
-          z-index: 1;
-          width: 100%;
-        }
-        .gameplay__boonmoon-img {
-          position: absolute;
-          width: 40%;
-          bottom: 45%;
-          z-index: 0;
-        }
-      }
-    }
-    .gameplay-logo {
-      width: 35%;
-      margin: auto;
-      margin-bottom: 100px;
-      .gameplay__logo-img {
-        width: 100%;
-      }
-    }
-    // .gameplay-cloud {
-    //   position: absolute;
-    //   top: 10%;
-    //   z-index: 0;
-    //   display: flex;
-    //   justify-content: space-between;
-    //   .gameplay-cloud1-img {
-    //     width: 20%;
-    //   }
-    //   .gameplay-cloud2-img {
-    //     width: 20%;
-    //   }
-    // }
-  }
-}
-
-.gameplay__selection-img {
-  width: 100%;
-  transform: scale(0.9);
-  cursor: pointer;
-}
-
-.gameplay__selection-img:hover {
-  transform: scale(1);
-}
-
 .sky-center {
   max-width: 1280px;
   margin: auto;
@@ -104,18 +15,46 @@
 
 .sky-center_onBoarding {
   width: 100vw;
-  height: 20vh;
-  // background: #177db8;
-  animation: bounceIn;
-  animation-duration: 0.5s;
+  animation: onBoarding 1s ease forwards;
+  animation-duration: 2s;
 }
 
 .eluDrop-btn {
-  width: 15%;
+  position: relative;
+  max-width: 250px;
+  min-width: 80px;
+  min-height: 24px;
+  max-height: 75px;
+  width: 15vw;
+  height: 4.5vw;
+  background-color: #1d90cd;
+  border-radius: 6px;
+  font-weight: bolder;
+  color: #fff;
   display: flex;
   justify-content: center;
   margin: auto;
   cursor: pointer;
+  transform: scale(0.9);
+  align-items: center;
+  h2 {
+    -webkit-text-stroke: 1.2px black;
+    margin: 0;
+    font-size: 23px;
+    cursor: pointer;
+  }
+  .btn-shadow {
+    position: absolute;
+    bottom: 2%;
+    width: 96%;
+    height: 50%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    cursor: pointer;
+  }
 }
 
 .eluDrop-btn:hover {
@@ -158,4 +97,25 @@
 .mr-bottom {
   padding-bottom: 10%;
   margin-top: -19%;
+}
+.zoom.active {
+  animation: zoom 2s ease;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@keyframes onBoarding {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
