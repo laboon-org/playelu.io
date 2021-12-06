@@ -59,7 +59,7 @@ export default function Beach() {
                         />
                     </filter>
                 </svg>
-                 {/*Kết thúc hiệu ứng của nước  */}
+                {/*Kết thúc hiệu ứng của nước  */}
                 <div className='boulder'>
                     <div className='boulder-element opacity'>
                         <div className='house'>

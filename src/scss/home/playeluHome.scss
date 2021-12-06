@@ -158,11 +158,12 @@ li {
   margin: auto;
   position: relative;
   width: 480px;
+  height: 60px;
   input {
     width: 100%;
     margin: auto;
     letter-spacing: 3px;
-    height: 60px;
+    height: 100%;
     border-radius: calc(100vh * 5.572 / 100);
     border: none;
     font-size: 18px;

@@ -37,32 +37,6 @@
   width: 100%;
 }
 
-.leftEntrance.active {
-  animation: leftEntrance 2s ease;
-}
-.rightEntrance.active {
-  animation: rightEntrance 2s ease;
-}
-@keyframes rightEntrance {
-  0% {
-    margin-right: -500px;
-    opacity: 0;
-  }
-  100% {
-    margin-right: 0;
-    opacity: 1;
-  }
-}
-@keyframes leftEntrance {
-  0% {
-    margin-left: -500px;
-    opacity: 0;
-  }
-  100% {
-    margin-left: 5%;
-    opacity: 1;
-  }
-}
 @keyframes boat2 {
   0% {
     right: -7%;

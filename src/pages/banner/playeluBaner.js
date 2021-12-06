@@ -96,7 +96,7 @@ export default function PlayeluBaner() {
               <img src={urlConstant.image.eluLogo1} alt="" />
             </div>
             <div className="playelu-tittle">
-              <h1>Play-to-Earn NFT Game</h1>
+              <h1>#1 Free-to-Earn NFT Game</h1>
             </div>
             <form className="playelu-btn" onSubmit={handleSubmit}>
               <input
