@@ -3,17 +3,42 @@
   .sky {
     .sky-top {
       .gameplay-selection {
-        height: 20vh;
+        height: 20vh !important;
+      }
+      .gameplay-logo {
+        margin-bottom: 20px !important;
+      }
+    }
+  }
+  .eluDrop-btn {
+    h2 {
+      font-size: 14px !important;
+    }
+  }
+  .eluNestBtn {
+    .nest-btn {
+      h2 {
+        font-size: 14px !important;
       }
     }
   }
 }
 //IPad /Tablet
 @media screen and (min-width: 740px) and (max-width: 1024px) {
-  .sky {
-    .sky-top {
-      .gameplay-selection {
-        height: 35vh;
+  .sky-top {
+    .gameplay-selection {
+      height: 35vh !important;
+    }
+  }
+  .eluDrop-btn {
+    h2 {
+      font-size: 16px !important;
+    }
+  }
+  .eluNestBtn {
+    .nest-btn {
+      h2 {
+        font-size: 16px !important;
       }
     }
   }

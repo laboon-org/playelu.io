@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import urlConstant from '../../urlConstant'
+import urlConstant from '../../../urlConstant'
 
 window.addEventListener('scroll', zoom)
 function zoom() {
@@ -67,11 +67,15 @@ export default function SkyCenter() {
                     {islands}
                 </div>
             </div>
-            <div>
+            <div style={{ marginTop: 20 }}>
                 {
-                    !dropShow ? <img className="eluDrop-btn zoom" onClick={() => {
+                    !dropShow ? <div className="eluDrop-btn zoom" onClick={() => {
                         onPressShowEluDrop();
-                    }} src={urlConstant.imageGamePlay.skyCenter.eluDropBtn} alt="" /> :
+                    }}>
+                        <h2>ELU DROP</h2>
+                        <div className='btn-shadow'></div>
+
+                    </div> :
                         <OnBoarding />
                 }
             </div>
