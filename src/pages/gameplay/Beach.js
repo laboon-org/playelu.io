@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import urlConstant from '../../urlConstant'
+import './css/beach.scss'
 import '../../scss/gameplay/beach.scss'
 
 
@@ -30,7 +31,35 @@ export default function Beach() {
     return (
         <div className='beach' id='nest'>
             <div className='ocean'>
-                <img className="ocean-img" src={urlConstant.imageGamePlay.ocean.backgroundOcean} alt="" />
+                <div className="ocean-container">
+                    {/* Nền đằng sau */}
+                    <img className="ocean-img_back" src={urlConstant.imageGamePlay.ocean.backgroundOcean} alt=''></img>
+                    {/* Ảnh nền nhận hiệu ứng */}
+                    <img className="ocean-img" src={urlConstant.imageGamePlay.ocean.backgroundOcean} alt=''></img>
+                </div>
+                {/* Hiệu ứng của nước  */}
+                <svg className="ocean-effect">
+                    <filter id='turbulence' x="0" y="0" width="100" height="100%">
+                        <feTurbulence
+                            id='sea-filter'
+                            numOctaves={10}
+                            seed={4}
+                            baseFrequency="0.02 0.06"
+                        ></feTurbulence>
+                        <feDisplacementMap
+                            scale="40"
+                            in="SourceGraphic"
+                        ></feDisplacementMap>
+                        <animate
+                            xlinkHref="#sea-filter"
+                            attributeName="baseFrequency" dur="60s"
+                            keyTimes="0;0.5;1"
+                            values="0.02 0.06;0.04 0.08;0.02 0.06"
+                            repeatCount="indefinite"
+                        />
+                    </filter>
+                </svg>
+                 {/*Kết thúc hiệu ứng của nước  */}
                 <div className='boulder'>
                     <div className='boulder-element opacity'>
                         <div className='house'>
