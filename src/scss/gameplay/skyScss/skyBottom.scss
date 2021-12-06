@@ -24,10 +24,12 @@
       margin-left: 5%;
       width: 40%;
       margin-bottom: 15%;
+      animation: wave-ship 2s linear alternate infinite;
     }
     .sailboat-right {
       width: 30%;
       margin-top: 25%;
+      animation: wave-ship 2s linear alternate infinite;
     }
   }
 }
@@ -78,4 +80,14 @@
   100% {
     left: 100vw;
   }
+}
+@keyframes wave-ship{
+  0% {
+    transform: translateY(0px) rotate(
+1deg);
+}
+100% {
+    transform: translateY(-2px) rotate(
+-1deg);
+}
 }

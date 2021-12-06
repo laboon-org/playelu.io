@@ -26,15 +26,9 @@ export default function SkyTop() {
                     <img className="gameplay__selection-img" src={urlConstant.imageGamePlay.skyTop.metaVerse} alt="" />
                 </div>
             </div>
-
             <div className='gameplay-logo'>
                 <img className="gameplay__logo-img" src={urlConstant.image.eluLogo} alt="" />
             </div>
-
-            {/* <div className='gameplay-cloud'>
-        <img className="gameplay-cloud1-img" src={urlConstant.imageGamePlay.cloud1} alt="" />
-        <img className="gameplay-cloud2-img" src={urlConstant.imageGamePlay.cloud2} alt="" />
-    </div> */}
         </div>
     )
 }

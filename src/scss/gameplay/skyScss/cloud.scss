@@ -1,0 +1,49 @@
+.gameplay-cloud{
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    width: 100%;
+    top: 40%;
+    // display: flex;
+    
+    // justify-content: space-between;
+    .gameplay-cloud1-img{
+       max-width: 200px;
+        width: 12%;
+        float: left;
+        animation: cloud-left 50s ease infinite;
+    }
+    .gameplay-cloud2-img{
+        position: absolute;
+        right: 0;
+        max-width: 250px;
+        width: 15%;
+        animation: cloud-right 60s ease infinite;
+    }
+}
+@keyframes cloud-left{
+    0% {
+        margin-left: -200px;
+        opacity: 0.6;
+      }
+      50%{
+          opacity: 1;
+      }
+      100% {
+        margin-left: 102%;
+        opacity: 0.6;
+      }
+}
+@keyframes cloud-right{
+    0% {
+        margin-right: -260px;
+        opacity: 0.6;
+      }
+      50%{
+          opacity: 1;
+      }
+      100% {
+        margin-right: 103%;
+        opacity: 0.6;
+      }
+}

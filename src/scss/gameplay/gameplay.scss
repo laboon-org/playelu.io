@@ -2,8 +2,19 @@
   overflow: hidden;
   width: 100vw;
 }
+.sky {
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/skyBackground.webp")
+    no-repeat center / cover;
+  position: relative;
+  // .box {
+  //   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/background_top.jpg")
+  //     no-repeat center / cover;
+  // 
+}
 .sky-center {
   max-width: 1280px;
+  position: relative;
+  z-index: 1;
   margin: auto;
   width: 90%;
   .island {

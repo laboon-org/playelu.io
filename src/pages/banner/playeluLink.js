@@ -18,7 +18,7 @@ function PlayeluLink() {
         {
             id: 3,
             img: urlConstant.image.social.insta,
-            href: 'https://www.instagram.com/eluverse/    - instagram'
+            href: 'https://www.instagram.com/eluverse/ '
         },
         {
             id: 4,
@@ -28,7 +28,7 @@ function PlayeluLink() {
         {
             id: 5,
             img: urlConstant.image.social.tele,
-            href: 'https://t.me/eluverse     - telegram'
+            href: 'https://t.me/eluverse'
         },
         {
             id: 6,

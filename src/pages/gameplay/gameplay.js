@@ -5,6 +5,8 @@ import '../../scss/reponsiveness/gameplay/responsiveGameplay.scss'
 import Beach from './Beach'
 import SkyBottom from './sky/skyBottom'
 import SkyTop from './sky/skyTop'
+import Cursor from './cursor'
+import Cloud from './sky/cloud'
 
 window.addEventListener('scroll', reveal)
 function reveal() {
@@ -23,11 +25,13 @@ function reveal() {
 export default function Gameplay() {
     return (
         <div>
+            <Cursor />
             <div className='gameplay-body'>
                 <div className='sky'>
                     {/* <div className='box'> */}
                     <SkyTop />
                     <SkyCenter />
+                    <Cloud />
                     {/* </div> */}
                     <SkyBottom />
                 </div>

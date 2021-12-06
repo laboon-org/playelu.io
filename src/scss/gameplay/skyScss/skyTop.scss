@@ -1,12 +1,4 @@
-.sky {
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/skyBackground.webp")
-    no-repeat center / cover;
-  position: relative;
-  // .box {
-  //   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/background_top.jpg")
-  //     no-repeat center / cover;
-  // }
-  .sky-top {
+.sky-top {
     max-width: 1280px;
     width: 80vw;
     margin: auto;
@@ -56,7 +48,6 @@
     //   }
     // }
   }
-}
 
 .gameplay__selection-img {
   width: 100%;
