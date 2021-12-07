@@ -24,7 +24,11 @@ export default function Header() {
                 <div className='close-modal' onClick={() => handleCloseComingSoon()}>
                     <img src={urlConstant.image.modal.closeModal} alt="" />
                 </div>
-                <img src={urlConstant.image.modal.modalCommingSoon} alt="" />
+                <div className='modal-container'>
+                    <img src={urlConstant.image.eluLogo} alt="" />
+                    <h1>coming soon !</h1>
+                </div>
+                {/* <img src={urlConstant.image.modal.modalCommingSoon} alt="" /> */}
             </Modal>
             <ul className='menu'>
                 <li className='playelu__menu-element'>

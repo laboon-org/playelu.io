@@ -257,10 +257,61 @@ li {
 .modal-thankyou > .modal-content,
 .modal-comingsoon > .modal-content {
   width: 50vw;
-}
-.modal-content {
+  height: 33.5vw;
   border-radius: 37px;
+  .modal-container {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(81, 179, 229, 1) 0%,
+      rgba(102, 175, 232, 1) 32%,
+      rgba(66, 102, 176, 1) 73%
+    );
+    border-radius: 37px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border: 5px solid #fff;
+    img{
+      width: 70%;
+      margin: 0 auto;
+    }
+    h1{
+      color: #fff;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     font-size: 46px;
+    }
+  }
 }
+// .modal-container {
+//   width: 100%;
+//   height: 100%;
+//   background: radial-gradient(
+//     circle,
+//     rgba(81, 179, 229, 1) 0%,
+//     rgba(102, 175, 232, 1) 32%,
+//     rgba(66, 102, 176, 1) 73%
+//   );
+//   border-radius: 37px;
+//   display: flex;
+//   justify-content: center;
+//   text-align: center;
+//   flex-direction: column;
+//   border: 5px solid #fff;
+//   img{
+//     width: 70%;
+//     margin: 0 auto;
+//   }
+//   h1{
+//     color: #fff;
+//    text-transform: uppercase;
+//    letter-spacing: 2px;
+//    font-size: 46px;
+//   }
+// }
 .modal-header {
   display: block;
   border: none;

@@ -47,7 +47,26 @@
   .header {
     width: 100%;
   }
-
+  .modal-thankyou > .modal-content,
+  .modal-comingsoon > .modal-content {
+    width: 70vw;
+    height: 50vw;
+    border-radius: 37px;
+    .modal-container {
+      flex-direction: column;
+      border: 5px solid #fff;
+      img{
+        width: 70%;
+        margin: 0 auto;
+      }
+      h1{
+        color: #fff;
+       text-transform: uppercase;
+       letter-spacing: 2px;
+       font-size: 46px;
+      }
+    }
+  }
   .modal-thankyou > .modal-content,
   .modal-comingsoon > .modal-content {
     width: 70vw;

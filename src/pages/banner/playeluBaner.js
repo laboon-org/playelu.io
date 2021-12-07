@@ -85,8 +85,12 @@ export default function PlayeluBaner() {
         <div className='close-modal' onClick={() => handleClose()}>
           <img src={urlConstant.image.modal.closeModal} alt="" />
         </div>
-        <img src={urlConstant.image.modal.modal} alt="" />
-        <p className='name-email'>{email}</p>
+        <div className='modal-container'>
+          <img src={urlConstant.image.eluLogo} alt="" />
+          <h1>thank you !</h1>
+          <p className='name-email'>{email}</p>
+        </div>
+
       </Modal>
       <div className='playelu-frame'>
         <div className="playelu-all">
