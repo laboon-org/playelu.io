@@ -1,4 +1,5 @@
 import React from 'react'
+import MouseParticles from 'react-mouse-particles'
 import SkyCenter from './sky/skyCenter'
 import '../../scss/gameplay/gameplay.scss'
 import '../../scss/reponsiveness/gameplay/responsiveGameplay.scss'
@@ -37,6 +38,7 @@ export default function Gameplay() {
                 </div>
                 <Beach />
             </div>
+            <MouseParticles g={1} color={["#feca1a", "#fbed52", "#bae4eb"]} cull="col,image-wrapper" />
         </div>
     )
 }

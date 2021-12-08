@@ -72,7 +72,8 @@ export default function SkyCenter() {
                     !dropShow ? <div className="eluDrop-btn zoom" onClick={() => {
                         onPressShowEluDrop();
                     }}>
-                        <h2>ELU DROP</h2>
+                        <h2>DROP</h2>
+                        <p>GAME FEATURES</p>
                         <div className='btn-shadow'></div>
 
                     </div> :

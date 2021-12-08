@@ -47,6 +47,12 @@ export default {
             scout: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/scout.webp',
             metaVerse: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/metaVerse.webp',
         },
+        popupComingSoon: {
+            background: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_background.webp',
+            popup_logo: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_logo.webp',
+            popup_character: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_character.webp',
+            popup_grass: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_grass.webp'
+        },
         skyCenter: {
             fountain: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/foundation.gif',
             fire_island: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/fire_island.gif',
@@ -66,7 +72,7 @@ export default {
             boulder: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boulder.webp',
             house: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/house.webp',
             pinwheel: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/pinwheel.webp',
-            oceanIsland: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/oceabIsland1.webp',
+            oceanIsland: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/ocean_island.webp',
             tree: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/gate.gif',
             oceanIslandGrass: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/oceanIslandGrass.webp',
         },

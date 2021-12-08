@@ -9,7 +9,7 @@
   // .box {
   //   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/background_top.jpg")
   //     no-repeat center / cover;
-  // 
+  //
 }
 .sky-center {
   max-width: 1280px;
@@ -43,6 +43,7 @@
   font-weight: bolder;
   color: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: auto;
   cursor: pointer;
@@ -53,6 +54,12 @@
     margin: 0;
     font-size: 23px;
     cursor: pointer;
+  }
+  p {
+    color: #fff;
+    -webkit-text-stroke: 0.6px black;
+    font-size: 17px;
+    margin: 0;
   }
   .btn-shadow {
     position: absolute;

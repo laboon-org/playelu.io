@@ -87,7 +87,7 @@ export default function Beach() {
                         <div className='onBoarding-btn_close' onClick={() => {
                             closeNest()
                         }}>
-                            <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/btn_close.png' alt='' />
+                            <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/btn_close%20(1).png' alt='' />
                         </div>
                         <div className='onBoarding-title'>
                             <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/title_bg.png' alt='' />
@@ -107,7 +107,8 @@ export default function Beach() {
                         <div className='eluNestBtn' onClick={() => {
                             onPressShowNest()
                         }}> <div className='nest-btn'>
-                                <h2>ELU NEST</h2>
+                                <h2>NEST</h2>
+                                <p>GAME FEATURES</p>
                                 <div className='btn-shadow'></div>
                             </div>
                         </div>

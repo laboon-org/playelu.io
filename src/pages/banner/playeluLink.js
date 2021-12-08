@@ -23,7 +23,7 @@ function PlayeluLink() {
         {
             id: 4,
             img: urlConstant.image.social.facebook,
-            href: '#'
+            href: 'https://www.facebook.com/EluVerse'
         },
         {
             id: 5,

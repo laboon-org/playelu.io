@@ -28,7 +28,6 @@ export default function Header() {
                     <img src={urlConstant.image.eluLogo} alt="" />
                     <h1>coming soon !</h1>
                 </div>
-                {/* <img src={urlConstant.image.modal.modalCommingSoon} alt="" /> */}
             </Modal>
             <ul className='menu'>
                 <li className='playelu__menu-element'>

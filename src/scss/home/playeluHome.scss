@@ -274,15 +274,15 @@ li {
     text-align: center;
     flex-direction: column;
     border: 5px solid #fff;
-    img{
+    img {
       width: 70%;
       margin: 0 auto;
     }
-    h1{
+    h1 {
       color: #fff;
-     text-transform: uppercase;
-     letter-spacing: 2px;
-     font-size: 46px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 46px;
     }
   }
 }
@@ -328,9 +328,11 @@ li {
   outline: none;
   top: 30px;
   right: 30px;
+  cursor: pointer;
 }
 .close-modal img {
   width: 100%;
+  cursor: pointer;
 }
 .modal-thankyou > .modal-content p {
   display: block;
