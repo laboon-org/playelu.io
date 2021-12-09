@@ -10,16 +10,30 @@
       }
     }
   }
+
   .eluDrop-btn {
+    // width: 17vw;
+    // height: 6vw;
     h2 {
-      font-size: 14px !important;
+      font-size: 11px !important;
+      -webkit-text-stroke: 0.9px black !important;
+    }
+    p {
+      font-size: 8px !important;
+      -webkit-text-stroke: 0.3px black !important;
     }
   }
-  .eluNestBtn {
-    .nest-btn {
-      h2 {
-        font-size: 14px !important;
-      }
+
+  .nest-btn {
+    // width: 17vw !important;
+    // height: 6vw !important;
+    h2 {
+      font-size: 11px !important;
+      -webkit-text-stroke: 0.9px black !important;
+    }
+    p {
+      font-size: 8px !important;
+      -webkit-text-stroke: 0.3px black !important;
     }
   }
 }
@@ -30,16 +44,30 @@
       height: 35vh !important;
     }
   }
+
   .eluDrop-btn {
+    width: 18vw;
+    height: 6vw;
     h2 {
-      font-size: 16px !important;
+      font-size: 18px !important;
+      -webkit-text-stroke: 1px black !important;
+    }
+    p {
+      font-size: 12px !important;
+      -webkit-text-stroke: 0.4px black !important;
     }
   }
-  .eluNestBtn {
-    .nest-btn {
-      h2 {
-        font-size: 16px !important;
-      }
+
+  .nest-btn {
+    width: 18vw !important;
+    height: 6vw !important;
+    h2 {
+      font-size: 18px !important;
+      -webkit-text-stroke: 1px black !important;
+    }
+    p {
+      font-size: 12px !important;
+      -webkit-text-stroke: 0.4px black !important;
     }
   }
 }
