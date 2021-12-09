@@ -6,10 +6,6 @@
   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/skyBackground.webp")
     no-repeat center / cover;
   position: relative;
-  // .box {
-  //   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/background_top.jpg")
-  //     no-repeat center / cover;
-  //
 }
 .sky-center {
   max-width: 1280px;
@@ -29,57 +25,82 @@
   animation: onBoarding 1s ease forwards;
   animation-duration: 2s;
 }
-
-.eluDrop-btn {
-  position: relative;
-  max-width: 250px;
+// Start scss button Drop and Nest
+.elu-btn {
+  max-width: 230px;
   min-width: 80px;
   min-height: 24px;
-  max-height: 78px;
+  max-height: 69px;
   width: 15vw;
   height: 4.5vw;
-  background-color: #1d90cd;
-  border-radius: 6px;
+  border-radius: 12px;
   font-weight: bolder;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin: auto;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   transform: scale(0.9);
+  text-align: center;
   align-items: center;
   h2 {
     -webkit-text-stroke: 1.2px black;
     margin: 0;
     font-size: 23px;
+    height: 50%;
     cursor: pointer;
-    margin-top: 2px;
+    // margin-top: 2px;
+    padding-top: 2%;
+    letter-spacing: 1px;
   }
+}
+.btn-shadow {
+  width: 96%;
+  height: 48%;
+  margin: auto;
+  margin-bottom: 2%;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   p {
+    width: 100%;
+    text-align: center;
     color: #fff;
     -webkit-text-stroke: 0.6px black;
-    font-size: 17px;
+    font-size: 18px;
     margin: 0;
-  }
-  .btn-shadow {
-    position: absolute;
-    bottom: 2%;
-    width: 96%;
-    height: 50%;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    background-color: rgba($color: #000000, $alpha: 0.2);
     cursor: pointer;
   }
 }
-
-.eluDrop-btn:hover {
+.elu-btn:hover {
   transform: scale(1);
 }
+// End scss button Drop and Nest
 
+// Start scss button Drop
+.drop-btn {
+  background-color: #1d90cd;
+}
+// End scss button Drop
+// Start scss button Nest
+.eluNest-btn {
+  position: absolute;
+  width: 100%;
+  border: none;
+  outline: none;
+  left: 0;
+  bottom: 160%;
+}
+.nest-btn {
+  background-color: #fec02a;
+}
+// End scss button Nest
 .island1,
 .island2,
 .island3 {

@@ -11,31 +11,49 @@
     }
   }
 
-  .eluDrop-btn {
-    // width: 17vw;
-    // height: 6vw;
-    h2 {
-      font-size: 11px !important;
-      -webkit-text-stroke: 0.9px black !important;
-    }
-    p {
-      font-size: 8px !important;
-      -webkit-text-stroke: 0.3px black !important;
+  // Start scss Popup Coming Soon
+  .modal-comingsoon > .modal-content {
+    width: 80vw;
+    height: 56vw;
+  }
+  .popup-title {
+    .popup-title__box {
+      h1 {
+        font-size: 11px !important;
+        -webkit-text-stroke: 1px rgba($color: #000000, $alpha: 0.4) !important;
+      }
     }
   }
+  // End scss Popup Coming Soon
 
-  .nest-btn {
-    // width: 17vw !important;
-    // height: 6vw !important;
+  // Start scss button Drop and Nest
+  .elu-btn {
+    width: 18vw;
+    height: 6vw;
+    border-radius: 4px;
+    font-weight: bolder;
+    color: #fff;
+    margin: auto;
+    cursor: pointer;
+    transform: scale(0.9);
+
     h2 {
-      font-size: 11px !important;
-      -webkit-text-stroke: 0.9px black !important;
-    }
-    p {
-      font-size: 8px !important;
-      -webkit-text-stroke: 0.3px black !important;
+      -webkit-text-stroke: 0.9px black;
+      font-size: 10px;
     }
   }
+  .btn-shadow {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    p {
+      -webkit-text-stroke: 0.3px black;
+      font-size: 7px;
+      letter-spacing: 0.5px;
+    }
+  }
+  // End scss button Nest
 }
 //IPad /Tablet
 @media screen and (min-width: 740px) and (max-width: 1024px) {
@@ -44,30 +62,42 @@
       height: 35vh !important;
     }
   }
+  // Start scss Popup Coming Soon
+  .modal-comingsoon > .modal-content {
+    width: 80vw;
+    height: 56vw;
+  }
+  .popup-title {
+    .popup-title__box {
+      h1 {
+        font-size: 16px !important;
+        -webkit-text-stroke: 1px rgba($color: #000000, $alpha: 0.4) !important;
+      }
+    }
+  }
+  // End scss Popup Coming Soon
 
-  .eluDrop-btn {
+  // Start scss button Drop and Nest
+  .elu-btn {
     width: 18vw;
     height: 6vw;
+    border-radius: 7px;
     h2 {
-      font-size: 18px !important;
-      -webkit-text-stroke: 1px black !important;
-    }
-    p {
-      font-size: 12px !important;
-      -webkit-text-stroke: 0.4px black !important;
+      -webkit-text-stroke: 1px black;
+      font-size: 18px;
     }
   }
-
-  .nest-btn {
-    width: 18vw !important;
-    height: 6vw !important;
-    h2 {
-      font-size: 18px !important;
-      -webkit-text-stroke: 1px black !important;
-    }
+  .btn-shadow {
+    margin-bottom: 1.5%;
+    width: 96%;
+    height: 48.5% !important;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     p {
-      font-size: 12px !important;
-      -webkit-text-stroke: 0.4px black !important;
+      -webkit-text-stroke: 0.4px black;
+      font-size: 12px;
+      letter-spacing: 0.5px;
     }
   }
+  // End scss button Nest
 }

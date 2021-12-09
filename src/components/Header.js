@@ -26,7 +26,7 @@ export default function Header() {
                 </div>
                 <div className='modal-container'>
                     <img src={urlConstant.image.eluLogo} alt="" />
-                    <h1>coming soon !</h1>
+                    <h1>coming soon!</h1>
                 </div>
             </Modal>
             <ul className='menu'>

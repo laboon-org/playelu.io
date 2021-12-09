@@ -58,58 +58,61 @@
 .gameplay__selection-img:hover {
   transform: scale(1);
 }
-// // Start scss Popup Coming Soon
-// .modal-comingsoon > .modal-content {
-//   width: 50vw;
-//   height: 35vw;
-//   // border-radius: 37px;
-//   .popup-container {
-//     position: relative;
-//     width: 100%;
-//     height: 100%;
-//     background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_background1.webp")
-//       no-repeat center / cover;
-//     // border-radius: 37px;
-//     display: flex;
-//     justify-content: center;
-//     text-align: center;
-//     flex-direction: column;
-//     border: 1px solid #000;
-//     box-shadow: 0 10px 15px rgba($color: #000000, $alpha: 0.3);
-//     .popup-logo {
-//       width: 70%;
-//       top: 0;
-//       margin: 0 auto;
-//       z-index: 1;
-//       margin-bottom: 35%;
-//     }
-//     .popup-character {
-//       position: absolute;
-//       z-index: 0;
-//       width: 40%;
-//       right: 5%;
-//       bottom: 10%;
-//     }
-//     .popup-grass {
-//       position: absolute;
-//       z-index: 0;
-//       width: 80%;
-//       right: 0;
-//       bottom: 0%;
-//     }
-//     h1 {
-//       position: absolute;
-//       top: 60%;
-//       width: 40%;
-//       left: 0;
-//       color: #b23167;
-//       text-transform: uppercase;
-//       letter-spacing: 2px;
-//       font-size: 46px;
-//       -webkit-text-stroke: 2px #fff;
-//       z-index: 1;
-//       margin-bottom: 28%;
-//     }
-//   }
-// }
-// // End scss Popup Coming Soon
+// Start scss Popup Coming Soon
+.modal-comingsoon > .modal-content {
+  max-width: 940px;
+  max-height: 658px;
+  width: 60vw;
+  height: 42vw;
+  // border-radius: 37px;
+  .popup-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_background.webp")
+      no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba($color: #000000, $alpha: 0.3);
+    .close-popup {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5%;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.popup-title {
+  position: absolute;
+  top: 7%;
+  width: 40%;
+  left: 30%;
+  .popup-title__box {
+    position: relative;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+    h1 {
+      position: absolute;
+      top: 20%;
+      left: 0;
+      width: 100%;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 2% 0;
+      letter-spacing: 1px;
+      font-size: 26px;
+      -webkit-text-stroke: 2px rgba($color: #000000, $alpha: 0.4);
+    }
+  }
+}
+
+// End scss Popup Coming Soon

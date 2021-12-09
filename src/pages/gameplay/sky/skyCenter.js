@@ -67,14 +67,13 @@ export default function SkyCenter() {
                     {islands}
                 </div>
             </div>
-            <div style={{ marginTop: 20 }}>
+            <div style={{ marginTop: 20, width: '100vw' }}>
                 {
-                    !dropShow ? <div className="eluDrop-btn zoom" onClick={() => {
+                    !dropShow ? <div className="elu-btn drop-btn zoom" onClick={() => {
                         onPressShowEluDrop();
                     }}>
                         <h2>DROP</h2>
-                        <p>GAME FEATURES</p>
-                        <div className='btn-shadow'></div>
+                        <div className='btn-shadow'><p>GAME FEATURES</p></div>
 
                     </div> :
                         <OnBoarding />

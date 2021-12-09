@@ -53,7 +53,7 @@ export default function Content() {
             </div>
             <div className='modal-container'>
                 <img src={urlConstant.image.eluLogo} alt="" />
-                <h1>thank you !</h1>
+                <h1>thank you!</h1>
                 <p className='name-email'>{email}</p>
             </div>
 

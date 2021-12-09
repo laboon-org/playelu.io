@@ -28,6 +28,7 @@
     }
     .sailboat-right {
       width: 30%;
+      margin-right: -1%;
       margin-top: 25%;
       animation: wave-ship 2s linear alternate infinite;
     }
@@ -55,13 +56,11 @@
     left: 100vw;
   }
 }
-@keyframes wave-ship{
+@keyframes wave-ship {
   0% {
-    transform: translateY(0px) rotate(
-1deg);
-}
-100% {
-    transform: translateY(-2px) rotate(
--1deg);
-}
+    transform: translateY(0px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(-2px) rotate(-1deg);
+  }
 }

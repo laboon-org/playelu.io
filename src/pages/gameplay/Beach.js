@@ -104,12 +104,11 @@ export default function Beach() {
                         <img className='circle-img' src={urlConstant.imageGamePlay.land.core.circle} alt='' />
                         <img className='effigy-img' src={urlConstant.imageGamePlay.land.core.effigy} alt='' />
                         <img className='lightColumn-img' src={urlConstant.imageGamePlay.land.core.lightColumn} alt='' />
-                        <div className='eluNestBtn' onClick={() => {
+                        <div className='eluNest-btn' onClick={() => {
                             onPressShowNest()
-                        }}> <div className='nest-btn'>
+                        }}> <div className='elu-btn nest-btn'>
                                 <h2>NEST</h2>
-                                <p>GAME FEATURES</p>
-                                <div className='btn-shadow'></div>
+                                <div className='btn-shadow'><p>GAME FEATURES</p></div>
                             </div>
                         </div>
                     </div>
