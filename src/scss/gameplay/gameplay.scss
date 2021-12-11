@@ -20,11 +20,6 @@
   }
 }
 
-.sky-center_onBoarding {
-  width: 100vw;
-  animation: onBoarding 1s ease forwards;
-  animation-duration: 2s;
-}
 // Start scss button Drop and Nest
 .elu-btn {
   max-width: 230px;
@@ -151,11 +146,11 @@
 }
 @keyframes onBoarding {
   0% {
-    transform: translateY(-50%);
+    transform: scaleY(0);
     opacity: 0;
   }
   100% {
-    transform: translateY(0%);
+    transform: scaleY(1);
     opacity: 1;
   }
 }

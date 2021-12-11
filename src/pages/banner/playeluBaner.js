@@ -1,14 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "./navbar";
-
-
-
 import urlConstant from "../../urlConstant";
 import '../../scss/reponsiveness/home/home_Ipad.scss'
 import '../../scss/reponsiveness/home/home_mobile.scss'
 import Background from "./backgrounds/background";
-import MouseParticles from 'react-mouse-particles'
 import Content from "./playelu_content";
+import Cursor from "../../components/cursor";
 // import CloudBottom from "./backgrounDecor/BackgroundBottom";
 
 const controlSound = () => {
@@ -27,6 +24,7 @@ const controlSound = () => {
 export default function PlayeluBaner() {
   return (
     <div className='playelu-body'>
+      <Cursor />
       <div className="discord">
         <img className="discord-img" src={urlConstant.image.discord} alt="" />
         <img className="mobile__discord-img" src={urlConstant.image.mobileDiscord} alt="" />
@@ -42,7 +40,6 @@ export default function PlayeluBaner() {
         </div>
         <Content />
       </div>
-      <MouseParticles g={1} num="20" color={["#feca1a", "#fbed52", "#bae4eb"]} cull="col,image-wrapper" />
     </div>
   );
 }

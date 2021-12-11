@@ -25,15 +25,15 @@
       flex-direction: column;
       border: 5px solid #fff;
       border: 2px solid #fff;
-      img{
+      img {
         width: 60%;
         margin: 0 auto;
       }
-      h1{
+      h1 {
         color: #fff;
-       text-transform: uppercase;
-       letter-spacing: 2px;
-       font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 20px;
       }
     }
   }
@@ -60,7 +60,7 @@
   .playelu-btn {
     width: calc(100% - 36px);
   }
- 
+
   .playelu-btn button {
     width: 30%;
     border-radius: 5.572vh;
@@ -92,6 +92,11 @@
     width: 100%;
   }
 
+  .error-email {
+    width: 80%;
+    margin: 0px auto;
+    font-size: 10px;
+  }
   .playelu__link {
     width: 100%;
   }

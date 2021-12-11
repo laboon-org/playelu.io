@@ -1,13 +1,12 @@
 import React from 'react'
-import MouseParticles from 'react-mouse-particles'
 import SkyCenter from './sky/skyCenter'
 import '../../scss/gameplay/gameplay.scss'
 import '../../scss/reponsiveness/gameplay/responsiveGameplay.scss'
 import Beach from './Beach'
 import SkyBottom from './sky/skyBottom'
 import SkyTop from './sky/skyTop'
-import Cursor from './cursor'
 import Cloud from './sky/cloud'
+import Cursor from '../../components/cursor'
 
 window.addEventListener('scroll', reveal)
 function reveal() {
@@ -38,7 +37,6 @@ export default function Gameplay() {
                 </div>
                 <Beach />
             </div>
-            <MouseParticles g={1} color={["#feca1a", "#fbed52", "#bae4eb"]} cull="col,image-wrapper" />
         </div>
     )
 }

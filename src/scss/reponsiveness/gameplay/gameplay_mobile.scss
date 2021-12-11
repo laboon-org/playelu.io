@@ -1,0 +1,65 @@
+@media screen and (max-width: 740px) {
+  // Start drop onBoarding scss
+  .onBoarding__title {
+    width: 100%;
+    left: 0;
+  }
+  .onBoarding__title-content {
+    width: 40%;
+  }
+  .onBoarding__title-text {
+    h3 {
+      margin-top: 3%;
+      font-size: 18px;
+      text-shadow: 0 3px 3px rgba($color: #000000, $alpha: 0.5);
+      -webkit-text-stroke: 1.6px black;
+    }
+  }
+  .onBoarding-frame {
+    width: 90%;
+    padding-top: 2%;
+  }
+  .onBoarding {
+    margin: 0 0 30px 0;
+  }
+
+  .onBoarding__versus-content {
+    width: 90%;
+    border: 1.5px solid #00aaff;
+  }
+  .onBoarding__versus-text {
+    width: 56%;
+    font-size: 18px;
+    margin: 20px 35% 20px 9%;
+    -webkit-text-stroke: 1.3px black;
+    text-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.5);
+  }
+  .image-comingsoon {
+    right: -5%;
+    bottom: -15%;
+  }
+  .onBoarding__element-tip {
+    width: 40%;
+  }
+  .tip-title {
+    font-size: 8px;
+    top: 33%;
+    -webkit-text-stroke: 0.8px black;
+  }
+
+  .onBoarding__element-content {
+    .onBoarding__element-img {
+      border: 1px solid #00aaff;
+    }
+  }
+  .content-final {
+    margin-top: 16%;
+  }
+  .onBoarding__btn-close {
+    width: 100%;
+    img {
+      width: 10%;
+    }
+  }
+  // End drop onBoarding scss
+}

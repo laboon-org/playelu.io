@@ -25,6 +25,7 @@ export default {
             facebook: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/iconFacebook.webp',
             tele: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/iconTele.webp',
             opensea: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/iconOpensea.webp',
+            medium: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/social_icon/medium_icon.png'
         },
         // backgroundBottom: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/backgroundBottom.webp',
         soundOn: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/sound.webp',
@@ -52,6 +53,23 @@ export default {
             popup_logo: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_logo.webp',
             popup_character: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_character.webp',
             popup_grass: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_grass.webp'
+        },
+        popupDrop: {
+            boardTitle: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/title.png',
+            tip1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/tip-1.png',
+            tip2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/tip-2.png',
+            coomingsoon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/coming%20soon.png',
+            adventure1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Adventures-1.png',
+            adventure: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Adventures.png',
+            competing: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Competings.png',
+            Hunt_Hex_Board: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Hunt_Hex_Boards.png',
+            arrowNext: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/arrowNext.png',
+            arrowUp: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/arrowUp.png',
+            board_type_1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type1.png',
+            board_type_2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type2.png',
+            board_type_3: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type3.png',
+            board_type_4: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type4.png',
+            board_type_5: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type5.png',
         },
         skyCenter: {
             fountain: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/foundation.gif',
@@ -96,7 +114,7 @@ export default {
         cloud2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/cloud2.webp'
     },
     docs: {
-        privacyPolicy: 'https://storage.googleapis.com/laboon-img-storage/play-elu/docs/elu-verse-privacy-policy.pdf',
-        conditions: 'https://storage.googleapis.com/laboon-img-storage/play-elu/docs/elu-verse-website-terms-and-conditions.pdf'
+        privacyPolicy: 'http://bit.ly/elu-verse-privacy-policy',
+        conditions: 'http://bit.ly/elu-verse-term-conditons'
     }
 }

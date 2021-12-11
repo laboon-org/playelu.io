@@ -1,5 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import urlConstant from '../../../urlConstant'
+import Drop_onboarding from '../drop_onboarding';
+import drop_onboarding from '../drop_onboarding';
 
 window.addEventListener('scroll', zoom)
 function zoom() {
@@ -15,14 +17,6 @@ function zoom() {
         }
     }
 }
-
-const OnBoarding = () => {
-    return (
-        <div className={"sky-center_onBoarding"} >
-
-        </div>)
-}
-
 const listIslandUrl = [
     {
         url1: urlConstant.imageGamePlay.skyCenter.islandBlank1,
@@ -74,9 +68,8 @@ export default function SkyCenter() {
                     }}>
                         <h2>DROP</h2>
                         <div className='btn-shadow'><p>GAME FEATURES</p></div>
-
                     </div> :
-                        <OnBoarding />
+                        <Drop_onboarding />
                 }
             </div>
         </div>

@@ -31,7 +31,7 @@ export default function Content() {
             response => console.log(response)
         ).catch(err => console.log(err))
         if (!validateEmail(email)) {
-            setError('Wrong email format message');
+            setError('Please enter your email address in format: yourname@example.com');
         } else {
             handleShow()
             setError('');
@@ -74,10 +74,12 @@ export default function Content() {
                                 setEmail(e.target.value);
                             }}
                             className="playelu-input "
-                            type="email"
+                            type=""
                             placeholder='Email'
                             value={email}
-                            maxLength='50'
+                            pattern='[a-z]{1,50}'
+                            maxLength={40}
+                            required=""
                             placeholder="Your Email here"
                         >
 

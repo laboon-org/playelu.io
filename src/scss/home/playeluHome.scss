@@ -169,6 +169,7 @@ li {
     font-size: 18px;
     color: #114f8c;
     padding-left: 64px;
+    cursor: text;
   }
 }
 
@@ -198,10 +199,12 @@ li {
   width: 100%;
 }
 .error-email {
-  color: rgb(245, 209, 9);
-  width: 468px;
+  color: #fbb518;
+  width: 100%;
+  max-width: 468px;
   text-align: center;
   margin: 10px auto;
+  letter-spacing: 0.5px;
 }
 .playelu__link {
   width: 480px;

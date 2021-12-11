@@ -1,0 +1,74 @@
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+  // Start drop onBoarding scss
+  .onBoarding__title-text {
+    h3 {
+      margin-top: 3%;
+      font-size: 24px;
+      -webkit-text-stroke: 2.2px black;
+    }
+  }
+
+  .onBoarding__versus-text {
+    font-size: 35px;
+  }
+
+  .tip-title {
+    font-size: 15px;
+    -webkit-text-stroke: 1.5px black;
+  }
+  .board-type-text {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    span {
+      font-size: 13px;
+      color: #fff;
+      -webkit-text-stroke: 1px black;
+      flex: 1;
+    }
+  }
+  .square {
+    margin: auto;
+    width: 5px;
+    height: 5px;
+    background: #ffe552;
+  }
+  .circle {
+    margin: auto;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin-left: 3px;
+    background: #ffe552;
+  }
+  .triangle {
+    margin: auto;
+    margin-left: 3px;
+    width: 0;
+    height: 0;
+    border-bottom: 5px solid #ffe552;
+    border-left: 2.5px solid transparent;
+    border-right: 2.5px solid transparent;
+  }
+  // End drop onBoarding scss
+}
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  // Start drop onBoarding scss
+  .onBoarding__title-text {
+    h3 {
+      margin-top: 2%;
+      font-size: 32px;
+      -webkit-text-stroke: 2.2px black;
+    }
+  }
+
+  .onBoarding__versus-text {
+    font-size: 46px;
+  }
+
+  .tip-title {
+    font-size: 20px;
+    -webkit-text-stroke: 1.5px black;
+  }
+  // End drop onBoarding scss
+}

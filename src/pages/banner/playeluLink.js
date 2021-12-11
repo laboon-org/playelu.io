@@ -23,7 +23,7 @@ function PlayeluLink() {
         {
             id: 4,
             img: urlConstant.image.social.facebook,
-            href: 'https://www.facebook.com/EluVerse'
+            href: 'https://www.facebook.com/EluVerse/'
         },
         {
             id: 5,
@@ -33,8 +33,13 @@ function PlayeluLink() {
         {
             id: 6,
             img: urlConstant.image.social.opensea,
-            href: '#'
+            href: 'https://opensea.io/eluverse'
         },
+        {
+            id: 7,
+            img: urlConstant.image.social.medium,
+            href: 'https://medium.com/@eluverse'
+        }
     ]
     return (
         <div className='playelu__link  '>
