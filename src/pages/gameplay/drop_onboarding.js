@@ -5,6 +5,7 @@ import '../../scss/reponsiveness/gameplay/gameplay_ipad.scss'
 import '../../scss/reponsiveness/gameplay/gameplay_mobile.scss'
 
 export default function Drop_onboarding() {
+
     return (
         <div className={"sky-center_onBoarding"} >
             <div className='onBoarding__title'>
@@ -24,22 +25,27 @@ export default function Drop_onboarding() {
                         </div>
                         <div className='onBoarding__element-content content-left'>
                             <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popupDrop.competing} alt='' />
-                            <div className='board-type competing'>
-                                <div className='board-type-element active'>
-
-                                    <div className='square'></div>
-                                    <span>box</span>
-
+                            <div className='board_type competing'>
+                                <div className='board_type-element active'>
+                                    <img src={urlConstant.imageGamePlay.popupDrop.board_type_1} alt="" />
+                                    <div className='board_type-content'>
+                                        <div className='square'></div>
+                                        <span>box</span>
+                                    </div>
                                 </div>
-                                <div className='board-type-element'>
-
-                                    <div className='circle'></div>
-                                    <span>hex</span>
-
+                                <div className='board_type-element'>
+                                    <img src={urlConstant.imageGamePlay.popupDrop.board_type_4} alt="" />
+                                    <div className='board_type-content'>
+                                        <div className='circle'></div>
+                                        <span>hex</span>
+                                    </div>
                                 </div>
-                                <div className='board-type-element'>
-                                    <div className='triangle'></div>
-                                    <span>tria</span>
+                                <div className='board_type-element'>
+                                    <img src={urlConstant.imageGamePlay.popupDrop.board_type_5} alt="" />
+                                    <div className='board_type-content'>
+                                        <div className='triangle'></div>
+                                        <span>tria</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -51,18 +57,27 @@ export default function Drop_onboarding() {
                         </div>
                         <div className='onBoarding__element-content content-right'>
                             <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popupDrop.Hunt_Hex_Board} alt='' />
-                            <div className='board-type hunting'>
-                                <div className='board-type-element'>
-                                    <div className='square'></div>
-                                    <span>box</span>
+                            <div className='board_type hunting'>
+                                <div className='board_type-element'>
+                                    <img src={urlConstant.imageGamePlay.popupDrop.board_type_3} alt="" />
+                                    <div className='board_type-content'>
+                                        <div className='square'></div>
+                                        <span>box</span>
+                                    </div>
                                 </div>
-                                <div className='board-type-element active'>
-                                    <div className='circle'></div>
-                                    <span>hex</span>
+                                <div className='board_type-element active'>
+                                    <img src={urlConstant.imageGamePlay.popupDrop.board_type_2} alt="" />
+                                    <div className='board_type-content'>
+                                        <div className='circle'></div>
+                                        <span>hex</span>
+                                    </div>
                                 </div>
-                                <div className='board-type-element'>
-                                    <div className='triangle'></div>
-                                    <span>tria</span>
+                                <div className='board_type-element'>
+                                    <img src={urlConstant.imageGamePlay.popupDrop.board_type_5} alt="" />
+                                    <div className='board_type-content'>
+                                        <div className='triangle'></div>
+                                        <span>tria</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

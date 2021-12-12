@@ -111,7 +111,7 @@
   }
 }
 .onBoarding__element-tip {
-  width: 40%;
+  width: 50%;
   position: relative;
   text-align: center;
   img {
@@ -129,10 +129,10 @@
   -webkit-text-stroke: 1.8px black;
 }
 .tip-right {
-  margin-left: 60%;
+  margin-left: 50%;
 }
 .onBoarding__element-content {
-  width: 89%;
+  width: 86%;
   .onBoarding__element-img {
     border-radius: 4px;
     width: 100%;
@@ -140,10 +140,10 @@
   }
 }
 .content-left {
-  margin-left: 11%;
+  margin-left: 14%;
 }
 .content-right {
-  margin-right: 10%;
+  margin-right: 14%;
 }
 .content-final {
   margin-top: 10.446%;
@@ -159,8 +159,9 @@
   }
 }
 // Start board-type scss
-.board-type {
+.board_type {
   display: flex;
+  max-width: 400px;
   width: 50%;
   margin: auto;
   display: flex;
@@ -168,84 +169,63 @@
   justify-content: center;
   align-items: center;
 }
-.board-type-element {
+:root{
+  --withBoarType :32%;
+}
+.board_type-element {
   text-align: center;
   text-transform: uppercase;
   position: relative;
-  height: 30px;
-  span {
+  width:var(--withBoarType);
+  img{
     position: absolute;
-    left: 17px;
-    font-size: 15px;
-    color: #fff;
-    -webkit-text-stroke: 1px black;
-    top: 5px;
-  }
-}
-.board-type-element:nth-child(3) {
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type5.png")
-    no-repeat center / contain;
-  width: 31%;
-}
-
-.competing {
-  .board-type-element:nth-child(1) {
-    background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type1.png")
-      no-repeat center / contain;
-    width: 31%;
-  }
-  .board-type-element:nth-child(2) {
-    background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type4.png")
-      no-repeat center / contain;
-    width: 35%;
-  }
-}
-.hunting {
-  .board-type-element:nth-child(1) {
-    background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type3.png")
-      no-repeat center / contain;
-    width: 31%;
-  }
-  .board-type-element:nth-child(2) {
-    background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type2.png")
-      no-repeat center / contain;
-    width: 35%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
   }
 }
 
-.board-type-element.active {
+.board_type-element.active {
   .square,
   .circle,
   .triangle {
     background: #7f73ff;
   }
 }
+.board_type-content{
+  width: 80%;
+  // height: 32px;
+ margin-left: 12%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  span {
+    font-size: 21px;
+    margin: auto;
+    color: #fff;
+    -webkit-text-stroke: 1px black;
+  }
+}
 .square {
-  position: absolute;
-  top: 10px;
-  left: 5px;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background: #ffe552;
 }
 .circle {
-  position: absolute;
-  top: 10px;
-  left: 5px;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #ffe552;
 }
 .triangle {
-  position: absolute;
-  top: 10px;
-  left: 5px;
   width: 0;
   height: 0;
-  border-bottom: 10px solid #ffe552;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
+  border-bottom: 12px solid #ffe552;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
 }
 
 // End board-type scss

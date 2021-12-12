@@ -38,9 +38,7 @@
     right: -5%;
     bottom: -15%;
   }
-  .onBoarding__element-tip {
-    width: 40%;
-  }
+ 
   .tip-title {
     font-size: 8px;
     top: 33%;
@@ -61,5 +59,45 @@
       width: 10%;
     }
   }
+  // Start board-type scss
+.board_type {
+  display: flex;
+  max-width: 100px;
+  width: 80%;
+  height: var(--heightBoarType);
+  margin: auto;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.board_type-element {
+  height: var(--heightBoarType);
+  width:var(--withBoarType);
+}
+
+.board_type-content{
+  height: 15px;
+  width: 80%;
+  span {
+    font-size: 8px;
+    -webkit-text-stroke: 0.7px black;
+  }
+}
+.square {
+  width: 5px;
+  height: 5px;
+}
+.circle {
+  width: 5px;
+  height: 5px;
+}
+.triangle {
+  border-bottom: 5px solid #ffe552;
+  border-left: 2.5px solid transparent;
+  border-right: 2.5px solid transparent;
+}
+
+// End board-type scss
   // End drop onBoarding scss
 }
