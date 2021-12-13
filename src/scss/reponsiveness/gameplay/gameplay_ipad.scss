@@ -1,4 +1,53 @@
 @media screen and (min-width: 740px) and (max-width: 1024px) {
+  .sky-top {
+    .gameplay-selection {
+      height: 35vh !important;
+    }
+  }
+  // Start scss Popup Coming Soon
+  .modal-comingsoon > .modal-content {
+    width: 80vw;
+    height: 56vw;
+    .popup-frame {
+      .close-popup {
+        width: 8% !important;
+      }
+    }
+  }
+  .popup-title {
+    .popup-title__box {
+      h1 {
+        font-size: 16px !important;
+        -webkit-text-stroke: 1px rgba($color: #000000, $alpha: 0.4) !important;
+      }
+    }
+  }
+
+  // End scss Popup Coming Soon
+
+  // Start scss button Drop and Nest
+  .elu-btn {
+    width: 18vw !important;
+    height: 6vw !important;
+    border-radius: 7px !important;
+    h2 {
+      -webkit-text-stroke: 1px black !important;
+      font-size: 18px !important;
+    }
+  }
+  .btn-shadow {
+    margin-bottom: 1.5%;
+    width: 96%;
+    height: 48.5% !important;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    p {
+      -webkit-text-stroke: 0.4px black !important;
+      font-size: 12px !important;
+      letter-spacing: 0.5px !important;
+    }
+  }
+  // End scss button Nest
   // Start drop onBoarding scss
   .onBoarding__title-text {
     h3 {
@@ -13,8 +62,11 @@
   }
 
   .tip-title {
-    font-size: 15px;
-    -webkit-text-stroke: 1.5px black;
+    h4 {
+      font-size: 15px;
+      margin-bottom: 0rem;
+      -webkit-text-stroke: 1.5px black;
+    }
   }
   .board-type-text {
     width: 90%;
@@ -50,49 +102,71 @@
     border-left: 2.5px solid transparent;
     border-right: 2.5px solid transparent;
   }
-   // Start board-type scss
-.board_type {
-  display: flex;
-  max-width: 180px;
-  width: 70%;
-  height: var(--heightBoarType);
-  margin: auto;
-  display: flex;
-  margin-top: 10px;
-  justify-content: center;
-  align-items: center;
-}
-.board_type-element {
-  height: var(--heightBoarType);
-  width:var(--withBoarType);
-}
-
-.board_type-content{
-  height: 22px;
-  width: 80%;
-  span {
-    font-size: 14px;
-    -webkit-text-stroke: 0.7px black;
+  // Start board-type scss
+  .board_type {
+    display: flex;
+    max-width: 180px;
+    width: 70%;
+    height: var(--heightBoarType);
+    margin: auto;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
   }
-}
-.square {
-  width: 8px;
-  height: 8px;
-}
-.circle {
-  width: 8px;
-  height: 8px;
-}
-.triangle {
-  width: 0;
-  height: 0;
-  border-bottom: 8px solid #ffe552;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-}
+  .board_type-element {
+    height: var(--heightBoarType);
+    width: var(--withBoarType);
+  }
 
-// End board-type scss
+  .board_type-content {
+    height: 22px;
+    width: 80%;
+    span {
+      font-size: 14px;
+      -webkit-text-stroke: 0.7px black;
+    }
+  }
+  .square {
+    width: 8px;
+    height: 8px;
+  }
+  .circle {
+    width: 8px;
+    height: 8px;
+  }
+  .triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid #ffe552;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+  }
+  // End board-type scss
   // End drop onBoarding scss
+
+  // Start nest onBoarding scss
+  .land {
+    position: relative;
+    margin-top: -15%;
+    .nest_onBoarding {
+      .nest-frame {
+        .nest_onBoarding-title {
+          h4 {
+            font-size: 30px !important;
+            margin-top: 10px;
+            -webkit-text-stroke: 1.5px black !important;
+          }
+        }
+        .onBoarding__versus-text {
+          font-size: 26px !important;
+          -webkit-text-stroke: 1.5px black !important;
+          text-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.5) !important;
+        }
+      }
+    }
+  }
+  // End nest onBoarding scss
 }
 @media screen and (min-width: 1024px) and (max-width: 1365px) {
   // Start drop onBoarding scss
@@ -112,45 +186,71 @@
     font-size: 20px;
     -webkit-text-stroke: 1.5px black;
   }
-     // Start board-type scss
-.board_type {
-  display: flex;
-  max-width: 220px;
-  width: 60%;
-  height: var(--heightBoarType);
-  margin: auto;
-  display: flex;
-  margin-top: 10px;
-  justify-content: center;
-  align-items: center;
-}
-.board_type-element {
-  height: var(--heightBoarType);
-  width:var(--withBoarType);
-}
-
-.board_type-content{
-  height: 25px;
-  width: 80%;
-  span {
-    font-size: 16px;
-    -webkit-text-stroke: 1px black;
+  // Start board-type scss
+  .board_type {
+    display: flex;
+    max-width: 220px;
+    width: 60%;
+    height: var(--heightBoarType);
+    margin: auto;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
   }
-}
-.square {
-  width: 10px;
-  height: 10px;
-}
-.circle {
-  width: 10px;
-  height: 10px;
-}
-.triangle {
-  border-bottom: 10px solid #ffe552;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-}
+  .board_type-element {
+    height: var(--heightBoarType);
+    width: var(--withBoarType);
+  }
 
-// End board-type scss
+  .board_type-content {
+    height: 25px;
+    width: 80%;
+    span {
+      font-size: 16px;
+      -webkit-text-stroke: 1px black;
+    }
+  }
+  .square {
+    width: 10px;
+    height: 10px;
+  }
+  .circle {
+    width: 10px;
+    height: 10px;
+  }
+  .triangle {
+    border-bottom: 10px solid #ffe552;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+
+  // End board-type scss
   // End drop onBoarding scss
+
+  // Start nest onBoarding scss
+  .land {
+    position: relative;
+    margin-top: -15%;
+    .nest_onBoarding {
+      .nest-frame {
+        .nest_onBoarding-title {
+          h4 {
+            font-size: 36px !important;
+            margin-top: 10px;
+            -webkit-text-stroke: 1.5px black !important;
+          }
+        }
+        .tip-title h4 {
+          font-size: 22px;
+        }
+        .onBoarding__versus-text {
+          font-size: 38px !important;
+          -webkit-text-stroke: 1.5px black !important;
+          text-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.5) !important;
+        }
+      }
+    }
+  }
+  // End nest onBoarding scss
 }

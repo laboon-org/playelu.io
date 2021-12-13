@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import urlConstant from '../../urlConstant'
 import './css/beach.scss'
 import '../../scss/gameplay/beach.scss'
+import Nest_onBoarding from './nest_onboarding/nest_onBoarding'
 
 
 window.addEventListener('scroll', opacity)
@@ -25,9 +26,9 @@ export default function Beach() {
     const onPressShowNest = () => {
         setNestShow(true)
     }
-    const closeNest = () => {
+    const closeNest = useCallback(() => {
         setNestShow(false)
-    }
+    })
     return (
         <div className='beach' id='nest'>
             <div className='ocean'>
@@ -82,18 +83,8 @@ export default function Beach() {
                 </div>
             </div>
             <div className='land'>
-                {nestShow && < div className={"nest_onBoarding"}>
-                    <div className='nest-frame'>
-                        <div className='onBoarding-btn_close' onClick={() => {
-                            closeNest()
-                        }}>
-                            <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/btn_close%20(1).png' alt='' />
-                        </div>
-                        <div className='onBoarding-title'>
-                            <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/title_bg.png' alt='' />
-                        </div>
-                    </div>
-                </div>}
+                {nestShow && <Nest_onBoarding closeNest={closeNest} />
+                }
                 <img className="land-img" src={urlConstant.imageGamePlay.land.backgroundLand} alt="" />
                 <div className='bone rightEntrance'>
                     <img className='bone-img' src={urlConstant.imageGamePlay.land.bone} alt='' />

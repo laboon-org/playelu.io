@@ -24,7 +24,9 @@ export default function SkyTop() {
                     <div className='popup-title'>
                         <div className='popup-title__box'>
                             <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/frame_comingsoon.webp' alt='' />
-                            <h1>coming up soon</h1>
+                            <div className='popup-title__text'>
+                                <h1>coming up soon</h1>
+                            </div>
                         </div>
                     </div>
                 </div>

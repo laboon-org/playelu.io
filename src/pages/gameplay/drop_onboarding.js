@@ -1,27 +1,31 @@
 import React from 'react'
 import urlConstant from '../../urlConstant'
-import '../../scss/gameplay/drop_onboarding.scss'
+import '../../scss/gameplay/onboarding.scss'
 import '../../scss/reponsiveness/gameplay/gameplay_ipad.scss'
 import '../../scss/reponsiveness/gameplay/gameplay_mobile.scss'
+import Onboarding_comingsoon from '../../components/onboarding_comingsoon'
 
-export default function Drop_onboarding() {
-
+export default function Drop_onboarding(props) {
+    const { onPressHideEluDrop } = props
     return (
         <div className={"sky-center_onBoarding"} >
-            <div className='onBoarding__title'>
-                <div className='onBoarding__title-content'>
-                    <img src={urlConstant.imageGamePlay.popupDrop.boardTitle} alt='' />
-                    <div className='onBoarding__title-text'>
-                        <h3>gameplay</h3>
+
+            <div className='onBoarding-frame'>
+                <div className='onBoarding__title'>
+                    <div className='onBoarding__title-content'>
+                        <img src={urlConstant.imageGamePlay.popupDrop.boardTitle} alt='' />
+                        <div className='onBoarding__title-text'>
+                            <h3>gameplay</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className='onBoarding-frame'>
                 <div className='onBoarding'>
                     <div className='onBoarding__element'>
                         <div className='onBoarding__element-tip'>
                             <img src={urlConstant.imageGamePlay.popupDrop.tip2} alt='' />
-                            <h4 className='tip-title'>competing</h4>
+                            <div className='tip-title'>
+                                <h4>competing</h4>
+                            </div>
                         </div>
                         <div className='onBoarding__element-content content-left'>
                             <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popupDrop.competing} alt='' />
@@ -53,7 +57,9 @@ export default function Drop_onboarding() {
                     <div className='onBoarding__element'>
                         <div className='onBoarding__element-tip tip-right'>
                             <img src={urlConstant.imageGamePlay.popupDrop.tip1} alt='' />
-                            <h4 className='tip-title'>HUnting</h4>
+                            <div className='tip-title'>
+                                <h4>HUnting</h4>
+                            </div>
                         </div>
                         <div className='onBoarding__element-content content-right'>
                             <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popupDrop.Hunt_Hex_Board} alt='' />
@@ -87,7 +93,9 @@ export default function Drop_onboarding() {
                     <div className='onBoarding__element'>
                         <div className='onBoarding__element-tip'>
                             <img src={urlConstant.imageGamePlay.popupDrop.tip2} alt='' />
-                            <h4 className='tip-title'>adventure</h4>
+                            <div className='tip-title'>
+                                <h4>adventure</h4>
+                            </div>
                         </div>
                         <div className='onBoarding__element-content content-left'>
                             <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popupDrop.adventure} alt='' />
@@ -102,22 +110,11 @@ export default function Drop_onboarding() {
                         </div>
                     </div>
                 </div>
-                <div className='onBoarding'>
-                    <div className='onBoarding__versus'>
-                        <div className='onBoarding__versus-tip'>
-                            <img src={urlConstant.imageGamePlay.popupDrop.tip2} alt='' />
-                            <h4 className='tip-title'>versus</h4>
-                        </div>
-                        <div className='onBoarding__versus-content'>
-                            <h2 className='onBoarding__versus-text'>coming soon</h2>
-                            <div className='image-comingsoon'>
-                                <img src={urlConstant.imageGamePlay.popupDrop.coomingsoon} alt='' />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Onboarding_comingsoon title='versus' />
             </div>
-            <div className='onBoarding__btn-close'>
+            <div className='onBoarding__btn-close' onClick={() => {
+                onPressHideEluDrop()
+            }}>
                 <img src={urlConstant.imageGamePlay.popupDrop.arrowUp} alt='' />
             </div>
         </div>)

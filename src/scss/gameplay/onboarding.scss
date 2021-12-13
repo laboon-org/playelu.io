@@ -46,13 +46,14 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  padding-top: 2%;
+  padding-top: 4%;
 }
 .onBoarding {
   display: flex;
   justify-content: space-between;
   margin: 0 0 50px 0;
 }
+
 .onBoarding__element {
   display: flex;
   width: 45%;
@@ -75,7 +76,7 @@
   flex-direction: column;
 }
 .onBoarding__versus-tip {
-  width: 18%;
+  width: 22.5%;
   position: relative;
   text-align: center;
   img {
@@ -93,7 +94,6 @@
 .onBoarding__versus-text {
   width: 46%;
   text-align: center;
-  height: 100%;
   font-size: 66px;
   margin: 30px 40% 30px 14%;
   color: #fff;
@@ -120,13 +120,20 @@
 }
 .tip-title {
   position: absolute;
-  font-size: 26px;
   width: 100%;
-  top: 10%;
+  top: 0;
   left: 0;
-  color: #fff;
-  text-transform: uppercase;
-  -webkit-text-stroke: 1.8px black;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h4 {
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1.8px black;
+  }
 }
 .tip-right {
   margin-left: 50%;
@@ -138,6 +145,9 @@
     width: 100%;
     border: 3px solid #00aaff;
   }
+  .no-border {
+    border: 0px;
+  }
 }
 .content-left {
   margin-left: 14%;
@@ -146,7 +156,7 @@
   margin-right: 14%;
 }
 .content-final {
-  margin-top: 10.446%;
+  margin-top: 12.446%;
 }
 .onBoarding__btn-close {
   width: 80%;
@@ -154,10 +164,13 @@
   display: flex;
   justify-content: center;
   padding: 2% 0;
+  cursor: pointer;
   img {
     width: 5%;
+    cursor: pointer;
   }
 }
+
 // Start board-type scss
 .board_type {
   display: flex;
@@ -169,15 +182,15 @@
   justify-content: center;
   align-items: center;
 }
-:root{
-  --withBoarType :32%;
+:root {
+  --withBoarType: 32%;
 }
 .board_type-element {
   text-align: center;
   text-transform: uppercase;
   position: relative;
-  width:var(--withBoarType);
-  img{
+  width: var(--withBoarType);
+  img {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -194,10 +207,10 @@
     background: #7f73ff;
   }
 }
-.board_type-content{
+.board_type-content {
   width: 80%;
   // height: 32px;
- margin-left: 12%;
+  margin-left: 12%;
   display: flex;
   align-items: center;
   text-align: center;

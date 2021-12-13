@@ -82,37 +82,44 @@
     align-items: center;
 
     .nest-frame {
-      background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/Popupback.png")
+      background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/nest_onboarding-frame.png")
         no-repeat center / contain;
       position: relative;
-      max-width: 1272px;
+      max-width: 1080px;
       width: 80vw;
       margin: auto;
-      max-height: 768px;
-      height: 48vw;
+      max-height: 827px;
+      height: 65vw;
       animation: zoomIn;
       animation-duration: 0.5s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .nest_onBoarding-title {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h4 {
+          color: #fff;
+          font-size: 40px;
+          text-transform: uppercase;
+          -webkit-text-stroke: 1.8px black;
+        }
+      }
+      .onBoarding__versus-text {
+        font-size: 48px;
+      }
       .onBoarding-btn_close {
-        position: absolute;
-        top: -2%;
-        right: 2%;
         margin: 0;
         max-width: 74px;
         width: 8%;
-        box-shadow: 0 10px 15px rgba($color: #000000, $alpha: 0.5);
-        border-radius: 4px;
-        transform: 0.5s;
-        cursor: pointer;
-      }
-      .onBoarding-btn_close:hover {
-        box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.3);
-      }
-      .onBoarding-title {
-        position: absolute;
-        left: 20%;
-        top: -2%;
-        width: 60%;
         margin: auto;
+        cursor: pointer;
+        img {
+          cursor: pointer;
+        }
       }
     }
   }

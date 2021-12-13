@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import urlConstant from '../../../urlConstant'
 import Drop_onboarding from '../drop_onboarding';
-import drop_onboarding from '../drop_onboarding';
 
 window.addEventListener('scroll', zoom)
 function zoom() {
@@ -37,7 +36,9 @@ export default function SkyCenter() {
     const onPressShowEluDrop = useCallback(() => {
         setDropShow(true);
     })
-
+    const onPressHideEluDrop = useCallback(() => {
+        setDropShow(false);
+    })
     const islands = listIslandUrl.map((value, key) => {
         let isFinalItem = listIslandUrl.length - 1 == key;
         let finalClass = isFinalItem ? 'mr-bottom' : '';
@@ -69,7 +70,7 @@ export default function SkyCenter() {
                         <h2>DROP</h2>
                         <div className='btn-shadow'><p>GAME FEATURES</p></div>
                     </div> :
-                        <Drop_onboarding />
+                        <Drop_onboarding onPressHideEluDrop={onPressHideEluDrop} />
                 }
             </div>
         </div>

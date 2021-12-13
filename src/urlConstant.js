@@ -58,7 +58,7 @@ export default {
             boardTitle: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/title.png',
             tip1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/tip-1.png',
             tip2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/tip-2.png',
-            coomingsoon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/coming%20soon.png',
+            coomingsoon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Comingsoon.png',
             adventure1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Adventures-1.png',
             adventure: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Adventures.png',
             competing: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Competings.png',
