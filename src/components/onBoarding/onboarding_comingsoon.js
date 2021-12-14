@@ -1,17 +1,20 @@
 import React from 'react'
-import urlConstant from '../urlConstant'
+import urlConstant from '../../urlConstant'
+import OnBoardingTip from './OnBoarding_tip'
 
-export default function Onboarding_comingsoon(props) {
+
+export default function OnboardingComingsoon(props) {
 
     return (
         <div className='onBoarding'>
             <div className='onBoarding__versus'>
-                <div className='onBoarding__versus-tip'>
-                    <img src={urlConstant.imageGamePlay.popupDrop.tip2} alt='' />
-                    <div className='tip-title'>
-                        <h4>{props.title}</h4>
-                    </div>
-                </div>
+                <OnBoardingTip
+                    classNames={{
+                        parent: 'onBoarding__versus-tip'
+                    }}
+                    title={props.title}
+                    tip={2}
+                />
                 <div className='onBoarding__versus-content'>
                     <h2 className='onBoarding__versus-text'>coming soon</h2>
                     <div className='image-comingsoon'>

@@ -3,13 +3,13 @@ import urlConstant from '../../urlConstant'
 import '../../scss/gameplay/onboarding.scss'
 import '../../scss/reponsiveness/gameplay/gameplay_ipad.scss'
 import '../../scss/reponsiveness/gameplay/gameplay_mobile.scss'
-import Onboarding_comingsoon from '../../components/onboarding_comingsoon'
+import OnboardingComingsoon from '../../components/onBoarding/onboarding_comingsoon'
+import OnBoardingTip from '../../components/onBoarding/OnBoarding_tip'
 
 export default function Drop_onboarding(props) {
     const { onPressHideEluDrop } = props
     return (
         <div className={"sky-center_onBoarding"} >
-
             <div className='onBoarding-frame'>
                 <div className='onBoarding__title'>
                     <div className='onBoarding__title-content'>
@@ -21,12 +21,7 @@ export default function Drop_onboarding(props) {
                 </div>
                 <div className='onBoarding'>
                     <div className='onBoarding__element'>
-                        <div className='onBoarding__element-tip'>
-                            <img src={urlConstant.imageGamePlay.popupDrop.tip2} alt='' />
-                            <div className='tip-title'>
-                                <h4>competing</h4>
-                            </div>
-                        </div>
+                        <OnBoardingTip title='competing' tip={2} />
                         <div className='onBoarding__element-content content-left'>
                             <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popupDrop.competing} alt='' />
                             <div className='board_type competing'>
@@ -55,12 +50,13 @@ export default function Drop_onboarding(props) {
                         </div>
                     </div>
                     <div className='onBoarding__element'>
-                        <div className='onBoarding__element-tip tip-right'>
-                            <img src={urlConstant.imageGamePlay.popupDrop.tip1} alt='' />
-                            <div className='tip-title'>
-                                <h4>HUnting</h4>
-                            </div>
-                        </div>
+                        <OnBoardingTip
+                            classNames={{
+                                parent: 'onBoarding__element-tip tip-right'
+                            }}
+                            title={'HUnting'}
+                            tip={1}
+                        />
                         <div className='onBoarding__element-content content-right'>
                             <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popupDrop.Hunt_Hex_Board} alt='' />
                             <div className='board_type hunting'>
@@ -91,12 +87,7 @@ export default function Drop_onboarding(props) {
                 </div>
                 <div className='onBoarding'>
                     <div className='onBoarding__element'>
-                        <div className='onBoarding__element-tip'>
-                            <img src={urlConstant.imageGamePlay.popupDrop.tip2} alt='' />
-                            <div className='tip-title'>
-                                <h4>adventure</h4>
-                            </div>
-                        </div>
+                        <OnBoardingTip title='adventure' tip={2} />
                         <div className='onBoarding__element-content content-left'>
                             <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popupDrop.adventure} alt='' />
                         </div>
@@ -110,7 +101,7 @@ export default function Drop_onboarding(props) {
                         </div>
                     </div>
                 </div>
-                <Onboarding_comingsoon title='versus' />
+                <OnboardingComingsoon title='versus' />
             </div>
             <div className='onBoarding__btn-close' onClick={() => {
                 onPressHideEluDrop()

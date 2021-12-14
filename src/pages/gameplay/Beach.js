@@ -83,7 +83,11 @@ export default function Beach() {
                 </div>
             </div>
             <div className='land'>
-                {nestShow && <Nest_onBoarding closeNest={closeNest} />
+                {nestShow && < div className={"nest_onBoarding"} onClick={() => {
+                    closeNest();
+                }}>
+                    <Nest_onBoarding closeNest={closeNest} />
+                </div>
                 }
                 <img className="land-img" src={urlConstant.imageGamePlay.land.backgroundLand} alt="" />
                 <div className='bone rightEntrance'>

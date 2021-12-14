@@ -15,6 +15,8 @@
     width: 80vw !important;
     height: 56vw !important;
     .popup-frame {
+      border: 2px solid #fff !important;
+      border-radius: 17px !important;
       .close-popup {
         top: 0.5% !important;
         width: 10% !important;
@@ -72,14 +74,12 @@
   }
   .onBoarding-frame {
     width: 90%;
-    padding-top: 2%;
   }
-  .onBoarding {
-    margin: 0 0 30px 0;
+  .onBoarding__element {
+    margin: 0 0 20px 0;
   }
-
   .onBoarding__versus-content {
-    width: 90%;
+    width: 88%;
     border: 1.5px solid #00aaff;
   }
   .onBoarding__versus-text {
@@ -169,15 +169,15 @@
         .onBoarding-frame {
           padding-top: 0;
         }
+        .onBoarding__element {
+          margin: 0 0 6px 0;
+        }
         .nest_onBoarding-title {
           h4 {
             font-size: 18px !important;
             margin-top: 10px;
             -webkit-text-stroke: 1.2px black !important;
           }
-        }
-        .onBoarding {
-          margin: 0 0 6px 0;
         }
         .tip-title h4 {
           font-size: 8px;

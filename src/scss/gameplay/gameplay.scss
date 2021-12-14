@@ -135,6 +135,7 @@
 }
 .zoom.active {
   animation: zoom 2s ease;
+  animation-iteration-count: 1;
 }
 @keyframes zoom {
   0% {

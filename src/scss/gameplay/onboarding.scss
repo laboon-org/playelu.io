@@ -51,13 +51,13 @@
 .onBoarding {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 50px 0;
 }
 
 .onBoarding__element {
   display: flex;
   width: 45%;
   flex-direction: column;
+  margin: 0 0 50px 0;
 }
 .onBoarding__element-button {
   width: 4%;
@@ -74,6 +74,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+  margin: 8px 0;
 }
 .onBoarding__versus-tip {
   width: 22.5%;
@@ -85,7 +86,7 @@
 }
 .onBoarding__versus-content {
   position: relative;
-  width: 90%;
+  width: 88%;
   background: rgba(0, 0, 0, 0.25);
   border: 3px solid #00aaff;
   border-radius: 4px;
@@ -156,7 +157,7 @@
   margin-right: 14%;
 }
 .content-final {
-  margin-top: 12.446%;
+  margin-top: 12.866%;
 }
 .onBoarding__btn-close {
   width: 80%;

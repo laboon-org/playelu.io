@@ -1,20 +1,13 @@
 import React from 'react'
-import urlConstant from '../../../urlConstant'
+import OnBoardingTip from '../../../components/onBoarding/OnBoarding_tip'
 
-function OnBoarding_elementLeft() {
+export default function OnBoardingElementLeft() {
     return (
         <div className='onBoarding__element'>
-            <div className='onBoarding__element-tip'>
-                <img src={urlConstant.imageGamePlay.popupDrop.tip2} alt='' />
-                <div className='tip-title'>
-                    <h4>battle</h4>
-                </div>
-            </div>
+            <OnBoardingTip title='battle' tip={2} />
             <div className='onBoarding__element-content content-left'>
                 <img className='onBoarding__element-img no-border' src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/nest_onboarding-element.png' alt='' />
             </div>
         </div>
     )
 }
-
-export default OnBoarding_elementLeft
