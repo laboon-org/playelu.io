@@ -13,16 +13,18 @@
       align-items: center;
       position: relative;
       height: 100%;
+      width: 40%;
+      z-index: 1;
       .gameplay__rune-img {
-        position: absolute;
-        z-index: 1;
+        cursor: pointer;
         width: 100%;
       }
       .gameplay__boonmoon-img {
         position: absolute;
+        left: 30%;
         width: 40%;
         bottom: 45%;
-        z-index: 0;
+        z-index: -1;
       }
     }
   }
@@ -50,9 +52,35 @@
 }
 
 .gameplay__selection-img {
-  width: 100%;
+  width: 15%;
   transform: scale(0.9);
   cursor: pointer;
+  position: relative;
+  img {
+    width: 100%;
+    cursor: pointer;
+  }
+  .shadow-stone {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: hideShadow 3s ease infinite;
+  }
+  // .shadow-stone-1 {
+  //   animation: hideShadow 3s ease infinite;
+  // }
+  // .shadow-stone-2 {
+  //   animation: hideShadow 4s ease infinite;
+  // }
+  // .shadow-stone-3 {
+  //   animation: hideShadow 3.5s ease infinite;
+  // }
+  // .shadow-stone-4 {
+  //   animation: hideShadow 4.5s ease infinite;
+  // }
 }
 
 .gameplay__selection-img:hover {
@@ -123,3 +151,18 @@
 }
 
 // End scss Popup Coming Soon
+// Keyframe
+@keyframes hideShadow {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}

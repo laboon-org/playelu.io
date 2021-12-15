@@ -43,10 +43,11 @@ export default {
         skyTop: {
             rune: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/rune.webp',
             boonMoon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boonMoon.webp',
-            drop: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/drop.webp',
-            nest: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/nest.webp',
-            scout: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/scout.webp',
-            metaVerse: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/metaVerse.webp',
+            drop: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/stone_drop.webp',
+            nest: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/stone_nest.webp',
+            scout: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/stone_scout.webp',
+            metaVerse: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/stone_meta.webp',
+            shadowStone: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/shadow.webp'
         },
         popupComingSoon: {
             background: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_background.webp',

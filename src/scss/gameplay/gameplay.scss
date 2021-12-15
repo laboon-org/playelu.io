@@ -134,12 +134,12 @@
   margin-top: -19%;
 }
 .zoom.active {
-  animation: zoom 2s ease;
+  animation: zoom 1s ease;
   animation-iteration-count: 1;
 }
 @keyframes zoom {
   0% {
-    transform: scale(0.1);
+    transform: scale(0.5);
   }
   100% {
     transform: scale(0.9);

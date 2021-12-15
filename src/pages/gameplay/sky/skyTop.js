@@ -2,6 +2,8 @@ import urlConstant from '../../../urlConstant'
 import '../../../scss/gameplay/skyScss/skyTop.scss'
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import { Link } from 'react-router-dom';
+
 
 export default function SkyTop() {
     const [showPopup, setShowPopup] = useState(false);
@@ -32,25 +34,31 @@ export default function SkyTop() {
                 </div>
             </Modal>
             <div className='gameplay-selection'>
-                <div className='col drop'>
+                <div className='gameplay__selection-img'>
                     <a href='#drop'>
-                        <img className="gameplay__selection-img" src={urlConstant.imageGamePlay.skyTop.drop} alt="" />
+                        <img className='shadow-stone shadow-stone-1' src={urlConstant.imageGamePlay.skyTop.shadowStone} alt="" />
+                        <img src={urlConstant.imageGamePlay.skyTop.drop} alt="" />
                     </a>
                 </div>
-                <div className='col nest'>
+                <div className='gameplay__selection-img'>
                     <a href='#nest'>
-                        <img className="gameplay__selection-img" src={urlConstant.imageGamePlay.skyTop.nest} alt="" />
+                        <img className='shadow-stone shadow-stone-2' src={urlConstant.imageGamePlay.skyTop.shadowStone} alt="" />
+                        <img src={urlConstant.imageGamePlay.skyTop.nest} alt="" />
                     </a>
                 </div>
-                <div className='col-6 rune'>
-                    <img className="gameplay__rune-img" src={urlConstant.imageGamePlay.skyTop.rune} alt="" />
-                    <img className="gameplay__boonmoon-img" src={urlConstant.imageGamePlay.skyTop.boonMoon} alt="" />
+                <div className='rune'>
+                    <Link to='/'>
+                        <img className="gameplay__rune-img" src={urlConstant.imageGamePlay.skyTop.rune} alt="" />
+                        <img className="gameplay__boonmoon-img" src={urlConstant.imageGamePlay.skyTop.boonMoon} alt="" />
+                    </Link>
                 </div>
-                <div className='col scout' onClick={onPressPopup}>
-                    <img className="gameplay__selection-img" src={urlConstant.imageGamePlay.skyTop.scout} alt="" />
+                <div className='gameplay__selection-img' onClick={onPressPopup}>
+                    <img className='shadow-stone shadow-stone-3' src={urlConstant.imageGamePlay.skyTop.shadowStone} alt="" />
+                    <img src={urlConstant.imageGamePlay.skyTop.scout} alt="" />
                 </div>
-                <div className='col metaVerse' onClick={onPressPopup}>
-                    <img className="gameplay__selection-img" src={urlConstant.imageGamePlay.skyTop.metaVerse} alt="" />
+                <div className='gameplay__selection-img' onClick={onPressPopup}>
+                    <img className='shadow-stone shadow-stone-4' src={urlConstant.imageGamePlay.skyTop.shadowStone} alt="" />
+                    <img src={urlConstant.imageGamePlay.skyTop.metaVerse} alt="" />
                 </div>
             </div>
             <div className='gameplay-logo'>

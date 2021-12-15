@@ -54,11 +54,11 @@ li {
   bottom: 16px;
   right: 0;
   z-index: 100;
-  cursor: pointer;
   width: 220px;
   transform: scale(1) translateY(0);
   animation: all ease 0.7s;
   .discord-img {
+    cursor: pointer;
     width: 95%;
     height: auto;
   }
@@ -75,13 +75,13 @@ li {
   animation: heartbeat 2.5s ease-in-out infinite both;
   .sound-on,
   .sound-off {
-    display: none;
+    cursor: pointer;
     width: 100%;
   }
-  .sound-on.active,
-  .sound-off.active {
-    display: block;
-  }
+  // .sound-on.active,
+  // .sound-off.active {
+  //   display: block;
+  // }
 }
 
 .playelu-frame {

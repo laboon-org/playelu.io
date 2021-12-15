@@ -16,6 +16,7 @@ function zoom() {
         }
     }
 }
+
 const listIslandUrl = [
     {
         url1: urlConstant.imageGamePlay.skyCenter.islandBlank1,
@@ -44,6 +45,7 @@ export default function SkyCenter() {
         let finalClass = isFinalItem ? 'mr-bottom' : '';
         return (
             <div className={`island${key + 1}`} key={key}>
+
                 <img
                     className="isLand-img"
                     src={value.url1}
