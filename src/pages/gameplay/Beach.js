@@ -16,9 +16,6 @@ function opacity() {
         if (opacityTop < windowHeight + opacitypoint) {
             opacity[i].classList.add('active')
         }
-        else {
-            opacity[i].classList.remove('active')
-        }
     }
 }
 export default function Beach() {

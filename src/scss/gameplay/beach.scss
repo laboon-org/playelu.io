@@ -157,71 +157,37 @@
     position: absolute;
     width: 80%;
     margin: 0 10%;
-    top: 0;
+    bottom: 60%;
     left: 0;
     display: flex;
     justify-content: center;
   }
   .ag-number_light {
-    height: 100px;
+    height: 1000px;
     width: 75%;
     position: relative;
+    .smoke {
+      position: absolute;
+      z-index: 1;
+      left: 25%;
+      width: 50%;
+      height: auto;
+      animation: an-spiral 5s 0.01s linear infinite;
+      will-change: opacity, top;
+      image-rendering: -webkit-optimize-contrast;
+    }
   }
   .light_column {
     position: absolute;
+    z-index: 0;
     bottom: 0;
     left: 0;
     width: 100%;
-    -webkit-animation: an-luminescence 4s 0.01s linear infinite;
-    -moz-animation: an-luminescence 4s 0.01s linear infinite;
-    -o-animation: an-luminescence 4s 0.01s linear infinite;
     animation: an-luminescence 4s 0.01s linear infinite;
     will-change: opacity;
     image-rendering: -webkit-optimize-contrast;
   }
-  .smoke {
-    position: absolute;
-    top: -300%;
-    left: 25%;
-    width: 50%;
-    -webkit-animation: an-spiral 4s 0.01s linear infinite;
-    -moz-animation: an-spiral 4s 0.01s linear infinite;
-    -o-animation: an-spiral 4s 0.01s linear infinite;
-    animation: an-spiral 4s 0.01s linear infinite;
-    will-change: opacity, top;
-    image-rendering: -webkit-optimize-contrast;
-  }
-  // .ag-number_light:before {
-  //   content: "";
-  //   height: 40vh;
-  //   width: 100%;
-  //   background: url(https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/lighto.webp)
-  //     no-repeat center;
-  //   background-size: cover;
-  //   opacity: 1;
-  //   position: absolute;
-  //   top: -1020%;
-  //   left: 0;
-  //
-  // }
-  // .ag-number_light:after {
-  //   content: "";
-  //   height: 17.5em;
-  //   width: 14em;
-  //   background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/light-blink/images/target-spiral.png)
-  //     no-repeat center;
-  //   background-size: cover;
-  //   opacity: 0;
-  //   position: absolute;
-  //   top: -230%;
-  //   left: 0;
-  //   -webkit-animation: an-spiral 6s 0.4s linear infinite;
-  //   -moz-animation: an-spiral 6s 0.4s linear infinite;
-  //   -o-animation: an-spiral 6s 0.4s linear infinite;
-  //   animation: an-spiral 6s 0.4s linear infinite;
-  //   will-change: opacity, top;
-  //   image-rendering: -webkit-optimize-contrast;
-  // }
+
   @keyframes an-luminescence {
     0% {
       opacity: 0;
@@ -237,13 +203,13 @@
   @keyframes an-spiral {
     0% {
       opacity: 0;
-      top: -200%;
+      bottom: 0%;
     }
     50% {
       opacity: 1;
     }
     100% {
-      top: -600%;
+      bottom: 200px;
       opacity: 0;
     }
   }
