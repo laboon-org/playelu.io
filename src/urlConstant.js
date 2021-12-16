@@ -41,6 +41,9 @@ export default {
 
     imageGamePlay: {
         skyTop: {
+            stone_rune: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/stone_rune.webp',
+            light_rune: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/light_rune.webp',
+            crushed_stone: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/crushed_stone.webp',
             rune: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/rune.webp',
             boonMoon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boonMoon.webp',
             drop: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/stone_drop.webp',
@@ -57,13 +60,13 @@ export default {
         },
         popupDrop: {
             boardTitle: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/title.png',
-            tip1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/tip-1.png',
-            tip2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/tip-2.png',
-            coomingsoon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Comingsoon.png',
-            adventure1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Adventures-1.png',
-            adventure: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Adventures.png',
-            competing: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Competings.png',
-            Hunt_Hex_Board: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Hunt_Hex_Boards.png',
+            tip1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/tip-1.webp',
+            tip2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/tip-2.webp',
+            coomingsoon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Comingsoon.webp',
+            adventure1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Adventures-1(1).webp',
+            adventure: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Adventures(1).webp',
+            competing: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Competings(1).webp',
+            Hunt_Hex_Board: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/Hunt_Hex_Boards%20(1).webp',
             arrowNext: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/arrowNext.png',
             arrowUp: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/arrowUp.png',
             board_type_1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type1.png',
@@ -73,9 +76,9 @@ export default {
             board_type_5: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type5.png',
         },
         skyCenter: {
-            fountain: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/foundation.gif',
-            fire_island: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/fire_island.gif',
-            islandWater: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/water_island.gif',
+            fountain: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/foundation.webm',
+            fire_island: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/fire-island.webm',
+            islandWater: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/water-island.webm',
             islandBlank1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islandBlank1.webp',
             islandBlank2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islandBlank2.webp',
             islandBlank3: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islanBlank3.webp',

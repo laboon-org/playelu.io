@@ -11,9 +11,10 @@ function zoom() {
         var scalepoin = 50;
         if (scaleTop < windowHeght - scalepoin) {
             zoom[i].classList.add('active')
-        } else {
-            zoom[i].classList.remove('active')
         }
+        // } else {
+        //     zoom[i].classList.remove('active')
+        // }
     }
 }
 
@@ -50,10 +51,17 @@ export default function SkyCenter() {
                     className="isLand-img"
                     src={value.url1}
                     alt="" />
-                <img
+                <video
+                    className={`isLand-img ${finalClass}`}
+                    autoPlay loop preload='metadata'
+                    poster=''
+                >
+                    <source src={value.url2} type="video/mp4" />
+                </video>
+                {/* <img
                     className={`isLand-img ${finalClass}`}
                     src={value.url2}
-                    alt="" />
+                    alt="" /> */}
             </div>
         )
     })

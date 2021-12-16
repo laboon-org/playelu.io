@@ -2,7 +2,8 @@ import React, { useCallback, useState } from 'react'
 import urlConstant from '../../urlConstant'
 import './css/beach.scss'
 import '../../scss/gameplay/beach.scss'
-import Nest_onBoarding from './nest_onboarding/nest_onBoarding'
+import Modal from 'react-bootstrap/Modal';
+// import Nest_onBoarding from './nest_onboarding/nest_onBoarding'
 
 
 window.addEventListener('scroll', opacity)
@@ -83,12 +84,33 @@ export default function Beach() {
                 </div>
             </div>
             <div className='land'>
-                {nestShow && < div className={"nest_onBoarding"} onClick={() => {
+                {nestShow === true ? <Modal
+                    size="lg"
+                    dialogClassName="modal-comingsoon"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered show={nestShow} onHide={closeNest}>
+                    <div className='popup-frame'>
+                        <div className='close-popup' onClick={() => closeNest()}>
+                            <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/close_popup.png' alt='' />
+                        </div>
+                        <div className='popup-title'>
+                            <div className='popup-title__box'>
+                                <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/frame_comingsoon.webp' alt='' />
+                                <div className='popup-title__text'>
+                                    <h1>coming up soon</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Modal> : ''}
+
+                {/* // Nest onBoarding
+                 {nestShow && < div className={"nest_onBoarding"} onClick={() => {
                     closeNest();
                 }}>
                     <Nest_onBoarding closeNest={closeNest} />
                 </div>
-                }
+                } */}
                 <img className="land-img" src={urlConstant.imageGamePlay.land.backgroundLand} alt="" />
                 <div className='bone rightEntrance'>
                     <img className='bone-img' src={urlConstant.imageGamePlay.land.bone} alt='' />
@@ -98,7 +120,12 @@ export default function Beach() {
                     <div className='gate opacity'>
                         <img className='circle-img' src={urlConstant.imageGamePlay.land.core.circle} alt='' />
                         <img className='effigy-img' src={urlConstant.imageGamePlay.land.core.effigy} alt='' />
-                        <img className='lightColumn-img' src={urlConstant.imageGamePlay.land.core.lightColumn} alt='' />
+                        <div className='lightColumn-img'>
+                            <div className="ag-number_light">
+                                <img className='light_column' src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/lighto.webp' alt='' />
+                                <img className='smoke' src='https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/light-blink/images/target-spiral.png' alt='' />
+                            </div>
+                        </div>
                         <div className='eluNest-btn' onClick={() => {
                             onPressShowNest()
                         }}> <div className='elu-btn nest-btn'>
