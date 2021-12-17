@@ -33,7 +33,7 @@ export default function Header() {
                     </Link>
                 </li>
                 <li className='playelu__menu-element'>
-                    <a href='https://bit.ly/elu-verse-lite-paper' target='_blank'>
+                    <a href='https://bit.ly/elu-verse-litepaper' target='_blank'>
                         <img src={urlConstant.image.playeluHeader2} alt="" />
                         <h4 style={{ animation: 'shine 2s infinite linear' }}>Litepaper</h4>
                     </a>

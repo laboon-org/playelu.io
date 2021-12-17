@@ -87,7 +87,7 @@ export default {
         skyBottom: {
             sailboatLeft: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sailboatLeft.webp',
             sailboatRight: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sailboatRight.webp',
-            boat: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/skyBottom/boat.gif'
+            boat: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/boat(1).webm'
         },
         ocean: {
             backgroundOcean: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/backgroundOcean.png',
@@ -95,7 +95,7 @@ export default {
             house: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/house.webp',
             pinwheel: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/pinwheel.webp',
             oceanIsland: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/ocean_island.webp',
-            tree: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/gate.gif',
+            tree: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/gate.webm',
             oceanIslandGrass: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/oceanIslandGrass.webp',
         },
         land: {

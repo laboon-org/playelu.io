@@ -58,10 +58,6 @@ export default function SkyCenter() {
                 >
                     <source src={value.url2} type="video/mp4" />
                 </video>
-                {/* <img
-                    className={`isLand-img ${finalClass}`}
-                    src={value.url2}
-                    alt="" /> */}
             </div>
         )
     })

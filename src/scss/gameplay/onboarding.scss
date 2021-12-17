@@ -3,7 +3,9 @@
   width: 100vw;
   animation: onBoarding 1s ease forwards;
   animation-duration: 1s;
-  background: #86a6b7;
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/background_drop.webp")
+    no-repeat center / cover;
+  background-size: 100%;
 }
 .onBoarding__title {
   position: absolute;

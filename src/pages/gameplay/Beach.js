@@ -72,7 +72,12 @@ export default function Beach() {
                     <div className='oceanIsland-element opacity'>
                         <img className="oceanIsland-img" src={urlConstant.imageGamePlay.ocean.oceanIsland} alt="" />
                         <div className='tree'>
-                            <img className="tree-img" src={urlConstant.imageGamePlay.ocean.tree} alt="" />
+                            <video
+                                className="tree-img"
+                                autoPlay loop preload='metadata'
+                                poster=''>
+                                <source src={urlConstant.imageGamePlay.ocean.tree} alt="" />
+                            </video>
                             <div className='tree-accessory'>
                                 <img className="oceanIsland-grass" src={urlConstant.imageGamePlay.ocean.oceanIslandGrass} alt="" />
                             </div>
