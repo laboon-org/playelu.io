@@ -26,19 +26,17 @@ function reveal() {
 
 export default function Gameplay() {
     return (
-        <div>
+        <div className='gameplay-body'>
             <Cursor />
-            <div className='gameplay-body'>
-                <div className='sky'>
-                    {/* <div className='box'> */}
-                    <SkyTop />
-                    <SkyCenter />
-                    <Cloud />
-                    {/* </div> */}
-                    <SkyBottom />
-                </div>
-                <Beach />
+            <div className='sky'>
+                {/* <div className='box'> */}
+                <SkyTop />
+                <SkyCenter />
+                <Cloud />
+                {/* </div> */}
+                <SkyBottom />
             </div>
+            <Beach />
         </div>
     )
 }

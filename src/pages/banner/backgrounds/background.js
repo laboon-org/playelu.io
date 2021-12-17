@@ -19,8 +19,6 @@ export default function Background() {
                 <Stars imgUrl={urlConstant.image.homeBackground.star5} />
                 <Stars imgUrl={urlConstant.image.homeBackground.star5} />
                 <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-                <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-                <Stars imgUrl={urlConstant.image.homeBackground.star5} />
             </div>
             {/* <CloudBottom /> */}
         </div>

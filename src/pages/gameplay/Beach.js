@@ -2,8 +2,7 @@ import React, { useCallback, useState } from 'react'
 import urlConstant from '../../urlConstant'
 import './css/beach.scss'
 import '../../scss/gameplay/beach.scss'
-import Modal from 'react-bootstrap/Modal';
-// import Nest_onBoarding from './nest_onboarding/nest_onBoarding'
+import Nest_onBoarding from './nest_onboarding/nest_onBoarding'
 
 
 window.addEventListener('scroll', opacity)
@@ -86,7 +85,7 @@ export default function Beach() {
                 </div>
             </div>
             <div className='land'>
-                {nestShow === true ? <Modal
+                {/* {nestShow === true ? <Modal
                     size="lg"
                     dialogClassName="modal-comingsoon"
                     aria-labelledby="contained-modal-title-vcenter"
@@ -104,15 +103,13 @@ export default function Beach() {
                             </div>
                         </div>
                     </div>
-                </Modal> : ''}
-
-                {/* // Nest onBoarding
-                 {nestShow && < div className={"nest_onBoarding"} onClick={() => {
+                </Modal> : ''}  */}
+                {nestShow && < div className={"nest_onBoarding"} onClick={() => {
                     closeNest();
                 }}>
                     <Nest_onBoarding closeNest={closeNest} />
                 </div>
-                } */}
+                }
                 <img className="land-img" src={urlConstant.imageGamePlay.land.backgroundLand} alt="" />
                 <div className='bone rightEntrance'>
                     <img className='bone-img' src={urlConstant.imageGamePlay.land.bone} alt='' />

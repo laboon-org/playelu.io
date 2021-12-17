@@ -100,6 +100,7 @@
       align-items: center;
       .nest_onBoarding-title {
         height: 10%;
+        margin-bottom: 2%;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -110,6 +111,14 @@
           text-transform: uppercase;
           -webkit-text-stroke: 1.8px black;
         }
+      }
+      .onBoarding-frame {
+        width: 80%;
+        height: 85%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding-top: 4%;
       }
       .onBoarding__versus-text {
         font-size: 46px;

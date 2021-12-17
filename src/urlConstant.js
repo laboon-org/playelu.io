@@ -25,7 +25,7 @@ export default {
             facebook: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/iconFacebook.webp',
             tele: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/iconTele.webp',
             opensea: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/iconOpensea.webp',
-            medium: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/social_icon/medium_icon.png'
+            medium: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/social_icon/medium_icon.webp'
         },
         // backgroundBottom: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/backgroundBottom.webp',
         soundOn: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/sound.webp',
@@ -33,7 +33,8 @@ export default {
         discord: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluDiscord.webp',
         mobileDiscord: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/smallDiscord.webp',
         eluLogo: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluLogo.webp',
-        eluLogo1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluLogo1.webp',
+        logo_mobile: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluLogo_mobile.webp',
+        eluLogo1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluLogo1%20(1).webp',
         navbarBtn: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/navbarBtn.webp',
         playeluHeader2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/playeluHeader2.webp'
     },
@@ -90,7 +91,7 @@ export default {
             boat: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/boat(1).webm'
         },
         ocean: {
-            backgroundOcean: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/backgroundOcean.png',
+            backgroundOcean: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/backgroundOcean.webp',
             boulder: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boulder.webp',
             house: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/house.webp',
             pinwheel: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/pinwheel.webp',
@@ -100,7 +101,7 @@ export default {
         },
         land: {
             backgroundLand: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/backgroundLand.webp',
-            bone: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/bone.png',
+            bone: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/bone.webp',
             fuitBasket: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/fruitBasket.webp',
             core: {
                 circle: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/circle.webp',
@@ -113,6 +114,11 @@ export default {
                 eluWater: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/eluWater.webp',
                 eluFire: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/eluFire.webp',
             }
+        },
+        popup_nest: {
+            onboarding_element1: "https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/nest_onboarding-element-1.webp",
+            onboarding_element2: "https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/nest_onboarding-element-2(1).webp",
+
         },
         cloud1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/cloud1.webp',
         cloud2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/cloud2.webp'

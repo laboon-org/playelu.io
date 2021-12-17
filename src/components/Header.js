@@ -39,8 +39,6 @@ export default function Header() {
                     </a>
                 </li>
             </ul>
-
         </div>
-
     )
 }
