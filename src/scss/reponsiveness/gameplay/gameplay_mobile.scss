@@ -69,7 +69,7 @@
       margin-top: 3%;
       font-size: 18px;
       text-shadow: 0 3px 3px rgba($color: #000000, $alpha: 0.5);
-      -webkit-text-stroke: 1.6px black;
+      -webkit-text-stroke: 1.4px black;
     }
   }
   .onBoarding-frame {
@@ -199,6 +199,9 @@
         }
       }
     }
+  }
+  .ag-number_light {
+    height: 20vh !important;
   }
   // End nest onBoarding scss
 }
