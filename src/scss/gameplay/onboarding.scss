@@ -1,7 +1,7 @@
 .sky-center_onBoarding {
   position: relative;
   width: 100vw;
-  animation: onBoarding 1s ease forwards;
+  animation: onBoarding 4s ease forwards;
   animation-duration: 1s;
   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/background_drop.webp")
     no-repeat center / cover;
@@ -243,5 +243,4 @@
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
 }
-
 // End board-type scss

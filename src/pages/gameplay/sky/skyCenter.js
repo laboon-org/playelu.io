@@ -12,9 +12,6 @@ function zoom() {
         if (scaleTop < windowHeght - scalepoin) {
             zoom[i].classList.add('active')
         }
-        // } else {
-        //     zoom[i].classList.remove('active')
-        // }
     }
 }
 
@@ -63,22 +60,26 @@ export default function SkyCenter() {
     })
     return (
         <div>
-            <div className='sky-center' id='drop'>
-                <div className='island zoom'>
-                    {islands}
+            <a href='#onboarding_drop-center'>
+                <div className='sky-center' id='drop'>
+                    <div className='island zoom'>
+                        {islands}
+                    </div>
                 </div>
-            </div>
-            <div style={{ marginTop: 20, width: '100vw' }}>
-                {
-                    !dropShow ? <div className="elu-btn drop-btn zoom" onClick={() => {
-                        onPressShowEluDrop();
-                    }}>
-                        <h2>DROP</h2>
-                        <div className='btn-shadow'><p>GAME FEATURES</p></div>
-                    </div> :
-                        <Drop_onboarding onPressHideEluDrop={onPressHideEluDrop} />
-                }
-            </div>
+                <div style={{ marginTop: 20, width: '100vw' }}>
+                    {
+                        !dropShow ? <div className="elu-btn drop-btn zoom" onClick={() => {
+                            onPressShowEluDrop();
+                        }}>
+
+                            <h2 id='drop_text'>DROP</h2>
+
+                            <div className='btn-shadow'><p>GAME FEATURES</p></div>
+                        </div> :
+                            <Drop_onboarding onPressHideEluDrop={onPressHideEluDrop} />
+                    }
+                </div>
+            </a>
         </div>
     )
 }
