@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react'
 import urlConstant from '../../urlConstant'
 import './css/beach.scss'
 import '../../scss/gameplay/beach.scss'
-import Nest_onBoarding from './nest_onboarding/nest_onBoarding'
+import NestOnBoarding from './nest_onboarding/nest_onBoarding'
 
 
 window.addEventListener('scroll', opacity)
@@ -74,8 +74,7 @@ export default function Beach() {
                             <video
                                 className="tree-img"
                                 autoPlay loop preload='metadata'
-                                playsinline
-                                poster=''>
+                                poster={urlConstant.imageGamePlay.ocean.tree_img}>
                                 <source src={urlConstant.imageGamePlay.ocean.tree} alt="" />
                             </video>
                             <div className='tree-accessory'>
@@ -86,29 +85,10 @@ export default function Beach() {
                 </div>
             </div>
             <div className='land'>
-                {/* {nestShow === true ? <Modal
-                    size="lg"
-                    dialogClassName="modal-comingsoon"
-                    aria-labelledby="contained-modal-title-vcenter"
-                    centered show={nestShow} onHide={closeNest}>
-                    <div className='popup-frame'>
-                        <div className='close-popup' onClick={() => closeNest()}>
-                            <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/close_popup.png' alt='' />
-                        </div>
-                        <div className='popup-title'>
-                            <div className='popup-title__box'>
-                                <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/frame_comingsoon.webp' alt='' />
-                                <div className='popup-title__text'>
-                                    <h1>coming up soon</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </Modal> : ''}  */}
                 {nestShow && < div className={"nest_onBoarding"} onClick={() => {
                     closeNest();
                 }}>
-                    <Nest_onBoarding closeNest={closeNest} />
+                    <NestOnBoarding closeNest={closeNest} />
                 </div>
                 }
                 <img className="land-img" src={urlConstant.imageGamePlay.land.backgroundLand} alt="" />

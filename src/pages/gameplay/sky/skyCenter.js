@@ -18,15 +18,18 @@ function zoom() {
 const listIslandUrl = [
     {
         url1: urlConstant.imageGamePlay.skyCenter.islandBlank1,
-        url2: urlConstant.imageGamePlay.skyCenter.fire_island
+        url2: urlConstant.imageGamePlay.skyCenter.fire_island,
+        url3: urlConstant.imageGamePlay.skyCenter.fire_island_img
     },
     {
         url1: urlConstant.imageGamePlay.skyCenter.islandBlank2,
-        url2: urlConstant.imageGamePlay.skyCenter.fountain
+        url2: urlConstant.imageGamePlay.skyCenter.fountain,
+        url3: urlConstant.imageGamePlay.skyCenter.fountain_img
     },
     {
         url1: urlConstant.imageGamePlay.skyCenter.islandBlank3,
-        url2: urlConstant.imageGamePlay.skyCenter.islandWater
+        url2: urlConstant.imageGamePlay.skyCenter.islandWater,
+        url3: urlConstant.imageGamePlay.skyCenter.islandWater_img
     }
 ]
 export default function SkyCenter() {
@@ -43,15 +46,14 @@ export default function SkyCenter() {
         let finalClass = isFinalItem ? 'mr-bottom' : '';
         return (
             <div className={`island${key + 1}`} key={key}>
-
                 <img
                     className="isLand-img"
                     src={value.url1}
                     alt="" />
                 <video
                     className={`isLand-img ${finalClass}`}
-                    autoPlay loop preload='metadata' playsinline
-                    poster=''
+                    autoPlay loop preload='metadata'
+                    poster={value.url3}
                 >
                     <source src={value.url2} type="video/mp4" />
                 </video>
@@ -71,7 +73,6 @@ export default function SkyCenter() {
                         !dropShow ? <div className="elu-btn drop-btn zoom" onClick={() => {
                             onPressShowEluDrop();
                         }}>
-
                             <h2 id='drop_text'>DROP</h2>
 
                             <div className='btn-shadow'><p>GAME FEATURES</p></div>

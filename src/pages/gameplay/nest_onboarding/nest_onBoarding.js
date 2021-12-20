@@ -3,7 +3,7 @@ import OnboardingComingsoon from '../../../components/onBoarding/onboarding_comi
 import OnBoardingElementRight from './OnBoarding_element-right'
 import OnBoardingElementLeft from './onBoarding__element-left'
 
-export default function Nest_onBoarding(props) {
+export default function NestOnBoarding(props) {
     const { closeNest } = props
     return (
         <div className='nest-frame'>

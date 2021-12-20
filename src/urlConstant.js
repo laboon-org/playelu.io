@@ -77,6 +77,9 @@ export default {
             board_type_5: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/boar_type5.png',
         },
         skyCenter: {
+            fountain_img: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-center/fountain.webp',
+            fire_island_img: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-center/fire.webp',
+            islandWater_img: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-center/water.webp',
             fountain: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/foundation.webm',
             fire_island: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/fire-island.webm',
             islandWater: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/water-island.webm',
@@ -88,6 +91,7 @@ export default {
         skyBottom: {
             sailboatLeft: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sailboatLeft.webp',
             sailboatRight: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sailboatRight.webp',
+            boat_img: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sailboatLeft2.webp',
             boat: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/boat(1).webm'
         },
         ocean: {
@@ -97,6 +101,7 @@ export default {
             pinwheel: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/pinwheel.webp',
             oceanIsland: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/ocean_island.webp',
             tree: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/gate.webm',
+            tree_img: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/gate.gif',
             oceanIslandGrass: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/oceanIslandGrass.webp',
         },
         land: {

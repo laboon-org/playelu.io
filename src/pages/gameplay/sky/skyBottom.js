@@ -7,19 +7,14 @@ export default function SkyBottom() {
         <div className='skyBottom'>
             <video
                 autoPlay loop preload='metadata'
-                playsinline
-                poster='' className='boat__animation2'>
+                poster={urlConstant.imageGamePlay.skyBottom.boat_img} className='boat__animation2'>
                 <source src={urlConstant.imageGamePlay.skyBottom.boat} type="video/mp4" />
             </video>
             <video
                 autoPlay loop preload='metadata'
-                playsinline
-                poster='' className='boat__animation1'>
+                poster={urlConstant.imageGamePlay.skyBottom.boat_img} className='boat__animation1'>
                 <source src={urlConstant.imageGamePlay.skyBottom.boat} type="video/mp4" />
             </video>
-            {/* <div className='boat__animation1'>
-                <img src={urlConstant.imageGamePlay.skyBottom.boat} alt="" />
-            </div> */}
             <div className='sailboat'>
                 <div className='sailboat-left'>
                     <img src={urlConstant.imageGamePlay.skyBottom.sailboatLeft} alt="sailboat-left" />
@@ -28,7 +23,6 @@ export default function SkyBottom() {
                     <img src={urlConstant.imageGamePlay.skyBottom.sailboatRight} alt="sailboat-right" />
                 </div>
             </div>
-
         </div>
     )
 }

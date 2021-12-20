@@ -167,7 +167,7 @@
         max-height: 827px;
         height: 79vw !important;
         .onBoarding-frame {
-          padding-top: 0;
+          padding-top: 0 !important;
         }
         .onBoarding__element {
           margin: 0 0 6px 0;
@@ -188,9 +188,8 @@
           text-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.5) !important;
         }
         .onBoarding-btn_close {
-          margin-top: -10px;
-          max-width: 74px;
-          width: 8%;
+          max-width: 74px !important;
+          width: 8% !important;
           margin: auto;
           cursor: pointer;
           img {
