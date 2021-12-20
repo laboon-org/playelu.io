@@ -74,6 +74,7 @@ export default function Beach() {
                             <video
                                 className="tree-img"
                                 autoPlay loop preload='metadata'
+                                playsinline
                                 poster=''>
                                 <source src={urlConstant.imageGamePlay.ocean.tree} alt="" />
                             </video>

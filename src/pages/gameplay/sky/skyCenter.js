@@ -50,7 +50,7 @@ export default function SkyCenter() {
                     alt="" />
                 <video
                     className={`isLand-img ${finalClass}`}
-                    autoPlay loop preload='metadata'
+                    autoPlay loop preload='metadata' playsinline
                     poster=''
                 >
                     <source src={value.url2} type="video/mp4" />
