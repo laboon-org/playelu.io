@@ -27,6 +27,9 @@ function reveal() {
 export default function Gameplay() {
     return (
         <div className='gameplay-body'>
+            <audio className="audio_gameplay" autoPlay loop preload='metadata' >
+                <source src="https://storage.googleapis.com/laboon-img-storage/play-elu/soundtrack-bg/soundtrack_bg2.mp3" type="audio/mpeg" />
+            </audio>
             <Cursor />
             <div className='sky'>
                 {/* <div className='box'> */}

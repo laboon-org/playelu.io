@@ -4,6 +4,7 @@
   box-sizing: border-box;
   cursor: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/logo192.png"),
     auto;
+  -webkit-text-size-adjust: none;
 }
 
 *::-webkit-scrollbar {
@@ -73,6 +74,9 @@ li {
 .sound {
   width: 9vh;
   animation: heartbeat 2.5s ease-in-out infinite both;
+  audio {
+    width: 100%;
+  }
   .sound-on,
   .sound-off {
     cursor: pointer;

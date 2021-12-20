@@ -8,18 +8,14 @@ import Content from "./playelu_content";
 import Cursor from "../../components/cursor";
 
 export default function PlayeluBaner() {
-  const url = ''
-  const audio = new Audio(url)
   const [isPlay, setPlay] = useState(true);
   const handlePausePlayClick = () => {
     if (isPlay) {
       setPlay(false)
-      audio.pause();
     } else {
-      audio.play();
       setPlay(true)
     }
-    setPlay(!isPlay);
+    // setPlay(!isPlay);
   };
 
   return (
@@ -35,7 +31,11 @@ export default function PlayeluBaner() {
         <Background />
         <div className='navbar'>
           <div className="sound" onClick={handlePausePlayClick}>
-            {isPlay ? <img className="sound-on active" src={urlConstant.image.soundOn} alt="" />
+            {isPlay ? <div>
+              <audio className="audio" autoPlay loop preload='metadata' >
+                <source src="https://storage.googleapis.com/laboon-img-storage/play-elu/soundtrack-bg/soundtrack_bg1.mp3" type="audio/mpeg" />
+              </audio>
+              <img className="sound-on active" src={urlConstant.image.soundOn} alt="" /></div>
               : <img className="sound-off" src={urlConstant.image.soundOff} alt="" />
             }
           </div>
