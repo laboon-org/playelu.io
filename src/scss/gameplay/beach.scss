@@ -37,37 +37,44 @@
 }
 .oceanIsland {
   position: absolute;
-  top: -10%;
+  top: -26%;
   right: 0;
   width: 20%;
   .oceanIsland-element {
     position: relative;
-    .tree {
-      position: absolute;
-      left: 0;
-      top: -37%;
-      z-index: 1;
-      width: 105%;
-      .tree-accessory {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        .oceanIsland-grass {
-          position: absolute;
-          width: 55%;
-          bottom: 18%;
-          left: 10%;
-          z-index: 3;
-        }
-      }
-      .tree-img {
-        width: 100%;
-      }
+    width: 100%;
+    .oceanIsland-img {
+      width: 100%;
     }
   }
+  // .oceanIsland-element {
+  //   position: relative;
+  // .tree {
+  //   position: absolute;
+  //   left: 0;
+  //   top: -37%;
+  //   z-index: 1;
+  //   width: 105%;
+  //   .tree-accessory {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     .oceanIsland-grass {
+  //       position: absolute;
+  //       width: 55%;
+  //       bottom: 18%;
+  //       left: 10%;
+  //       z-index: 3;
+  //     }
+  //   }
+  //   .tree-img {
+  //     width: 100%;
+  //   }
+  // }
 }
+
 //land
 .land {
   position: relative;

@@ -99,14 +99,15 @@ export default {
             boulder: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boulder.webp',
             house: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/house.webp',
             pinwheel: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/pinwheel.webp',
-            oceanIsland: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/ocean_island.webp',
+            oceanIsland: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/ocean.webm',
+            oceanIsland_img: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/ocean-island%20(2)%20(1).webp',
             tree: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/gate.webm',
             tree_img: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/gate.gif',
             oceanIslandGrass: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/oceanIslandGrass.webp',
         },
         land: {
             backgroundLand: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/backgroundLand.webp',
-            bone: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/bone.webp',
+            bone: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/bone-1.webp',
             fuitBasket: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/fruitBasket.webp',
             core: {
                 circle: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/circle.webp',
