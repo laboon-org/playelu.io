@@ -75,17 +75,6 @@ export default function Beach() {
                             poster={urlConstant.imageGamePlay.ocean.oceanIsland_img}>
                             <source src={urlConstant.imageGamePlay.ocean.oceanIsland} alt="" />
                         </video>
-                        {/* <div className='coin-boon'>
-                            <img className="oceanIsland-grass" src={urlConstant.imageGamePlay.ocean.oceanIslandGrass} alt="" />
-                        </div> */}
-                        {/* <div className='tree'>
-                            <video
-                                className="tree-img"
-                                autoPlay loop preload='metadata'
-                                poster={urlConstant.imageGamePlay.ocean.tree_img}>
-                                <source src={urlConstant.imageGamePlay.ocean.tree} alt="" />
-                            </video>
-                        </div> */}
                     </div>
                 </div>
             </div>
