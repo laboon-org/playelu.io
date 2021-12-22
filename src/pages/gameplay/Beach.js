@@ -69,12 +69,16 @@ export default function Beach() {
                 </div>
                 <div className='oceanIsland'>
                     <div className='oceanIsland-element opacity'>
-                        <video
-                            className="oceanIsland-img"
-                            autoPlay playsInline loop preload='metadata'
-                            poster={urlConstant.imageGamePlay.ocean.oceanIsland_img}>
-                            <source src={urlConstant.imageGamePlay.ocean.oceanIsland} alt="" />
-                        </video>
+                        <img className="oceanIsland-img" src={urlConstant.imageGamePlay.ocean.oceanIsland} alt="" />
+                        <div className='tree'>
+                            <video
+                                className="oceanIsland-img"
+                                autoPlay playsInline loop preload='metadata'
+                                poster={urlConstant.imageGamePlay.ocean.oceanIsland_img}>
+                                <source src={urlConstant.imageGamePlay.ocean.oceanIsland} alt="" />
+                            </video>
+
+                        </div>
                     </div>
                 </div>
             </div>

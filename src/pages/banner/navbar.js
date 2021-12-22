@@ -34,10 +34,10 @@ export default function Navbar(props) {
                         </a>
                     </div>
                     <div className='modal-element'>
-                        <a href='https://bit.ly/3HIpdcy' target='_blank'>
-                            <img src={urlConstant.image.modal.modalNavbarEle} alt="" />
-                            <h2>TOKENOMIC</h2>
-                        </a>
+                        {/* <a href='https://bit.ly/3HIpdcy' target='_blank'> */}
+                        <img src={urlConstant.image.modal.modalNavbarEle} alt="" />
+                        <h2>TOKENOMIC</h2>
+                        {/* </a> */}
                     </div>
                     <div className='modal-element'>
                         <Link to='/gameplay'>
