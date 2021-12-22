@@ -9,6 +9,8 @@ import SkyBottom from './sky/skyBottom'
 import SkyTop from './sky/skyTop'
 import Cloud from './sky/cloud'
 import Cursor from '../../components/cursor'
+import urlConstant from '../../urlConstant'
+import LaunchHeader from '../../components/launch_header'
 
 window.addEventListener('scroll', reveal)
 function reveal() {
@@ -27,10 +29,12 @@ function reveal() {
 export default function Gameplay() {
     return (
         <div className='gameplay-body'>
+
             <audio className="audio_gameplay" autoPlay loop preload='metadata' >
                 <source src="https://storage.googleapis.com/laboon-img-storage/play-elu/soundtrack-bg/soundtrack_bg2.mp3" type="audio/mpeg" />
             </audio>
             <Cursor />
+            {/* <LaunchHeader /> */}
             <div className='sky'>
                 {/* <div className='box'> */}
                 <SkyTop />

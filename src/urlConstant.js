@@ -51,7 +51,8 @@ export default {
             nest: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/stone_nest.webp',
             scout: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/stone_scout.webp',
             metaVerse: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/stone_meta.webp',
-            shadowStone: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/shadow.webp'
+            shadowStone: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-top/shadow.webp',
+            coin_boon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/coin.webp'
         },
         popupComingSoon: {
             background: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_background.webp',

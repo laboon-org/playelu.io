@@ -6,6 +6,7 @@ import '../../scss/reponsiveness/home/home_mobile.scss'
 import Background from "./backgrounds/background";
 import Content from "./playelu_content";
 import Cursor from "../../components/cursor";
+import LaunchHeader from "../../components/launch_header";
 
 export default function PlayeluBaner() {
   const [isPlay, setPlay] = useState(true);
@@ -27,6 +28,8 @@ export default function PlayeluBaner() {
           <img className="mobile__discord-img" src={urlConstant.image.mobileDiscord} alt="" />
         </a>
       </div>
+      {/* ********Launch Header************ */}
+      {/* <LaunchHeader /> */}
       <div className="playelu">
         <Background />
         <div className='navbar'>

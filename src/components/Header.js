@@ -16,10 +16,10 @@ export default function Header() {
                     </a>
                 </li>
                 <li className='playelu__menu-element'>
-                    <a href='https://bit.ly/3HIpdcy' target='_blank'>
-                        <img src={urlConstant.image.playeluHeader2} alt="" />
-                        <h4 style={{ animation: 'shine 1.5s infinite linear' }}>Tokenomic</h4>
-                    </a>
+                    {/* <a href='https://bit.ly/3HIpdcy' target='_blank'> */}
+                    <img src={urlConstant.image.playeluHeader2} alt="" />
+                    <h4 style={{ animation: 'shine 1.5s infinite linear' }}>Tokenomic</h4>
+                    {/* </a> */}
                 </li>
                 <li className='playelu__menu-element'>
                     <a href='#'>
