@@ -43,16 +43,17 @@ export default function SkyCenter() {
     })
     const islands = listIslandUrl.map((value, key) => {
         let isFinalItem = listIslandUrl.length - 1 == key;
-        let finalClass = isFinalItem ? 'mr-bottom' : '';
+        let finalClass = isFinalItem ? 'mr-top' : '';
+        let mrBottom = isFinalItem ? 'mr-bottom' : '';
         return (
             <div className={`island${key + 1}`} key={key}>
                 <img
-                    className="isLand-img"
+                    className={`isLand-img ${mrBottom}`}
                     src={value.url1}
                     alt="" />
                 <video
                     className={`isLand-img ${finalClass}`}
-                    autoPlay loop preload='metadata'
+                    loop autoPlay playsInline preload='metadata'
                     poster={value.url3}
                 >
                     <source src={value.url2} type="video/mp4" />

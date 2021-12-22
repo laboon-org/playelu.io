@@ -6,12 +6,12 @@ export default function SkyBottom() {
     return (
         <div className='skyBottom'>
             <video
-                autoPlay loop preload='metadata'
+                autoPlay playsInline loop preload='metadata'
                 poster={urlConstant.imageGamePlay.skyBottom.boat_img} className='boat__animation2'>
                 <source src={urlConstant.imageGamePlay.skyBottom.boat} type="video/mp4" />
             </video>
             <video
-                autoPlay loop preload='metadata'
+                autoPlay playsInline loop preload='metadata'
                 poster={urlConstant.imageGamePlay.skyBottom.boat_img} className='boat__animation1'>
                 <source src={urlConstant.imageGamePlay.skyBottom.boat} type="video/mp4" />
             </video>

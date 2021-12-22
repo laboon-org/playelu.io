@@ -71,7 +71,7 @@ export default function Beach() {
                     <div className='oceanIsland-element opacity'>
                         <video
                             className="oceanIsland-img"
-                            autoPlay loop preload='metadata'
+                            autoPlay playsInline loop preload='metadata'
                             poster={urlConstant.imageGamePlay.ocean.oceanIsland_img}>
                             <source src={urlConstant.imageGamePlay.ocean.oceanIsland} alt="" />
                         </video>
