@@ -28,7 +28,7 @@ export default function Navbar(props) {
                 </div>
                 <div className='body__modal-navbar'>
                     <div className='modal-element'>
-                        <a href="https://bit.ly/3HUYOYZ" target='_blank'>
+                        <a href="https://bit.ly/3qhqpf2" target='_blank'>
                             <img src={urlConstant.image.modal.modalNavbarEle} alt="" />
                             <h2>ROADMAP</h2>
                         </a>

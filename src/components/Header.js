@@ -10,7 +10,7 @@ export default function Header() {
         <div className='header'>
             <ul className='menu'>
                 <li className='playelu__menu-element'>
-                    <a href="https://bit.ly/3HUYOYZ" target='_blank'>
+                    <a href="https://bit.ly/3qhqpf2" target='_blank'>
                         <img src={urlConstant.image.playeluHeader2} alt="" />
                         <h4 style={{ animation: 'shine 2.5s infinite linear' }}>Roadmap</h4>
                     </a>

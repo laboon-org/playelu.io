@@ -56,9 +56,6 @@ export default {
         },
         popupComingSoon: {
             background: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_background.webp',
-            popup_logo: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_logo.webp',
-            popup_character: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_character.webp',
-            popup_grass: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_grass.webp'
         },
         popupDrop: {
             boardTitle: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/title.png',
@@ -87,7 +84,6 @@ export default {
             islandBlank1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islandBlank1.webp',
             islandBlank2: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islandBlank2.webp',
             islandBlank3: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/islanBlank3.webp',
-            eluDropBtn: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/eluDropBtn.webp',
         },
         skyBottom: {
             sailboatLeft: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sailboatLeft.webp',
@@ -98,28 +94,26 @@ export default {
         ocean: {
             backgroundOcean: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/backgroundOcean.webp',
             boulder: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boulder.webp',
-            house: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/house.webp',
-            pinwheel: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/pinwheel.webp',
+            house: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/house1.webp',
+            pinwheel: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/propeller.webp',
             oceanIsland: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/ocean.webm',
             oceanIsland_img: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/ocean-island%20(2)%20(1).webp',
             tree: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/sky-video/gate.webm',
             tree_img: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/gate.gif',
-            oceanIslandGrass: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/oceanIslandGrass.webp',
         },
         land: {
-            backgroundLand: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/backgroundLand.webp',
+            backgroundLand: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/backgroundLand.webp',
             bone: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/bone-1.webp',
             fuitBasket: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/fruitBasket.webp',
             core: {
-                circle: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/circle.webp',
-                effigy: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/effigy.webp',
+                circle: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/circle.webp',
+                effigy: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/effigy%20(1).webp',
                 lightColumn: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/lightColumn.webp',
-                eluNestBtn: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/eluNestBtn.webp',
             },
             character: {
-                eluLight: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/eluLight.webp',
+                eluLight: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/eluLight.webp',
                 eluWater: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/eluWater.webp',
-                eluFire: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/eluFire.webp',
+                eluFire: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/eluFire.webp',
             }
         },
         popup_nest: {
