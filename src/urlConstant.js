@@ -21,18 +21,18 @@ export default {
         social: {
             twitter: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/iconTwitter.webp',
             graphic: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/graphic.webp',
-            insta: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/iconInsta.webp',
-            facebook: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/iconFacebook.webp',
+            insta: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/social_icon/iconInsta-1.webp',
+            facebook: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/social_icon/iconFacebook-1.webp',
             tele: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/iconTele.webp',
-            opensea: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/iconOpensea.webp',
+            opensea: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/social_icon/iconOpensea-1.webp',
             medium: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/social_icon/medium_icon.webp'
         },
         // backgroundBottom: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/backgroundBottom.webp',
         soundOn: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/sound.webp',
         soundOff: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/soundOff.webp',
-        discord: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluDiscord.webp',
-        mobileDiscord: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/smallDiscord.webp',
-        eluLogo: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluLogo.webp',
+        discord: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluDiscord-1.webp',
+        mobileDiscord: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/smallDiscord-1.webp',
+        eluLogo: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/eluLogo-1.webp',
         logo_mobile: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluLogo_mobile.webp',
         eluLogo1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/eluLogo1%20(1).webp',
         navbarBtn: 'https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/navbarBtn.webp',
@@ -104,15 +104,15 @@ export default {
         land: {
             backgroundLand: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/backgroundLand.webp',
             bone: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/bone-1.webp',
-            fuitBasket: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/fruitBasket.webp',
+            fuitBasket: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/fruitBasket.webp',
             core: {
                 circle: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/circle.webp',
-                effigy: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/effigy%20(1).webp',
+                effigy: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/effigy-1.webp',
                 lightColumn: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/lightColumn.webp',
             },
             character: {
                 eluLight: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/eluLight.webp',
-                eluWater: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/eluWater.webp',
+                eluWater: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/eluWater.webp',
                 eluFire: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/eluFire.webp',
             }
         },
