@@ -13,7 +13,7 @@ export default function OnBoardingElementRight() {
                 tip={1}
             />
             <div className='onBoarding__element-content content-right'>
-                <img className='onBoarding__element-img no-border' src={urlConstant.imageGamePlay.popup_nest.onboarding_element1} alt='' />
+                <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popup_nest.battle} alt='' />
             </div>
         </div>
     )

@@ -7,7 +7,7 @@ export default function OnBoardingElementLeft() {
         <div className='onBoarding__element'>
             <OnBoardingTip title='battle' tip={2} />
             <div className='onBoarding__element-content content-left'>
-                <img className='onBoarding__element-img no-border' src={urlConstant.imageGamePlay.popup_nest.onboarding_element2} alt='' />
+                <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popup_nest.farming} alt='' />
             </div>
         </div>
     )

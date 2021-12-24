@@ -117,8 +117,8 @@ export default {
             }
         },
         popup_nest: {
-            onboarding_element1: "https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/nest_onboarding-element-1.webp",
-            onboarding_element2: "https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/boarding-img/nest_onboarding-element-2(1).webp",
+            farming: "https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/hex-battle.webp",
+            battle: "https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/farming-mode.webp",
 
         },
         cloud1: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/cloud1.webp',
