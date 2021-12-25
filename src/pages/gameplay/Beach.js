@@ -4,7 +4,6 @@ import './css/beach.scss'
 import '../../scss/gameplay/beach.scss'
 import NestOnBoarding from './nest_onboarding/nest_onBoarding'
 
-
 window.addEventListener('scroll', opacity)
 function opacity() {
     var opacity = document.querySelectorAll('.opacity')
@@ -77,7 +76,6 @@ export default function Beach() {
                                 poster={urlConstant.imageGamePlay.ocean.oceanIsland_img}>
                                 <source src={urlConstant.imageGamePlay.ocean.oceanIsland} alt="" />
                             </video>
-
                         </div>
                     </div>
                 </div>
@@ -90,6 +88,18 @@ export default function Beach() {
                 </div>
                 }
                 <img className="land-img" src={urlConstant.imageGamePlay.land.backgroundLand} alt="" />
+                <div className="woodsign">
+                    <div className='woodsign-content'>
+                        <img className="woodsign-img" src={urlConstant.imageGamePlay.land.woodsign} alt="" />
+                        <div className='woodsign-text'>
+                            <p>scout</p>
+                            <div className='woodsign-subtext'>
+                                <span>coming</span>
+                                <span>soon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className='bone rightEntrance'>
                     <img className='bone-img' src={urlConstant.imageGamePlay.land.bone} alt='' />
                 </div>

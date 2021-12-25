@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 import 'animate.css';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 window.onload = function () {
   ReactDOM.render(
@@ -14,5 +14,3 @@ window.onload = function () {
     document.getElementById('root')
   );
 }
-serviceWorkerRegistration.register();
-reportWebVitals();

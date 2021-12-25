@@ -105,6 +105,7 @@ export default {
             backgroundLand: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/backgroundLand.webp',
             bone: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/bone-1.webp',
             fuitBasket: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/fruitBasket.webp',
+            woodsign: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/woodsign.webp',
             core: {
                 circle: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/circle.webp',
                 effigy: 'https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/beach-image/effigy-1.webp',
