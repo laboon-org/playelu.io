@@ -68,15 +68,23 @@ export default function Beach() {
                 </div>
                 <div className='oceanIsland'>
                     <div className='oceanIsland-element opacity'>
-                        <img className="oceanIsland-img" src={urlConstant.imageGamePlay.ocean.oceanIsland} alt="" />
-                        <div className='tree'>
+                        <video
+                            className="oceanIsland-img"
+                            autoPlay loop preload='metadata'
+                            poster={urlConstant.imageGamePlay.ocean.oceanIsland_img}>
+                            <source src={urlConstant.imageGamePlay.ocean.oceanIsland} alt="" />
+                        </video>
+                        {/* <div className='coin-boon'>
+                            <img className="oceanIsland-grass" src={urlConstant.imageGamePlay.ocean.oceanIslandGrass} alt="" />
+                        </div> */}
+                        {/* <div className='tree'>
                             <video
                                 className="oceanIsland-img"
                                 autoPlay playsInline loop preload='metadata'
-                                poster={urlConstant.imageGamePlay.ocean.oceanIslandImg}>
+                                poster={urlConstant.imageGamePlay.ocean.oceanIsland_img}>
                                 <source src={urlConstant.imageGamePlay.ocean.oceanIsland} alt="" />
                             </video>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -92,8 +100,11 @@ export default function Beach() {
                     <div className='woodsign-content'>
                         <img className="woodsign-img" src={urlConstant.imageGamePlay.land.woodsign} alt="" />
                         <div className='woodsign-text'>
-                            <img src={urlConstant.imageGamePlay.land.soutText} alt='' />
-                            <img src={urlConstant.imageGamePlay.land.comingsoonText} alt='' />
+                            <p>scout</p>
+                            <div className='woodsign-subtext'>
+                                <span>coming</span>
+                                <span>soon</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -132,6 +143,6 @@ export default function Beach() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
