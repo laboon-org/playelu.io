@@ -6,7 +6,7 @@ export default function LaunchHeader() {
     return (
         <div className='launch-header'>
             <div className='launch-header__content'>
-                <img className='launch-header__content-coin' src={urlConstant.imageGamePlay.skyTop.coin_boon} alt='' />
+                <img className='launch-header__content-coin' src={urlConstant.imageGamePlay.skyTop.coinBoon} alt='' />
                 <a className='market' href=''>
                     <span>sdfggfsdgsdfgdgrefgrefgre</span>
                 </a>

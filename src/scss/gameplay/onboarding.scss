@@ -90,9 +90,12 @@
   position: relative;
   width: 87.5%;
   background: rgba(0, 0, 0, 0.25);
-  border: 3px solid #00aaff;
+  border: 4px solid #00aaff;
   border-radius: 4px;
   margin: auto;
+}
+.border {
+  border: 4px solid #f2d340 !important;
 }
 .onBoarding__versus-text {
   width: 46%;
@@ -146,7 +149,7 @@
   .onBoarding__element-img {
     border-radius: 4px;
     width: 100%;
-    border: 3px solid #00aaff;
+    border: 4px solid #00aaff;
   }
   .no-border {
     border: 0px;
@@ -154,10 +157,17 @@
 }
 .content-left {
   margin-left: 14%;
+  img {
+    cursor: pointer;
+  }
 }
 .content-right {
   margin-right: 14%;
+  img {
+    cursor: pointer;
+  }
 }
+
 .content-final {
   margin-top: 12.866%;
 }

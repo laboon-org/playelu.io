@@ -18,18 +18,18 @@ function zoom() {
 const listIslandUrl = [
     {
         url1: urlConstant.imageGamePlay.skyCenter.islandBlank1,
-        url2: urlConstant.imageGamePlay.skyCenter.fire_island,
-        url3: urlConstant.imageGamePlay.skyCenter.fire_island_img
+        url2: urlConstant.imageGamePlay.skyCenter.fireIsland,
+        url3: urlConstant.imageGamePlay.skyCenter.fireIslandImg
     },
     {
         url1: urlConstant.imageGamePlay.skyCenter.islandBlank2,
         url2: urlConstant.imageGamePlay.skyCenter.fountain,
-        url3: urlConstant.imageGamePlay.skyCenter.fountain_img
+        url3: urlConstant.imageGamePlay.skyCenter.fountainImg
     },
     {
         url1: urlConstant.imageGamePlay.skyCenter.islandBlank3,
         url2: urlConstant.imageGamePlay.skyCenter.islandWater,
-        url3: urlConstant.imageGamePlay.skyCenter.islandWater_img
+        url3: urlConstant.imageGamePlay.skyCenter.islandWaterImg
     }
 ]
 export default function SkyCenter() {

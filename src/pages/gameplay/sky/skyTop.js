@@ -49,12 +49,12 @@ export default function SkyTop() {
                 <div className='rune'>
                     <Link to='/'>
                         <div className="gameplay__rune">
-                            <img className='gameplay__rune-stone' src={urlConstant.imageGamePlay.skyTop.stone_rune} alt="" />
+                            <img className='gameplay__rune-stone' src={urlConstant.imageGamePlay.skyTop.stoneRune} alt="" />
                             <div className="gameplay__rune-light">
-                                <img c src={urlConstant.imageGamePlay.skyTop.light_rune} alt="" />
+                                <img c src={urlConstant.imageGamePlay.skyTop.lightRune} alt="" />
                             </div>
                             <div className='gameplay__rune-crushed_stone'>
-                                <img c src={urlConstant.imageGamePlay.skyTop.crushed_stone} alt="" />
+                                <img c src={urlConstant.imageGamePlay.skyTop.crushedStone} alt="" />
                             </div>
                         </div>
                         <img className="gameplay__boonmoon-img" src={urlConstant.imageGamePlay.skyTop.boonMoon} alt="" />

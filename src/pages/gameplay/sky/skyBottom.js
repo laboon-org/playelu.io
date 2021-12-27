@@ -7,12 +7,12 @@ export default function SkyBottom() {
         <div className='skyBottom'>
             <video
                 autoPlay playsInline loop preload='metadata'
-                poster={urlConstant.imageGamePlay.skyBottom.boat_img} className='boat__animation2'>
+                poster={urlConstant.imageGamePlay.skyBottom.boatImg} className='boat__animation2'>
                 <source src={urlConstant.imageGamePlay.skyBottom.boat} type="video/mp4" />
             </video>
             <video
                 autoPlay playsInline loop preload='metadata'
-                poster={urlConstant.imageGamePlay.skyBottom.boat_img} className='boat__animation1'>
+                poster={urlConstant.imageGamePlay.skyBottom.boatImg} className='boat__animation1'>
                 <source src={urlConstant.imageGamePlay.skyBottom.boat} type="video/mp4" />
             </video>
             <div className='sailboat'>

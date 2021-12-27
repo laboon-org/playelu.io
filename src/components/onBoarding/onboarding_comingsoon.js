@@ -4,6 +4,7 @@ import OnBoardingTip from './OnBoarding_tip'
 
 
 export default function OnboardingComingsoon(props) {
+    const { classNames } = props
 
     return (
         <div className='onBoarding'>
@@ -15,7 +16,7 @@ export default function OnboardingComingsoon(props) {
                     title={props.title}
                     tip={2}
                 />
-                <div className='onBoarding__versus-content'>
+                <div className={(classNames && classNames.parent) ? classNames.parent : 'onBoarding__versus-content'}>
                     <h2 className='onBoarding__versus-text'>coming soon</h2>
                     <div className='image-comingsoon'>
                         <img src={urlConstant.imageGamePlay.popupDrop.coomingsoon} alt='' />

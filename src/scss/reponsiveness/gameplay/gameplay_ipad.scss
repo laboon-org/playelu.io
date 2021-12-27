@@ -79,29 +79,6 @@
       flex: 1;
     }
   }
-  .square {
-    margin: auto;
-    width: 5px;
-    height: 5px;
-    background: #ffe552;
-  }
-  .circle {
-    margin: auto;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    margin-left: 3px;
-    background: #ffe552;
-  }
-  .triangle {
-    margin: auto;
-    margin-left: 3px;
-    width: 0;
-    height: 0;
-    border-bottom: 5px solid #ffe552;
-    border-left: 2.5px solid transparent;
-    border-right: 2.5px solid transparent;
-  }
   // Start board-type scss
   .board_type {
     display: flex;
@@ -182,6 +159,9 @@
         }
       }
     }
+  }
+  .ag-number_light {
+    height: 35vh !important;
   }
   // End nest onBoarding scss
 }

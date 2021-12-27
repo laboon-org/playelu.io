@@ -15,7 +15,9 @@ export default function NestOnBoarding(props) {
                     <OnBoardingElementLeft />
                     <OnBoardingElementRight />
                 </div>
-                <OnboardingComingsoon title='racing' />
+                <OnboardingComingsoon title='racing' classNames={{
+                    parent: 'onBoarding__versus-content border'
+                }} />
                 <div className='onBoarding-btn_close nest-btn_close ' onClick={() => {
                     closeNest()
                 }}>

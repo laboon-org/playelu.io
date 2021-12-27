@@ -27,21 +27,21 @@ export default function Drop_onboarding(props) {
                             <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popupDrop.competing} alt='' />
                             <div className='board_type competing'>
                                 <div className='board_type-element active'>
-                                    <img src={urlConstant.imageGamePlay.popupDrop.board_type_1} alt="" />
+                                    <img src={urlConstant.imageGamePlay.popupDrop.boardType1} alt="" />
                                     <div className='board_type-content'>
                                         <div className='square'></div>
                                         <span>box</span>
                                     </div>
                                 </div>
                                 <div className='board_type-element'>
-                                    <img src={urlConstant.imageGamePlay.popupDrop.board_type_4} alt="" />
+                                    <img src={urlConstant.imageGamePlay.popupDrop.boardType4} alt="" />
                                     <div className='board_type-content'>
                                         <div className='circle'></div>
                                         <span>hex</span>
                                     </div>
                                 </div>
                                 <div className='board_type-element'>
-                                    <img src={urlConstant.imageGamePlay.popupDrop.board_type_5} alt="" />
+                                    <img src={urlConstant.imageGamePlay.popupDrop.boardType5} alt="" />
                                     <div className='board_type-content'>
                                         <div className='triangle'></div>
                                         <span>tria</span>
@@ -59,24 +59,24 @@ export default function Drop_onboarding(props) {
                             tip={1}
                         />
                         <div className='onBoarding__element-content content-right'>
-                            <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popupDrop.Hunt_Hex_Board} alt='' />
+                            <img className='onBoarding__element-img' src={urlConstant.imageGamePlay.popupDrop.HuntHexBoard} alt='' />
                             <div className='board_type hunting'>
                                 <div className='board_type-element'>
-                                    <img src={urlConstant.imageGamePlay.popupDrop.board_type_3} alt="" />
+                                    <img src={urlConstant.imageGamePlay.popupDrop.boardType3} alt="" />
                                     <div className='board_type-content'>
                                         <div className='square'></div>
                                         <span>box</span>
                                     </div>
                                 </div>
                                 <div className='board_type-element active'>
-                                    <img src={urlConstant.imageGamePlay.popupDrop.board_type_2} alt="" />
+                                    <img src={urlConstant.imageGamePlay.popupDrop.boardType2} alt="" />
                                     <div className='board_type-content'>
                                         <div className='circle'></div>
                                         <span>hex</span>
                                     </div>
                                 </div>
                                 <div className='board_type-element'>
-                                    <img src={urlConstant.imageGamePlay.popupDrop.board_type_5} alt="" />
+                                    <img src={urlConstant.imageGamePlay.popupDrop.boardType5} alt="" />
                                     <div className='board_type-content'>
                                         <div className='triangle'></div>
                                         <span>tria</span>

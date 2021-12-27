@@ -21,7 +21,7 @@ export default function Navbar(props) {
                 aria-labelledby="example-custom-modal-styling-title"
             >
                 <div className='header__modal-navbar'>
-                    <img src={urlConstant.image.logo_mobile} alt="" />
+                    <img src={urlConstant.image.logoMobile} alt="" />
                     <div className='close__modal-navbar' onClick={() => handleClose()}>
                         <img src={urlConstant.image.modal.closeModal} alt="" />
                     </div>
