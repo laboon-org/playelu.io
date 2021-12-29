@@ -61,6 +61,7 @@
   }
   .woodsign-content {
     position: relative;
+
     .woodsign-text {
       position: absolute;
       top: 10%;
@@ -73,6 +74,7 @@
       align-items: center;
       img {
         width: 100%;
+        cursor: pointer;
       }
     }
   }

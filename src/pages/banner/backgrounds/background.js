@@ -1,26 +1,32 @@
 import React from 'react'
-import urlConstant from '../../../urlConstant'
 import BackgroundComet from "./bacgroundComet";
 import Stars from "./Stars";
 import BackgroundStar from "./backgroundStar";
 import BackgroundCloud from './backgroundCloud';
+import UrlRescusive from '../../../UrlRescusive';
+import _ from "lodash";
+
+
 import '../../../scss/home/backgroundHome.scss'
 
-export default function Background() {
+export default function Background(props) {
+    const { urlApi } = props
     return (
-        <div className='playelu-background'>
-            <BackgroundCloud />
-            <BackgroundComet />
-            <BackgroundStar />
-            <div className='shooting-star'>
-                <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-                <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-                <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-                <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-                <Stars imgUrl={urlConstant.image.homeBackground.star5} />
-                <Stars imgUrl={urlConstant.image.homeBackground.star5} />
+        <UrlRescusive data={props.urlApi}>
+            <div className='playelu-background'>
+                <BackgroundCloud />
+                <BackgroundComet />
+                <BackgroundStar />
+                <div className='shooting-star'>
+                    <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
+                    <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
+                    <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
+                    <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
+                    <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
+                    <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
+                </div>
+                {/* <CloudBottom /> */}
             </div>
-            {/* <CloudBottom /> */}
-        </div>
+        </UrlRescusive>
     )
 }

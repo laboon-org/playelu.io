@@ -1,36 +1,39 @@
 import React from 'react'
-import urlConstant from '../../../urlConstant'
+import _ from "lodash";
+
 
 const getRandomNumberMinMax = (min, max) => {
     return parseInt(Math.random() * 100 * min) % max + min
 }
-const comets = [
-    {
-        id: 1,
-        img: urlConstant.image.homeBackground.star5
-    },
-    {
-        id: 2,
-        img: urlConstant.image.homeBackground.star5
-    },
-    {
-        id: 3,
-        img: urlConstant.image.homeBackground.star5
-    },
-    {
-        id: 4,
-        img: urlConstant.image.homeBackground.star4
-    },
-    {
-        id: 5,
-        img: urlConstant.image.homeBackground.star5
-    },
-    {
-        id: 6,
-        img: urlConstant.image.homeBackground.star5
-    }
-]
-export default function BackgroundComet() {
+
+export default function BackgroundComet(props) {
+    const { urlApi } = props
+    const comets = [
+        {
+            id: 1,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5
+        },
+        {
+            id: 2,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5
+        },
+        {
+            id: 3,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5
+        },
+        {
+            id: 4,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star4
+        },
+        {
+            id: 5,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5
+        },
+        {
+            id: 6,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5
+        }
+    ]
     return (
         <div style={{ position: 'relative' }}>
             {

@@ -1,12 +1,14 @@
 import React from 'react'
-import urlConstant from '../urlConstant'
 import '../scss/component/launch_header.scss'
+import _ from "lodash";
 
-export default function LaunchHeader() {
+export default function LaunchHeader(props) {
+    const { urlApi } = props
+
     return (
         <div className='launch-header'>
             <div className='launch-header__content'>
-                <img className='launch-header__content-coin' src={urlConstant.imageGamePlay.skyTop.coinBoon} alt='' />
+                <img className='launch-header__content-coin' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.coinBoon} alt='' />
                 <a className='market' href=''>
                     <span>sdfggfsdgsdfgdgrefgrefgre</span>
                 </a>

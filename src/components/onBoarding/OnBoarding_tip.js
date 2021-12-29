@@ -1,11 +1,14 @@
 import React from 'react'
-import urlConstant from '../../urlConstant'
+import _ from "lodash";
+
+
 
 export default function OnBoardingTip(props) {
-    const { classNames, tip } = props
+    const { classNames, tip, urlApi } = props
     return (
+
         <div className={(classNames && classNames.parent) ? classNames.parent : 'onBoarding__element-tip'}>
-            <img src={urlConstant.imageGamePlay.popupDrop[`tip${tip}`]} alt='' />
+            <img src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop[`tip${tip}`]} alt='' />
             <div className='tip-title'>
                 <h4>{props.title}</h4>
             </div>

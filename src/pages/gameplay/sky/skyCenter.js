@@ -1,6 +1,8 @@
 import React, { useCallback, useState } from 'react'
-import urlConstant from '../../../urlConstant'
 import Drop_onboarding from '../drop_onboarding';
+import _ from "lodash";
+import UrlRescusive from '../../../UrlRescusive';
+
 
 window.addEventListener('scroll', zoom)
 function zoom() {
@@ -15,25 +17,26 @@ function zoom() {
     }
 }
 
-const listIslandUrl = [
-    {
-        url1: urlConstant.imageGamePlay.skyCenter.islandBlank1,
-        url2: urlConstant.imageGamePlay.skyCenter.fireIsland,
-        url3: urlConstant.imageGamePlay.skyCenter.fireIslandImg
-    },
-    {
-        url1: urlConstant.imageGamePlay.skyCenter.islandBlank2,
-        url2: urlConstant.imageGamePlay.skyCenter.fountain,
-        url3: urlConstant.imageGamePlay.skyCenter.fountainImg
-    },
-    {
-        url1: urlConstant.imageGamePlay.skyCenter.islandBlank3,
-        url2: urlConstant.imageGamePlay.skyCenter.islandWater,
-        url3: urlConstant.imageGamePlay.skyCenter.islandWaterImg
-    }
-]
-export default function SkyCenter() {
 
+export default function SkyCenter(props) {
+    const { urlApi } = props
+    const listIslandUrl = [
+        {
+            url1: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.islandBlank1,
+            url2: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.fireIsland,
+            url3: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.fireIslandImg
+        },
+        {
+            url1: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.islandBlank2,
+            url2: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.fountain,
+            url3: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.fountainImg
+        },
+        {
+            url1: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.islandBlank3,
+            url2: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.islandWater,
+            url3: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.islandWaterImg
+        }
+    ]
     const [dropShow, setDropShow] = useState(false);
     const onPressShowEluDrop = useCallback(() => {
         setDropShow(true);
@@ -62,26 +65,28 @@ export default function SkyCenter() {
         )
     })
     return (
-        <div>
-            <a href='#onboarding_drop-center'>
-                <div className='sky-center' id='drop'>
-                    <div className='island zoom'>
-                        {islands}
+        <UrlRescusive data={props.urlApi}>
+            <div>
+                <a href='#onboarding_drop-center'>
+                    <div className='sky-center' id='drop'>
+                        <div className='island zoom'>
+                            {islands}
+                        </div>
                     </div>
-                </div>
-                <div style={{ marginTop: 20, width: '100vw' }}>
-                    {
-                        !dropShow ? <div className="elu-btn drop-btn zoom" onClick={() => {
-                            onPressShowEluDrop();
-                        }}>
-                            <h2 id='drop_text'>DROP</h2>
+                    <div style={{ marginTop: 20, width: '100vw' }}>
+                        {
+                            !dropShow ? <div className="elu-btn drop-btn zoom" onClick={() => {
+                                onPressShowEluDrop();
+                            }}>
+                                <h2 id='drop_text'>DROP</h2>
 
-                            <div className='btn-shadow'><p>GAME FEATURES</p></div>
-                        </div> :
-                            <Drop_onboarding onPressHideEluDrop={onPressHideEluDrop} />
-                    }
-                </div>
-            </a>
-        </div>
+                                <div className='btn-shadow'><p>GAME FEATURES</p></div>
+                            </div> :
+                                <Drop_onboarding onPressHideEluDrop={onPressHideEluDrop} />
+                        }
+                    </div>
+                </a>
+            </div>
+        </UrlRescusive>
     )
 }

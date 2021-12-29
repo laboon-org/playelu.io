@@ -1,14 +1,19 @@
 import React from 'react'
 import OnBoardingTip from '../../../components/onBoarding/OnBoarding_tip'
-import urlConstant from '../../../urlConstant'
+import _ from "lodash";
+import UrlRescusive from '../../../UrlRescusive';
 
-export default function OnBoardingElementLeft() {
+
+export default function OnBoardingElementLeft(props) {
+    const { urlApi } = props
     return (
-        <div className='onBoarding__element'>
-            <OnBoardingTip title='battle' tip={2} />
-            <div className='onBoarding__element-content content-left'>
-                <img className='onBoarding__element-img border' src={urlConstant.imageGamePlay.popupNest.farming} alt='' />
+        <UrlRescusive data={props.urlApi}>
+            <div className='onBoarding__element'>
+                <OnBoardingTip title='battle' tip={2} />
+                <div className='onBoarding__element-content content-left'>
+                    <img className='onBoarding__element-img border' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.farming} alt='' />
+                </div>
             </div>
-        </div>
+        </UrlRescusive>
     )
 }

@@ -1,18 +1,20 @@
 import Modal from 'react-bootstrap/Modal';
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import urlConstant from '../../urlConstant';
+import _ from "lodash";
+
 
 import '../../scss/home/modalNavbar.scss'
 
 
 export default function Navbar(props) {
+    const { urlApi } = props
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     return (
         <div >
             <div className='navbar-btn' onClick={() => setShow(true)}>
-                <img src={urlConstant.image.navbarBtn} alt="" />
+                <img src={_.isEmpty(urlApi) ? '' : urlApi.image.navbarBtn} alt="" />
             </div>
             <Modal
                 show={show}
@@ -21,33 +23,33 @@ export default function Navbar(props) {
                 aria-labelledby="example-custom-modal-styling-title"
             >
                 <div className='header__modal-navbar'>
-                    <img src={urlConstant.image.logoMobile} alt="" />
+                    <img src={_.isEmpty(urlApi) ? '' : urlApi.image.logoMobile} alt="" />
                     <div className='close__modal-navbar' onClick={() => handleClose()}>
-                        <img src={urlConstant.image.modal.closeModal} alt="" />
+                        <img src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.closeModal} alt="" />
                     </div>
                 </div>
                 <div className='body__modal-navbar'>
                     <div className='modal-element'>
                         <a href="https://bit.ly/3qhqpf2" target='_blank'>
-                            <img src={urlConstant.image.modal.modalNavbarEle} alt="" />
+                            <img src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.modalNavbarEle} alt="" />
                             <h2>ROADMAP</h2>
                         </a>
                     </div>
                     <div className='modal-element'>
                         {/* <a href='https://bit.ly/3HIpdcy' target='_blank'> */}
-                        <img src={urlConstant.image.modal.modalNavbarEle} alt="" />
+                        <img src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.modalNavbarEle} alt="" />
                         <h2>TOKENOMIC</h2>
                         {/* </a> */}
                     </div>
                     <div className='modal-element'>
                         <Link to='/gameplay'>
-                            <img src={urlConstant.image.modal.modalNavbarEle} alt="" />
+                            <img src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.modalNavbarEle} alt="" />
                             <h2 style={{ color: '#fabb1a' }}>GAMEPLAY</h2>
                         </Link>
                     </div>
                     <div className='modal-element'>
                         <a href='https://bit.ly/elu-verse-litepaper' target='_blank'>
-                            <img src={urlConstant.image.modal.modalNavbarEle} alt="" />
+                            <img src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.modalNavbarEle} alt="" />
                             <h2>LITEPAPER</h2>
                         </a>
                     </div>

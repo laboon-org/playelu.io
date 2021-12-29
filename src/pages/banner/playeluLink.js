@@ -1,43 +1,42 @@
 import React from 'react'
-import urlConstant from '../../urlConstant'
+import _ from "lodash";
 
-
-
-function PlayeluLink() {
+function PlayeluLink(props) {
+    const { urlApi } = props
     const elementLinks = [
         {
             id: 1,
-            img: urlConstant.image.social.twitter,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.twitter,
             href: 'https://twitter.com/eluverse'
         },
         {
             id: 2,
-            img: urlConstant.image.social.graphic,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.graphic,
             href: 'https://discord.io/EluVerse'
         },
         {
             id: 3,
-            img: urlConstant.image.social.insta,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.insta,
             href: 'https://www.instagram.com/eluverse/ '
         },
         {
             id: 4,
-            img: urlConstant.image.social.facebook,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.facebook,
             href: 'https://www.facebook.com/EluVerse/'
         },
         {
             id: 5,
-            img: urlConstant.image.social.tele,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.tele,
             href: 'https://t.me/eluverse'
         },
         {
             id: 6,
-            img: urlConstant.image.social.opensea,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.opensea,
             href: 'https://opensea.io/eluverse'
         },
         {
             id: 7,
-            img: urlConstant.image.social.medium,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.medium,
             href: 'https://medium.com/@eluverse'
         }
     ]
@@ -50,9 +49,7 @@ function PlayeluLink() {
                             <img src={elementLink.img} alt="" />
                         </a>
                     </div>
-                )
-                )
-            }
+                ))}
         </div>
     )
 }

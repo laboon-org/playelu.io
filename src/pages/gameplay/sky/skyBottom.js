@@ -1,26 +1,27 @@
 import React from 'react'
 import '../../../scss/gameplay/skyScss/skyBottom.scss'
-import urlConstant from '../../../urlConstant'
+import _ from "lodash";
 
-export default function SkyBottom() {
+export default function SkyBottom(props) {
+    const { urlApi } = props
     return (
         <div className='skyBottom'>
             <video
                 autoPlay playsInline loop preload='metadata'
-                poster={urlConstant.imageGamePlay.skyBottom.boatImg} className='boat__animation2'>
-                <source src={urlConstant.imageGamePlay.skyBottom.boat} type="video/mp4" />
+                poster={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyBottom.boatImg} className='boat__animation2'>
+                <source src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyBottom.boat} type="video/mp4" />
             </video>
             <video
                 autoPlay playsInline loop preload='metadata'
-                poster={urlConstant.imageGamePlay.skyBottom.boatImg} className='boat__animation1'>
-                <source src={urlConstant.imageGamePlay.skyBottom.boat} type="video/mp4" />
+                poster={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyBottom.boatImg} className='boat__animation1'>
+                <source src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyBottom.boat} type="video/mp4" />
             </video>
             <div className='sailboat'>
                 <div className='sailboat-left'>
-                    <img src={urlConstant.imageGamePlay.skyBottom.sailboatLeft} alt="sailboat-left" />
+                    <img src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyBottom.sailboatLeft} alt="sailboat-left" />
                 </div>
                 <div className='sailboat-right'>
-                    <img src={urlConstant.imageGamePlay.skyBottom.sailboatRight} alt="sailboat-right" />
+                    <img src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyBottom.sailboatRight} alt="sailboat-right" />
                 </div>
             </div>
         </div>

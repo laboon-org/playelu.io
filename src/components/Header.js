@@ -1,23 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import urlConstant from '../urlConstant';
+import _ from "lodash";
 import '../scss/reponsiveness/home/home_Ipad.scss'
 import '../scss/reponsiveness/home/home_mobile.scss'
 
 
-export default function Header() {
+export default function Header(props) {
+    const { urlApi } = props
     return (
         <div className='header'>
             <ul className='menu'>
                 <li className='playelu__menu-element'>
                     <a href="https://bit.ly/3qhqpf2" target='_blank'>
-                        <img src={urlConstant.image.playeluHeader2} alt="" />
+                        <img src={_.isEmpty(urlApi) ? '' : urlApi.image.playeluHeader2} alt="" />
                         <h4 style={{ animation: 'shine 2.5s infinite linear' }}>Roadmap</h4>
                     </a>
                 </li>
                 <li className='playelu__menu-element'>
                     {/* <a href='https://bit.ly/3HIpdcy' target='_blank'> */}
-                    <img src={urlConstant.image.playeluHeader2} alt="" />
+                    <img src={_.isEmpty(urlApi) ? '' : urlApi.image.playeluHeader2} alt="" />
                     <h4 style={{ animation: 'shine 1.5s infinite linear' }}>Tokenomic</h4>
                     {/* </a> */}
                 </li>
@@ -28,13 +29,13 @@ export default function Header() {
                 </li>
                 <li className='playelu__menu-element'>
                     <Link to='/gameplay'>
-                        <img src={urlConstant.image.playeluHeader2} alt="" />
+                        <img src={_.isEmpty(urlApi) ? '' : urlApi.image.playeluHeader2} alt="" />
                         <h4 style={{ color: '#fabb1a', animation: 'shine 1s infinite linear' }}>gameplay</h4>
                     </Link>
                 </li>
                 <li className='playelu__menu-element'>
                     <a href='https://bit.ly/elu-verse-litepaper' target='_blank'>
-                        <img src={urlConstant.image.playeluHeader2} alt="" />
+                        <img src={_.isEmpty(urlApi) ? '' : urlApi.image.playeluHeader2} alt="" />
                         <h4 style={{ animation: 'shine 2s infinite linear' }}>Litepaper</h4>
                     </a>
                 </li>

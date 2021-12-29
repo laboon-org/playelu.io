@@ -28,7 +28,6 @@ export default function CloudBottom() {
                     <div className="background-bottom-cloud_background"></div>
                 </div>
             </div>
-            {/* <img className="background__bottom-img" src={urlConstant.image.backgroundBottom} alt="" /> */}
         </div>
     )
 }
