@@ -167,6 +167,10 @@
     cursor: pointer;
   }
 }
+.content-right:hover,
+.content-left:hover {
+  transform: scale(1.45);
+}
 
 .content-final {
   margin-top: 12.866%;
