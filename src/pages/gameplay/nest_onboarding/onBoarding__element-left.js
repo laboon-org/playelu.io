@@ -11,7 +11,7 @@ export default function OnBoardingElementLeft(props) {
             <div className='onBoarding__element'>
                 <OnBoardingTip title='battle' tip={2} />
                 <div className='onBoarding__element-content content-left'>
-                    <img className='onBoarding__element-img border' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.farming} alt='' />
+                    <img className='onBoarding__element-img border' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.battle} alt='' />
                 </div>
             </div>
         </UrlRescusive>
