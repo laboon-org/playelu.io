@@ -17,7 +17,7 @@ export default function OnBoardingElementRight(props) {
                     tip={1}
                 />
                 <div className='onBoarding__element-content content-right'>
-                    <img className='onBoarding__element-img border' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.farming} alt='' />
+                    <img className='onBoarding__element-img border' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.farming1} alt='' />
                 </div>
             </div>
         </UrlRescusive>

@@ -27,11 +27,28 @@ const Query = `
     }
   }
 `;
+const QueryFunction = `
+{
+  settings(){
+      key
+      value
+    }
+  }
+`;
 function App(props) {
   const [imgList, setImgList] = useState({});
   const isFirst = React.useRef(true)
 
-
+  const valueFunction = axios({
+    url: Queryimage,
+    method: "POST",
+    data: {
+      query: QueryFunction,
+    },
+  }).then((response) => {
+    let data1 = response.data.data.settings
+    console.log('data1', data1);
+  })
   if (isFirst.current == true) {
     isFirst.current = false
     const value = axios({
@@ -43,7 +60,6 @@ function App(props) {
     })
       .then((response) => {
         let data = response.data.data.dynamicContents
-
         const process = (obj, name, value) => {
           //Gia su name =[A,B,C]
           if (name.length == 1) {
@@ -73,14 +89,10 @@ function App(props) {
         const mainObj = {}
         for (var key = 0; key < data.length; key++) {
           const pack = data[key]
-
           const name = pack.key.split('_')
           const value = pack.value
-
           process(mainObj, name, value)
         }
-
-
         setImgList({ ...mainObj })
       })
   }
@@ -89,6 +101,7 @@ function App(props) {
     return (
       <UrlRescusive data={
         { ...imgList }
+
       }>
         <Comp />
       </UrlRescusive>

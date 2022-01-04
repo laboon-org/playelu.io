@@ -10,7 +10,7 @@ export default function LaunchHeader(props) {
             <div className='launch-header__content'>
                 <img className='launch-header__content-coin' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.coinBoon} alt='' />
                 <a className='market' href=''>
-                    <span>sdfggfsdgsdfgdgrefgrefgre</span>
+                    <span>0x4131e08486ed99fd17a5552479c298f68405f1f2</span>
                 </a>
             </div>
         </div>
