@@ -19,7 +19,7 @@ function opacity() {
     }
 }
 export default function Beach(props) {
-    const { urlApi } = props
+    const { urlApi, setting } = props
     const [nestShow, setNestShow] = useState(false)
     const onPressShowNest = () => {
         setNestShow(true)
@@ -28,7 +28,7 @@ export default function Beach(props) {
         setNestShow(false)
     })
     return (
-        <UrlRescusive data={props.urlApi}>
+        <UrlRescusive data={props}>
             <div className='beach' id='nest'>
                 <div className='ocean'>
                     <div className="ocean-container">
@@ -111,13 +111,22 @@ export default function Beach(props) {
                                     <img className='smoke' src='https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/light-blink/images/target-spiral.png' alt='' />
                                 </div>
                             </div>
-                            <div className='eluNest-btn' onClick={() => {
-                                onPressShowNest()
-                            }}> <div className='elu-btn nest-btn'>
-                                    <h2>NEST</h2>
-                                    <div className='btn-shadow'><p>GAME FEATURES</p></div>
-                                </div>
-                            </div>
+                            {
+                                setting.page_gameplay_section_nest_game_feature_enabled === true ? <div className='eluNest-btn' onClick={() => {
+                                    onPressShowNest()
+                                }}> <div className='elu-btn nest-btn'>
+                                        <h2>NEST</h2>
+                                        <div className='btn-shadow'><p>GAME FEATURES</p></div>
+                                    </div>
+                                </div> :
+                                    <div className='eluNest-btn'>
+                                        <div className='elu-btn nest-btn'>
+                                            <h2>NEST</h2>
+                                            <div className='btn-shadow'><p>GAME FEATURES</p></div>
+                                        </div>
+                                    </div>
+                            }
+
                         </div>
                     </div>
                     <div className='character opacity'>

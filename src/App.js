@@ -27,9 +27,9 @@ const Query = `
     }
   }
 `;
-const QueryFunction = `
+const querySetting = `
 {
-  settings(){
+  settings{
       key
       value
     }
@@ -37,21 +37,12 @@ const QueryFunction = `
 `;
 function App(props) {
   const [imgList, setImgList] = useState({});
+  const [setting, setSetting] = useState([]);
   const isFirst = React.useRef(true)
 
-  const valueFunction = axios({
-    url: Queryimage,
-    method: "POST",
-    data: {
-      query: QueryFunction,
-    },
-  }).then((response) => {
-    let data1 = response.data.data.settings
-    console.log('data1', data1);
-  })
   if (isFirst.current == true) {
     isFirst.current = false
-    const value = axios({
+    new Promise(resolve => axios({
       url: Queryimage,
       method: "POST",
       data: {
@@ -93,15 +84,39 @@ function App(props) {
           const value = pack.value
           process(mainObj, name, value)
         }
-        setImgList({ ...mainObj })
+
+
+        resolve({ ...mainObj })
+      })).then((img) => {
+        axios({
+          url: Queryimage,
+          method: "POST",
+          data: {
+            query: querySetting,
+          },
+        })
+          .then((response) => {
+            let data = response.data.data.settings
+            const setting = {}
+            for (var i = 0; i < data.length; i++) {
+              const pa = data[i]
+              const name = pa.key
+              const value = pa.value
+              setting[name] = value
+            }
+            setImgList(img)
+            setSetting(setting)
+          })
       })
   }
 
   const UrlRescusivePanel = ({ Comp }) => {
     return (
       <UrlRescusive data={
-        { ...imgList }
-
+        {
+          urlApi: imgList,
+          setting: setting
+        }
       }>
         <Comp />
       </UrlRescusive>

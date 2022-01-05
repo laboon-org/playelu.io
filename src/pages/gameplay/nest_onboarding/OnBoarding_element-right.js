@@ -7,7 +7,7 @@ import _ from "lodash";
 export default function OnBoardingElementRight(props) {
     const { urlApi } = props
     return (
-        <UrlRescusive data={props.urlApi}>
+        <UrlRescusive data={props}>
             <div className='onBoarding__element'>
                 <OnBoardingTip
                     classNames={{

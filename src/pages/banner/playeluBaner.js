@@ -11,9 +11,10 @@ import LaunchHeader from "../../components/launch_header";
 import Sound from "../../components/sound";
 
 export default function PlayeluBaner(props) {
-  const { urlApi } = props
+  const { urlApi, setting } = props
+  console.log('check123', setting.page_home_section_top_contract_address_enabled);
   return (
-    <UrlRescusive data={props.urlApi}>
+    <UrlRescusive data={props}>
       <div className='playelu-body'>
         <Cursor />
         <div className="discord">
@@ -23,7 +24,9 @@ export default function PlayeluBaner(props) {
           </a>
         </div>
         {/* ********Launch Header************ */}
-        {/* <LaunchHeader /> */}
+        {
+          setting.page_home_section_top_contract_address_enabled === true ? <LaunchHeader /> : ''
+        }
         <div className="playelu">
           <Background />
           <div className='navbar'>

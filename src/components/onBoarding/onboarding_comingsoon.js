@@ -8,7 +8,7 @@ export default function OnboardingComingsoon(props) {
     const { classNames, urlApi } = props
 
     return (
-        <UrlRescusive data={props.urlApi}>
+        <UrlRescusive data={props}>
             <div className='onBoarding'>
                 <div className='onBoarding__versus'>
                     <OnBoardingTip

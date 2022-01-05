@@ -7,7 +7,7 @@ import UrlRescusive from '../../../UrlRescusive';
 export default function OnBoardingElementLeft(props) {
     const { urlApi } = props
     return (
-        <UrlRescusive data={props.urlApi}>
+        <UrlRescusive data={props}>
             <div className='onBoarding__element'>
                 <OnBoardingTip title='battle' tip={2} />
                 <div className='onBoarding__element-content content-left'>

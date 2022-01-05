@@ -43,7 +43,7 @@ export default function Content(props) {
         onPress()
     }
     return (
-        <UrlRescusive data={props.urlApi}>
+        <UrlRescusive data={props}>
             <Modal
                 size="lg"
                 dialogClassName="modal-thankyou"

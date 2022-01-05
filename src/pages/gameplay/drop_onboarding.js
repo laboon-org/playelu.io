@@ -11,7 +11,7 @@ import UrlRescusive from '../../UrlRescusive'
 export default function Drop_onboarding(props) {
     const { onPressHideEluDrop, urlApi } = props
     return (
-        <UrlRescusive data={props.urlApi}>
+        <UrlRescusive data={props}>
             <div className="sky-center_onBoarding">
                 <div className='onBoarding-frame'>
                     <div className='onBoarding__title'>

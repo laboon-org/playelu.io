@@ -8,7 +8,7 @@ import UrlRescusive from '../../../UrlRescusive';
 
 
 export default function SkyTop(props) {
-    const { urlApi } = props
+    const { urlApi, setting } = props
     const [showPopup, setShowPopup] = useState(false);
     const handleClosePopup = () => setShowPopup(false);
     const handleShowPopup = () => setShowPopup(true);
@@ -16,7 +16,7 @@ export default function SkyTop(props) {
         handleShowPopup()
     }
     return (
-        <UrlRescusive data={props.urlApi}>
+        <UrlRescusive data={props}>
             <div className='sky-top'>
                 <Modal
                     size="lg"
@@ -56,10 +56,17 @@ export default function SkyTop(props) {
                             <img className="gameplay__boonmoon-img" src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.boonMoon} alt="" />
                         </Link>
                     </div>
-                    <div className='gameplay__selection-img' onClick={onPressPopup}>
-                        <img className='shadow-stone shadow-stone-3' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.shadowStone} alt="" />
-                        <img src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.scout} alt="" />
-                    </div>
+                    {
+                        setting.page_gameplay_section_scout_game_feature_enabled === true ? <div className='gameplay__selection-img' onClick={onPressPopup}>
+                            <img className='shadow-stone shadow-stone-3' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.shadowStone} alt="" />
+                            <img src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.scout} alt="" />
+                        </div> :
+                            <div className='gameplay__selection-img'>
+                                <img className='shadow-stone shadow-stone-3' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.shadowStone} alt="" />
+                                <img src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.scout} alt="" />
+                            </div>
+                    }
+
                     <div className='gameplay__selection-img' onClick={onPressPopup}>
                         <img className='shadow-stone shadow-stone-4' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.shadowStone} alt="" />
                         <img src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.metaVerse} alt="" />

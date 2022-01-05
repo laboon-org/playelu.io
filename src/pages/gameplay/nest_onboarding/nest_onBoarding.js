@@ -8,7 +8,7 @@ import _ from "lodash";
 export default function NestOnBoarding(props) {
     const { closeNest, urlApi } = props
     return (
-        <UrlRescusive data={props.urlApi}>
+        <UrlRescusive data={props}>
             <div className='nest-frame'>
                 <div className='nest_onBoarding-title'>
                     <h4>nest - gameplay</h4>

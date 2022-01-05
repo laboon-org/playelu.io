@@ -28,15 +28,18 @@ function reveal() {
 }
 
 export default function Gameplay(props) {
-    const { urlApi } = props
+    const { urlApi, setting } = props
     return (
-        <UrlRescusive data={props.urlApi}>
+        <UrlRescusive data={props}>
             <div className='gameplay-body'>
                 <audio className="audio_gameplay" autoPlay loop preload='metadata' >
                     <source src="https://storage.googleapis.com/laboon-img-storage/play-elu/soundtrack-bg/soundtrack_bg2.mp3" type="audio/mpeg" />
                 </audio>
                 <Cursor />
-                {/* <LaunchHeader /> */}
+                {/* ********Launch Header************ */}
+                {
+                    setting.page_home_section_top_contract_address_enabled === true ? <LaunchHeader /> : ''
+                }
                 <div className='sky'>
                     {/* <div className='box'> */}
                     <SkyTop />
