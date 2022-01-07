@@ -30,16 +30,16 @@ export default function Navbar(props) {
                 </div>
                 <div className='body__modal-navbar'>
                     <div className='modal-element'>
-                        <a href="https://bit.ly/3qhqpf2" target='_blank'>
+                        <a href={_.isEmpty(urlApi) ? '' : urlApi.docs.roadmap} target='_blank'>
                             <img src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.modalNavbarEle} alt="" />
                             <h2>ROADMAP</h2>
                         </a>
                     </div>
                     <div className='modal-element'>
-                        {/* <a href='https://bit.ly/3HIpdcy' target='_blank'> */}
-                        <img src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.modalNavbarEle} alt="" />
-                        <h2>TOKENOMIC</h2>
-                        {/* </a> */}
+                        <a href={_.isEmpty(urlApi) ? '' : urlApi.docs.tokenomic} target='_blank'>
+                            <img src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.modalNavbarEle} alt="" />
+                            <h2>TOKENOMIC</h2>
+                        </a>
                     </div>
                     <div className='modal-element'>
                         <Link to='/gameplay'>
@@ -48,7 +48,7 @@ export default function Navbar(props) {
                         </Link>
                     </div>
                     <div className='modal-element'>
-                        <a href='https://bit.ly/elu-verse-litepaper' target='_blank'>
+                        <a href={_.isEmpty(urlApi) ? '' : urlApi.docs.litepaper} target='_blank'>
                             <img src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.modalNavbarEle} alt="" />
                             <h2>LITEPAPER</h2>
                         </a>
