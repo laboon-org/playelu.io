@@ -6,9 +6,13 @@ import Modal from './Modal'
 
 import ModalSucceed from './ModalSucceed'
 import wallet from '../../../module/wallet'
-
+import Connector from './Connector'
 
 export default function BodyRight(props) {
+    //* Context web3
+    
+
+
     //* Props
     const { onShowNotfound } = props
 
@@ -58,8 +62,13 @@ export default function BodyRight(props) {
                         {/* Login with truth wallet */}
                         <Login
                             // icon={url.icon.trust_wallet}
-                            title='Login with Trust Wallet'
+                            title='Login with CoinBase'
                             onPressShow={async () => await connectWallet('coinbase')} />
+                        <Login
+                            // icon={url.icon.trust_wallet}
+                            title='Login with WalletConnect'
+                            onPressShow={async () => await connectWallet('coinbase')} />
+                        <Connector></Connector>    
                     </div>
                     :
                     <Contribute onShowModal={onShowModal} />

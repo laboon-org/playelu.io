@@ -2,10 +2,15 @@ import Web3 from 'web3';
 import message from '../constant/message';
 import language from './language';
 import detectEthereumProvider from '@metamask/detect-provider'
+import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
+import { WalletLinkConnector } from '@web3-react/walletlink-connector'
+import setting from '../constant/setting';
+
 
 const wallet_support = {
     metamask: true,
-    coinbase: true
+    coinbase: true,
+    walletConnect: true
 }
 class wallet {
 
@@ -27,7 +32,7 @@ class wallet {
     async connectWallet() {
         switch (this.wallet_name) {
             case 'metamask': {
-                const provider = await detectEthereumProvider();
+                const provider = await detectEthereumProvider({ mustBeMetaMask: true });
                 if (provider) {
                     //* set Provider
                     this.provider = provider
@@ -47,31 +52,24 @@ class wallet {
             }
             case 'coinbase': {
 
-                const web3 = new Web3(Web3.givenProvider);
-                //console.log(web3.eth.metamask)
-                //const network = await web3.eth.net.getNetworkType();
-                console.log("PROVIDER:",web3.eth.currentProvider)
-                await new Promise(async (resolve)=>{
-                    web3.eth.getCoinbase((error,address)=>{
-                        if(error){
-                            throw error
-                        }
-                        this.account=address
-                        console.log('DDIAJ CHI:',address)
-                        resolve(address)
-                    })
-                }).catch(err=>{
-                    console.log(err)
+
+                const coinBase = new WalletLinkConnector({
+                    url: setting.RPC_URLS.AVAX,
+                    appName: 'web3-react example',
+                    supportedChainIds: [1, 3, 4, 5, 42, 10, 137, 69, 420, 80001]
                 })
-              
-                // const accounts = (await web3.eth.requestAccounts());
-               
-                // this.account = accounts[0]
 
                 return {
                     isValid: true
                 }
                 break;
+            }
+            case 'walletConnect': {
+                const walletconnect = new WalletConnectConnector({
+                    rpc: { 1: setting.RPC_URLS.AVAX, },
+                    qrcode: true
+                })
+                break
             }
             default: {
 
