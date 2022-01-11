@@ -3,6 +3,7 @@ import React, { useState, useCallback } from 'react'
 import axios from 'axios'
 import ModalSucceed from '../ModalSucceed'
 import wallet from '../../../../module/wallet'
+import ModalFail from '../ModalFail'
 
 
 export default function Contribute(props) {
@@ -141,7 +142,8 @@ export default function Contribute(props) {
                             </div>
                         </div>
                     </div> :
-                    <ModalSucceed />
+                    <ModalFail />
+                // <ModalSucceed />
             }
 
         </div>

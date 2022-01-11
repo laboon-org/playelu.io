@@ -52,13 +52,13 @@ export default function BodyRight(props) {
                     <div className='body-right'>
                         {/* Login with metamask */}
                         <Login
-                            // icon={url.icon.metamask}
+                            icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp'
                             title='Login with MetaMask'
                             onPressShow={async () => await connectWallet('metamask')} />
                         {/* Login with truth wallet */}
                         <Login
-                            // icon={url.icon.trust_wallet}
-                            title='Login with Trust Wallet'
+                            icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/coinbase.png'
+                            title='Login with Coinbase'
                             onPressShow={async () => await connectWallet('coinbase')} />
                     </div>
                     :

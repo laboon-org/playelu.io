@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
-
 *{
     padding: 0;
     margin: 0;
@@ -13,6 +12,7 @@ a{
     color: #EFA059;
 }
 .sale{
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -138,10 +138,9 @@ a{
     width: 100%;
     height: 80px;
     margin: 40px auto;
-    background: linear-gradient(#1F5097,#3EA0D3);
+    background: #63A8CF;
     border-radius: 16px;
-    outline: none;
-    border: none;
+    border: 4px solid rgba(24, 23, 23, 0.8);
     cursor: pointer;
 }
 .login-frame{
@@ -270,7 +269,8 @@ a{
 }
 
 /* CSS MODAL SUCCEED */
-.modal-succeed{
+.modal-succeed,
+.modal-fail{
     width: calc(100% - 60px);
     margin: 30px auto;
     display: flex;
@@ -279,31 +279,30 @@ a{
     font-family: 'Raleway', sans-serif;
 }
 
-.modal-content{
+.modal__sale-content{
     display: flex;
     margin-bottom: 10px;
     align-items: center;
 }
 
-.modal-content__text{
+.modal__sale-content__text{
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.modal-heading{
+.modal-succeed-heading{
     text-align: center;
-    color: #EFA059;
+    color: #FDCD2F;
     font-size: 28px;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.modal-sub{
+.modal__sale-sub{
     color: #ffff;
     font-size: 24px;
-    text-align: center;
 }
 
 .modal-succeed__img{
@@ -326,9 +325,12 @@ a{
     letter-spacing: 1px;
     text-align: center;
 }
+.link-gameplay{
+    color: #FDCD2F;
+}
 
 /* CSS MODAL */
-.modal{
+.modal__sale{
     position: fixed;
     top: 0;
     left: 0;
@@ -338,7 +340,7 @@ a{
     display: flex;
     align-items: center;
 }
-.modal-frame{
+.modal__sale-frame{
     width: 860px;
     height: 655px;
     margin: auto;
@@ -350,10 +352,10 @@ a{
     background: linear-gradient(#1F4F96,#3FA2D4);
     font-family: 'Raleway', sans-serif;
 }
-.modal-img{
+.modal__sale-img{
     width: 60%;
 }
-.modal-title{
+.modal__sale-title{
     color: #fff;
     text-transform: uppercase;
     font-size: 48px;

@@ -52,6 +52,7 @@
     .login{
         height: 60px;
         margin: 10px auto;
+        border: 2px solid rgba(24, 23, 23, 0.8);
         border-radius: 12px;
     }
     .login-title{
@@ -143,5 +144,29 @@
     padding: 4px 11px;
     margin-top: 10px;
     border-radius: 6px;
+}
+
+// CSS 
+.modal-succeed-btn{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.modal-succeed,.modal-fail {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+}
+.modal-succeed-heading{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.modal__sale-sub{
+    font-size: 14px;
+}
+.modal-succeed__img{
+    width: 90px;
+    height: 69.85px;
+}
+.link-gameplay{
+font-size: 14px;
 }
 }
