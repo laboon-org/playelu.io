@@ -10,7 +10,7 @@ import Connector from './Connector'
 
 export default function BodyRight(props) {
     //* Context web3
-    
+
 
 
     //* Props
@@ -64,7 +64,7 @@ export default function BodyRight(props) {
                             icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/coinbase.png'
                             title='Login with Coinbase'
                             onPressShow={async () => await connectWallet('coinbase')} />
-                        <Connector></Connector>    
+                        <Connector></Connector>
                     </div>
                     :
                     <Contribute onShowModal={onShowModal} />

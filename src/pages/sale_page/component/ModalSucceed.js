@@ -8,10 +8,10 @@ export default function ModalSucceed() {
                 succeeded
             </span>
             <div className='modal__sale-content'>
+                <img className='modal-succeed__img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/pig.webp' />
                 <span className='modal__sale-sub'>
                     Congratulations on your successful purchase of 10.000 $BOON, for 500 AVAX, in the "Seed" round.
                 </span>
-                <img className='modal-succeed__img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/pig.webp' />
             </div>
             <a
                 className='link-gameplay'
