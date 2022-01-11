@@ -4,6 +4,7 @@ import UrlRescusive from './UrlRescusive';
 
 import './App.css';
 import './scss/home/playeluHome.scss'
+import './scss/sale_page/style.scss'
 import React from 'react';
 import {
   Routes,

@@ -67,11 +67,6 @@ export default function Connector() {
                     }}
                 >
                     {activating && <Spinner color={'black'} style={{ height: '25%', marginLeft: '-1rem' }} />}
-                    {/* {connected && (
-                        <span role="img" aria-label="check">
-                            ✅
-                        </span>
-                    )} */}
                 </div>
                 Click here
             </button>
