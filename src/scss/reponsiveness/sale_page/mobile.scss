@@ -1,0 +1,147 @@
+@media screen and (max-width: 739.9px) {
+    .sale{
+        height: 100vh;
+        background: url('https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/Background-mobile.webp') no-repeat center /cover;
+    }
+    .header{
+        height: 50px;
+        border-bottom: 1px solid #fff;
+    }
+    .link-home{
+        width: 6%;
+        margin: 10px;
+    }
+    .home-icon{
+        width: 100%;
+    }
+    .boon-text {
+        margin: 0 6px;
+        margin-bottom: -2px;
+        font-size: 14px;
+    }
+    .seed {
+        margin: 0px 6px;
+        margin-bottom: -3px;
+        font-size: 18px;
+    }
+    .header-text{
+        font-size: 10px;
+    }
+    .gameplay-btn{
+        padding: 6px 0;
+        margin-right: 8px;
+        border-radius: 6px;
+    }
+    .gameplay-btn span{
+        font-size: 12px;
+    }
+    /* Sale body */
+    .sale-body{
+        justify-content: center;
+    }
+    .logo{
+        height: calc((100vh - 50px) / 2);
+    }
+    .logo-frame{
+        width: 80%;
+    }
+    .boon-coin{
+      margin-top: -16%;
+    }
+    /* Begin body-right */
+    .login{
+        height: 60px;
+        margin: 10px auto;
+        border-radius: 12px;
+    }
+    .login-title{
+        font-size: 22px;
+    }
+
+    /* CSS CONTRIBUTE */
+.contribute{
+    max-width: 400px;
+    max-height: 300px;
+    width: 100%;
+    border-radius: 30px;
+    border: 3px solid #205198;
+}
+.contribute-frame{
+    width: calc(100% - 20px);
+    margin: 10px auto;
+}
+.contribute-sec{
+    margin-bottom: 5px;
+}
+.contribute-title{
+    margin-bottom: 5px;
+}
+.contribute-title p{
+    font-size: 14px;
+}
+.contribute-title span{
+    font-size: 11px;
+}
+.input-text{
+    font-size: 11px;
+    padding: 10px;
+}
+.input-img{
+    width:6.4%;
+    top: 6px;
+}
+.contribute-btn{
+    width: 28%;
+    font-size: 12px;
+    padding: 10px 50px;
+    border-radius: 8px;
+}
+
+.contribute-information{
+    width: 70%;
+}
+
+.contribute-information .information{
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.link-playelu{
+    font-size: 9px;
+}
+
+/* CSS MODAL */
+.modal-frame{
+    width: 300px;
+    height: 239px;
+    border-radius: 10px;
+}
+.modal-title{
+    font-size: 22px;
+}
+
+.notfound{
+    width: 85%;
+    height: 80%;
+    margin: auto;
+}
+
+.notfound .login{
+    min-width: 250px;
+}
+
+.notfound-title{
+    font-size: 24px;
+}
+
+.notfound-sub{
+    font-size: 14px;
+}
+
+.modal-succeed-btn{
+    font-size: 16px;
+    padding: 4px 11px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+}

@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #EFA059;
+}
+.sale{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/Background.webp') no-repeat center /cover;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid #fff;
+}
+.link-home{
+    max-width: 50px;
+    width: 10%;
+    margin: 10px;
+    cursor: pointer;
+}
+.home-icon{
+    width: 100%;
+}
+.title{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.title-header{
+    font-family: 'Lilita One', cursive;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.title-header-1,.title-header-2{
+    display: flex;
+}
+.seed{
+    margin: 0 15px -7px 15px;
+    font-size: 46px;
+    text-transform: uppercase;
+    color: #3EA0D3;
+}
+.boon-text{
+    margin: 0 15px -3px 15px;
+    font-size: 34px;
+    color: #EFA059;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-end;
+}
+.header-text{
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.gameplay-btn{
+    max-width: 135px;
+    min-width: 70px;
+    width: 12%;
+    background: linear-gradient(#FF6F11,#FDDA34);
+    padding: 10px 0;
+    margin-right: 2%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+}
+.gameplay-btn span{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 21px;
+    color: #ffff;
+}
+/* Sale body */
+.sale-body{
+    max-width: 1920px;
+    max-height: 1113px;
+    width: 96%;
+    margin: auto;
+   flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.logo{
+    min-width: 220px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+.logo-frame{
+    width: 100%;
+    margin: auto;
+}
+.elu-logo{
+    width: 100%;
+}
+.boon-coin{
+    width: 70%;
+    margin-left: 12%;
+    margin-top: -10%;
+}
+/* Begin body-right */
+.body-right{
+    min-width: 300px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    min-width: 300px;
+    max-width: 450px;
+    width: 100%;
+    height: 80px;
+    margin: 40px auto;
+    background: linear-gradient(#1F5097,#3EA0D3);
+    border-radius: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.login-frame{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-title{
+    flex: 80%;
+    display: flex;
+    justify-content: left;
+    color: #fff;
+    font-size: 32px;
+    font-family: 'Alata', sans-serif;
+}
+.login-icon{
+    max-width: 40px;
+    width: 10%;
+    margin-right: 4%;
+}
+
+/* CSS CONTRIBUTE */
+.contribute{
+    min-width: 300px;
+    width: 55%;
+    background: rgba(24, 23, 23, 0.6);
+    border: 4px solid #205198;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+.contribute-frame{
+    width: calc(100% - 60px);
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contribute-sec{
+    margin-bottom: 20px;
+}
+.contribute-title{
+    color: #EFA059;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.contribute-title p{
+    font-size: 18px;
+}
+.contribute-title span{
+    font-size: 14px;
+}
+.input{
+    position: relative;
+}
+.input{
+    width: 100%;
+    color: #ffff;
+    background: rgba(24, 23, 23, 0.6);
+    border-radius: 10px;
+    border: 1px solid #ffff;
+}
+.input-text{
+    width: calc(100% - 30px);
+    width: -moz-calc(100% - 30px);
+    width: -webkit-calc(100% - 30px);
+    font-size: 16px;
+    padding: 14px;
+    color: #ffff;
+    background: rgba(24, 23, 23, 0.6);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.input-img{
+    position: absolute;
+    max-width: 30px;
+    width: 10%;
+    top: 8px;
+    bottom: 0;
+    right: 10px;
+}
+
+.contribute-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.contribute-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 175px;
+    max-height: 55px;
+    background: linear-gradient(#1F4F96,#3FA2D4);
+    width: 27%;
+    font-size: 24px;
+    padding: 12px;
+    border-radius: 14px;
+    color: #ffff;
+    cursor: pointer;
+}
+
+.contribute-information{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contribute-information .information{
+    color: #EFA059;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.link-playelu{
+    color: #ffff;
+    font-size: 16px;
+}
+
+/* CSS MODAL SUCCEED */
+.modal-succeed{
+    width: calc(100% - 60px);
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+}
+
+.modal-content{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.modal-content__text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-heading{
+    text-align: center;
+    color: #EFA059;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-sub{
+    color: #ffff;
+    font-size: 24px;
+    text-align: center;
+}
+
+.modal-succeed__img{
+    width: 250px;
+    height: 194px;
+}
+
+.modal-succeed-btn{
+    max-width: 200px;
+    width: 50%;
+    margin: auto;
+    background: linear-gradient(#FF7212,#FDD632);
+    color: #ffff;
+    font-size: 26px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* CSS MODAL */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(24, 23, 23, 0.6);
+    display: flex;
+    align-items: center;
+}
+.modal-frame{
+    width: 860px;
+    height: 655px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 36px;
+    background: linear-gradient(#1F4F96,#3FA2D4);
+    font-family: 'Raleway', sans-serif;
+}
+.modal-img{
+    width: 60%;
+}
+.modal-title{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 48px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+
+/* CSS NOTFOUND */
+.notfound{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.notfound-img{
+    min-width: 220px;
+    width: 35%;
+}
+.notfound-text{
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    text-align: center;
+}
+.notfound-title{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.notfound-sub{
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    color: rgba(250, 244, 244, 0.6);
+}

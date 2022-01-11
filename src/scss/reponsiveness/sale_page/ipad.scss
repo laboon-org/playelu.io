@@ -1,0 +1,111 @@
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+    .boon-text {
+        margin: 0 7px -1px 7px;
+        font-size: 20px;
+    }
+    .seed {
+        margin: 0 7px -4px 7px;
+        font-size: 26px;
+    }
+    .header-text{
+        font-size: 16px;
+    }
+
+    .gameplay-btn{
+        padding: 8px 0;
+        margin-right: 10px;
+        border-radius: 6px;
+    }
+    .gameplay-btn span{
+        font-size: 16px;
+    }
+ 
+    .contribute{
+        border-radius: 35px;
+        border: 3px solid #205198;
+    }
+    .contribute-frame {
+        width: calc(100% - 40px);
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .contribute-btn{
+        width: 29%;
+        font-size: 15px;
+        padding: 10px 20px;
+        border-radius: 12px;
+    }
+    
+    .contribute-information{
+        width: 65%;
+    }
+    
+    .contribute-information .information{
+        font-size: 13px;
+    
+    }
+    
+    .link-playelu{
+        font-size: 12px;
+    }
+
+    .modal-frame{
+        width: 600px;
+        height: 457px;
+        border-radius: 24px;
+    }
+    .modal-title{
+        font-size: 35px;
+    }
+
+    .notfound-text{
+        font-size: 30px;
+    }
+
+    .modal-succeed-btn{
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    .modal-succeed {
+        width: calc(100% - 40px);
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: 'Raleway', sans-serif;
+    }
+    .modal-succeed__img{
+        width: 150px;
+        height: 116.4px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+    .boon-text {
+        margin: 0 7px -3px 7px;
+        font-size: 24px;
+    }
+    .seed {
+        margin: 0 7px -5px 7px;
+        font-size: 30px;
+    }
+    .header-text{
+        font-size: 20px;
+    }
+    .contribute{
+        border: 3px solid #205198;
+    }
+    .contribute-btn{
+        font-size: 19px;
+    }
+    .modal-frame{
+        width: 740px;
+        height: 563px;
+        border-radius: 30px;
+    }
+    .modal-title{
+        font-size: 45px;
+    }
+}
