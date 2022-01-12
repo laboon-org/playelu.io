@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import Contribute from './contribute/contribute'
-import Login from './login'
+import Login from './Login'
 import Modal from './Modal'
 // import url from '../constant/url'
 
@@ -53,6 +53,7 @@ export default function BodyRight(props) {
             {
                 !contributeShow
                     ?
+<<<<<<< HEAD
                     <div className='body-right'>
                         {/* Login with metamask */}
                         <Login
@@ -66,6 +67,9 @@ export default function BodyRight(props) {
                             onPressShow={async () => await connectWallet('coinbase')} />
                         <Connector></Connector>
                     </div>
+=======
+                        <Connector></Connector>    
+>>>>>>> 4f3b0fd3f7435542b9e7b58c7b2f7a88126bef33
                     :
                     <Contribute onShowModal={onShowModal} />
             }

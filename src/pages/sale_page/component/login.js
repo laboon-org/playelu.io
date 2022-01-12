@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Login(props) {
 
-    const { icon, title, onPressShow } = props
+    const { icon, title, onPressShow, renderConnecter } = props
 
     return (
         <button
@@ -19,6 +19,7 @@ export default function Login(props) {
                     {title}
                 </h4>
             </div>
+            {renderConnecter == null ? <></> : renderConnecter}
         </button >
     )
 }

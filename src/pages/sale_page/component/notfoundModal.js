@@ -1,5 +1,5 @@
 import React from 'react'
-import Login from './login'
+import Login from './Login.js'
 
 export default function NotfoundModal(props) {
     const { title } = props

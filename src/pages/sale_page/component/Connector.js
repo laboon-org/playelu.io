@@ -1,19 +1,37 @@
 
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useRef } from 'react'
 import { useEagerConnect, useInactiveListener } from './hooks'
 import { useWeb3React } from '@web3-react/core'
 import setting from '../../../constant/setting'
 
+import detectEthereumProvider from '@metamask/detect-provider'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 import Spinner from './Spinner'
+
+import connectorConst from './connector/connectorConst'
+import wallet from '../../../module/wallet'
+
+
+
+
+
 
 
 export default function Connector() {
     const context = useWeb3React()
     const { connector, library, chainId, account, activate, deactivate, active, error } = context
-    // handle logic to recognize the connector currently being activated
-    const [activatingConnector, setActivatingConnector] = React.useState()
+    const [activatingConnector, setActivatingConnector] = useState()
+    const isFirst = useRef(true)
+
+
+    if (isFirst.current) {
+        isFirst.current = false
+        if (deactivate) { deactivate() }
+        if(connector){
+            connector.close()
+        }
+    }
 
     React.useEffect(() => {
         if (activatingConnector && activatingConnector === connector) {
@@ -21,39 +39,94 @@ export default function Connector() {
         }
     }, [activatingConnector, connector])
 
-    // handle logic to eagerly connect to the injected ethereum provider, if it exists and has granted access already
     const triedEager = useEagerConnect()
 
-    // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
     useInactiveListener(!triedEager || !!activatingConnector)
-    const currentConnector = new WalletConnectConnector({
-        rpc: { 1: setting.RPC_URLS.AVAX, },
-        qrcode: true
-    })
-    const activating = currentConnector === activatingConnector
-    const connected = currentConnector === connector
-    //* State of button
-    const disabled = !triedEager || !!activatingConnector || connected || !!error
+    const Login = (props) => {
+        const { icon, title } = props
+        return (
+            <div className='login-frame'>
+                <img
+                    className='login-icon'
+                    src={icon}
+                    alt=''
+                />
+                <h4 className='login-title'>
+                    {title}
+                </h4>
+            </div>)
+    }
+    const connectMetaMask = async () => {
 
-    return (
-        <div style={{ flexDirection: 'column', display: 'flex' }}>
+        const provider = await detectEthereumProvider({ mustBeMetaMask: true });
+        if (provider) {
+            //* set Provider
+            //* getAccount
+
+            const account = (await provider.request({ method: 'eth_requestAccounts' }));
+            wallet.getInstance().setAddress(account[0])
+            wallet.getInstance().setWallet('metamask')
+            return {
+                isValid: true
+            }
+        } else {
+            return {
+                isValid: false,
+            }
+        }
+    }
+
+    const Web3Connector = (props) => {
+        const { wallet_name, icon, title } = props
+        return (
             <button
-                style={{
-                    height: '3rem',
-                    borderRadius: '1rem',
-                    borderColor: activating ? 'orange' : connected ? 'green' : 'unset',
-                    cursor: disabled ? 'unset' : 'pointer',
-                    position: 'relative'
+                className='login'
+                onClick={async () => {
+
+                    switch (wallet_name) {
+                        case 'metamask': {
+                            const result = await connectMetaMask()
+                            break;
+                        }
+                        default: {
+                            break;
+                        }
+                    }
                 }}
-                disabled={disabled}
-                key={'WalletConnect'}
+            >
+                <Login
+                    icon={icon}
+                    title={title}
+                />
+            </button>
+        )
+    }
+
+    const SetConnector = (props) => {
+        const { wallet_name, icon, title } = props
+        const currentConnector = connectorConst[wallet_name]
+
+        //* Đang được kích hoạt
+        const activating = currentConnector === activatingConnector
+
+        //* Check connect
+        const connected = currentConnector === connector
+
+        return (
+            <button
+                className='login'
                 onClick={() => {
                     setActivatingConnector(currentConnector)
                     activate(currentConnector)
-                    console.log('ACC', account)
                 }}
             >
-
+                <Login
+                    icon={icon}
+                    title={title}
+                />
+                {/* 
+                [TODO: Dũng] convert lại CSS này ra một file nào đó
+                */}
                 <div
                     style={{
                         position: 'absolute',
@@ -66,16 +139,35 @@ export default function Connector() {
                         margin: '0 0 0 1rem'
                     }}
                 >
-                    {activating && <Spinner color={'black'} style={{ height: '25%', marginLeft: '-1rem' }} />}
+                    {activating}
+                    {connected && (() => {
+                        wallet.getInstance().setAddress(account)
+                        wallet.getInstance().setWallet(wallet_name)
+                        console.log(account)
+                    })()}
                 </div>
-                Click here
-            </button>
-            <button onClick={() => {
-                console.log('ACC', account)
-            }}>
-                test
-            </button>
-        </div>
+            </button >
+        )
+    }
 
+
+    return (
+        <div className='body-right'>
+            <Web3Connector
+                icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp'
+                title='Login with Metamask'
+                wallet_name='metamask'
+            />
+            <SetConnector
+                icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/coinbase.png'
+                title='Login with Coinbase'
+                wallet_name='coinbase'
+            />
+            <SetConnector
+                icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/wallet.png'
+                title='Login with WalletConnect'
+                wallet_name='walletconnect'
+            />
+        </div >
     )
 }
