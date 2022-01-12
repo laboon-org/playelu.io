@@ -1,53 +1,66 @@
 @media screen and (max-width: 739.9px) {
-    .sale{
+    .sale {
         height: 100vh;
         background: url('https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/Background-mobile.webp') no-repeat center /cover;
     }
-    .header{
+
+    .header {
         height: 50px;
         border-bottom: 1px solid #fff;
     }
-    .link-home{
+
+    .link-home {
         width: 6%;
         margin: 10px;
     }
-    .home-icon{
+
+    .home-icon {
         width: 100%;
     }
+
     .boon-text {
         margin: 0 6px;
         margin-bottom: -2px;
         font-size: 14px;
     }
+
     .seed {
         margin: 0px 6px;
         margin-bottom: -3px;
         font-size: 18px;
     }
-    .header-text{
+
+    .header-text {
         font-size: 10px;
     }
-    .gameplay-btn{
+
+    .gameplay-btn {
         padding: 6px 0;
         margin-right: 8px;
         border-radius: 6px;
     }
-    .gameplay-btn span{
+
+    .gameplay-btn span {
         font-size: 12px;
     }
+
     /* Sale body */
-    .sale-body{
+    .sale-body {
         justify-content: center;
     }
-    .logo{
+
+    .logo {
         height: calc((100vh - 50px) / 2);
     }
-    .logo-frame{
+
+    .logo-frame {
         width: 80%;
     }
-    .boon-coin{
-      margin-top: -16%;
+
+    .boon-coin {
+        margin-top: -16%;
     }
+
     /* Begin body-right */
     .login{
         margin: 0 auto;
@@ -140,34 +153,5 @@
 }
 
 
-.modal-succeed-btn{
-    font-size: 16px;
-    padding: 4px 11px;
-    margin-top: 10px;
-    border-radius: 6px;
-}
 
-// CSS 
-.modal-succeed-btn{
-    font-size: 18px;
-    margin-top: 10px;
-}
-.modal-succeed,.modal-fail {
-    width: calc(100% - 20px);
-    margin: 10px auto;
-}
-.modal-succeed-heading{
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-.modal__sale-sub{
-    font-size: 14px;
-}
-.modal-succeed__img{
-    width: 90px;
-    height: 69.85px;
-}
-.link-gameplay{
-font-size: 14px;
-}
 }

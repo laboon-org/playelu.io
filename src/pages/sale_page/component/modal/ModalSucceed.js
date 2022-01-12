@@ -1,20 +1,25 @@
 import React from 'react'
-
+import './_modal.scss'
+import './_responsive.scss'
 export default function ModalSucceed() {
-
     return (
         <div className='modal-succeed'>
-            <span className='modal-succeed-heading'>
-                succeeded
+            <span className='modal-succeed__heading'>
+                succeeded!
             </span>
-            <div className='modal__sale-content'>
-                <img className='modal-succeed__img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/pig.webp' />
-                <span className='modal__sale-sub'>
+            <div className='modal-succeed__body'>
+                <img
+                    className='modal-succeed__body__img'
+                    src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/pig.webp'
+                    alt=''
+                />
+
+                <div className='modal-succeed__body__content'>
                     Congratulations on your successful purchase of 10.000 $BOON, for 500 AVAX, in the "Seed" round.
-                </span>
+                </div>
             </div>
             <a
-                className='link-gameplay'
+                className='modal_succeed__link-gameplay'
                 href='https://playelu.io/gameplay'
                 target="_blank"
                 rel="noreferrer"
@@ -23,7 +28,7 @@ export default function ModalSucceed() {
                     Link: https://playelu.io/gameplay#nest
                 </span>
             </a>
-            <div className='modal-succeed-btn'>
+            <div className='modal-succeed__btn'>
                 <span>ok</span>
             </div>
         </div>

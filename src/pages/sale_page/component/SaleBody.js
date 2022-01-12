@@ -1,10 +1,10 @@
 import React, { useState, useCallback } from 'react'
 import BodyRight from './bodyRight'
 import Logo from './logo'
-import NotfoundModal from './notfound_modal'
+import NotfoundModal from './notfoundModal'
 
 export default function SaleBody() {
-    const [notfound, setNotfound] = useState(true)
+    const [notfound, setNotfound] = useState(false)
     const onShowNotfound = useCallback(() => {
         setNotfound(true)
     })

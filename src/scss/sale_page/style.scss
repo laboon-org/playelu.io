@@ -4,26 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
 
-//* Define font
-@font-face {
-    font-family: "cookieRun_black";
-    src:url('./../../font/CookieRun/Black.otf');
-}
-@font-face {
-    font-family: "cookieRun_bold";
-    src:url('./../../font/CookieRun/Bold.otf');
-}
-
-@font-face {
-    font-family: "cookieRun_Regular";
-    src:url('./../../font/CookieRun/Regular.otf');
-}
-
 //* Setting Const
 $font_body:'cookieRun_Regular';
 $font_black:'cookieRun_black';
 $font_bold:'cookieRun_bold';
-
 
 a{
     text-decoration: none;
@@ -289,69 +273,6 @@ a{
     font-size: 16px;
 }
 
-/* CSS MODAL SUCCEED */
-.modal-succeed,
-.modal-fail{
-    width: calc(100% - 60px);
-    margin: 30px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family:$font_body, sans-serif;
-}
-
-.modal__sale-content{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    align-items: center;
-    align-items: center;
-}
-
-.modal__sale-content__text{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.modal-succeed-heading{
-    text-align: center;
-    color: #FDCD2F;
-    font-size: 28px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.modal__sale-sub{
-    color: #ffff;
-    font-size: 24px;
-}
-
-.modal-succeed__img{
-    width: 250px;
-    height: 194px;
-}
-
-.modal-succeed-btn{
-    max-width: 200px;
-    width: 50%;
-    margin: auto;
-    background: linear-gradient(#FF7212,#FDD632);
-    color: #ffff;
-    font-size: 26px;
-    padding: 10px 20px;
-    margin-top: 30px;
-    border-radius: 10px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-align: center;
-}
-.link-gameplay{
-    color: #FDCD2F;
-}
-
 /* CSS MODAL */
 .modal__sale{
     position: fixed;
@@ -400,6 +321,7 @@ a{
 .notfound__img{
     min-width: 140px;
     width: 35%;
+    height: auto;
 }
 .notfound__text{
     display: flex;

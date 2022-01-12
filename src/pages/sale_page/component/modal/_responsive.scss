@@ -1,0 +1,93 @@
+
+
+//* Mobile 
+@media screen and (max-width: 739.9px) {
+    .modal-succeed__btn {
+        font-size: 16px;
+        padding: 4px 11px;
+        margin-top: 10px;
+        border-radius: 6px;
+    }
+
+    .modal-succeed,
+    .modal-fail {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+        justify-content: center;
+    }
+
+    .modal-succeed__heading{
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+
+    .modal-succeed__body__content {
+        font-size: 14px;
+        width:auto;
+        text-align: center;
+    }
+    .modal-fail__body__content{
+        font-size: 14px;
+        width: calc(100% - 30px);
+        text-align: center;
+    }
+
+    .modal-succeed__body__img {
+        width: 140px;
+        height:auto;
+    }
+    .modal_succeed__link-gameplay{
+        font-size:14px
+    }
+
+
+}
+
+//* IPAD
+/*
+IPAD 
+- min-width: 740px
+- max-width: 1024px
+*/
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+    .modal-succeed__btn {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .modal-succeed,
+    .modal-fail {
+        width: calc(100% - 40px);
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .modal-succeed__body__content  {
+        font-size: 18px;
+        width: calc(calc(100% - 150px)) ;
+    }
+
+    .modal-succeed__body__img {
+        width: 150px;
+        height: 116.4px;
+    }
+    
+    .modal_succeed__link-gameplay{
+        font-size:18px
+    }
+
+    .modal-fail__body__content{
+        width: calc(100% - 180px);
+    }
+}
+
+/*
+IPAD 
+- min-width: 1024px
+- max-width: 1365px
+*/
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+
+}

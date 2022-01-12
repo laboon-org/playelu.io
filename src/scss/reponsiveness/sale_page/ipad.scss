@@ -55,25 +55,7 @@
         font-size: 30px;
     }
 
-    .modal-succeed-btn{
-        font-size: 24px;
-        margin-top: 20px;
-    }
-    .modal-succeed,.modal-fail {
-        width: calc(100% - 40px);
-        margin: 20px auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        font-family: 'Raleway', sans-serif;
-    }
-    .modal__sale-sub{
-        font-size: 18px;
-    }
-    .modal-succeed__img{
-        width: 150px;
-        height: 116.4px;
-    }
+
 
     // CSS NOTFOUND MODAL
     .notfound__btn{
@@ -85,6 +67,7 @@
     .notfound__btn-title{
         font-size: 20px;
     }
+
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1365px) {
