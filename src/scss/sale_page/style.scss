@@ -19,7 +19,7 @@ a{
     background: url('https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/Background.webp') no-repeat center /cover;
 }
 
-.header{
+.header-sale{
     display: flex;
     align-items: center;
     width: 100%;
@@ -187,16 +187,25 @@ a{
     margin-bottom: 20px;
 }
 .contribute-title{
-    color: #EFA059;
     display: flex;
     align-items: flex-end;
     margin-bottom: 10px;
     justify-content: space-between;
 }
 .contribute-title p{
+    color: #FDCD2F;
     font-size: 18px;
 }
-.contribute-title span{
+.contribute-title .wallet-name{
+    color: #E8821E;
+    font-size: 14px;
+}
+.contribute-title .avax-quantity{
+    color: #E84142;
+    font-size: 14px;
+}
+.contribute-title .boon-quantity{
+    color: #FED34E;
     font-size: 14px;
 }
 .input{
@@ -281,7 +290,9 @@ a{
 
 .modal__sale-content{
     display: flex;
+    justify-content: space-between;
     margin-bottom: 10px;
+    align-items: center;
     align-items: center;
 }
 
