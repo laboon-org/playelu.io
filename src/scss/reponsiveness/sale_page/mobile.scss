@@ -50,13 +50,29 @@
     }
     /* Begin body-right */
     .login{
-        height: 60px;
-        margin: 10px auto;
-        border: 2px solid rgba(24, 23, 23, 0.8);
+        margin: 0 auto;
+        height: 75px;
         border-radius: 12px;
     }
     .login-title{
-        font-size: 22px;
+        font-size: 21px;
+    }
+
+     // CSS NOTFOUND MODAL
+    .notfound__title{
+        font-size: 24px;
+    }
+        
+    .notfound__sub{
+        font-size: 16px;
+    }
+    .notfound__btn{
+         width: 300px;
+        height: 70px !important;
+    }
+        
+    .notfound__btn-title{
+        font-size: 16px;
     }
 
     /* CSS CONTRIBUTE */
@@ -90,22 +106,12 @@
 }
 .input-img{
     width:6.4%;
-    top: 6px;
 }
 .contribute-btn{
     width: 28%;
     font-size: 12px;
     padding: 10px 50px;
     border-radius: 8px;
-}
-
-.contribute-information{
-    width: 70%;
-}
-
-.contribute-information .information{
-    font-size: 10px;
-    margin-bottom: 5px;
 }
 
 .link-playelu{
@@ -133,13 +139,6 @@
     min-width: 250px;
 }
 
-.notfound-title{
-    font-size: 24px;
-}
-
-.notfound-sub{
-    font-size: 14px;
-}
 
 .modal-succeed-btn{
     font-size: 16px;

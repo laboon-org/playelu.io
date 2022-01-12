@@ -4,7 +4,6 @@ import axios from 'axios'
 import ModalSucceed from '../ModalSucceed'
 import wallet from '../../../../module/wallet'
 import ModalFail from '../ModalFail'
-import NotfoundModal from '../notfoundModal'
 
 
 export default function Contribute(props) {
@@ -15,7 +14,7 @@ export default function Contribute(props) {
     const [infoState, setInfoState] = useState(false)
     const [infoValue, setInfoValue] = useState("")
     //* Show form contribute or message
-    const [contribute, setContribute] = useState(false)
+    const [contribute, setContribute] = useState(true)
     const [succeed, setSucceed] = useState(false)
 
     const setValueDeposit = (amount) => {
@@ -71,7 +70,7 @@ export default function Contribute(props) {
                                                 value={wallet.getInstance().account}
                                                 readOnly={true}
                                             />
-                                            {/* <img className='input-img' src={url.icon.metamask} alt='' /> */}
+                                            <img className='input-img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp' alt='' />
                                         </div>
                                     </div>
                                     {/* Amount */}
@@ -102,7 +101,7 @@ export default function Contribute(props) {
 
                                                 }}
                                             />
-                                            {/* <img className='input-img' src={url.icon.boon} alt='' /> */}
+                                            <img className='input-img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp' alt='' />
                                         </div>
                                     </div>
                                     {/* Avax */}
@@ -119,7 +118,7 @@ export default function Contribute(props) {
                                                 readOnly={true}
                                                 value={deposit}
                                             />
-                                            {/* <img className='input-img' src={url.icon.avax} alt='' /> */}
+                                            <img className='input-img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/avax1-icon.webp' alt='' />
                                         </div>
                                     </div>
                                     <div
@@ -138,17 +137,6 @@ export default function Contribute(props) {
                                 </div> :
                                 <ModalSucceed />
                         }
-                        {/* Address wallet */}
-
-                        <div
-                            className='contribute-btn'
-                            //onClick={async () => await onPressContribute()}
-                            onClick={onShowModal}
-                        >
-                            <span>
-                                CONTRIBUTE
-                            </span>
-                        </div>
                     </div>
                     : TransactionResult(true)
 

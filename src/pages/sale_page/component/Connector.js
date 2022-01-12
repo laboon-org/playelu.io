@@ -45,6 +45,7 @@ export default function Connector(props) {
     const triedEager = useEagerConnect()
 
     useInactiveListener(!triedEager || !!activatingConnector)
+
     const Login = (props) => {
         const { icon, title } = props
         return (
@@ -59,6 +60,7 @@ export default function Connector(props) {
                 </h4>
             </div>)
     }
+
     const connectMetaMask = async () => {
         const provider = await detectEthereumProvider({ mustBeMetaMask: true });
         if (provider) {
@@ -81,10 +83,9 @@ export default function Connector(props) {
     const Web3Connector = (props) => {
         const { wallet_name, icon, title } = props
         return (
-            <button
+            <div
                 className='login'
                 onClick={async () => {
-
                     switch (wallet_name) {
                         case 'metamask': {
                             const result = await connectMetaMask()
@@ -106,7 +107,7 @@ export default function Connector(props) {
                     icon={icon}
                     title={title}
                 />
-            </button>
+            </div>
         )
     }
 

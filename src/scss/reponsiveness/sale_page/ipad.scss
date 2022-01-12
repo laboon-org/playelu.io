@@ -32,19 +32,10 @@
         justify-content: space-between;
     }
     .contribute-btn{
-        width: 29%;
-        font-size: 15px;
+        width: 50%;
+        font-size: 24px;
         padding: 10px 20px;
         border-radius: 12px;
-    }
-    
-    .contribute-information{
-        width: 65%;
-    }
-    
-    .contribute-information .information{
-        font-size: 13px;
-    
     }
     
     .link-playelu{
@@ -82,6 +73,17 @@
     .modal-succeed__img{
         width: 150px;
         height: 116.4px;
+    }
+
+    // CSS NOTFOUND MODAL
+    .notfound__btn{
+        height: 80px !important;
+    }
+    
+    .notfound__btn--content{
+    }
+    .notfound__btn-title{
+        font-size: 20px;
     }
 }
 
