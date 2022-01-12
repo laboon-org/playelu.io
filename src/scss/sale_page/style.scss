@@ -273,41 +273,6 @@ a{
     font-size: 16px;
 }
 
-/* CSS MODAL */
-.modal__sale{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(24, 23, 23, 0.6);
-    display: flex;
-    align-items: center;
-}
-.modal__sale-frame{
-    width: 860px;
-    height: 655px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 36px;
-    background: linear-gradient(#1F4F96,#3FA2D4);
-    font-weight: 100;
-    font-family: $font_body;
-}
-.modal__sale-img{
-    width: 60%;
-}
-.modal__sale-title{
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 48px;
-    letter-spacing: 1px;
-    font-weight: 700;
-}
-
 
 /* CSS NOTFOUND */
 .notfound{

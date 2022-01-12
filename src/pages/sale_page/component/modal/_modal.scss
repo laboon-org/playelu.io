@@ -1,22 +1,59 @@
-
 //* Const define
-$font_content:'cookieRun_Regular';
+$font_content: "cookieRun_Regular";
+$font_body: "cookieRun_Regular";
+$font_black: "cookieRun_black";
+$font_bold: "cookieRun_bold";
 
+/* CSS MODAL Inprocessing */
+.modal-sale {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(24, 23, 23, 0.6);
+    display: flex;
+    align-items: center;
+}
+.modal-sale-frame {
+    width: 860px;
+    height: 655px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 36px;
+    background: linear-gradient(#1f4f96, #3fa2d4);
+    font-weight: 600;
+    font-family: $font_black;
+}
+.modal-sale__img {
+    width: 60%;
+}
+.modal-sale__title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 48px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    -webkit-text-stroke: 2px black;
+}
 
 //* modal succeed
 
 .modal-succeed,
-.modal-fail{
+.modal-fail {
     width: calc(100% - 60px);
     margin: 30px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family:$font_content;
+    font-family: $font_content;
 }
 
-.modal-succeed__body{
+.modal-succeed__body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -25,35 +62,35 @@ $font_content:'cookieRun_Regular';
     align-items: center;
 }
 
-.modal-succeed__heading{
+.modal-succeed__heading {
     text-align: center;
-    color: #FDCD2F;
+    color: #fdcd2f;
     font-size: 32px;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.modal-succeed__body__content{
+.modal-succeed__body__content {
     color: #ffff;
     font-size: 24px;
-    width: calc(100% - 250px) ;
+    width: calc(100% - 250px);
 }
-.modal-fail__body__content{
+.modal-fail__body__content {
     color: #ffffff;
     font-size: 24px;
-    width: calc(100% - 250px) ;
+    width: calc(100% - 250px);
 }
 
 .modal-succeed__body__img {
     width: 250px;
-    height:auto;
+    height: auto;
 }
-.modal-succeed__btn{
+.modal-succeed__btn {
     max-width: 260px;
     width: 50vw;
     margin: auto;
-    background-image:  url('https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp');
+    background-image: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -67,7 +104,7 @@ $font_content:'cookieRun_Regular';
     letter-spacing: 1px;
     text-align: center;
 }
-.modal_succeed__link-gameplay{
-    color: #FDCD2F;
-    font-size:20px
+.modal_succeed__link-gameplay {
+    color: #fdcd2f;
+    font-size: 20px;
 }

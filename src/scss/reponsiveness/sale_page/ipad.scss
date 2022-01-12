@@ -7,20 +7,19 @@
         margin: 0 7px -4px 7px;
         font-size: 26px;
     }
-    .header-text{
+    .header-text {
         font-size: 16px;
     }
 
-    .gameplay-btn{
+    .gameplay-btn {
         padding: 8px 0;
         margin-right: 10px;
         border-radius: 6px;
     }
-    .gameplay-btn span{
+    .gameplay-btn span {
         font-size: 16px;
     }
- 
-    .contribute{
+    .contribute {
         border-radius: 35px;
         border: 3px solid #205198;
     }
@@ -31,43 +30,31 @@
         flex-direction: column;
         justify-content: space-between;
     }
-    .contribute-btn{
+    .contribute-btn {
         width: 50%;
         font-size: 24px;
         padding: 10px 20px;
         border-radius: 12px;
     }
-    
-    .link-playelu{
+
+    .link-playelu {
         font-size: 12px;
     }
 
-    .modal__sale-frame{
-        width: 600px;
-        height: 457px;
-        border-radius: 24px;
-    }
-    .modal__sale-title{
-        font-size: 35px;
-    }
-
-    .notfound-text{
+    .notfound-text {
         font-size: 30px;
     }
 
-
-
     // CSS NOTFOUND MODAL
-    .notfound__btn{
+    .notfound__btn {
         height: 80px !important;
     }
-    
-    .notfound__btn--content{
+
+    .notfound__btn--content {
     }
-    .notfound__btn-title{
+    .notfound__btn-title {
         font-size: 20px;
     }
-
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1365px) {
@@ -79,21 +66,21 @@
         margin: 0 7px -5px 7px;
         font-size: 30px;
     }
-    .header-text{
+    .header-text {
         font-size: 20px;
     }
-    .contribute{
+    .contribute {
         border: 3px solid #205198;
     }
-    .contribute-btn{
+    .contribute-btn {
         font-size: 19px;
     }
-    .modal-frame{
+    .modal-frame {
         width: 740px;
         height: 563px;
         border-radius: 30px;
     }
-    .modal-title{
+    .modal-title {
         font-size: 45px;
     }
 }

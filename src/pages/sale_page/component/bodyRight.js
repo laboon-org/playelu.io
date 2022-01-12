@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import Contribute from './contribute/contribute'
 import Login from './Login'
-import Modal from './Modal'
+import ModalInprocessing from './modal/ModalIprocessing'
 // import url from '../constant/url'
 
 import wallet from '../../../module/wallet'
@@ -46,7 +46,7 @@ export default function BodyRight(props) {
             {
                 modal
                     ?
-                    <Modal />
+                    <ModalInprocessing />
                     :
                     <></>
             }

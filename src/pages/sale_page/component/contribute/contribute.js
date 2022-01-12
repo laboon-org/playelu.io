@@ -16,7 +16,7 @@ export default function Contribute(props) {
     const [infoState, setInfoState] = useState(false)
     const [infoValue, setInfoValue] = useState("")
     //* Show form contribute or message
-    const [contribute, setContribute] = useState(false)
+    const [contribute, setContribute] = useState(true)
     const [succeed, setSucceed] = useState(false)
 
     const setValueDeposit = (amount) => {
