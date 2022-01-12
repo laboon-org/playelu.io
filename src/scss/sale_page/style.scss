@@ -2,6 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+
+//* Define font
+@font-face {
+    font-family: "cookieRun_black";
+    src:url('./../../font/CookieRun/Black.otf');
+}
+@font-face {
+    font-family: "cookieRun_bold";
+    src:url('./../../font/CookieRun/Bold.otf');
+}
+
+@font-face {
+    font-family: "cookieRun_Regular";
+    src:url('./../../font/CookieRun/Regular.otf');
+}
+
+//* Setting Const
+$font_body:'cookieRun_Regular';
+
+
 *{
     padding: 0;
     margin: 0;
@@ -86,7 +107,7 @@ a{
     justify-content: center;
 }
 .gameplay-btn span{
-    font-family: 'Raleway', sans-serif;
+    font-family: $font_body, sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 21px;
@@ -174,7 +195,7 @@ a{
     border-radius: 40px;
     display: flex;
     align-items: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: $font_body, sans-serif;
 }
 .contribute-frame{
     width: calc(100% - 60px);
@@ -285,7 +306,7 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: 'Raleway', sans-serif;
+    font-family:$font_body, sans-serif;
 }
 
 .modal__sale-content{
@@ -361,7 +382,8 @@ a{
     align-items: center;
     border-radius: 36px;
     background: linear-gradient(#1F4F96,#3FA2D4);
-    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-family: $font_body;
 }
 .modal__sale-img{
     width: 60%;
@@ -395,7 +417,7 @@ a{
     text-align: center;
 }
 .notfound-title{
-    font-family: 'Raleway', sans-serif;
+    font-family: $font_body, sans-serif;
     font-weight: 400;
     color: #fff;
     margin-bottom: 10px;
