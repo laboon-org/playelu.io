@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function ModalFail() {
+export default function ModalFail(props) {
+    const { message, forwardBack } = props
     return (
         <div className='modal-fail'>
             <span className='modal-succeed__heading'>
@@ -13,10 +14,15 @@ export default function ModalFail() {
                     alt=''
                 />
                 <span className='modal-fail__body__content'>
-                    Transaction error. Please try again.
+                    {message ? message : 'Transaction error. Please try again.'}
                 </span>
             </div>
-            <div className='modal-succeed__btn'>
+            <div
+                className='modal-succeed__btn'
+                onClick={()=>{
+                    forwardBack()
+                }}
+            >
                 <span>Try Again</span>
             </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react'
 import Contribute from './contribute/contribute'
-import Login from './Login'
 import Modal from './Modal'
 // import url from '../constant/url'
 

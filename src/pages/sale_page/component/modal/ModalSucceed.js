@@ -1,7 +1,8 @@
 import React from 'react'
 import './_modal.scss'
 import './_responsive.scss'
-export default function ModalSucceed() {
+export default function ModalSucceed(props) {
+    const { forwardBack } = props
     return (
         <div className='modal-succeed'>
             <span className='modal-succeed__heading'>
@@ -28,7 +29,12 @@ export default function ModalSucceed() {
                     Link: https://playelu.io/gameplay#nest
                 </span>
             </a>
-            <div className='modal-succeed__btn'>
+            <div
+                className='modal-succeed__btn'
+                onClick={() => {
+                    forwardBack()
+                }}
+            >
                 <span>ok</span>
             </div>
         </div>
