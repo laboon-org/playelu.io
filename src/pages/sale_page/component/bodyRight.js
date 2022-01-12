@@ -53,23 +53,7 @@ export default function BodyRight(props) {
             {
                 !contributeShow
                     ?
-<<<<<<< HEAD
-                    <div className='body-right'>
-                        {/* Login with metamask */}
-                        <Login
-                            icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp'
-                            title='Login with MetaMask'
-                            onPressShow={async () => await connectWallet('metamask')} />
-                        {/* Login with truth wallet */}
-                        <Login
-                            icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/coinbase.png'
-                            title='Login with Coinbase'
-                            onPressShow={async () => await connectWallet('coinbase')} />
-                        <Connector></Connector>
-                    </div>
-=======
-                        <Connector></Connector>    
->>>>>>> 4f3b0fd3f7435542b9e7b58c7b2f7a88126bef33
+                    <Connector></Connector>
                     :
                     <Contribute onShowModal={onShowModal} />
             }
