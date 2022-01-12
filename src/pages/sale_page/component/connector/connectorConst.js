@@ -13,7 +13,7 @@ const walletConnect = new WalletConnectConnector({
 
 //*Coin base
 const walletLink = new WalletLinkConnector({
-    url: 'https://mainnet.infura.io/v3/84842078b09946638c03157f83405213',
+    url: setting.RPC_URLS.AVAX,
     appName: 'presales',
     supportedChainIds: [1, 43114, 3, 4, 5, 42, 10, 137, 69, 420, 80001]
 })

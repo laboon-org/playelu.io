@@ -9,7 +9,7 @@ import setting from '../constant/setting';
 const wallet_support = {
     metamask: true,
     coinbase: true,
-    walletconnect: true
+    walletConnect: true
 }
 class wallet {
 
@@ -27,12 +27,10 @@ class wallet {
             this.wallet_name = wallet_name
         }
     }
-    setAddress(address) {
-        this.account = address
+    setAddress(address){
+        this.account=address
     }
-
-
-
+    
 }
 
 export default wallet

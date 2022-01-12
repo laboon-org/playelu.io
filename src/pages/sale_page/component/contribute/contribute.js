@@ -8,10 +8,12 @@ import ModalFail from '../ModalFail'
 
 export default function Contribute(props) {
     const { onShowModal } = props
+    //*State
     const [amount, setAmount] = useState("")
     const [deposit, setDeposit] = useState("")
     const [infoState, setInfoState] = useState(false)
     const [infoValue, setInfoValue] = useState("")
+    //* Show form contribute or message
     const [contribute, setContribute] = useState(true)
 
     const setValueDeposit = (amount) => {
@@ -37,7 +39,15 @@ export default function Contribute(props) {
 
         setInfoState(true)
     }
+    const TransactionResult = (result) => {
+        if (result) {
+            return (<ModalSucceed />)
+        } else {
+            return (<ModalFail />)
+        }
+    }
 
+    
     return (
         <div className='contribute'>
             {
@@ -141,9 +151,10 @@ export default function Contribute(props) {
                                 </span>
                             </div>
                         </div>
-                    </div> :
-                    <ModalFail />
-                // <ModalSucceed />
+                    </div> :TransactionResult(true)
+
+
+                // 
             }
 
         </div>

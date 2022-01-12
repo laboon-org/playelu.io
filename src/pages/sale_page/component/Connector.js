@@ -18,17 +18,20 @@ import wallet from '../../../module/wallet'
 
 
 
-export default function Connector() {
+export default function Connector(props) {
+
+    //* Props
+    const { showContributeForm, showModalFailed } = props
+
     const context = useWeb3React()
     const { connector, library, chainId, account, activate, deactivate, active, error } = context
     const [activatingConnector, setActivatingConnector] = useState()
     const isFirst = useRef(true)
 
-
     if (isFirst.current) {
         isFirst.current = false
         if (deactivate) { deactivate() }
-        if(connector){
+        if (connector) {
             connector.close()
         }
     }
@@ -57,13 +60,12 @@ export default function Connector() {
             </div>)
     }
     const connectMetaMask = async () => {
-
         const provider = await detectEthereumProvider({ mustBeMetaMask: true });
         if (provider) {
             //* set Provider
             //* getAccount
-
             const account = (await provider.request({ method: 'eth_requestAccounts' }));
+            console.log(account)
             wallet.getInstance().setAddress(account[0])
             wallet.getInstance().setWallet('metamask')
             return {
@@ -86,6 +88,12 @@ export default function Connector() {
                     switch (wallet_name) {
                         case 'metamask': {
                             const result = await connectMetaMask()
+                            if (result.isValid) {
+                                console.log("LOG HERE")
+                                showContributeForm()
+                            } else {
+                                showModalFailed()
+                            }
                             break;
                         }
                         default: {
@@ -143,7 +151,6 @@ export default function Connector() {
                     {connected && (() => {
                         wallet.getInstance().setAddress(account)
                         wallet.getInstance().setWallet(wallet_name)
-                        console.log(account)
                     })()}
                 </div>
             </button >
@@ -158,7 +165,9 @@ export default function Connector() {
                 title='Login with Metamask'
                 wallet_name='metamask'
             />
-            <SetConnector
+
+            {/* temp hide */}
+            {/* <SetConnector
                 icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/coinbase.png'
                 title='Login with Coinbase'
                 wallet_name='coinbase'
@@ -167,7 +176,7 @@ export default function Connector() {
                 icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/wallet.png'
                 title='Login with WalletConnect'
                 wallet_name='walletconnect'
-            />
+            /> */}
         </div >
     )
 }
