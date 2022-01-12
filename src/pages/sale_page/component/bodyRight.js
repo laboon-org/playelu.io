@@ -4,7 +4,6 @@ import Login from './Login'
 import Modal from './Modal'
 // import url from '../constant/url'
 
-import ModalSucceed from './ModalSucceed'
 import wallet from '../../../module/wallet'
 import Connector from './Connector'
 

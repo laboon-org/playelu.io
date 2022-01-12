@@ -1,10 +1,11 @@
 import React, { useState, useCallback } from 'react'
 // import url from '../../constant/url'
 import axios from 'axios'
-import ModalSucceed from '../ModalSucceed'
 import wallet from '../../../../module/wallet'
-import ModalFail from '../ModalFail'
+import ModalFail from '../modal/ModalFail'
 import NotfoundModal from '../notfoundModal'
+import ModalSucceed from '../modal/ModalSucceed'
+
 
 
 export default function Contribute(props) {
@@ -150,7 +151,7 @@ export default function Contribute(props) {
                             </span>
                         </div>
                     </div>
-                    : TransactionResult(true)
+                    : TransactionResult(false)
 
 
                 // 

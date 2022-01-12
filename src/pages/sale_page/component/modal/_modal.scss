@@ -1,0 +1,73 @@
+
+//* Const define
+$font_content:'cookieRun_Regular';
+
+
+//* modal succeed
+
+.modal-succeed,
+.modal-fail{
+    width: calc(100% - 60px);
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:$font_content;
+}
+
+.modal-succeed__body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+    align-items: center;
+}
+
+.modal-succeed__heading{
+    text-align: center;
+    color: #FDCD2F;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-succeed__body__content{
+    color: #ffff;
+    font-size: 24px;
+    width: calc(100% - 250px) ;
+}
+.modal-fail__body__content{
+    color: #ffffff;
+    font-size: 24px;
+    width: calc(100% - 250px) ;
+}
+
+.modal-succeed__body__img {
+    width: 250px;
+    height:auto;
+}
+.modal-succeed__btn{
+    max-width: 260px;
+    width: 50vw;
+    margin: auto;
+    background-image:  url('https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffff;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.modal_succeed__link-gameplay{
+    color: #FDCD2F;
+    font-size:20px
+}
