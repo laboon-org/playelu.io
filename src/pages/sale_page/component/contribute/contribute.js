@@ -250,9 +250,6 @@ export default function Contribute(props) {
                         </div>
                     </div>
                     : TransactionResult(stateTransaction)
-
-
-                // 
             }
 
         </div >
