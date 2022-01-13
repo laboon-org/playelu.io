@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import Contribute from './contribute/contribute'
 import Login from './Login'
-import ModalInprocessing from './modal/ModalIprocessing'
+import ModalInprocessing from './modal/ModalProcessing'
 // import url from '../constant/url'
 
 import wallet from '../../../module/wallet'
@@ -14,15 +14,15 @@ export default function BodyRight(props) {
 
     //* State
     const [contributeShow, setContributeShow] = useState(false)
-    const [modal, setModal] = useState(false)
+    const [modalProcessing, setModalProcessing] = useState(false)
 
     //* Function callback
     const onPressShow = useCallback(() => {
         setContributeShow(true)
     }, [])
 
-    const onShowModal = useCallback(() => {
-        setModal(true)
+    const onShowModalProcessing = useCallback(() => {
+        setModalProcessing(!modalProcessing)
     }, [])
 
 
@@ -37,19 +37,26 @@ export default function BodyRight(props) {
                             onPressShow()
                         }}
                         showModalFailed={() => {
-                            onShowModal()
+                            // onShowModal()
                         }}
+
                     ></Connector>
                     :
-                    <Contribute onShowModal={onShowModal} />
+                    <Contribute
+                        showLoading={() => {
+                            onShowModalProcessing()
+                        }}
+                    //onShowModal={onShowModal} 
+                    />
             }
             {
-                modal
+                modalProcessing
                     ?
                     <ModalInprocessing />
                     :
                     <></>
             }
+
         </React.Fragment>
     )
 }
