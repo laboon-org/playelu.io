@@ -1,5 +1,7 @@
 
 import React, { useState, useCallback, useRef } from 'react'
+import axios from 'axios'
+
 import { useEagerConnect, useInactiveListener } from './hooks'
 import { useWeb3React } from '@web3-react/core'
 import setting from '../../../constant/setting'
@@ -74,8 +76,51 @@ export default function Connector(props) {
                 isValid: true
             }
         } else {
+            //[TODO] check chain ID
             return {
                 isValid: false,
+                message:'TEST'
+            }
+        }
+    }
+    const getFailureMessage = (messageCode) => {
+        switch (messageCode) {
+            case 'NO_ADDRESS': {
+                return "Your Wallet Address isn't in WL"
+            }
+            default: {
+                return 'Unable to identify error'
+            }
+        }
+    }
+
+    const checkWallet = async () => {
+        try {
+            const SHEET_NAME = '1.Seed'
+            const URL = 'https://laboon.as.r.appspot.com/check_address'
+            const checkWallet = await axios.post(URL, {
+                "sheet_name": SHEET_NAME,
+                "address_wallet": wallet.getInstance().account,
+            }).then((res) => {
+                return res.data
+            }).catch(err => {
+                throw err
+            })
+            if (checkWallet.status != 200) {
+                return {
+                    isValid: false,
+                    message: getFailureMessage(checkWallet.message)
+                }
+            }
+            return {
+                isValid: true,
+                content: checkWallet.content
+            }
+        }
+        catch (err) {
+            return {
+                isValid: false,
+                message: 'Unable to identify error'
             }
         }
     }
@@ -90,10 +135,18 @@ export default function Connector(props) {
                         case 'metamask': {
                             const result = await connectMetaMask()
                             if (result.isValid) {
-                                console.log("LOG HERE")
-                                showContributeForm()
+                                const checkAddress = await checkWallet()
+                                if (checkAddress.isValid) {
+                                    //* If have address
+                                    showContributeForm(checkAddress.content)
+                                } else {
+                                    //* Show message error
+                                }
+                                //* Go to
+
                             } else {
-                                showModalFailed()
+                                //*Input message
+                                showModalFailed(result.message)
                             }
                             break;
                         }

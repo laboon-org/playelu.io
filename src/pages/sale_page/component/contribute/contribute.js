@@ -10,7 +10,7 @@ import ModalSucceed from '../modal/ModalSucceed'
 const boonValueUSD = 0.01;
 
 export default function Contribute(props) {
-    const {  showLoading} = props
+    const { showLoading,data } = props
     //*State
     const [amount, setAmount] = useState("")
     const [deposit, setDeposit] = useState("")
@@ -36,6 +36,7 @@ export default function Contribute(props) {
 
     const doTransactionInBC = async () => {
         try {
+            //*
             return {
                 isVaild: true
             }
@@ -127,11 +128,11 @@ export default function Contribute(props) {
                         const messageCode = transactionConfirm.message
                         //* Must be complete in here to confirm in google sheets
                         failureMessage(messageCode)
-                      
+
                     }
                 } else {
                     failureMessage('ERROR_BC', transaction.message)
-                   
+
                 }
 
                 //*Change state
