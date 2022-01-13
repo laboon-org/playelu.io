@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import BodyRight from './bodyRight'
 import Logo from './logo'
-import NotfoundModal from './notfoundModal'
+import NotfoundModal from './NotfoundModal'
 
 export default function SaleBody() {
     const [notfound, setNotfound] = useState(false)

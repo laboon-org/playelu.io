@@ -5,20 +5,9 @@ import axios from 'axios'
 import { useEagerConnect, useInactiveListener } from './hooks'
 import { useWeb3React } from '@web3-react/core'
 import setting from '../../../constant/setting'
-
 import detectEthereumProvider from '@metamask/detect-provider'
-import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
-import { WalletLinkConnector } from '@web3-react/walletlink-connector'
-import Spinner from './Spinner'
-
 import connectorConst from './connector/connectorConst'
 import wallet from '../../../module/wallet'
-
-
-
-
-
-
 
 export default function Connector(props) {
 
@@ -69,7 +58,6 @@ export default function Connector(props) {
             //* set Provider
             //* getAccount
             const account = (await provider.request({ method: 'eth_requestAccounts' }));
-            console.log(account)
             wallet.getInstance().setAddress(account[0])
             wallet.getInstance().setWallet('metamask')
             return {
@@ -106,6 +94,7 @@ export default function Connector(props) {
             }).catch(err => {
                 throw err
             })
+
             if (checkWallet.status != 200) {
                 return {
                     isValid: false,
@@ -141,9 +130,9 @@ export default function Connector(props) {
                                     showContributeForm(checkAddress.content)
                                 } else {
                                     //* Show message error
+                                    showModalFailed(checkAddress.message)
                                 }
                                 //* Go to
-
                             } else {
                                 //*Input message
                                 showModalFailed(result.message)

@@ -37,9 +37,9 @@ export default function BodyRight(props) {
                             onPressShow(data)
                         }}
                         showModalFailed={(message) => {
+                            //* Show failure when login
                             // onShowModal()
                         }}
-
                     ></Connector>
                     :
                     <Contribute
