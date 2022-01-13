@@ -1,7 +1,8 @@
 @media screen and (max-width: 739.9px) {
     .sale {
         height: 100vh;
-        background: url('https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/Background-mobile.webp') no-repeat center /cover;
+        background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/Background-mobile.webp")
+            no-repeat center / cover;
     }
 
     .header {
@@ -62,86 +63,83 @@
     }
 
     /* Begin body-right */
-    .login{
+    .login {
         margin: 0 auto;
+        width: 58%;
         height: 75px;
         border-radius: 12px;
     }
-    .login-title{
+    .login-title {
         font-size: 21px;
     }
 
-     // CSS NOTFOUND MODAL
-    .notfound__title{
+    // CSS NOTFOUND MODAL
+    .notfound__title {
         font-size: 24px;
     }
-        
-    .notfound__sub{
+
+    .notfound__sub {
         font-size: 16px;
     }
-    .notfound__btn{
-         width: 300px;
+    .notfound__btn {
+        width: 300px;
         height: 70px !important;
     }
-        
-    .notfound__btn-title{
+
+    .notfound__btn-title {
         font-size: 16px;
     }
 
     /* CSS CONTRIBUTE */
-.contribute{
-    max-width: 400px;
-    max-height: 300px;
-    width: 100%;
-    height: calc((100vh - 50px) / 2);
-    border-radius: 30px;
-    border: 3px solid #205198;
-}
-.contribute-frame{
-    width: calc(100% - 20px);
-    margin: 10px auto;
-}
-.contribute-sec{
-    margin-bottom: 5px;
-}
-.contribute-title{
-    margin-bottom: 5px;
-}
-.contribute-title p{
-    font-size: 14px;
-}
-.contribute-title span{
-    font-size: 11px;
-}
-.input-text{
-    font-size: 11px;
-    padding: 10px;
-}
-.input-img{
-    width:6.4%;
-}
-.contribute-btn{
-    width: 28%;
-    font-size: 12px;
-    padding: 10px 50px;
-    border-radius: 8px;
-}
+    .contribute {
+        max-width: 400px;
+        max-height: 300px;
+        width: 100%;
+        height: calc((100vh - 50px) / 2);
+        border-radius: 30px;
+        border: 3px solid #205198;
+    }
+    .contribute-frame {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+    }
+    .contribute-sec {
+        margin-bottom: 5px;
+    }
+    .contribute-title {
+        margin-bottom: 5px;
+    }
+    .contribute-title p {
+        font-size: 14px;
+    }
+    .contribute-title span {
+        font-size: 11px;
+    }
+    .input-text {
+        font-size: 11px;
+        padding: 10px;
+    }
+    .input-img {
+        width: 6.4%;
+    }
+    .contribute-btn {
+        width: 28%;
+        font-size: 12px;
+        padding: 10px 50px;
+        border-radius: 8px;
+    }
 
-.link-playelu{
-    font-size: 9px;
-}
+    .link-playelu {
+        font-size: 9px;
+    }
 
+    .notfound {
+        width: 85%;
+        height: 80%;
+        margin: auto;
+    }
 
-.notfound{
-    width: 85%;
-    height: 80%;
-    margin: auto;
-}
-
-.notfound .login{
-    min-width: 250px;
-}
-
-
-
+    .notfound .login {
+        min-width: 250px;
+    }
 }

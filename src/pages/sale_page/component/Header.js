@@ -11,7 +11,7 @@ export default function Header() {
             >
                 <img
                     className='home-icon'
-                    src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/icon-home.webp'
+                    src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/Home-icon.webp'
                     alt=''
                 />
             </a>

@@ -1,5 +1,37 @@
 //* Mobile
 @media screen and (max-width: 739.9px) {
+    // Modal Warning
+
+    .warning {
+        position: fixed;
+        top: 85px;
+        right: 5px;
+        width: calc(100% - 10px);
+        height: 45px;
+        border-radius: 7px;
+    }
+
+    .warning__frame {
+        width: 95%;
+    }
+
+    .warning__frame img {
+        width: 20px;
+    }
+
+    .warning__text span {
+        font-size: 10px;
+        line-height: 1;
+    }
+
+    .warning__btn {
+        width: 65px;
+        height: 45px;
+    }
+    .warning__btn span {
+        font-size: 12px;
+    }
+
     // Modal inprocessing
     /* CSS MODAL */
     .modal-sale-frame {
