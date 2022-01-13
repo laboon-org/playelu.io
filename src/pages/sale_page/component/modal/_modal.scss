@@ -4,6 +4,18 @@ $font_body: "cookieRun_Regular";
 $font_black: "cookieRun_black";
 $font_bold: "cookieRun_bold";
 
+// Modal Warning
+
+.warning {
+    position: fixed;
+    top: 80px;
+    right: 10%;
+    max-width: 450px;
+    min-width: 300px;
+    width: 100%;
+    height: 80px;
+}
+
 /* CSS MODAL Inprocessing */
 .modal-sale {
     position: fixed;
