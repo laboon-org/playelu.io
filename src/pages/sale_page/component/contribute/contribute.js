@@ -3,7 +3,7 @@ import React, { useState, useCallback } from 'react'
 import axios from 'axios'
 import wallet from '../../../../module/wallet'
 import ModalFail from '../modal/ModalFail'
-import NotfoundModal from '../notfoundModal'
+import NotfoundModal from '../NotfoundModal'
 import ModalSucceed from '../modal/ModalSucceed'
 
 //* const
