@@ -10,7 +10,7 @@ import ModalSucceed from '../modal/ModalSucceed'
 const boonValueUSD = 0.01;
 
 export default function Contribute(props) {
-    const { onShowModal } = props
+    const {  showLoading} = props
     //*State
     const [amount, setAmount] = useState("")
     const [deposit, setDeposit] = useState("")
@@ -79,6 +79,7 @@ export default function Contribute(props) {
     const onPressContribute = async () => {
         //*Check Wallet Condition 
         try {
+            showLoading()
             const SHEET_NAME = '1.Seed'
             const PAYMENT_METHOD = 'AVAX'
             let transaction_status = false
@@ -101,6 +102,7 @@ export default function Contribute(props) {
                 //* Failure
                 const messageCode = transactionValidation.message
                 failureMessage(messageCode)
+                showLoading()
             } else {
                 //* Succeed
                 //* Transaction in BC
@@ -125,14 +127,17 @@ export default function Contribute(props) {
                         const messageCode = transactionConfirm.message
                         //* Must be complete in here to confirm in google sheets
                         failureMessage(messageCode)
+                      
                     }
                 } else {
                     failureMessage('ERROR_BC', transaction.message)
+                   
                 }
 
                 //*Change state
                 setContribute(false)
                 setStateTransaction(true)
+                showLoading()
             }
 
             //setInfoState(true)
