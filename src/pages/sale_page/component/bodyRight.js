@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import Contribute from './contribute/contribute'
 import Login from './Login'
-import ModalInprocessing from './modal/ModalProcessing'
+import ModalInProcessing from './modal/ModalProcessing'
 // import url from '../constant/url'
 
 import wallet from '../../../module/wallet'
@@ -14,10 +14,12 @@ export default function BodyRight(props) {
 
     //* State
     const [contributeShow, setContributeShow] = useState(false)
+    const [contributeData, setContributeData] = useState({})
     const [modalProcessing, setModalProcessing] = useState(false)
 
     //* Function callback
-    const onPressShow = useCallback(() => {
+    const onPressShow = useCallback((data) => {
+        setContributeData(data)
         setContributeShow(true)
     }, [])
 
@@ -25,26 +27,25 @@ export default function BodyRight(props) {
         setModalProcessing(!modalProcessing)
     }, [])
 
-
-
     return (
         <React.Fragment>
             {
                 !contributeShow
                     ?
                     <Connector
-                        showContributeForm={() => {
-                            onPressShow()
+                        showContributeForm={(data) => {
+                            onPressShow(data)
                         }}
-                        showModalFailed={() => {
+                        showModalFailed={(message) => {
                             // onShowModal()
                         }}
 
                     ></Connector>
                     :
                     <Contribute
+                        data={contributeData}
                         showLoading={() => {
-                            onShowModalProcessing()
+                            // onShowModalProcessing()
                         }}
                     //onShowModal={onShowModal} 
                     />
@@ -52,7 +53,7 @@ export default function BodyRight(props) {
             {
                 modalProcessing
                     ?
-                    <ModalInprocessing />
+                    <ModalInProcessing />
                     :
                     <></>
             }
