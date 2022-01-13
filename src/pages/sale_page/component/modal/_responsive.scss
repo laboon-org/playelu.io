@@ -19,17 +19,24 @@
         width: 20px;
     }
 
-    .warning__text span {
-        font-size: 10px;
-        line-height: 1;
+    .warning__text {
+        font-size: 11px;
     }
 
     .warning__btn {
-        width: 65px;
-        height: 45px;
+        width: 80px;
+        height: 52px;
     }
     .warning__btn span {
         font-size: 12px;
+    }
+    @keyframes warning {
+        0% {
+            right: -100%;
+        }
+        100% {
+            right: 5px;
+        }
     }
 
     // Modal inprocessing

@@ -16,6 +16,8 @@ $font_bold: "cookieRun_bold";
     border-radius: 7px;
     background: rgba(89, 89, 89, 0.5);
     font-family: $font_content;
+    animation: warning 3s ease infinite;
+    animation-iteration-count: 1;
 }
 
 .warning__frame {
@@ -34,17 +36,26 @@ $font_bold: "cookieRun_bold";
 
 .warning__text {
     color: #ff3333;
+    font-size: 18px;
 }
 .warning__btn {
     background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_mini.webp")
         no-repeat center / contain;
-    width: 65px;
-    height: 45px;
+    width: 80px;
+    height: 52px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ffff;
     text-transform: uppercase;
+}
+@keyframes warning {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 20px;
+    }
 }
 
 /* CSS MODAL Inprocessing */

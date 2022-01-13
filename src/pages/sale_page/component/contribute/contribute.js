@@ -10,7 +10,7 @@ import ModalSucceed from '../modal/ModalSucceed'
 const boonValueUSD = 0.01;
 
 export default function Contribute(props) {
-    const { showLoading,data } = props
+    const { showLoading, data } = props
     //*State
     const [amount, setAmount] = useState("")
     const [deposit, setDeposit] = useState("")
@@ -36,7 +36,6 @@ export default function Contribute(props) {
 
     const doTransactionInBC = async () => {
         try {
-            //*
             return {
                 isVaild: true
             }
