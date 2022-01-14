@@ -6,6 +6,8 @@ import ModalInProcessing from './modal/ModalProcessing'
 
 import wallet from '../../../module/wallet'
 import Connector from './Connector'
+import ModalNotification from './modal/ModalNotification'
+
 
 export default function BodyRight(props) {
 
@@ -16,6 +18,7 @@ export default function BodyRight(props) {
     const [contributeShow, setContributeShow] = useState(false)
     const [contributeData, setContributeData] = useState({})
     const [modalProcessing, setModalProcessing] = useState(false)
+    const [modalNotificationState, setModalNotificationState] = useState(false)
 
     //* Function callback
     const onPressShow = useCallback((data) => {
@@ -27,22 +30,41 @@ export default function BodyRight(props) {
         setModalProcessing(bool)
     }, [])
 
+
+    const showModalNotification = () => {
+        setModalNotificationState(true)
+    }
+
+
+    //* Conponent 
+    const LoginProcess = () => {
+        return (
+            !modalNotificationState
+                ?
+                <Connector
+                    showContributeForm={(data) => {
+                        onPressShow(data)
+                    }}
+                    showModalNotFound={showModalNotFound}
+                    showModalFailed={(message) => {
+                        //* Show failure when login
+                        // onShowModal()
+                    }}
+                    showModalNotification={showModalNotification}
+                    changeStateWarning={changeStateWarning}
+                />
+                : <div className='body-right'>
+                    <ModalNotification />
+                </div>
+        )
+    }
+
     return (
         <React.Fragment>
             {
                 !contributeShow
                     ?
-                    <Connector
-                        showContributeForm={(data) => {
-                            onPressShow(data)
-                        }}
-                        showModalNotFound={showModalNotFound}
-                        showModalFailed={(message) => {
-                            //* Show failure when login
-                            // onShowModal()
-                        }}
-                        changeStateWarning={changeStateWarning}
-                    ></Connector>
+                    <LoginProcess />
                     :
                     <div className='body-right'>
                         <span className='body-right__title'>
@@ -53,7 +75,6 @@ export default function BodyRight(props) {
                             showLoading={(bool) => {
                                 onShowModalProcessing(bool)
                             }}
-                        //onShowModal={onShowModal} 
                         />
                     </div>
             }
@@ -64,7 +85,6 @@ export default function BodyRight(props) {
                     :
                     <></>
             }
-
         </React.Fragment>
     )
 }

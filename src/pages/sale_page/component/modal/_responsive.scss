@@ -1,7 +1,6 @@
 //* Mobile
 @media screen and (max-width: 739.9px) {
     // Modal Warning
-
     .warning {
         position: fixed;
         top: 55px;
@@ -91,6 +90,32 @@
     .modal_succeed__link-gameplay {
         font-size: 14px;
     }
+
+    // Modal loader
+    .modal-sale__img {
+        width: 55%;
+    }
+
+    // Modal Notification
+    .modal-notification__frame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px 0;
+    }
+
+    .modal-notification__heading {
+        font-size: 20px;
+    }
+    .modal-notification__content {
+        font-size: 13px;
+    }
+    .modal-notification__content span {
+        font-size: 13px;
+    }
+    .modal-notification__btn {
+        margin-top: 2px;
+    }
 }
 
 //* IPAD
@@ -141,6 +166,24 @@ IPAD
 
     .modal-fail__body__content {
         width: calc(100% - 180px);
+    }
+
+    // Modal Notification
+    .modal-notification__frame {
+        margin: 20px 0;
+    }
+
+    .modal-notification__heading {
+        font-size: 26px;
+    }
+    .modal-notification__content {
+        font-size: 16px;
+    }
+    .modal-notification__content span {
+        font-size: 16px;
+    }
+    .modal-notification__btn {
+        padding: 5px 12px;
     }
 }
 

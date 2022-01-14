@@ -184,9 +184,14 @@ a {
     margin-bottom: 0;
 }
 .login-icon {
+    display: flex;
+    justify-content: center;
     max-width: 40px;
     width: 10%;
     margin-right: 4%;
+}
+.login-icon img {
+    width: 100%;
 }
 
 /* CSS CONTRIBUTE */

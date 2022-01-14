@@ -6,14 +6,14 @@ import '../../../scss/sale_page/notfound_modal.scss'
 const defineConstant = {
     metamask: {
         name: 'MetaMask',
-        icon:'https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp'
+        icon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp'
     }
 }
 
 export default function NotfoundModal(props) {
 
-    const name=defineConstant[message.getInstance().getMessage('NotFoundModal')].name
-    const icon=defineConstant[message.getInstance().getMessage('NotFoundModal')].icon
+    const name = defineConstant[message.getInstance().getMessage('NotFoundModal')].name
+    const icon = defineConstant[message.getInstance().getMessage('NotFoundModal')].icon
     return (
         <div className='notfound'>
             <img
@@ -40,7 +40,7 @@ export default function NotfoundModal(props) {
                         alt=''
                     />
                     <p className='notfound__btn-title'>
-                       Download {name}
+                        Download {name}
                     </p>
                 </div>
 

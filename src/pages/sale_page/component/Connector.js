@@ -9,6 +9,7 @@ import connectorConst from './connector/connectorConst'
 import wallet from '../../../module/wallet'
 import messageStorage from '../../../module/messageStorage'
 import message from '../../../constant/message'
+import './modal/modal-loader.scss'
 
 
 
@@ -18,8 +19,16 @@ export default function Connector(props) {
     const {
         showContributeForm,
         showModalNotFound, //* No metamask
-        changeStateWarning //* Not Support chain id
+        changeStateWarning,  //* Not Support chain id
+        showModalNotification
     } = props
+
+    // State
+    const [loadingShow, setLoadingShow] = useState(false)
+
+    const showLoading = () => {
+        setLoadingShow(true)
+    }
 
     const context = useWeb3React()
     const { connector, library, chainId, account, activate, deactivate, active, error } = context
@@ -48,11 +57,17 @@ export default function Connector(props) {
         const { icon, title } = props
         return (
             <div className='login-frame'>
-                <img
-                    className='login-icon'
-                    src={icon}
-                    alt=''
-                />
+                <div className='login-icon'>
+                    {
+                        loadingShow ?
+                            <img
+                                className=''
+                                src={icon}
+                                alt=''
+                            /> : <div class="loading-icon"><div></div><div></div><div></div><div></div></div>
+                    }
+
+                </div>
                 <h4 className='login-title'>
                     {title}
                 </h4>
@@ -157,6 +172,7 @@ export default function Connector(props) {
             <div
                 className='login'
                 onClick={async () => {
+                    showLoading()
                     switch (wallet_name) {
                         case 'metamask': {
                             const result = await connectMetaMask()
@@ -168,6 +184,8 @@ export default function Connector(props) {
                                 } else {
                                     //* Show message error when don't in WL
                                     //showModalFailed(checkAddress.message)
+                                    showModalNotification()
+
                                 }
                                 //* Go to
                             } else {
