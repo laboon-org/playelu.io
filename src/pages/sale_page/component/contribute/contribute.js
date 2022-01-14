@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useRef } from 'react'
 // import url from '../../constant/url'
 import axios from 'axios'
 import web3 from 'web3'
@@ -12,12 +12,28 @@ import contractAbi from '../../../../constant/contractABI'
 
 //* const
 const boonValueUSD = 0.01;
+//* init function 
+const calValueDeposit = (amount) => {
 
+    const avaxValueUSD = 89.28;//?
+    const calAvaxAmount = (boonAmount) => {
+        const USD = boonAmount * boonValueUSD
+        return USD / avaxValueUSD
+    }
+
+    const boonAmount = parseInt(amount.split('.').join(''))
+    const avaxAmount = (Math.round(calAvaxAmount(boonAmount) * 1000) / 1000) + ''
+    return avaxAmount.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
+}
 export default function Contribute(props) {
+
+
     const { showLoading, data } = props
+    console.log(data)
+
     //*State
-    const [amount, setAmount] = useState("")
-    const [deposit, setDeposit] = useState("")
+    const [amount, setAmount] = useState((data['BOON (Amount)'] + '').replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1."))
+    const [deposit, setDeposit] = useState(data['BOON (Amount)'] != null ? calValueDeposit(data['BOON (Amount)'] + '') : "")
     const [infoState, setInfoState] = useState(false)
     const [infoValue, setInfoValue] = useState("")
     //* Show form contribute or message
@@ -25,18 +41,9 @@ export default function Contribute(props) {
     const [stateTransaction, setStateTransaction] = useState(false)
 
     const setValueDeposit = (amount) => {
-
-        //?
-        const avaxValueUSD = 89.28;//?
-        const calAvaxAmount = (boonAmount) => {
-            const USD = boonAmount * boonValueUSD
-            return USD / avaxValueUSD
-        }
-
-        const boonAmount = parseInt(amount.split(',').join(''))
-        const avaxAmount = (Math.round(calAvaxAmount(boonAmount) * 1000) / 1000) + ''
-        setDeposit(avaxAmount.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,"))
+        setDeposit(calValueDeposit(amount))
     }
+
 
     const doTransactionInBC = async () => {
         try {
@@ -82,6 +89,12 @@ export default function Contribute(props) {
                 setStateTransaction(false)
                 break;
             }
+            case 'HAD_PAID': {
+                setInfoValue("You can only buy once time!")
+                setContribute(false)
+                setStateTransaction(false)
+                break;
+            }
             case 'ERROR_BC': {
                 setInfoValue(message)
                 setContribute(false)
@@ -101,11 +114,11 @@ export default function Contribute(props) {
         //*Check Wallet Condition 
         try {
             showLoading(true)
-            const SHEET_NAME = '1.Seed'
+            const SHEET_NAME = '2.Strategy'
             const PAYMENT_METHOD = 'AVAX'
             let transaction_status = false
             const URL = 'https://laboon.as.r.appspot.com/confirm_transaction'
-            const boonValue = parseInt(amount.split(',').join(""));
+            const boonValue = parseInt(amount.split('.').join(""));
             const transactionValidation = await axios.post(URL, {
                 "sheet_name": SHEET_NAME,
                 "address_wallet": wallet.getInstance().account,
@@ -153,7 +166,7 @@ export default function Contribute(props) {
                     }
                 } else {
                     failureMessage('ERROR_BC', transaction.message)
-                   
+
                 }
 
                 //*Change state
@@ -164,13 +177,15 @@ export default function Contribute(props) {
 
             //setInfoState(true)
         } catch (err) {
-      
+
         }
     }
     const TransactionResult = (result) => {
         if (result) {
             return (
                 <ModalSucceed
+                    amount={amount}
+                    deposit={deposit}
                     forwardBack={() => {
                         setContribute(true)
                     }}
@@ -230,8 +245,8 @@ export default function Contribute(props) {
                                                 setDeposit('')
                                             }
                                             const reg = new RegExp('^[0-9]+$');
-                                            if (reg.test(e.target.value.split(',').join(""))) {
-                                                const amount = e.target.value.split(',').join("").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+                                            if (reg.test(e.target.value.split('.').join(""))) {
+                                                const amount = e.target.value.split('.').join("").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
                                                 setAmount(amount)
                                                 setValueDeposit(amount)
                                             } else {

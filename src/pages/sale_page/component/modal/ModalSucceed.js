@@ -2,7 +2,11 @@ import React from 'react'
 import './_modal.scss'
 import './_responsive.scss'
 export default function ModalSucceed(props) {
-    const { forwardBack } = props
+    const {
+        forwardBack,
+        amount,
+        deposit
+    } = props
     return (
         <div className='modal-succeed'>
             <span className='modal-succeed__heading'>
@@ -16,7 +20,7 @@ export default function ModalSucceed(props) {
                 />
 
                 <div className='modal-succeed__body__content'>
-                    Congratulations on your successful purchase of 10.000 $BOON, for 500 AVAX, in the "Seed" round.
+                    Congratulations on your successful purchase of {amount} $BOON, for {deposit} AVAX, in the "Seed" round.
                 </div>
             </div>
             <a
