@@ -79,6 +79,8 @@
 
 @media screen and (max-width: 739.9px) {
     .modal-sale__loading-bar div:after {
+        top: 10px;
+        left: 30px;
         width: 5px;
         height: 5px;
     }

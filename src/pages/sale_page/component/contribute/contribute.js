@@ -190,6 +190,7 @@ export default function Contribute(props) {
 
     return (
         <div className='contribute'>
+            <span className='contribute--shadow'></span>
             {
                 contribute ?
                     <div className='contribute-frame'>

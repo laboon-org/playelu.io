@@ -5,7 +5,7 @@
             no-repeat center / cover;
     }
 
-    .header {
+    .header-sale {
         height: 50px;
         border-bottom: 1px solid #fff;
     }
@@ -63,6 +63,11 @@
     }
 
     /* Begin body-right */
+    .body-right__title {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
     .login {
         margin: 0 auto;
         width: 58%;
@@ -99,6 +104,17 @@
         border-radius: 30px;
         border: 3px solid #205198;
     }
+    .contribute--shadow {
+        position: absolute;
+        z-index: 0;
+        top: 2%;
+        left: 4%;
+        width: 12px;
+        height: 20px;
+        background: rgba(135, 136, 136, 0.3);
+        transform: rotateZ(45deg);
+        border-radius: 50%;
+    }
     .contribute-frame {
         width: calc(100% - 20px);
         margin: 10px auto;
@@ -112,7 +128,9 @@
     .contribute-title p {
         font-size: 14px;
     }
-    .contribute-title span {
+    .contribute-title .wallet-name,
+    .contribute-title .avax-quantity,
+    .contribute-title .boon-quantity {
         font-size: 11px;
     }
     .input-text {

@@ -44,13 +44,18 @@ export default function BodyRight(props) {
                         changeStateWarning={changeStateWarning}
                     ></Connector>
                     :
-                    <Contribute
-                        data={contributeData}
-                        showLoading={(bool) => {
-                            onShowModalProcessing(bool)
-                        }}
-                    //onShowModal={onShowModal} 
-                    />
+                    <div className='body-right'>
+                        <span className='body-right__title'>
+                            WALLET SELECTION
+                        </span>
+                        <Contribute
+                            data={contributeData}
+                            showLoading={(bool) => {
+                                onShowModalProcessing(bool)
+                            }}
+                        //onShowModal={onShowModal} 
+                        />
+                    </div>
             }
             {
                 modalProcessing

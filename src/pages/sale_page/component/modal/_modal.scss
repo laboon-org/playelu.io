@@ -75,10 +75,11 @@ $font_bold: "cookieRun_bold";
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     border-radius: 36px;
-    background: linear-gradient(#1f4f96, #3fa2d4);
+    background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/panel/panel_inProcessing.webp")
+        no-repeat center / contain;
     font-weight: 600;
     font-family: $font_black;
 }
@@ -86,12 +87,16 @@ $font_bold: "cookieRun_bold";
     width: 60%;
 }
 .modal-sale__title {
+    display: flex;
+    align-items: center;
     color: #fff;
     text-transform: uppercase;
     font-size: 48px;
     letter-spacing: 1px;
     font-weight: 700;
-    -webkit-text-stroke: 2px black;
+    margin-top: 2%;
+    height: 17%;
+    -webkit-text-stroke: 4px black;
 }
 
 //* modal succeed

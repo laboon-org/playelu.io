@@ -8,6 +8,7 @@ import { Web3ReactProvider, useWeb3React, UnsupportedChainIdError } from '@web3-
 import { Web3Provider } from '@ethersproject/providers'
 import Warning from './component/modal/Warning'
 import { useState } from 'react'
+
 function getLibrary(provider) {
     const library = new Web3Provider(provider)
     library.pollingInterval = 12000
@@ -25,9 +26,9 @@ export default function SalePage() {
         <Web3ReactProvider getLibrary={getLibrary}>
             <div className="sale">
                 <Header />
-                {showWarrning && < Warning changeStateWarning={changeStateWarning} />}
-                <SaleBody changeStateWarning={changeStateWarning} />
-            </div>
-        </Web3ReactProvider>
+    { showWarrning && < Warning changeStateWarning={changeStateWarning} /> }
+    <SaleBody changeStateWarning={changeStateWarning} />
+            </div >
+        </Web3ReactProvider >
     );
 }
