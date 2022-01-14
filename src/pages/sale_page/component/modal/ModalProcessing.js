@@ -1,7 +1,7 @@
 import React from 'react'
 import ModalLoader from './ModalLoader'
 
-export default function Modal(props) {
+export default function ModalInProcessing(props) {
 
     return (
         <div className='modal-sale'>

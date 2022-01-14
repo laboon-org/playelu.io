@@ -67,7 +67,7 @@ export default function Connector(props) {
             //[TODO] check chain ID
             return {
                 isValid: false,
-                message:'TEST'
+                message: 'TEST'
             }
         }
     }
@@ -203,6 +203,9 @@ export default function Connector(props) {
 
     return (
         <div className='body-right'>
+            <span className='body-right__title'>
+                WALLET SELECTION
+            </span>
             <Web3Connector
                 icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp'
                 title='Login with Metamask'

@@ -4,7 +4,7 @@
 
     .warning {
         position: fixed;
-        top: 85px;
+        top: 55px;
         right: 5px;
         width: calc(100% - 10px);
         height: 45px;
@@ -49,6 +49,8 @@
 
     .modal-sale__title {
         font-size: 22px;
+        margin-top: 5%;
+        height: 17%;
         -webkit-text-stroke: 1px black;
     }
 

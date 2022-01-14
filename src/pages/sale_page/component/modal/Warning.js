@@ -4,7 +4,7 @@ import './_responsive.scss'
 
 export default function Warning() {
     const [showWarning, setShowWarning] = useState(true)
-    const onShowWarning = () => {
+    const onHideWarning = () => {
         setShowWarning(false)
     }
     return (
@@ -17,7 +17,7 @@ export default function Warning() {
                             <div className='warning__text'>
                                 <span>The transaction does not support BSC (Binance Smart Chain) network currently</span>
                             </div>
-                            <div className='warning__btn' onClick={onShowWarning}>
+                            <div className='warning__btn' onClick={onHideWarning}>
                                 <span>ok</span>
                             </div>
                         </div>

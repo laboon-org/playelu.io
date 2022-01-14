@@ -42,13 +42,18 @@ export default function BodyRight(props) {
                         }}
                     ></Connector>
                     :
-                    <Contribute
-                        data={contributeData}
-                        showLoading={() => {
-                            // onShowModalProcessing()
-                        }}
-                    //onShowModal={onShowModal} 
-                    />
+                    <div className='body-right'>
+                        <span className='body-right__title'>
+                            WALLET SELECTION
+                        </span>
+                        <Contribute
+                            data={contributeData}
+                            showLoading={() => {
+                                onShowModalProcessing()
+                            }}
+                        //onShowModal={onShowModal} 
+                        />
+                    </div>
             }
             {
                 modalProcessing
