@@ -20,7 +20,11 @@ export default function ModalSucceed(props) {
                 />
 
                 <div className='modal-succeed__body__content'>
-                    Congratulations on your successful purchase of {amount} $BOON, for {deposit} AVAX, in the "Seed" round.
+                    Congratulations on your successful purchase of {amount}
+                    <span className='modal-succeed__body__content__boon'>$BOON</span>
+                    , for {deposit}
+                    <span className='modal-succeed__body__content__avax'>AVAX</span>
+                    , in the "Seed" round.
                 </div>
             </div>
             <a

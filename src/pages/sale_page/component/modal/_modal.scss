@@ -123,7 +123,7 @@ $font_bold: "cookieRun_bold";
 
 .modal-succeed__heading {
     text-align: center;
-    color: #fdcd2f;
+    color: #fd2f2f;
     font-size: 32px;
     text-transform: uppercase;
     font-weight: bold;
@@ -135,6 +135,21 @@ $font_bold: "cookieRun_bold";
     font-size: 24px;
     width: calc(100% - 250px);
 }
+
+.modal-succeed__body__content__boon {
+    margin-left: 5px;
+    color: #fdcd2f;
+}
+
+.modal-succeed__body__content__avax {
+    margin-left: 5px;
+    color: #fd2f2f;
+}
+.modal-succeed__body__content__text {
+    margin-left: 0 5px;
+    color: #fdcd2f;
+}
+
 .modal-fail__body__content {
     color: #ffffff;
     font-size: 24px;
@@ -166,4 +181,35 @@ $font_bold: "cookieRun_bold";
 .modal_succeed__link-gameplay {
     color: #fdcd2f;
     font-size: 20px;
+}
+
+// Modal Notification
+.modal-notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-notification__frame {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    text-align: center;
+}
+.modal-notification__heading {
+    font-size: 36px;
+    color: #fdcd2f;
+}
+.modal-notification__content {
+    color: #fff;
+    font-size: 28px;
+}
+.modal-notification__content span {
+    color: #fdcd2f;
+    margin: 0 5px;
+    font-size: 28px;
+}
+.modal-notification__btn {
+    padding: 10px 24px;
 }

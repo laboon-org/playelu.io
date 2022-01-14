@@ -4,28 +4,35 @@ import './_responsive.scss'
 export default function ModalNotification(props) {
     const { forwardBack } = props
     return (
-        <div className='modal-succeed'>
-            <span className='modal-succeed__heading'>
-                notification
-            </span>
-            <div className='modal-succeed__body'>
-                <img
-                    className='modal-succeed__body__img'
-                    src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/pig.webp'
-                    alt=''
-                />
+        <div className='modal-notification contribute'>
+            <span className='contribute--shadow'></span>
+            <div className='modal-notification__frame'>
+                <span className='modal-notification__heading modal-succeed__heading'>
+                    notification
+                </span>
+                <div className='modal-succeed__body'>
+                    <img
+                        className='modal-succeed__body__img'
+                        src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/pig.webp'
+                        alt=''
+                    />
 
-                <div className='modal-succeed__body__content'>
-                    Sorry, your address is not in white-list. Please contact us via hi@playelu.io to get more support.
+                    <div className='modal-notification__content modal-succeed__body__content__text'>
+                        Sorry, your address is not in white-list. Please contact us via
+                        <span className=''>
+                            hi@playelu.io
+                        </span>
+                        to get more support.
+                    </div>
                 </div>
-            </div>
-            <div
-                className='modal-succeed__btn'
-                onClick={() => {
-                    forwardBack()
-                }}
-            >
-                <span>back</span>
+                <div
+                    className='modal-notification__btn modal-succeed__btn'
+                    onClick={() => {
+
+                    }}
+                >
+                    <span>back</span>
+                </div>
             </div>
         </div>
     )
