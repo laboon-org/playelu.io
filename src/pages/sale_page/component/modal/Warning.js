@@ -1,28 +1,26 @@
 import React, { useState } from 'react'
+import message from '../../../../module/messageStorage'
+
 import './_modal.scss'
 import './_responsive.scss'
 
-export default function Warning() {
-    const [showWarning, setShowWarning] = useState(true)
-    const onShowWarning = () => {
-        setShowWarning(false)
-    }
+export default function Warning(props) {
+    const {  changeStateWarning } = props
     return (
         <React.Fragment>
             {
-                showWarning ?
-                    <div className='warning'>
-                        <div className='warning__frame'>
-                            <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/panel/warning-icon.png' alt='' />
-                            <div className='warning__text'>
-                                <span>The transaction does not support BSC (Binance Smart Chain) network currently</span>
-                            </div>
-                            <div className='warning__btn' onClick={onShowWarning}>
-                                <span>ok</span>
-                            </div>
+
+                <div className='warning'>
+                    <div className='warning__frame'>
+                        <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/panel/warning-icon.png' alt='' />
+                        <div className='warning__text'>
+                            <span>{message.getInstance().getMessage('Warning')}</span>
                         </div>
-                    </div> :
-                    <></>
+                        <div className='warning__btn' onClick={()=>changeStateWarning(false)} >
+                            <span>ok</span>
+                        </div>
+                    </div>
+                </div>
             }
 
         </React.Fragment>

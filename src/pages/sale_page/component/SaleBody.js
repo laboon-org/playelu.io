@@ -3,18 +3,26 @@ import BodyRight from './bodyRight'
 import Logo from './logo'
 import NotfoundModal from './NotfoundModal'
 
-export default function SaleBody() {
+export default function SaleBody(props) {
+
+    const { changeStateWarning } = props
+
     const [notfound, setNotfound] = useState(false)
-    const onShowNotfound = useCallback(() => {
+    const showModalNotFound = useCallback(() => {
         setNotfound(true)
     })
     return (
         <div className='sale-body'>
             {
-                !notfound ? (<>
-                    <Logo />
-                    <BodyRight onShowNotfound={onShowNotfound} />
-                </>) : <NotfoundModal title='download....' />
+                !notfound ? (
+                    <>
+                        <Logo />
+                        <BodyRight
+                            changeStateWarning={changeStateWarning}
+                            showModalNotFound={showModalNotFound}
+                        />
+                    </>
+                ) : <NotfoundModal />
             }
         </div>
     )

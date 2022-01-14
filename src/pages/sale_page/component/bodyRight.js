@@ -10,7 +10,7 @@ import Connector from './Connector'
 export default function BodyRight(props) {
 
     //* Props
-    const { onShowNotfound } = props
+    const { showModalNotFound, changeStateWarning } = props
 
     //* State
     const [contributeShow, setContributeShow] = useState(false)
@@ -23,8 +23,8 @@ export default function BodyRight(props) {
         setContributeShow(true)
     }, [])
 
-    const onShowModalProcessing = useCallback(() => {
-        setModalProcessing(!modalProcessing)
+    const onShowModalProcessing = useCallback((bool) => {
+        setModalProcessing(bool)
     }, [])
 
     return (
@@ -36,16 +36,18 @@ export default function BodyRight(props) {
                         showContributeForm={(data) => {
                             onPressShow(data)
                         }}
+                        showModalNotFound={showModalNotFound}
                         showModalFailed={(message) => {
                             //* Show failure when login
                             // onShowModal()
                         }}
+                        changeStateWarning={changeStateWarning}
                     ></Connector>
                     :
                     <Contribute
                         data={contributeData}
-                        showLoading={() => {
-                            // onShowModalProcessing()
+                        showLoading={(bool) => {
+                            onShowModalProcessing(bool)
                         }}
                     //onShowModal={onShowModal} 
                     />

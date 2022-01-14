@@ -1,10 +1,14 @@
 import React, { useState, useCallback } from 'react'
 // import url from '../../constant/url'
 import axios from 'axios'
+import web3 from 'web3'
+
 import wallet from '../../../../module/wallet'
 import ModalFail from '../modal/ModalFail'
 import NotfoundModal from '../NotfoundModal'
 import ModalSucceed from '../modal/ModalSucceed'
+import contractAbi from '../../../../constant/contractABI'
+
 
 //* const
 const boonValueUSD = 0.01;
@@ -36,6 +40,23 @@ export default function Contribute(props) {
 
     const doTransactionInBC = async () => {
         try {
+
+            // const Web3 = new web3(web3.givenProvider)
+            // const boonToken = new web3.eth.Contract(contractAbi.ABI, contractAbi.contractAddress)
+            // const senderAddress = wallet.getInstance().account
+            // const receiverAddress = ''//* get after
+            //test call
+            // boonToken.methods.
+            // .transfer(receiverAddress, avaxAmount)
+            //     .send({ from: senderAddress }, function (err, res) {
+            //         if (err) {
+            //             console.log("An error occured", err)
+            //             throw new Error(err)
+            //         }
+            //         //* if succeed
+            //         console.log("Hash of the transaction: " + res)
+            //     })
+
             return {
                 isVaild: true
             }
@@ -79,7 +100,7 @@ export default function Contribute(props) {
     const onPressContribute = async () => {
         //*Check Wallet Condition 
         try {
-            showLoading()
+            showLoading(true)
             const SHEET_NAME = '1.Seed'
             const PAYMENT_METHOD = 'AVAX'
             let transaction_status = false
@@ -95,6 +116,7 @@ export default function Contribute(props) {
             }).then((res) => {
                 return res.data
             }).catch(err => {
+                showLoading(false)
                 throw err
             })
 
@@ -102,7 +124,6 @@ export default function Contribute(props) {
                 //* Failure
                 const messageCode = transactionValidation.message
                 failureMessage(messageCode)
-                showLoading()
             } else {
                 //* Succeed
                 //* Transaction in BC
@@ -120,6 +141,7 @@ export default function Contribute(props) {
                     }).then((res) => {
                         return res.data
                     }).catch(err => {
+                        showLoading(false)
                         throw err
                     })
 
@@ -127,17 +149,16 @@ export default function Contribute(props) {
                         const messageCode = transactionConfirm.message
                         //* Must be complete in here to confirm in google sheets
                         failureMessage(messageCode)
-
                     }
                 } else {
                     failureMessage('ERROR_BC', transaction.message)
-
+                   
                 }
 
                 //*Change state
                 setContribute(false)
                 setStateTransaction(true)
-                showLoading()
+                showLoading(false)
             }
 
             //setInfoState(true)

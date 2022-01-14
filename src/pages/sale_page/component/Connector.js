@@ -1,18 +1,25 @@
 
 import React, { useState, useCallback, useRef } from 'react'
 import axios from 'axios'
-
 import { useEagerConnect, useInactiveListener } from './hooks'
 import { useWeb3React } from '@web3-react/core'
 import setting from '../../../constant/setting'
 import detectEthereumProvider from '@metamask/detect-provider'
 import connectorConst from './connector/connectorConst'
 import wallet from '../../../module/wallet'
+import messageStorage from '../../../module/messageStorage'
+import message from '../../../constant/message'
+
+
 
 export default function Connector(props) {
 
     //* Props
-    const { showContributeForm, showModalFailed } = props
+    const {
+        showContributeForm,
+        showModalNotFound, //* No metamask
+        changeStateWarning //* Not Support chain id
+    } = props
 
     const context = useWeb3React()
     const { connector, library, chainId, account, activate, deactivate, active, error } = context
@@ -52,22 +59,52 @@ export default function Connector(props) {
             </div>)
     }
 
+    const checkChainID = async (provider) => {
+        const chainId = parseInt(await provider.request({ method: 'eth_chainId' }))
+        if (chainId in setting.CHAIN_ID_SUPPORT) {
+            return { isValid: true }
+        } else {
+            messageStorage.getInstance().setMessage('Warning', message.EN.WALLET.NOT_SUPPORT_CHAIN_ID)
+            changeStateWarning(true)
+            return { isVaild: false }
+        }
+    }
     const connectMetaMask = async () => {
         const provider = await detectEthereumProvider({ mustBeMetaMask: true });
+
+
+
         if (provider) {
+
+            //* Listener
+            provider.on('accountsChanged', (accounts) => {
+                window.location.reload();
+            });
+            provider.on('chainChanged', (chainId) => {
+                window.location.reload();
+            });
+
             //* set Provider
             //* getAccount
             const account = (await provider.request({ method: 'eth_requestAccounts' }));
+
+            //* Check chain support
+            const checkChain = await checkChainID(provider)
+            if (!checkChain.isValid) {
+                return
+            }
+
             wallet.getInstance().setAddress(account[0])
             wallet.getInstance().setWallet('metamask')
+
             return {
                 isValid: true
             }
         } else {
-            //[TODO] check chain ID
+
             return {
                 isValid: false,
-                message:'TEST'
+                message: 'TEST'
             }
         }
     }
@@ -129,13 +166,16 @@ export default function Connector(props) {
                                     //* If have address
                                     showContributeForm(checkAddress.content)
                                 } else {
-                                    //* Show message error
-                                    showModalFailed(checkAddress.message)
+                                    //* Show message error when don't in WL
+                                    //showModalFailed(checkAddress.message)
                                 }
                                 //* Go to
                             } else {
-                                //*Input message
-                                showModalFailed(result.message)
+                                //* Input message
+                                //* No metamask
+                                //[Todo : Sáng]: Hoàn thiện phần set message cho 2 connector còn lại 
+                                messageStorage.getInstance().setMessage('NotFoundModal', 'metamask')
+                                showModalNotFound()
                             }
                             break;
                         }
