@@ -124,6 +124,7 @@ export default function Contribute(props) {
                 //* Failure
                 const messageCode = transactionValidation.message
                 failureMessage(messageCode)
+                showLoading(false)
             } else {
                 //* Succeed
                 //* Transaction in BC
@@ -163,7 +164,7 @@ export default function Contribute(props) {
 
             //setInfoState(true)
         } catch (err) {
-
+      
         }
     }
     const TransactionResult = (result) => {
