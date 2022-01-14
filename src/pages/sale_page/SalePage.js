@@ -26,8 +26,8 @@ export default function SalePage() {
         <Web3ReactProvider getLibrary={getLibrary}>
             <div className="sale">
                 <Header />
-    { showWarrning && < Warning changeStateWarning={changeStateWarning} /> }
-    <SaleBody changeStateWarning={changeStateWarning} />
+                {showWarrning && < Warning changeStateWarning={changeStateWarning} />}
+                <SaleBody changeStateWarning={changeStateWarning} />
             </div >
         </Web3ReactProvider >
     );

@@ -4,13 +4,12 @@ import Logo from './logo'
 import NotfoundModal from './NotfoundModal'
 
 export default function SaleBody(props) {
-
     const { changeStateWarning } = props
-
     const [notfound, setNotfound] = useState(false)
     const showModalNotFound = useCallback(() => {
         setNotfound(true)
     })
+    
     return (
         <div className='sale-body'>
             {
@@ -21,6 +20,7 @@ export default function SaleBody(props) {
                             changeStateWarning={changeStateWarning}
                             showModalNotFound={showModalNotFound}
                         />
+
                     </>
                 ) : <NotfoundModal />
             }
