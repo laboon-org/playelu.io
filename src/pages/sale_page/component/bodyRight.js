@@ -36,7 +36,7 @@ export default function BodyRight(props) {
     }
 
 
-    //* Conponent 
+    //* Component 
     const LoginProcess = () => {
         return (
             !modalNotificationState
@@ -46,15 +46,15 @@ export default function BodyRight(props) {
                         onPressShow(data)
                     }}
                     showModalNotFound={showModalNotFound}
-                    showModalFailed={(message) => {
-                        //* Show failure when login
-                        // onShowModal()
-                    }}
                     showModalNotification={showModalNotification}
                     changeStateWarning={changeStateWarning}
                 />
                 : <div className='body-right'>
-                    <ModalNotification />
+                    <ModalNotification forwardBack={
+                        ()=>{
+                            setModalNotificationState(false)
+                        }
+                    }/>
                 </div>
         )
     }
