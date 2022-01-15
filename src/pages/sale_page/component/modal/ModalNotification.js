@@ -28,7 +28,7 @@ export default function ModalNotification(props) {
                 <div
                     className='modal-notification__btn modal-succeed__btn'
                     onClick={() => {
-
+                        forwardBack()
                     }}
                 >
                     <span>back</span>

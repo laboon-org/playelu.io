@@ -23,12 +23,8 @@ export default function Connector(props) {
         showModalNotification
     } = props
 
-    // State
+    //* State
     const [loadingShow, setLoadingShow] = useState(false)
-
-    const showLoading = () => {
-        setLoadingShow(true)
-    }
 
     const context = useWeb3React()
     const { connector, library, chainId, account, activate, deactivate, active, error } = context
@@ -38,9 +34,9 @@ export default function Connector(props) {
     if (isFirst.current) {
         isFirst.current = false
         if (deactivate) { deactivate() }
-        if (connector) {
-            connector.close()
-        }
+        // if (connector) {
+        //     connector.close()
+        // }
     }
 
     React.useEffect(() => {
@@ -53,20 +49,27 @@ export default function Connector(props) {
 
     useInactiveListener(!triedEager || !!activatingConnector)
 
+
+    //* Loading icon 
+    const LoadingIcon = () => {
+        return (
+            <div class="loading-icon"><div></div><div></div><div></div><div></div></div>
+        )
+    }
+
     const Login = (props) => {
         const { icon, title } = props
         return (
             <div className='login-frame'>
                 <div className='login-icon'>
                     {
-                        loadingShow ?
+                        !loadingShow ?
                             <img
                                 className=''
                                 src={icon}
                                 alt=''
-                            /> : <div class="loading-icon"><div></div><div></div><div></div><div></div></div>
+                            /> : <LoadingIcon/>
                     }
-
                 </div>
                 <h4 className='login-title'>
                     {title}
@@ -81,13 +84,11 @@ export default function Connector(props) {
         } else {
             messageStorage.getInstance().setMessage('Warning', message.EN.WALLET.NOT_SUPPORT_CHAIN_ID)
             changeStateWarning(true)
-            return { isVaild: false }
+            return { isValid: false }
         }
     }
     const connectMetaMask = async () => {
         const provider = await detectEthereumProvider({ mustBeMetaMask: true });
-
-
 
         if (provider) {
 
@@ -136,7 +137,7 @@ export default function Connector(props) {
 
     const checkWallet = async () => {
         try {
-            const SHEET_NAME = '1.Seed'
+            const SHEET_NAME = '2.Strategy'
             const URL = 'https://laboon.as.r.appspot.com/check_address'
             const checkWallet = await axios.post(URL, {
                 "sheet_name": SHEET_NAME,
@@ -172,7 +173,7 @@ export default function Connector(props) {
             <div
                 className='login'
                 onClick={async () => {
-                    showLoading()
+                    setLoadingShow(true)
                     switch (wallet_name) {
                         case 'metamask': {
                             const result = await connectMetaMask()
@@ -185,7 +186,7 @@ export default function Connector(props) {
                                     //* Show message error when don't in WL
                                     //showModalFailed(checkAddress.message)
                                     showModalNotification()
-
+                                    setLoadingShow(false)
                                 }
                                 //* Go to
                             } else {

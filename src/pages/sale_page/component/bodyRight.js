@@ -54,7 +54,11 @@ export default function BodyRight(props) {
                     changeStateWarning={changeStateWarning}
                 />
                 : <div className='body-right'>
-                    <ModalNotification />
+                    <ModalNotification forwardBack={
+                        ()=>{
+                            setModalNotificationState(false)
+                        }
+                    }/>
                 </div>
         )
     }

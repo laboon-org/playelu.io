@@ -9,7 +9,7 @@ export default function SaleBody(props) {
     const showModalNotFound = useCallback(() => {
         setNotfound(true)
     })
-    
+
     return (
         <div className='sale-body'>
             {
@@ -20,7 +20,6 @@ export default function SaleBody(props) {
                             changeStateWarning={changeStateWarning}
                             showModalNotFound={showModalNotFound}
                         />
-
                     </>
                 ) : <NotfoundModal />
             }
