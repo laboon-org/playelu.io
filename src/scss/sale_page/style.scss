@@ -152,7 +152,10 @@ a {
     top: -50px;
     font-size: 32px;
     color: #ffff;
-    -webkit-text-stroke: 2px black;
+    white-space: nowrap;
+    font-family: $font_black;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 0.5px black;
 }
 
 .login {
@@ -322,7 +325,8 @@ a {
     width: 100%;
     font-size: 32px;
     color: #ffff;
-    -webkit-text-stroke: 2px black;
+    white-space: nowrap;
+    -webkit-text-stroke: 0.5px black;
     font-family: $font_bold;
 }
 

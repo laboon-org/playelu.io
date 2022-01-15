@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import NotfoundModal from '../../sale_page/component/NotfoundModal'
 import LoginProcess from './LoginProcess'
-import WhiteList_Registration from './WhiteList_Registration'
+import WhiteListRegistration from './WhiteList_Registration'
 
-export default function WhiteListBody__right() {
+export default function WhiteListBody__right(props) {
+
+    const { showModalNotFound } = props
+
     const [whiteListShow, setWhiteListShow] = useState(false)
     const showWhiteList = () => {
         setWhiteListShow(true)
@@ -13,11 +16,11 @@ export default function WhiteListBody__right() {
             {
                 !whiteListShow ?
                     <LoginProcess
-                        icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp'
-                        title='Login with Metamask'
+                     
                         showWhiteList={showWhiteList}
+                        showModalNotFound={showModalNotFound}
                     /> :
-                    <WhiteList_Registration />
+                    <WhiteListRegistration />
             }
         </div>
     )

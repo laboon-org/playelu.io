@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react'
 
 import Logo from '../../sale_page/component/logo'
 import NotfoundModal from '../../sale_page/component/NotfoundModal'
-import WhiteListBody__right from './WhiteListBody__right'
+import WhiteListBodyRight from './WhiteListBody__right'
 
 export default function WhiteListBody(props) {
     const { changeStateWarning } = props
@@ -17,7 +17,9 @@ export default function WhiteListBody(props) {
                 !notfound ? (
                     <>
                         <Logo />
-                        <WhiteListBody__right />
+                        <WhiteListBodyRight
+                            showModalNotFound={showModalNotFound}
+                        />
                     </>
                 ) : <NotfoundModal />
             }

@@ -5,7 +5,8 @@ export default function ModalSucceed(props) {
     const {
         forwardBack,
         amount,
-        deposit
+        deposit,
+        message
     } = props
     return (
         <div className='contribute'>
@@ -23,11 +24,15 @@ export default function ModalSucceed(props) {
                         />
 
                         <div className='modal-succeed__body__content'>
-                            Congratulations on your successful purchase of {amount}
-                            <span className='modal-succeed__body__content__boon'>$BOON</span>
-                            , for {deposit}
-                            <span className='modal-succeed__body__content__avax'>AVAX</span>
-                            , in the "Seed" round.
+                            {message == null ?
+                                (
+                                    <>
+                                        {`Congratulations on your successful purchase of ${amount}`}
+                                        <span className='modal-succeed__body__content__boon'>$BOON</span>
+                                        , for {deposit}
+                                        <span className='modal-succeed__body__content__avax'>AVAX</span>
+                                        , in the "Seed" round.
+                                    </>) : message}
                         </div>
                     </div>
                     <a
