@@ -51,10 +51,10 @@ export default function BodyRight(props) {
                 />
                 : <div className='body-right'>
                     <ModalNotification forwardBack={
-                        ()=>{
+                        () => {
                             setModalNotificationState(false)
                         }
-                    }/>
+                    } />
                 </div>
         )
     }
@@ -68,7 +68,7 @@ export default function BodyRight(props) {
                     :
                     <div className='body-right'>
                         <span className='body-right__title'>
-                            WALLET SELECTION
+                            TRANSACTION
                         </span>
                         <Contribute
                             data={contributeData}

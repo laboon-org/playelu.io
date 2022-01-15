@@ -199,6 +199,16 @@ a {
 .login-icon img {
     width: 100%;
 }
+.white-list__login {
+    flex: 1;
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    color: #fff;
+    font-size: 26px;
+    font-family: $font_body, sans-serif;
+    margin-bottom: 0;
+}
 
 /* CSS CONTRIBUTE */
 .contribute {

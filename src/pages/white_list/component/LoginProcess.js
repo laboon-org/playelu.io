@@ -22,7 +22,7 @@ export default function LoginProcess(props) {
 
     const connectMetaMask = async () => {
         const provider = await detectEthereumProvider({ mustBeMetaMask: true });
-    
+
         if (provider) {
 
             //* Listener
@@ -84,9 +84,9 @@ export default function LoginProcess(props) {
                     src={icon}
                     alt=''
                 />
-                <h4 className='login-title'>
+                <span className='white-list__login login-title'>
                     {title}
-                </h4>
+                </span>
             </div>
         )
     }
@@ -115,7 +115,7 @@ export default function LoginProcess(props) {
             <Web3Connector
                 wallet_name='metamask'
                 icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp'
-                title='Login with Metamask'
+                title='Login with MetaMask'
             />
 
         </div>
