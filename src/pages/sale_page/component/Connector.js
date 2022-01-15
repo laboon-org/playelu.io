@@ -136,7 +136,7 @@ export default function Connector(props) {
 
     const checkWallet = async () => {
         try {
-            const SHEET_NAME = '1.Seed'
+            const SHEET_NAME = '2.Strategy'
             const URL = 'https://laboon.as.r.appspot.com/check_address'
             const checkWallet = await axios.post(URL, {
                 "sheet_name": SHEET_NAME,

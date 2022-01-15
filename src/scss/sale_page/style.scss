@@ -13,7 +13,8 @@ a {
     color: #efa059;
     cursor: pointer;
 }
-.sale {
+.sale,
+.white-list {
     width: 100vw;
     height: 100vh;
     cursor: pointer;
@@ -103,7 +104,8 @@ a {
     cursor: pointer;
 }
 /* Sale body */
-.sale-body {
+.sale-body,
+.white-list__body {
     max-width: 1920px;
     max-height: 1113px;
     width: 96%;
@@ -133,7 +135,8 @@ a {
     margin-top: -10%;
 }
 /* Begin body-right */
-.body-right {
+.body-right,
+.white-list__body--right {
     position: relative;
     min-width: 300px;
     width: 60%;
@@ -143,11 +146,11 @@ a {
     justify-content: center;
 }
 
-.body-right__title {
+.body-right__title,
+.white-list__body--right__title {
     position: absolute;
     top: -50px;
     font-size: 32px;
-
     color: #ffff;
     -webkit-text-stroke: 2px black;
 }
@@ -310,6 +313,17 @@ a {
 .link-playelu {
     color: #ffff;
     font-size: 16px;
+}
+.white-list__title {
+    position: absolute;
+    text-align: center;
+    top: -70px;
+    left: 0;
+    width: 100%;
+    font-size: 32px;
+    color: #ffff;
+    -webkit-text-stroke: 2px black;
+    font-family: $font_bold;
 }
 
 /* CSS NOTFOUND */

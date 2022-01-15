@@ -63,7 +63,8 @@
     }
 
     /* Begin body-right */
-    .body-right__title {
+    .body-right__title,
+    .white-list__body--right__title {
         font-size: 26px;
         margin-bottom: 10px;
     }
@@ -149,6 +150,12 @@
 
     .link-playelu {
         font-size: 9px;
+    }
+
+    .white-list__title {
+        top: -40px;
+        font-size: 20px;
+        -webkit-text-stroke: 1.5px black;
     }
 
     .notfound {
