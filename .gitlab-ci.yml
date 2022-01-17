@@ -5,7 +5,7 @@ build:
   image: node:16.13  # Run the job in a `node` docker image
   stage: build
   script:
-    - CI=false npm run install      # Run `yarn install` and `yarn build`
+    - CI=false npm install      # Run `yarn install` and `yarn build`
     - CI=false npm run build
   artifacts:
     paths:
