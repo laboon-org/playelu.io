@@ -1,7 +1,7 @@
 import React from 'react'
-import message from '../../../module/messageStorage'
 import { isMobile } from 'react-device-detect';
-import '../../../scss/sale_page/notfound_modal.scss'
+import message from '../../../../module/messageStorage';
+import '../../../../scss/sale_page/notfound_modal.scss'
 
 const defineConstant = {
     metamask: {

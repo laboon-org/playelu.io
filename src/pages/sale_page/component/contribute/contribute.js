@@ -5,7 +5,6 @@ import web3 from 'web3'
 
 import wallet from '../../../../module/wallet'
 import ModalFail from '../modal/ModalFail'
-import NotfoundModal from '../NotfoundModal'
 import ModalSucceed from '../modal/ModalSucceed'
 import contractAbi from '../../../../constant/contractABI'
 
