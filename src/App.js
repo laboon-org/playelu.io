@@ -22,6 +22,7 @@ const PlayeluBaner = React.lazy(() => import('./pages/banner/playeluBaner'))
 const Gameplay = React.lazy(() => import('./pages/gameplay/gameplay'))
 const SalePage = React.lazy(() => import('./pages/sale_page/SalePage'))
 const WhiteList = React.lazy(() => import('./pages/white_list/WhiteList'))
+const Claim = React.lazy(() => import('./pages/claim/ClaimPage'))
 const Queryimage = "https://api-eu-central-1.graphcms.com/v2/ckxidcmyc26eh01xpc7na45t8/master";
 const Query = `
 {
@@ -135,6 +136,7 @@ function App(props) {
           <Route path='/gameplay' element={<UrlRescusivePanel Comp={Gameplay} />}> </Route>
           <Route path='/presales' element={<UrlRescusivePanel Comp={SalePage} />}> </Route>
           <Route path='/whitelist' element={<UrlRescusivePanel Comp={WhiteList} />}> </Route>
+          <Route path='/claim' element={<UrlRescusivePanel Comp={Claim} />}> </Route>
         </Routes>
       </Router>
     </React.Suspense>
