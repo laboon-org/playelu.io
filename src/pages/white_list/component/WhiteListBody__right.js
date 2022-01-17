@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import NotfoundModal from '../../sale_page/component/NotfoundModal'
 import LoginProcess from './LoginProcess'
 import WhiteListRegistration from './WhiteList_Registration'
 
