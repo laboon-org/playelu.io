@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import BodyRight from './bodyRight'
 import Logo from './logo'
-import NotfoundModal from './NotfoundModal'
+import NotfoundModal from './notfoundModal'
 
 export default function SaleBody(props) {
     const { changeStateWarning } = props
