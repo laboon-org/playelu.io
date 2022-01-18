@@ -6,8 +6,6 @@ export default function Header() {
             <a
                 className='link-home'
                 href='https://playelu.io/'
-                target="_blank"
-                rel="noreferrer"
             >
                 <img
                     className='home-icon'

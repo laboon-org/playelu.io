@@ -12,20 +12,34 @@ export default function CountDown_Time(props) {
     return (
         <div className='countdown'>
             <div className='countdown-element'>
-                <span>Day</span>
-                <span>{timerDays}</span>
+                <div className='time'>
+                    <div className='countdown-element__shadow'></div>
+                    <span>02</span>
+                </div>
+                <span className='countdown-element__title'>Day</span>
             </div>
             <div className='countdown-element'>
-                <span>Hour</span>
-                <span>{timerHours}</span>
+                <div className='time'>
+                    <div className='countdown-element__shadow'></div>
+                    <span>04</span>
+                </div>
+                <span className='countdown-element__title'>
+                    Hour
+                </span>
             </div>
             <div className='countdown-element'>
-                <span>Minute</span>
-                <span>{timerMinutes}</span>
+                <div className='time'>
+                    <div className='countdown-element__shadow'></div>
+                    <span>09</span>
+                </div>
+                <span className='countdown-element__title'>Minute</span>
             </div>
             <div className='countdown-element'>
-                <span>Second</span>
-                <span>{timerSeconds}</span>
+                <div className='time'>
+                    <div className='countdown-element__shadow'></div>
+                    <span>07</span>
+                </div>
+                <span className='countdown-element__title'>Second</span>
             </div>
         </div>
     )

@@ -244,8 +244,8 @@ export default function WhiteList_Registration() {
                             : <span className='white-list__code'>*Code: {window.localStorage.getItem('id')}</span>}
                 </>
                 :
-                // <WhiteListComingSoon />
-                <ModalSucceedWhiteList message={'Thanks you! for register whitelist.'} />
+                <WhiteListComingSoon />
+            // <ModalSucceedWhiteList message={'Thanks you! for register whitelist.'} />
         }
     </>
     )
