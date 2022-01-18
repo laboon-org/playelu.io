@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import moment from 'moment'
-import ModalSucceed from './modal/ModalSucceed'
+import ModalSucceedWhiteList from './modal/ModalSucceed_whiteList'
 import WhiteListComingSoon from './modal/WhiteList_comingSoon'
 import wallet from '../../../module/wallet'
 import axios from 'axios'
@@ -138,7 +138,7 @@ export default function WhiteList_Registration() {
 
     return (<>
         {
-            !modalSucceedShow ?
+            modalSucceedShow ?
                 <>
                     <div className='white-list__title'>
                         <span>WHITELIST: REGISTRATION</span>
@@ -203,6 +203,7 @@ export default function WhiteList_Registration() {
                             <div className='contribute-sec'>
                                 <div className='contribute-title'>
                                     <p>Preparing Amount</p>
+                                    <span className='avax-quantity'>AVAX</span>
                                 </div>
                                 <div className='input'>
                                     <input
@@ -243,8 +244,8 @@ export default function WhiteList_Registration() {
                             : <span className='white-list__code'>*Code: {window.localStorage.getItem('id')}</span>}
                 </>
                 :
-                <WhiteListComingSoon />
-            // <ModalSucceed message={'Thanks you! for register whitelist.'} />
+                // <WhiteListComingSoon />
+                <ModalSucceedWhiteList message={'Thanks you! for register whitelist.'} />
         }
     </>
     )
