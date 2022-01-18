@@ -23,10 +23,14 @@ export default function WhiteList_Registration() {
 
     const register = async () => {
         const boonValue = parseInt(amount.split('.').join(""));
-        let id = searchParams.get("id")
+        
+        //* Get ref code
+        let storage = window.localStorage;
+        let id = storage.getItem('id')
         if (id == null || id == undefined) {
             id = -1
         }
+  
         try {
             const URL = 'https://laboon.as.r.appspot.com/whitelist'
             const callRegister = await axios.post(URL, {
