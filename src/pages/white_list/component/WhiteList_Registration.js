@@ -115,6 +115,7 @@ export default function WhiteList_Registration() {
                             <div className='contribute-sec'>
                                 <div className='contribute-title'>
                                     <p>Preparing Amount</p>
+                                    <span className='avax-quantity'>AVAX</span>
                                 </div>
                                 <div className='input'>
                                     <input
