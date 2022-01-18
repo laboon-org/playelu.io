@@ -118,7 +118,9 @@ $font_bold: "cookieRun_bold";
     justify-content: center;
     margin-bottom: 10px;
     align-items: center;
-    align-items: center;
+}
+.modal-comingSoon__body {
+    flex-direction: column;
 }
 
 .modal-succeed__heading {
@@ -134,6 +136,11 @@ $font_bold: "cookieRun_bold";
     color: #ffff;
     font-size: 24px;
     width: calc(100% - 250px);
+}
+
+.modal-comingSoon__content {
+    text-align: center;
+    width: 100%;
 }
 
 .modal-succeed__body__content__boon {

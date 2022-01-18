@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ClaimInformation from './ClaimInformation'
-import ClaimRightBtn from './ClaimRight__btn'
+
 
 export default function ClaimBodyRight() {
     const [connectWallet, setConnectWallet] = useState(false)
@@ -55,7 +55,9 @@ export default function ClaimBodyRight() {
                     <div className='claim-right__content__btn'>
                         {
                             !connectWallet ?
-                                <ClaimRightBtn /> :
+                                <div className='claim-right__btn'>
+                                    <span> Select Wallet</span>
+                                </div> :
                                 <div className=''></div>
                         }
                     </div>

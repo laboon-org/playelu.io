@@ -275,6 +275,21 @@ a {
     background: rgba(24, 23, 23, 0.6);
     border-radius: 10px;
     border: 1px solid #ffff;
+    ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #b6b6b6;
+        opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #b6b6b6;
+    }
+
+    ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #b6b6b6;
+    }
 }
 .input-text {
     width: calc(100% - 30px);
@@ -282,11 +297,14 @@ a {
     width: -webkit-calc(100% - 30px);
     font-size: 16px;
     padding: 14px;
-    color: #ffff;
+    color: #b6b6b6;
     background: rgba(24, 23, 23, 0.6);
     border-radius: 10px;
     outline: none;
     border: none;
+}
+.boon-quantity__input {
+    color: #ffff;
 }
 .input-img {
     position: absolute;
@@ -328,16 +346,31 @@ a {
     font-size: 16px;
 }
 .white-list__title {
-    position: absolute;
     text-align: center;
-    top: -70px;
-    left: 0;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     font-size: 32px;
     color: #ffff;
     white-space: nowrap;
     -webkit-text-stroke: 0.5px black;
     font-family: $font_bold;
+}
+
+.white-list__subtitle {
+    font-size: 20px;
+}
+.white-list__strategy {
+    font-size: 20px;
+    color: #fed34e;
+}
+
+.white-list__code {
+    width: 88%;
+    font-family: $font_body;
+    font-weight: 200;
+    margin-top: 20px;
 }
 
 /* CSS NOTFOUND */
