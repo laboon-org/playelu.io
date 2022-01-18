@@ -22,10 +22,14 @@ export default function WhiteList_Registration() {
 
     const register = async () => {
         const boonValue = parseInt(amount.split('.').join(""));
-        let id = searchParams.get("id")
+        
+        //* Get ref code
+        let storage = window.localStorage;
+        let id = storage.getItem('id')
         if (id == null || id == undefined) {
             id = -1
         }
+  
         try {
             const URL = 'https://laboon.as.r.appspot.com/whitelist'
             const callRegister = await axios.post(URL, {
@@ -40,12 +44,12 @@ export default function WhiteList_Registration() {
             console.log(callRegister)
             if (callRegister.status == 200) {
                 showModalSucceed()
-            } else { 
+            } else {
                 //* Never error
             }
-        }   
+        }
         catch (err) {
-  
+
         }
     }
 
@@ -129,7 +133,7 @@ export default function WhiteList_Registration() {
                                     <div
                                         className='contribute-btn'
                                         //onClick={async () => await onPressContribute()}
-                                        onClick={async ()=>{
+                                        onClick={async () => {
                                             await register()
                                         }}
                                     >
@@ -143,7 +147,7 @@ export default function WhiteList_Registration() {
                     </div >
                 </>
                 :
-                <ModalSucceed message={'Thanks you! for register whitelist.'}/>
+                <ModalSucceed message={'Thanks you! for register whitelist.'} />
         }
 
 

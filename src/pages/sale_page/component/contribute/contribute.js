@@ -28,7 +28,6 @@ export default function Contribute(props) {
 
 
     const { showLoading, data } = props
-    console.log(data)
 
     //*State
     const [amount, setAmount] = useState((data['BOON (Amount)'] + '').replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1."))

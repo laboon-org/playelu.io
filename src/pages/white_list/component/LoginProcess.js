@@ -1,22 +1,14 @@
 import React from 'react'
-import {
-    useSearchParams
-} from "react-router-dom";
 import detectEthereumProvider from '@metamask/detect-provider'
 import axios from 'axios'
-
 import wallet from '../../../module/wallet'
 import messageStorage from '../../../module/messageStorage'
-
-
 
 export default function LoginProcess(props) {
     const {
         showWhiteList, //* Show white list 
         showModalNotFound
     } = props
-
-    const [searchParams, setSearchParams] = useSearchParams();
 
     //* Function
 
