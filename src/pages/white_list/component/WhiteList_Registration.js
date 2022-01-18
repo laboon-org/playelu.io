@@ -138,7 +138,7 @@ export default function WhiteList_Registration() {
 
     return (<>
         {
-            modalSucceedShow ?
+            !modalSucceedShow ?
                 <>
                     <div className='white-list__title'>
                         <span>WHITELIST: REGISTRATION</span>
