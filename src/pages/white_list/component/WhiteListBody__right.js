@@ -15,7 +15,6 @@ export default function WhiteListBody__right(props) {
             {
                 !whiteListShow ?
                     <LoginProcess
-                     
                         showWhiteList={showWhiteList}
                         showModalNotFound={showModalNotFound}
                     /> :
