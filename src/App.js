@@ -1,7 +1,8 @@
 
 /* eslint-disable */
 import UrlRescusive from './UrlRescusive';
-
+import messageStorage from './module/messageStorage';
+import usePromise from 'react-promise-suspense';
 import './App.css';
 import './scss/home/playeluHome.scss'
 import './scss/sale_page/style.scss'
@@ -13,8 +14,7 @@ import {
   Route
 } from "react-router-dom";
 import Loading from './components/Loading';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
 
@@ -43,77 +43,98 @@ const querySetting = `
 function App(props) {
   const [imgList, setImgList] = useState({});
   const [setting, setSetting] = useState([]);
-  const isFirst = React.useRef(true)
+  const isFirst = useRef(true)
+  useEffect(() => {
 
-  if (isFirst.current == true) {
-    isFirst.current = false
-    new Promise(resolve => axios({
-      url: Queryimage,
-      method: "POST",
-      data: {
-        query: Query,
-      },
-    })
-      .then((response) => {
-        let data = response.data.data.dynamicContents
-        const process = (obj, name, value) => {
-          //Gia su name =[A,B,C]
-          if (name.length == 1) {
-            return {
-              [name[0]]: value
-            }
-          } else {
-            if (name[0] in obj) { //Trương hợp đã có
-              let temp = [...name] //Bỏ phần tử đầu tiên
-              temp.shift()
-              const valueNew = process(obj[name[0]], temp, value)
-              obj[name[0]] = {
-                ...valueNew,
-                ...obj[name[0]]
+    if (isFirst.current) {
+      isFirst.current = false
+      new Promise(resolve => axios({
+        url: Queryimage,
+        method: "POST",
+        data: {
+          query: Query,
+        },
+      })
+        .then((response) => {
+          let data = response.data.data.dynamicContents
+          const process = (obj, name, value) => {
+            //Gia su name =[A,B,C]
+            if (name.length == 1) {
+              return {
+                [name[0]]: value
               }
-            } else {//Trương hoợp lần đầu tiên
-              obj[name[0]] = {}
-              let temp = [...name]//Bỏ phần tử đầu tiên
-              temp.shift()
-              const valueNew = process(obj[name[0]], temp, value)
-              obj[name[0]] = {
-                ...valueNew,
+            } else {
+              if (name[0] in obj) { //Trương hợp đã có
+                let temp = [...name] //Bỏ phần tử đầu tiên
+                temp.shift()
+                const valueNew = process(obj[name[0]], temp, value)
+                obj[name[0]] = {
+                  ...valueNew,
+                  ...obj[name[0]]
+                }
+              } else {//Trương hoợp lần đầu tiên
+                obj[name[0]] = {}
+                let temp = [...name]//Bỏ phần tử đầu tiên
+                temp.shift()
+                const valueNew = process(obj[name[0]], temp, value)
+                obj[name[0]] = {
+                  ...valueNew,
+                }
               }
             }
           }
-        }
-        const mainObj = {}
-        for (var key = 0; key < data.length; key++) {
-          const pack = data[key]
-          const name = pack.key.split('_')
-          const value = pack.value
-          process(mainObj, name, value)
-        }
+          const mainObj = {}
+          for (var key = 0; key < data.length; key++) {
+            const pack = data[key]
+            const name = pack.key.split('_')
+            const value = pack.value
+            process(mainObj, name, value)
+          }
 
 
-        resolve({ ...mainObj })
-      })).then((img) => {
-        axios({
-          url: Queryimage,
-          method: "POST",
-          data: {
-            query: querySetting,
-          },
-        })
-          .then((response) => {
-            let data = response.data.data.settings
-            const setting = {}
-            for (var i = 0; i < data.length; i++) {
-              const pa = data[i]
-              const name = pa.key
-              const value = pa.value
-              setting[name] = value
-            }
-            setImgList(img)
-            setSetting(setting)
+          resolve({ ...mainObj })
+        })).then((img) => {
+          axios({
+            url: Queryimage,
+            method: "POST",
+            data: {
+              query: querySetting,
+            },
           })
+            .then((response) => {
+              let data = response.data.data.settings
+              const setting = {}
+              for (var i = 0; i < data.length; i++) {
+                const pa = data[i]
+                const name = pa.key
+                const value = pa.value
+                setting[name] = value
+              }
+              setImgList(img)
+              setSetting(setting)
+            })
+        })
+
+    }
+  }, [])
+
+  const LoadData = () => {
+    const load = usePromise((a) =>
+      new Promise(async resolve => {
+        let data = await axios.post('https://laboon.as.r.appspot.com/config')
+          .then(value => {
+            return value.data.content
+          }).catch(err => {
+            return {}
+            //* Not to be error
+          })
+        messageStorage.getInstance().setMessage('config', data)
+        resolve(true)
       })
+      , {})
+    return (<></>)
   }
+
 
   const UrlRescusivePanel = ({ Comp }) => {
     return (
@@ -130,6 +151,7 @@ function App(props) {
 
   return (
     <React.Suspense fallback={<Loading />}>
+      <LoadData></LoadData>
       <Router>
         <Routes>
           <Route path='/' element={<UrlRescusivePanel Comp={PlayeluBaner} />}>  </Route>

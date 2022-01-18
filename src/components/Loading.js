@@ -15,6 +15,5 @@ export default function Loading() {
                 <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/logo1.webp' className='loading-img' alt='logoElu' />
             </div>
         </div>
-
     )
 }

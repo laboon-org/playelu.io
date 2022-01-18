@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import LoginProcess from './LoginProcess'
-import WhiteListRegistration from './WhiteList_Registration'
 
+const WhiteListRegistration = React.lazy(() => import('./WhiteList_Registration'))
 export default function WhiteListBody__right(props) {
 
     const { showModalNotFound } = props

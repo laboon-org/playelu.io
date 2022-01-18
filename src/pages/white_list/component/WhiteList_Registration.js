@@ -1,36 +1,118 @@
 import React, { useState } from 'react'
+import moment from 'moment'
 import ModalSucceed from './modal/ModalSucceed'
 import WhiteListComingSoon from './modal/WhiteList_comingSoon'
 import wallet from '../../../module/wallet'
-import {
-    useSearchParams
-} from "react-router-dom";
 import axios from 'axios'
-
-
+import messageStorage from '../../../module/messageStorage'
 
 import '../../../scss/reponsiveness/sale_page/mobile.scss'
+//* Get Config
+
+const getConfigRoundData = () => {
+    const CONFIG = messageStorage.getInstance().getMessage('config')
+    let boonData = {}
+    if (CONFIG['Round Setting'] != null) {
+        const data = CONFIG['Round Setting'].data
+
+        const index = data.findIndex((v, i, obj) => {
+            //19   19     
+            if (moment(v.Start).isAfter(moment().subtract(1, 'days')) && moment(v.End).isAfter(moment().add(1, 'days'))) {
+                return true
+            }
+        })
+
+        if (index != -1) {
+            boonData = data[index]
+        }
+        return boonData
+    }
+    return {
+
+    }
+}
+const findAvaxValue = () => {
+    const CONFIG = messageStorage.getInstance().getMessage('config')
+    if (CONFIG.Common != null) {
+        const dataCommon = CONFIG.Common.data
+        let avaxValue = 0
+        const index = dataCommon.findIndex((v, i, obj) => {
+            if (v.Key == 'avax_value') {
+                return true
+            }
+        })
+
+        if (index != -1) {
+            avaxValue = dataCommon[index].Value
+        }
+        return parseFloat(avaxValue)
+    }
+    return 0
+}
+
+const findBoonValue = () => {
+    const CONFIG = messageStorage.getInstance().getMessage('config')
+    if (CONFIG['Round Setting'] != null) {
+        const data = CONFIG['Round Setting'].data
+        let boonValue = 0
+        const index = data.findIndex((v, i, obj) => {
+            //19   19     
+            if (moment(v.Start).isAfter(moment().subtract(1, 'days')) && moment(v.End).isAfter(moment().add(1, 'days'))) {
+                return true
+            }
+        })
+
+        if (index != -1) {
+            boonValue = data[index]['Sell Price']
+        }
+        return parseFloat(boonValue)
+    }
+    return 0
+}
+
+//* Function
+const calValueDeposit = (amount) => {
+    const avaxValueUSD = findAvaxValue()
+    const boonValueUSD = findBoonValue()
+    const calAvaxAmount = (boonAmount) => {
+        const USD = boonAmount * boonValueUSD
+        return USD / avaxValueUSD
+    }
+
+    const boonAmount = parseInt(amount.split('.').join(''))
+    const avaxAmount = (Math.round(calAvaxAmount(boonAmount) * 1000) / 1000) + ''
+    return avaxAmount.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
+}
 
 export default function WhiteList_Registration() {
+
     //*State
     const [amount, setAmount] = useState(('').replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1."))
+    const [deposit, setDeposit] = useState('')
     const [modalSucceedShow, setModalSucceedShow] = useState(false)
+
+
+
+    //* Function callback
+    const setValueDeposit = (amount) => {
+
+        setDeposit(calValueDeposit(amount))
+    }
+
     const showModalSucceed = () => {
         setModalSucceedShow(true)
     }
 
-    const [searchParams, setSearchParams] = useSearchParams();
-
     const register = async () => {
         const boonValue = parseInt(amount.split('.').join(""));
-        
+
         //* Get ref code
         let storage = window.localStorage;
         let id = storage.getItem('id')
         if (id == null || id == undefined) {
             id = -1
         }
-  
+
         try {
             const URL = 'https://laboon.as.r.appspot.com/whitelist'
             const callRegister = await axios.post(URL, {
@@ -62,7 +144,7 @@ export default function WhiteList_Registration() {
                         <span>WHITELIST: REGISTRATION</span>
                         <div className='white-list__subtitle'>
                             <span>Round:</span>
-                            <span className='white-list__strategy'> Strategy (0.015$)</span>
+                            <span className='white-list__strategy'> {getConfigRoundData()["Round Name"]} ({findBoonValue()}$)</span>
                         </div>
                     </div>
 
@@ -101,11 +183,13 @@ export default function WhiteList_Registration() {
                                         onChange={(e) => {
                                             if (e.target.value == '') {
                                                 setAmount('')
+                                                setDeposit('')
                                             }
                                             const reg = new RegExp('^[0-9]+$');
                                             if (reg.test(e.target.value.split('.').join(""))) {
                                                 const amount = e.target.value.split('.').join("").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
                                                 setAmount(amount)
+                                                setValueDeposit(amount)
                                             } else {
 
                                             }
@@ -122,11 +206,11 @@ export default function WhiteList_Registration() {
                                 </div>
                                 <div className='input'>
                                     <input
+                                        value={deposit}
                                         className='input-text'
                                         style={{
                                             color: '#B6B6B6'
                                         }}
-                                        type="text"
                                         name="name"
                                         placeholder='0.00'
                                         readOnly={true}
@@ -153,7 +237,10 @@ export default function WhiteList_Registration() {
                         </div>
                     </div >
 
-                    <span className='white-list__code'>*Code: 123456</span>
+                    {
+                        window.localStorage.getItem('id') == undefined || window.localStorage.getItem('id') == null
+                            ? <></>
+                            : <span className='white-list__code'>*Code: {window.localStorage.getItem('id')}</span>}
                 </>
                 :
                 <WhiteListComingSoon />
