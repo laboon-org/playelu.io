@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ModalSucceed from './modal/ModalSucceed'
+import ModalSucceedWhiteList from './modal/ModalSucceed_whiteList'
 import WhiteListComingSoon from './modal/WhiteList_comingSoon'
 import wallet from '../../../module/wallet'
 import {
@@ -23,14 +23,14 @@ export default function WhiteList_Registration() {
 
     const register = async () => {
         const boonValue = parseInt(amount.split('.').join(""));
-        
+
         //* Get ref code
         let storage = window.localStorage;
         let id = storage.getItem('id')
         if (id == null || id == undefined) {
             id = -1
         }
-  
+
         try {
             const URL = 'https://laboon.as.r.appspot.com/whitelist'
             const callRegister = await axios.post(URL, {
@@ -56,7 +56,7 @@ export default function WhiteList_Registration() {
 
     return (<>
         {
-            !modalSucceedShow ?
+            modalSucceedShow ?
                 <>
                     <div className='white-list__title'>
                         <span>WHITELIST: REGISTRATION</span>
@@ -157,8 +157,8 @@ export default function WhiteList_Registration() {
                     <span className='white-list__code'>*Code: 123456</span>
                 </>
                 :
-                <WhiteListComingSoon />
-            // <ModalSucceed message={'Thanks you! for register whitelist.'} />
+                // <WhiteListComingSoon />
+                <ModalSucceedWhiteList message={'Thanks you! for register whitelist.'} />
         }
     </>
     )
