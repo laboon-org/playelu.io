@@ -1,13 +1,28 @@
 import React, { useState } from 'react'
 import moment from 'moment'
 import ModalSucceedWhiteList from './modal/ModalSucceed_whiteList'
-import WhiteListComingSoon from './modal/WhiteList_comingSoon'
 import wallet from '../../../module/wallet'
 import axios from 'axios'
 import messageStorage from '../../../module/messageStorage'
-
+import WhiteListComingSoon from './modal/WhiteList_comingSoon'
 import '../../../scss/reponsiveness/sale_page/mobile.scss'
+
 //* Get Config
+
+const getStatePage = () => {
+    const CONFIG = messageStorage.getInstance().getMessage('config')
+    const data = CONFIG['Page Setting'].data
+    const index = data.findIndex((v, i, obj) => {
+
+        if (v['Page Name'] == 'whitelist') {
+            return true
+        }
+    })
+
+    const pageSetting = data[index]
+
+    return pageSetting.Toggle === 'TRUE'
+}
 
 const getConfigRoundData = () => {
     const CONFIG = messageStorage.getInstance().getMessage('config')
@@ -17,7 +32,7 @@ const getConfigRoundData = () => {
 
         const index = data.findIndex((v, i, obj) => {
             //19   19     
-            if (moment(v.Start).isAfter(moment().subtract(1, 'days')) && moment(v.End).isAfter(moment().add(1, 'days'))) {
+            if (moment(v.Start).subtract(1, 'days').isBefore(moment()) && moment(v.End).add(1, 'days').isAfter(moment())) {
                 return true
             }
         })
@@ -33,6 +48,7 @@ const getConfigRoundData = () => {
 }
 const findAvaxValue = () => {
     const CONFIG = messageStorage.getInstance().getMessage('config')
+
     if (CONFIG.Common != null) {
         const dataCommon = CONFIG.Common.data
         let avaxValue = 0
@@ -56,7 +72,6 @@ const findBoonValue = () => {
         const data = CONFIG['Round Setting'].data
         let boonValue = 0
         const index = data.findIndex((v, i, obj) => {
-            //19   19     
             if (moment(v.Start).isAfter(moment().subtract(1, 'days')) && moment(v.End).isAfter(moment().add(1, 'days'))) {
                 return true
             }
@@ -90,9 +105,8 @@ export default function WhiteList_Registration() {
     const [amount, setAmount] = useState(('').replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1."))
     const [deposit, setDeposit] = useState('')
     const [modalSucceedShow, setModalSucceedShow] = useState(false)
-
-
-
+    const [modalCommingShow, setModalCommingShow] = useState(!getStatePage())
+    console.log(modalCommingShow)
     //* Function callback
     const setValueDeposit = (amount) => {
 
@@ -104,6 +118,12 @@ export default function WhiteList_Registration() {
     }
 
     const register = async () => {
+
+        //* disable eslint in here
+        if (!confirm('Are you sure about your choice?')) {//eslint-disable-line    
+            return
+        }
+
         const boonValue = parseInt(amount.split('.').join(""));
 
         //* Get ref code
@@ -137,8 +157,9 @@ export default function WhiteList_Registration() {
     }
 
     return (<>
-        {
-            !modalSucceedShow ?
+
+        {!modalCommingShow ?
+            (!modalSucceedShow ?
                 <>
                     <div className='white-list__title'>
                         <span>WHITELIST: REGISTRATION</span>
@@ -244,9 +265,8 @@ export default function WhiteList_Registration() {
                             : <span className='white-list__code'>*Code: {window.localStorage.getItem('id')}</span>}
                 </>
                 :
-                // <WhiteListComingSoon />
                 <ModalSucceedWhiteList message={'Thanks you! for register whitelist.'} />
+            ) : <WhiteListComingSoon />
         }
-    </>
-    )
+    </>)
 }
