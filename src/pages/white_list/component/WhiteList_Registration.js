@@ -89,6 +89,7 @@ const findBoonValue = () => {
 const calValueDeposit = (amount) => {
     const avaxValueUSD = findAvaxValue()
     const boonValueUSD = findBoonValue()
+
     const calAvaxAmount = (boonAmount) => {
         const USD = boonAmount * boonValueUSD
         return USD / avaxValueUSD
@@ -106,6 +107,7 @@ export default function WhiteList_Registration() {
     const [deposit, setDeposit] = useState('')
     const [modalSucceedShow, setModalSucceedShow] = useState(false)
     const [modalCommingShow, setModalCommingShow] = useState(!getStatePage())
+    const [messageWhitelist, setMessageWhitelist] = useState('Thanks you! for register whitelist.')
     console.log(modalCommingShow)
     //* Function callback
     const setValueDeposit = (amount) => {
@@ -123,6 +125,22 @@ export default function WhiteList_Registration() {
         if (!confirm('Are you sure about your choice?')) {//eslint-disable-line    
             return
         }
+
+        const checkWallet = await axios.post('https://laboon.as.r.appspot.com/check_wallet_wl', {
+            wallet_address: wallet.getInstance().account,
+        }).then(res => {
+            return res.data
+        }).catch(err => {
+            throw err
+        })
+
+        console.log(checkWallet)
+        if (checkWallet.status == 200) {
+            setMessageWhitelist('Your wallet address was already inside registered white list. You’d like to update the info, please contact AGENCY to get more support (hi@playelu.io)')
+            showModalSucceed()
+            return
+        }
+
 
         const boonValue = parseInt(amount.split('.').join(""));
 
@@ -144,8 +162,9 @@ export default function WhiteList_Registration() {
             }).catch(err => {
                 throw err
             })
-            console.log(callRegister)
+
             if (callRegister.status == 200) {
+                setMessageWhitelist('Thanks you! for register whitelist.')
                 showModalSucceed()
             } else {
                 //* Never error
@@ -265,7 +284,7 @@ export default function WhiteList_Registration() {
                             : <span className='white-list__code'>*Code: {window.localStorage.getItem('id')}</span>}
                 </>
                 :
-                <ModalSucceedWhiteList message={'Thanks you! for register whitelist.'} />
+                <ModalSucceedWhiteList message={messageWhitelist} />
             ) : <WhiteListComingSoon />
         }
     </>)

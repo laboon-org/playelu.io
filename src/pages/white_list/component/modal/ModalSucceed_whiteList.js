@@ -23,7 +23,7 @@ export default function ModalSucceed(props) {
                         <span className='modal-succeed__heading white-list__succeed__heading'>
                             CONGRATULATION
                         </span>
-                        <span className='white-list__succeed__sub'>You have successfully registered</span>
+                        <span className='white-list__succeed__sub'>{message}</span>
                         {/* {message == null ?
                             (
                                 <>
