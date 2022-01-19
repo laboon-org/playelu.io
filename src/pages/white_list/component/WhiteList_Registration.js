@@ -107,7 +107,7 @@ export default function WhiteList_Registration() {
     const [deposit, setDeposit] = useState('')
     const [modalSucceedShow, setModalSucceedShow] = useState(false)
     const [modalCommingShow, setModalCommingShow] = useState(!getStatePage())
-    const [messageWhitelist, setMessageWhitelist] = useState('Thanks you! for register whitelist.')
+    const [messageState, setMessageState] = useState('Thanks you! for register whitelist.')
     console.log(modalCommingShow)
     //* Function callback
     const setValueDeposit = (amount) => {
@@ -136,7 +136,7 @@ export default function WhiteList_Registration() {
 
         console.log(checkWallet)
         if (checkWallet.status == 200) {
-            setMessageWhitelist('Your wallet address was already inside registered white list. You’d like to update the info, please contact AGENCY to get more support (hi@playelu.io)')
+            setMessageState('ALREADY_SIGNED')
             showModalSucceed()
             return
         }
@@ -164,7 +164,7 @@ export default function WhiteList_Registration() {
             })
 
             if (callRegister.status == 200) {
-                setMessageWhitelist('Thanks you! for register whitelist.')
+                setMessageState('SUCCEED')
                 showModalSucceed()
             } else {
                 //* Never error
@@ -284,7 +284,7 @@ export default function WhiteList_Registration() {
                             : <span className='white-list__code'>*Code: {window.localStorage.getItem('id')}</span>}
                 </>
                 :
-                <ModalSucceedWhiteList message={messageWhitelist} />
+                <ModalSucceedWhiteList type={messageState} />
             ) : <WhiteListComingSoon />
         }
     </>)
