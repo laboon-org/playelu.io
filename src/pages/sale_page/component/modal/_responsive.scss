@@ -71,7 +71,10 @@
         font-size: 20px;
         margin-bottom: 5px;
     }
-
+    .modal-succeed__body__img {
+        width: 140px;
+        margin-bottom: 10px;
+    }
     .modal-succeed__body__content {
         font-size: 13px;
         width: auto;
@@ -161,10 +164,13 @@ IPAD
         font-size: 18px;
         width: calc(calc(100% - 150px));
     }
+    .modal-succeed__body__img {
+        width: 180px !important;
+        margin-bottom: 10px;
+    }
 
     .white-list__succeed__img {
         width: 180px;
-        height: auto;
         margin-bottom: 30px;
     }
 
@@ -207,4 +213,13 @@ IPAD
 - max-width: 1365px
 */
 @media screen and (min-width: 1024px) and (max-width: 1365px) {
+    .modal-notification__heading {
+        font-size: 30px;
+    }
+    .modal-notification__content {
+        font-size: 20px;
+    }
+    .modal-notification__content span {
+        font-size: 20px;
+    }
 }

@@ -16,7 +16,7 @@ export default function BodyRight(props) {
     const [contributeShow, setContributeShow] = useState(false)
     const [contributeData, setContributeData] = useState({})
     const [modalProcessing, setModalProcessing] = useState(false)
-    const [modalNotificationState, setModalNotificationState] = useState(false)
+    const [modalNotificationState, setModalNotificationState] = useState(true)
 
     //* Function callback
     const onPressShow = useCallback((data) => {

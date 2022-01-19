@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import CountDownTime from '../../CountDown_Time.js'
+import React, { useEffect, useState, useRef } from 'react'
 
 export default function WhiteListComingSoon() {
-    const [timerDays, settimerDays] = useState()
-    const [timerHours, settimerHours] = useState()
-    const [timerMinutes, settimerMinutes] = useState()
-    const [timerSeconds, settimerSeconds] = useState()
+    const [timerDays, settimerDays] = useState('00')
+    const [timerHours, settimerHours] = useState('00')
+    const [timerMinutes, settimerMinutes] = useState('00')
+    const [timerSeconds, settimerSeconds] = useState('00')
 
-    let interval;
+    const interval = useRef();
+    const isFirst = useRef(true)
     const startTimer = () => {
-        const countDownDate = new Date("May 19,2021").getTime()
-        interval = setInterval(() => {
+        const countDownDate = new Date("January 20 , 2022 00:00:00").getTime()
+        interval.current = setInterval(() => {
             const now = new Date().getTime()
             const distance = countDownDate - now
             const days = Math.floor(distance / (24 * 60 * 60 * 1000))
-            const hours = Math.floor(distance % (24 * 60 * 60 * 1000) / (1000 * 60 * 60))
+            const hours = Math.floor((distance % (24 * 60 * 60 * 1000) / (1000 * 60 * 60)))
             const minutes = Math.floor(distance % (60 * 60 * 1000) / (1000 * 60))
             const seconds = Math.floor(distance % (60 * 1000) / 1000)
             if (distance < 0) {
@@ -27,10 +27,14 @@ export default function WhiteListComingSoon() {
                 settimerMinutes(minutes)
                 settimerSeconds(seconds)
             }
-        })
+        }, 1000)
     }
     useEffect(() => {
-        startTimer()
+        if (isFirst.current) {
+            isFirst.current = false
+            startTimer()
+        }
+
     })
     return (
         <div className='contribute'>
@@ -52,12 +56,40 @@ export default function WhiteListComingSoon() {
                                 We’ll open the sale page soon, please wait! Thanks
                             </span>
                         </div>
-                        <CountDownTime
-                            timerDays={timerDays}
-                            timerHours={timerHours}
-                            timerMinutes={timerMinutes}
-                            timerSeconds={timerSeconds}
-                        />
+
+                        {/* Count down */}
+                        <div className='countdown'>
+                            <div className='countdown-element'>
+                                <div className='time'>
+                                    <div className='countdown-element__shadow'></div>
+                                    <span>{timerDays}</span>
+                                </div>
+                                <span className='countdown-element__title'>Day</span>
+                            </div>
+                            <div className='countdown-element'>
+                                <div className='time'>
+                                    <div className='countdown-element__shadow'></div>
+                                    <span>{timerHours}</span>
+                                </div>
+                                <span className='countdown-element__title'>
+                                    Hour
+                                </span>
+                            </div>
+                            <div className='countdown-element'>
+                                <div className='time'>
+                                    <div className='countdown-element__shadow'></div>
+                                    <span>{timerMinutes}</span>
+                                </div>
+                                <span className='countdown-element__title'>Minute</span>
+                            </div>
+                            <div className='countdown-element'>
+                                <div className='time'>
+                                    <div className='countdown-element__shadow'></div>
+                                    <span>{timerSeconds}</span>
+                                </div>
+                                <span className='countdown-element__title'>Second</span>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

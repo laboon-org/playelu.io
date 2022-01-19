@@ -18,10 +18,18 @@ export default function ModalNotification(props) {
                     />
 
                     <div className='modal-notification__content modal-succeed__body__content__text'>
-                        Sorry, your address is not in white-list. Please contact us via
-                        <span className=''>
-                            hi@playelu.io
-                        </span>
+                        <p className=''>
+                            Sorry, your address is not in white-list.
+                        </p>
+                        Please contact us via
+                        <a
+                            className='modal-notification__link'
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=hi@playelu.io&su=SUBJECT&body=BODY"
+                            target="_blank">
+                            <span>
+                                hi@playelu.io
+                            </span>
+                        </a>
                         to get more support.
                     </div>
                 </div>

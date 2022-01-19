@@ -108,7 +108,7 @@ export default function WhiteList_Registration() {
     const [modalSucceedShow, setModalSucceedShow] = useState(false)
     const [modalCommingShow, setModalCommingShow] = useState(!getStatePage())
     const [messageState, setMessageState] = useState('Thanks you! for register whitelist.')
-    console.log(modalCommingShow)
+
     //* Function callback
     const setValueDeposit = (amount) => {
 
@@ -177,7 +177,7 @@ export default function WhiteList_Registration() {
 
     return (<>
 
-        {!modalCommingShow ?
+        {modalCommingShow ?
             (!modalSucceedShow ?
                 <>
                     <div className='white-list__title'>
