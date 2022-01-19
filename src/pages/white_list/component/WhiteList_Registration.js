@@ -72,7 +72,7 @@ const findBoonValue = () => {
         const data = CONFIG['Round Setting'].data
         let boonValue = 0
         const index = data.findIndex((v, i, obj) => {
-            if (moment(v.Start).isAfter(moment().subtract(1, 'days')) && moment(v.End).isAfter(moment().add(1, 'days'))) {
+            if (moment(v.Start).subtract(1, 'days').isBefore(moment()) && moment(v.End).add(1, 'days').isAfter(moment())) {
                 return true
             }
         })
