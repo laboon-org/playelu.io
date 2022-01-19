@@ -83,9 +83,16 @@
         text-align: center;
     }
 
-    .modal-succeed__body__img {
-        width: 140px;
+    .white-list__succeed__img {
+        width: 160px;
         height: auto;
+        margin-bottom: 25px;
+    }
+    .white-list__succeed__heading {
+        font-size: 16px !important;
+    }
+    .white-list__succeed__sub {
+        font-size: 14px;
     }
     .modal_succeed__link-gameplay {
         font-size: 13px;
@@ -155,11 +162,18 @@ IPAD
         width: calc(calc(100% - 150px));
     }
 
-    .modal-succeed__body__img {
-        width: 150px;
-        height: 116.4px;
+    .white-list__succeed__img {
+        width: 180px;
+        height: auto;
+        margin-bottom: 30px;
     }
 
+    .white-list__succeed__heading {
+        font-size: 20px !important;
+    }
+    .white-list__succeed__sub {
+        font-size: 18px;
+    }
     .modal_succeed__link-gameplay {
         font-size: 18px;
     }

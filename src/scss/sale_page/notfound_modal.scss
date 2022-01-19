@@ -18,16 +18,16 @@
     bottom: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     img {
         min-width: 10px;
         width: 10%;
         height: auto;
+        margin-right: 15px;
     }
 }
 .notfound__btn-title {
-    width: 85%;
     color: #ffff;
-    font-size: 24px;
+    font-size: 27px;
     font-family: "cookieRun_Regular";
 }

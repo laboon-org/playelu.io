@@ -177,15 +177,13 @@ a {
     height: 100%;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 .login-title {
-    flex: 80%;
-    display: flex;
-    justify-content: left;
+    text-align: center;
     color: #fff;
-    font-size: 31px;
+    font-size: 28px;
     font-family: $font_body, sans-serif;
     margin-bottom: 0;
 }
@@ -200,10 +198,6 @@ a {
     width: 100%;
 }
 .white-list__login {
-    flex: 1;
-    display: flex;
-    text-align: center;
-    justify-content: left;
     color: #fff;
     font-size: 26px;
     font-family: $font_body, sans-serif;
@@ -329,9 +323,9 @@ a {
     max-height: 60px;
     background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp")
         no-repeat center / contain;
-    width: 27%;
-    font-size: 24px;
-    padding: 12px;
+    width: 30%;
+    font-size: 23px;
+    padding: 17px;
     border-radius: 14px;
     color: #ffff;
     cursor: pointer;

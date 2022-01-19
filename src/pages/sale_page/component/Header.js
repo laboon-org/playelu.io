@@ -35,7 +35,9 @@ export default function Header() {
                 </div>
             </div>
             <div className='gameplay-btn'>
-                <span>Gameplay</span>
+                <a href='https://playelu.io/gameplay'>
+                    <span>Gameplay</span>
+                </a>
             </div>
         </div>
     )
