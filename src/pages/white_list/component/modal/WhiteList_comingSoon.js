@@ -9,7 +9,7 @@ export default function WhiteListComingSoon() {
     const interval = useRef();
     const isFirst = useRef(true)
     const startTimer = () => {
-        const countDownDate = new Date("January 20 , 2022 00:00:00").getTime()
+        const countDownDate = new Date("January 21 , 2022 00:00:00").getTime()
         interval.current = setInterval(() => {
             const now = new Date().getTime()
             const distance = countDownDate - now

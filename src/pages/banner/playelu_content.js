@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import _ from "lodash";
 import PlayeluLink from './playeluLink';
 import Modal from 'react-bootstrap/Modal';
-import Header from "../../components/Header";
 import UrlRescusive from '../../UrlRescusive';
 
 
@@ -63,12 +62,12 @@ export default function Content(props) {
             <div className='playelu-frame'>
                 <div className="playelu-all">
                     <div className="playelu-top">
-                        <Header />
                         <div className="playelu-img">
                             <img src={_.isEmpty(urlApi) ? '' : urlApi.image.eluLogo1} alt="" />
                         </div>
                         <div className="playelu-tittle">
-                            <h1>#1 Free-to-Earn NFT Game</h1>
+                            <h1>#1 Free to Earn NFT Game</h1>
+                            <span className='playelu-tittle__sub'>1st Inter-Connected Game (MIG)</span>
                         </div>
                         <form className="playelu-btn" onSubmit={handleSubmit}>
                             <input
@@ -86,27 +85,50 @@ export default function Content(props) {
                             >
 
                             </input>
-                            <i className="iconEmail fas fa-envelope"></i>
+                            <img
+                                className="iconEmail"
+                                src='https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/icon_mail.png'
+                                alt='' />
                             <button
                                 type="submit"
                                 className=" subcribe__playelu-btn"
                                 onClick={onPress}
                             >
-                                Subscribe
+                                <div className='subcribe__playelu-btn--frame'>
+                                    <img
+                                        className=" subcribe__playelu-btn--background"
+                                        src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_gameplays.webp'
+                                        alt='' />
+                                    <span
+                                        className=" subcribe__playelu-btn--text">
+                                        Subscribe
+                                    </span>
+                                </div>
                             </button>
                         </form>
                         {error && <div className='error-email'>{error}</div>}
                     </div>
                     <div className="playelu-bottom mt-auto d-flex justify-content-center">
-                        <PlayeluLink></PlayeluLink>
-                        <div className='policy'>
-                            <a className='privacy-policy' href={_.isEmpty(urlApi) ? '' : urlApi.docs.privacyPolicy}>
-                                Privacy Policy
-                            </a>
-                            <a href='#'>&nbsp;|&nbsp;</a>
-                            <a href={_.isEmpty(urlApi) ? '' : urlApi.docs.conditions}>
-                                Terms & Conditions
-                            </a>
+                        <div className='footer'>
+                            <PlayeluLink></PlayeluLink>
+                            <div className='policy'>
+                                <a
+                                    href={_.isEmpty(urlApi) ? '' : urlApi.docs.privacyPolicy}
+                                    target='_blank'>
+                                    <span>
+                                        Privacy Policy
+                                    </span>
+                                </a>
+                                <span>|</span>
+                                <a
+                                    href={_.isEmpty(urlApi) ? '' : urlApi.docs.conditions}
+                                    target='_blank'>
+                                    <span>
+                                        Terms & Conditions
+                                    </span>
+                                </a>
+                            </div>
+                            <span className='version'>v0.6 - 20220117</span>
                         </div>
                     </div>
                 </div>

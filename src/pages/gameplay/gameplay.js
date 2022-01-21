@@ -10,7 +10,7 @@ import SkyBottom from './sky/skyBottom'
 import SkyTop from './sky/skyTop'
 import Cloud from './sky/cloud'
 import Cursor from '../../components/cursor'
-import LaunchHeader from '../../components/launch_header'
+import LaunchHeader from '../../components/Launch_header'
 import UrlRescusive from '../../UrlRescusive'
 
 window.addEventListener('scroll', reveal)

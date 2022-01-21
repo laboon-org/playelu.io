@@ -11,17 +11,17 @@ function PlayeluLink(props) {
         },
         {
             id: 2,
-            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.graphic,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.facebook,
             href: 'https://discord.io/EluVerse'
         },
         {
             id: 3,
-            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.insta,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.discord,
             href: 'https://www.instagram.com/eluverse/ '
         },
         {
             id: 4,
-            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.facebook,
+            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.insta,
             href: 'https://www.facebook.com/EluVerse/'
         },
         {
@@ -34,11 +34,6 @@ function PlayeluLink(props) {
             img: _.isEmpty(urlApi) ? '' : urlApi.image.social.opensea,
             href: 'https://opensea.io/eluverse'
         },
-        {
-            id: 7,
-            img: _.isEmpty(urlApi) ? '' : urlApi.image.social.medium,
-            href: 'https://medium.com/@eluverse'
-        }
     ]
     return (
         <div className='playelu__link  '>
