@@ -7,7 +7,16 @@ const defineConstant = {
     metamask: {
         name: 'MetaMask',
         icon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp',
-        link_download: isMobile ? 'https://play.google.com/store/apps/details?id=io.metamask&hl=en&gl=US' : 'https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en'
+        link_download: isMobile ?
+            'https://play.google.com/store/apps/details?id=io.metamask&hl=en&gl=US' :
+            'https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en'
+    },
+    coin98: {
+        name: 'Coin98',
+        icon: 'https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/icon_coin98.png',
+        link_download: isMobile ?
+            'https://play.google.com/store/apps/details?id=coin98.crypto.finance.media&hl=en&gl=US' :
+            'https://chrome.google.com/webstore/detail/coin98-wallet/aeachknmefphepccionboohckonoeemg?hl=en'
     }
 }
 

@@ -177,7 +177,7 @@ export default function WhiteList_Registration() {
 
     return (<>
 
-        {modalCommingShow ?
+        {!modalCommingShow ?
             (!modalSucceedShow ?
                 <>
                     <div className='white-list__title'>

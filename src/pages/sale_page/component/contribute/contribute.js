@@ -2,19 +2,76 @@ import React, { useState, useCallback, useRef } from 'react'
 // import url from '../../constant/url'
 import axios from 'axios'
 import web3 from 'web3'
+import moment from 'moment'
+
 
 import wallet from '../../../../module/wallet'
 import ModalFail from '../modal/ModalFail'
 import ModalSucceed from '../modal/ModalSucceed'
 import contractAbi from '../../../../constant/contractABI'
+import messageStorage from '../../../../module/messageStorage'
 
 
-//* const
-const boonValueUSD = 0.01;
+const getStatePage = () => {
+    const CONFIG = messageStorage.getInstance().getMessage('config')
+    const data = CONFIG['Page Setting'].data
+    const index = data.findIndex((v, i, obj) => {
+
+        if (v['Page Name'] == 'presale') {
+            return true
+        }
+    })
+
+    const pageSetting = data[index]
+
+    return pageSetting.Toggle === 'TRUE'
+}
+
+
+const findBoonValue = () => {
+    const CONFIG = messageStorage.getInstance().getMessage('config')
+    if (CONFIG['Round Setting'] != null) {
+        const data = CONFIG['Round Setting'].data
+        let boonValue = 0
+        const index = data.findIndex((v, i, obj) => {
+            if (moment(v.Start).subtract(1, 'days').isBefore(moment()) && moment(v.End).add(1, 'days').isAfter(moment())) {
+                return true
+            }
+        })
+
+        if (index != -1) {
+            boonValue = data[index]['Sell Price']
+        }
+        return parseFloat(boonValue)
+    }
+    return 0
+}
+
+
+const findAvaxValue = () => {
+    const CONFIG = messageStorage.getInstance().getMessage('config')
+
+    if (CONFIG.Common != null) {
+        const dataCommon = CONFIG.Common.data
+        let avaxValue = 0
+        const index = dataCommon.findIndex((v, i, obj) => {
+            if (v.Key == 'avax_value') {
+                return true
+            }
+        })
+
+        if (index != -1) {
+            avaxValue = dataCommon[index].Value
+        }
+        return parseFloat(avaxValue)
+    }
+    return 0
+}
+
 //* init function 
 const calValueDeposit = (amount) => {
-
-    const avaxValueUSD = 89.28;//?
+    const avaxValueUSD = findAvaxValue()
+    const boonValueUSD = findBoonValue()
     const calAvaxAmount = (boonAmount) => {
         const USD = boonAmount * boonValueUSD
         return USD / avaxValueUSD
@@ -34,6 +91,7 @@ export default function Contribute(props) {
     const [deposit, setDeposit] = useState(data['BOON (Amount)'] != null ? calValueDeposit(data['BOON (Amount)'] + '') : "")
     const [infoState, setInfoState] = useState(false)
     const [infoValue, setInfoValue] = useState("")
+    const [modalCommingShow, setModalCommingShow] = useState(!getStatePage())
     //* Show form contribute or message
     const [contribute, setContribute] = useState(true)
     const [stateTransaction, setStateTransaction] = useState(false)
@@ -122,7 +180,7 @@ export default function Contribute(props) {
                 "address_wallet": wallet.getInstance().account,
                 "boon_amount": boonValue,
                 "payment_method": PAYMENT_METHOD,
-                "purchase_price": boonValue * boonValueUSD,
+                "purchase_price": boonValue * findBoonValue(),
                 "transaction_status": transaction_status
             }).then((res) => {
                 return res.data
@@ -148,7 +206,7 @@ export default function Contribute(props) {
                         "address_wallet": wallet.getInstance().account,
                         "boon_amount": boonValue,
                         "payment_method": PAYMENT_METHOD,
-                        "purchase_price": boonValue * boonValueUSD,
+                        "purchase_price": boonValue * findBoonValue(),
                         "transaction_status": true
                     }).then((res) => {
                         return res.data

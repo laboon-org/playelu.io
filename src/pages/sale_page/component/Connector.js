@@ -24,7 +24,10 @@ export default function Connector(props) {
     } = props
 
     //* State
-    const [loadingShow, setLoadingShow] = useState(false)
+    const [loadingShow, setLoadingShow] = useState({
+        metamask: false,
+        coin98: false
+    })
 
     const context = useWeb3React()
     const { connector, library, chainId, account, activate, deactivate, active, error } = context
@@ -58,17 +61,17 @@ export default function Connector(props) {
     }
 
     const Login = (props) => {
-        const { icon, title } = props
+        const { icon, title, loading } = props
         return (
             <div className='login-frame'>
                 <div className='login-icon'>
                     {
-                        !loadingShow ?
+                        !loading ?
                             <img
                                 className=''
                                 src={icon}
                                 alt=''
-                            /> : <LoadingIcon/>
+                            /> : <LoadingIcon />
                     }
                 </div>
                 <h4 className='login-title'>
@@ -87,8 +90,8 @@ export default function Connector(props) {
             return { isValid: false }
         }
     }
-    const connectMetaMask = async () => {
-        const provider = await detectEthereumProvider({ mustBeMetaMask: true });
+    const connectWalletWeb3 = async () => {
+        const provider = await detectEthereumProvider();
 
         if (provider) {
 
@@ -173,29 +176,72 @@ export default function Connector(props) {
             <div
                 className='login'
                 onClick={async () => {
-                    setLoadingShow(true)
+                    setLoadingShow({
+                        ...loadingShow,
+                        [wallet_name]: true
+                    })
                     switch (wallet_name) {
                         case 'metamask': {
-                            const result = await connectMetaMask()
-                            if (result.isValid) {
-                                const checkAddress = await checkWallet()
-                                if (checkAddress.isValid) {
-                                    //* If have address
-                                    showContributeForm(checkAddress.content)
+                            if (window.ethereum && window.ethereum.isMetaMask) {
+                                const result = await connectWalletWeb3()
+                                if (result.isValid) {
+                                    const checkAddress = await checkWallet()
+                                    if (checkAddress.isValid) {
+                                        //* If have address
+                                        showContributeForm(checkAddress.content)
+                                    } else {
+                                        //* Show message error when don't in WL
+                                        //showModalFailed(checkAddress.message)
+                                        showModalNotification()
+                                        setLoadingShow({
+                                            ...loadingShow,
+                                            metamask: false
+                                        })
+                                    }
+                                    //* Go to
                                 } else {
-                                    //* Show message error when don't in WL
-                                    //showModalFailed(checkAddress.message)
-                                    showModalNotification()
-                                    setLoadingShow(false)
+                                    //* Input message
+                                    //* No metamask
+                                    //[Todo : Sáng]: Hoàn thiện phần set message cho 2 connector còn lại 
+                                    messageStorage.getInstance().setMessage('NotFoundModal', 'metamask')
+                                    showModalNotFound()
                                 }
-                                //* Go to
                             } else {
-                                //* Input message
-                                //* No metamask
-                                //[Todo : Sáng]: Hoàn thiện phần set message cho 2 connector còn lại 
                                 messageStorage.getInstance().setMessage('NotFoundModal', 'metamask')
                                 showModalNotFound()
                             }
+
+                            break;
+                        }
+                        case 'coin98': {
+                            if (window.coin98 && window.ethereum && window.ethereum?.isCoin98) {
+                                const result = await connectWalletWeb3()
+                                if (result.isValid) {
+                                    const checkAddress = await checkWallet()
+                                    if (checkAddress.isValid) {
+                                        //* If have address
+                                        showContributeForm(checkAddress.content)
+                                    } else {
+                                        //* Show message error when don't in WL
+                                        //showModalFailed(checkAddress.message)
+                                        showModalNotification()
+                                        setLoadingShow({
+                                            ...loadingShow,
+                                            coin98: false
+                                        })
+                                    }
+                                    //* Go to
+                                } else {
+                                    //* Input message
+                                    //* No coin98
+                                    messageStorage.getInstance().setMessage('NotFoundModal', 'coin98')
+                                    showModalNotFound()
+                                }
+                            } else {
+                                messageStorage.getInstance().setMessage('NotFoundModal', 'coin98')
+                                showModalNotFound()
+                            }
+
                             break;
                         }
                         default: {
@@ -207,6 +253,7 @@ export default function Connector(props) {
                 <Login
                     icon={icon}
                     title={title}
+                    loading={loadingShow[wallet_name]}
                 />
             </div>
         )
@@ -269,6 +316,12 @@ export default function Connector(props) {
                 icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp'
                 title='Login with Metamask'
                 wallet_name='metamask'
+            />
+
+            <Web3Connector
+                icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/icon_coin98.png'
+                title='Login with Coin98'
+                wallet_name='coin98'
             />
 
             {/* temp hide */}
