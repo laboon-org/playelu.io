@@ -12,8 +12,8 @@ export default function LoginProcess(props) {
 
     //* Function
 
-    const connectMetaMask = async () => {
-        const provider = await detectEthereumProvider({ mustBeMetaMask: true });
+    const connectWalletWeb3 = async () => {
+        const provider = await detectEthereumProvider();
 
         if (provider) {
 
@@ -46,18 +46,41 @@ export default function LoginProcess(props) {
     const connectWallet = async (wallet_name) => {
         switch (wallet_name) {
             case 'metamask': {
-
-                const result = await connectMetaMask()
-                if (result.isValid) {
-                    showWhiteList()
-                    //* Go to white list
-                } else {
-                    //* Input message
-                    //* No metamask
-                    //[Todo : Sáng]: Hoàn thiện phần set message cho 2 connector còn lại 
+                if (window.ethereum && window.ethereum.isMetaMask) {
+                    const result = await connectWalletWeb3()
+                    if (result.isValid) {
+                        showWhiteList()
+                        //* Go to white list
+                    } else {
+                        //* Input message
+                        //* No metamask
+                        //[Todo : Sáng]: Hoàn thiện phần set message cho 2 connector còn lại 
+                        messageStorage.getInstance().setMessage('NotFoundModal', 'metamask')
+                        showModalNotFound()
+                    }
+                }else{
                     messageStorage.getInstance().setMessage('NotFoundModal', 'metamask')
                     showModalNotFound()
                 }
+                break;
+            }
+            case 'coin98': {
+                if (window.coin98 && window.ethereum && window.ethereum?.isCoin98) {
+                    const result = await connectWalletWeb3()
+                    if (result.isValid) {
+                        showWhiteList()
+                        //* Go to white list
+                    } else {
+                        //* Input message
+                        //* No Coin 98
+                        messageStorage.getInstance().setMessage('NotFoundModal', 'coin98')
+                        showModalNotFound()
+                    }
+                } else {
+                    messageStorage.getInstance().setMessage('NotFoundModal', 'coin98')
+                    showModalNotFound()
+                }
+
                 break;
             }
             default: {
@@ -108,6 +131,11 @@ export default function LoginProcess(props) {
                 wallet_name='metamask'
                 icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp'
                 title='Login with MetaMask'
+            />
+            <Web3Connector
+                wallet_name='coin98'
+                icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/icon_coin98.png'
+                title='Login with Coin98'
             />
 
         </div>
