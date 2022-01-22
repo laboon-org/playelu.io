@@ -1,15 +1,16 @@
 import React, { useEffect, useState, useRef } from 'react'
 
-export default function WhiteListComingSoon() {
+export default function WhiteListComingSoon(props) {
     const [timerDays, settimerDays] = useState('00')
     const [timerHours, settimerHours] = useState('00')
     const [timerMinutes, settimerMinutes] = useState('00')
     const [timerSeconds, settimerSeconds] = useState('00')
+    const { dateProp } = props
 
     const interval = useRef();
     const isFirst = useRef(true)
     const startTimer = () => {
-        const countDownDate = new Date("January 21 , 2022 00:00:00").getTime()
+        const countDownDate = new Date(dateProp).getTime()
         interval.current = setInterval(() => {
             const now = new Date().getTime()
             const distance = countDownDate - now
