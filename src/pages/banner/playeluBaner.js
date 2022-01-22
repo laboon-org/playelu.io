@@ -29,7 +29,7 @@ export default function PlayeluBaner(props) {
           setting.page_home_section_top_contract_address_enabled === true ? <LaunchHeader /> : ''
         }
         <div className="header">
-          <a className='home-icon__link' href='https://playelu.io/'>
+          <a className='home-icon__link' href='https://playelu.io'>
             <img
               className='home-icon__img'
               src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/Home-icon.webp'

@@ -1,22 +1,28 @@
+:root {
+  --widthModalDrop: 90vw;
+}
 .sky-center_onBoarding {
   position: relative;
-  width: 100vw;
+  max-width: 1080px;
+  max-height: 1233.83px;
+  width: var(--widthModalDrop);
+  height: calc(var(--widthModalDrop) * 1.14);
+  margin: auto;
   animation: onBoarding 4s ease forwards;
   animation-duration: 1s;
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup_drop/background_drop2.webp")
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/modal-drop/modaldrop--frame.webp")
     no-repeat center / cover;
-  background-size: 100%;
 }
 .onBoarding__title {
   position: absolute;
-  width: 80%;
-  left: 10%;
-  top: -2%;
+  width: 90%;
+  left: 5%;
+  top: -6%;
   margin: auto;
 }
 .onBoarding__title-content {
   position: relative;
-  width: 30%;
+  width: 90%;
   margin: auto;
   img {
     width: 100%;
@@ -25,39 +31,49 @@
 .onBoarding__title-text {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  left: 10%;
+  width: 80%;
+  height: 70%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   h3 {
-    margin-top: 5%;
-    color: #fff;
+    margin-top: 3%;
+    color: #000;
     font-size: 42px;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.5);
-    -webkit-text-stroke: 2.2px black;
   }
 }
 .onBoarding-frame {
-  width: 80%;
+  width: 90%;
   margin: auto;
   display: flex;
   flex-direction: column;
   padding-top: 4%;
 }
-.onBoarding {
+.onBoarding-body {
+  height: 90%;
+  margin-top: 11%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+.onBoarding {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 4% 0;
 }
 
 .onBoarding__element {
   display: flex;
-  width: 45%;
+  width: 48%;
+  align-items: center;
   flex-direction: column;
   margin: 0 0 50px 0;
 }
@@ -76,10 +92,11 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+  align-items: center;
   margin: 8px 0;
 }
 .onBoarding__versus-tip {
-  width: 22.5%;
+  width: 100%;
   position: relative;
   text-align: center;
   img {
@@ -88,7 +105,7 @@
 }
 .onBoarding__versus-content {
   position: relative;
-  width: 87.5%;
+  width: 100%;
   background: rgba(0, 0, 0, 0.25);
   border: 4px solid #00aaff;
   border-radius: 4px;
@@ -100,7 +117,7 @@
 .onBoarding__versus-text {
   width: 46%;
   text-align: center;
-  font-size: 66px;
+  font-size: 60px;
   margin: 30px 40% 30px 14%;
   color: #fff;
   text-transform: uppercase;
@@ -116,8 +133,14 @@
     height: 100%;
   }
 }
+.onBoarding-tip {
+  position: absolute;
+  width: 15%;
+  top: -8px;
+  z-index: 99;
+}
 .onBoarding__element-tip {
-  width: 50%;
+  width: 100%;
   position: relative;
   text-align: center;
   img {
@@ -129,27 +152,26 @@
   width: 100%;
   top: 0;
   left: 0;
-  height: 90%;
+  height: 65%;
   display: flex;
   align-items: center;
   justify-content: center;
 
   h4 {
-    font-size: 30px;
-    color: #fff;
+    font-size: 15px;
+    color: #000;
     text-transform: uppercase;
-    -webkit-text-stroke: 1.8px black;
   }
 }
 .tip-right {
   margin-left: 50%;
 }
 .onBoarding__element-content {
-  width: 86%;
+  margin-top: 2%;
+  width: 95%;
   .onBoarding__element-img {
     border-radius: 4px;
     width: 100%;
-    border: 4px solid #00aaff;
   }
   .no-border {
     border: 0px;

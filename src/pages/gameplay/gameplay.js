@@ -12,6 +12,7 @@ import Cloud from './sky/cloud'
 import Cursor from '../../components/cursor'
 import LaunchHeader from '../../components/Launch_header'
 import UrlRescusive from '../../UrlRescusive'
+import Header from '../../components/Header';
 
 window.addEventListener('scroll', reveal)
 function reveal() {
@@ -31,6 +32,16 @@ export default function Gameplay(props) {
     const { urlApi, setting } = props
     return (
         <UrlRescusive data={props}>
+            <div className="header">
+                <a className='home-icon__link' href='https://playelu.io'>
+                    <img
+                        className='home-icon__img'
+                        src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/Home-icon.webp'
+                        alt=''
+                    />
+                </a>
+                <Header />
+            </div>
             <div className='gameplay-body'>
                 <audio className="audio_gameplay" autoPlay loop preload='metadata' >
                     <source src="https://storage.googleapis.com/laboon-img-storage/play-elu/soundtrack-bg/soundtrack_bg2.mp3" type="audio/mpeg" />

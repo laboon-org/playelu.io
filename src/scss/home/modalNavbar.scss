@@ -11,12 +11,17 @@
   margin: 0;
 }
 .modal-100w > .modal-content {
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/backgroundModalNavbar_1.webp")
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/common/homBackground_Mobile.webp")
     no-repeat center / cover;
   height: 100vh;
   width: 100vw;
   border-radius: 0;
   margin: 0;
+}
+.modal--frame {
+  width: 90%;
+  height: calc(100vh - 120px);
+  margin: 0 auto;
 }
 
 .header__modal-navbar {
@@ -27,12 +32,16 @@
 .header__modal-navbar > img {
   height: 40px;
 }
+.header__modal-navbar a img {
+  height: 40px;
+}
 .navbar-btn {
   display: none;
   width: 30px;
 }
 .navbar-btn img {
   width: 100%;
+  cursor: pointer;
 }
 
 .close__modal-navbar {
@@ -41,27 +50,58 @@
 .close__modal-navbar img {
   width: 100%;
 }
+.body__modal-navbar {
+  max-height: 430px;
+  height: calc((100vh - 230px));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 50%;
+  }
+}
 .modal-element {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  margin-top: -4px;
+}
+.modal-element--text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .modal-element h2 {
   letter-spacing: 2px;
-  position: absolute;
   z-index: 1;
   left: 0;
   right: 0;
-  padding-top: 4%;
+  margin-bottom: 0;
   color: #fff;
   text-align: center;
   top: 0;
 }
 .modal-element h2:hover {
-  color: #fabb1a;
+  color: #403100;
 }
 .modal-element img {
   width: 100%;
+}
+
+.body__modal-navbar .home-btn__gameplay {
+  justify-content: center;
+  margin-left: calc(50% - 70px);
 }
 @media screen and (max-width: 740px) {
   .navbar-btn {
@@ -72,6 +112,5 @@
   }
   .modal-element h2 {
     font-size: 20px;
-    padding-top: 3%;
   }
 }

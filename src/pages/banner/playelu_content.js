@@ -3,6 +3,7 @@ import _ from "lodash";
 import PlayeluLink from './playeluLink';
 import Modal from 'react-bootstrap/Modal';
 import UrlRescusive from '../../UrlRescusive';
+import Footer from '../../components/Footer';
 
 
 export default function Content(props) {
@@ -108,28 +109,8 @@ export default function Content(props) {
                         </form>
                         {error && <div className='error-email'>{error}</div>}
                     </div>
-                    <div className="playelu-bottom mt-auto d-flex justify-content-center">
-                        <div className='footer'>
-                            <PlayeluLink></PlayeluLink>
-                            <div className='policy'>
-                                <a
-                                    href={_.isEmpty(urlApi) ? '' : urlApi.docs.privacyPolicy}
-                                    target='_blank'>
-                                    <span>
-                                        Privacy Policy
-                                    </span>
-                                </a>
-                                <span>|</span>
-                                <a
-                                    href={_.isEmpty(urlApi) ? '' : urlApi.docs.conditions}
-                                    target='_blank'>
-                                    <span>
-                                        Terms & Conditions
-                                    </span>
-                                </a>
-                            </div>
-                            <span className='version'>v0.6 - 20220117</span>
-                        </div>
+                    <div className="playelu-footer">
+                        <Footer />
                     </div>
                 </div>
             </div>
