@@ -4,6 +4,37 @@
 
 // Mobile
 @media screen and (max-width: 740px) {
+  .header {
+    height: 50px;
+  }
+  .playelu-body {
+    top: 0;
+    height: 100vh;
+  }
+  .sound {
+    top: 70px;
+    width: 30px;
+    height: 30px;
+  }
+  .home-icon__link {
+    width: 50px;
+  }
+  .home-icon__img {
+    height: 30px;
+  }
+  .launch-header {
+    top: 55px !important;
+    left: 40px !important;
+    width: calc(100vw - 50px) !important;
+  }
+  .launch-header__content-coin {
+    width: 15px !important;
+    margin: 3px 5px 0 5px !important;
+  }
+  .market span {
+    font-size: 10px !important;
+  }
+
   .discord {
     right: -96px;
     transform: scale(0.23) translateY(-200vh);
@@ -38,10 +69,16 @@
     }
   }
   .playelu__link-ele {
-    width: 24px;
+    width: 35px;
+  }
+  .playelu-frame {
+    height: 100vh;
+  }
+  .playelu-frame .playelu-all {
+    margin-top: 120px;
   }
   .playelu-frame .playelu-all .playelu-img img {
-    width: calc(100% - 70px);
+    width: calc(100% - 130px);
   }
   .my-star::before {
     height: 50px;
@@ -50,36 +87,30 @@
     bottom: 0;
   }
 
-  .playelu-top {
-    margin-top: 70px;
-  }
-
   .playelu-tittle h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
   .playelu-btn {
     width: calc(100% - 36px);
   }
-
-  .playelu-btn button {
-    width: 30%;
-    border-radius: 5.572vh;
-    height: calc(100% - 20px);
-    font-size: 12px;
-    letter-spacing: 1.2px;
+  .subcribe__playelu-btn {
+    bottom: -45px;
+    left: calc((100% - 18px) / 2 - 50px);
+    width: 100px;
+    height: 37.5px;
+    font-size: 14px;
   }
 
   .playelu-btn input {
-    padding-right: 30.5%;
+    padding-right: 3px;
     height: 46px;
-    border-radius: 5.572vh;
     font-size: 14px;
     padding-left: 44px;
     letter-spacing: 2px;
   }
 
   .iconEmail {
-    font-size: 26px;
+    width: 25px;
     left: 10px;
     margin-top: 10px;
   }
@@ -104,13 +135,6 @@
   .playelu__link-ele img {
     width: 90%;
   }
-  // .modal-thankyou > .modal-content {
-  //   width: 80vw;
-  // }
-
-  // .modal-content {
-  //   border-radius: 13px;
-  // }
 
   .modal-header {
     padding: 2px;
@@ -123,14 +147,22 @@
     right: 15px;
   }
 
-  .header {
+  .navbar-header {
     display: none;
   }
-  .policy {
-    width: 230px;
-    margin-top: 20px;
+  .footer {
+    width: 100%;
+    margin-bottom: 15px;
   }
+  .policy,
   .policy a {
     font-size: 12px;
+    margin: 15px 0 3px 0;
+  }
+  .policy span {
+    margin: 0 2px;
+  }
+  .version {
+    font-size: 9px;
   }
 }

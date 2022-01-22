@@ -173,12 +173,13 @@ a {
     cursor: pointer;
 }
 .login-frame {
+    display: flex;
     width: 90%;
     height: 100%;
     margin: auto;
-    display: flex;
-    justify-content: center;
+    margin-left: 10%;
     align-items: center;
+    justify-content: left;
 }
 .login-title {
     text-align: center;

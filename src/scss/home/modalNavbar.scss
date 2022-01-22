@@ -25,11 +25,10 @@
   justify-content: space-between;
 }
 .header__modal-navbar > img {
-  height: 70px;
+  height: 40px;
 }
 .navbar-btn {
   display: none;
-  margin: 15px;
   width: 30px;
 }
 .navbar-btn img {
@@ -37,7 +36,7 @@
 }
 
 .close__modal-navbar {
-  width: 30px;
+  width: 50px;
 }
 .close__modal-navbar img {
   width: 100%;
@@ -48,7 +47,6 @@
   margin-top: -4px;
 }
 .modal-element h2 {
-  font-family: "BoldenVan", sans-serif;
   letter-spacing: 2px;
   position: absolute;
   z-index: 1;
@@ -68,9 +66,11 @@
 @media screen and (max-width: 740px) {
   .navbar-btn {
     display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
   }
   .modal-element h2 {
-    font-family: "BoldenVan", sans-serif;
     font-size: 20px;
     padding-top: 3%;
   }

@@ -4,7 +4,7 @@ export default function ModalFail(props) {
     const { message, forwardBack } = props
     return (
         <div className='modal-fail'>
-            <span className='modal-succeed__heading'>
+            <span className='modal-fail__heading modal-succeed__heading'>
                 failure!
             </span>
             <div className='modal-succeed__body'>
@@ -19,7 +19,7 @@ export default function ModalFail(props) {
             </div>
             <div
                 className='modal-succeed__btn'
-                onClick={()=>{
+                onClick={() => {
                     forwardBack()
                 }}
             >

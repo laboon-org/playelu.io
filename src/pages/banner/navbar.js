@@ -23,9 +23,9 @@ export default function Navbar(props) {
                 aria-labelledby="example-custom-modal-styling-title"
             >
                 <div className='header__modal-navbar'>
-                    <img src={_.isEmpty(urlApi) ? '' : urlApi.image.logoMobile} alt="" />
+                    <img src={_.isEmpty(urlApi) ? '' : urlApi.common.homeIcon} alt="" />
                     <div className='close__modal-navbar' onClick={() => handleClose()}>
-                        <img src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.closeModal} alt="" />
+                        <img src={_.isEmpty(urlApi) ? '' : urlApi.common.closeBtn} alt="" />
                     </div>
                 </div>
                 <div className='body__modal-navbar'>
