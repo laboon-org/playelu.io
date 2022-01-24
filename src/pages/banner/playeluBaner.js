@@ -7,7 +7,7 @@ import '../../scss/reponsiveness/home/home_mobile.scss'
 import Background from "./backgrounds/background";
 import Content from "./playelu_content";
 import Cursor from "../../components/cursor";
-import LaunchHeader from "../../components/Launch_header";
+import LaunchHeader from "../../components/LaunchHeader";
 import Sound from "../../components/sound";
 import Header from "../../components/Header";
 
