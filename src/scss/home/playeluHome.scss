@@ -94,6 +94,7 @@ li {
 }
 .header {
   position: fixed;
+  z-index: 99;
   left: 0px;
   top: 0px;
   right: 0;
@@ -248,6 +249,7 @@ li {
 .subcribe__playelu-btn--frame {
   position: relative;
   width: 100%;
+  cursor: pointer;
   img {
     width: 100%;
   }
@@ -261,6 +263,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .iconEmail {
@@ -298,13 +301,25 @@ li {
   width: 80%;
   cursor: pointer;
 }
+.playelu-footer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 1056;
+}
 .footer {
   width: 480px;
   margin: auto;
   color: #fff;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  margin-bottom: 25px;
   font-family: $font_content;
 }
 .policy,
@@ -312,6 +327,7 @@ li {
   font-size: 16px;
   color: #fdcd2f;
   margin: 15px 0 5px 0;
+  cursor: pointer;
 }
 .policy span {
   margin: 0 3px;

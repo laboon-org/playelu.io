@@ -150,14 +150,23 @@
   .navbar-header {
     display: none;
   }
+  .playelu-footer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 100px;
+  }
   .footer {
     width: 100%;
-    margin-bottom: 15px;
   }
   .policy,
   .policy a {
     font-size: 12px;
-    margin: 15px 0 3px 0;
+    margin: 15px 0 4px 0;
   }
   .policy span {
     margin: 0 2px;

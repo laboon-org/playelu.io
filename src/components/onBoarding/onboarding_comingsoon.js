@@ -16,7 +16,7 @@ export default function OnboardingComingsoon(props) {
                             parent: 'onBoarding__versus-tip'
                         }}
                         title={props.title}
-                        tip={2}
+                        tip={1}
                     />
                     <div className={(classNames && classNames.parent) ? classNames.parent : 'onBoarding__versus-content'}>
                         <h2 className='onBoarding__versus-text'>coming soon</h2>

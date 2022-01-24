@@ -49,16 +49,23 @@
   }
   // End scss button Nest
   // Start drop onBoarding scss
+  .onBoarding-body {
+    margin-top: 9%;
+  }
+  .onBoarding {
+    margin: 2% 0;
+  }
   .onBoarding__title-text {
     h3 {
       margin-top: 3%;
-      font-size: 24px;
+      font-size: 26px;
       -webkit-text-stroke: 2.2px black;
     }
   }
 
   .onBoarding__versus-text {
     font-size: 35px;
+    -webkit-text-stroke: 1.4px black;
   }
 
   .tip-title {
@@ -155,7 +162,7 @@
   .onBoarding__title-text {
     h3 {
       margin-top: 2%;
-      font-size: 32px;
+      font-size: 35px;
       -webkit-text-stroke: 2.2px black;
     }
   }

@@ -36,7 +36,7 @@ function PlayeluLink(props) {
         },
     ]
     return (
-        <div className='playelu__link  '>
+        <div className='playelu__link'>
             {
                 elementLinks.map(elementLink => (
                     <div key={elementLink.id} className='playelu__link-ele'>
