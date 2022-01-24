@@ -13,6 +13,16 @@
   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/modal-drop/modaldrop--frame.webp")
     no-repeat center / cover;
 }
+.close-modal__btn {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  max-width: 40px;
+  min-width: 10px;
+  width: 7%;
+  z-index: 99;
+  cursor: pointer;
+}
 .onBoarding__title {
   position: absolute;
   width: 90%;
@@ -107,13 +117,11 @@
   position: relative;
   width: 100%;
   background: rgba(0, 0, 0, 0.25);
-  border: 4px solid #00aaff;
-  border-radius: 4px;
+  border: 4px solid #f2d340;
+  border-radius: 27px;
   margin: auto;
 }
-.border {
-  border: 4px solid #f2d340 !important;
-}
+
 .onBoarding__versus-text {
   width: 46%;
   text-align: center;

@@ -51,7 +51,7 @@ export default function WhiteListBody__right(props) {
     return (
         <div className='white-list__body--right'>
             {
-                false //* In Testing
+                true
                     ? (!whiteListShow ?
                         (<LoginProcess
                             showWhiteList={showWhiteList}

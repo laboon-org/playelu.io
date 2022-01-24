@@ -9,9 +9,9 @@ export default function OnBoardingElementLeft(props) {
     return (
         <UrlRescusive data={props}>
             <div className='onBoarding__element'>
-                <OnBoardingTip title='battle' tip={2} />
-                <div className='onBoarding__element-content content-left'>
-                    <img className='onBoarding__element-img border' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.battle} alt='' />
+                <OnBoardingTip title='battle' tip={1} />
+                <div className='onBoarding__element-content'>
+                    <img className='onBoarding__element-img' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.battle} alt='' />
                 </div>
             </div>
         </UrlRescusive>

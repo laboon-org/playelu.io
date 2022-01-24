@@ -11,13 +11,13 @@ export default function OnBoardingElementRight(props) {
             <div className='onBoarding__element'>
                 <OnBoardingTip
                     classNames={{
-                        parent: 'onBoarding__element-tip tip-right'
+                        parent: 'onBoarding__element-tip'
                     }}
                     title={'farming'}
                     tip={1}
                 />
-                <div className='onBoarding__element-content content-right'>
-                    <img className='onBoarding__element-img border' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.farming1} alt='' />
+                <div className='onBoarding__element-content'>
+                    <img className='onBoarding__element-img' src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.farming1} alt='' />
                 </div>
             </div>
         </UrlRescusive>

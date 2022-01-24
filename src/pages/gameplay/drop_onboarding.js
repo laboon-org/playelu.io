@@ -13,6 +13,10 @@ export default function Drop_onboarding(props) {
     return (
         <UrlRescusive data={props}>
             <div className="sky-center_onBoarding">
+                <img
+                    className='close-modal__btn'
+                    src={_.isEmpty(urlApi) ? '' : urlApi.common.closeBtn} alt=""
+                    onClick={onPressHideEluDrop} />
                 <div className='onBoarding-frame'>
                     <div className='onBoarding__title'>
                         <div className='onBoarding__title-content'>

@@ -112,18 +112,19 @@
         justify-content: center;
         align-items: center;
         h4 {
-          color: #fff;
+          color: #333333;
           font-size: 40px;
           text-transform: uppercase;
           -webkit-text-stroke: 1.8px black;
         }
       }
       .onBoarding-frame {
-        width: 80%;
+        width: 90%;
         height: 88%;
         margin: auto;
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
         padding-top: 4%;
       }
       .onBoarding__versus-text {

@@ -59,7 +59,7 @@
     h3 {
       margin-top: 3%;
       font-size: 26px;
-      -webkit-text-stroke: 2.2px black;
+      -webkit-text-stroke: 1.2px black;
     }
   }
 
@@ -70,9 +70,9 @@
 
   .tip-title {
     h4 {
-      font-size: 15px;
+      font-size: 12px;
       margin-bottom: 0rem;
-      -webkit-text-stroke: 1.5px black;
+      -webkit-text-stroke: 0.5px black;
     }
   }
   .board-type-text {
@@ -139,7 +139,7 @@
         height: 65vw !important;
         .nest_onBoarding-title {
           h4 {
-            font-size: 30px !important;
+            font-size: 26px !important;
             margin-top: 10px;
             -webkit-text-stroke: 1.5px black !important;
           }
@@ -163,7 +163,7 @@
     h3 {
       margin-top: 2%;
       font-size: 35px;
-      -webkit-text-stroke: 2.2px black;
+      -webkit-text-stroke: 1.2px black;
     }
   }
 
@@ -173,7 +173,7 @@
 
   .tip-title {
     font-size: 20px;
-    -webkit-text-stroke: 1.5px black;
+    -webkit-text-stroke: 0.5px black;
   }
   // Start board-type scss
   .board_type {
@@ -225,13 +225,10 @@
       .nest-frame {
         .nest_onBoarding-title {
           h4 {
-            font-size: 38px !important;
+            font-size: 36px !important;
             margin-top: 10px;
-            -webkit-text-stroke: 1.5px black !important;
+            -webkit-text-stroke: 0.5px black !important;
           }
-        }
-        .tip-title h4 {
-          font-size: 20px;
         }
         .onBoarding__versus-text {
           font-size: 34px !important;

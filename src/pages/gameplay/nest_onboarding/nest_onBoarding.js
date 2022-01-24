@@ -11,7 +11,7 @@ export default function NestOnBoarding(props) {
         <UrlRescusive data={props}>
             <div className='nest-frame'>
                 <div className='nest_onBoarding-title'>
-                    <h4>nest - gameplay</h4>
+                    <h4>GAME 2: NEST FEATURES</h4>
                 </div>
                 <div className='onBoarding-frame nest__onBoarding-frame'>
                     <div className='onBoarding'>
@@ -19,13 +19,13 @@ export default function NestOnBoarding(props) {
                         <OnBoardingElementRight />
                     </div>
                     <OnboardingComingsoon title='racing' classNames={{
-                        parent: 'onBoarding__versus-content border'
+                        parent: 'onBoarding__versus-content'
                     }} />
-                    <div className='onBoarding-btn_close nest-btn_close ' onClick={() => {
+                    {/* <div className='onBoarding-btn_close nest-btn_close ' onClick={() => {
                         closeNest()
                     }}>
                         <img src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.nestOnboardingClose} alt='' />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </UrlRescusive>
