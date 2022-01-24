@@ -70,12 +70,14 @@ const findBoonValue = () => {
     const CONFIG = messageStorage.getInstance().getMessage('config')
     if (CONFIG['Round Setting'] != null) {
         const data = CONFIG['Round Setting'].data
-        let boonValue = 0
-        const index = data.findIndex((v, i, obj) => {
-            if (moment(v.Start).subtract(1, 'days').isBefore(moment()) && moment(v.End).add(1, 'days').isAfter(moment())) {
-                return true
-            }
-        })
+        let boonValue = 0;
+
+        const index = 0;
+        // const index = data.findIndex((v, i, obj) => {
+        //     if (moment(v.Start).subtract(1, 'days').isBefore(moment()) && moment(v.End).add(1, 'days').isAfter(moment())) {
+        //         return true
+        //     }
+        // })
 
         if (index != -1) {
             boonValue = data[index]['Sell Price']
