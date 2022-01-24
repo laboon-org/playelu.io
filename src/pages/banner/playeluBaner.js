@@ -1,19 +1,18 @@
-import React from "react";
-import _ from "lodash";
-import Navbar from "./navbar";
-import UrlRescusive from "../../UrlRescusive";
-import '../../scss/reponsiveness/home/home_Ipad.scss'
-import '../../scss/reponsiveness/home/home_mobile.scss'
-import Background from "./backgrounds/background";
-import Content from "./playelu_content";
-import Cursor from "../../components/cursor";
-import LaunchHeader from "../../components/LaunchHeader";
-import Sound from "../../components/sound";
-import Header from "../../components/Header";
-
+import React from 'react';
+import _ from 'lodash';
+import Navbar from './navbar';
+import UrlRescusive from '../../UrlRescusive';
+import '../../scss/reponsiveness/home/home_Ipad.scss';
+import '../../scss/reponsiveness/home/home_mobile.scss';
+import Background from './backgrounds/background';
+import Content from './playelu_content';
+import Cursor from '../../components/cursor';
+import LaunchHeader from '../../components/LaunchHeader';
+import Sound from '../../components/sound';
+import Header from '../../components/Header';
 
 export default function PlayeluBaner(props) {
-  const { urlApi, setting } = props
+  const {urlApi, setting} = props;
   return (
     <UrlRescusive data={props}>
       <div className='playelu-body'>

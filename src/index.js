@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-// import reportWebVitals from './reportWebVitals';
-import 'animate.css';
-// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import App from "./App";
 
-window.onload = function () {
+import './index.css';
+import 'animate.css';
+
+window.onload = function() {
   ReactDOM.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-    document.getElementById('root')
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
+      document.getElementById('root'),
   );
-}
+};

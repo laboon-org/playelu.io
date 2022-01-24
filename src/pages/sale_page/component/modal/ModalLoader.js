@@ -1,21 +1,21 @@
-import React from 'react'
-import './modal-loader.scss'
+import React from 'react';
+import './modal-loader.scss';
 
 export default function ModalLoader() {
-    return (
-        <div class="modal-sale__loading-bar">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    )
+  return (
+    <div className="modal-sale__loading-bar">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  );
 }

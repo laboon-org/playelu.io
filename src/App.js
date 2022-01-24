@@ -17,7 +17,6 @@ import Loading from './components/Loading';
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
-
 const PlayeluBaner = React.lazy(() => import('./pages/banner/playeluBaner'))
 const Gameplay = React.lazy(() => import('./pages/gameplay/gameplay'))
 const SalePage = React.lazy(() => import('./pages/sale_page/SalePage'))
@@ -162,7 +161,7 @@ function App(props) {
             <Route path='/claim' element={<UrlRescusivePanel Comp={Claim} />}> </Route>
           </Routes>
         </Router>
-  
+
     </React.Suspense>
   );
 }

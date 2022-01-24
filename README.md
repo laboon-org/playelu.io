@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-## Prequisites
+## Prerequisites
 
 ```
 node v8.1.2

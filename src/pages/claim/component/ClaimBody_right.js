@@ -1,83 +1,83 @@
-import React, { useState } from 'react'
-import ClaimInformation from './ClaimInformation'
+import React, {useState} from 'react';
+import ClaimInformation from './ClaimInformation';
 
 
 export default function ClaimBodyRight() {
-    const [connectWallet, setConnectWallet] = useState(false)
-    return (
-        <div className='claim-right'>
-            <span className='claim--shadow'></span>
-            <div className='claim-right__frame'>
-                <div className='claim-right__header'>
-                    <div className='claim-right__header--title'>
-                        <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp' alt='' />
-                        <span>
+  const [connectWallet, setConnectWallet] = useState(false);
+  return (
+    <div className='claim-right'>
+      <span className='claim--shadow'></span>
+      <div className='claim-right__frame'>
+        <div className='claim-right__header'>
+          <div className='claim-right__header--title'>
+            <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp' alt='' />
+            <span>
                             BOON
-                        </span>
-                        <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp' alt='' />
-                    </div>
-                    <span className='claim-right__header--sub'>
+            </span>
+            <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp' alt='' />
+          </div>
+          <span className='claim-right__header--sub'>
                         TOKEN CLAIM DASHBOARD
-                    </span>
-                </div>
-                <div className='claim-right__content'>
-                    <div className='claim-right__content__element'>
-                        <div className='address-wallet'>
-                            <span className='address-wallet__heading'>
+          </span>
+        </div>
+        <div className='claim-right__content'>
+          <div className='claim-right__content__element'>
+            <div className='address-wallet'>
+              <span className='address-wallet__heading'>
                                 Address
-                            </span>
-                            <div className='address-wallet__input'>
-                                <img className='address-wallet__input-img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp' alt='' />
-                                <input type='text' placeholder='Connect your wallet' />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='claim-right__content__element'>
-                        <ClaimInformation
-                            heading='Total Allocation'
-                            placeholder='0.00'
-                        />
-                        <ClaimInformation
-                            heading='Total Claimed to Date'
-                            placeholder='0.00'
-                        />
-                    </div>
-                    <div className='claim-right__content__element'>
-                        <ClaimInformation
-                            heading='Claimable Now'
-                            placeholder='0.00'
-                        />
-                        <ClaimInformation
-                            heading='Unvested'
-                            placeholder='0.00'
-                        />
-                    </div>
-                    <div className='claim-right__content__btn'>
-                        {
+              </span>
+              <div className='address-wallet__input'>
+                <img className='address-wallet__input-img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp' alt='' />
+                <input type='text' placeholder='Connect your wallet' />
+              </div>
+            </div>
+          </div>
+          <div className='claim-right__content__element'>
+            <ClaimInformation
+              heading='Total Allocation'
+              placeholder='0.00'
+            />
+            <ClaimInformation
+              heading='Total Claimed to Date'
+              placeholder='0.00'
+            />
+          </div>
+          <div className='claim-right__content__element'>
+            <ClaimInformation
+              heading='Claimable Now'
+              placeholder='0.00'
+            />
+            <ClaimInformation
+              heading='Unvested'
+              placeholder='0.00'
+            />
+          </div>
+          <div className='claim-right__content__btn'>
+            {
                             !connectWallet ?
                                 <div className='claim-right__btn'>
-                                    <span> Select Wallet</span>
+                                  <span> Select Wallet</span>
                                 </div> :
                                 <div className=''></div>
-                        }
-                    </div>
-                    <span className=''>
+            }
+          </div>
+          <span className=''>
                         * You need a one time fee of 0.003 AVAX to create your $BOON token account in your wallet
-                    </span>
-                    <div className='claim-right__content__element'>
-                        <ClaimInformation
-                            heading='Address'
-                            placeholder='0.00'
-                        />
-                        <ClaimInformation
-                            heading='Address'
-                            placeholder='0.00'
-                        />
-                    </div>
+          </span>
+          <div className='claim-right__content__element'>
+            <ClaimInformation
+              heading='Address'
+              placeholder='0.00'
+            />
+            <ClaimInformation
+              heading='Address'
+              placeholder='0.00'
+            />
+          </div>
 
 
-                </div>
-            </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
