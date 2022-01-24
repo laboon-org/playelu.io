@@ -1,4 +1,4 @@
-import React, { useState,useLayoutEffect } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import moment from 'moment'
 
 import LoginProcess from './LoginProcess'
@@ -22,20 +22,20 @@ export default function WhiteListBody__right(props) {
         let countdownTime = ''
         if (CONFIG['Round Setting'] != null) {
             const data = CONFIG['Round Setting'].data
-    
+
             const index = data.findIndex((v, i, obj) => {
                 if (moment(v.Start).add(1, 'days').isAfter(moment())) {
                     return true
                 }
             })
-    
+
             if (index != -1) {
                 countdown = true
                 countdownTime = moment(data[index].Start).format('DD-MM-YYYY [00:00]')
             }
         }
         console.log(countdown, countdownTime)
-    
+
         if (countdown) {
             return countdownTime
         } else {
@@ -43,16 +43,15 @@ export default function WhiteListBody__right(props) {
         }
     }
 
-    useLayoutEffect(()=>{
+    useLayoutEffect(() => {
         setCommingSoon(checkCountdown())
-    },[])
-    
-    console.log('STATE:',commingSoonTime)
+    }, [])
+
+    console.log('STATE:', commingSoonTime)
     return (
         <div className='white-list__body--right'>
-
             {
-                commingSoonTime == ''
+                false//commingSoonTime == ''
                     ? (!whiteListShow ?
                         (<LoginProcess
                             showWhiteList={showWhiteList}

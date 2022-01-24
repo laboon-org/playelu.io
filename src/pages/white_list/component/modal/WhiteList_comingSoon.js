@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import './modal_comingsoon.scss'
 
 export default function WhiteListComingSoon(props) {
     const [timerDays, settimerDays] = useState('00')
@@ -40,59 +41,53 @@ export default function WhiteListComingSoon(props) {
     return (
         <div className='contribute'>
             <span className='contribute--shadow'></span>
-            <div className='contribute-frame'>
-                <div className='modal-succeed'>
-                    <div className='modal-succeed__body modal-comingSoon__body'>
-                        <img
-                            className='modal-succeed__body__img'
-                            src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/comingsoon.webp'
-                            alt=''
-                        />
+            <div className='modal-comingsoon__whitelist'>
+                <img
+                    className='modal-succeed__body__img modal-comingsoon__whitelist--img'
+                    src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/comingsoon.webp'
+                    alt=''
+                />
+                <div className='modal-succeed__body__content modal-comingSoon__content'>
+                    <p className='modal-succeed__content--title'>
+                        Coming Soon!
+                    </p>
+                    <span className='modal-succeed__content--sub'>
+                        We’ll open the sale page soon, please wait! Thanks
+                    </span>
+                </div>
 
-                        <div className='modal-succeed__body__content modal-comingSoon__content'>
-                            <p className='modal-succeed__content--title'>
-                                Coming Soon!
-                            </p>
-                            <span className='modal-succeed__content--sub'>
-                                We’ll open the sale page soon, please wait! Thanks
-                            </span>
+                {/* Count down */}
+                <div className='countdown'>
+                    <div className='countdown-element'>
+                        <div className='time'>
+                            <div className='countdown-element__shadow'></div>
+                            <span>{timerDays}</span>
                         </div>
-
-                        {/* Count down */}
-                        <div className='countdown'>
-                            <div className='countdown-element'>
-                                <div className='time'>
-                                    <div className='countdown-element__shadow'></div>
-                                    <span>{timerDays}</span>
-                                </div>
-                                <span className='countdown-element__title'>Day</span>
-                            </div>
-                            <div className='countdown-element'>
-                                <div className='time'>
-                                    <div className='countdown-element__shadow'></div>
-                                    <span>{timerHours}</span>
-                                </div>
-                                <span className='countdown-element__title'>
-                                    Hour
-                                </span>
-                            </div>
-                            <div className='countdown-element'>
-                                <div className='time'>
-                                    <div className='countdown-element__shadow'></div>
-                                    <span>{timerMinutes}</span>
-                                </div>
-                                <span className='countdown-element__title'>Minute</span>
-                            </div>
-                            <div className='countdown-element'>
-                                <div className='time'>
-                                    <div className='countdown-element__shadow'></div>
-                                    <span>{timerSeconds}</span>
-                                </div>
-                                <span className='countdown-element__title'>Second</span>
-                            </div>
-                        </div>
+                        <span className='countdown-element__title'>Day</span>
                     </div>
-
+                    <div className='countdown-element'>
+                        <div className='time'>
+                            <div className='countdown-element__shadow'></div>
+                            <span>{timerHours}</span>
+                        </div>
+                        <span className='countdown-element__title'>
+                            Hour
+                        </span>
+                    </div>
+                    <div className='countdown-element'>
+                        <div className='time'>
+                            <div className='countdown-element__shadow'></div>
+                            <span>{timerMinutes}</span>
+                        </div>
+                        <span className='countdown-element__title'>Minute</span>
+                    </div>
+                    <div className='countdown-element'>
+                        <div className='time'>
+                            <div className='countdown-element__shadow'></div>
+                            <span>{timerSeconds}</span>
+                        </div>
+                        <span className='countdown-element__title'>Second</span>
+                    </div>
                 </div>
             </div>
         </div>

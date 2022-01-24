@@ -176,12 +176,11 @@ export default function WhiteList_Registration() {
     }
 
     return (<>
-
-        {!modalCommingShow ?
-            (!modalSucceedShow ?
+        {
+            !modalSucceedShow ?
                 <>
                     <div className='white-list__title'>
-                        <span>WHITELIST: REGISTRATION</span>
+                        <span>WHITE LIST: REGISTRATION</span>
                         <div className='white-list__subtitle'>
                             <span>Round:</span>
                             <span className='white-list__strategy'> {getConfigRoundData()["Round Name"]} ({findBoonValue()}$)</span>
@@ -285,7 +284,6 @@ export default function WhiteList_Registration() {
                 </>
                 :
                 <ModalSucceedWhiteList type={messageState} />
-            ) : <WhiteListComingSoon />
         }
     </>)
 }
