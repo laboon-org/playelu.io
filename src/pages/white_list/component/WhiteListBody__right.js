@@ -52,7 +52,7 @@ export default function WhiteListBody__right(props) {
         <div className='white-list__body--right'>
 
             {
-                commingSoonTime == ''
+               false //* In Testing
                     ? (!whiteListShow ?
                         (<LoginProcess
                             showWhiteList={showWhiteList}
