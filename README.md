@@ -1,5 +1,12 @@
 # Getting Started with Create React App
 
+## Prequisites
+
+```
+node v8.1.2
+npm v16.13.1
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### `npm run start`

@@ -31,7 +31,7 @@ const getConfigRoundData = () => {
         const data = CONFIG['Round Setting'].data
 
         const index = data.findIndex((v, i, obj) => {
-            //19   19     
+            //19   19
             if (moment(v.Start).subtract(1, 'days').isBefore(moment()) && moment(v.End).add(1, 'days').isAfter(moment())) {
                 return true
             }
@@ -76,6 +76,8 @@ const findBoonValue = () => {
                 return true
             }
         })
+
+        console.log('index = ' + index);
 
         if (index != -1) {
             boonValue = data[index]['Sell Price']
@@ -122,7 +124,7 @@ export default function WhiteList_Registration() {
     const register = async () => {
 
         //* disable eslint in here
-        if (!confirm('Are you sure about your choice?')) {//eslint-disable-line    
+        if (!confirm('Are you sure about your choice?')) {//eslint-disable-line
             return
         }
 
