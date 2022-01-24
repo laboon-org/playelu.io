@@ -152,15 +152,17 @@ function App(props) {
   return (
     <React.Suspense fallback={<Loading />}>
       <LoadData></LoadData>
-      <Router>
-        <Routes>
-          <Route path='/' element={<UrlRescusivePanel Comp={PlayeluBaner} />}>  </Route>
-          <Route path='/gameplay' element={<UrlRescusivePanel Comp={Gameplay} />}> </Route>
-          <Route path='/presales' element={<UrlRescusivePanel Comp={SalePage} />}> </Route>
-          <Route path='/whitelist' element={<UrlRescusivePanel Comp={WhiteList} />}> </Route>
-          <Route path='/claim' element={<UrlRescusivePanel Comp={Claim} />}> </Route>
-        </Routes>
-      </Router>
+
+        <Router>
+          <Routes>
+            <Route path='/' element={<UrlRescusivePanel Comp={PlayeluBaner} />}>  </Route>
+            <Route path='/gameplay' element={<UrlRescusivePanel Comp={Gameplay} />}> </Route>
+            <Route path='/presales' element={<UrlRescusivePanel Comp={SalePage} />}> </Route>
+            <Route path='/whitelist' element={<UrlRescusivePanel Comp={WhiteList} />}> </Route>
+            <Route path='/claim' element={<UrlRescusivePanel Comp={Claim} />}> </Route>
+          </Routes>
+        </Router>
+  
     </React.Suspense>
   );
 }
