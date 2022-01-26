@@ -47,7 +47,9 @@ export default function ModalSucceed(props) {
         );
       }
       default: {
-        <></>;
+        return (
+          <div></div>
+        );
       }
     }
   };
