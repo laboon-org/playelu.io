@@ -4,7 +4,9 @@
 
 ```
 node v8.1.2
+npm v14
 yarn 1.22.10
+yarn install
 ```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
