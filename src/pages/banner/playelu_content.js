@@ -5,7 +5,6 @@ import Modal from 'react-bootstrap/Modal';
 import UrlRescusive from '../../UrlRescusive';
 import Footer from '../../components/Footer';
 
-
 export default function Content(props) {
   const {urlApi} = props;
   const [show, setShow] = useState(false);
@@ -76,7 +75,6 @@ export default function Content(props) {
                 }}
                 className="playelu-input "
                 type=""
-                placeholder='Email'
                 value={email}
                 pattern='[a-z]{1,50}'
                 maxLength={40}
@@ -99,10 +97,7 @@ export default function Content(props) {
                     className=" subcribe__playelu-btn--background"
                     src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_gameplays.webp'
                     alt='' />
-                  <span
-                    className=" subcribe__playelu-btn--text">
-                                        Subscribe
-                  </span>
+                  <span className=" subcribe__playelu-btn--text">Subscribe</span>
                 </div>
               </button>
             </form>

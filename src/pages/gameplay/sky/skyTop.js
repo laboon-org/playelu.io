@@ -1,14 +1,14 @@
 import React from 'react';
-import _ from "lodash";
-import { useState } from 'react';
+import _ from 'lodash';
+import {useState} from 'react';
 import Modal from 'react-bootstrap/Modal';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import GameplayRune from './gameplayRune';
 import UrlRescusive from '../../../UrlRescusive';
-import "../../../scss/gameplay/skyScss/skyTop.scss";
+import '../../../scss/gameplay/skyScss/skyTop.scss';
 
 export default function SkyTop(props) {
-  const { urlApi, setting } = props;
+  const {urlApi, setting} = props;
 
   const [showPopup, setShowPopup] = useState(false);
   const handleClosePopup = () => setShowPopup(false);

@@ -3,10 +3,8 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import _ from 'lodash';
 
-
 import '../../scss/home/modalNavbar.scss';
 import Footer from '../../components/Footer';
-
 
 export default function Navbar(props) {
   const {urlApi} = props;

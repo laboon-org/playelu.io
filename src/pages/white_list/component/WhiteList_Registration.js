@@ -4,7 +4,6 @@ import ModalSucceedWhiteList from './modal/ModalSucceed_whiteList';
 import wallet from '../../../module/wallet';
 import axios from 'axios';
 import messageStorage from '../../../module/messageStorage';
-import WhiteListComingSoon from './modal/WhiteList_comingSoon';
 import '../../../scss/reponsiveness/sale_page/mobile.scss';
 
 //* Get Config
@@ -31,7 +30,10 @@ const getConfigRoundData = () => {
 
     const index = data.findIndex((v, i, obj) => {
       // 19   19
-      if (moment(v.Start).subtract(1, 'days').isBefore(moment()) && moment(v.End).add(1, 'days').isAfter(moment())) {
+      if (
+        moment(v.Start).subtract(1, 'days').isBefore(moment()) &&
+        moment(v.End).add(1, 'days').isAfter(moment())
+      ) {
         return true;
       }
     });
@@ -41,9 +43,7 @@ const getConfigRoundData = () => {
     }
     return boonData;
   }
-  return {
-
-  };
+  return {};
 };
 const findAvaxValue = () => {
   const CONFIG = messageStorage.getInstance().getMessage('config');
@@ -71,7 +71,10 @@ const findBoonValue = () => {
     const data = CONFIG['Round Setting'].data;
     let boonValue = 0;
     const index = data.findIndex((v, i, obj) => {
-      if (moment(v.Start).subtract(1, 'days').isBefore(moment()) && moment(v.End).add(1, 'days').isAfter(moment())) {
+      if (
+        moment(v.Start).subtract(1, 'days').isBefore(moment()) &&
+        moment(v.End).add(1, 'days').isAfter(moment())
+      ) {
         return true;
       }
     });
@@ -97,17 +100,21 @@ const calValueDeposit = (amount) => {
   };
 
   const boonAmount = parseInt(amount.split('.').join(''));
-  const avaxAmount = (Math.round(calAvaxAmount(boonAmount) * 1000) / 1000) + '';
+  const avaxAmount = Math.round(calAvaxAmount(boonAmount) * 1000) / 1000 + '';
   return avaxAmount.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
 };
 
 export default function WhiteList_Registration() {
   //* State
-  const [amount, setAmount] = useState(('').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'));
+  const [amount, setAmount] = useState(
+      ''.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'),
+  );
   const [deposit, setDeposit] = useState('');
   const [modalSucceedShow, setModalSucceedShow] = useState(false);
   const [modalCommingShow, setModalCommingShow] = useState(!getStatePage());
-  const [messageState, setMessageState] = useState('Thanks you! for register whitelist.');
+  const [messageState, setMessageState] = useState(
+      'Thanks you! for register whitelist.',
+  );
 
   //* Function callback
   const setValueDeposit = (amount) => {
@@ -120,17 +127,21 @@ export default function WhiteList_Registration() {
 
   const register = async () => {
     //* disable eslint in here
-        if (!confirm('Are you sure about your choice?')) {//eslint-disable-line
+    if (!confirm('Are you sure about your choice?')) {
+      //eslint-disable-line
       return;
     }
 
-    const checkWallet = await axios.post('https://laboon.as.r.appspot.com/check_wallet_wl', {
-      wallet_address: wallet.getInstance().account,
-    }).then((res) => {
-      return res.data;
-    }).catch((err) => {
-      throw err;
-    });
+    const checkWallet = await axios
+        .post('https://laboon.as.r.appspot.com/check_wallet_wl', {
+          wallet_address: wallet.getInstance().account,
+        })
+        .then((res) => {
+          return res.data;
+        })
+        .catch((err) => {
+          throw err;
+        });
 
     console.log(checkWallet);
     if (checkWallet.status == 200) {
@@ -138,7 +149,6 @@ export default function WhiteList_Registration() {
       showModalSucceed();
       return;
     }
-
 
     const boonValue = parseInt(amount.split('.').join(''));
 
@@ -151,15 +161,18 @@ export default function WhiteList_Registration() {
 
     try {
       const URL = 'https://laboon.as.r.appspot.com/whitelist';
-      const callRegister = await axios.post(URL, {
-        address_wallet: wallet.getInstance().account,
-        boon_amount: boonValue,
-        [id == -1 ? null : 'ref_code']: id,
-      }).then((res) => {
-        return res.data;
-      }).catch((err) => {
-        throw err;
-      });
+      const callRegister = await axios
+          .post(URL, {
+            address_wallet: wallet.getInstance().account,
+            boon_amount: boonValue,
+            [id == -1 ? null : 'ref_code']: id,
+          })
+          .then((res) => {
+            return res.data;
+          })
+          .catch((err) => {
+            throw err;
+          });
 
       if (callRegister.status == 200) {
         setMessageState('SUCCEED');
@@ -168,117 +181,136 @@ export default function WhiteList_Registration() {
         //* Never error
       }
     } catch (err) {
-
+      console.error(err);
     }
   };
 
-  return (<>
-    {
-            !modalSucceedShow ?
-                <>
-                  <div className='white-list__title'>
-                    <span>WHITE LIST: REGISTRATION</span>
-                    <div className='white-list__subtitle'>
-                      <span>Round:</span>
-                      <span className='white-list__strategy'> {getConfigRoundData()['Round Name']} ({findBoonValue()}$)</span>
-                    </div>
-                  </div>
+  return (
+    <>
+      {!modalSucceedShow ? (
+        <>
+          <div className="white-list__title">
+            <span>WHITE LIST: REGISTRATION</span>
+            <div className="white-list__subtitle">
+              <span>Round:</span>
+              <span className="white-list__strategy">
+                {' '}
+                {getConfigRoundData()['Round Name']} ({findBoonValue()}$)
+              </span>
+            </div>
+          </div>
 
-                  <div className='contribute'>
-                    <span className='contribute--shadow'></span>
-                    <div className='contribute-frame'>
-                      {/* <div> */}
-                      <div className='contribute-sec'>
-                        <div className='contribute-title'>
-                          <p>Wallet Address:</p>
-                          <span className='wallet-name'>MetaMask</span>
-                        </div>
-                        <div className='input'>
-                          <input
-                            className='input-text'
-                            type="text"
-                            name="name"
-                            value={wallet.getInstance().account}
-                            placeholder=''
-                          />
-                          <img className='input-img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp' alt='' />
-                        </div>
-                      </div>
-                      {/* Amount */}
-                      <div className='contribute-sec'>
-                        <div className='contribute-title'>
-                          <p>Contribution Amount</p>
-                          <span className='boon-quantity'>$BOON</span>
-                        </div>
-                        <div className='input'>
-                          <input
-                            className='input-text boon-quantity__input'
-                            type="text" name="name"
-                            placeholder='0.00'
-                            value={amount}
-                            onChange={(e) => {
-                              if (e.target.value == '') {
-                                setAmount('');
-                                setDeposit('');
-                              }
-                              const reg = new RegExp('^[0-9]+$');
-                              if (reg.test(e.target.value.split('.').join(''))) {
-                                const amount = e.target.value.split('.').join('').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
-                                setAmount(amount);
-                                setValueDeposit(amount);
-                              } else {
+          <div className="contribute">
+            <span className="contribute--shadow"></span>
+            <div className="contribute-frame">
+              {/* Wallet */}
+              <div className="contribute-sec">
+                <div className="contribute-title">
+                  <p>Wallet Address:</p>
+                  <span className="wallet-name">MetaMask</span>
+                </div>
+                <div className="input">
+                  <input
+                    className="input-text"
+                    type="text"
+                    name="name"
+                    value={wallet.getInstance().account}
+                    placeholder=""
+                  />
+                  <img
+                    className="input-img"
+                    src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+              {/* Amount */}
+              <div className="contribute-sec">
+                <div className="contribute-title">
+                  <p>Contribution Amount</p>
+                  <span className="boon-quantity">$BOON</span>
+                </div>
+                <div className="input">
+                  <input
+                    className="input-text boon-quantity__input"
+                    type="text"
+                    name="name"
+                    placeholder="0.00"
+                    value={amount}
+                    onChange={(e) => {
+                      if (e.target.value == '') {
+                        setAmount('');
+                        setDeposit('');
+                      }
+                      const reg = new RegExp('^[0-9]+$');
+                      if (reg.test(e.target.value.split('.').join(''))) {
+                        const amount = e.target.value
+                            .split('.')
+                            .join('')
+                            .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+                        setAmount(amount);
+                        setValueDeposit(amount);
+                      }
+                    }}
+                  />
+                  <img
+                    className="input-img"
+                    src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+              {/* Avax */}
+              <div className="contribute-sec">
+                <div className="contribute-title">
+                  <p>Preparing Amount</p>
+                  <span className="avax-quantity">AVAX</span>
+                </div>
+                <div className="input">
+                  <input
+                    value={deposit}
+                    className="input-text"
+                    style={{
+                      color: '#B6B6B6',
+                    }}
+                    name="name"
+                    placeholder="0.00"
+                    readOnly={true}
+                  />
+                  <img
+                    className="input-img"
+                    src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/avax1-icon.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="contribute-footer">
+                <div
+                  className="contribute-btn"
+                  // onClick={async () => await onPressContribute()}
+                  onClick={async () => {
+                    await register();
+                  }}
+                >
+                  <span>REGISTRATION</span>
+                </div>
+              </div>
+              {/* </div> */}
+            </div>
+          </div>
 
-                              }
-                            }}
-                          />
-                          <img className='input-img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp' alt='' />
-                        </div>
-                      </div>
-                      {/* Avax */}
-                      <div className='contribute-sec'>
-                        <div className='contribute-title'>
-                          <p>Preparing Amount</p>
-                          <span className='avax-quantity'>AVAX</span>
-                        </div>
-                        <div className='input'>
-                          <input
-                            value={deposit}
-                            className='input-text'
-                            style={{
-                              color: '#B6B6B6',
-                            }}
-                            name="name"
-                            placeholder='0.00'
-                            readOnly={true}
-                          />
-                          <img className='input-img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/avax1-icon.webp' alt='' />
-                        </div>
-                      </div>
-                      <div
-                        className='contribute-footer'
-                      >
-                        <div
-                          className='contribute-btn'
-                          // onClick={async () => await onPressContribute()}
-                          onClick={async () => {
-                            await register();
-                          }}
-                        >
-                          <span>
-                                        REGISTRATION
-                          </span>
-                        </div>
-                      </div>
-                      {/* </div> */}
-                    </div>
-                  </div >
-
-                  {
-                        window.localStorage.getItem('id') == undefined || window.localStorage.getItem('id') == null ?
-                            <></> :
-                            <span className='white-list__code'>*Code: {window.localStorage.getItem('id')}</span>}
-                </> :
-                <ModalSucceedWhiteList type={messageState} />
-    }
-  </>);
+          {window.localStorage.getItem('id') == undefined ||
+          window.localStorage.getItem('id') == null ? (
+            <></>
+          ) : (
+            <span className="white-list__code">
+              *Code: {window.localStorage.getItem('id')}
+            </span>
+          )}
+        </>
+      ) : (
+        <ModalSucceedWhiteList type={messageState} />
+      )}
+    </>
+  );
 }

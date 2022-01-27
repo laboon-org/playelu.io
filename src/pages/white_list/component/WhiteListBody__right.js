@@ -5,11 +5,13 @@ import LoginProcess from './LoginProcess';
 import messageStorage from '../../../module/messageStorage';
 import WhiteListComingSoon from './modal/WhiteList_comingSoon';
 
-
-const WhiteListRegistration = React.lazy(() => import('./WhiteList_Registration'));
+const WhiteListRegistration = React.lazy(() =>
+  import('./WhiteList_Registration'),
+);
 export default function WhiteListBody__right(props) {
   const {showModalNotFound} = props;
   const [whiteListShow, setWhiteListShow] = useState(false);
+  const [whiteListComingSoonShow, setWhiteListComingSoonShow] = useState(true);
   const [commingSoonTime, setCommingSoon] = useState('');
   const showWhiteList = () => {
     setWhiteListShow(true);
@@ -33,7 +35,7 @@ export default function WhiteListBody__right(props) {
         countdownTime = moment(data[index].Start).format('DD-MM-YYYY [00:00]');
       }
     }
-    console.log(countdown, countdownTime);
+    // console.log(countdown, countdownTime);
 
     if (countdown) {
       return countdownTime;
@@ -46,19 +48,23 @@ export default function WhiteListBody__right(props) {
     setCommingSoon(checkCountdown());
   }, []);
 
-  console.log('STATE:', commingSoonTime);
+  // console.log('STATE:', commingSoonTime);
   return (
-    <div className='white-list__body--right'>
-      {
-                true ?
-                    (!whiteListShow ?
-                        (<LoginProcess
-                          showWhiteList={showWhiteList}
-                          showModalNotFound={showModalNotFound}
-                        />) :
-                        (<WhiteListRegistration />)) :
-                    (<><WhiteListComingSoon dateProp={commingSoonTime} /></>)
-      }
+    <div className="white-list__body--right">
+      {whiteListComingSoonShow ? (
+        !whiteListShow ? (
+          <LoginProcess
+            showWhiteList={showWhiteList}
+            showModalNotFound={showModalNotFound}
+          />
+        ) : (
+          <WhiteListRegistration />
+        )
+      ) : (
+        <>
+          <WhiteListComingSoon dateProp={commingSoonTime} />
+        </>
+      )}
     </div>
   );
 }

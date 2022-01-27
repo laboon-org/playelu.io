@@ -3,22 +3,27 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["plugin:react/recommended", "google"],
+  extends: [
+    'plugin:react/recommended',
+    'google',
+    'eslint:recommended',
+    'plugin:react/jsx-runtime',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  plugins: ["react"],
+  plugins: ['react'],
   rules: {
-    "react/prop-types": "off",
-    "require-jsdoc": "off",
-    "max-len": "off", // disables line length check
-    "new-cap": "off",
-    "camelcase": "off",
-    "no-unused-vars": "off",
-    "no-unused-expressions": "off",
+    'react/prop-types': 'off',
+    'require-jsdoc': 'off',
+    'max-len': 'off', // disables line length check
+    'new-cap': 'off',
+    'camelcase': 'off',
+    'no-unused-vars': 'off',
+    'no-unused-expressions': 'off',
   },
 };
