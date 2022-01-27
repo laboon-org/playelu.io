@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "esnext",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "allowJs": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -22,5 +22,8 @@
   },
   "include": [
     "src"
-  ]
+  ],
+  "paths": {
+    "*": ["src/*"]
+  },
 }

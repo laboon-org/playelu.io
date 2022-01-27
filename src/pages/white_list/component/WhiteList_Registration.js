@@ -7,7 +7,6 @@ import messageStorage from '../../../module/messageStorage';
 import '../../../scss/reponsiveness/sale_page/mobile.scss';
 
 //* Get Config
-
 const getStatePage = () => {
   const CONFIG = messageStorage.getInstance().getMessage('config');
   const data = CONFIG['Page Setting'].data;
@@ -29,7 +28,6 @@ const getConfigRoundData = () => {
     const data = CONFIG['Round Setting'].data;
 
     const index = data.findIndex((v, i, obj) => {
-      // 19   19
       if (
         moment(v.Start).subtract(1, 'days').isBefore(moment()) &&
         moment(v.End).add(1, 'days').isAfter(moment())
@@ -105,7 +103,6 @@ const calValueDeposit = (amount) => {
 };
 
 export default function WhiteList_Registration() {
-  //* State
   const [amount, setAmount] = useState(
       ''.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'),
   );
@@ -126,9 +123,7 @@ export default function WhiteList_Registration() {
   };
 
   const register = async () => {
-    //* disable eslint in here
-    if (!confirm('Are you sure about your choice?')) {
-      //eslint-disable-line
+    if (!window.confirm('Are you sure about your choice?')) {
       return;
     }
 
@@ -143,7 +138,7 @@ export default function WhiteList_Registration() {
           throw err;
         });
 
-    console.log(checkWallet);
+    // console.log(checkWallet);
     if (checkWallet.status == 200) {
       setMessageState('ALREADY_SIGNED');
       showModalSucceed();
