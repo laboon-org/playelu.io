@@ -1,15 +1,19 @@
 stages:
   - build
   - deploy
+
 build:
   image: node:14.18.3  # Run the job in a `node` docker image
   stage: build
   script:
     - CI=false yarn install      # Run `yarn install` and `yarn build`
     - CI=false yarn build
+  only:
+    - main
   artifacts:
     paths:
       - build/
+
 pages:
   image: alpine:latest
   stage: deploy
@@ -17,6 +21,8 @@ pages:
     GIT_STRATEGY: none        # Do not clone git repo
   script:
     - mv build public
+  only:
+    - main
   artifacts:
     paths:
       - public
