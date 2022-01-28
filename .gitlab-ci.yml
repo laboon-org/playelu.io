@@ -1,7 +1,6 @@
 stages:
   - build
   - deploy
-
 build:
   image: node:14.18.3  # Run the job in a `node` docker image
   stage: build
@@ -13,7 +12,6 @@ build:
   artifacts:
     paths:
       - build/
-
 pages:
   image: alpine:latest
   stage: deploy
