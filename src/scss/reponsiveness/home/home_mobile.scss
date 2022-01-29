@@ -12,7 +12,7 @@
     height: 100vh;
   }
   .sound {
-    top: 70px;
+    top: 60px;
     width: 30px;
     height: 30px;
   }
@@ -23,16 +23,19 @@
     height: 30px;
   }
   .launch-header {
-    top: 55px !important;
-    left: 40px !important;
-    width: calc(100vw - 50px) !important;
+    top: 62px !important;
+    left: 62px !important;
   }
   .launch-header__content-coin {
-    width: 15px !important;
-    margin: 3px 5px 0 5px !important;
+    margin: 5px 5px 0 0px !important;
+  }
+  .market {
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .market span {
-    font-size: 10px !important;
+    font-size: 13px !important;
+    letter-spacing: initial !important;
   }
 
   .discord {
@@ -78,7 +81,7 @@
     margin-top: 120px;
   }
   .playelu-frame .playelu-all .playelu-img img {
-    width: calc(100% - 130px);
+    width: calc(100% - 196px);
   }
   .my-star::before {
     height: 50px;
@@ -94,11 +97,12 @@
     width: calc(100% - 36px);
   }
   .subcribe__playelu-btn {
-    bottom: -45px;
-    left: calc((100% - 18px) / 2 - 50px);
     width: 100px;
     height: 37.5px;
     font-size: 14px;
+  }
+  .subcribe__playelu-btn--text {
+    font-size: 12px;
   }
 
   .playelu-btn input {
@@ -158,7 +162,7 @@
     bottom: 5px;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 130px;
   }
   .footer {
     width: 100%;

@@ -66,7 +66,7 @@ export default function Content(props) {
             </div>
             <div className="playelu-tittle">
               <h1>#1 Free to Earn NFT Game</h1>
-              <span className='playelu-tittle__sub'>1st Inter-Connected Game (MIG)</span>
+              <span className='playelu-tittle__sub'>1st Multiple Inter-Connected Games (MIG)</span>
             </div>
             <form className="playelu-btn" onSubmit={handleSubmit}>
               <input

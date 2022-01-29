@@ -27,7 +27,7 @@ export default function Footer(props) {
             <span>Terms & Conditions</span>
           </a>
         </div>
-        <span className="version">v0.6 - 20220117</span>
+        <span className="version">v0.6.8 - 20220129</span>
       </div>
     </UrlRescusive>
   );

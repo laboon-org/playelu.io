@@ -1,9 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
-import Navbar from './navbar';
-import UrlRescusive from '../../UrlRescusive';
+
 import '../../scss/reponsiveness/home/home_Ipad.scss';
 import '../../scss/reponsiveness/home/home_mobile.scss';
+
+import Navbar from './navbar';
+import UrlRescusive from '../../UrlRescusive';
 import Background from './backgrounds/background';
 import Content from './playelu_content';
 import Cursor from '../../components/cursor';
@@ -23,7 +25,6 @@ export default function PlayeluBaner(props) {
             <img className="mobile__discord-img" src={_.isEmpty(urlApi) ? '' : urlApi.image.mobileDiscord} alt="" />
           </a>
         </div>
-        {/* ********Launch Header************ */}
         {
           setting.page_home_section_top_contract_address_enabled === true ? <LaunchHeader /> : ''
         }

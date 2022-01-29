@@ -116,8 +116,8 @@ function App(props) {
 
   const LoadData = () => {
     const load = usePromise((a) =>
-      new Promise(async (resolve) => {
-        const data = await axios.post('https://laboon.as.r.appspot.com/config')
+      new Promise((resolve) => {
+        const data = axios.post('https://laboon.as.r.appspot.com/config')
             .then((value) => {
               return value.data.content;
             }).catch((err) => {

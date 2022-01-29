@@ -152,9 +152,13 @@ li {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  color: #ffff;
-  letter-spacing: 1px;
+  color: #fff;
+  letter-spacing: 1.4px;
   cursor: pointer;
+  font-size: 12px;
+}
+.home-btn__gameplay--text:hover {
+  color: #fff;
 }
 .playelu-frame {
   justify-content: center;
@@ -177,18 +181,18 @@ li {
   }
 }
 .playelu__menu-element {
-  width: 140px;
   margin: 0 5px;
   text-align: center;
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding: 0 8px;
+  padding-top: 8px;
 }
 .playelu__menu-element h4 {
-  font-size: 18px;
+  font-size: 12px;
   letter-spacing: 1.4px;
   text-align: center;
-  width: 100%;
   color: #ffff;
   font-weight: 300;
   cursor: pointer;
@@ -306,10 +310,10 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 20px;
+  bottom: 8px;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 80px;
   z-index: 1056;
 }
 .footer {
@@ -324,7 +328,7 @@ li {
 }
 .policy,
 .policy a {
-  font-size: 16px;
+  font-size: 12px;
   color: #fdcd2f;
   margin: 15px 0 5px 0;
   cursor: pointer;
@@ -334,7 +338,7 @@ li {
 }
 .version {
   width: 100%;
-  font-size: 14px;
+  font-size: 10px;
   text-align: center;
 }
 

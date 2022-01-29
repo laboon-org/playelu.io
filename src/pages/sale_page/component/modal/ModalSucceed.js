@@ -1,11 +1,12 @@
 import React from 'react';
 import './_modal.scss';
 import './_responsive.scss';
+
 export default function ModalSucceed(props) {
   const {forwardBack, amount, deposit} = props;
   return (
     <div className="modal-succeed">
-      <span className="modal-succeed__heading">succeeded!</span>
+      <span className="modal-succeed__heading">Succeeded!</span>
       <div className="modal-succeed__body">
         <img
           className="modal-succeed__body__img"
@@ -18,7 +19,7 @@ export default function ModalSucceed(props) {
           <span className="modal-succeed__body__content__boon">$BOON</span>, for{' '}
           {deposit}
           <span className="modal-succeed__body__content__avax">AVAX</span>, in
-          the "Seed" round.
+          the &quot;Seed&quot; round.
         </div>
       </div>
       <a

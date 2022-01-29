@@ -1,8 +1,14 @@
 # Getting Started with Create React App
+## IDE (Integrated Development Editor)
+
+```shell
+Visual Studio Code
+Extensions: A, B
+```
 
 ## Prerequisites
 
-```
+```shell
 node v8.1.2
 npm v14
 yarn 1.22.10
@@ -27,6 +33,17 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
 ### `eslint "src/components/**" --fix`
 
 Fixing Source Code Style
+
+```shell
+yarn lint
+```
+
+## Libs Management
+
+```shell
+yarn upgrade-interactive --latest
+```

@@ -1,4 +1,2 @@
-module.exports = {
-  presets: ['@babel/preset-env', '@babel/preset-react', ''],
-  plugins: ['@babel/plugin-syntax-jsx'],
-};
+export const presets = ['@babel/preset-env', '@babel/preset-react', ''];
+export const plugins = ['@babel/plugin-syntax-jsx', 'react'];
