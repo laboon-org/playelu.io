@@ -5,11 +5,13 @@
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  padding: 0px;
+  padding: 0;
 }
+
 .modal-dialog {
   margin: 0;
 }
+
 .modal-100w > .modal-content {
   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/common/homBackground_Mobile.webp")
     no-repeat center / cover;
@@ -18,6 +20,7 @@
   border-radius: 0;
   margin: 0;
 }
+
 .modal--frame {
   width: 90%;
   height: calc(100vh - 120px);
@@ -29,16 +32,20 @@
   display: flex;
   justify-content: space-between;
 }
+
 .header__modal-navbar > img {
   height: 40px;
 }
+
 .header__modal-navbar a img {
   height: 40px;
 }
+
 .navbar-btn {
   display: none;
   width: 30px;
 }
+
 .navbar-btn img {
   width: 100%;
   cursor: pointer;
@@ -47,9 +54,11 @@
 .close__modal-navbar {
   width: 50px;
 }
+
 .close__modal-navbar img {
   width: 100%;
 }
+
 .body__modal-navbar {
   max-height: 430px;
   height: calc((100vh - 230px));
@@ -57,14 +66,17 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 .modal-logo {
   width: 100%;
   display: flex;
   justify-content: center;
+
   img {
     width: 50%;
   }
 }
+
 .modal-element {
   position: relative;
   display: flex;
@@ -72,6 +84,7 @@
   justify-content: center;
   width: 100%;
 }
+
 .modal-element--text {
   position: absolute;
   top: 0;
@@ -82,6 +95,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .modal-element h2 {
   letter-spacing: 2px;
   z-index: 1;
@@ -92,9 +106,11 @@
   text-align: center;
   top: 0;
 }
+
 .modal-element h2:hover {
   color: #403100;
 }
+
 .modal-element img {
   width: 100%;
 }
@@ -110,6 +126,7 @@
     top: 10px;
     right: 10px;
   }
+
   .modal-element h2 {
     font-size: 20px;
   }

@@ -12,30 +12,34 @@
   min-width: 270px;
   max-width: 600px;
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 }
+
 .launch-header__content-coin {
   width: 20px;
   margin: 0 5px;
+
   img {
     width: 100%;
   }
 }
+
 .market {
   cursor: pointer;
   margin-left: 8px;
   margin-right: 8px;
 }
+
 .market span {
   color: #fff;
   letter-spacing: 0.8px;
   cursor: pointer;
   font-size: 14px;
 }
+
 .market:hover span {
-  color: rgba($color: #fff, $alpha: 0.7);
+  color: rgba($color: #fff, $alpha: 70%);
 }
 
 @media screen and (max-width: 740px) {

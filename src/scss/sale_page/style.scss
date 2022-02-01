@@ -116,24 +116,29 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .logo {
   min-width: 220px;
   width: 30%;
   display: flex;
   align-items: center;
 }
+
 .logo-frame {
   width: 100%;
   margin: auto;
 }
+
 .elu-logo {
   width: 100%;
 }
+
 .boon-coin {
   width: 70%;
   margin-left: 12%;
   margin-top: -10%;
 }
+
 /* Begin body-right */
 .body-right,
 .white-list__body--right {
@@ -163,7 +168,7 @@ a {
   max-width: 450px;
   width: 100%;
   height: 108px;
-  margin: 0px auto;
+  margin: 0 auto;
   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp")
     no-repeat center / contain;
   border-radius: 16px;
@@ -172,6 +177,7 @@ a {
   align-items: center;
   cursor: pointer;
 }
+
 .login-frame {
   display: flex;
   width: 90%;
@@ -181,6 +187,7 @@ a {
   align-items: center;
   justify-content: left;
 }
+
 .login-title {
   text-align: center;
   color: #fff;
@@ -188,6 +195,7 @@ a {
   font-family: $font_body, sans-serif;
   margin-bottom: 0;
 }
+
 .login-icon {
   display: flex;
   justify-content: center;
@@ -195,9 +203,11 @@ a {
   width: 10%;
   margin-right: 4%;
 }
+
 .login-icon img {
   width: 100%;
 }
+
 .white-list__login {
   color: #fff;
   font-size: 26px;
@@ -210,7 +220,7 @@ a {
   position: relative;
   min-width: 300px;
   width: 90%;
-  background: rgba(24, 23, 23, 0.6);
+  background: rgb(24 23 23 / 60%);
   border: 4px solid #205198;
   border-radius: 40px;
   display: flex;
@@ -218,6 +228,7 @@ a {
   font-family: $font_body, sans-serif;
   font-weight: normal;
 }
+
 .contribute--shadow {
   position: absolute;
   z-index: 0;
@@ -225,10 +236,11 @@ a {
   left: 2%;
   width: 16px;
   height: 24px;
-  background: rgba(135, 136, 136, 0.3);
+  background: rgb(135 136 136 / 30%);
   transform: rotateZ(45deg);
   border-radius: 50%;
 }
+
 .contribute-frame {
   width: calc(100% - 60px);
   margin: 30px auto;
@@ -236,71 +248,83 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .contribute-sec {
   margin-bottom: 20px;
 }
+
 .contribute-title {
   display: flex;
   align-items: flex-end;
   margin-bottom: 10px;
   justify-content: space-between;
 }
+
 .contribute-title p {
   color: #fdcd2f;
   font-size: 18px;
 }
+
 .contribute-title .wallet-name {
   color: #e8821e;
   font-size: 14px;
 }
+
 .contribute-title .avax-quantity {
   color: #e84142;
   font-size: 14px;
 }
+
 .contribute-title .boon-quantity {
   color: #fed34e;
   font-size: 14px;
 }
+
 .input {
   position: relative;
 }
+
 .input {
   width: 100%;
   color: #ffff;
-  background: rgba(24, 23, 23, 0.6);
+  background: rgb(24 23 23 / 60%);
   border-radius: 10px;
   border: 1px solid #ffff;
+
   ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #b6b6b6;
     opacity: 1; /* Firefox */
   }
 
-  :-ms-input-placeholder {
+  :input-placeholder {
     /* Internet Explorer 10-11 */
     color: #b6b6b6;
   }
 
-  ::-ms-input-placeholder {
+  ::input-placeholder {
     /* Microsoft Edge */
     color: #b6b6b6;
   }
 }
+
 .input-text {
   width: calc(100% - 30px);
-  width: -moz-calc(100% - 30px);
-  width: -webkit-calc(100% - 30px);
+  width: calc(100% - 30px);
+  width: calc(100% - 30px);
   font-size: 16px;
   padding: 14px;
   color: #b6b6b6;
-  background: rgba(24, 23, 23, 0.6);
+  background: rgb(24 23 23 / 60%);
   border-radius: 10px;
   outline: none;
   border: none;
 }
+
 .boon-quantity__input {
   color: #ffff;
 }
+
 .input-img {
   position: absolute;
   max-width: 30px;
@@ -332,6 +356,7 @@ a {
   cursor: pointer;
   font-weight: bold;
 }
+
 .contribute-btn span {
   cursor: pointer;
 }
@@ -340,6 +365,7 @@ a {
   color: #ffff;
   font-size: 16px;
 }
+
 .white-list__title {
   text-align: center;
   margin-bottom: 30px;
@@ -356,6 +382,7 @@ a {
 .white-list__subtitle {
   font-size: 20px;
 }
+
 .white-list__strategy {
   font-size: 20px;
   color: #fed34e;
@@ -382,20 +409,23 @@ a {
   width: 35%;
   height: auto;
 }
+
 .notfound__text {
   display: flex;
   flex-direction: column;
   font-size: 40px;
   text-align: center;
 }
+
 .notfound__title {
   font-family: $font_body, sans-serif;
   font-weight: 400;
   color: #fff;
   margin-bottom: 10px;
 }
+
 .notfound__sub {
   font-family: $font_body, sans-serif;
   font-weight: 600;
-  color: rgba(250, 244, 244, 0.6);
+  color: rgb(250 244 244 / 60%);
 }

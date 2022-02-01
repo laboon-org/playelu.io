@@ -1,12 +1,14 @@
 @media screen and (min-width: 740px) and (max-width: 1024px) {
     .boon-text {
-        margin: 0 7px -1px 7px;
+        margin: 0 7px -1px;
         font-size: 20px;
     }
+
     .seed {
-        margin: 0 7px -4px 7px;
+        margin: 0 7px -4px;
         font-size: 26px;
     }
+
     .header-text {
         font-size: 16px;
     }
@@ -16,16 +18,20 @@
         margin-right: 10px;
         border-radius: 6px;
     }
+
     .gameplay-btn span {
         font-size: 16px;
     }
+
     .white-list__login {
         font-size: 20px;
     }
+
     .contribute {
         border-radius: 35px;
         border: 3px solid #205198;
     }
+
     .contribute-frame {
         width: calc(100% - 40px);
         margin: 20px auto;
@@ -33,6 +39,7 @@
         flex-direction: column;
         justify-content: space-between;
     }
+
     .contribute-btn {
         width: 50%;
         font-size: 19px;
@@ -55,6 +62,7 @@
 
     .notfound__btn--content {
     }
+
     .notfound__btn-title {
         font-size: 20px;
     }
@@ -62,28 +70,34 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1365px) {
     .boon-text {
-        margin: 0 7px -3px 7px;
+        margin: 0 7px -3px;
         font-size: 24px;
     }
+
     .seed {
-        margin: 0 7px -5px 7px;
+        margin: 0 7px -5px;
         font-size: 30px;
     }
+
     .header-text {
         font-size: 20px;
     }
+
     .contribute {
         border: 3px solid #205198;
     }
+
     .contribute-btn {
         width: 40%;
         font-size: 20px;
     }
+
     .modal-frame {
         width: 740px;
         height: 563px;
         border-radius: 30px;
     }
+
     .modal-title {
         font-size: 45px;
     }

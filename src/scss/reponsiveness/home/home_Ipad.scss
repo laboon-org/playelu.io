@@ -1,17 +1,21 @@
 @media screen and (min-width: 740px) and (max-width: 1024px) {
   .playelu__menu-element {
-    margin: 0 0px;
+    margin: 0;
   }
+
   .playelu__menu-element h4 {
     font-size: 12px;
     letter-spacing: 1.4px;
   }
+
   .discord {
     right: -3%;
     transform: scale(0.7) translateY(25%);
+
     .discord-img {
       display: block;
     }
+
     .mobile__discord-img {
       display: none;
     }
@@ -20,6 +24,7 @@
   .background-bottom {
     bottom: 0;
   }
+
   .playelu-frame {
     .playelu-all {
       width: 50%;
@@ -33,6 +38,7 @@
   .playelu-btn {
     max-width: 530px;
   }
+
   .playelu-btn input {
     padding-right: 25.5%;
     padding-left: 52px;
@@ -44,13 +50,16 @@
     width: 70vw;
     height: 50vw;
     border-radius: 37px;
+
     .modal-container {
       flex-direction: column;
       border: 5px solid #fff;
+
       img {
         width: 70%;
         margin: 0 auto;
       }
+
       h1 {
         color: #fff;
         text-transform: uppercase;
@@ -59,6 +68,7 @@
       }
     }
   }
+
   .modal-thankyou > .modal-content,
   .modal-comingsoon > .modal-content {
     width: 70vw;
@@ -70,25 +80,31 @@
   .discord {
     right: -2%;
     transform: scale(0.8) translateY(10%);
+
     .discord-img {
       display: block;
     }
+
     .mobile__discord-img {
       display: none;
     }
   }
+
   .background-bottom {
     bottom: 0;
   }
+
   .playelu-all {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     max-width: 1280px;
+
     .playelu-img {
       margin: 0 auto;
       text-align: center;
+
       img {
         width: 280px;
       }
@@ -98,6 +114,7 @@
   .playelu-tittle h1 {
     font-size: 36px;
   }
+
   .playelu-btn {
     max-width: 540px;
   }
@@ -107,6 +124,7 @@
     padding-right: 22.5%;
     font-size: 20px;
   }
+
   .iconEmail {
     margin-top: 11px;
   }

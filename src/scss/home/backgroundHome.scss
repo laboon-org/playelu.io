@@ -2,9 +2,9 @@
   .playelu-background {
     background: radial-gradient(
       circle,
-      rgba(81, 179, 229, 1) 0%,
-      rgba(102, 175, 232, 1) 32%,
-      rgba(66, 102, 176, 1) 73%
+      rgb(81 179 229 / 100%) 0%,
+      rgb(102 175 232 / 100%) 32%,
+      rgb(66 102 176 / 100%) 73%
     );
     width: 100vw;
     height: 100vh;
@@ -12,6 +12,7 @@
     top: 0;
     left: 0;
     z-index: -1;
+
     .background-cloud {
       overflow: hidden;
       position: absolute;
@@ -33,12 +34,14 @@
   right: 0;
   overflow: hidden;
 }
+
 .my_star-all {
   position: relative;
   width: 100%;
   transform: rotate(140deg);
   height: 20px;
 }
+
 .my-star {
   width: 100%;
   position: absolute;
@@ -54,16 +57,17 @@
   height: 120px;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0),
+    rgb(255 255 255 / 0%),
     #dfbb39 12%,
-    rgba(246, 246, 237, 0)
+    rgb(246 246 237 / 0%)
   );
 }
+
 .my-star img {
   animation: twirl 0.00001s ease 0s infinite;
-  -webkit-animation: twirl 4s linear 0s infinite;
-  -moz-animation: twirl 4s linear 0s infinite;
-  -o-animation: twirl 4s linear 0s infinite;
+  animation: twirl 4s linear 0s infinite;
+  animation: twirl 4s linear 0s infinite;
+  animation: twirl 4s linear 0s infinite;
   width: 100%;
 }
 
@@ -113,6 +117,7 @@
   bottom: 20vh;
   left: -40%;
 }
+
 .x6 {
   animation: cloud 25s infinite linear;
   opacity: 1;

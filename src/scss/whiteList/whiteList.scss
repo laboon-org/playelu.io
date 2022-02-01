@@ -9,6 +9,7 @@ $font_bold: "cookieRun_bold";
     align-items: center;
     justify-content: space-around;
 }
+
 .white-list__succeed {
     height: 100%;
     display: flex;
@@ -16,11 +17,13 @@ $font_bold: "cookieRun_bold";
     align-items: center;
     justify-content: space-around;
 }
+
 .white-list__succeed__img {
     width: 300px;
     height: auto;
     margin-bottom: 50px;
 }
+
 .modal-succeed__body {
     flex-direction: column;
 }
@@ -34,6 +37,7 @@ $font_bold: "cookieRun_bold";
 .white-list__succeed__heading {
     font-size: 24px !important;
 }
+
 .white-list__succeed__sub {
     font-size: 22px;
     text-align: center;

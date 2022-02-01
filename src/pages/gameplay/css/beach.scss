@@ -4,6 +4,7 @@
         .ocean-img{
             filter: url('#turbulence');
         }
+
         /* Đè nền đằng sau */
         .ocean-img_back {
             position:absolute;
@@ -11,6 +12,7 @@
             left:0
         }
     }
+
     .ocean-effect {
         height: 0;
     }

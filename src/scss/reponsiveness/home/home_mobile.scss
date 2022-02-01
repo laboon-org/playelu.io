@@ -7,32 +7,40 @@
   .header {
     height: 50px;
   }
+
   .playelu-body {
     top: 0;
     height: 100vh;
   }
+
   .sound {
     top: 60px;
     width: 30px;
     height: 30px;
   }
+
   .home-icon__link {
     width: 50px;
   }
+
   .home-icon__img {
     height: 30px;
   }
+
   .launch-header {
     top: 62px !important;
     left: 62px !important;
   }
+
   .launch-header__content-coin {
-    margin: 5px 5px 0 0px !important;
+    margin: 5px 5px 0 0 !important;
   }
+
   .market {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
   }
+
   .market span {
     font-size: 13px !important;
     letter-spacing: initial !important;
@@ -41,28 +49,35 @@
   .discord {
     right: -96px;
     transform: scale(0.23) translateY(-200vh);
+
     .discord-img {
       display: none;
     }
+
     .mobile__discord-img {
       display: block;
     }
+
     bottom: -240px;
   }
+
   .modal-thankyou > .modal-content,
   .modal-comingsoon > .modal-content {
     width: 90vw;
     height: 55vw;
     border-radius: 18px;
+
     .modal-container {
       border-radius: 18px;
       flex-direction: column;
       border: 5px solid #fff;
       border: 2px solid #fff;
+
       img {
         width: 60%;
         margin: 0 auto;
       }
+
       h1 {
         color: #fff;
         text-transform: uppercase;
@@ -71,21 +86,27 @@
       }
     }
   }
+
   .playelu__link-ele {
     width: 35px;
   }
+
   .playelu-frame {
     height: 100vh;
   }
+
   .playelu-frame .playelu-all {
     margin-top: 120px;
   }
+
   .playelu-frame .playelu-all .playelu-img img {
     width: calc(100% - 196px);
   }
+
   .my-star::before {
     height: 50px;
   }
+
   .background-bottom {
     bottom: 0;
   }
@@ -93,14 +114,17 @@
   .playelu-tittle h1 {
     font-size: 22px;
   }
+
   .playelu-btn {
     width: calc(100% - 36px);
   }
+
   .subcribe__playelu-btn {
     width: 100px;
     height: 37.5px;
     font-size: 14px;
   }
+
   .subcribe__playelu-btn--text {
     font-size: 12px;
   }
@@ -118,6 +142,7 @@
     left: 10px;
     margin-top: 10px;
   }
+
   .name-email {
     font-size: 18px;
     bottom: 7%;
@@ -129,9 +154,10 @@
 
   .error-email {
     width: 80%;
-    margin: 0px auto;
+    margin: 0 auto;
     font-size: 10px;
   }
+
   .playelu__link {
     width: 100%;
   }
@@ -154,6 +180,7 @@
   .navbar-header {
     display: none;
   }
+
   .playelu-footer {
     position: fixed;
     display: flex;
@@ -164,17 +191,21 @@
     right: 0;
     height: 130px;
   }
+
   .footer {
     width: 100%;
   }
+
   .policy,
   .policy a {
     font-size: 12px;
-    margin: 15px 0 4px 0;
+    margin: 15px 0 4px;
   }
+
   .policy span {
     margin: 0 2px;
   }
+
   .version {
     font-size: 9px;
   }

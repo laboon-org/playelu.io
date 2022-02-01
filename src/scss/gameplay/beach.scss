@@ -1,23 +1,28 @@
 .beach img {
   width: 100%;
 }
+
 .ocean {
   position: relative;
   width: 100vw;
   margin-top: -1%;
+
   .boulder {
     position: absolute;
     top: -90%;
     left: 0;
     width: 40%;
+
     .boulder-element {
       position: relative;
     }
+
     .house {
       position: relative;
       width: 40%;
       margin-left: 3%;
       z-index: 0;
+
       .pinwheel {
         position: absolute;
         right: -12%;
@@ -27,6 +32,7 @@
         animation: pinwheel 3s linear infinite;
       }
     }
+
     .boulder-img {
       position: absolute;
       width: 100%;
@@ -35,14 +41,17 @@
     }
   }
 }
+
 .oceanIsland {
   position: absolute;
   top: -26%;
   right: 0;
   width: 20%;
+
   .oceanIsland-element {
     position: relative;
     width: 100%;
+
     .oceanIsland-img {
       width: 100%;
     }
@@ -53,12 +62,14 @@
 .land {
   position: relative;
   margin-top: -15%;
+
   .woodsign {
     position: absolute;
     top: -8%;
     left: 7.5%;
     width: 14%;
   }
+
   .woodsign-content {
     position: relative;
 
@@ -72,15 +83,17 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+
       img {
         width: 100%;
         cursor: pointer;
       }
     }
   }
+
   .nest_onBoarding {
     position: fixed;
-    background-color: rgba($color: #000000, $alpha: 0.2);
+    background-color: rgba($color: #000, $alpha: 20%);
     top: 0;
     left: 0;
     right: 0;
@@ -104,6 +117,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
       .nest_onBoarding-title {
         height: 10%;
         margin-bottom: 2%;
@@ -111,13 +125,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
         h4 {
-          color: #333333;
+          color: #333;
           font-size: 40px;
           text-transform: uppercase;
           -webkit-text-stroke: 1.8px black;
         }
       }
+
       .onBoarding-frame {
         width: 90%;
         height: 88%;
@@ -127,42 +143,50 @@
         justify-content: space-around;
         padding-top: 4%;
       }
+
       .onBoarding__versus-text {
         font-size: 46px;
       }
+
       .onBoarding-btn_close {
         margin: 0;
         max-width: 74px;
         width: 8%;
         margin: auto;
         cursor: pointer;
+
         img {
           cursor: pointer;
         }
       }
     }
   }
+
   .bone {
     width: 35%;
     position: absolute;
     bottom: 0;
     right: 0;
   }
+
   .fruitBasket-img {
     width: 22%;
     position: absolute;
     bottom: 0;
     left: 16%;
   }
+
   .core {
     position: absolute;
     top: 20%;
     width: 70%;
     margin: auto 15%;
+
     .gate {
       position: relative;
       width: 70%;
       margin: 0 15%;
+
       .effigy-img {
         position: absolute;
         width: 90%;
@@ -172,6 +196,7 @@
       }
     }
   }
+
   .lightColumn-img {
     position: absolute;
     width: 80%;
@@ -181,10 +206,12 @@
     display: flex;
     justify-content: center;
   }
+
   .ag-number_light {
     height: 1000px;
     width: 75%;
     position: relative;
+
     .smoke {
       position: absolute;
       z-index: 1;
@@ -193,9 +220,10 @@
       height: auto;
       animation: an-spiral 5s 0.01s linear infinite;
       will-change: opacity, top;
-      image-rendering: -webkit-optimize-contrast;
+      image-rendering: optimize-contrast;
     }
   }
+
   .light_column {
     position: absolute;
     z-index: 0;
@@ -204,16 +232,18 @@
     width: 100%;
     animation: an-luminescence 4s 0.01s linear infinite;
     will-change: opacity;
-    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
   }
 
   @keyframes an-luminescence {
     0% {
       opacity: 0;
     }
+
     50% {
       opacity: 1;
     }
+
     100% {
       opacity: 0;
     }
@@ -224,9 +254,11 @@
       opacity: 0;
       bottom: 0%;
     }
+
     50% {
       opacity: 1;
     }
+
     100% {
       bottom: 200px;
       opacity: 0;
@@ -241,14 +273,17 @@
     margin: auto 20%;
     display: flex;
     justify-content: space-between;
+
     .character-elu {
       position: relative;
       width: 20%;
+
       .character-eluLight,
       .eluNestBtn-eluWater {
         position: absolute;
         bottom: 0;
       }
+
       .eluNestBtn-eluFire {
         position: absolute;
         margin-top: -35%;
@@ -265,6 +300,7 @@
   0% {
     opacity: 0.5;
   }
+
   100% {
     opacity: 1;
   }
@@ -273,6 +309,7 @@
   0% {
     transform: rotateZ(0deg);
   }
+
   100% {
     transform: rotateZ(360deg);
   }

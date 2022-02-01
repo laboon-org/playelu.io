@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# Getting Started
+
 ## IDE (Integrated Development Editor)
 
 ```shell
@@ -40,6 +41,12 @@ Fixing Source Code Style
 
 ```shell
 yarn lint
+```
+
+### CSSS Lint
+
+```
+npx stylelint "**/*.scss" --fix
 ```
 
 ## Libs Management
