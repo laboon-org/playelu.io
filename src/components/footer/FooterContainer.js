@@ -1,6 +1,6 @@
 import React from 'react';
-import PlayeluLink from '../pages/home/playeluLink';
-import UrlRescusive from '../UrlRescusive';
+import PlayeluLink from '../../pages/home/playeluLink';
+import UrlRescusive from '../../UrlRescusive';
 import _ from 'lodash';
 
 export default function Footer(props) {

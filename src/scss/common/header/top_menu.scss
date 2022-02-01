@@ -6,7 +6,7 @@
   top: 0px;
   right: 0;
   height: 56px;
-  background: url("../../assets/images/common/cmn_bg_topnav.png");
+  background: url("../../../assets/images/common/cmn_bg_topnav.png");
   align-items: center;
   background-size: contain;
 }
@@ -115,7 +115,7 @@
     height: 30px;
   }
   .menu,
-  .home-btn__gameplay {
+  .btn-desktop-gameplay {
     display: none;
   }
 }

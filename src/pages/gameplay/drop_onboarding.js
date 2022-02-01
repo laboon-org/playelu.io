@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 import '../../scss/page_gameplay/onboarding.scss';
-import '../../scss/page_gameplay/gameplay_ipad.scss';
+import '../../scss/page_gameplay/gameplay_tablet.scss';
 import '../../scss/page_gameplay/gameplay_mobile.scss';
 
 import OnboardingComingsoon from '../../components/onBoarding/onboarding_comingsoon';

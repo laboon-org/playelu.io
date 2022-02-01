@@ -2,7 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import _ from 'lodash';
 
-import '../../scss/common/top_menu.scss';
+import '../../scss/common/header/top_menu.scss';
+
 export default function TopMenu(props) {
   const {urlApi} = props;
 
@@ -47,7 +48,7 @@ export default function TopMenu(props) {
           <h4>Download</h4>
         </Link>
       </div>
-      <div className="home-btn__gameplay">
+      <div className="home-btn__gameplay btn-desktop-gameplay">
         <img
           className="home-btn__gameplay--background"
           src={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.gameplayBtn}

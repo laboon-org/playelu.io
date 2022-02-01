@@ -1,4 +1,5 @@
 import React from 'react';
+import {useState} from 'react';
 import _ from 'lodash';
 
 import '../../scss/page_home/home_desktop.scss';
@@ -13,12 +14,12 @@ import HeaderContainer from '../../components/header/HeaderContainer';
 
 export default function homeContainer(props) {
   const {urlApi, setting} = props;
-
+  const sourceUrlSound1 = 'https://storage.googleapis.com/laboon-img-storage/play-elu/soundtrack-bg/soundtrack_bg1.mp3';
   return (
     <UrlRescusive data={props}>
       <div className="playelu-body">
         <div className="header">
-          <HeaderContainer urlApi={urlApi} />
+          <HeaderContainer urlApi={urlApi} sourceUrl={sourceUrlSound1} />
         </div>
         <div className="playelu">
           <Background />

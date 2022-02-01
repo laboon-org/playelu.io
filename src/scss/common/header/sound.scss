@@ -1,0 +1,25 @@
+.sound {
+  position: fixed;
+  top: 92px;
+  left: 10px;
+  height: 40px;
+  width: 40px;
+  animation: heartbeat 2.5s ease-in-out infinite both;
+  z-index: 99;
+  audio {
+    width: 100%;
+  }
+  .sound-on,
+  .sound-off {
+    cursor: pointer;
+    width: 100%;
+  }
+}
+
+// Medium devices (mobiles)
+@media (max-width: 767.98px) {
+  .sound {
+    width: 30px;
+    height: 30px;
+  }
+}

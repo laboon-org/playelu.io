@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import '../../scss/common/contract_address.scss';
+import '../../scss/common/header/contract_address.scss';
 
 export default function ContractAddress(props) {
   const {urlApi} = props;
@@ -15,7 +15,7 @@ export default function ContractAddress(props) {
           alt=""
         />
         <a className="market" href="">
-          <span>Smart Contract Address: Coming Soon</span>
+          <span>Contract Address: Coming Soon !!!</span>
         </a>
         <img
           className="contract-address__content-coin"

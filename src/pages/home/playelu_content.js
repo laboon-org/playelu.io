@@ -3,7 +3,7 @@ import _ from 'lodash';
 import PlayeluLink from './playeluLink';
 import Modal from 'react-bootstrap/Modal';
 import UrlRescusive from '../../UrlRescusive';
-import Footer from '../../components/Footer';
+import Footer from '../../components/footer/FooterContainer';
 
 export default function Content(props) {
   const {urlApi} = props;
