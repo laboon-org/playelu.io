@@ -2,8 +2,10 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import _ from 'lodash';
 
-export default function Header(props) {
+import '../../scss/common/top_menu.scss';
+export default function TopMenu(props) {
   const {urlApi} = props;
+
   return (
     <div className="navbar-header">
       <a className="home-icon__link" href="/">

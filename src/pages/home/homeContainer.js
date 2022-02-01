@@ -8,12 +8,8 @@ import '../../scss/page_home/home_mobile.scss';
 import UrlRescusive from '../../UrlRescusive';
 import Background from './backgrounds/background';
 import Content from './playelu_content';
-import Cursor from '../../components/cursor';
-import LaunchHeader from '../../components/LaunchHeader';
-import Sound from '../../components/sound';
 
-import Header from '../../components/Header';
-import NavbarMobile from '../../components/NavbarMobile';
+import HeaderContainer from '../../components/header/HeaderContainer';
 
 export default function homeContainer(props) {
   const {urlApi, setting} = props;
@@ -22,12 +18,8 @@ export default function homeContainer(props) {
     <UrlRescusive data={props}>
       <div className="playelu-body">
         <div className="header">
-          <Header />
-          <NavbarMobile />
+          <HeaderContainer urlApi={urlApi} />
         </div>
-        <Cursor />
-        <Sound />
-        <LaunchHeader />
         <div className="playelu">
           <Background />
           <Content />

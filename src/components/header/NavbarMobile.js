@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
 import _ from 'lodash';
 
-import '../scss/common/topbar.scss';
-import '../scss/common/modalNavbar.scss';
+import '../../scss/common/modalNavbar.scss';
 
 import {Link} from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 
 export default function NavbarMobile(props) {
   const {urlApi} = props;
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
+
   return (
     <div>
       <div className="navbar-btn" onClick={() => setShow(true)}>
@@ -24,7 +25,7 @@ export default function NavbarMobile(props) {
       >
         <div className="modal--frame">
           <div className="header__modal-navbar">
-            <a href="https://playelu.io">
+            <a href="/">
               <img
                 src={_.isEmpty(urlApi) ? '' : urlApi.common.homeIcon}
                 alt=""

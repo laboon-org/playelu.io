@@ -91,10 +91,12 @@
 
 // Medium devices (tablets)
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .header {
+    background-size: cover;
+  }
   .playelu__menu-element {
     margin: 0;
   }
-
   .playelu__menu-element h4 {
     font-size: 12px;
     letter-spacing: 1.4px;
@@ -104,12 +106,16 @@
 // Medium devices (mobiles)
 @media (max-width: 767.98px) {
   .header {
-    height: 50px;
+    background-size: cover;
   }
   .home-icon__link {
     width: 50px;
   }
   .home-icon__img {
     height: 30px;
+  }
+  .menu,
+  .home-btn__gameplay {
+    display: none;
   }
 }

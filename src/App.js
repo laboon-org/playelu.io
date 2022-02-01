@@ -13,12 +13,12 @@ import './scss/common/font.scss';
 
 import UrlRescusive from './UrlRescusive';
 import messageStorage from './module/messageStorage';
-import Loading from './components/Loading';
+import Loading from './components/header/Loading';
 
 // Pages
 const HomePage = React.lazy(() => import('./pages/home/homeContainer'));
 const GameplayPage = React.lazy(() => import('./pages/gameplay/gameplayContainer'));
-const WhiteListPage = React.lazy(() => import('./pages/whitelist/WhiteList'));
+const WhiteListPage = React.lazy(() => import('./pages/whitelist/whitelistContainer'));
 // const SalePage = React.lazy(() => import('./pages/sale_page/SalePage'));
 // const Claim = React.lazy(() => import('./pages/claim/ClaimPage'));
 
