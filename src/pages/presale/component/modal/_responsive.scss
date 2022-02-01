@@ -1,0 +1,221 @@
+//* Mobile
+@media screen and (max-width: 739.9px) {
+  // Modal Warning
+  .warning {
+    position: fixed;
+    top: 55px;
+    right: 5px;
+    width: calc(100% - 10px);
+    height: 45px;
+    border-radius: 7px;
+  }
+
+  .warning__frame {
+    width: 95%;
+  }
+
+  .warning__frame img {
+    width: 20px;
+  }
+
+  .warning__text {
+    font-size: 11px;
+  }
+
+  .warning__btn {
+    width: 80px;
+    height: 52px;
+  }
+  .warning__btn span {
+    font-size: 12px;
+  }
+  @keyframes warning {
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 5px;
+    }
+  }
+
+  /* CSS MODAL */
+  .modal-sale-frame {
+    width: 300px;
+    height: 239px;
+    border-radius: 10px;
+  }
+
+  .modal-sale__title {
+    font-size: 22px;
+    margin-top: 5%;
+    height: 17%;
+    -webkit-text-stroke: 1px black;
+  }
+
+  .modal-succeed__btn {
+    font-size: 16px;
+    padding: 4px 11px;
+    margin-top: 10px;
+    border-radius: 6px;
+  }
+
+  .modal-succeed,
+  .modal-fail {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    justify-content: center;
+  }
+
+  .modal-succeed__heading {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .modal-succeed__body__img {
+    width: 140px;
+    margin-bottom: 10px;
+  }
+  .modal-succeed__body__content {
+    font-size: 13px;
+    width: auto;
+    text-align: center;
+  }
+  .modal-fail__body__content {
+    font-size: 14px;
+    width: calc(100% - 30px);
+    text-align: center;
+  }
+
+  .white-list__succeed__img {
+    width: 160px;
+    height: auto;
+    margin-bottom: 25px;
+  }
+  .white-list__succeed__heading {
+    font-size: 16px !important;
+  }
+  .white-list__succeed__sub {
+    font-size: 14px;
+  }
+  .modal_succeed__link-gameplay {
+    font-size: 13px;
+  }
+
+  // Modal loader
+  .modal-sale__img {
+    width: 55%;
+  }
+
+  // Modal Notification
+  .modal-notification__frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  .modal-notification__heading {
+    font-size: 20px;
+  }
+  .modal-notification__content {
+    font-size: 13px;
+  }
+  .modal-notification__content span {
+    font-size: 13px;
+  }
+  .modal-notification__btn {
+    margin-top: 2px;
+  }
+}
+
+/* IPAD
+- min-width: 740px
+- max-width: 1024px
+*/
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+  // Modal inprocessing
+  .modal-sale-frame {
+    width: 600px;
+    height: 457px;
+    border-radius: 24px;
+  }
+  .modal-sale__title {
+    font-size: 35px;
+  }
+
+  // Modal succeed
+  .modal-succeed__btn {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  .modal-succeed,
+  .modal-fail {
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .modal-succeed__body__content {
+    font-size: 18px;
+  }
+  .modal-succeed__body__img {
+    width: 180px !important;
+    margin-bottom: 10px;
+  }
+
+  .white-list__succeed__img {
+    width: 180px;
+    margin-bottom: 30px;
+  }
+
+  .white-list__succeed__heading {
+    font-size: 20px !important;
+  }
+  .white-list__succeed__sub {
+    font-size: 18px;
+  }
+  .modal_succeed__link-gameplay {
+    font-size: 18px;
+  }
+
+  .modal-fail__body__content {
+    width: calc(100% - 180px);
+  }
+
+  // Modal Notification
+  .modal-notification__frame {
+    margin: 20px 0;
+  }
+
+  .modal-notification__heading {
+    font-size: 26px;
+  }
+  .modal-notification__content {
+    font-size: 16px;
+  }
+  .modal-notification__content span {
+    font-size: 16px;
+  }
+  .modal-notification__btn {
+    padding: 5px 12px;
+  }
+}
+
+/*
+IPAD
+- min-width: 1024px
+- max-width: 1365px
+*/
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  .modal-notification__heading {
+    font-size: 30px;
+  }
+  .modal-notification__content {
+    font-size: 20px;
+  }
+  .modal-notification__content span {
+    font-size: 20px;
+  }
+}

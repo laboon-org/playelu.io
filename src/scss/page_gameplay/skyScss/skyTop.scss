@@ -67,19 +67,6 @@
       width: 100%;
     }
   }
-  // .gameplay-cloud {
-  //   position: absolute;
-  //   top: 10%;
-  //   z-index: 0;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   .gameplay-cloud1-img {
-  //     width: 20%;
-  //   }
-  //   .gameplay-cloud2-img {
-  //     width: 20%;
-  //   }
-  // }
 }
 
 .gameplay__selection-img {
@@ -100,30 +87,17 @@
     bottom: 0;
     animation: hideShadow 3s 0.01s ease infinite;
   }
-  // .shadow-stone-1 {
-  //   animation: hideShadow 3s ease infinite;
-  // }
-  // .shadow-stone-2 {
-  //   animation: hideShadow 4s ease infinite;
-  // }
-  // .shadow-stone-3 {
-  //   animation: hideShadow 3.5s ease infinite;
-  // }
-  // .shadow-stone-4 {
-  //   animation: hideShadow 4.5s ease infinite;
-  // }
 }
 
 .gameplay__selection-img:hover {
   transform: scale(1);
 }
-// Start scss Popup Coming Soon
+/** Start scss Popup Coming Soon */
 .modal-comingsoon > .modal-content {
   max-width: 940px;
   max-height: 658px;
   width: 60vw;
   height: 42vw;
-  // border-radius: 37px;
   .popup-frame {
     position: relative;
     width: 100%;
@@ -181,8 +155,10 @@
   }
 }
 
-// End scss Popup Coming Soon
-// Keyframe
+/**
+  End scss Popup Coming Soon
+  Keyframe
+*/
 @keyframes hideShadow {
   0% {
     opacity: 0;

@@ -1,11 +1,10 @@
-
 import UrlRescusive from './UrlRescusive';
 import messageStorage from './module/messageStorage';
 import usePromise from 'react-promise-suspense';
-import './App.css';
-import './scss/home/playeluHome.scss';
-import './scss/sale_page/style.scss';
-import './scss/font.scss';
+
+// import './scss/sale_page/style.scss';
+import './scss/common/font.scss';
+
 import React from 'react';
 import {
   Routes,
@@ -16,11 +15,14 @@ import Loading from './components/Loading';
 import {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 
-const PlayeluBaner = React.lazy(() => import('./pages/banner/playeluBaner'));
-const Gameplay = React.lazy(() => import('./pages/gameplay/gameplay'));
-const SalePage = React.lazy(() => import('./pages/sale_page/SalePage'));
-const WhiteList = React.lazy(() => import('./pages/white_list/WhiteList'));
-const Claim = React.lazy(() => import('./pages/claim/ClaimPage'));
+// Pages
+const HomePage = React.lazy(() => import('./pages/home/homeContainer'));
+// const Gameplay = React.lazy(() => import('./pages/gameplay/gameplay'));
+// const WhiteList = React.lazy(() => import('./pages/white_list/WhiteList'));
+// const SalePage = React.lazy(() => import('./pages/sale_page/SalePage'));
+// const Claim = React.lazy(() => import('./pages/claim/ClaimPage'));
+
+// Api
 const Queryimage = 'https://api-eu-central-1.graphcms.com/v2/ckxidcmyc26eh01xpc7na45t8/master';
 const Query = `
 {
@@ -39,7 +41,7 @@ const querySetting = `
   }
 `;
 
-function App(props) {
+function App(_props) {
   const [imgList, setImgList] = useState({});
   const [setting, setSetting] = useState([]);
   const isFirst = useRef(true);
@@ -115,12 +117,12 @@ function App(props) {
   }, []);
 
   const LoadData = () => {
-    const load = usePromise((a) =>
+    const load = usePromise((_a) =>
       new Promise((resolve) => {
         const data = axios.post('https://laboon.as.r.appspot.com/config')
             .then((value) => {
               return value.data.content;
-            }).catch((err) => {
+            }).catch((_err) => {
               return {};
             //* Not to be error
             });
@@ -131,6 +133,7 @@ function App(props) {
     return (<div></div>);
   };
 
+  // CMS: Data (Remote Config)
   const UrlRescusivePanel = ({Comp}) => {
     return (
       <UrlRescusive data={
@@ -150,14 +153,22 @@ function App(props) {
 
       <Router>
         <Routes>
-          <Route path='/' element={<UrlRescusivePanel Comp={PlayeluBaner} />}>  </Route>
-          <Route path='/gameplay' element={<UrlRescusivePanel Comp={Gameplay} />}> </Route>
-          <Route path='/presales' element={<UrlRescusivePanel Comp={SalePage} />}> </Route>
-          <Route path='/whitelist' element={<UrlRescusivePanel Comp={WhiteList} />}> </Route>
-          <Route path='/claim' element={<UrlRescusivePanel Comp={Claim} />}> </Route>
+          <Route path="/" element={<UrlRescusivePanel Comp={HomePage} />} />
+          {/* <Route
+            path="/gameplay"
+            element={<UrlRescusivePanel Comp={Gameplay} />}
+          /> */}
+          {/* <Route
+            path="/whitelist"
+            element={<UrlRescusivePanel Comp={WhiteList} />}
+          /> */}
+          {/* <Route
+            path="/presales"
+            element={<UrlRescusivePanel Comp={SalePage} />}
+          /> */}
+          {/* <Route path="/claim" element={<UrlRescusivePanel Comp={Claim} />} /> */}
         </Routes>
       </Router>
-
     </React.Suspense>
   );
 }

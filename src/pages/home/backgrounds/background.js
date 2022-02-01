@@ -6,9 +6,6 @@ import BackgroundCloud from './backgroundCloud';
 import UrlRescusive from '../../../UrlRescusive';
 import _ from 'lodash';
 
-
-import '../../../scss/home/backgroundHome.scss';
-
 export default function Background(props) {
   const {urlApi} = props;
   return (

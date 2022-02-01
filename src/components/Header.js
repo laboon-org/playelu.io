@@ -1,8 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import _ from 'lodash';
-import '../scss/reponsiveness/home/home_Ipad.scss';
-import '../scss/reponsiveness/home/home_mobile.scss';
+
+import '../scss/page_home/home_tablet.scss';
+import '../scss/page_home/home_mobile.scss';
 
 export default function Header(props) {
   const {urlApi} = props;

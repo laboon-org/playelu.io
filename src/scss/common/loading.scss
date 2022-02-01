@@ -1,8 +1,6 @@
 #loading {
-  position: fixed;
   top: 0;
   left: 0;
-  display: block;
   z-index: 100;
   width: 100vw;
   height: 100vh;
@@ -53,7 +51,6 @@
   border: 4px solid transparent;
   border-top-color: #fbba1a;
   border-bottom-color: #fbba1a;
-  justify-content: center;
   margin: auto;
   animation: turn 2s linear infinite;
   display: flex;

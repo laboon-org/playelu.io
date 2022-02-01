@@ -1,6 +1,7 @@
 import React from 'react';
-import '../scss/component/launch_header.scss';
 import _ from 'lodash';
+
+import '../scss/common/launch_header.scss';
 
 export default function LaunchHeader(props) {
   const {urlApi} = props;

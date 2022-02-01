@@ -47,10 +47,10 @@ li {
 
 .playelu-body {
   position: absolute;
-  top: 60px;
+  top: 56px;
   left: 0;
   width: 100vw;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 56px);
   overflow: hidden;
 }
 
@@ -98,17 +98,16 @@ li {
   left: 0px;
   top: 0px;
   right: 0;
-  height: 60px;
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/header/header_background.png")
-    no-repeat center / cover;
+  height: 56px;
+  background: url("../../assets/images/common/cmn_bg_topnav.png");
   align-items: center;
+  background-size: contain;
 }
 .navbar-header {
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 56px;
   margin-left: 60px;
-  width: calc(100vw - 60px);
   justify-content: space-between;
 }
 .menu {
@@ -482,4 +481,131 @@ li {
     -moz-transform: rotate(360deg);
     -o-transform: rotate(360deg);
   }
+}
+
+.playelu {
+  .playelu-background {
+    background: radial-gradient(
+      circle,
+      rgb(81 179 229 / 100%) 0%,
+      rgb(102 175 232 / 100%) 32%,
+      rgb(66 102 176 / 100%) 73%
+    );
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    .background-cloud {
+      overflow: hidden;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.my_star-all {
+  position: relative;
+  width: 100%;
+  transform: rotate(140deg);
+  height: 20px;
+}
+
+.my-star {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.my-star::before {
+  content: "";
+  position: absolute;
+  left: 40%;
+  width: 20%;
+  border-radius: 80%;
+  height: 120px;
+  background: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 0%),
+    #dfbb39 12%,
+    rgb(246 246 237 / 0%)
+  );
+}
+
+.my-star img {
+  animation: twirl 0.00000s ease 0s infinite;
+  animation: twirl 4s linear 0s infinite;
+  animation: twirl 4s linear 0s infinite;
+  animation: twirl 4s linear 0s infinite;
+  width: 100%;
+}
+
+.cloud {
+  width: 15%;
+  animation: cloud 25s infinite linear;
+  position: relative;
+  display: flex;
+}
+
+.cloud img {
+  width: 100%;
+}
+
+.x1 {
+  animation: cloud 18s infinite linear;
+  opacity: 1;
+  left: -15%;
+}
+
+.x2 {
+  animation: cloud 21s infinite linear;
+  opacity: 0.9;
+  transform: scale(0.7);
+  top: 0;
+  left: -20%;
+}
+
+.x3 {
+  animation: cloud 26s infinite linear;
+  top: 25%;
+  transform: scale(0.6);
+  left: -15%;
+}
+
+.x4 {
+  animation: cloud 22s infinite linear;
+  top: 30%;
+  left: -25%;
+  transform: scale(0.9);
+}
+
+.x5 {
+  animation: cloud 21s infinite linear;
+  opacity: 0.6;
+  transform: scale(1);
+  bottom: 20vh;
+  left: -40%;
+}
+
+.x6 {
+  animation: cloud 25s infinite linear;
+  opacity: 1;
+  top: 40%;
+  left: -40%;
 }
