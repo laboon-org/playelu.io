@@ -1,6 +1,8 @@
 import React from 'react';
-import '../../../sale_page/component/modal/_modal.scss';
-import '../../../sale_page/component/modal/_responsive.scss';
+
+import '../../../presale/component/modal/_modal.scss';
+import '../../../presale/component/modal/_responsive.scss';
+
 export default function ModalSucceed(props) {
   const {
     type,

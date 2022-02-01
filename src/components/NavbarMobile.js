@@ -1,11 +1,13 @@
-import Modal from 'react-bootstrap/Modal';
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
 import _ from 'lodash';
 
-import '../../scss/common/modalNavbar.scss';
+import '../scss/common/topbar.scss';
+import '../scss/common/modalNavbar.scss';
 
-export default function Navbar(props) {
+import {Link} from 'react-router-dom';
+import Modal from 'react-bootstrap/Modal';
+
+export default function NavbarMobile(props) {
   const {urlApi} = props;
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);

@@ -1,6 +1,7 @@
 import React from 'react';
-import '../../../scss/gameplay/skyScss/cloud.scss';
 import _ from 'lodash';
+
+import '../../../scss/page_gameplay/skyScss/cloud.scss';
 
 export default function Cloud(props) {
   const {urlApi} = props;

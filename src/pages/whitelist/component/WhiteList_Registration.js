@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import moment from 'moment';
+import axios from 'axios';
+
+import '../../../scss/page_presale/mobile.scss';
+
 import ModalSucceedWhiteList from './modal/ModalSucceed_whiteList';
 import wallet from '../../../module/wallet';
-import axios from 'axios';
 import messageStorage from '../../../module/messageStorage';
-import '../../../scss/reponsiveness/sale_page/mobile.scss';
 
 //* Get Config
 const getStatePage = () => {

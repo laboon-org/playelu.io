@@ -1,14 +1,5 @@
 // Medium devices (tablets)
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .playelu__menu-element {
-    margin: 0;
-  }
-
-  .playelu__menu-element h4 {
-    font-size: 12px;
-    letter-spacing: 1.4px;
-  }
-
   .discord {
     right: -3%;
     transform: scale(0.7) translateY(25%);

@@ -1,12 +1,12 @@
-import React, {useEffect, useRef} from 'react';
-import axios from 'axios';
-import messageStorage from '../../module/messageStorage';
-import '../../scss/sale_page/style.scss';
-import '../../scss/reponsiveness/sale_page/ipad.scss';
-import '../../scss/reponsiveness/sale_page/mobile.scss';
-import '../../scss/whiteList/whiteList.scss';
-import Header from '../sale_page/component/Header';
-import Logo from '../sale_page/component/logo';
+import React from 'react';
+
+import '../../scss/page_presale/style.scss';
+import '../../scss/page_presale/ipad.scss';
+import '../../scss/page_presale/mobile.scss';
+import '../../scss/page_whitelist/whiteList.scss';
+
+import Header from '../presale/component/Header';
+import Logo from '..//presale/component/logo';
 import WhiteListBody from './component/WhiteListBody';
 
 export default function WhiteList() {

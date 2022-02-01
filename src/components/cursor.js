@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import MouseParticles from 'react-mouse-particles';
 
-
 export default function Cursor() {
   const [showCursor, setShowCursor] = useState(false);
   setTimeout(() => {

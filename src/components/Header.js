@@ -2,17 +2,18 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import _ from 'lodash';
 
-import '../scss/page_home/home_tablet.scss';
-import '../scss/page_home/home_mobile.scss';
-
 export default function Header(props) {
   const {urlApi} = props;
   return (
     <div className="navbar-header">
+      <a className="home-icon__link" href="/">
+        <img
+          className="home-icon__img"
+          src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/Home-icon.webp"
+          alt=""
+        />
+      </a>
       <div className="menu">
-        <Link to="/" className="playelu__menu-element">
-          <h4>Home</h4>
-        </Link>
         <a
           className="playelu__menu-element"
           href={_.isEmpty(urlApi) ? '' : urlApi.docs.roadmap}

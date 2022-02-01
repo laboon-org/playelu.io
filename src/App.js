@@ -1,24 +1,24 @@
-import UrlRescusive from './UrlRescusive';
-import messageStorage from './module/messageStorage';
-import usePromise from 'react-promise-suspense';
-
-// import './scss/sale_page/style.scss';
-import './scss/common/font.scss';
-
 import React from 'react';
 import {
   Routes,
   BrowserRouter as Router,
   Route,
 } from 'react-router-dom';
-import Loading from './components/Loading';
+import usePromise from 'react-promise-suspense';
 import {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 
+// import './scss/sale_page/style.scss';
+import './scss/common/font.scss';
+
+import UrlRescusive from './UrlRescusive';
+import messageStorage from './module/messageStorage';
+import Loading from './components/Loading';
+
 // Pages
 const HomePage = React.lazy(() => import('./pages/home/homeContainer'));
-// const Gameplay = React.lazy(() => import('./pages/gameplay/gameplay'));
-// const WhiteList = React.lazy(() => import('./pages/white_list/WhiteList'));
+const GameplayPage = React.lazy(() => import('./pages/gameplay/gameplayContainer'));
+const WhiteListPage = React.lazy(() => import('./pages/whitelist/WhiteList'));
 // const SalePage = React.lazy(() => import('./pages/sale_page/SalePage'));
 // const Claim = React.lazy(() => import('./pages/claim/ClaimPage'));
 
@@ -150,18 +150,17 @@ function App(_props) {
   return (
     <React.Suspense fallback={<Loading />}>
       <LoadData></LoadData>
-
       <Router>
         <Routes>
           <Route path="/" element={<UrlRescusivePanel Comp={HomePage} />} />
-          {/* <Route
+          <Route
             path="/gameplay"
-            element={<UrlRescusivePanel Comp={Gameplay} />}
-          /> */}
-          {/* <Route
+            element={<UrlRescusivePanel Comp={GameplayPage} />}
+          />
+          <Route
             path="/whitelist"
-            element={<UrlRescusivePanel Comp={WhiteList} />}
-          /> */}
+            element={<UrlRescusivePanel Comp={WhiteListPage} />}
+          />
           {/* <Route
             path="/presales"
             element={<UrlRescusivePanel Comp={SalePage} />}

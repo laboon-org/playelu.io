@@ -1,8 +1,10 @@
 import React, {useCallback, useState} from 'react';
-import './css/beach.scss';
-import '../../scss/gameplay/beach.scss';
-import NestOnBoarding from './nest_onboarding/nest_onBoarding';
 import _ from 'lodash';
+
+import './css/beach.scss';
+import '../../scss/page_gameplay/beach.scss';
+
+import NestOnBoarding from './nest_onboarding/nest_onBoarding';
 import UrlRescusive from '../../UrlRescusive';
 
 

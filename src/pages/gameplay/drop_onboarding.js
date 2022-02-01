@@ -1,12 +1,13 @@
 import React from 'react';
-import '../../scss/gameplay/onboarding.scss';
-import '../../scss/reponsiveness/gameplay/gameplay_ipad.scss';
-import '../../scss/reponsiveness/gameplay/gameplay_mobile.scss';
+import _ from 'lodash';
+
+import '../../scss/page_gameplay/onboarding.scss';
+import '../../scss/page_gameplay/gameplay_ipad.scss';
+import '../../scss/page_gameplay/gameplay_mobile.scss';
+
 import OnboardingComingsoon from '../../components/onBoarding/onboarding_comingsoon';
 import OnBoardingTip from '../../components/onBoarding/OnBoarding_tip';
-import _ from 'lodash';
 import UrlRescusive from '../../UrlRescusive';
-
 
 export default function Drop_onboarding(props) {
   const {onPressHideEluDrop, urlApi} = props;

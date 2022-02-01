@@ -1,9 +1,5 @@
 // Medium devices (mobiles)
 @media (max-width: 767.98px) {
-  .header {
-    height: 50px;
-  }
-
   .playelu-body {
     top: 0;
     height: 100vh;
@@ -12,14 +8,6 @@
   .sound {
     top: 60px;
     width: 30px;
-    height: 30px;
-  }
-
-  .home-icon__link {
-    width: 50px;
-  }
-
-  .home-icon__img {
     height: 30px;
   }
 

@@ -1,6 +1,7 @@
 import React from 'react';
-import '../../../scss/gameplay/skyScss/skyBottom.scss';
 import _ from 'lodash';
+
+import '../../../scss/page_gameplay/skyScss/skyBottom.scss';
 
 export default function SkyBottom(props) {
   const {urlApi} = props;
