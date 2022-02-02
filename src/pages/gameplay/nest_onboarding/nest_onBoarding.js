@@ -1,5 +1,5 @@
 import React from 'react';
-import OnboardingComingsoon from '../../../components/onBoarding/onboarding_comingsoon';
+import OnboardingComingsoon from '../components/onboarding_comingsoon';
 import UrlRescusive from '../../../UrlRescusive';
 import OnBoardingElementRight from './OnBoarding_element-right';
 import OnBoardingElementLeft from './onBoarding__element-left';
@@ -21,11 +21,6 @@ export default function NestOnBoarding(props) {
           <OnboardingComingsoon title='racing' classNames={{
             parent: 'onBoarding__versus-content',
           }} />
-          {/* <div className='onBoarding-btn_close nest-btn_close ' onClick={() => {
-                        closeNest()
-                    }}>
-                        <img src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.nestOnboardingClose} alt='' />
-                    </div> */}
         </div>
       </div>
     </UrlRescusive>

@@ -9,7 +9,7 @@ import {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 
 // import './scss/sale_page/style.scss';
-import './scss/common/font.scss';
+// import './scss/common/font.scss';
 
 import UrlRescusive from './UrlRescusive';
 import messageStorage from './module/messageStorage';

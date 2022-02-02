@@ -1,6 +1,7 @@
 import React from 'react';
-import {useState} from 'react';
 import _ from 'lodash';
+
+import '../../scss/common/font.scss';
 
 import '../../scss/page_gameplay/gameplay_desktop.scss';
 import '../../scss/page_gameplay/gameplay_tablet.scss';
@@ -9,7 +10,7 @@ import '../../scss/page_gameplay/gameplay_mobile.scss';
 import HeaderContainer from '../../components/header/HeaderContainer';
 
 import SkyCenter from './sky/skyCenter';
-import Beach from './Beach';
+import Beach from './GameNestFeatures';
 import SkyBottom from './sky/skyBottom';
 import SkyTop from './sky/skyTop';
 import Cloud from './sky/cloud';

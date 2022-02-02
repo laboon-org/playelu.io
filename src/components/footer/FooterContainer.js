@@ -1,7 +1,8 @@
 import React from 'react';
-import PlayeluLink from '../../pages/home/playeluLink';
-import UrlRescusive from '../../UrlRescusive';
 import _ from 'lodash';
+
+import SocialLink from './SocialLink';
+import UrlRescusive from '../../UrlRescusive';
 
 export default function Footer(props) {
   const {urlApi} = props;
@@ -9,7 +10,7 @@ export default function Footer(props) {
   return (
     <UrlRescusive data={props}>
       <div className="footer">
-        <PlayeluLink></PlayeluLink>
+        <SocialLink urlApi={urlApi} />
         <div className="policy">
           <a
             href={_.isEmpty(urlApi) ? '' : urlApi.docs.privacyPolicy}

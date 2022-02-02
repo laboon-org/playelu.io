@@ -1,8 +1,8 @@
 import React, {useCallback, useState} from 'react';
-import Drop_onboarding from '../drop_onboarding';
 import _ from 'lodash';
-import UrlRescusive from '../../../UrlRescusive';
 
+import GameDropFeatures from '../GameDropFeatures';
+import UrlRescusive from '../../../UrlRescusive';
 
 window.addEventListener('scroll', zoom);
 function zoom() {
@@ -17,24 +17,33 @@ function zoom() {
   }
 }
 
-
 export default function SkyCenter(props) {
   const {urlApi, setting} = props;
   const listIslandUrl = [
     {
-      url1: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.islandBlank1,
+      url1: _.isEmpty(urlApi) ?
+        '' :
+        urlApi.imageGamePlay.skyCenter.islandBlank1,
       url2: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.fireIsland,
-      url3: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.fireIslandImg,
+      url3: _.isEmpty(urlApi) ?
+        '' :
+        urlApi.imageGamePlay.skyCenter.fireIslandImg,
     },
     {
-      url1: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.islandBlank2,
+      url1: _.isEmpty(urlApi) ?
+        '' :
+        urlApi.imageGamePlay.skyCenter.islandBlank2,
       url2: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.fountain,
       url3: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.fountainImg,
     },
     {
-      url1: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.islandBlank3,
+      url1: _.isEmpty(urlApi) ?
+        '' :
+        urlApi.imageGamePlay.skyCenter.islandBlank3,
       url2: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.islandWater,
-      url3: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.islandWaterImg,
+      url3: _.isEmpty(urlApi) ?
+        '' :
+        urlApi.imageGamePlay.skyCenter.islandWaterImg,
     },
   ];
   const [dropShow, setDropShow] = useState(false);
@@ -50,13 +59,13 @@ export default function SkyCenter(props) {
     const mrBottom = isFinalItem ? 'mr-bottom' : '';
     return (
       <div className={`island${key + 1}`} key={key}>
-        <img
-          className={`isLand-img ${mrBottom}`}
-          src={value.url1}
-          alt="" />
+        <img className={`isLand-img ${mrBottom}`} src={value.url1} alt="" />
         <video
           className={`isLand-img ${finalClass}`}
-          loop autoPlay playsInline preload='metadata'
+          loop
+          autoPlay
+          playsInline
+          preload="metadata"
           poster={value.url3}
         >
           <source src={value.url2} type="video/mp4" />
@@ -67,30 +76,28 @@ export default function SkyCenter(props) {
   return (
     <UrlRescusive data={props}>
       <div>
-        <a href='#onboarding_drop-center'>
-          <div className='sky-center' id='drop'>
-            <div className='island zoom'>
-              {islands}
-            </div>
+        <a href="#onboarding_drop-center">
+          <div className="sky-center" id="drop">
+            <div className="island zoom">{islands}</div>
           </div>
           <div style={{marginTop: 20, width: '100vw'}}>
-            {
-                            setting.page_gameplay_section_drop_game_feature_enabled === true ?
-                                <div>{
-                                    !dropShow ? <div className="elu-btn drop-btn zoom" onClick={() => {
-                                      onPressShowEluDrop();
-                                    }}>
-                                      <h2 id='drop_text'>DROP</h2>
-                                      <div className='btn-shadow'><p>GAME FEATURES</p></div>
-                                    </div> :
-                                        <Drop_onboarding onPressHideEluDrop={onPressHideEluDrop} />
-                                }</div> :
-                                <div className="elu-btn drop-btn zoom" >
-                                  <h2 id='drop_text'>DROP</h2>
-                                  <div className='btn-shadow'><p>GAME FEATURES</p></div>
-                                </div>
-            }
-
+            <div>
+              {!dropShow ? (
+                <div
+                  className="elu-btn drop-btn"
+                  onClick={() => {
+                    onPressShowEluDrop();
+                  }}
+                >
+                  <h2 id="drop_text">Game-1: Drop</h2>
+                  <div className="btn-shadow">
+                    <p>FEATURES</p>
+                  </div>
+                </div>
+              ) : (
+                <GameDropFeatures onPressHideEluDrop={onPressHideEluDrop} />
+              )}
+            </div>
           </div>
         </a>
       </div>

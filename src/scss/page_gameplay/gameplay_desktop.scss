@@ -19,6 +19,7 @@ html {
   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/skyBackground.webp")
     no-repeat center / cover;
   position: relative;
+  margin-top: 56px;
 }
 .sky-center {
   max-width: 1280px;
@@ -35,66 +36,49 @@ html {
 
 // Start scss button Drop and Nest
 .elu-btn {
-  max-width: 230px;
-  min-width: 80px;
-  min-height: 24px;
-  max-height: 69px;
-  width: 15vw;
-  height: 4.5vw;
-  border-radius: 12px;
+  width: 157px;
+  height: 68px;
   font-weight: bolder;
-  color: #fff;
-  margin: auto;
+  margin: 0 auto;
   cursor: pointer;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  transform: scale(0.9);
+  transform: scale(1);
   text-align: center;
   align-items: center;
   h2 {
-    -webkit-text-stroke: 1.2px black;
-    margin: 0;
-    font-size: 23px;
-    height: 50%;
+    font-size: 18px;
     cursor: pointer;
-    // margin-top: 2px;
-    padding-top: 2%;
-    letter-spacing: 1px;
+    padding-top: 12px;
+    text-transform: uppercase;
   }
 }
 .btn-shadow {
-  width: 96%;
-  height: 48%;
   margin: auto;
-  margin-bottom: 2%;
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  background-color: rgba($color: #000000, $alpha: 0.2);
-  cursor: pointer;
-  display: flex;
   align-items: center;
   p {
     display: inline-block;
     width: 100%;
     text-align: center;
     color: #fff;
-    -webkit-text-stroke: 0.6px black;
-    font-size: 18px;
+    font-size: 13px;
     margin: 0;
-    cursor: pointer;
+    padding-bottom: 12px;
+    text-transform: uppercase;
   }
 }
 .elu-btn:hover {
-  transform: scale(0.5);
+  transform: scale(1.05);
 }
 // End scss button Drop and Nest
 
 // Start scss button Drop
 .drop-btn {
-  background-color: #1d90cd;
+  background-image: url("../../assets//images/gp_btn_drop.png");
+  background-size: cover;
+  cursor: pointer;
+  color: #153446;
 }
 // End scss button Drop
 // Start scss button Nest
@@ -108,7 +92,10 @@ html {
   bottom: 160%;
 }
 .nest-btn {
-  background-color: #fec02a;
+  background-image: url("../../assets//images/gp_btn_nest.png");
+  background-size: cover;
+  cursor: pointer;
+  color: #403100;
 }
 // End scss button Nest
 .island1,

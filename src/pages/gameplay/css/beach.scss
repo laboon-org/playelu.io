@@ -1,19 +1,19 @@
 .ocean {
-    .ocean-container {
-        /* Nhận hiệu ứng filter */
-        .ocean-img{
-            filter: url('#turbulence');
-        }
-
-        /* Đè nền đằng sau */
-        .ocean-img_back {
-            position:absolute;
-            top:0;
-            left:0
-        }
+  .ocean-container {
+    /* Nhận hiệu ứng filter */
+    .ocean-img {
+      filter: url("#turbulence");
     }
 
-    .ocean-effect {
-        height: 0;
+    /* Đè nền đằng sau */
+    .ocean-img_back {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
+  }
+
+  .ocean-effect {
+    height: 0;
+  }
 }

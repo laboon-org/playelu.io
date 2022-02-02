@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-function PlayeluLink(props) {
+function SocialLink(props) {
   const {urlApi} = props;
   const elementLinks = [
     {
@@ -12,17 +12,17 @@ function PlayeluLink(props) {
     {
       id: 2,
       img: _.isEmpty(urlApi) ? '' : urlApi.image.social.facebook,
-      href: 'https://discord.io/EluVerse',
+      href: 'https://www.facebook.com/EluVerse/',
     },
     {
       id: 3,
       img: _.isEmpty(urlApi) ? '' : urlApi.image.social.discord,
-      href: 'https://www.instagram.com/eluverse/ ',
+      href: 'https://discord.io/EluVerse',
     },
     {
       id: 4,
       img: _.isEmpty(urlApi) ? '' : urlApi.image.social.insta,
-      href: 'https://www.facebook.com/EluVerse/',
+      href: 'https://www.instagram.com/eluverse/',
     },
     {
       id: 5,
@@ -36,16 +36,15 @@ function PlayeluLink(props) {
     },
   ];
   return (
-    <div className='playelu__link'>
-      {
-        elementLinks.map((elementLink) => (
-          <div key={elementLink.id} className='playelu__link-ele'>
-            <a href={elementLink.href}>
-              <img src={elementLink.img} alt="" />
-            </a>
-          </div>
-        ))}
+    <div className="playelu__link">
+      {elementLinks.map((elementLink) => (
+        <div key={elementLink.id} className="playelu__link-ele">
+          <a href={elementLink.href}>
+            <img src={elementLink.img} alt="" />
+          </a>
+        </div>
+      ))}
     </div>
   );
 }
-export default PlayeluLink;
+export default SocialLink;

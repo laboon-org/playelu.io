@@ -1,6 +1,7 @@
 import React from 'react';
-import {useState} from 'react';
 import _ from 'lodash';
+
+import '../../scss/common/font.scss';
 
 import '../../scss/page_home/home_desktop.scss';
 import '../../scss/page_home/home_tablet.scss';
@@ -29,12 +30,12 @@ export default function homeContainer(props) {
           <a href="https://discord.io/EluVerse">
             <img
               className="discord-img"
-              src={_.isEmpty(urlApi) ? "" : urlApi.image.discord}
+              src={_.isEmpty(urlApi) ? '' : urlApi.image.discord}
               alt=""
             />
             <img
               className="mobile__discord-img"
-              src={_.isEmpty(urlApi) ? "" : urlApi.image.mobileDiscord}
+              src={_.isEmpty(urlApi) ? '' : urlApi.image.mobileDiscord}
               alt=""
             />
           </a>
