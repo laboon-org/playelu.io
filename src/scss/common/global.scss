@@ -2,9 +2,6 @@
 @import './variables.scss';
 
 @import './loading.scss';
-
-/** */
-body {
-  font-family: CookieRun_Regular;
-}
-
+@import './modal.scss';
+@import './animation.scss';
+@import './override.scss';

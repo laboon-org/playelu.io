@@ -1,0 +1,61 @@
+// Medium devices (mobiles)
+@media (max-width: 767.98px) {
+  .market {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .market span {
+    font-size: 13px !important;
+    letter-spacing: initial !important;
+  }
+
+  .playelu__link-ele {
+    width: 35px;
+  }
+
+  .playelu__link {
+    width: 100%;
+  }
+
+  .playelu__link-ele img {
+    width: 90%;
+  }
+
+  .discord {
+    right: -96px;
+    transform: scale(0.23) translateY(-200vh);
+
+    .discord-img {
+      display: none;
+    }
+    .mobile__discord-img {
+      display: block;
+    }
+    bottom: -240px;
+  }
+  .playelu-footer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+  }
+  .footer {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .policy,
+  .policy a {
+    font-size: 12px;
+    margin: 15px 0 4px;
+  }
+  .policy span {
+    margin: 0 2px;
+  }
+  .version {
+    font-size: 9px;
+  }
+}

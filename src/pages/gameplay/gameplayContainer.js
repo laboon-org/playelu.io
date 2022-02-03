@@ -8,6 +8,7 @@ import '../../scss/page_gameplay/gameplay_mobile.scss';
 import Assets from './../../constant/assets';
 
 import HeaderContainer from '../../components/header/HeaderContainer';
+import FooterContainer from '../../components/footer/FooterContainer';
 
 import SkyCenter from './sky/skyCenter';
 import SectionNest from './components/SectionNest';
@@ -47,6 +48,9 @@ export default function gameplayContainer(props) {
           <SkyBottom />
         </div>
         <SectionNest />
+      </div>
+      <div className="playelu-footer">
+        <FooterContainer />
       </div>
     </UrlRecursive>
   );

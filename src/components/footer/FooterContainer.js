@@ -1,14 +1,18 @@
 import React from 'react';
 import _ from 'lodash';
 
-import SocialLink from './SocialLink';
-import UrlRescusive from '../UrlRecursive';
+import '../../scss/common/footer/footer.scss';
+import '../../scss/common/footer/footer_tablet.scss';
+import '../../scss/common/footer/footer_mobile.scss';
 
-export default function Footer(props) {
+import SocialLink from './SocialLink';
+import UrlRecursive from '../UrlRecursive';
+
+export default function FooterContainer(props) {
   const {urlApi} = props;
 
   return (
-    <UrlRescusive data={props}>
+    <UrlRecursive data={props}>
       <div className="footer">
         <SocialLink urlApi={urlApi} />
         <div className="policy">
@@ -28,8 +32,22 @@ export default function Footer(props) {
             <span>Terms & Conditions</span>
           </a>
         </div>
-        <span className="version">v0.6.9 - 20220201</span>
+        <span className="version">v0.7.0 - 20220203</span>
       </div>
-    </UrlRescusive>
+      <div className="discord">
+        <a href="https://discord.io/EluVerse">
+          <img
+            className="discord-img"
+            src={_.isEmpty(urlApi) ? '' : urlApi.image.discord}
+            alt=""
+          />
+          <img
+            className="mobile__discord-img"
+            src={_.isEmpty(urlApi) ? '' : urlApi.image.mobileDiscord}
+            alt=""
+          />
+        </a>
+      </div>
+    </UrlRecursive>
   );
 }

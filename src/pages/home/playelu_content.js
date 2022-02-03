@@ -3,7 +3,6 @@ import _ from 'lodash';
 
 import Modal from 'react-bootstrap/Modal';
 import UrlRescusive from '../../components/UrlRecursive';
-import FooterContainer from '../../components/footer/FooterContainer';
 
 const validateEmail = (email) => {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -116,9 +115,6 @@ export default function Content(props) {
               </button>
             </form>
             {error && <div className="error-email">{error}</div>}
-          </div>
-          <div className="playelu-footer">
-            <FooterContainer />
           </div>
         </div>
       </div>

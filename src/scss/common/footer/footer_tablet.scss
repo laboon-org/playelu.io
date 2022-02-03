@@ -1,0 +1,27 @@
+// Medium devices (tablets)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .discord {
+    right: -3%;
+    transform: scale(0.7) translateY(25%);
+
+    .discord-img {
+      display: block;
+    }
+
+    .mobile__discord-img {
+      display: none;
+    }
+  }
+  // .discord {
+  //   right: -2%;
+  //   transform: scale(0.8) translateY(10%);
+
+  //   .discord-img {
+  //     display: block;
+  //   }
+
+  //   .mobile__discord-img {
+  //     display: none;
+  //   }
+  // }
+}
