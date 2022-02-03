@@ -219,7 +219,12 @@ export default function GameNestFeatures(props) {
                 </div>
               </div>
               <div className="eluNest-btn">
-                <div className="elu-btn nest-btn">
+                <div
+                  className="elu-btn nest-btn"
+                  onClick={() => {
+                    onPressShowNest();
+                  }}
+                >
                   <h2>Game-2: Nest</h2>
                   <div className="btn-shadow">
                     <p>FEATURES</p>
