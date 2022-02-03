@@ -3,7 +3,9 @@ import _ from 'lodash';
 
 import './../../../scss/page_gameplay/beach.scss';
 
-import NestOnBoarding from './../nest_onboarding/nest_onBoarding';
+import NestFeaturesModal from './../components/modals/NestFeaturesModal';
+
+// import NestOnBoarding from '../nest_onboarding/nest_onBoarding';
 import UrlRecursive from '../../../components/UrlRecursive';
 
 window.addEventListener('scroll', opacity);
@@ -18,7 +20,7 @@ function opacity() {
     }
   }
 }
-export default function GameNestFeatures(props) {
+export default function SectionNest(props) {
   const {urlApi, setting} = props;
   const [nestShow, setNestShow] = useState(false);
   const onPressShowNest = () => {
@@ -137,7 +139,7 @@ export default function GameNestFeatures(props) {
                 closeNest();
               }}
             >
-              <NestOnBoarding closeNest={closeNest} />
+              <NestFeaturesModal onHide={closeNest} show={nestShow} />
             </div>
           )}
           <img

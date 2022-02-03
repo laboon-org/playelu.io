@@ -1,0 +1,10 @@
+.elu-modal-container.nest-dialog {
+  .modal-dialog {
+    height: 700px;
+    .modal-content {
+      .modal-body {
+        height: calc(520px - (70px * 2));
+      }
+    }
+  }
+}

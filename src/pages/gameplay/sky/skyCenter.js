@@ -2,7 +2,6 @@ import React, {useCallback, useState} from 'react';
 import {Link} from 'react-router-dom';
 import _ from 'lodash';
 
-// import GameDropFeatures from '../components/GameDropFeatures';
 import DropFeaturesModal from './../components/modals/DropFeaturesModal';
 import UrlRecursive from './../../../components/UrlRecursive';
 
@@ -82,7 +81,7 @@ export default function SkyCenter(props) {
           <div className="sky-center" id="drop">
             <div className="island zoom">{islands}</div>
           </div>
-          <div style={{ marginTop: 20, width: "100vw" }}>
+          <div style={{marginTop: 20, width: '100vw'}}>
             <div>
               {!dropShow ? (
                 <div
@@ -98,8 +97,8 @@ export default function SkyCenter(props) {
                 </div>
               ) : (
                 <DropFeaturesModal
-                  dropShow={dropShow}
-                  onPressHideEluDrop={onPressHideEluDrop}
+                  show={dropShow}
+                  onHide={onPressHideEluDrop}
                 />
               )}
             </div>

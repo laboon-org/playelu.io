@@ -5,6 +5,7 @@ import OnBoardingElementRight from './OnBoarding_element-right';
 import OnBoardingElementLeft from './onBoarding__element-left';
 import _ from 'lodash';
 
+// Deprecated
 export default function NestOnBoarding(props) {
   const {closeNest, urlApi} = props;
   return (

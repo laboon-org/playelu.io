@@ -10,7 +10,7 @@ import Assets from './../../constant/assets';
 import HeaderContainer from '../../components/header/HeaderContainer';
 
 import SkyCenter from './sky/skyCenter';
-import GameNestFeatures from './components/GameNestFeatures';
+import SectionNest from './components/SectionNest';
 import SkyBottom from './sky/skyBottom';
 import SkyTop from './sky/skyTop';
 import Cloud from './sky/cloud';
@@ -46,7 +46,7 @@ export default function gameplayContainer(props) {
           <Cloud />
           <SkyBottom />
         </div>
-        <GameNestFeatures />
+        <SectionNest />
       </div>
     </UrlRecursive>
   );

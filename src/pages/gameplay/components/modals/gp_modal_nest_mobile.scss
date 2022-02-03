@@ -1,0 +1,13 @@
+// Medium devices (mobiles)
+@media (max-width: 767.98px) {
+  .elu-modal-container.nest-dialog {
+    .modal-dialog {
+      height: calc(760px + 120px);
+      .modal-content {
+        .modal-body {
+          height: calc(760px - (70px * 2));
+        }
+      }
+    }
+  }
+}
