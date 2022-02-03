@@ -1,7 +1,7 @@
 import React from 'react';
 import OnBoardingTip from '../components/OnBoarding_tip';
 import _ from 'lodash';
-import UrlRescusive from '../../../UrlRescusive';
+import UrlRescusive from '../../../components/UrlRecursive';
 
 
 export default function OnBoardingElementLeft(props) {

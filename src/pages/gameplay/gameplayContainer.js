@@ -1,8 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
 
-import '../../scss/common/font.scss';
-
 import '../../scss/page_gameplay/gameplay_desktop.scss';
 import '../../scss/page_gameplay/gameplay_tablet.scss';
 import '../../scss/page_gameplay/gameplay_mobile.scss';
@@ -15,7 +13,7 @@ import SkyBottom from './sky/skyBottom';
 import SkyTop from './sky/skyTop';
 import Cloud from './sky/cloud';
 
-import UrlRescusive from '../../UrlRescusive';
+import UrlRescusive from '../../components/UrlRecursive';
 
 window.addEventListener('scroll', reveal);
 function reveal() {

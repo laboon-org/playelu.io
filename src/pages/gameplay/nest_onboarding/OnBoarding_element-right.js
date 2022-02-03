@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 import OnBoardingTip from '../components/OnBoarding_tip';
-import UrlRescusive from '../../../UrlRescusive';
+import UrlRescusive from '../../../components/UrlRecursive';
 
 export default function OnBoardingElementRight(props) {
   const {urlApi} = props;

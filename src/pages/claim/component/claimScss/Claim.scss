@@ -1,8 +1,3 @@
-//* Const define
-$font_content: "cookieRun_Regular";
-$font_black: "cookieRun_black";
-$font_bold: "cookieRun_bold";
-
 .claim-body {
   max-width: 1920px;
   max-height: 1113px;
@@ -44,7 +39,7 @@ $font_bold: "cookieRun_bold";
   border-radius: 50%;
 }
 .claim-right__header--title {
-  font-family: $font_black;
+  font-family: --font_black;
   display: flex;
   color: #fdcd2f;
   font-size: 40px;
@@ -63,7 +58,7 @@ $font_bold: "cookieRun_bold";
   color: #ffff;
   font-size: 30px;
   font-weight: 200;
-  font-family: $font_bold;
+  font-family: --font_bold;
 }
 
 .claim-right__content {
@@ -73,7 +68,7 @@ $font_bold: "cookieRun_bold";
   justify-content: space-between;
   width: 100%;
   color: #fdcd2f;
-  font-family: $font_content;
+  font-family: --font_content;
 }
 .address-wallet {
   width: 100%;

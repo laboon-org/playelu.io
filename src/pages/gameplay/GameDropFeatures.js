@@ -7,7 +7,7 @@ import '../../scss/page_gameplay/gameplay_mobile.scss';
 
 import OnboardingComingsoon from './components/onboarding_comingsoon';
 import OnBoardingTip from './components/OnBoarding_tip';
-import UrlRescusive from '../../UrlRescusive';
+import UrlRescusive from '../../components/UrlRecursive';
 import BoardTypeHunting from './components/BoardTypeHunting';
 import BoardTypeCompeting from './components/BoardTypeCompeting';
 

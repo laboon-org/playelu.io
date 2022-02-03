@@ -3,7 +3,7 @@ import BackgroundComet from './bacgroundComet';
 import Stars from './Stars';
 import BackgroundStar from './backgroundStar';
 import BackgroundCloud from './backgroundCloud';
-import UrlRescusive from '../../../UrlRescusive';
+import UrlRescusive from '../../../components/UrlRecursive';
 import _ from 'lodash';
 
 export default function Background(props) {

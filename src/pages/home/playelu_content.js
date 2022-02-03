@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import _ from 'lodash';
 
 import Modal from 'react-bootstrap/Modal';
-import UrlRescusive from '../../UrlRescusive';
+import UrlRescusive from '../../components/UrlRecursive';
 import FooterContainer from '../../components/footer/FooterContainer';
 
 const validateEmail = (email) => {

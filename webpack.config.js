@@ -19,5 +19,7 @@ const config = {
   resolve: {
     fallback: {crypto: false},
   },
+  test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+  loader: 'url-loader?limit=100000',
 };
 module.exports = config;

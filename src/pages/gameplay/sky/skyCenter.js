@@ -2,7 +2,7 @@ import React, {useCallback, useState} from 'react';
 import _ from 'lodash';
 
 import GameDropFeatures from '../GameDropFeatures';
-import UrlRescusive from '../../../UrlRescusive';
+import UrlRescusive from '../../../components/UrlRecursive';
 
 window.addEventListener('scroll', zoom);
 function zoom() {

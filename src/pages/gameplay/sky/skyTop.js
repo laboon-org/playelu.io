@@ -8,7 +8,7 @@ import {useState} from 'react';
 import Modal from 'react-bootstrap/Modal';
 
 import GameplayRune from './gameplayRune';
-import UrlRescusive from '../../../UrlRescusive';
+import UrlRescusive from '../../../components/UrlRecursive';
 
 export default function SkyTop(props) {
   const {urlApi, setting} = props;

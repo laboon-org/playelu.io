@@ -1,13 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
 
-import '../../scss/common/font.scss';
-
 import '../../scss/page_home/home_desktop.scss';
 import '../../scss/page_home/home_tablet.scss';
 import '../../scss/page_home/home_mobile.scss';
 
-import UrlRescusive from '../../UrlRescusive';
+import UrlRescusive from '../../components/UrlRecursive';
 import Background from './backgrounds/background';
 import Content from './playelu_content';
 

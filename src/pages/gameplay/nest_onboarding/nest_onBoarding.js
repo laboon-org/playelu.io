@@ -1,6 +1,6 @@
 import React from 'react';
 import OnboardingComingsoon from '../components/onboarding_comingsoon';
-import UrlRescusive from '../../../UrlRescusive';
+import UrlRescusive from '../../../components/UrlRecursive';
 import OnBoardingElementRight from './OnBoarding_element-right';
 import OnBoardingElementLeft from './onBoarding__element-left';
 import _ from 'lodash';

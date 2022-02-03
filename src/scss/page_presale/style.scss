@@ -1,12 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
-
-//* Setting Const
-$font_body: "cookieRun_Regular";
-$font_black: "cookieRun_black";
-$font_bold: "cookieRun_bold";
+// @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 
 a {
   text-decoration: none;
@@ -48,7 +43,7 @@ a {
   justify-content: center;
 }
 .title-header {
-  font-family: $font_black;
+  font-family: --font_black;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -96,7 +91,7 @@ a {
   cursor: pointer;
 }
 .gameplay-btn span {
-  font-family: $font_body, sans-serif;
+  font-family: --font_content, sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 21px;
@@ -158,7 +153,7 @@ a {
   font-size: 32px;
   color: #ffff;
   white-space: nowrap;
-  font-family: $font_black;
+  font-family: --font_black;
   letter-spacing: 2px;
   -webkit-text-stroke: 0.5px black;
 }
@@ -192,7 +187,7 @@ a {
   text-align: center;
   color: #fff;
   font-size: 28px;
-  font-family: $font_body, sans-serif;
+  font-family: --font_content, sans-serif;
   margin-bottom: 0;
 }
 
@@ -211,7 +206,7 @@ a {
 .white-list__login {
   color: #fff;
   font-size: 26px;
-  font-family: $font_body, sans-serif;
+  font-family: --font_content, sans-serif;
   margin-bottom: 0;
 }
 
@@ -225,7 +220,7 @@ a {
   border-radius: 40px;
   display: flex;
   align-items: center;
-  font-family: $font_body, sans-serif;
+  font-family: --font_content, sans-serif;
   font-weight: normal;
 }
 
@@ -376,7 +371,7 @@ a {
   color: #ffff;
   white-space: nowrap;
   -webkit-text-stroke: 0.5px black;
-  font-family: $font_bold;
+  font-family: --font_bold;
 }
 
 .white-list__subtitle {
@@ -390,7 +385,7 @@ a {
 
 .white-list__code {
   width: 88%;
-  font-family: $font_body;
+  font-family: --font_content;
   font-weight: 200;
   margin-top: 20px;
 }
@@ -418,14 +413,14 @@ a {
 }
 
 .notfound__title {
-  font-family: $font_body, sans-serif;
+  font-family: --font_content, sans-serif;
   font-weight: 400;
   color: #fff;
   margin-bottom: 10px;
 }
 
 .notfound__sub {
-  font-family: $font_body, sans-serif;
+  font-family: --font_content, sans-serif;
   font-weight: 600;
   color: rgb(250 244 244 / 60%);
 }

@@ -1,7 +1,3 @@
-$font_content: "cookieRun_Regular";
-$font_black: "cookieRun_black";
-$font_bold: "cookieRun_bold";
-
 * {
   padding: 0;
   margin: 0;
@@ -18,7 +14,7 @@ html {
 }
 body {
   height: 100%;
-  font-family: $font_black;
+  font-family: var(--font_black);
 }
 a {
   text-decoration: none;
@@ -110,7 +106,7 @@ li {
 .playelu-tittle__sub {
   font-size: 15px;
   color: #ffff;
-  font-family: $font_content;
+  font-family: --font_content;
 }
 .playelu-btn {
   margin: auto;
@@ -219,7 +215,7 @@ li {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: $font_content;
+  font-family: --font_content;
 }
 .policy,
 .policy a {

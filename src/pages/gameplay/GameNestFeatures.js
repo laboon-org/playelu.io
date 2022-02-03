@@ -5,7 +5,7 @@ import './css/beach.scss';
 import '../../scss/page_gameplay/beach.scss';
 
 import NestOnBoarding from './nest_onboarding/nest_onBoarding';
-import UrlRescusive from '../../UrlRescusive';
+import UrlRescusive from '../../components/UrlRecursive';
 
 
 window.addEventListener('scroll', opacity);

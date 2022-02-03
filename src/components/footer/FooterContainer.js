@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 import SocialLink from './SocialLink';
-import UrlRescusive from '../../UrlRescusive';
+import UrlRescusive from '../UrlRecursive';
 
 export default function Footer(props) {
   const {urlApi} = props;

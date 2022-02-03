@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import UrlRescusive from '../../../UrlRescusive';
+import UrlRescusive from '../../../components/UrlRecursive';
 import OnBoardingTip from './OnBoarding_tip';
 
 export default function OnboardingComingsoon(props) {

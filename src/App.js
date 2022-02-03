@@ -6,14 +6,18 @@ import {
 } from 'react-router-dom';
 import usePromise from 'react-promise-suspense';
 import {useState, useEffect, useRef} from 'react';
+
+// Api
 import axios from 'axios';
+import {Queryimage, Query, querySetting} from './api/graphql/graphQLSchema.js';
 
 // import './scss/sale_page/style.scss';
-// import './scss/common/font.scss';
+// Style
+import './scss/common/global.scss';
 
-import UrlRescusive from './UrlRescusive';
+import UrlRecursive from './components/UrlRecursive';
 import messageStorage from './module/messageStorage';
-import Loading from './components/header/Loading';
+import Loading from './components/Loading';
 
 // Pages
 const HomePage = React.lazy(() => import('./pages/home/homeContainer'));
@@ -21,25 +25,6 @@ const GameplayPage = React.lazy(() => import('./pages/gameplay/gameplayContainer
 const WhiteListPage = React.lazy(() => import('./pages/whitelist/whitelistContainer'));
 // const SalePage = React.lazy(() => import('./pages/sale_page/SalePage'));
 // const Claim = React.lazy(() => import('./pages/claim/ClaimPage'));
-
-// Api
-const Queryimage = 'https://api-eu-central-1.graphcms.com/v2/ckxidcmyc26eh01xpc7na45t8/master';
-const Query = `
-{
-  dynamicContents(first: 1000){
-      key
-      value
-    }
-  }
-`;
-const querySetting = `
-{
-  settings{
-      key
-      value
-    }
-  }
-`;
 
 function App(_props) {
   const [imgList, setImgList] = useState({});
@@ -134,16 +119,16 @@ function App(_props) {
   };
 
   // CMS: Data (Remote Config)
-  const UrlRescusivePanel = ({Comp}) => {
+  const UrlRecursiveContainer = ({Comp}) => {
     return (
-      <UrlRescusive data={
-        {
+      <UrlRecursive
+        data={{
           urlApi: imgList,
           setting: setting,
-        }
-      }>
+        }}
+      >
         <Comp />
-      </UrlRescusive>
+      </UrlRecursive>
     );
   };
 
@@ -152,20 +137,20 @@ function App(_props) {
       <LoadData></LoadData>
       <Router>
         <Routes>
-          <Route path="/" element={<UrlRescusivePanel Comp={HomePage} />} />
+          <Route path="/" element={<UrlRecursiveContainer Comp={HomePage} />} />
           <Route
             path="/gameplay"
-            element={<UrlRescusivePanel Comp={GameplayPage} />}
+            element={<UrlRecursiveContainer Comp={GameplayPage} />}
           />
           <Route
             path="/whitelist"
-            element={<UrlRescusivePanel Comp={WhiteListPage} />}
+            element={<UrlRecursiveContainer Comp={WhiteListPage} />}
           />
           {/* <Route
             path="/presales"
-            element={<UrlRescusivePanel Comp={SalePage} />}
+            element={<UrlRecursivePanel Comp={SalePage} />}
           /> */}
-          {/* <Route path="/claim" element={<UrlRescusivePanel Comp={Claim} />} /> */}
+          {/* <Route path="/claim" element={<UrlRecursivePanel Comp={Claim} />} /> */}
         </Routes>
       </Router>
     </React.Suspense>
