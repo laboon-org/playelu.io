@@ -6,6 +6,8 @@ import BoxFeature from './../features/BoxFeature';
 import BoxFeatureComingSoon from './../features/BoxFeatureComingSoon';
 
 import './gp_modal.scss';
+import './gp_modal_tablet.scss';
+import './gp_modal_mobile.scss';
 
 import UrlRecursive from './../../../../components/UrlRecursive';
 

@@ -3,6 +3,7 @@ import _ from 'lodash';
 import {Image} from 'react-bootstrap';
 
 import './gp_box_feature.scss';
+import './gp_box_feature_mobile.scss';
 
 import UrlRecursive from './../../../../components/UrlRecursive';
 import BoardTypeControl from '../controls/BoardTypeControl';
