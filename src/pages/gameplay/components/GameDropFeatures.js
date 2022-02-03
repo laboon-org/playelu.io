@@ -6,8 +6,8 @@ import './../../../scss/page_gameplay/onboarding.scss';
 import OnboardingComingsoon from './onboarding_comingsoon';
 import OnBoardingTip from './OnBoarding_tip';
 import UrlRescusive from '../../../components/UrlRecursive';
-import BoardTypeHunting from './BoardTypeHunting';
-import BoardTypeCompeting from './BoardTypeCompeting';
+import BoardTypeHunting from './controls/BoardTypeHunting';
+import BoardTypeCompeting from './controls/BoardTypeCompeting';
 
 export default function GameDropFeatures(props) {
   const {onPressHideEluDrop, urlApi} = props;

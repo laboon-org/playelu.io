@@ -1,0 +1,46 @@
+.control-elem {
+  display: inline-block;
+  .elem-image {
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  .elem-content {
+    display: inline;
+    div {
+      margin-top: -18px;
+      margin-left: 6px;
+      position: relative;
+    }
+    .circle.active,
+    .square.active,
+    .triangle.active {
+      background: #7f73ff;
+    }
+    .square {
+      width: 12px;
+      height: 12px;
+      background: #ffe552;
+    }
+    .circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ffe552;
+    }
+    .triangle {
+      width: 0;
+      height: 0;
+      border-bottom: 12px solid #ffe552;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+    }
+    .name {
+      margin-top: -14px;
+      margin-left: 12px;
+      position: relative;
+      font-size: 11px;
+      font-family: var(--font_black);
+    }
+  }
+}

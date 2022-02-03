@@ -147,9 +147,6 @@
         height: 65vw !important;
         .nest_onBoarding-title {
           h4 {
-            font-size: 26px !important;
-            margin-top: 10px;
-            -webkit-text-stroke: 1.5px black !important;
           }
         }
         .onBoarding__versus-text {
@@ -169,7 +166,7 @@
 /*iPad Pro: 2.0 dpr */
 @media screen and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) {
   .onBoarding-body {
-    margin-top: 32px !important;
+    // margin-top: 32px !important;
   }
   .onBoarding__versus-content {
     height: 192px !important;
@@ -240,9 +237,6 @@
       .nest-frame {
         .nest_onBoarding-title {
           h4 {
-            font-size: 36px !important;
-            margin-top: 10px;
-            -webkit-text-stroke: 0.5px black !important;
           }
         }
         .onBoarding__versus-text {

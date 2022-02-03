@@ -13,6 +13,7 @@ import {Queryimage, Query, querySetting} from './api/graphql/graphQLSchema.js';
 
 // import './scss/sale_page/style.scss';
 // Style
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/common/global.scss';
 
 import UrlRecursive from './components/UrlRecursive';

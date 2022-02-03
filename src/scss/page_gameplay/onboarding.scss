@@ -1,7 +1,7 @@
 .sky-center_onBoarding {
   position: relative;
-  max-width: 1080px;
-  max-height: 1233.83px;
+  max-width: 1024px;
+  max-height: calc(1024px * 1.14);
   width: var(--widthModalDrop);
   height: calc(var(--widthModalDrop) * 1.14);
   margin: auto;
@@ -55,11 +55,8 @@
   }
 }
 .onBoarding-frame {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  padding-top: 4%;
+  padding: 48px;
+  text-align: center;
 }
 .onBoarding-body {
   margin-top: 64px;
@@ -68,16 +65,14 @@
   justify-content: space-between;
 }
 .onBoarding {
-  position: relative;
   display: flex;
-  justify-content: center;
-  margin: 64px 0 0 0;
+  margin-top: 12px;
 }
 .onBoarding__element {
   display: flex;
-  width: 50%;
   align-items: center;
   flex-direction: column;
+  margin-top: -54px;
 }
 .onBoarding__element-button {
   width: 4%;
@@ -132,9 +127,9 @@
   }
 }
 .onBoarding-tip {
-  position: absolute;
-  width: 15%;
-  top: -8px;
+  position: relative;
+  width: 50%;
+  top: 54px;
   z-index: 99;
 }
 .onBoarding__element-tip {

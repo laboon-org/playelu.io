@@ -101,7 +101,7 @@
     }
   }
   .onBoarding-frame {
-    width: 90%;
+    // width: 90%;
   }
   .onBoarding__element {
     margin: 0 0 20px 0;
@@ -189,16 +189,13 @@
         max-height: 827px;
         height: 79vw !important;
         .onBoarding-frame {
-          padding-top: 0 !important;
+          // padding-top: 0 !important;
         }
         .onBoarding__element {
           margin: 0 0 6px 0;
         }
         .nest_onBoarding-title {
           h4 {
-            font-size: 16px !important;
-            margin-top: 7px;
-            -webkit-text-stroke: 0px black !important;
           }
         }
         .tip-title h4 {
