@@ -1,15 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
 
-import '../../scss/page_gameplay/onboarding.scss';
-import '../../scss/page_gameplay/gameplay_tablet.scss';
-import '../../scss/page_gameplay/gameplay_mobile.scss';
+import './../../../scss/page_gameplay/onboarding.scss';
 
-import OnboardingComingsoon from './components/onboarding_comingsoon';
-import OnBoardingTip from './components/OnBoarding_tip';
-import UrlRescusive from '../../components/UrlRecursive';
-import BoardTypeHunting from './components/BoardTypeHunting';
-import BoardTypeCompeting from './components/BoardTypeCompeting';
+import OnboardingComingsoon from './onboarding_comingsoon';
+import OnBoardingTip from './OnBoarding_tip';
+import UrlRescusive from '../../../components/UrlRecursive';
+import BoardTypeHunting from './BoardTypeHunting';
+import BoardTypeCompeting from './BoardTypeCompeting';
 
 export default function GameDropFeatures(props) {
   const {onPressHideEluDrop, urlApi} = props;

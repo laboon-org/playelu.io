@@ -1,12 +1,10 @@
 import React, {useCallback, useState} from 'react';
 import _ from 'lodash';
 
-import './css/beach.scss';
-import '../../scss/page_gameplay/beach.scss';
+import './../../../scss/page_gameplay/beach.scss';
 
-import NestOnBoarding from './nest_onboarding/nest_onBoarding';
-import UrlRescusive from '../../components/UrlRecursive';
-
+import NestOnBoarding from './../nest_onboarding/nest_onBoarding';
+import UrlRecursive from '../../../components/UrlRecursive';
 
 window.addEventListener('scroll', opacity);
 function opacity() {
@@ -30,7 +28,7 @@ export default function GameNestFeatures(props) {
     setNestShow(false);
   });
   return (
-    <UrlRescusive data={props}>
+    <UrlRecursive data={props}>
       <div className="beach" id="nest">
         <div className="ocean">
           <div className="ocean-container">
@@ -267,6 +265,6 @@ export default function GameNestFeatures(props) {
           </div>
         </div>
       </div>
-    </UrlRescusive>
+    </UrlRecursive>
   );
 }

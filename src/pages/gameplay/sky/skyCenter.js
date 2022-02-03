@@ -1,8 +1,9 @@
 import React, {useCallback, useState} from 'react';
+import {Link} from 'react-router-dom';
 import _ from 'lodash';
 
-import GameDropFeatures from '../GameDropFeatures';
-import UrlRescusive from '../../../components/UrlRecursive';
+import GameDropFeatures from '../components/GameDropFeatures';
+import UrlRecursive from '../../../components/UrlRecursive';
 
 window.addEventListener('scroll', zoom);
 function zoom() {
@@ -74,9 +75,9 @@ export default function SkyCenter(props) {
     );
   });
   return (
-    <UrlRescusive data={props}>
+    <UrlRecursive data={props}>
       <div>
-        <a href="#onboarding_drop-center">
+        <Link to="#onboarding_drop-center">
           <div className="sky-center" id="drop">
             <div className="island zoom">{islands}</div>
           </div>
@@ -99,8 +100,8 @@ export default function SkyCenter(props) {
               )}
             </div>
           </div>
-        </a>
+        </Link>
       </div>
-    </UrlRescusive>
+    </UrlRecursive>
   );
 }

@@ -8,7 +8,7 @@ import {useState} from 'react';
 import Modal from 'react-bootstrap/Modal';
 
 import GameplayRune from './gameplayRune';
-import UrlRescusive from '../../../components/UrlRecursive';
+import UrlRecursive from '../../../components/UrlRecursive';
 
 export default function SkyTop(props) {
   const {urlApi, setting} = props;
@@ -21,8 +21,18 @@ export default function SkyTop(props) {
     handleShowPopup();
   };
 
+  const shadowStone = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.shadowStone;
+  const boonMoon = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.boonMoon;
+
+  const imgDrop = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.drop;
+  const imgNest = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.nest;
+  const imgScout = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.scout;
+  const imgMetaVerse = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.metaVerse;
+
+  const imgEluLogo = _.isEmpty(urlApi) ? '' : urlApi.image.eluLogo;
+
   return (
-    <UrlRescusive data={props}>
+    <UrlRecursive data={props}>
       <div className="sky-top">
         <Modal
           size="lg"
@@ -36,9 +46,9 @@ export default function SkyTop(props) {
             <div className="close-popup" onClick={() => handleClosePopup()}>
               <img
                 src={
-                  _.isEmpty(urlApi) ?
-                    '' :
-                    urlApi.imageGamePlay.popupComingSoon.closePopup
+                  _.isEmpty(urlApi)
+                    ? ""
+                    : urlApi.imageGamePlay.popupComingSoon.closePopup
                 }
                 alt=""
               />
@@ -47,9 +57,9 @@ export default function SkyTop(props) {
               <div className="popup-title__box">
                 <img
                   src={
-                    _.isEmpty(urlApi) ?
-                      '' :
-                      urlApi.imageGamePlay.popupComingSoon.frameComingSoon
+                    _.isEmpty(urlApi)
+                      ? ""
+                      : urlApi.imageGamePlay.popupComingSoon.frameComingSoon
                   }
                   alt=""
                 />
@@ -62,109 +72,68 @@ export default function SkyTop(props) {
         </Modal>
         <div className="gameplay-selection">
           <div className="gameplay__selection-img">
-            <a href="#drop">
+            <Link to="#drop">
               <img
                 className="shadow-stone shadow-stone-1"
-                src={
-                  _.isEmpty(urlApi) ?
-                    '' :
-                    urlApi.imageGamePlay.skyTop.shadowStone
-                }
-                alt=""
+                src={shadowStone}
+                alt="Game-1: Drop (Match-3)"
               />
-              <img
-                src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.drop}
-                alt=""
-              />
-            </a>
+              <img src={imgDrop} alt="" />
+            </Link>
           </div>
           <div className="gameplay__selection-img">
-            <a href="#nest">
+            <Link to="#nest">
               <img
                 className="shadow-stone shadow-stone-2"
-                src={
-                  _.isEmpty(urlApi) ?
-                    '' :
-                    urlApi.imageGamePlay.skyTop.shadowStone
-                }
-                alt=""
+                src={shadowStone}
+                alt="Boon Token"
               />
-              <img
-                src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.nest}
-                alt=""
-              />
-            </a>
+              <img src={imgNest} alt="Game-2: Nest (Framing & Battling)" />
+            </Link>
           </div>
           <div className="rune">
             <Link to="/">
               <GameplayRune />
-              <img
-                className="gameplay__boonmoon-img"
-                src={
-                  _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.boonMoon
-                }
-                alt=""
-              />
+              <img className="gameplay__boonmoon-img" src={boonMoon} alt="" />
             </Link>
           </div>
           {setting.page_gameplay_section_scout_game_feature_enabled === true ? (
             <div className="gameplay__selection-img" onClick={onPressPopup}>
               <img
                 className="shadow-stone shadow-stone-3"
-                src={
-                  _.isEmpty(urlApi) ?
-                    '' :
-                    urlApi.imageGamePlay.skyTop.shadowStone
-                }
+                src={shadowStone}
                 alt=""
               />
-              <img
-                src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.scout}
-                alt=""
-              />
+              <img src={imgScout} alt="Game-3: Scout (MOBA)" />
             </div>
           ) : (
             <div className="gameplay__selection-img">
               <img
                 className="shadow-stone shadow-stone-3"
-                src={
-                  _.isEmpty(urlApi) ?
-                    '' :
-                    urlApi.imageGamePlay.skyTop.shadowStone
-                }
+                src={shadowStone}
                 alt=""
               />
-              <img
-                src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.scout}
-                alt=""
-              />
+              <img src={imgScout} alt="Game-3: Scout (MOBA)" />
             </div>
           )}
 
           <div className="gameplay__selection-img" onClick={onPressPopup}>
             <img
               className="shadow-stone shadow-stone-4"
-              src={
-                _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.shadowStone
-              }
+              src={shadowStone}
               alt=""
             />
-            <img
-              src={
-                _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.metaVerse
-              }
-              alt=""
-            />
+            <img src={imgMetaVerse} alt="Game-4: Meta Verse" />
           </div>
         </div>
         <div className="gameplay-logo">
           <img
             className="gameplay__logo-img"
-            src={_.isEmpty(urlApi) ? '' : urlApi.image.eluLogo}
-            alt=""
+            src={imgEluLogo}
+            alt="Logo EluVerse"
           />
         </div>
       </div>
-    </UrlRescusive>
+    </UrlRecursive>
   );
 }
