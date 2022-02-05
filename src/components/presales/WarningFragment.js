@@ -16,7 +16,10 @@ export default function WarningFragment(props) {
               alt=""
             />
             <div className="warning__text">
-              <span>{message.getInstance().getMessage("Warning")}</span>
+              <span>
+                The transaction does not support BSC (Binance Smart Chain)
+                network currently
+              </span>
             </div>
             <div
               className="warning__btn"

@@ -10,29 +10,23 @@ export default function ModalSucceed(props) {
   } = props;
 
   //* Component
-
   const SucceedState = () => {
     return (
-      <>
-        <span className='modal-succeed__heading white-list__succeed__heading'>
-                    CONGRATULATION
-        </span>
+      <div>
+        <span className='modal-succeed__heading white-list__succeed__heading'>CONGRATULATION</span>
         <span className='white-list__succeed__sub'>You have registered successfully.</span>
-      </>
+      </div>
     );
   };
 
   const SignedState = () => {
     return (
-      <>
-        <span className='modal-succeed__heading white-list__succeed__heading'>
-                    Sorry !!!
+      <div>
+        <span className='modal-succeed__heading white-list__succeed__heading'>Sorry !!!
         </span>
-        <span
-          className='white-list__succeed__sub'>
-                    Your wallet address was already inside registered white list. You’d like to update the info, please contact AGENCY to get more support (hi@playelu.io)
+        <span className='white-list__succeed__sub'>Your wallet address was already inside registered white list. You’d like to update the info, please contact AGENCY to get more support (hi@playelu.io)
         </span>
-      </>
+      </div>
     );
   };
 

@@ -1,12 +1,16 @@
 import React from 'react';
 
 import { Container, Row, Col } from "react-bootstrap";
+import WarningFragment from "./WarningFragment";
 
 import "../../scss/common/presale/logo_area.scss";
 
 export default function LogoArea() {
   return (
     <Container className="presale-info-container">
+      <Row>
+        <WarningFragment />
+      </Row>
       <Row className="header-sale">
         <Col sm={12} className="title">
           <div className="title-header">

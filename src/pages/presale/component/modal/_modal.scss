@@ -1,47 +1,47 @@
 // Modal Warning
 .warning {
-  position: fixed;
-  top: 90px;
-  right: 20px;
-  max-width: 850px;
-  min-width: 300px;
-  width: calc(100% - 40px);
-  height: 60px;
-  border-radius: 7px;
+  width: 100%;
+  border-radius: 8px;
   background: rgba(89, 89, 89, 0.5);
   font-family: var(--font_content);
-  animation: warning 3s ease infinite;
+  animation: warning 1s ease infinite;
   animation-iteration-count: 1;
+  margin-bottom: 36px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
-
 .warning__frame {
-  width: 95%;
-  height: 100%;
   margin: auto;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: space-between;
 }
-
 .warning__frame img {
-  width: 40px;
+  width: 24px;
+  margin-left: 8px;
 }
-
 .warning__text {
   color: #ff3333;
-  font-size: 18px;
+  font-size: 10px;
+  font-family: var(--font_content);
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 4px;
+  text-align: center;
 }
 .warning__btn {
   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_mini.webp")
     no-repeat center / contain;
-  width: 80px;
-  height: 52px;
+  min-width: 43px;
+  min-height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffff;
+  color: #fff;
   text-transform: uppercase;
+  font-size: 10px;
+  font-family: var(--font_content);
 }
 @keyframes warning {
   0% {
