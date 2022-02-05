@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import _ from 'lodash';
 
+import Assets from "./../../constant/assets";
+
 import '../../scss/common/header/navbar_mobile.scss';
 
 import {Link} from 'react-router-dom';
@@ -17,8 +19,8 @@ export default function NavbarMobile(props) {
       <a className="home-icon__link" href="/">
         <img
           className="home-icon__img"
-          src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/Home-icon.webp"
-          alt=""
+          src={Assets.icon.ic_home}
+          alt="Home Icon"
         />
       </a>
       <div className="navbar-btn" onClick={() => setShow(true)}>
@@ -35,13 +37,13 @@ export default function NavbarMobile(props) {
             <a href="/">
               <img
                 src={_.isEmpty(urlApi) ? "" : urlApi.common.homeIcon}
-                alt=""
+                alt="Home Icon"
               />
             </a>
             <div className="close__modal-navbar" onClick={() => handleClose()}>
               <img
                 src={_.isEmpty(urlApi) ? "" : urlApi.common.closeBtn}
-                alt=""
+                alt="Close Icon"
               />
             </div>
           </div>
@@ -49,14 +51,14 @@ export default function NavbarMobile(props) {
             <div className="modal-logo">
               <img
                 src={_.isEmpty(urlApi) ? "" : urlApi.image.eluLogo1}
-                alt=""
+                alt='Elu Logo'
               />
             </div>
             <div className="modal-element">
               <a
                 href={_.isEmpty(urlApi) ? "" : urlApi.docs.roadmap}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <img
                   src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
@@ -71,7 +73,7 @@ export default function NavbarMobile(props) {
               <a
                 href={_.isEmpty(urlApi) ? "" : urlApi.docs.tokenomic}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <img
                   src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
@@ -86,11 +88,11 @@ export default function NavbarMobile(props) {
               <a
                 href={_.isEmpty(urlApi) ? "" : urlApi.docs.litepaper}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <img
                   src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
-                  alt=""
+                  alt='LitePaper'
                 />
                 <div className="modal-element--text">
                   <h2>LitePaper</h2>
@@ -101,7 +103,7 @@ export default function NavbarMobile(props) {
               <Link to="/whitelist">
                 <img
                   src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
-                  alt=""
+                  alt='Whitelist'
                 />
                 <div className="modal-element--text">
                   <h2>WhiteList</h2>
@@ -127,6 +129,7 @@ export default function NavbarMobile(props) {
                     ? ""
                     : urlApi.image.homeBackground.gameplayBtn
                 }
+                alt='Home Background'
               />
               <Link to="/gameplay" className="home-btn__gameplay--text">
                 Gameplay

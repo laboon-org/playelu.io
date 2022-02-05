@@ -9,11 +9,9 @@ import {useState, useEffect, useRef} from 'react';
 
 // Api
 import axios from 'axios';
-import {graphQLEndPoint, Query, querySetting} from './api/graphql/graphQLSchema.js';
+import { graphQLEndPoint, Query, querySetting } from './api/graphql/graphQLSchema.js';
 
-// import './scss/sale_page/style.scss';
 // Style
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/common/global.scss';
 
 import UrlRecursive from './components/UrlRecursive';
@@ -46,7 +44,7 @@ function App(_props) {
             const data = response.data.data.dynamicContents;
             const process = (obj, name, value) => {
             // Gia su name =[A,B,C]
-              if (name.length == 1) {
+              if (name.length === 1) {
                 return {
                   [name[0]]: value,
                 };
@@ -103,7 +101,7 @@ function App(_props) {
   }, []);
 
   const LoadData = () => {
-    const load = usePromise((_a) =>
+    usePromise((_a) =>
       new Promise((resolve) => {
         const data = axios.post('https://laboon.as.r.appspot.com/config')
             .then((value) => {
@@ -115,7 +113,8 @@ function App(_props) {
         messageStorage.getInstance().setMessage('config', data);
         resolve(true);
       })
-    , {});
+      , {});
+
     return (<div></div>);
   };
 
@@ -135,7 +134,7 @@ function App(_props) {
 
   return (
     <React.Suspense fallback={<Loading />}>
-      <LoadData></LoadData>
+      <LoadData />
       <Router>
         <Routes>
           <Route path="/" element={<UrlRecursiveContainer Comp={HomePage} />} />

@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: --font_content;
+  font-family: var(--font_content);
 }
 .modal-succeed__body__img {
   width: 250px;
@@ -52,7 +52,7 @@
   align-items: center;
 }
 .time span {
-  font-family: --font_bold;
+  font-family: var(--font_bold);
   color: #000;
   font-weight: 600;
 }
@@ -67,7 +67,7 @@
 }
 
 .countdown-element__title {
-  font-family: --font_content;
+  font-family: var(--font_content);
   font-weight: 200;
   font-size: 15px;
 }
@@ -99,7 +99,7 @@
     margin-bottom: 3px;
   }
   .time span {
-    font-family: --font_bold;
+    font-family: var(--font_bold);
     color: #000;
     font-size: 14px;
     font-weight: 500;

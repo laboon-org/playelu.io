@@ -11,24 +11,19 @@ import UrlRecursive from '../UrlRecursive';
 export default function FooterContainer(props) {
   const {urlApi} = props;
 
+  const linkPrivacyPolicy = _.isEmpty(urlApi) ? "" : urlApi.docs.privacyPolicy;
+  const linkCondition = _.isEmpty(urlApi) ? "" : urlApi.docs.conditions;
+
   return (
     <UrlRecursive data={props}>
       <div className="footer">
         <SocialLink urlApi={urlApi} />
         <div className="policy">
-          <a
-            href={_.isEmpty(urlApi) ? '' : urlApi.docs.privacyPolicy}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={linkPrivacyPolicy} target="_blank" rel="noreferrer">
             <span>Privacy Policy</span>
           </a>
           <span>|</span>
-          <a
-            href={_.isEmpty(urlApi) ? '' : urlApi.docs.conditions}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={linkCondition} target="_blank" rel="noreferrer">
             <span>Terms & Conditions</span>
           </a>
         </div>

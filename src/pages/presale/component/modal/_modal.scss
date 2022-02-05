@@ -9,7 +9,7 @@
   height: 60px;
   border-radius: 7px;
   background: rgba(89, 89, 89, 0.5);
-  // font-family: --font_content;
+  font-family: var(--font_content);
   animation: warning 3s ease infinite;
   animation-iteration-count: 1;
 }
@@ -75,7 +75,7 @@
   background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/panel/panel_inProcessing.webp")
     no-repeat center / contain;
   font-weight: 600;
-  font-family: --font_black;
+  font-family: var(--font_black);
 }
 .modal-sale__img {
   width: 60%;
@@ -103,7 +103,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: --font_content;
+  font-family: var(--font_content);
 }
 
 .modal-succeed__body {

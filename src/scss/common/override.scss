@@ -4,6 +4,7 @@
   box-sizing: border-box;
   cursor: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/logo192.png"), auto;
   -webkit-text-size-adjust: none;
+  font-family: var(--font_content);
 }
 
 *::-webkit-scrollbar {
@@ -14,8 +15,6 @@ html {
 }
 body {
   height: 100%;
-  // font-family: var(--font_black);
-  font-family: CookieRun_Regular;
 }
 a {
   text-decoration: none;
@@ -28,16 +27,13 @@ li {
   list-style-type: none;
   cursor: pointer;
 }
-
 ::placeholder {
   color: #adadad;
   opacity: 0.8;
 }
-
 :-ms-input-placeholder {
   color: #adadad;
 }
-
 ::-ms-input-placeholder {
   color: #adadad;
 }

@@ -39,7 +39,7 @@
   border-radius: 50%;
 }
 .claim-right__header--title {
-  font-family: --font_black;
+  font-family: var(--font_black);
   display: flex;
   color: #fdcd2f;
   font-size: 40px;
@@ -58,7 +58,7 @@
   color: #ffff;
   font-size: 30px;
   font-weight: 200;
-  font-family: --font_bold;
+  font-family: var(--font_bold);
 }
 
 .claim-right__content {
@@ -68,7 +68,7 @@
   justify-content: space-between;
   width: 100%;
   color: #fdcd2f;
-  font-family: --font_content;
+  font-family: var(--font_content);
 }
 .address-wallet {
   width: 100%;

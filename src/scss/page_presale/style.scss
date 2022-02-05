@@ -43,7 +43,7 @@ a {
   justify-content: center;
 }
 .title-header {
-  font-family: --font_black;
+  font-family: var(--font_black);
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -91,7 +91,7 @@ a {
   cursor: pointer;
 }
 .gameplay-btn span {
-  font-family: --font_content, sans-serif;
+  font-family: var(--font_content);
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 21px;
@@ -153,7 +153,7 @@ a {
   font-size: 32px;
   color: #ffff;
   white-space: nowrap;
-  font-family: --font_black;
+  font-family: var(--font_black);
   letter-spacing: 2px;
   -webkit-text-stroke: 0.5px black;
 }
@@ -187,7 +187,7 @@ a {
   text-align: center;
   color: #fff;
   font-size: 28px;
-  font-family: --font_content, sans-serif;
+  font-family: var(--font_content);
   margin-bottom: 0;
 }
 
@@ -206,7 +206,7 @@ a {
 .white-list__login {
   color: #fff;
   font-size: 26px;
-  font-family: --font_content, sans-serif;
+  font-family: var(--font_content);
   margin-bottom: 0;
 }
 
@@ -220,7 +220,7 @@ a {
   border-radius: 40px;
   display: flex;
   align-items: center;
-  font-family: --font_content, sans-serif;
+  font-family: var(--font_content);
   font-weight: normal;
 }
 
@@ -371,7 +371,7 @@ a {
   color: #ffff;
   white-space: nowrap;
   -webkit-text-stroke: 0.5px black;
-  font-family: --font_bold;
+  font-family: var(--font_bold);
 }
 
 .white-list__subtitle {
@@ -385,7 +385,7 @@ a {
 
 .white-list__code {
   width: 88%;
-  font-family: --font_content;
+  font-family: var(--font_content);
   font-weight: 200;
   margin-top: 20px;
 }
@@ -413,14 +413,14 @@ a {
 }
 
 .notfound__title {
-  font-family: --font_content, sans-serif;
+  font-family: var(--font_content);
   font-weight: 400;
   color: #fff;
   margin-bottom: 10px;
 }
 
 .notfound__sub {
-  font-family: --font_content, sans-serif;
+  font-family: var(--font_content);
   font-weight: 600;
   color: rgb(250 244 244 / 60%);
 }

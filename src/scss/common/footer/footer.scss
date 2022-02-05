@@ -19,7 +19,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: --font_content;
+  font-family: var(--font_content);
   border: 2px solid #333;
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.2);

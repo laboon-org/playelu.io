@@ -1,6 +1,6 @@
 import React from 'react';
 
-const recursiveCloneChildren = (children, data) => {
+const RecursiveCloneChildren = (children, data) => {
   return React.Children.map(children, (child) => {
     let childProps = {
       urlApi: data.urlApi,
@@ -15,12 +15,12 @@ const recursiveCloneChildren = (children, data) => {
       setting: data.setting,
     };
     childProps.DECORATED = true;
-    const children = recursiveCloneChildren(child.props.children, data);
+    const children = RecursiveCloneChildren(child.props.children, data);
     return React.cloneElement(child, childProps, children);
   });
 };
 export default function({children, data}) {
-  const comp = recursiveCloneChildren(children, data);
+  const comp = RecursiveCloneChildren(children, data);
   return (
     comp
   );

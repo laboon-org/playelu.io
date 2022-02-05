@@ -14,7 +14,7 @@ export default function ContractAddress(props) {
           src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.coinBoon}
           alt=""
         />
-        <a className="market" href="">
+        <a className="market" href="/#">
           <span>Contract Address: Coming Soon !!!</span>
         </a>
         <img

@@ -1,11 +1,10 @@
 import React from 'react';
-import _ from 'lodash';
+
+import Assets from "../../constant/assets";
 
 import '../../scss/page_home/home.scss';
 import '../../scss/page_home/home_tablet.scss';
 import '../../scss/page_home/home_mobile.scss';
-
-import Assets from "./../../constant/assets";
 
 import HeaderContainer from "../../components/header/HeaderContainer";
 import FooterContainer from "../../components/footer/FooterContainer";
@@ -13,10 +12,10 @@ import FloatingDiscord from "../../components/footer/FloatingDiscord";
 
 import UrlRecursive from '../../components/UrlRecursive';
 import Background from './backgrounds/background';
-import Content from './playelu_content';
+import HomeContent from './HomeContent';
 
-export default function homeContainer(props) {
-  const {urlApi} = props;
+export default function HomeContainer(props) {
+  const { urlApi } = props;
 
   return (
     <UrlRecursive data={props}>
@@ -26,11 +25,11 @@ export default function homeContainer(props) {
         </div>
         <div className="playelu">
           <Background />
-          <Content />
+          <HomeContent urlApi={urlApi} />
         </div>
       </div>
       <div className="playelu-footer">
-        <FooterContainer />
+        <FooterContainer urlApi={urlApi} />
         <FloatingDiscord urlApi={urlApi} />
       </div>
     </UrlRecursive>
