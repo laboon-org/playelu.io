@@ -1,4 +1,5 @@
 import React from "react";
+
 import detectEthereumProvider from "@metamask/detect-provider";
 import wallet from "../../../util/wallet";
 import messageStorage from "../../../util/messageStorage";
@@ -12,6 +13,8 @@ export default function LoginProcess(props) {
   //* Function
   const connectWalletWeb3 = async () => {
     const provider = await detectEthereumProvider();
+
+    // console.log(provider);
 
     if (provider) {
       //* Listener

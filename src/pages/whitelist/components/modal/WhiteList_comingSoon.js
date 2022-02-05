@@ -2,14 +2,17 @@ import React, {useEffect, useState, useRef} from 'react';
 import './modal_comingsoon.scss';
 
 export default function WhiteListComingSoon(props) {
+
   const [timerDays, settimerDays] = useState('00');
   const [timerHours, settimerHours] = useState('00');
   const [timerMinutes, settimerMinutes] = useState('00');
   const [timerSeconds, settimerSeconds] = useState('00');
+
   const {dateProp} = props;
 
   const interval = useRef();
   const isFirst = useRef(true);
+
   const startTimer = () => {
     const countDownDate = new Date(dateProp).getTime();
     interval.current = setInterval(() => {
@@ -31,12 +34,14 @@ export default function WhiteListComingSoon(props) {
       }
     }, 1000);
   };
+
   useEffect(() => {
     if (isFirst.current) {
       isFirst.current = false;
       startTimer();
     }
   });
+
   return (
     <div className='contribute'>
       <span className='contribute--shadow'></span>
@@ -48,10 +53,10 @@ export default function WhiteListComingSoon(props) {
         />
         <div className='modal-succeed__body__content modal-comingSoon__content'>
           <p className='modal-succeed__content--title'>
-                        Coming Soon!
+            Coming Soon!
           </p>
           <span className='modal-succeed__content--sub'>
-                        We’ll open the sale page soon, please wait! Thanks
+            We’ll open the sale page soon, please wait! Thanks
           </span>
         </div>
 
@@ -70,7 +75,7 @@ export default function WhiteListComingSoon(props) {
               <span>{timerHours}</span>
             </div>
             <span className='countdown-element__title'>
-                            Hour
+              Hour
             </span>
           </div>
           <div className='countdown-element'>
