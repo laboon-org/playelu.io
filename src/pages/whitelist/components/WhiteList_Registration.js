@@ -79,7 +79,7 @@ const findBoonValue = () => {
       }
     });
 
-    console.log("index = " + index);
+    // console.log("index = " + index);
 
     if (index != -1) {
       boonValue = data[index]["Sell Price"];

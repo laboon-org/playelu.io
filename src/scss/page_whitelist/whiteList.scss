@@ -4,7 +4,31 @@ a {
   color: #efa059;
   cursor: pointer;
 }
+.input {
+  position: relative;
+}
+.input {
+  width: 100%;
+  color: #ffff;
+  background: rgb(24 23 23 / 60%);
+  border-radius: 10px;
+  border: 1px solid #ffff;
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #b6b6b6;
+    opacity: 1; /* Firefox */
+  }
+  :input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #b6b6b6;
+  }
+  ::input-placeholder {
+    /* Microsoft Edge */
+    color: #b6b6b6;
+  }
+}
 
+/** Main Styles */
 .white-list_succceed__frame {
   height: 100%;
   display: flex;
@@ -51,166 +75,60 @@ a {
   overflow: hidden;
 }
 
-.header-sale {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 80px;
-  border-bottom: 2px solid #fff;
-}
-.link-home {
-  max-width: 50px;
-  width: 10%;
-  margin: 10px;
-  cursor: pointer;
-}
-.home-icon {
-  width: 100%;
-  cursor: pointer;
-}
-.title {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-.title-header {
-  font-family: var(--font_black);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-}
-.title-header-1,
-.title-header-2 {
-  display: flex;
-}
-.seed {
-  margin: 0 15px -7px 15px;
-  font-size: 46px;
-  text-transform: uppercase;
-  color: #3ea0d3;
-}
-.boon-text {
-  margin: 0 15px -3px 15px;
-  font-size: 34px;
-  color: #efa059;
-  text-transform: uppercase;
-  display: flex;
-  align-items: flex-end;
-}
-.header-text {
-  display: flex;
-  align-items: flex-end;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.gameplay-btn {
-  max-width: 135px;
-  min-width: 70px;
-  width: 12%;
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_gameplays.webp")
-    no-repeat center / contain;
-  padding: 10px 0;
-  margin-right: 2%;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-.gameplay-btn span {
-  font-family: var(--font_content);
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-size: 21px;
-  color: #ffff;
-  cursor: pointer;
-}
-
 .white-list__body {
-  max-width: 1920px;
-  max-height: 1113px;
-  width: 96%;
-  margin: auto;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.logo {
-  min-width: 220px;
-  width: 30%;
-  display: flex;
-  align-items: center;
-}
-
-.logo-frame {
-  width: 100%;
-  margin: auto;
-}
-
-.elu-logo {
-  width: 100%;
-}
-
-.boon-coin {
-  width: 70%;
-  margin-left: 12%;
-  margin-top: -10%;
+  margin-top: 154px;
+  height: calc(100vh - 56px);
 }
 
 /* Begin body-right */
 .body-right,
 .white-list__body--right {
-  position: relative;
-  min-width: 300px;
-  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.body-right__title,
+.body-right__title {
+  font-size: 20px;
+  color: #ffff;
+  white-space: nowrap;
+  font-family: var(--font_bold);
+  -webkit-text-stroke: 1.5px black;
+  margin-bottom: 8px;
+}
 .white-list__body--right__title {
-  position: absolute;
-  top: -50px;
   font-size: 32px;
   color: #ffff;
   white-space: nowrap;
-  font-family: var(--font_black);
-  letter-spacing: 2px;
+  font-family: var(--font_bold);
   -webkit-text-stroke: 0.5px black;
+  margin-bottom: 8px;
 }
 
 .login {
   min-width: 300px;
-  max-width: 450px;
   width: 100%;
-  height: 108px;
+  height: 54px;
   margin: 0 auto;
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp")
-    no-repeat center / contain;
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp");
+  background-size: cover;
   border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 8px;
 }
 
 .login-frame {
   display: flex;
-  width: 90%;
+  width: 100%;
   height: 100%;
   margin: auto;
-  margin-left: 10%;
   align-items: center;
   justify-content: left;
+  cursor: pointer;
 }
 
 .login-title {
@@ -224,9 +142,10 @@ a {
 .login-icon {
   display: flex;
   justify-content: center;
-  max-width: 40px;
-  width: 10%;
-  margin-right: 4%;
+  width: 30px;
+  margin-right: 12px;
+  margin-left: 36px;
+  margin-top: 4px;
 }
 
 .login-icon img {
@@ -235,7 +154,7 @@ a {
 
 .white-list__login {
   color: #fff;
-  font-size: 26px;
+  font-size: 15px;
   font-family: var(--font_content);
   margin-bottom: 0;
 }
@@ -305,33 +224,7 @@ a {
   font-size: 14px;
 }
 
-.input {
-  position: relative;
-}
 
-.input {
-  width: 100%;
-  color: #ffff;
-  background: rgb(24 23 23 / 60%);
-  border-radius: 10px;
-  border: 1px solid #ffff;
-
-  ::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #b6b6b6;
-    opacity: 1; /* Firefox */
-  }
-
-  :input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: #b6b6b6;
-  }
-
-  ::input-placeholder {
-    /* Microsoft Edge */
-    color: #b6b6b6;
-  }
-}
 
 .input-text {
   width: calc(100% - 30px);
@@ -390,7 +283,6 @@ a {
   color: #ffff;
   font-size: 16px;
 }
-
 .white-list__title {
   text-align: center;
   margin-bottom: 30px;
@@ -403,16 +295,13 @@ a {
   -webkit-text-stroke: 0.5px black;
   font-family: var(--font_bold);
 }
-
 .white-list__subtitle {
   font-size: 20px;
 }
-
 .white-list__strategy {
   font-size: 20px;
   color: #fed34e;
 }
-
 .white-list__code {
   width: 88%;
   font-family: var(--font_content);
@@ -420,7 +309,7 @@ a {
   margin-top: 20px;
 }
 
-/* CSS NOTFOUND */
+/* NOT FOUND: State */
 .notfound {
   height: 90%;
   display: flex;
@@ -453,4 +342,12 @@ a {
   font-family: var(--font_content);
   font-weight: 600;
   color: rgb(250 244 244 / 60%);
+}
+
+/** Overriding Footer Section */
+.footer {
+  border: 0px !important;
+  border-radius: 0px !important;
+  background-color: transparent !important;
+  padding: 0px !important;
 }

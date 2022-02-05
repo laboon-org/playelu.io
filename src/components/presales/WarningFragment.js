@@ -1,10 +1,10 @@
 import React from "react";
-import message from "../../../../util/messageStorage";
+import message from "../../util/messageStorage";
 
-import "./_modal.scss";
-import "./_responsive.scss";
+import "../../pages/presale/component/modal/_modal.scss";
+import "../../pages/presale/component/modal/_responsive.scss";
 
-export default function Warning(props) {
+export default function WarningFragment(props) {
   const { changeStateWarning } = props;
   return (
     <React.Fragment>
@@ -22,7 +22,7 @@ export default function Warning(props) {
               className="warning__btn"
               onClick={() => changeStateWarning(false)}
             >
-              <span>ok</span>
+              <span>OK</span>
             </div>
           </div>
         </div>

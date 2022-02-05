@@ -11,7 +11,7 @@ import {
 } from '@web3-react/core';
 
 import {Web3Provider} from '@ethersproject/providers';
-import Warning from './component/modal/Warning';
+import WarningFragment from "../../components/presales/WarningFragment";
 import {useState} from 'react';
 
 function getLibrary(provider) {
@@ -19,7 +19,9 @@ function getLibrary(provider) {
   library.pollingInterval = 12000;
   return library;
 }
-export default function presaleContainer() {
+
+// Steve Le: Uppercase Component Name for ensure Hook get no warning at all.
+export default function PresaleContainer() {
   const [showWarrning, setShowWarrning] = useState(false);
 
   const changeStateWarning = (bool) => {
@@ -30,7 +32,9 @@ export default function presaleContainer() {
     <Web3ReactProvider getLibrary={getLibrary}>
       <div className="sale">
         <Header />
-        {showWarrning && <Warning changeStateWarning={changeStateWarning} />}
+        {showWarrning && (
+          <WarningFragment changeStateWarning={changeStateWarning} />
+        )}
         <SaleBody changeStateWarning={changeStateWarning} />
       </div>
     </Web3ReactProvider>

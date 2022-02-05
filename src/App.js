@@ -22,7 +22,7 @@ import Loading from './components/Loading';
 const HomePage = React.lazy(() => import('./pages/home/homeContainer'));
 const GameplayPage = React.lazy(() => import('./pages/gameplay/gameplayContainer'));
 const WhiteListPage = React.lazy(() => import('./pages/whitelist/whitelistContainer'));
-// const SalePage = React.lazy(() => import('./pages/sale_page/SalePage'));
+const PreSalePage = React.lazy(() => import('./pages/presale/PresaleContainer'));
 // const Claim = React.lazy(() => import('./pages/claim/ClaimPage'));
 
 function App(_props) {
@@ -148,7 +148,7 @@ function App(_props) {
           />
           {/* <Route
             path="/presales"
-            element={<UrlRecursivePanel Comp={SalePage} />}
+            element={<UrlRecursiveContainer Comp={PreSalePage} />}
           /> */}
           {/* <Route path="/claim" element={<UrlRecursivePanel Comp={Claim} />} /> */}
         </Routes>

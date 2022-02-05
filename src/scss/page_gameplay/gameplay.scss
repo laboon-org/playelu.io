@@ -41,6 +41,9 @@
     cursor: pointer;
     padding-top: 12px;
     text-transform: uppercase;
+    color: #153446;
+    font-family: var(--font_black);
+    margin-bottom: 2px;
   }
 }
 .btn-shadow {
@@ -53,8 +56,9 @@
     color: #fff;
     font-size: 13px;
     margin: 0;
-    padding-bottom: 12px;
+    padding-bottom: 8px;
     text-transform: uppercase;
+    font-family: var(--font_black);
   }
 }
 .elu-btn:hover {

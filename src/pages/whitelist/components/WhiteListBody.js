@@ -1,14 +1,17 @@
 import React, {useState, useCallback, useEffect} from 'react';
 import {useSearchParams} from 'react-router-dom';
 
-import Logo from '../../presale/component/logo';
+import { Container, Row, Col } from "react-bootstrap";
+
+import LogoArea from "../../../components/presales/LogoArea";
 import NotfoundModal from '../../presale/component/modal/NotFoundModal';
+
 import WhiteListBodyRight from './WhiteListBody__right';
 
 export default function WhiteListBody(props) {
-  const {changeStateWarning} = props;
   const [notfound, setNotfound] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
+
   const showModalNotFound = useCallback(() => {
     setNotfound(true);
   });
@@ -24,10 +27,16 @@ export default function WhiteListBody(props) {
   return (
     <div className="white-list__body">
       {!notfound ? (
-        <>
-          <Logo />
-          <WhiteListBodyRight showModalNotFound={showModalNotFound} />
-        </>
+        <Container>
+          <Row>
+            <Col sm={5}>
+              <LogoArea />
+            </Col>
+            <Col sm={7}>
+              <WhiteListBodyRight showModalNotFound={showModalNotFound} />
+            </Col>
+          </Row>
+        </Container>
       ) : (
         <NotfoundModal />
       )}
