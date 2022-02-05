@@ -1,2 +1,6 @@
 
-# The GraphQL Endpoint Usage should be here
+# The Api Endpoint Usage should be here
+
+## GraphQL
+
+## Rest
