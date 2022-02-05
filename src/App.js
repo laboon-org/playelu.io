@@ -101,15 +101,15 @@ function App(_props) {
   }, []);
 
   const LoadData = () => {
-    usePromise((_a) =>
-      new Promise((resolve) => {
-        const data = axios.post('https://laboon.as.r.appspot.com/config')
-            .then((value) => {
-              return value.data.content;
-            }).catch((_err) => {
-              return {};
+    const load = usePromise((_a) =>
+      new Promise(async (resolve) => {
+        const data = await axios.post('https://laboon.as.r.appspot.com/config')
+          .then((value) => {
+            return value.data.content;
+          }).catch((_err) => {
+            return {};
             //* Not to be error
-            });
+          });
         messageStorage.getInstance().setMessage('config', data);
         resolve(true);
       })
