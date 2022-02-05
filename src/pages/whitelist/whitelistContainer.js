@@ -4,7 +4,6 @@ import '../../scss/page_whitelist/whitelist.scss';
 import "../../scss/page_whitelist/whitelist_tablet.scss";
 import "../../scss/page_whitelist/whitelist_mobile.scss";
 
-//import Header from '../presale/component/Header';
 import HeaderContainer from "../../components/header/HeaderContainer";
 import FooterContainer from "../../components/footer/FooterContainer";
 import WhiteListBody from './components/WhiteListBody';
