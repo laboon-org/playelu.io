@@ -23,7 +23,7 @@ module.exports = {
     'max-len': 'off', // disables line length check
     'new-cap': 'off',
     'camelcase': 'off',
-    'no-unused-vars': 'off',
+    'no-unused-vars': 'on',
     'no-unused-expressions': 'off',
   },
 };

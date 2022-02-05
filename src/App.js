@@ -17,7 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/common/global.scss';
 
 import UrlRecursive from './components/UrlRecursive';
-import messageStorage from './module/messageStorage';
+import messageStorage from './util/messageStorage';
 import Loading from './components/Loading';
 
 // Pages

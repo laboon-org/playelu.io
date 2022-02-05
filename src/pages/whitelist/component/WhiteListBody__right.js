@@ -2,7 +2,7 @@ import React, {useState, useLayoutEffect} from 'react';
 import moment from 'moment';
 
 import LoginProcess from './LoginProcess';
-import messageStorage from '../../../module/messageStorage';
+import messageStorage from '../../../util/messageStorage';
 import WhiteListComingSoon from './modal/WhiteList_comingSoon';
 
 const WhiteListRegistration = React.lazy(() =>

@@ -1,16 +1,14 @@
-
-import React, {useState, useCallback, useRef} from 'react';
-import axios from 'axios';
-import {useEagerConnect, useInactiveListener} from './hooks';
-import {useWeb3React} from '@web3-react/core';
-import setting from '../../../constant/setting';
-import detectEthereumProvider from '@metamask/detect-provider';
-import connectorConst from './connector/connectorConst';
-import wallet from '../../../module/wallet';
-import messageStorage from '../../../module/messageStorage';
-import message from '../../../constant/message';
-import './modal/modal-loader.scss';
-
+import React, { useState, useRef } from "react";
+import axios from "axios";
+import { useEagerConnect, useInactiveListener } from "./hooks";
+import { useWeb3React } from "@web3-react/core";
+import setting from "../../../constant/setting";
+import detectEthereumProvider from "@metamask/detect-provider";
+import connectorConst from "./connector/connectorConst";
+import wallet from "../../../util/wallet";
+import messageStorage from "../../../util/messageStorage";
+import message from "../../../constant/message";
+import "./modal/modal-loader.scss";
 
 export default function Connector(props) {
   //* Props
@@ -28,7 +26,16 @@ export default function Connector(props) {
   });
 
   const context = useWeb3React();
-  const {connector, library, chainId, account, activate, deactivate, active, error} = context;
+  const {
+    connector,
+    library,
+    chainId,
+    account,
+    activate,
+    deactivate,
+    active,
+    error,
+  } = context;
   const [activatingConnector, setActivatingConnector] = useState();
   const isFirst = useRef(true);
 
@@ -52,42 +59,40 @@ export default function Connector(props) {
 
   useInactiveListener(!triedEager || !!activatingConnector);
 
-
   //* Loading icon
   const LoadingIcon = () => {
     return (
-      <div className="loading-icon"><div></div><div></div><div></div><div></div></div>
+      <div className="loading-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     );
   };
 
   const Login = (props) => {
-    const {icon, title, loading} = props;
+    const { icon, title, loading } = props;
     return (
-      <div className='login-frame'>
-        <div className='login-icon'>
-          {
-                        !loading ?
-                            <img
-                              className=''
-                              src={icon}
-                              alt=''
-                            /> : <LoadingIcon />
-          }
+      <div className="login-frame">
+        <div className="login-icon">
+          {!loading ? <img className="" src={icon} alt="" /> : <LoadingIcon />}
         </div>
-        <h4 className='login-title'>
-          {title}
-        </h4>
-      </div>);
+        <h4 className="login-title">{title}</h4>
+      </div>
+    );
   };
 
   const checkChainID = async (provider) => {
-    const chainId = parseInt(await provider.request({method: 'eth_chainId'}));
+    const chainId = parseInt(await provider.request({ method: "eth_chainId" }));
     if (chainId in setting.CHAIN_ID_SUPPORT) {
-      return {isValid: true};
+      return { isValid: true };
     } else {
-      messageStorage.getInstance().setMessage('Warning', message.EN.WALLET.NOT_SUPPORT_CHAIN_ID);
+      messageStorage
+        .getInstance()
+        .setMessage("Warning", message.EN.WALLET.NOT_SUPPORT_CHAIN_ID);
       changeStateWarning(true);
-      return {isValid: false};
+      return { isValid: false };
     }
   };
   const connectWalletWeb3 = async () => {
@@ -95,16 +100,16 @@ export default function Connector(props) {
 
     if (provider) {
       //* Listener
-      provider.on('accountsChanged', (accounts) => {
+      provider.on("accountsChanged", (accounts) => {
         window.location.reload();
       });
-      provider.on('chainChanged', (chainId) => {
+      provider.on("chainChanged", (chainId) => {
         window.location.reload();
       });
 
       //* set Provider
       //* getAccount
-      const account = (await provider.request({method: 'eth_requestAccounts'}));
+      const account = await provider.request({ method: "eth_requestAccounts" });
 
       //* Check chain support
       const checkChain = await checkChainID(provider);
@@ -113,7 +118,7 @@ export default function Connector(props) {
       }
 
       wallet.getInstance().setAddress(account[0]);
-      wallet.getInstance().setWallet('metamask');
+      wallet.getInstance().setWallet("metamask");
 
       return {
         isValid: true,
@@ -121,33 +126,36 @@ export default function Connector(props) {
     } else {
       return {
         isValid: false,
-        message: 'TEST',
+        message: "TEST",
       };
     }
   };
   const getFailureMessage = (messageCode) => {
     switch (messageCode) {
-      case 'NO_ADDRESS': {
-        return 'Your Wallet Address isn\'t in WL';
+      case "NO_ADDRESS": {
+        return "Your Wallet Address isn't in WL";
       }
       default: {
-        return 'Unable to identify error';
+        return "Unable to identify error";
       }
     }
   };
 
   const checkWallet = async () => {
     try {
-      const SHEET_NAME = '2.Strategy';
-      const URL = 'https://laboon.as.r.appspot.com/check_address';
-      const checkWallet = await axios.post(URL, {
-        'sheet_name': SHEET_NAME,
-        'address_wallet': wallet.getInstance().account,
-      }).then((res) => {
-        return res.data;
-      }).catch((err) => {
-        throw err;
-      });
+      const SHEET_NAME = "2.Strategy";
+      const URL = "https://laboon.as.r.appspot.com/check_address";
+      const checkWallet = await axios
+        .post(URL, {
+          sheet_name: SHEET_NAME,
+          address_wallet: wallet.getInstance().account,
+        })
+        .then((res) => {
+          return res.data;
+        })
+        .catch((err) => {
+          throw err;
+        });
 
       if (checkWallet.status != 200) {
         return {
@@ -162,23 +170,23 @@ export default function Connector(props) {
     } catch (err) {
       return {
         isValid: false,
-        message: 'Unable to identify error',
+        message: "Unable to identify error",
       };
     }
   };
 
   const Web3Connector = (props) => {
-    const {wallet_name, icon, title} = props;
+    const { wallet_name, icon, title } = props;
     return (
       <div
-        className='login'
+        className="login"
         onClick={async () => {
           setLoadingShow({
             ...loadingShow,
             [wallet_name]: true,
           });
           switch (wallet_name) {
-            case 'metamask': {
+            case "metamask": {
               if (window.ethereum && window.ethereum.isMetaMask) {
                 const result = await connectWalletWeb3();
                 if (result.isValid) {
@@ -200,18 +208,26 @@ export default function Connector(props) {
                   //* Input message
                   //* No metamask
                   // [Todo : Sáng]: Hoàn thiện phần set message cho 2 connector còn lại
-                  messageStorage.getInstance().setMessage('NotFoundModal', 'metamask');
+                  messageStorage
+                    .getInstance()
+                    .setMessage("NotFoundModal", "metamask");
                   showModalNotFound();
                 }
               } else {
-                messageStorage.getInstance().setMessage('NotFoundModal', 'metamask');
+                messageStorage
+                  .getInstance()
+                  .setMessage("NotFoundModal", "metamask");
                 showModalNotFound();
               }
 
               break;
             }
-            case 'coin98': {
-              if (window.coin98 && window.ethereum && window.ethereum?.isCoin98) {
+            case "coin98": {
+              if (
+                window.coin98 &&
+                window.ethereum &&
+                window.ethereum?.isCoin98
+              ) {
                 const result = await connectWalletWeb3();
                 if (result.isValid) {
                   const checkAddress = await checkWallet();
@@ -231,11 +247,15 @@ export default function Connector(props) {
                 } else {
                   //* Input message
                   //* No coin98
-                  messageStorage.getInstance().setMessage('NotFoundModal', 'coin98');
+                  messageStorage
+                    .getInstance()
+                    .setMessage("NotFoundModal", "coin98");
                   showModalNotFound();
                 }
               } else {
-                messageStorage.getInstance().setMessage('NotFoundModal', 'coin98');
+                messageStorage
+                  .getInstance()
+                  .setMessage("NotFoundModal", "coin98");
                 showModalNotFound();
               }
 
@@ -247,17 +267,13 @@ export default function Connector(props) {
           }
         }}
       >
-        <Login
-          icon={icon}
-          title={title}
-          loading={loadingShow[wallet_name]}
-        />
+        <Login icon={icon} title={title} loading={loadingShow[wallet_name]} />
       </div>
     );
   };
 
   const SetConnector = (props) => {
-    const {wallet_name, icon, title} = props;
+    const { wallet_name, icon, title } = props;
     const currentConnector = connectorConst[wallet_name];
 
     //* Đang được kích hoạt
@@ -268,57 +284,52 @@ export default function Connector(props) {
 
     return (
       <button
-        className='login'
+        className="login"
         onClick={() => {
           setActivatingConnector(currentConnector);
           activate(currentConnector);
         }}
       >
-        <Login
-          icon={icon}
-          title={title}
-        />
+        <Login icon={icon} title={title} />
         {/*
                 [TODO: Dũng] convert lại CSS này ra một file nào đó
                 */}
         <div
           style={{
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            color: 'black',
-            margin: '0 0 0 1rem',
+            position: "absolute",
+            top: "0",
+            left: "0",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            color: "black",
+            margin: "0 0 0 1rem",
           }}
         >
           {activating}
-          {connected && (() => {
-            wallet.getInstance().setAddress(account);
-            wallet.getInstance().setWallet(wallet_name);
-          })()}
+          {connected &&
+            (() => {
+              wallet.getInstance().setAddress(account);
+              wallet.getInstance().setWallet(wallet_name);
+            })()}
         </div>
-      </button >
+      </button>
     );
   };
 
-
   return (
-    <div className='body-right'>
-      <span className='body-right__title'>
-                WALLET SELECTION
-      </span>
+    <div className="body-right">
+      <span className="body-right__title">WALLET SELECTION</span>
       <Web3Connector
-        icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp'
-        title='Login with Metamask'
-        wallet_name='metamask'
+        icon="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp"
+        title="Login with Metamask"
+        wallet_name="metamask"
       />
 
       <Web3Connector
-        icon='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/icon_coin98.png'
-        title='Login with Coin98'
-        wallet_name='coin98'
+        icon="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/icon_coin98.png"
+        title="Login with Coin98"
+        wallet_name="coin98"
       />
 
       {/* temp hide */}
@@ -332,6 +343,6 @@ export default function Connector(props) {
                 title='Login with WalletConnect'
                 wallet_name='walletconnect'
             /> */}
-    </div >
+    </div>
   );
 }

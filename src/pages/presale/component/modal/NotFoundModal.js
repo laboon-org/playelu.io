@@ -3,7 +3,7 @@ import React from 'react';
 import '../../../../scss/page_presale/notfound_modal.scss';
 
 import {isMobile} from 'react-device-detect';
-import message from '../../../../module/messageStorage';
+import message from '../../../../util/messageStorage';
 
 const defineConstant = {
   metamask: {
@@ -26,6 +26,7 @@ export default function NotfoundModal(props) {
   const name = defineConstant[message.getInstance().getMessage('NotFoundModal')].name;
   const icon = defineConstant[message.getInstance().getMessage('NotFoundModal')].icon;
   const link = defineConstant[message.getInstance().getMessage('NotFoundModal')].link_download;
+
   return (
     <div className='notfound'>
       <img
@@ -61,6 +62,6 @@ export default function NotfoundModal(props) {
           </p>
         </div>
       </div>
-    </div >
+    </div>
   );
 }

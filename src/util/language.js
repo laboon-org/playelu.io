@@ -1,13 +1,13 @@
 class language {
-  defaultLanguage = 'EN';
-  chooseLanguage = '';
+  defaultLanguage = "EN";
+  chooseLanguage = "";
   static instance = new language();
   static getIn() {
     return this.instance;
   }
   setLang(lang) {
     switch (lang) {
-      case 'EN': {
+      case "EN": {
         this.chooseLanguage = lang;
         break;
       }
@@ -17,7 +17,9 @@ class language {
     }
   }
   getLang() {
-    return this.chooseLanguage === '' ? this.defaultLanguage : this.chooseLanguage;
+    return this.chooseLanguage === ""
+      ? this.defaultLanguage
+      : this.chooseLanguage;
   }
 }
 export default language;
