@@ -4,7 +4,12 @@
 
 ```shell
 Visual Studio Code
-Extensions: A, B
+Extensions:
+- 1. Typescript React code snippets
+- 2. React Extension Pack
+- 3. TypeScript Importer
+- 4. Prettier - Code formatter
+- 5. Reactjs code snippets
 ```
 
 ## Prerequisites

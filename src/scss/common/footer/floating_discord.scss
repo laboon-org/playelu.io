@@ -1,0 +1,53 @@
+.discord {
+  position: absolute;
+  bottom: 16px;
+  right: 0;
+  z-index: 100;
+  width: 220px;
+  transform: scale(1) translateY(0);
+  animation: all ease 0.7s;
+  .discord-img {
+    cursor: pointer;
+    width: 95%;
+    height: auto;
+  }
+  .mobile__discord-img {
+    width: 100%;
+    display: none;
+  }
+}
+.discord-img:hover {
+  transform: translateY(-10px);
+}
+
+// Medium devices (tablets)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .discord {
+    right: -3%;
+    transform: scale(0.7) translateY(25%);
+
+    .discord-img {
+      display: block;
+    }
+
+    .mobile__discord-img {
+      display: none;
+    }
+  }
+}
+
+// Small devices (mobiles)
+@media (max-width: 767.98px) {
+  .discord {
+    right: -96px;
+    transform: scale(0.23) translateY(-200vh);
+
+    .discord-img {
+      display: none;
+    }
+    .mobile__discord-img {
+      display: block;
+    }
+    bottom: -240px;
+  }
+}

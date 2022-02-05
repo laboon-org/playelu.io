@@ -9,7 +9,7 @@ import {useState, useEffect, useRef} from 'react';
 
 // Api
 import axios from 'axios';
-import {Queryimage, Query, querySetting} from './api/graphql/graphQLSchema.js';
+import {graphQLEndPoint, Query, querySetting} from './api/graphql/graphQLSchema.js';
 
 // import './scss/sale_page/style.scss';
 // Style
@@ -36,7 +36,7 @@ function App(_props) {
     if (isFirst.current) {
       isFirst.current = false;
       new Promise((resolve) => axios({
-        url: Queryimage,
+        url: graphQLEndPoint,
         method: 'POST',
         data: {
           query: Query,
@@ -81,7 +81,7 @@ function App(_props) {
             resolve({...mainObj});
           })).then((img) => {
         axios({
-          url: Queryimage,
+          url: graphQLEndPoint,
           method: 'POST',
           data: {
             query: querySetting,

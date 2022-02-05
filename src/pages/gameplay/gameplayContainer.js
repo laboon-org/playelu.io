@@ -1,14 +1,15 @@
 import React from 'react';
 import _ from 'lodash';
 
-import '../../scss/page_gameplay/gameplay_desktop.scss';
+import '../../scss/page_gameplay/gameplay.scss';
 import '../../scss/page_gameplay/gameplay_tablet.scss';
 import '../../scss/page_gameplay/gameplay_mobile.scss';
 
 import Assets from './../../constant/assets';
 
-import HeaderContainer from '../../components/header/HeaderContainer';
-import FooterContainer from '../../components/footer/FooterContainer';
+import HeaderContainer from "../../components/header/HeaderContainer";
+import FooterContainer from "../../components/footer/FooterContainer";
+import FloatingDiscord from "../../components/footer/FloatingDiscord";
 
 import SkyCenter from './sky/skyCenter';
 import SectionNest from './components/SectionNest';
@@ -51,6 +52,7 @@ export default function gameplayContainer(props) {
       </div>
       <div className="playelu-footer">
         <FooterContainer />
+        <FloatingDiscord urlApi={urlApi} />
       </div>
     </UrlRecursive>
   );

@@ -32,21 +32,7 @@ export default function FooterContainer(props) {
             <span>Terms & Conditions</span>
           </a>
         </div>
-        <span className="version">v0.7.0 - 20220203</span>
-      </div>
-      <div className="discord">
-        <a href="https://discord.io/EluVerse">
-          <img
-            className="discord-img"
-            src={_.isEmpty(urlApi) ? '' : urlApi.image.discord}
-            alt=""
-          />
-          <img
-            className="mobile__discord-img"
-            src={_.isEmpty(urlApi) ? '' : urlApi.image.mobileDiscord}
-            alt=""
-          />
-        </a>
+        <span className="version">v0.7.1 - 20220205</span>
       </div>
     </UrlRecursive>
   );

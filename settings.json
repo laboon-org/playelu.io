@@ -13,5 +13,5 @@
     "editor.renderWhitespace": "all",
     "editor.acceptSuggestionOnEnter": "off"
   },
-  "editor.rulers": [80, 120, 160]
+  "editor.rulers": [120, 160]
 }

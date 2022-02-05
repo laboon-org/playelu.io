@@ -6,7 +6,6 @@
   height: calc(100vh - 56px);
   overflow: hidden;
 }
-
 .playelu-frame {
   justify-content: center;
   display: flex;
@@ -27,7 +26,6 @@
     }
   }
 }
-
 .playelu-tittle {
   width: 100%;
   text-align: center;
@@ -62,7 +60,6 @@
     cursor: text;
   }
 }
-
 .subcribe__playelu-btn {
   font-weight: 500;
   position: absolute;
@@ -95,7 +92,6 @@
   justify-content: center;
   cursor: pointer;
 }
-
 .iconEmail {
   color: #114f8c;
   position: absolute;
@@ -115,7 +111,6 @@
   margin: 10px auto;
   letter-spacing: 0.5px;
 }
-
 .name-email {
   width: 100%;
   color: #fff;
@@ -131,8 +126,6 @@
   -moz-animation: twirl 10s linear 0s infinite;
   -o-animation: twirl 10s linear 0s infinite;
 }
-
-
 .playelu {
   .playelu-background {
     background: radial-gradient(
@@ -159,7 +152,6 @@
     }
   }
 }
-
 .shooting-star {
   position: absolute;
   z-index: 0;
@@ -169,20 +161,17 @@
   right: 0;
   overflow: hidden;
 }
-
 .my_star-all {
   position: relative;
   width: 100%;
   transform: rotate(140deg);
   height: 20px;
 }
-
 .my-star {
   width: 100%;
   position: absolute;
   bottom: 0;
 }
-
 .my-star::before {
   content: "";
   position: absolute;
@@ -197,7 +186,6 @@
     rgb(246 246 237 / 0%)
   );
 }
-
 .my-star img {
   animation: twirl 0.00000s ease 0s infinite;
   animation: twirl 4s linear 0s infinite;
@@ -205,24 +193,20 @@
   animation: twirl 4s linear 0s infinite;
   width: 100%;
 }
-
 .cloud {
   width: 15%;
   animation: cloud 25s infinite linear;
   position: relative;
   display: flex;
 }
-
 .cloud img {
   width: 100%;
 }
-
 .x1 {
   animation: cloud 18s infinite linear;
   opacity: 1;
   left: -15%;
 }
-
 .x2 {
   animation: cloud 21s infinite linear;
   opacity: 0.9;
@@ -230,21 +214,18 @@
   top: 0;
   left: -20%;
 }
-
 .x3 {
   animation: cloud 26s infinite linear;
   top: 25%;
   transform: scale(0.6);
   left: -15%;
 }
-
 .x4 {
   animation: cloud 22s infinite linear;
   top: 30%;
   left: -25%;
   transform: scale(0.9);
 }
-
 .x5 {
   animation: cloud 21s infinite linear;
   opacity: 0.6;
@@ -252,10 +233,17 @@
   bottom: 20vh;
   left: -40%;
 }
-
 .x6 {
   animation: cloud 25s infinite linear;
   opacity: 1;
   top: 40%;
   left: -40%;
+}
+
+/** Overriding Footer Section */
+.footer {
+  border: 0px !important;
+  border-radius: 0px !important;
+  background-color: transparent !important;
+  padding: 0px !important;
 }

@@ -4,35 +4,18 @@
     margin-left: 0;
     margin-right: 0;
   }
-
   .market span {
     font-size: 13px !important;
     letter-spacing: initial !important;
   }
-
   .playelu__link-ele {
     width: 35px;
   }
-
   .playelu__link {
     width: 100%;
   }
-
   .playelu__link-ele img {
     width: 90%;
-  }
-
-  .discord {
-    right: -96px;
-    transform: scale(0.23) translateY(-200vh);
-
-    .discord-img {
-      display: none;
-    }
-    .mobile__discord-img {
-      display: block;
-    }
-    bottom: -240px;
   }
   .playelu-footer {
     position: fixed;
