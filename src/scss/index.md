@@ -6,6 +6,7 @@ Link: <https://devfacts.com/media-queries-breakpoints-2021/>
 
 ```shell
   /page_name/**
+  /page_name/name.scss => Desktop
   /page_name/name_mobile.scss
   /page_name/name_tablet.scss
 ```

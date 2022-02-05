@@ -1,14 +1,15 @@
 import React from 'react';
+
 import Header from './component/Header';
 import SaleBody from './component/SaleBody';
-import '../../scss/sale_page/style.scss';
-import '../../scss/reponsiveness/sale_page/ipad.scss';
-import '../../scss/reponsiveness/sale_page/mobile.scss';
+
+import "../../scss/page_presale/presale.scss";
+import "../../scss/page_presale/presale_tablet.scss";
+import "../../scss/page_presale/presale_mobile.scss";
 import {
   Web3ReactProvider,
-  useWeb3React,
-  UnsupportedChainIdError,
 } from '@web3-react/core';
+
 import {Web3Provider} from '@ethersproject/providers';
 import Warning from './component/modal/Warning';
 import {useState} from 'react';
@@ -18,7 +19,7 @@ function getLibrary(provider) {
   library.pollingInterval = 12000;
   return library;
 }
-export default function SalePage() {
+export default function presaleContainer() {
   const [showWarrning, setShowWarrning] = useState(false);
 
   const changeStateWarning = (bool) => {

@@ -1,13 +1,11 @@
 import React from 'react';
 
-import '../../scss/page_presale/style.scss';
-import '../../scss/page_presale/ipad.scss';
-import '../../scss/page_presale/mobile.scss';
-import '../../scss/page_whitelist/whiteList.scss';
+import '../../scss/page_whitelist/whitelist.scss';
+import "../../scss/page_whitelist/whitelist_tablet.scss";
+import "../../scss/page_whitelist/whitelist_mobile.scss";
 
 import Header from '../presale/component/Header';
-import Logo from '../presale/component/logo';
-import WhiteListBody from './component/WhiteListBody';
+import WhiteListBody from './components/WhiteListBody';
 
 export default function whitelistContainer() {
   return (

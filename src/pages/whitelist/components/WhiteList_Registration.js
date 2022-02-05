@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import moment from "moment";
 import axios from "axios";
 
-import "../../../scss/page_presale/mobile.scss";
+import "../../../scss/page_presale/presale_mobile.scss";
 
 import ModalSucceedWhiteList from "./modal/ModalSucceed_whiteList";
 import wallet from "../../../util/wallet";
