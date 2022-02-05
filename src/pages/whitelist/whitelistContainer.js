@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../scss/page_whitelist/whitelist.scss';
+import '../../scss/page_whitelist/whitelist_d.scss';
 import "../../scss/page_whitelist/whitelist_tablet.scss";
 import "../../scss/page_whitelist/whitelist_mobile.scss";
 
