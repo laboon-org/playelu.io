@@ -10,6 +10,19 @@ Extensions:
 - 3. TypeScript Importer
 - 4. Prettier - Code formatter
 - 5. Reactjs code snippets
+- 6. Auto Close Tag
+- 7. Auto import
+- 8. Auto rename Tag
+- 9. Prettier ESLint
+- 10. GitLens
+- 11. SonarLint
+- 12. Sort lines
+- 13. Visual Studio IntelliCode
+- 14. indent-rainbow
+- 15. TODO HighLight
+- 16. TODO Tree
+- 17. Short Line
+- 18. Rainbow Brackets
 ```
 
 ## Prerequisites

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Container, Row, Col } from "react-bootstrap";
-import WarningFragment from "./WarningFragment";
+import {Container, Row, Col} from 'react-bootstrap';
+import WarningFragment from './WarningFragment';
 
-import "../../scss/common/presale/logo_area.scss";
+import '../../scss/common/presale/logo_area.scss';
 
 export default function LogoArea() {
   return (
