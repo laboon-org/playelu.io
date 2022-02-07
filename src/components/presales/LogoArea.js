@@ -16,7 +16,7 @@ export default function LogoArea() {
           <div className="title-header">
             <div className="title-header-1">
               <span className="header-text">Welcome to</span>
-              <span className="seed">pre-sale</span>
+              <span className="seed">Strategic</span>
               <span className="header-text">Round</span>
             </div>
             <div className="title-header-2">
@@ -29,7 +29,7 @@ export default function LogoArea() {
                   $BOON
                 </a>
               </span>
-              <span className="header-text">token</span>
+              <span className="header-text">Token (0.015$)</span>
             </div>
           </div>
         </Col>

@@ -1,11 +1,12 @@
 .sale_bar_container {
   margin-bottom: 8px;
+  width: 392px;
   .name {
     color: #fff;
     font-size: 10px;
     display: inline-block;
     line-height: 20px;
-    width: 50px;
+    width: 48px;
     font-family: var(--font_bold);
   }
   .bar-bg-box {
@@ -13,24 +14,27 @@
     border-radius: 4px;
     padding-top: 4px;
     padding-right: 4px;
+    padding-left: 4px;
+    width: 246px;
     .bar-bg {
-      position: relative;
-      background: url('../../../assets/images/common/cmn_bg_sale_bar_0.png') no-repeat;
-      background-size: cover;
+      background-image: url('../../../assets/images/common/cmn_bg_sale_bar_0.png');
+      background-repeat: no-repeat;
       height: 10px;
     }
     .bar-bg.loaded {
-      position: relative;
-      background: url('../../../assets/images/common/cmn_bg_sale_bar.png') no-repeat !important;
-      background-size: cover;
+      background-image: url('../../../assets/images/common/cmn_bg_sale_bar.png') !important;
+      background-repeat: no-repeat;
       height: 10px;
       margin-top: -10px;
     }
     .bar-bg.loaded-50 {
+      // background-position: -50%;
+    }
+    .bar-bg.loaded-100 {
     }
     .bar-percent {
       position: relative;
-      font-size: 8px;
+      font-size: 9px;
       text-align: center;
       color: #666;
       margin-top: -11px;
@@ -42,5 +46,6 @@
     font-size: 10px;
     line-height: 20px;
     text-align: left;
+    width: 48px;
   }
 }
