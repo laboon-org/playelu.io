@@ -2,7 +2,6 @@ import React, {useEffect, useState, useRef} from 'react';
 import './modal_comingsoon.scss';
 
 export default function WhiteListComingSoon(props) {
-
   const [timerDays, settimerDays] = useState('00');
   const [timerHours, settimerHours] = useState('00');
   const [timerMinutes, settimerMinutes] = useState('00');

@@ -22,8 +22,13 @@ import Loading from './components/Loading';
 const HomePage = React.lazy(() => import('./pages/home/homeContainer'));
 const GameplayPage = React.lazy(() => import('./pages/gameplay/gameplayContainer'));
 const WhiteListPage = React.lazy(() => import('./pages/whitelist/whitelistContainer'));
+<<<<<<< HEAD
 // const PreSalePage = React.lazy(() => import('./pages/presale/PresaleContainer'));
 const Claim = React.lazy(() => import('./pages/claim/ClaimPage'));
+=======
+const PreSalePage = React.lazy(() => import('./pages/presale/presaleContainer'));
+// const Claim = React.lazy(() => import('./pages/claim/ClaimPage'));
+>>>>>>> 42d57dfc9f9a4540fa594a67401bdbdf9a66e1e1
 
 function App(_props) {
   const [imgList, setImgList] = useState({});

@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import moment from "moment";
 import axios from "axios";
 
-import "../../../scss/page_whitelist/whitelist_mobile.scss";
+// import "../../../scss/page_whitelist/whitelist_mobile.scss";
 
 import ModalSucceedWhiteList from "./modal/ModalSucceed_whiteList";
+
 import wallet from "../../../util/wallet";
 import messageStorage from "../../../util/messageStorage";
 

@@ -4,6 +4,10 @@
     display: inline-block;
     width: 50px;
     height: 24px;
+    -webkit-text-stroke: 0.5px black;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
   }
   .elem-content {
     display: inline;
@@ -41,6 +45,7 @@
       position: relative;
       font-size: 11px;
       font-family: var(--font_black);
+      color: #fff;
     }
   }
 }

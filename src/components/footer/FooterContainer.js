@@ -11,8 +11,8 @@ import UrlRecursive from '../UrlRecursive';
 export default function FooterContainer(props) {
   const {urlApi} = props;
 
-  const linkPrivacyPolicy = _.isEmpty(urlApi) ? "" : urlApi.docs.privacyPolicy;
-  const linkCondition = _.isEmpty(urlApi) ? "" : urlApi.docs.conditions;
+  const linkPrivacyPolicy = _.isEmpty(urlApi) ? '' : urlApi.docs.privacyPolicy;
+  const linkCondition = _.isEmpty(urlApi) ? '' : urlApi.docs.conditions;
 
   return (
     <UrlRecursive data={props}>
@@ -27,7 +27,7 @@ export default function FooterContainer(props) {
             <span>Terms & Conditions</span>
           </a>
         </div>
-        <span className="version">v0.7.1 - 20220205</span>
+        <span className="version">v0.7.2 - 20220206</span>
       </div>
     </UrlRecursive>
   );

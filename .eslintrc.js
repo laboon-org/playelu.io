@@ -18,12 +18,12 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    'react/prop-types': 'off',
-    'require-jsdoc': 'off',
-    'max-len': 'off', // disables line length check
-    'new-cap': 'off',
-    'camelcase': 'off',
-    'no-unused-vars': 'on',
-    'no-unused-expressions': 'off',
+    'react/prop-types': 0,
+    'require-jsdoc': 0,
+    'max-len': 0, // disables line length check
+    'new-cap': 0,
+    'camelcase': 0,
+    'no-unused-vars': 2,
+    'no-unused-expressions': 0,
   },
 };
