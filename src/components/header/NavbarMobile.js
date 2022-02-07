@@ -100,7 +100,7 @@ export default function NavbarMobile(props) {
               </a>
             </div>
             <div className="modal-element">
-              <Link to="https://laboon.org/crew">
+              <a href="https://laboon.org/crew">
                 <img
                   src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
                   alt="Whitelist"
@@ -108,7 +108,7 @@ export default function NavbarMobile(props) {
                 <div className="modal-element--text">
                   <h2>Team</h2>
                 </div>
-              </Link>
+              </a>
             </div>
             <div className="modal-element">
               <Link to="/whitelist">

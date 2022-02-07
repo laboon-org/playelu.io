@@ -41,9 +41,9 @@ export default function TopMenu(props) {
         >
           <h4>LitePaper</h4>
         </a>
-        <Link to="https://laboon.org/crew" className="playelu__menu-element">
+        <a href="https://laboon.org/crew" className="playelu__menu-element">
           <h4>Team</h4>
-        </Link>
+        </a>
         <Link to="/whitelist" className="playelu__menu-element">
           <h4>WhiteList</h4>
         </Link>
