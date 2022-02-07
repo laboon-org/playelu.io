@@ -1,44 +1,17 @@
 .sky-center {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height:100vh;
-    justify-content: center
-    
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
 }
-
 .sky-center__islands {
-    width: 70vw;
-    height: 70vw;
-
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    border-radius: 50%;
-    transform-style: preserve-3d;
-
-    
-    //background:red;
- 
+  width: 70vw;
+  height: 70vw;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+  transform-style: preserve-3d;
 }
-// @keyframes rotate{
-//     0%{
-//         transform: rotateX(86deg) rotateZ(var(--start))
-//     }
-//     100%{
-//         transform: rotateX(86deg) rotateZ(var(--end))
-//     }
-// }
-.island {
-
-    //animation: islandRotate 20s linear infinite;
-}
-// @keyframes islandRotate{
-//     0%{
-//         transform: rotateX(270deg) rotateY(var(--start))
-//     }
-//     100%{
-//         transform: rotateX(270deg) rotateY(var(--end))
-//     }
-// }

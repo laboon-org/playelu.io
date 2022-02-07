@@ -1,0 +1,53 @@
+@keyframes shine {
+  0% {
+    transform: rotateZ(5deg);
+  }
+  50% {
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(5deg);
+  }
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  15% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  30% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  45% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes cloud {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 140%;
+  }
+}
+@keyframes twirl {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}

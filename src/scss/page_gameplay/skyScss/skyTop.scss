@@ -1,0 +1,187 @@
+.sky-top {
+  max-width: 1280px;
+  width: 80vw;
+  margin: auto;
+  .gameplay-selection {
+    max-height: 600px;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    .rune {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 40%;
+      z-index: 1;
+      a {
+        width: 100%;
+        height: 100%;
+      }
+      .gameplay__rune {
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        .gameplay__rune-stone {
+          width: 100%;
+        }
+        .gameplay__rune-light {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          animation: crushed_stone 3s 0.01s ease infinite;
+          img {
+            width: 100%;
+          }
+        }
+        .gameplay__rune-crushed_stone {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          animation: crushed_stone 3s 0.01s ease infinite;
+          img {
+            width: 100%;
+            z-index: -1;
+            cursor: pointer;
+          }
+        }
+      }
+      .gameplay__boonmoon-img {
+        position: absolute;
+        left: 30%;
+        width: 40%;
+        bottom: 45%;
+        z-index: -1;
+      }
+    }
+  }
+  .gameplay-logo {
+    width: 35%;
+    margin: auto;
+    margin-bottom: 100px;
+    .gameplay__logo-img {
+      width: 100%;
+    }
+  }
+}
+
+.gameplay__selection-img {
+  width: 15%;
+  transform: scale(0.9);
+  cursor: pointer;
+  position: relative;
+  img {
+    width: 100%;
+    cursor: pointer;
+  }
+  .shadow-stone {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: hideShadow 3s 0.01s ease infinite;
+  }
+}
+
+.gameplay__selection-img:hover {
+  transform: scale(1);
+}
+/** Start scss Popup Coming Soon */
+.modal-comingsoon > .modal-content {
+  max-width: 940px;
+  max-height: 658px;
+  width: 60vw;
+  height: 42vw;
+  .popup-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/popup-comingsoon/popup_background.webp")
+      no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border: 4px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba($color: #000000, $alpha: 0.3);
+    .close-popup {
+      position: absolute;
+      top: 1%;
+      right: 1%;
+      width: 5%;
+      img {
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.popup-title {
+  position: absolute;
+  top: 7%;
+  width: 40%;
+  left: 30%;
+  .popup-title__box {
+    position: relative;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+    .popup-title__text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        letter-spacing: 1px;
+        font-size: 26px;
+        -webkit-text-stroke: 2px rgba($color: #000000, $alpha: 0.4);
+      }
+    }
+  }
+}
+
+/**
+  End scss Popup Coming Soon
+  Keyframe
+*/
+@keyframes hideShadow {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes crushed_stone {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

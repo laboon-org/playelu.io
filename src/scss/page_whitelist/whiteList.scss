@@ -1,0 +1,307 @@
+/** Global Override */
+a {
+  text-decoration: none;
+  color: #efa059;
+  cursor: pointer;
+}
+.input {
+  position: relative;
+}
+.input {
+  width: 100%;
+  color: #ffff;
+  background: rgb(24 23 23 / 60%);
+  border-radius: 10px;
+  border: 1px solid #ffff;
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #b6b6b6;
+    opacity: 1; /* Firefox */
+  }
+  :input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #b6b6b6;
+  }
+  ::input-placeholder {
+    /* Microsoft Edge */
+    color: #b6b6b6;
+  }
+}
+
+/** Main Styles */
+.white-list_succceed__frame {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.white-list__succeed {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.white-list__succeed__img {
+  width: 300px;
+  height: auto;
+  margin-bottom: 8px;
+}
+.modal-succeed__body {
+  flex-direction: column;
+}
+.white-list__succeed__content {
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+}
+.white-list__succeed__heading {
+  font-size: 24px !important;
+}
+.white-list__succeed__sub {
+  font-size: 22px;
+  text-align: center;
+}
+
+.white-list {
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/Background.webp")
+    no-repeat center / cover;
+  overflow: hidden;
+}
+
+.white-list__body {
+  margin-top: 96px;
+  height: calc(100vh - 56px);
+}
+
+/* Begin body-right */
+.body-right,
+.white-list__body--right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-right__title {
+  font-size: 20px;
+  color: #ffff;
+  white-space: nowrap;
+  font-family: var(--font_bold);
+  -webkit-text-stroke: 1.5px black;
+  margin-bottom: 8px;
+}
+.white-list__body--right__title {
+  font-size: 32px;
+  color: #ffff;
+  white-space: nowrap;
+  font-family: var(--font_bold);
+  -webkit-text-stroke: 0.5px black;
+  margin-bottom: 8px;
+}
+
+.login {
+  min-width: 300px;
+  width: 100%;
+  height: 54px;
+  margin: 0 auto;
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp");
+  background-size: cover;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.login-frame {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: left;
+  cursor: pointer;
+}
+
+.login-title {
+  text-align: center;
+  color: #fff;
+  font-size: 28px;
+  font-family: var(--font_content);
+  margin-bottom: 0;
+}
+
+.login-icon {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  margin-right: 12px;
+  margin-left: 36px;
+  margin-top: 4px;
+}
+
+.login-icon img {
+  width: 100%;
+}
+
+.white-list__login {
+  color: #fff;
+  font-size: 15px;
+  font-family: var(--font_content);
+  margin-bottom: 0;
+}
+
+/* CSS CONTRIBUTE */
+.contribute {
+  position: relative;
+  min-width: 300px;
+  width: 90%;
+  background: rgb(24 23 23 / 60%);
+  border: 4px solid #205198;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  font-family: var(--font_content);
+  font-weight: normal;
+}
+.contribute--shadow {
+  position: absolute;
+  z-index: 0;
+  top: 2%;
+  left: 2%;
+  width: 16px;
+  height: 24px;
+  background: rgb(135 136 136 / 30%);
+  transform: rotateZ(45deg);
+  border-radius: 50%;
+}
+.contribute-frame {
+  width: calc(100% - 60px);
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contribute-sec {
+  margin-bottom: 20px;
+}
+.contribute-title {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.contribute-title p {
+  color: #fdcd2f;
+  font-size: 18px;
+}
+.contribute-title .wallet-name {
+  color: #e8821e;
+  font-size: 14px;
+}
+.contribute-title .avax-quantity {
+  color: #e84142;
+  font-size: 14px;
+}
+.contribute-title .boon-quantity {
+  color: #fed34e;
+  font-size: 14px;
+}
+.input-text {
+  width: calc(100% - 30px);
+  width: calc(100% - 30px);
+  width: calc(100% - 30px);
+  font-size: 16px;
+  padding: 14px;
+  color: #b6b6b6;
+  background: rgb(24 23 23 / 60%);
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+.boon-quantity__input {
+  color: #ffff;
+}
+
+.input-img {
+  position: absolute;
+  max-width: 30px;
+  width: 10%;
+  top: 25%;
+  bottom: 0;
+  right: 10px;
+}
+
+.contribute-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contribute-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 240px;
+  max-height: 60px;
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp")
+    no-repeat center / contain;
+  font-size: 20px;
+  padding: 17px;
+  border-radius: 14px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contribute-btn span {
+  cursor: pointer;
+}
+
+.link-playelu {
+  color: #ffff;
+  font-size: 16px;
+}
+.white-list__title {
+  text-align: center;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #fff;
+  white-space: nowrap;
+  span {
+    font-family: var(--font_bold);
+    font-size: 20px;
+    -webkit-text-stroke: 1.5px black;
+  }
+}
+.white-list__subtitle {
+  font-size: 20px;
+}
+.white-list__strategy {
+  font-size: 20px;
+  color: #fed34e;
+}
+.white-list__code {
+  width: 88%;
+  font-family: var(--font_content);
+  font-weight: 200;
+  margin-top: 20px;
+}
+
+/** Overriding Footer Section */
+.footer {
+  border: 0px !important;
+  border-radius: 0px !important;
+  background-color: transparent !important;
+  padding: 0px !important;
+}

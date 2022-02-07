@@ -1,0 +1,35 @@
+.elu-box-feature {
+  margin-bottom: 12px;
+  margin-top: 12px;
+  .feat-container {
+    .title {
+      .title-bg {
+        background-image: url("../../../../assets/images/common/cmn_bg_ribbon_title.png");
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 126px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 4px;
+        z-index: 10;
+        position: relative;
+        font-family: var(--font_black);
+        font-size: 12px;
+        color: #403100;
+      }
+    }
+    .image {
+      display: inline-block;
+      border-radius: 12px;
+      // border: 3px solid #F2D340;
+      height: 162px;
+      width: 288px;
+      margin-top: -24px;
+    }
+    .layout {
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 12px;
+    }
+  }
+}

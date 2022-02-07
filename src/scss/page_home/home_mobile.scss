@@ -1,0 +1,76 @@
+// Small devices (mobiles)
+@media (max-width: 767.98px) {
+  .playelu-body {
+    top: 0;
+    height: 100vh;
+  }
+  .sound {
+    width: 30px;
+    height: 30px;
+  }
+  .launch-header {
+    top: 62px !important;
+    left: 62px !important;
+  }
+  .launch-header__content-coin {
+    margin: 5px 5px 0 0 !important;
+  }
+  .playelu-frame {
+    height: 100vh;
+  }
+  .playelu-frame .playelu-all {
+    margin-top: 120px;
+  }
+  .playelu-frame .playelu-all .playelu-img img {
+    width: calc(100% - 196px);
+  }
+  .my-star::before {
+    height: 50px;
+  }
+  .background-bottom {
+    bottom: 0;
+  }
+  .playelu-tittle h1 {
+    font-size: 22px;
+  }
+  .playelu-btn {
+    width: calc(100% - 36px);
+  }
+  .subcribe__playelu-btn {
+    width: 100px;
+    height: 37.5px;
+    font-size: 14px;
+  }
+  .subcribe__playelu-btn--text {
+    font-size: 12px;
+  }
+
+  .playelu-btn input {
+    padding-right: 3px;
+    height: 46px;
+    font-size: 14px;
+    padding-left: 44px;
+    letter-spacing: 2px;
+  }
+  .iconEmail {
+    width: 25px;
+    left: 10px;
+    margin-top: 10px;
+  }
+  .name-email {
+    font-size: 18px;
+    bottom: 7%;
+  }
+  .playelu-input {
+    width: 100%;
+    border: 2px solid #000;
+  }
+  .error-email {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 10px;
+  }
+  .navbar-header {
+    display: none;
+  }
+}

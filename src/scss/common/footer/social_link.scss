@@ -1,0 +1,17 @@
+.playelu__link {
+  width: 480px;
+  text-align: center;
+}
+.playelu__link-ele {
+  margin: 0 5px;
+  width: 48px;
+  display: inline-block;
+}
+.playelu__link-ele:hover {
+  opacity: 0.7;
+}
+.playelu__link-ele img {
+  margin: auto;
+  width: 80%;
+  cursor: pointer;
+}

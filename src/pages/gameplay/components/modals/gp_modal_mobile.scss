@@ -1,0 +1,36 @@
+// Medium devices (mobiles)
+@media (max-width: 767.98px) {
+  .elu-modal-container {
+    .modal-dialog {
+      width: 360px;
+      height: calc(1280px + 120px);
+      .modal-content {
+        width: auto;
+        .modal-header {
+          background-size: contain;
+          height: 42px;
+          margin-bottom: -6px;
+          .btn-close {
+            margin: -16px;
+            margin-top: -10px;
+          }
+          .modal-title {
+            background-size: contain;
+            height: 39px;
+            width: 265px;
+            margin-top: -40px;
+            font-size: 14px;
+            line-height: 30px;
+          }
+        }
+        .modal-body {
+          height: calc(1280px - (70px * 2));
+          background-size: contain;
+        }
+        .modal-footer {
+          background-size: contain;
+        }
+      }
+    }
+  }
+}

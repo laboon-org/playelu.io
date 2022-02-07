@@ -1,0 +1,87 @@
+.presale-info-container {
+  display: inline-block;
+  .header-sale {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    .title {
+      display: inline-block;
+      justify-content: center;
+      text-align: center;
+      padding-left: 0px;
+      padding-right: 0px;
+      .title-header {
+        font-family: var(--font_black);
+        justify-content: center;
+      }
+      .title-header-1,
+      .title-header-2 {
+        display: flex;
+        margin-bottom: 4px;
+        justify-content: center;
+      }
+    }
+    .seed {
+      margin: 0 8px -8px 8px;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #3ea0d3;
+      line-height: 12px;
+    }
+    .boon-text {
+      margin: 0 8px -2px 8px;
+      font-size: 12px;
+      color: #efa059;
+      text-transform: uppercase;
+      display: flex;
+      align-items: flex-end;
+    }
+    .header-text {
+      display: flex;
+      align-items: flex-end;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  .logo {
+    .logo-frame {
+      text-align: center;
+      .elu-logo {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+      .boon-coin {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// Small devices (mobiles)
+@media (max-width: 767.98px) {
+  .presale-info-container {
+    .logo {
+      .logo-frame {
+        margin-bottom: 8px;
+        .elu-logo {
+          width: 40%;
+          display: inline-block;
+        }
+        .boon-coin {
+          width: 40%;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

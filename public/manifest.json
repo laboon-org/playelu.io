@@ -1,13 +1,13 @@
 {
-  "short_name": "Playelu",
-  "name": "Elu Verse",
+  "short_name": "PlayElu",
+  "name": "EluVerse",
   "icons": [
     {
       "src": "logo192.png",
       "type": "image/png",
       "sizes": "16x16"
     }
-  
+
   ],
   "start_url": ".",
   "display": "standalone",

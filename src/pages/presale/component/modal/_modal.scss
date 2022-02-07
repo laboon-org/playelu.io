@@ -1,0 +1,217 @@
+// Modal Warning
+.warning {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  max-width: 850px;
+  min-width: 300px;
+  width: calc(100% - 40px);
+  height: 60px;
+  border-radius: 7px;
+  background: rgba(89, 89, 89, 0.5);
+  font-family: var(--font_content);
+  animation: warning 3s ease infinite;
+  animation-iteration-count: 1;
+}
+
+.warning__frame {
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.warning__frame img {
+  width: 40px;
+}
+
+.warning__text {
+  color: #ff3333;
+  font-size: 18px;
+}
+.warning__btn {
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_mini.webp")
+    no-repeat center / contain;
+  width: 80px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  text-transform: uppercase;
+}
+@keyframes warning {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 20px;
+  }
+}
+
+/* CSS MODAL Inprocessing */
+.modal-sale {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(24, 23, 23, 0.6);
+  display: flex;
+  align-items: center;
+}
+.modal-sale-frame {
+  width: 860px;
+  height: 655px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 36px;
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/panel/panel_inProcessing.webp")
+    no-repeat center / contain;
+  font-weight: 600;
+  font-family: var(--font_black);
+}
+.modal-sale__img {
+  width: 60%;
+}
+.modal-sale__title {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 48px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-top: 2%;
+  height: 17%;
+  -webkit-text-stroke: 4px black;
+}
+
+//* modal succeed
+
+.modal-succeed,
+.modal-fail {
+  width: calc(100% - 60px);
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font_content);
+}
+
+.modal-succeed__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.modal-comingSoon__body {
+  flex-direction: column;
+}
+
+.modal-succeed__heading {
+  text-align: center;
+  color: #fdcd2f;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.modal-fail__heading {
+  color: #fd2f2f !important;
+}
+
+.modal-succeed__body__content {
+  color: #ffff;
+  font-size: 24px;
+  width: calc(100% - 250px);
+}
+
+.modal-succeed__body__content__boon {
+  margin-left: 5px;
+  color: #fdcd2f;
+}
+
+.modal-succeed__body__content__avax {
+  margin-left: 5px;
+  color: #fd2f2f;
+}
+.modal-succeed__body__content__text {
+  margin-left: 0 5px;
+  color: #fdcd2f;
+}
+
+.modal-fail__body__content {
+  color: #ffffff;
+  font-size: 24px;
+  width: calc(100% - 250px);
+}
+
+.modal-succeed__body__img {
+  width: 250px;
+  height: auto;
+  margin-bottom: 40px;
+}
+.modal-succeed__btn {
+  max-width: 260px;
+  width: 50vw;
+  margin: auto;
+  background-image: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffff;
+  padding: 16px 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.modal_succeed__link-gameplay {
+  color: #fdcd2f;
+  font-size: 20px;
+}
+
+// Modal Notification
+.modal-notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-notification__frame {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  text-align: center;
+}
+.modal-notification__heading {
+  font-size: 36px;
+  color: #fdcd2f;
+}
+.modal-notification__content {
+  color: #fff;
+  font-size: 28px;
+}
+
+.modal-notification__content span {
+  color: #fdcd2f;
+  margin: 0 5px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.modal-notification__btn {
+  padding: 10px 24px;
+}

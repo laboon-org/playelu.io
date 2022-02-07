@@ -1,0 +1,229 @@
+// Medium devices (mobiles)
+@media (max-width: 767.98px) {
+  .sky {
+    .sky-top {
+      .gameplay-selection {
+        height: 20vh !important;
+      }
+      .gameplay-logo {
+        margin-bottom: 20px !important;
+      }
+    }
+  }
+
+  // Start scss Popup Coming Soon
+  .modal-comingsoon > .modal-content {
+    width: 80vw !important;
+    height: 56vw !important;
+    .popup-frame {
+      border: 2px solid #fff !important;
+      border-radius: 17px !important;
+      .close-popup {
+        top: 0.5% !important;
+        width: 10% !important;
+      }
+    }
+  }
+  .popup-title {
+    .popup-title__box {
+      h1 {
+        font-size: 8px !important;
+        letter-spacing: 0.2px !important;
+        -webkit-text-stroke: 1px rgba($color: #000000, $alpha: 0.4) !important;
+      }
+    }
+  }
+  // End scss Popup Coming Soon
+
+  // Start scss button Drop and Nest
+  .elu-btn {
+    h2 {
+      -webkit-text-stroke: 0.8px black !important;
+    }
+  }
+  .btn-shadow {
+    p {
+      -webkit-text-stroke: 0.4px black !important;
+    }
+  }
+  // End scss button Nest
+  // Start drop onBoarding scss
+  .close-modal__btn {
+    top: 8px !important;
+    right: 8px !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .onBoarding {
+    margin: 0 !important;
+  }
+  .onBoarding-tip {
+    width: auto !important;
+    top: 0 !important;
+  }
+  .onBoarding__element {
+    margin: 0 0 16px 0 !important;
+  }
+  .onBoarding__element-tip {
+    margin-top: -6px !important;
+    img {
+      width: 112px !important;
+    }
+  }
+  .onBoarding__element-content {
+    .onBoarding__element-img {
+      width: calc(100% - 4px) !important;
+    }
+    .e-img-left {
+      margin-right: 4px !important;
+    }
+    .e-img-right {
+      margin-left: 4px !important;
+    }
+  }
+  .onBoarding__versus-tip {
+    img {
+      width: 112px !important;
+    }
+  }
+  .onBoarding__title {
+    width: 100%;
+    left: 0;
+  }
+  .onBoarding__title-content {
+    width: 80%;
+  }
+  .onBoarding__title-text {
+    h3 {
+      margin-top: 12px !important;
+      font-size: 10px !important;
+      text-shadow: 0 1px 1px rgba($color: #000000, $alpha: 0.5) !important;
+    }
+  }
+  .onBoarding-frame {
+    // width: 90%;
+  }
+  .onBoarding__element {
+    margin: 0 0 20px 0;
+  }
+  .onBoarding__versus-content {
+    width: calc(100% - 4px) !important;
+    height: 64px !important;
+    border: 1.5px solid #f2d340 !important;
+    border-radius: 12px !important;
+  }
+  .onBoarding__versus-text {
+    // -webkit-text-stroke: 1.3px black;
+    // text-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.5) !important;
+    font-size: 18px !important;
+    margin-left: 20px !important;
+    margin-top: 20px !important;
+  }
+  .image-comingsoon {
+    right: 0;
+    bottom: 0;
+    height: 140%;
+  }
+
+  .tip-title {
+    h4 {
+      margin-top: 6px !important;
+    }
+  }
+
+  .content-final {
+    margin-top: 16%;
+  }
+  .onBoarding__btn-close {
+    width: 100%;
+    img {
+      width: 10%;
+    }
+  }
+  .board_type-content span {
+    font-size: 8px !important;
+  }
+  // Start board-type scss
+  .board_type {
+    width: 128px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    margin-top: 4px !important;
+  }
+  .board_type-element {
+    height: var(--heightBoarType);
+    width: var(--withBoarType);
+  }
+
+  .board_type-content {
+    height: 15px;
+    width: 80%;
+    span {
+      font-size: 8px;
+      -webkit-text-stroke: 0.7px black;
+    }
+  }
+  .square {
+    width: 5px;
+    height: 5px;
+  }
+  .circle {
+    width: 5px;
+    height: 5px;
+  }
+  .triangle {
+    border-bottom: 5px solid #ffe552;
+    border-left: 2.5px solid transparent;
+    border-right: 2.5px solid transparent;
+  }
+
+  // End board-type scss
+  // End drop onBoarding scss
+
+  // Start nest onBoarding scss
+  .land {
+    .nest_onBoarding {
+      .nest-frame {
+        width: 95vw !important;
+        margin: auto;
+        max-height: 827px;
+        height: 79vw !important;
+        .onBoarding-frame {
+          // padding-top: 0 !important;
+        }
+        .onBoarding__element {
+          margin: 0 0 6px 0;
+        }
+        .nest_onBoarding-title {
+          h4 {
+          }
+        }
+        .tip-title h4 {
+          font-size: 8px;
+          margin-bottom: -5px;
+          -webkit-text-stroke: 0px #000;
+        }
+        .onBoarding__versus-text {
+          -webkit-text-stroke: 1.3px black;
+          text-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.5) !important;
+          font-size: 18px !important;
+          margin-left: 20px !important;
+          margin-top: 20px !important;
+        }
+        .onBoarding-btn_close {
+          max-width: 74px !important;
+          width: 8% !important;
+          margin: auto;
+          cursor: pointer;
+          img {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .ag-number_light {
+    height: 20vh !important;
+  }
+  // End nest onBoarding scss
+}

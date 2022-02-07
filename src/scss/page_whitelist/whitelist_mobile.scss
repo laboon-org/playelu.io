@@ -1,0 +1,49 @@
+@media screen and (max-width: 739.9px) {
+  .logo {
+    display: none;
+  }
+  .contribute {
+    max-width: 400px;
+    max-height: 310px;
+    width: 100%;
+    height: calc(100vh - 100px);
+    border-radius: 30px;
+    border: 3px solid #205198;
+    padding-top: 12px;
+  }
+  .contribute-frame {
+    width: calc(100% - 24px);
+    margin: 10px auto;
+  }
+  .contribute-sec {
+    margin-bottom: 4px;
+  }
+  .contribute-title p {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+  .contribute-title .wallet-name,
+  .contribute-title .avax-quantity,
+  .contribute-title .boon-quantity {
+    font-size: 11px;
+  }
+  .input-text {
+    font-size: 11px;
+    padding: 10px;
+  }
+  .input-img {
+    width: 6.4%;
+  }
+  .white-list__title {
+    top: -40px;
+    font-size: 20px;
+    -webkit-text-stroke: 0.5px black;
+  }
+  .white-list__subtitle {
+    font-size: 15px;
+  }
+  .white-list__strategy {
+    font-size: 15px;
+    color: #fed34e;
+  }
+}

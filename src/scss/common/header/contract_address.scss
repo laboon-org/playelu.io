@@ -1,0 +1,50 @@
+.contract-address {
+  position: fixed;
+  top: 56px;
+  width: calc(100vw);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.contract-address__content {
+  min-width: 270px;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contract-address__content-coin {
+  width: 20px;
+  margin: 0 5px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.market {
+  cursor: pointer;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.market span {
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.market:hover span {
+  color: rgba($color: #fff, $alpha: 70%);
+}
+
+@media screen and (max-width: 740px) {
+  .market span {
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-text-stroke: 0.2px black;
+  }
+}

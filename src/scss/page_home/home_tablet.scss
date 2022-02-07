@@ -1,0 +1,44 @@
+// Medium devices (tablets)
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .playelu-body {
+    height: 100%;
+  }
+  .playelu-frame {
+    .playelu-all {
+      width: 50%;
+    }
+  }
+  .playelu-img {
+    width: 80%;
+  }
+  .playelu-btn {
+    max-width: 530px;
+    input {
+      padding-right: 25.5%;
+      font-size: 20px;
+    }
+  }
+  .background-bottom {
+    bottom: 0;
+  }
+  .playelu-all {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    .playelu-img {
+      margin: 0 auto;
+      text-align: center;
+      img {
+        width: 280px;
+      }
+    }
+  }
+  .playelu-tittle h1 {
+    font-size: 36px;
+  }
+  .iconEmail {
+    margin-top: 11px;
+  }
+}
