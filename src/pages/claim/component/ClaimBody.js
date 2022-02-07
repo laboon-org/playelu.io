@@ -1,5 +1,5 @@
-import React, {useState, useCallback} from 'react';
-import Logo from '../../sale_page/component/logo';
+import React, { useState, useCallback } from 'react';
+import Logo from '../../../components/presales/LogoArea';
 import ClaimBodyRight from './ClaimBody_right';
 
 export default function ClaimBody(props) {
