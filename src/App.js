@@ -150,7 +150,7 @@ function App(_props) {
             path="/presales"
             element={<UrlRecursiveContainer Comp={PreSalePage} />}
           /> */}
-          <Route path="/claim" element={<UrlRecursiveContainer Comp={Claim} />} />
+          {/* <Route path="/claim" element={<UrlRecursiveContainer Comp={Claim} />} /> */}
         </Routes>
       </Router>
     </React.Suspense>
