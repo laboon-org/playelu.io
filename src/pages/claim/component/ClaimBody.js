@@ -1,4 +1,3 @@
-import React, { useState, useCallback } from 'react';
 import Logo from '../../../components/presales/LogoArea';
 import ClaimBodyRight from './ClaimBody_right';
 
