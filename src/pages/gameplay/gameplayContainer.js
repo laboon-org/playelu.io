@@ -34,7 +34,7 @@ function reveal() {
 }
 
 export default function gameplayContainer(props) {
-  const {urlApi, setting} = props;
+  const { urlApi, setting } = props;
 
   return (
     <UrlRecursive data={props}>
