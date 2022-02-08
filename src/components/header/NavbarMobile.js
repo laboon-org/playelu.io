@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import _ from 'lodash';
 
-import Assets from "./../../constant/assets";
+import Assets from './../../constant/assets';
 
 import '../../scss/common/header/navbar_mobile.scss';
 
@@ -51,7 +51,7 @@ export default function NavbarMobile(props) {
             <div className="modal-logo">
               <img
                 src={_.isEmpty(urlApi) ? "" : urlApi.image.eluLogo1}
-                alt='Elu Logo'
+                alt="Elu Logo"
               />
             </div>
             <div className="modal-element">
@@ -92,7 +92,7 @@ export default function NavbarMobile(props) {
               >
                 <img
                   src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
-                  alt='LitePaper'
+                  alt="LitePaper"
                 />
                 <div className="modal-element--text">
                   <h2>LitePaper</h2>
@@ -100,10 +100,21 @@ export default function NavbarMobile(props) {
               </a>
             </div>
             <div className="modal-element">
+              <a href="https://laboon.org/crew">
+                <img
+                  src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
+                  alt="Whitelist"
+                />
+                <div className="modal-element--text">
+                  <h2>Team</h2>
+                </div>
+              </a>
+            </div>
+            <div className="modal-element">
               <Link to="/whitelist">
                 <img
                   src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
-                  alt='Whitelist'
+                  alt="Whitelist"
                 />
                 <div className="modal-element--text">
                   <h2>WhiteList</h2>
@@ -129,7 +140,7 @@ export default function NavbarMobile(props) {
                     ? ""
                     : urlApi.image.homeBackground.gameplayBtn
                 }
-                alt='Home Background'
+                alt="Home Background"
               />
               <Link to="/gameplay" className="home-btn__gameplay--text">
                 Gameplay

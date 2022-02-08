@@ -1,38 +1,38 @@
-import React, { useState } from "react";
-import moment from "moment";
-import axios from "axios";
+import React, {useState} from 'react';
+import moment from 'moment';
+import axios from 'axios';
 
 // import "../../../scss/page_whitelist/whitelist_mobile.scss";
 
-import ModalSucceedWhiteList from "./modal/ModalSucceed_whiteList";
+import ModalSucceedWhiteList from './modal/ModalSucceed_whiteList';
 
-import wallet from "../../../util/wallet";
-import messageStorage from "../../../util/messageStorage";
+import wallet from '../../../util/wallet';
+import messageStorage from '../../../util/messageStorage';
 
 //* Get Config
 const getStatePage = () => {
-  const CONFIG = messageStorage.getInstance().getMessage("config");
-  const data = CONFIG["Page Setting"].data;
+  const CONFIG = messageStorage.getInstance().getMessage('config');
+  const data = CONFIG['Page Setting'].data;
   const index = data.findIndex((v, i, obj) => {
-    if (v["Page Name"] == "whitelist") {
+    if (v['Page Name'] == 'whitelist') {
       return true;
     }
   });
 
   const pageSetting = data[index];
-  return pageSetting.Toggle === "TRUE";
+  return pageSetting.Toggle === 'TRUE';
 };
 
 const getConfigRoundData = () => {
-  const CONFIG = messageStorage.getInstance().getMessage("config");
+  const CONFIG = messageStorage.getInstance().getMessage('config');
   let boonData = {};
-  if (CONFIG["Round Setting"] != null) {
-    const data = CONFIG["Round Setting"].data;
+  if (CONFIG['Round Setting'] != null) {
+    const data = CONFIG['Round Setting'].data;
 
     const index = data.findIndex((v, i, obj) => {
       if (
-        moment(v.Start).subtract(1, "days").isBefore(moment()) &&
-        moment(v.End).add(1, "days").isAfter(moment())
+        moment(v.Start).subtract(1, 'days').isBefore(moment()) &&
+        moment(v.End).add(1, 'days').isAfter(moment())
       ) {
         return true;
       }
@@ -46,13 +46,13 @@ const getConfigRoundData = () => {
   return {};
 };
 const findAvaxValue = () => {
-  const CONFIG = messageStorage.getInstance().getMessage("config");
+  const CONFIG = messageStorage.getInstance().getMessage('config');
 
   if (CONFIG.Common != null) {
     const dataCommon = CONFIG.Common.data;
     let avaxValue = 0;
     const index = dataCommon.findIndex((v, i, obj) => {
-      if (v.Key == "avax_value") {
+      if (v.Key == 'avax_value') {
         return true;
       }
     });
@@ -66,14 +66,14 @@ const findAvaxValue = () => {
 };
 
 const findBoonValue = () => {
-  const CONFIG = messageStorage.getInstance().getMessage("config");
-  if (CONFIG["Round Setting"] != null) {
-    const data = CONFIG["Round Setting"].data;
+  const CONFIG = messageStorage.getInstance().getMessage('config');
+  if (CONFIG['Round Setting'] != null) {
+    const data = CONFIG['Round Setting'].data;
     let boonValue = 0;
     const index = data.findIndex((v, i, obj) => {
       if (
-        moment(v.Start).subtract(1, "days").isBefore(moment()) &&
-        moment(v.End).add(1, "days").isAfter(moment())
+        moment(v.Start).subtract(1, 'days').isBefore(moment()) &&
+        moment(v.End).add(1, 'days').isAfter(moment())
       ) {
         return true;
       }
@@ -82,7 +82,7 @@ const findBoonValue = () => {
     // console.log("index = " + index);
 
     if (index != -1) {
-      boonValue = data[index]["Sell Price"];
+      boonValue = data[index]['Sell Price'];
     }
     return parseFloat(boonValue);
   }
@@ -99,20 +99,20 @@ const calValueDeposit = (amount) => {
     return USD / avaxValueUSD;
   };
 
-  const boonAmount = parseInt(amount.split(".").join(""));
-  const avaxAmount = Math.round(calAvaxAmount(boonAmount) * 1000) / 1000 + "";
-  return avaxAmount.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+  const boonAmount = parseInt(amount.split('.').join(''));
+  const avaxAmount = Math.round(calAvaxAmount(boonAmount) * 1000) / 1000 + '';
+  return avaxAmount.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
 };
 
 export default function WhiteList_Registration() {
   const [amount, setAmount] = useState(
-    "".replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
+      ''.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'),
   );
-  const [deposit, setDeposit] = useState("");
+  const [deposit, setDeposit] = useState('');
   const [modalSucceedShow, setModalSucceedShow] = useState(false);
   const [modalCommingShow, setModalCommingShow] = useState(!getStatePage());
   const [messageState, setMessageState] = useState(
-    "Thanks you! for register whitelist."
+      'Thanks you! for register whitelist.',
   );
 
   //* Function callback
@@ -125,44 +125,13 @@ export default function WhiteList_Registration() {
   };
 
   const register = async () => {
-    if (!window.confirm("Are you sure about your choice?")) {
+    if (!window.confirm('Are you sure about your choice?')) {
       return;
     }
 
     const checkWallet = await axios
-      .post("https://laboon.as.r.appspot.com/check_wallet_wl", {
-        wallet_address: wallet.getInstance().account,
-      })
-      .then((res) => {
-        return res.data;
-      })
-      .catch((err) => {
-        throw err;
-      });
-
-    // console.log(checkWallet);
-    if (checkWallet.status == 200) {
-      setMessageState("ALREADY_SIGNED");
-      showModalSucceed();
-      return;
-    }
-
-    const boonValue = parseInt(amount.split(".").join(""));
-
-    //* Get ref code
-    const storage = window.localStorage;
-    let id = storage.getItem("id");
-    if (id == null || id == undefined) {
-      id = -1;
-    }
-
-    try {
-      const URL = "https://laboon.as.r.appspot.com/whitelist";
-      const callRegister = await axios
-        .post(URL, {
-          address_wallet: wallet.getInstance().account,
-          boon_amount: boonValue,
-          [id == -1 ? null : "ref_code"]: id,
+        .post('https://laboon.as.r.appspot.com/check_wallet_wl', {
+          wallet_address: wallet.getInstance().account,
         })
         .then((res) => {
           return res.data;
@@ -171,8 +140,39 @@ export default function WhiteList_Registration() {
           throw err;
         });
 
+    // console.log(checkWallet);
+    if (checkWallet.status == 200) {
+      setMessageState('ALREADY_SIGNED');
+      showModalSucceed();
+      return;
+    }
+
+    const boonValue = parseInt(amount.split('.').join(''));
+
+    //* Get ref code
+    const storage = window.localStorage;
+    let id = storage.getItem('id');
+    if (id == null || id == undefined) {
+      id = -1;
+    }
+
+    try {
+      const URL = 'https://laboon.as.r.appspot.com/whitelist';
+      const callRegister = await axios
+          .post(URL, {
+            address_wallet: wallet.getInstance().account,
+            boon_amount: boonValue,
+            [id == -1 ? null : 'ref_code']: id,
+          })
+          .then((res) => {
+            return res.data;
+          })
+          .catch((err) => {
+            throw err;
+          });
+
       if (callRegister.status == 200) {
-        setMessageState("SUCCEED");
+        setMessageState('SUCCEED');
         showModalSucceed();
       } else {
         //* Never error
@@ -191,8 +191,8 @@ export default function WhiteList_Registration() {
             <div className="white-list__subtitle">
               <span>Round:</span>
               <span className="white-list__strategy">
-                {" "}
-                {getConfigRoundData()["Round Name"]} ({findBoonValue()}$)
+                {' '}
+                {getConfigRoundData()['Round Name']} ({findBoonValue()}$)
               </span>
             </div>
           </div>
@@ -235,16 +235,16 @@ export default function WhiteList_Registration() {
                     placeholder="0.00"
                     value={amount}
                     onChange={(e) => {
-                      if (e.target.value == "") {
-                        setAmount("");
-                        setDeposit("");
+                      if (e.target.value == '') {
+                        setAmount('');
+                        setDeposit('');
                       }
-                      const reg = new RegExp("^[0-9]+$");
-                      if (reg.test(e.target.value.split(".").join(""))) {
+                      const reg = new RegExp('^[0-9]+$');
+                      if (reg.test(e.target.value.split('.').join(''))) {
                         const amount = e.target.value
-                          .split(".")
-                          .join("")
-                          .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+                            .split('.')
+                            .join('')
+                            .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
                         setAmount(amount);
                         setValueDeposit(amount);
                       }
@@ -268,7 +268,7 @@ export default function WhiteList_Registration() {
                     value={deposit}
                     className="input-text"
                     style={{
-                      color: "#B6B6B6",
+                      color: '#B6B6B6',
                     }}
                     name="name"
                     placeholder="0.00"
@@ -296,12 +296,12 @@ export default function WhiteList_Registration() {
             </div>
           </div>
 
-          {window.localStorage.getItem("id") == undefined ||
-          window.localStorage.getItem("id") == null ? (
+          {window.localStorage.getItem('id') == undefined ||
+          window.localStorage.getItem('id') == null ? (
             <></>
           ) : (
             <span className="white-list__code">
-              *Code: {window.localStorage.getItem("id")}
+              *Code: {window.localStorage.getItem('id')}
             </span>
           )}
         </>

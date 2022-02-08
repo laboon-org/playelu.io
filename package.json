@@ -1,8 +1,8 @@
 {
   "name": "playelu_io",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "private": true,
-  "homepage": ".",
+  "homepage": "./",
   "dependencies": {
     "@ethersproject/providers": "^5.5.2",
     "@metamask/detect-provider": "^1.2.0",

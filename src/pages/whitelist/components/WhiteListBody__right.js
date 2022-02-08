@@ -56,11 +56,12 @@ export default function WhiteListBody__right(props) {
   return (
     <div className="white-list__body--right">
       <SaleStatusBar name={'Seed'} price={'0.01'} percent={'100% (Reserved)'} />
-      <SaleStatusBar
+      {/* <SaleStatusBar
         name={'Strategic'}
         price={'0.015'}
         percent={'In Progress'}
-      />
+        cssClsLoaded={'loaded-50'}
+      /> */}
       {whiteListComingSoonShow ? (
         !whiteListShow ? (
           <LoginProcess
