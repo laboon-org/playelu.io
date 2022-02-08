@@ -1,0 +1,119 @@
+@media screen and (max-width: 739.9px) {
+    .claim-body__mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .presale-info-container {
+        display: none !important;
+    }
+    .logo {
+        display: none;
+    }
+    .sale {
+        height: 100vh;
+        background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/Background-mobile.webp")
+            no-repeat center / cover;
+    }
+
+    .claim-body {
+        width: 100%;
+        height: calc(100vh - 80px);
+        padding-top: 80px;
+    }
+
+    .claim-right {
+        width: 100%;
+        border: 2px solid #205198;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+    }
+    .claim-right__frame {
+        width: 90%;
+        margin: 5px auto;
+    }
+    .claim--shadow {
+        top: 1%;
+        left: 2%;
+        width: 12px;
+        height: 18px;
+    }
+    .claim-right__header--title {
+        font-size: 20px;
+    }
+    .claim-right__header--title img {
+        width: 24px;
+        height: 22.5px;
+    }
+    .claim-right__header--title span {
+        margin: 0 15px;
+    }
+
+    .claim-right__header--sub {
+        font-size: 16px;
+    }
+
+    .claim-right__content__element {
+        width: 100%;
+        margin: 5px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .claim-information {
+        width: 47%;
+        display: flex;
+        flex-direction: column;
+    }
+    .address-wallet__input,
+    .claim-information__input {
+        border: 1px solid #ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        font-size: 12px;
+    }
+    .address-wallet__heading,
+    .claim-information__heading {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+    .address-wallet__input input,
+    .claim-information__input input {
+        padding: 4px 0;
+    }
+    .address-wallet__input input {
+        width: calc(100% - 60px);
+    }
+    .claim-information__input input {
+        width: calc(100% - 20px);
+        margin-left: 15px;
+    }
+    .address-wallet__input-img {
+        width: 20px;
+        height: 20px;
+        margin: 0 10px;
+    }
+
+    .claim-right__content__btn {
+        width: 100%;
+        margin: 5px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .claim-notification {
+        font-size: 10px;
+    }
+    .claim-right__btn {
+        width: 45%;
+        height: 50px;
+        margin: 0;
+        background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp")
+            no-repeat center / contain;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-size: 15px;
+        color: #ffff;
+    }
+}

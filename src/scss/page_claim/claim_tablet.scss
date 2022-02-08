@@ -1,0 +1,163 @@
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+    .claim-body {
+        height: calc(100vh - 60px);
+        padding-top: 40px;
+    }
+    .claim-right__frame {
+        width: 90%;
+        margin: 20px auto;
+    }
+    .claim--shadow {
+        position: absolute;
+        z-index: 0;
+        top: 2%;
+        left: 2%;
+        width: 16px;
+        height: 24px;
+        background: rgba(135, 136, 136, 0.3);
+        transform: rotateZ(45deg);
+        border-radius: 50%;
+    }
+    .claim-right__header--title {
+        font-size: 30px;
+    }
+    .claim-right__header--title img {
+        width: 32px;
+        height: 30px;
+    }
+    .claim-right__header--title span {
+        margin: 0 15px;
+    }
+
+    .claim-right__header--sub {
+        font-size: 22px;
+    }
+
+    .claim-right__content__element {
+        margin: 10px 0;
+    }
+    .claim-information {
+        width: 47%;
+    }
+    .address-wallet__input,
+    .claim-information__input {
+        border-radius: 8px;
+        font-size: 13px;
+    }
+    .address-wallet__heading,
+    .claim-information__heading {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+    .address-wallet__input input,
+    .claim-information__input input {
+        padding: 8px 0;
+    }
+    .address-wallet__input input {
+        width: calc(100% - 60px);
+    }
+    .claim-information__input input {
+        width: calc(100% - 20px);
+        margin-left: 15px;
+    }
+    .address-wallet__input-img {
+        width: 24px;
+        height: 24px;
+        margin: 0 8px;
+    }
+
+    .claim-right__content__btn {
+        width: 100%;
+        margin: 15px 0;
+    }
+    .claim-notification {
+        font-size: 12px;
+    }
+    .claim-right__btn {
+        width: 50%;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+    .claim-body {
+        height: calc(100vh - 60px);
+        padding-top: 40px;
+    }
+    .claim-right__frame {
+        width: 90%;
+        margin: 20px auto;
+    }
+    .claim--shadow {
+        position: absolute;
+        z-index: 0;
+        top: 2%;
+        left: 2%;
+        width: 16px;
+        height: 24px;
+        background: rgba(135, 136, 136, 0.3);
+        transform: rotateZ(45deg);
+        border-radius: 50%;
+    }
+    .claim-right__header--title {
+        font-size: 30px;
+    }
+    .claim-right__header--title img {
+        width: 32px;
+        height: 30px;
+    }
+    .claim-right__header--title span {
+        margin: 0 15px;
+    }
+
+    .claim-right__header--sub {
+        font-size: 22px;
+    }
+
+    .claim-right__content__element {
+        margin: 10px 0;
+    }
+    .claim-information {
+        width: 47%;
+    }
+    .address-wallet__input,
+    .claim-information__input {
+        border-radius: 8px;
+        font-size: 13px;
+    }
+    .address-wallet__heading,
+    .claim-information__heading {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+    .address-wallet__input input,
+    .claim-information__input input {
+        padding: 8px 0;
+    }
+    .address-wallet__input input {
+        width: calc(100% - 60px);
+    }
+    .claim-information__input input {
+        width: calc(100% - 20px);
+        margin-left: 15px;
+    }
+    .address-wallet__input-img {
+        width: 24px;
+        height: 24px;
+        margin: 0 8px;
+    }
+
+    .claim-right__content__btn {
+        width: 100%;
+        margin: 15px 0;
+    }
+    .claim-notification {
+        font-size: 12px;
+    }
+    .claim-right__btn {
+        width: 50%;
+        height: 50px;
+        font-size: 20px;
+    }
+}

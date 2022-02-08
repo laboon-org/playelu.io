@@ -1,0 +1,176 @@
+iframe {
+    z-index: -1 !important;
+}
+
+.claim {
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/Background.webp") no-repeat
+        center / cover;
+    overflow: hidden;
+}
+
+.claim-body {
+    max-width: 1920px;
+    max-height: 1113px;
+    width: 96%;
+    height: calc(100vh - 60px);
+    margin: auto;
+    padding-top: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.claim-right {
+    position: relative;
+    width: 1;
+    background: rgba(0, 0, 0, 0.65);
+    border: 4px solid #205198;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+.claim-right__frame {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.claim--shadow {
+    position: absolute;
+    z-index: 0;
+    top: 2%;
+    left: 2%;
+    width: 16px;
+    height: 24px;
+    background: rgba(135, 136, 136, 0.3);
+    transform: rotateZ(45deg);
+    border-radius: 50%;
+}
+.claim-right__header--title {
+    font-family: var(--font_black);
+    display: flex;
+    color: #fdcd2f;
+    font-size: 38px;
+    align-items: center;
+    justify-content: center;
+}
+.claim-right__header--title img {
+    width: 44px;
+    height: 41px;
+}
+.claim-right__header--title span {
+    margin: 0 10px;
+}
+
+.claim-right__header--sub {
+    color: #ffff;
+    font-size: 28px;
+    font-weight: 200;
+    font-family: var(--font_bold);
+}
+
+.claim-right__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    color: #fdcd2f;
+    font-family: var(--font_content);
+}
+.address-wallet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.claim-right__content__element {
+    width: 100%;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.claim-information {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+}
+.address-wallet__input,
+.claim-information__input {
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-size: 20px;
+}
+.address-wallet__heading,
+.claim-information__heading {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+.address-wallet__input input,
+.claim-information__input input {
+    border: none;
+    outline: none;
+    color: #ffff;
+    background: rgba(253, 253, 253, 0.993);
+    padding: 10px 0;
+    &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #ffff;
+        opacity: 0.6; /* Firefox */
+    }
+
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #ffff;
+    }
+
+    &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #ffff;
+    }
+}
+.address-wallet__input input {
+    width: calc(100% - 60px);
+    background: rgba(0, 0, 0, 0.25);
+}
+.claim-information__input input {
+    width: calc(100% - 20px);
+    margin-left: 15px;
+    background: rgba(0, 0, 0, 0.25);
+}
+.address-wallet__input-img {
+    width: 30px;
+    height: 30px;
+    margin: 0 15px;
+}
+
+.claim-notification {
+    color: #ffff;
+    text-align: center;
+}
+
+.claim-right__content__btn {
+    width: 100%;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.claim-right__btn {
+    width: 50%;
+    height: 70px;
+    background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp")
+        no-repeat center / contain;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #ffff;
+}

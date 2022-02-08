@@ -8,15 +8,14 @@ a {
   color: #efa059;
   cursor: pointer;
 }
-.sale,
-.white-list {
+.sale {
   width: 100vw;
   height: 100vh;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/Background.webp")
-    no-repeat center / cover;
+  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/Background.webp") no-repeat
+    center / cover;
   overflow: hidden;
 }
 
@@ -101,8 +100,7 @@ a {
   cursor: pointer;
 }
 /* Sale body */
-.sale-body,
-.white-list__body {
+.sale-body {
   max-width: 1920px;
   max-height: 1113px;
   width: 96%;

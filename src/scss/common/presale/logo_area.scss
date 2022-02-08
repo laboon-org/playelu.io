@@ -52,6 +52,9 @@
   }
   .logo {
     .logo-frame {
+      min-width: 250px;
+      width: 40%;
+      margin: auto;
       text-align: center;
       .elu-logo {
         width: 100%;
