@@ -28,9 +28,23 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 20px;
     }
+
+    // Begin Claim Modal Comingsoon
+    .claim-comingsoon {
+        width: 100% !important;
+        margin: 30px auto !important;
+    }
+    .claim-comingsoon__img {
+        width: 60%;
+        margin-bottom: 20px !important;
+    }
+    .claim-comingsoon__content {
+        font-size: 18px !important;
+    }
+    // End Claim Modal Comingsoon
     .claim-right__frame {
         width: 90%;
-        margin: 5px auto;
+        margin: 15px auto;
     }
     .claim--shadow {
         top: 1%;
@@ -103,17 +117,12 @@
     .claim-notification {
         font-size: 10px;
     }
-    .claim-right__btn {
+    .claim-right__btn,
+    .claim-right__btn--token,
+    .claim-right__btn--disconnect {
         width: 45%;
         height: 50px;
         margin: 0;
-        background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp")
-            no-repeat center / contain;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
         font-size: 15px;
-        color: #ffff;
     }
 }

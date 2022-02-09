@@ -171,6 +171,41 @@ iframe {
     align-items: center;
     text-align: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 26px;
     color: #ffff;
+}
+.claim-right__btn--token {
+    width: 50%;
+    height: 70px;
+    background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/claimBackground-btn.webp")
+        no-repeat center / contain;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 26px;
+    color: #ffff;
+}
+.claim-right__btn--disconnect {
+    width: 50%;
+    height: 70px;
+    background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/disconnectBackground-btn.webp")
+        no-repeat center / contain;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 26px;
+    color: #ffff;
+}
+
+// Begin claim token btn
+.claim-token {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mr-left5 {
+    margin-left: 5px !important;
 }

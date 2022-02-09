@@ -73,10 +73,11 @@
     .claim-notification {
         font-size: 12px;
     }
-    .claim-right__btn {
+    .claim-right__btn,
+    .claim-right__btn-token {
         width: 50%;
         height: 50px;
-        font-size: 20px;
+        font-size: 20px !important;
     }
 }
 
@@ -155,7 +156,9 @@
     .claim-notification {
         font-size: 12px;
     }
-    .claim-right__btn {
+    .claim-right__btn,
+    .claim-right__btn--token,
+    .claim-right__btn--disconnect {
         width: 50%;
         height: 50px;
         font-size: 20px;

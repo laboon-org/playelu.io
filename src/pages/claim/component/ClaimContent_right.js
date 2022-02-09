@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { FormControl, FormGroup, FormLabel } from 'react-bootstrap';
 import ClaimInformation from './ClaimInformation';
+
 
 export default function ClaimContentright() {
   const [connectWallet, setConnectWallet] = useState(false);
@@ -9,19 +11,19 @@ export default function ClaimContentright() {
         <div className='claim-right__header--title'>
           <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp' alt='' />
           <span>
-                        BOON
+            BOON
           </span>
           <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp' alt='' />
         </div>
         <span className='claim-right__header--sub'>
-                    TOKEN CLAIM DASHBOARD
+          TOKEN CLAIM DASHBOARD
         </span>
       </div>
       <div className='claim-right__content'>
         <div className='claim-right__content__element'>
           <div className='address-wallet'>
             <span className='address-wallet__heading'>
-                            Address
+              Address
             </span>
             <div className='address-wallet__input'>
               <img className='address-wallet__input-img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp' alt='' />
@@ -51,21 +53,41 @@ export default function ClaimContentright() {
         </div>
         <div className='claim-right__content__btn'>
           {
-                        !connectWallet ?
-                            <div className='claim-right__btn'>
-                              <span> Select Wallet</span>
-                            </div> :
-                            <div className=''></div>
+            !connectWallet ?
+              <div className='claim-right__btn' onClick={(e) => {
+                setConnectWallet(true);
+              }}>
+                <span> Select Wallet</span>
+              </div> :
+              <div className='claim-token'>
+                <div className='claim-right__btn--token'>
+                  <span> Claim Token</span>
+                </div>
+
+                <div className='claim-right__btn--disconnect mr-left5'>
+                  <span>Disconnect  </span>
+                </div>
+              </div>
           }
         </div>
         <span className='claim-notification'>
-                    * You need a one time fee of 0.003 AVAX to create your $BOON token account in your wallet
+          * You need a one time fee of 0.003 AVAX to create your $BOON token account in your wallet
         </span>
         <div className='claim-right__content__element'>
-          <ClaimInformation
+          {/* <ClaimInformation
             heading='Next Unlock Date'
             placeholder='0.00'
-          />
+          /> */}
+          <FormGroup className='claim-information' controlId="dob">
+            <span className='claim-information__heading'>
+              Next Unlock Date
+            </span>
+            <FormControl
+              className='claim-information__input'
+              type="date"
+              name="dob"
+              placeholder="" />
+          </FormGroup>
           <ClaimInformation
             heading='Next Unlock Amount'
             placeholder='0.00'
