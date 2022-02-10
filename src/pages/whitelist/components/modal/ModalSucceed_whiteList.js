@@ -1,14 +1,11 @@
 import React from 'react';
-
 import '../../../presale/component/modal/_modal.scss';
 import '../../../presale/component/modal/_responsive.scss';
 
 export default function ModalSucceed(props) {
   const {
     type,
-    message,
   } = props;
-
   //* Component
   const SucceedState = () => {
     return (
@@ -18,7 +15,6 @@ export default function ModalSucceed(props) {
       </div>
     );
   };
-
   const SignedState = () => {
     return (
       <div>

@@ -125,4 +125,12 @@
         margin: 0;
         font-size: 15px;
     }
+    .padding-left {
+        padding-left: 25px !important;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        left: -20px;
+        width: 10px;
+        height: 10px;
+    }
 }

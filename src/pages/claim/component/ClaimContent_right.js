@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FormControl, FormGroup, FormLabel } from 'react-bootstrap';
 import ClaimInformation from './ClaimInformation';
 
 
@@ -74,23 +73,16 @@ export default function ClaimContentright() {
           * You need a one time fee of 0.003 AVAX to create your $BOON token account in your wallet
         </span>
         <div className='claim-right__content__element'>
-          {/* <ClaimInformation
+          <ClaimInformation
             heading='Next Unlock Date'
-            placeholder='0.00'
-          /> */}
-          <FormGroup className='claim-information' controlId="dob">
-            <span className='claim-information__heading'>
-              Next Unlock Date
-            </span>
-            <FormControl
-              className='claim-information__input'
-              type="date"
-              name="dob"
-              placeholder="" />
-          </FormGroup>
+            placeholder="dd-mm-yyyy"
+            type="date"
+            className="padding-left"
+          />
           <ClaimInformation
             heading='Next Unlock Amount'
             placeholder='0.00'
+            type="number"
           />
         </div>
       </div>

@@ -117,7 +117,7 @@ iframe {
     border: none;
     outline: none;
     color: #ffff;
-    background: rgba(253, 253, 253, 0.993);
+    background: rgba(0, 0, 0, 0.25);
     padding: 10px 0;
     &::placeholder {
         /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -137,12 +137,10 @@ iframe {
 }
 .address-wallet__input input {
     width: calc(100% - 60px);
-    background: rgba(0, 0, 0, 0.25);
 }
 .claim-information__input input {
     width: calc(100% - 20px);
     margin-left: 15px;
-    background: rgba(0, 0, 0, 0.25);
 }
 .address-wallet__input-img {
     width: 30px;
@@ -154,7 +152,33 @@ iframe {
     color: #ffff;
     text-align: center;
 }
+input {
+    position: relative;
+    cursor: text;
+}
+.padding-left {
+    padding-left: 40px !important;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: -20px;
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/claim/iconCalendar.png)
+        no-repeat center / cover;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+}
 
+// Begin claim  btn
+.claim-token {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .claim-right__content__btn {
     width: 100%;
     margin: 15px 0;
@@ -174,6 +198,7 @@ iframe {
     font-size: 26px;
     color: #ffff;
 }
+
 .claim-right__btn--token {
     width: 50%;
     height: 70px;
@@ -197,14 +222,6 @@ iframe {
     justify-content: center;
     font-size: 26px;
     color: #ffff;
-}
-
-// Begin claim token btn
-.claim-token {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .mr-left5 {
     margin-left: 5px !important;

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import ClaimModal from './Claim_ComingSoonModal'
-import ClaimContentRight from './ClaimContent_right'
+import React, {useState} from 'react';
+import ClaimModal from './Claim_ComingSoonModal';
+import ClaimContentRight from './ClaimContent_right';
 
 
 export default function ClaimBodyRight() {
