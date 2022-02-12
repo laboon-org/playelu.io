@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 function SocialLink(props) {
-  const {urlApi} = props;
+  const { urlApi } = props;
   const elementLinks = [
     {
       id: 1,

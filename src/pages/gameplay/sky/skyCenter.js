@@ -1,5 +1,5 @@
-import React, {useCallback, useState} from 'react';
-import {Link} from 'react-router-dom';
+import React, { useCallback, useState } from 'react';
+import { Link } from 'react-router-dom';
 import _ from 'lodash';
 
 import DropFeaturesModal from './../components/modals/DropFeaturesModal';
@@ -19,7 +19,7 @@ function zoom() {
 }
 
 export default function SkyCenter(props) {
-  const {urlApi, setting} = props;
+  const { urlApi, setting } = props;
   const listIslandUrl = [
     {
       url1: _.isEmpty(urlApi) ?
@@ -81,7 +81,7 @@ export default function SkyCenter(props) {
           <div className="sky-center" id="drop">
             <div className="island zoom">{islands}</div>
           </div>
-          <div style={{marginTop: 20, width: '100vw'}}>
+          <div style={{ marginTop: 20, width: '100vw' }}>
             <div>
               {!dropShow ? (
                 <div

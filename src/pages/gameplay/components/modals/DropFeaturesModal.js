@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {Modal, Container, Row, Col} from 'react-bootstrap';
+import { Modal, Container, Row, Col } from 'react-bootstrap';
 import BoxFeature from './../features/BoxFeature';
 import BoxFeatureComingSoon from './../features/BoxFeatureComingSoon';
 
@@ -12,7 +12,7 @@ import './gp_modal_mobile.scss';
 import UrlRecursive from './../../../../components/UrlRecursive';
 
 export default function DropFeaturesModal(props) {
-  const {show, onHide, urlApi} = props;
+  const { show, onHide, urlApi } = props;
 
   const imgCompetingMode = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.competing;
   const imgHuntingMode = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.HuntHexBoard;

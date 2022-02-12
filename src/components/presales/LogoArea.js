@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Container, Row, Col} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import WarningFragment from './WarningFragment';
 
 import '../../scss/common/presale/logo_area.scss';
@@ -38,7 +38,7 @@ export default function LogoArea() {
         <Col className="logo-frame" sm={12}>
           <img
             className="elu-logo"
-            src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/Logo-Elu%20verse.webp"
+            src="https://storage.googleapis.com/laboon-img-storage/play-elu/common/Elu_Verse_V5.webp"
             alt=""
           />
           <img

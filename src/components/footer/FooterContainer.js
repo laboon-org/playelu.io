@@ -9,7 +9,7 @@ import SocialLink from './SocialLink';
 import UrlRecursive from '../UrlRecursive';
 
 export default function FooterContainer(props) {
-  const {urlApi} = props;
+  const { urlApi } = props;
 
   const linkPrivacyPolicy = _.isEmpty(urlApi) ? '' : urlApi.docs.privacyPolicy;
   const linkCondition = _.isEmpty(urlApi) ? '' : urlApi.docs.conditions;

@@ -13,12 +13,12 @@ export default function FloatingDiscord(props) {
         <a href="https://discord.io/EluVerse">
           <img
             className="discord-img"
-            src={_.isEmpty(urlApi) ? "" : urlApi.image.discord}
+            src={_.isEmpty(urlApi) ? '' : urlApi.image.discord}
             alt=""
           />
           <img
             className="mobile__discord-img"
-            src={_.isEmpty(urlApi) ? "" : urlApi.image.mobileDiscord}
+            src={_.isEmpty(urlApi) ? '' : urlApi.image.mobileDiscord}
             alt=""
           />
         </a>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import _ from 'lodash';
 
 import Modal from 'react-bootstrap/Modal';
@@ -14,7 +14,7 @@ function HomeContent(props) {
   const { urlApi } = props;
 
   const [show, setShow] = useState(false);
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   const [error, setError] = useState(null);
 
   const handleClose = () => setShow(false);
@@ -38,7 +38,7 @@ function HomeContent(props) {
         );
       } else {
         handleShow();
-        setError("");
+        setError('');
       }
     },
     [email]
@@ -61,12 +61,12 @@ function HomeContent(props) {
       >
         <div className="close-modal" onClick={() => handleClose()}>
           <img
-            src={_.isEmpty(urlApi) ? "" : urlApi.image.modal.closeModal}
+            src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.closeModal}
             alt=""
           />
         </div>
         <div className="modal-container">
-          <img src={_.isEmpty(urlApi) ? "" : urlApi.image.eluLogo} alt="" />
+          <img src={_.isEmpty(urlApi) ? '' : urlApi.image.eluLogo} alt="" />
           <h1>thank you!</h1>
           <p className="name-email">{email}</p>
         </div>
@@ -76,7 +76,7 @@ function HomeContent(props) {
           <div className="playelu-top">
             <div className="playelu-img">
               <img
-                src={_.isEmpty(urlApi) ? "" : urlApi.image.eluLogo1}
+                src={_.isEmpty(urlApi) ? '' : urlApi.image.eluLogo1}
                 alt=""
               />
             </div>

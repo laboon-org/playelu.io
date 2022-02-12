@@ -1,17 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import _ from 'lodash';
 
 import '../../../scss/page_gameplay/skyScss/skyTop.scss';
 
-import {useState} from 'react';
+import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 
 import GameplayRune from './gameplayRune';
 import UrlRecursive from '../../../components/UrlRecursive';
 
 export default function SkyTop(props) {
-  const {urlApi, setting} = props;
+  const { urlApi, setting } = props;
 
   const [showPopup, setShowPopup] = useState(false);
   const handleClosePopup = () => setShowPopup(false);
@@ -29,7 +29,7 @@ export default function SkyTop(props) {
   const imgScout = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.scout;
   const imgMetaVerse = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.metaVerse;
 
-  const imgEluLogo = _.isEmpty(urlApi) ? '' : urlApi.image.eluLogo;
+  const imgEluLogo = _.isEmpty(urlApi) ? '' : urlApi.image.eluLogo1;
 
   return (
     <UrlRecursive data={props}>
