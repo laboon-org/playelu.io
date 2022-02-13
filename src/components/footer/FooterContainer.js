@@ -27,7 +27,7 @@ export default function FooterContainer(props) {
             <span>Terms & Conditions</span>
           </a>
         </div>
-        <span className="version">v0.7.3 - 20220207</span>
+        <span className="version">v0.7.4 - 20220213</span>
       </div>
     </UrlRecursive>
   );
