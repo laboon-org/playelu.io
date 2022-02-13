@@ -3,7 +3,7 @@ import React from 'react';
 const RecursiveCloneChildren = (children, data) => {
   return React.Children.map(children, (child) => {
     let childProps = {
-      urlApi: data.urlApi,
+      url_api: data.url_api,
       setting: data.setting,
     };
     if (!child || !child.props) {
@@ -11,10 +11,10 @@ const RecursiveCloneChildren = (children, data) => {
     }
     childProps = {
       ...child.props,
-      urlApi: data.urlApi,
+      url_api: data.url_api,
       setting: data.setting,
+      // decorated: true, // TODO: better way to do this?
     };
-    childProps.DECORATED = true;
     const children = RecursiveCloneChildren(child.props.children, data);
     return React.cloneElement(child, childProps, children);
   });

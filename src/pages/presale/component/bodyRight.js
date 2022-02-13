@@ -1,12 +1,12 @@
-import React, { useState, useCallback } from "react";
-import Contribute from "./contribute/contribute";
-import ModalInProcessing from "./modal/ModalProcessing";
-import Connector from "./Connector";
-import ModalNotification from "./modal/ModalNotification";
+import React, {useState, useCallback} from 'react';
+import Contribute from './contribute/contribute';
+import ModalInProcessing from './modal/ModalProcessing';
+import Connector from './Connector';
+import ModalNotification from './modal/ModalNotification';
 
 export default function BodyRight(props) {
   //* Props
-  const { showModalNotFound, changeStateWarning } = props;
+  const {showModalNotFound, changeStateWarning} = props;
 
   //* State
   const [contributeShow, setContributeShow] = useState(false);

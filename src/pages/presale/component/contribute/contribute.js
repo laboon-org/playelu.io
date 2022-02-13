@@ -1,42 +1,42 @@
-import React, { useState } from "react";
-import axios from "axios";
-import moment from "moment";
+import React, {useState} from 'react';
+import axios from 'axios';
+import moment from 'moment';
 
-import wallet from "../../../../util/wallet";
-import ModalFail from "../modal/ModalFail";
-import ModalSucceed from "../modal/ModalSucceed";
-import messageStorage from "../../../../util/messageStorage";
+import wallet from '../../../../util/wallet';
+import ModalFail from '../modal/ModalFail';
+import ModalSucceed from '../modal/ModalSucceed';
+import messageStorage from '../../../../util/messageStorage';
 
 const getStatePage = () => {
-  const CONFIG = messageStorage.getInstance().getMessage("config");
-  const data = CONFIG["Page Setting"].data;
+  const CONFIG = messageStorage.getInstance().getMessage('config');
+  const data = CONFIG['Page Setting'].data;
   const index = data.findIndex((v, i, obj) => {
-    if (v["Page Name"] == "presale") {
+    if (v['Page Name'] == 'presale') {
       return true;
     }
   });
 
   const pageSetting = data[index];
 
-  return pageSetting.Toggle === "TRUE";
+  return pageSetting.Toggle === 'TRUE';
 };
 
 const findBoonValue = () => {
-  const CONFIG = messageStorage.getInstance().getMessage("config");
-  if (CONFIG["Round Setting"] != null) {
-    const data = CONFIG["Round Setting"].data;
+  const CONFIG = messageStorage.getInstance().getMessage('config');
+  if (CONFIG['Round Setting'] != null) {
+    const data = CONFIG['Round Setting'].data;
     let boonValue = 0;
     const index = data.findIndex((v, i, obj) => {
       if (
-        moment(v.Start).subtract(1, "days").isBefore(moment()) &&
-        moment(v.End).add(1, "days").isAfter(moment())
+        moment(v.Start).subtract(1, 'days').isBefore(moment()) &&
+        moment(v.End).add(1, 'days').isAfter(moment())
       ) {
         return true;
       }
     });
 
     if (index != -1) {
-      boonValue = data[index]["Sell Price"];
+      boonValue = data[index]['Sell Price'];
     }
     return parseFloat(boonValue);
   }
@@ -44,13 +44,13 @@ const findBoonValue = () => {
 };
 
 const findAvaxValue = () => {
-  const CONFIG = messageStorage.getInstance().getMessage("config");
+  const CONFIG = messageStorage.getInstance().getMessage('config');
 
   if (CONFIG.Common != null) {
     const dataCommon = CONFIG.Common.data;
     let avaxValue = 0;
     const index = dataCommon.findIndex((v, i, obj) => {
-      if (v.Key == "avax_value") {
+      if (v.Key == 'avax_value') {
         return true;
       }
     });
@@ -72,24 +72,24 @@ const calValueDeposit = (amount) => {
     return USD / avaxValueUSD;
   };
 
-  const boonAmount = parseInt(amount.split(".").join(""));
-  const avaxAmount = Math.round(calAvaxAmount(boonAmount) * 1000) / 1000 + "";
-  return avaxAmount.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+  const boonAmount = parseInt(amount.split('.').join(''));
+  const avaxAmount = Math.round(calAvaxAmount(boonAmount) * 1000) / 1000 + '';
+  return avaxAmount.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
 };
 export default function Contribute(props) {
-  const { showLoading, data } = props;
+  const {showLoading, data} = props;
 
   //* State
   const [amount, setAmount] = useState(
-    (data["BOON (Amount)"] + "").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
+      (data['BOON (Amount)'] + '').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'),
   );
   const [deposit, setDeposit] = useState(
-    data["BOON (Amount)"] != null
-      ? calValueDeposit(data["BOON (Amount)"] + "")
-      : ""
+    data['BOON (Amount)'] != null ?
+      calValueDeposit(data['BOON (Amount)'] + '') :
+      '',
   );
   const [infoState, setInfoState] = useState(false);
-  const [infoValue, setInfoValue] = useState("");
+  const [infoValue, setInfoValue] = useState('');
   const [modalCommingShow, setModalCommingShow] = useState(!getStatePage());
   //* Show form contribute or message
   const [contribute, setContribute] = useState(true);
@@ -101,20 +101,20 @@ export default function Contribute(props) {
 
   const doTransactionInBC = async () => {
     try {
-      // const Web3 = new web3(web3.givenProvider)
-      // const boonToken = new web3.eth.Contract(contractAbi.ABI, contractAbi.contractAddress)
-      // const senderAddress = wallet.getInstance().account
-      // const receiverAddress = ''//* get after
-      // test call
-      // boonToken.methods.
-      // .transfer(receiverAddress, avaxAmount)
+      // const Web3 = new web3(web3.givenProvider);
+      // const boonToken = new web3.eth.Contract(contractAbi.ABI, contractAbi.contractAddress);
+      // const senderAddress = wallet.getInstance().account;
+      // const receiverAddress = '';//* get after
+
+      // // test call
+      // boonToken.methods.transfer(receiverAddress, avaxAmount)
       //     .send({ from: senderAddress }, function (err, res) {
       //         if (err) {
-      //             console.log("An error occured", err)
-      //             throw new Error(err)
+      //           console.log("An error occured", err);
+      //           throw new Error(err);
       //         }
       //         //* if succeed
-      //         console.log("Hash of the transaction: " + res)
+      //       console.log("Hash of the transaction: " + res);
       //     })
 
       return {
@@ -128,34 +128,34 @@ export default function Contribute(props) {
     }
   };
 
-  const failureMessage = (messageCode, message = "") => {
+  const failureMessage = (messageCode, message = '') => {
     switch (messageCode) {
-      case "SMALL_AMOUNT": {
-        setInfoValue("Your $Boon amount is smaller than the original in WL");
+      case 'SMALL_AMOUNT': {
+        setInfoValue('Your $Boon amount is smaller than the original in WL');
         setContribute(false);
         setStateTransaction(false);
         break;
       }
-      case "NO_ADDRESS": {
-        setInfoValue("Your Wallet Address isn't in WL");
+      case 'NO_ADDRESS': {
+        setInfoValue('Your Wallet Address isn\'t in WL');
         setContribute(false);
         setStateTransaction(false);
         break;
       }
-      case "HAD_PAID": {
-        setInfoValue("You can only buy once time!");
+      case 'HAD_PAID': {
+        setInfoValue('You can only buy once time!');
         setContribute(false);
         setStateTransaction(false);
         break;
       }
-      case "ERROR_BC": {
+      case 'ERROR_BC': {
         setInfoValue(message);
         setContribute(false);
         setStateTransaction(false);
         break;
       }
       default: {
-        setInfoValue("Unable to identify error");
+        setInfoValue('Unable to identify error');
         setContribute(false);
         setStateTransaction(false);
         break;
@@ -167,27 +167,27 @@ export default function Contribute(props) {
     //* Check Wallet Condition
     try {
       showLoading(true);
-      const SHEET_NAME = "2.Strategy";
-      const PAYMENT_METHOD = "AVAX";
+      const SHEET_NAME = '2.Strategy';
+      const PAYMENT_METHOD = 'AVAX';
       const transaction_status = false;
-      const URL = "https://laboon.as.r.appspot.com/confirm_transaction";
-      const boonValue = parseInt(amount.split(".").join(""));
+      const URL = 'https://laboon.as.r.appspot.com/confirm_transaction';
+      const boonValue = parseInt(amount.split('.').join(''));
       const transactionValidation = await axios
-        .post(URL, {
-          sheet_name: SHEET_NAME,
-          address_wallet: wallet.getInstance().account,
-          boon_amount: boonValue,
-          payment_method: PAYMENT_METHOD,
-          purchase_price: boonValue * findBoonValue(),
-          transaction_status: transaction_status,
-        })
-        .then((res) => {
-          return res.data;
-        })
-        .catch((err) => {
-          showLoading(false);
-          throw err;
-        });
+          .post(URL, {
+            sheet_name: SHEET_NAME,
+            address_wallet: wallet.getInstance().account,
+            boon_amount: boonValue,
+            payment_method: PAYMENT_METHOD,
+            purchase_price: boonValue * findBoonValue(),
+            transaction_status: transaction_status,
+          })
+          .then((res) => {
+            return res.data;
+          })
+          .catch((err) => {
+            showLoading(false);
+            throw err;
+          });
 
       if (transactionValidation.status != 200) {
         //* Failure
@@ -202,21 +202,21 @@ export default function Contribute(props) {
           //* Succeed
           //* Confirm in google sheet
           const transactionConfirm = await axios
-            .post(URL, {
-              sheet_name: SHEET_NAME,
-              address_wallet: wallet.getInstance().account,
-              boon_amount: boonValue,
-              payment_method: PAYMENT_METHOD,
-              purchase_price: boonValue * findBoonValue(),
-              transaction_status: true,
-            })
-            .then((res) => {
-              return res.data;
-            })
-            .catch((err) => {
-              showLoading(false);
-              throw err;
-            });
+              .post(URL, {
+                sheet_name: SHEET_NAME,
+                address_wallet: wallet.getInstance().account,
+                boon_amount: boonValue,
+                payment_method: PAYMENT_METHOD,
+                purchase_price: boonValue * findBoonValue(),
+                transaction_status: true,
+              })
+              .then((res) => {
+                return res.data;
+              })
+              .catch((err) => {
+                showLoading(false);
+                throw err;
+              });
 
           if (transactionConfirm.status != 200) {
             const messageCode = transactionConfirm.message;
@@ -224,7 +224,7 @@ export default function Contribute(props) {
             failureMessage(messageCode);
           }
         } else {
-          failureMessage("ERROR_BC", transaction.message);
+          failureMessage('ERROR_BC', transaction.message);
         }
 
         //* Change state
@@ -300,16 +300,16 @@ export default function Contribute(props) {
                   placeholder=""
                   value={amount}
                   onChange={(e) => {
-                    if (e.target.value == "") {
-                      setAmount("");
-                      setDeposit("");
+                    if (e.target.value == '') {
+                      setAmount('');
+                      setDeposit('');
                     }
-                    const reg = new RegExp("^[0-9]+$");
-                    if (reg.test(e.target.value.split(".").join(""))) {
+                    const reg = new RegExp('^[0-9]+$');
+                    if (reg.test(e.target.value.split('.').join(''))) {
                       const amount = e.target.value
-                        .split(".")
-                        .join("")
-                        .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+                          .split('.')
+                          .join('')
+                          .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
                       setAmount(amount);
                       setValueDeposit(amount);
                     } else {

@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, {useCallback, useState} from 'react';
+import {Link} from 'react-router-dom';
 import _ from 'lodash';
 
 import DropFeaturesModal from './../components/modals/DropFeaturesModal';
@@ -19,32 +19,32 @@ function zoom() {
 }
 
 export default function SkyCenter(props) {
-  const { urlApi, setting } = props;
+  const {url_api, setting} = props;
   const listIslandUrl = [
     {
-      url1: _.isEmpty(urlApi) ?
+      url1: _.isEmpty(url_api) ?
         '' :
-        urlApi.imageGamePlay.skyCenter.islandBlank1,
-      url2: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.fireIsland,
-      url3: _.isEmpty(urlApi) ?
+        url_api.imageGamePlay.skyCenter.islandBlank1,
+      url2: _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyCenter.fireIsland,
+      url3: _.isEmpty(url_api) ?
         '' :
-        urlApi.imageGamePlay.skyCenter.fireIslandImg,
+        url_api.imageGamePlay.skyCenter.fireIslandImg,
     },
     {
-      url1: _.isEmpty(urlApi) ?
+      url1: _.isEmpty(url_api) ?
         '' :
-        urlApi.imageGamePlay.skyCenter.islandBlank2,
-      url2: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.fountain,
-      url3: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.fountainImg,
+        url_api.imageGamePlay.skyCenter.islandBlank2,
+      url2: _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyCenter.fountain,
+      url3: _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyCenter.fountainImg,
     },
     {
-      url1: _.isEmpty(urlApi) ?
+      url1: _.isEmpty(url_api) ?
         '' :
-        urlApi.imageGamePlay.skyCenter.islandBlank3,
-      url2: _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyCenter.islandWater,
-      url3: _.isEmpty(urlApi) ?
+        url_api.imageGamePlay.skyCenter.islandBlank3,
+      url2: _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyCenter.islandWater,
+      url3: _.isEmpty(url_api) ?
         '' :
-        urlApi.imageGamePlay.skyCenter.islandWaterImg,
+        url_api.imageGamePlay.skyCenter.islandWaterImg,
     },
   ];
   const [dropShow, setDropShow] = useState(false);
@@ -81,7 +81,7 @@ export default function SkyCenter(props) {
           <div className="sky-center" id="drop">
             <div className="island zoom">{islands}</div>
           </div>
-          <div style={{ marginTop: 20, width: '100vw' }}>
+          <div style={{marginTop: 20, width: '100vw'}}>
             <div>
               {!dropShow ? (
                 <div

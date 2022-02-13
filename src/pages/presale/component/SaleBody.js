@@ -1,11 +1,11 @@
-import React, { useState, useCallback } from "react";
+import React, {useState, useCallback} from 'react';
 
-import BodyRight from "./bodyRight";
-import LogoArea from "../../../components/presales/LogoArea";
-import NotfoundModal from "./modal/NotFoundModal";
+import BodyRight from './bodyRight';
+import LogoArea from '../../../components/presales/LogoArea';
+import NotfoundModal from './modal/NotFoundModal';
 
 export default function SaleBody(props) {
-  const { changeStateWarning } = props;
+  const {changeStateWarning} = props;
   const [notfound, setNotfound] = useState(false);
   const showModalNotFound = useCallback(() => {
     setNotfound(true);

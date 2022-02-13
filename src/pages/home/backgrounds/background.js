@@ -7,7 +7,7 @@ import UrlRescusive from '../../../components/UrlRecursive';
 import _ from 'lodash';
 
 export default function Background(props) {
-  const {urlApi} = props;
+  const {url_api} = props;
   return (
     <UrlRescusive data={props}>
       <div className='playelu-background'>
@@ -15,12 +15,12 @@ export default function Background(props) {
         <BackgroundComet />
         <BackgroundStar />
         <div className='shooting-star'>
-          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
         </div>
         {/* <CloudBottom /> */}
       </div>

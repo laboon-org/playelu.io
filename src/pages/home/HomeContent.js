@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import _ from 'lodash';
 
 import Modal from 'react-bootstrap/Modal';
@@ -9,9 +9,9 @@ const validateEmail = (email) => {
   return re.test(String(email).toLowerCase());
 };
 
-const URI = "https://api.playelu.io/subemail";
+const URI = 'https://api.playelu.io/subemail';
 function HomeContent(props) {
-  const { urlApi } = props;
+  const {url_api} = props;
 
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState('');
@@ -21,27 +21,27 @@ function HomeContent(props) {
   const handleShow = () => setShow(true);
 
   const onPress = React.useCallback(
-    (e) => {
-      fetch(URI, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      })
-        .then((response) => console.log(response))
-        .catch((err) => console.log(err));
-      if (!validateEmail(email)) {
-        setError(
-          "Please enter your email address in format: yourname@example.com"
-        );
-      } else {
-        handleShow();
-        setError('');
-      }
-    },
-    [email]
+      (e) => {
+        fetch(URI, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({email}),
+        })
+            .then((response) => console.log(response))
+            .catch((err) => console.log(err));
+        if (!validateEmail(email)) {
+          setError(
+              'Please enter your email address in format: yourname@example.com',
+          );
+        } else {
+          handleShow();
+          setError('');
+        }
+      },
+      [email],
   );
 
   const handleSubmit = (e) => {
@@ -61,12 +61,12 @@ function HomeContent(props) {
       >
         <div className="close-modal" onClick={() => handleClose()}>
           <img
-            src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.closeModal}
+            src={_.isEmpty(url_api) ? '' : url_api.image.modal.closeModal}
             alt=""
           />
         </div>
         <div className="modal-container">
-          <img src={_.isEmpty(urlApi) ? '' : urlApi.image.eluLogo} alt="" />
+          <img src={_.isEmpty(url_api) ? '' : url_api.image.eluLogo} alt="" />
           <h1>thank you!</h1>
           <p className="name-email">{email}</p>
         </div>
@@ -76,7 +76,7 @@ function HomeContent(props) {
           <div className="playelu-top">
             <div className="playelu-img">
               <img
-                src={_.isEmpty(urlApi) ? '' : urlApi.image.eluLogo1}
+                src={_.isEmpty(url_api) ? '' : url_api.image.eluLogo1}
                 alt=""
               />
             </div>

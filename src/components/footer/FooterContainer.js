@@ -9,15 +9,15 @@ import SocialLink from './SocialLink';
 import UrlRecursive from '../UrlRecursive';
 
 export default function FooterContainer(props) {
-  const { urlApi } = props;
+  const {url_api} = props;
 
-  const linkPrivacyPolicy = _.isEmpty(urlApi) ? '' : urlApi.docs.privacyPolicy;
-  const linkCondition = _.isEmpty(urlApi) ? '' : urlApi.docs.conditions;
+  const linkPrivacyPolicy = _.isEmpty(url_api) ? '' : url_api.docs.privacyPolicy;
+  const linkCondition = _.isEmpty(url_api) ? '' : url_api.docs.conditions;
 
   return (
     <UrlRecursive data={props}>
       <div className="footer">
-        <SocialLink urlApi={urlApi} />
+        <SocialLink url_api={url_api} />
         <div className="policy">
           <a href={linkPrivacyPolicy} target="_blank" rel="noreferrer">
             <span>Privacy Policy</span>
