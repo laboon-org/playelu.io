@@ -56,7 +56,7 @@ export default function BodyRight(props) {
         <LoginProcess />
       ) : (
         <div className="body-right">
-          <span className="body-right__title">TRANSACTION</span>
+          <span className="body-right__title">Transaction</span>
           <Contribute
             data={contributeData}
             showLoading={(bool) => {
