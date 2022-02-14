@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 import {Image} from 'react-bootstrap';
 
 import './gp_box_feature.scss';

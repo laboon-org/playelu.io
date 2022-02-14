@@ -1,14 +1,13 @@
 import React from 'react';
-import _ from 'lodash';
 
 import BackgroundComet from './bacgroundComet';
-import Stars from './Stars';
+// import Stars from './Stars';
 import BackgroundStar from './backgroundStar';
 import BackgroundCloud from './backgroundCloud';
 import UrlRescusive from '../../../components/UrlRecursive';
 
 export default function Background(props) {
-  const {url_api} = props;
+  // const {url_api} = props;
   return (
     <UrlRescusive data={props}>
       <div className='playelu-background'>

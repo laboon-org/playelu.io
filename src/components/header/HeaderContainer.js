@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 
 import TopMenu from './TopMenu';
 import Cursor from '../../components/header/Cursor';

@@ -56,7 +56,7 @@ export default function TopMenu(props) {
           className="home-btn__gameplay--background"
           src={
             _.isEmpty(url_api) ? '/#' : url_api.image.homeBackground.gameplayBtn
-          }
+          } alt="Gameplay Button"
         />
         <Link to="/gameplay" className="home-btn__gameplay--text">
           <span>Gameplay</span>

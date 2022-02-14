@@ -21,7 +21,7 @@ function opacity() {
   }
 }
 export default function SectionNest(props) {
-  const {url_api, setting} = props;
+  const {url_api} = props;
   const [nestShow, setNestShow] = useState(false);
   const onPressShowNest = () => {
     setNestShow(true);

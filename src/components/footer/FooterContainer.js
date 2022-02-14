@@ -19,11 +19,11 @@ export default function FooterContainer(props) {
       <div className="footer">
         <SocialLink url_api={url_api} />
         <div className="policy">
-          <a href={linkPrivacyPolicy} target="_blank" rel="noreferrer">
+          <a href={linkPrivacyPolicy} target="_blank" rel="noopener noreferrer">
             <span>Privacy Policy</span>
           </a>
           <span>|</span>
-          <a href={linkCondition} target="_blank" rel="noreferrer">
+          <a href={linkCondition} target="_blank" rel="noopener noreferrer">
             <span>Terms & Conditions</span>
           </a>
         </div>

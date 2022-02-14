@@ -19,7 +19,7 @@ function zoom() {
 }
 
 export default function SkyCenter(props) {
-  const {url_api, setting} = props;
+  const {url_api} = props;
   const listIslandUrl = [
     {
       url1: _.isEmpty(url_api) ?
@@ -55,7 +55,7 @@ export default function SkyCenter(props) {
     setDropShow(false);
   });
   const islands = listIslandUrl.map((value, key) => {
-    const isFinalItem = listIslandUrl.length - 1 == key;
+    const isFinalItem = listIslandUrl.length - 1 === key;
     const finalClass = isFinalItem ? 'mr-top' : '';
     const mrBottom = isFinalItem ? 'mr-bottom' : '';
     return (

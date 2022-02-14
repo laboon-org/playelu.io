@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 
 import '../../scss/page_gameplay/gameplay.scss';
 import '../../scss/page_gameplay/gameplay_tablet.scss';
@@ -34,7 +33,7 @@ function reveal() {
 }
 
 export default function gameplayContainer(props) {
-  const {url_api, setting} = props;
+  const {url_api} = props;
 
   return (
     <UrlRecursive data={props}>
