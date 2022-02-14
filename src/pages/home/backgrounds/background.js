@@ -1,27 +1,29 @@
 import React from 'react';
+import _ from 'lodash';
+
 import BackgroundComet from './bacgroundComet';
 import Stars from './Stars';
 import BackgroundStar from './backgroundStar';
 import BackgroundCloud from './backgroundCloud';
 import UrlRescusive from '../../../components/UrlRecursive';
-import _ from 'lodash';
 
 export default function Background(props) {
-  const {urlApi} = props;
+  const {url_api} = props;
   return (
     <UrlRescusive data={props}>
       <div className='playelu-background'>
         <BackgroundCloud />
         <BackgroundComet />
         <BackgroundStar />
-        <div className='shooting-star'>
-          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
-        </div>
+        {/* FIXME: Memory Leak of React Hook */}
+        {/* <div className='shooting-star'>
+          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
+        </div> */}
         {/* <CloudBottom /> */}
       </div>
     </UrlRescusive>

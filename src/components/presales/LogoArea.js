@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Row, Col } from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 import WarningFragment from './WarningFragment';
 
 import '../../scss/common/presale/logo_area.scss';

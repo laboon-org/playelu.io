@@ -5,11 +5,11 @@ import {
   Route,
 } from 'react-router-dom';
 import usePromise from 'react-promise-suspense';
-import { useState, useEffect, useRef } from 'react';
+import {useState, useEffect, useRef} from 'react';
 
 // Api
 import axios from 'axios';
-import { graphQLEndPoint, Query, querySetting } from './api/graphql/graphQLSchema.js';
+import {graphQLEndPoint, Query, querySetting} from './api/graphql/graphQLSchema.js';
 
 // Style
 import './scss/common/global.scss';
@@ -40,63 +40,63 @@ function App(_props) {
           query: Query,
         },
       })
-        .then((response) => {
-          const data = response.data.data.dynamicContents;
-          const process = (obj, name, value) => {
+          .then((response) => {
+            const data = response.data.data.dynamicContents;
+            const process = (obj, name, value) => {
             // Gia su name =[A,B,C]
-            if (name.length === 1) {
-              return {
-                [name[0]]: value,
-              };
-            } else {
-              if (name[0] in obj) { // Trương hợp đã có
-                const temp = [...name]; // Bỏ phần tử đầu tiên
-                temp.shift();
-                const valueNew = process(obj[name[0]], temp, value);
-                obj[name[0]] = {
-                  ...valueNew,
-                  ...obj[name[0]],
+              if (name.length === 1) {
+                return {
+                  [name[0]]: value,
                 };
-              } else {// Trương hoợp lần đầu tiên
-                obj[name[0]] = {};
-                const temp = [...name];// Bỏ phần tử đầu tiên
-                temp.shift();
-                const valueNew = process(obj[name[0]], temp, value);
-                obj[name[0]] = {
-                  ...valueNew,
-                };
+              } else {
+                if (name[0] in obj) { // Trương hợp đã có
+                  const temp = [...name]; // Bỏ phần tử đầu tiên
+                  temp.shift();
+                  const valueNew = process(obj[name[0]], temp, value);
+                  obj[name[0]] = {
+                    ...valueNew,
+                    ...obj[name[0]],
+                  };
+                } else {// Trương hoợp lần đầu tiên
+                  obj[name[0]] = {};
+                  const temp = [...name];// Bỏ phần tử đầu tiên
+                  temp.shift();
+                  const valueNew = process(obj[name[0]], temp, value);
+                  obj[name[0]] = {
+                    ...valueNew,
+                  };
+                }
               }
+            };
+            const mainObj = {};
+            for (let key = 0; key < data.length; key++) {
+              const pack = data[key];
+              const name = pack.key.split('_');
+              const value = pack.value;
+              process(mainObj, name, value);
             }
-          };
-          const mainObj = {};
-          for (let key = 0; key < data.length; key++) {
-            const pack = data[key];
-            const name = pack.key.split('_');
-            const value = pack.value;
-            process(mainObj, name, value);
-          }
 
-          resolve({ ...mainObj });
-        })).then((img) => {
-          axios({
-            url: graphQLEndPoint,
-            method: 'POST',
-            data: {
-              query: querySetting,
-            },
-          }).then((response) => {
-            const data = response.data.data.settings;
-            const setting = {};
-            for (let i = 0; i < data.length; i++) {
-              const pa = data[i];
-              const name = pa.key;
-              const value = pa.value;
-              setting[name] = value;
-            }
-            setImgList(img);
-            setSetting(setting);
-          });
+            resolve({...mainObj});
+          })).then((img) => {
+        axios({
+          url: graphQLEndPoint,
+          method: 'POST',
+          data: {
+            query: querySetting,
+          },
+        }).then((response) => {
+          const data = response.data.data.settings;
+          const setting = {};
+          for (let i = 0; i < data.length; i++) {
+            const pa = data[i];
+            const name = pa.key;
+            const value = pa.value;
+            setting[name] = value;
+          }
+          setImgList(img);
+          setSetting(setting);
         });
+      });
     }
   }, []);
 
@@ -104,26 +104,26 @@ function App(_props) {
     const load = usePromise((_a) =>
       new Promise(async (resolve) => {
         const data = await axios.post('https://laboon.as.r.appspot.com/config')
-          .then((value) => {
-            return value.data.content;
-          }).catch((_err) => {
-            return {};
+            .then((value) => {
+              return value.data.content;
+            }).catch((_err) => {
+              return {};
             //* Not to be error
-          });
+            });
         messageStorage.getInstance().setMessage('config', data);
         resolve(true);
       })
-      , {});
+    , {});
 
     return (<div></div>);
   };
 
   // CMS: Data (Remote Config)
-  const UrlRecursiveContainer = ({ Comp }) => {
+  const UrlRecursiveContainer = ({Comp}) => {
     return (
       <UrlRecursive
         data={{
-          urlApi: imgList,
+          url_api: imgList,
           setting: setting,
         }}
       >

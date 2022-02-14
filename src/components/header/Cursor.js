@@ -1,11 +1,16 @@
 import React, {useState} from 'react';
+
 import MouseParticles from 'react-mouse-particles';
 
 export default function Cursor() {
   const [showCursor, setShowCursor] = useState(false);
-  setTimeout(() => {
-    setShowCursor(true);
-  }, 500);
+
+  React.useEffect(() => {
+    return () => {
+      setShowCursor(true);
+    };
+  }, []);
+
   return (
     <div>
       {showCursor ? (

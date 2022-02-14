@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 import moment from 'moment';
 import axios from 'axios';
 
@@ -110,7 +111,7 @@ export default function WhiteList_Registration() {
   );
   const [deposit, setDeposit] = useState('');
   const [modalSucceedShow, setModalSucceedShow] = useState(false);
-  const [modalCommingShow, setModalCommingShow] = useState(!getStatePage());
+  // const [modalCommingShow, setModalCommingShow] = useState(!getStatePage());
   const [messageState, setMessageState] = useState(
       'Thanks you! for register whitelist.',
   );
@@ -118,10 +119,6 @@ export default function WhiteList_Registration() {
   //* Function callback
   const setValueDeposit = (amount) => {
     setDeposit(calValueDeposit(amount));
-  };
-
-  const showModalSucceed = () => {
-    setModalSucceedShow(true);
   };
 
   const register = async () => {
@@ -143,7 +140,7 @@ export default function WhiteList_Registration() {
     // console.log(checkWallet);
     if (checkWallet.status == 200) {
       setMessageState('ALREADY_SIGNED');
-      showModalSucceed();
+      setModalSucceedShow(true);
       return;
     }
 
@@ -173,7 +170,7 @@ export default function WhiteList_Registration() {
 
       if (callRegister.status == 200) {
         setMessageState('SUCCEED');
-        showModalSucceed();
+        setModalSucceedShow(true);
       } else {
         //* Never error
       }
@@ -187,7 +184,7 @@ export default function WhiteList_Registration() {
       {!modalSucceedShow ? (
         <>
           <div className="white-list__title">
-            <span>WHITE LIST: REGISTRATION</span>
+            <span>White List: Registration</span>
             <div className="white-list__subtitle">
               <span>Round:</span>
               <span className="white-list__strategy">
@@ -289,7 +286,7 @@ export default function WhiteList_Registration() {
                     await register();
                   }}
                 >
-                  <span>REGISTRATION</span>
+                  <span>Register</span>
                 </div>
               </div>
               {/* </div> */}

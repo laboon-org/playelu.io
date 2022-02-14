@@ -16,7 +16,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', 'react-hooks'],
   rules: {
     'react/prop-types': 0,
     'require-jsdoc': 0,
@@ -25,5 +25,7 @@ module.exports = {
     'camelcase': 0,
     'no-unused-vars': 0,
     'no-unused-expressions': 0,
+    'react-hooks/rules-of-hooks': 2, // Kiểm tra rule của Hook
+    'react-hooks/exhaustive-deps': 1, // Kiểm tra effect dependency
   },
 };

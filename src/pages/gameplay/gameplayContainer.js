@@ -7,9 +7,9 @@ import '../../scss/page_gameplay/gameplay_mobile.scss';
 
 import Assets from './../../constant/assets';
 
-import HeaderContainer from "../../components/header/HeaderContainer";
-import FooterContainer from "../../components/footer/FooterContainer";
-import FloatingDiscord from "../../components/footer/FloatingDiscord";
+import HeaderContainer from '../../components/header/HeaderContainer';
+import FooterContainer from '../../components/footer/FooterContainer';
+import FloatingDiscord from '../../components/footer/FloatingDiscord';
 
 import SkyCenter from './sky/skyCenter';
 import SectionNest from './components/SectionNest';
@@ -34,13 +34,13 @@ function reveal() {
 }
 
 export default function gameplayContainer(props) {
-  const { urlApi, setting } = props;
+  const {url_api, setting} = props;
 
   return (
     <UrlRecursive data={props}>
       <div className="gameplay-body">
         <div className="header">
-          <HeaderContainer urlApi={urlApi} sourceUrl={Assets.sound.sound2} />
+          <HeaderContainer url_api={url_api} sourceUrl={Assets.sound.sound2} />
         </div>
         <div className="sky">
           <SkyTop />
@@ -52,7 +52,7 @@ export default function gameplayContainer(props) {
       </div>
       <div className="playelu-footer">
         <FooterContainer />
-        <FloatingDiscord urlApi={urlApi} />
+        <FloatingDiscord url_api={url_api} />
       </div>
     </UrlRecursive>
   );

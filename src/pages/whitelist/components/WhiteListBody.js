@@ -1,9 +1,9 @@
 import React, {useState, useCallback, useEffect} from 'react';
 import {useSearchParams} from 'react-router-dom';
 
-import { Container, Row, Col } from "react-bootstrap";
+import {Container, Row, Col} from 'react-bootstrap';
 
-import LogoArea from "../../../components/presales/LogoArea";
+import LogoArea from '../../../components/presales/LogoArea';
 import NotfoundModal from '../../presale/component/modal/NotFoundModal';
 
 import WhiteListBodyRight from './WhiteListBody__right';
