@@ -1,16 +1,16 @@
 import React, {useState, useLayoutEffect} from 'react';
 import moment from 'moment';
 
-import messageStorage from '../../../util/messageStorage';
+import messageStorage from "../../../stores/messageStorage";
 
-import LoginProcess from './LoginProcess';
-import SaleStatusBar from './../../../components/presales/SaleStatusBar';
+import WalletSelection from './WalletSelection';
+import SaleStatusBar from '../../../components/presales/SaleStatusBar';
 import WhiteListComingSoon from './modal/WhiteList_comingSoon';
 
 const WhiteListRegistration = React.lazy(() =>
   import('./WhiteList_Registration'),
 );
-export default function WhiteListBody__right(props) {
+export default function WalletContainer(props) {
   const {showModalNotFound} = props;
 
   const [whiteListShow, setWhiteListShow] = useState(false);
@@ -64,7 +64,7 @@ export default function WhiteListBody__right(props) {
       /> */}
       {whiteListComingSoonShow ? (
         !whiteListShow ? (
-          <LoginProcess
+          <WalletSelection
             showWhiteList={showWhiteList}
             showModalNotFound={showModalNotFound}
           />

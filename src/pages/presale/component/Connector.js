@@ -5,11 +5,12 @@ import {useWeb3React} from '@web3-react/core';
 import setting from '../../../constant/setting';
 import detectEthereumProvider from '@metamask/detect-provider';
 import connectorConst from './connector/connectorConst';
-import wallet from '../../../util/wallet';
-import messageStorage from '../../../util/messageStorage';
+import wallet from "../../../stores/wallet";
+import messageStorage from "../../../stores/messageStorage";
 import message from '../../../constant/message';
 import './modal/modal-loader.scss';
 
+// Deprecated
 export default function Connector(props) {
   //* Props
   const {

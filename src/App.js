@@ -14,16 +14,19 @@ import {graphQLEndPoint, Query, querySetting} from './api/graphql/graphQLSchema.
 // Style
 import './scss/common/global.scss';
 
+// Components
 import UrlRecursive from './components/UrlRecursive';
-import messageStorage from './util/messageStorage';
-import Loading from './components/Loading';
+import Loading from "./components/Loading";
+
+// Stores
+import messageStorage from "./stores/messageStorage";
 
 // Pages
 const HomePage = React.lazy(() => import('./pages/home/homeContainer'));
 const GameplayPage = React.lazy(() => import('./pages/gameplay/gameplayContainer'));
 const WhiteListPage = React.lazy(() => import('./pages/whitelist/whitelistContainer'));
 // const PreSalePage = React.lazy(() => import('./pages/presale/presaleContainer'));
-const Claim = React.lazy(() => import('./pages/claim/ClaimPage'));
+// const Claim = React.lazy(() => import('./pages/claim/ClaimPage'));
 
 function App(_props) {
   const [imgList, setImgList] = useState({});

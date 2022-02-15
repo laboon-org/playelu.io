@@ -5,23 +5,23 @@ import axios from 'axios';
 
 import ModalSucceedWhiteList from './modal/ModalSucceed_whiteList';
 
-import wallet from '../../../util/wallet';
-import messageStorage from '../../../util/messageStorage';
+import wallet from '../../../stores/wallet';
+import messageStorage from "../../../stores/messageStorage";
 
 //* Get Config
-const getStatePage = () => {
-  const CONFIG = messageStorage.getInstance().getMessage('config');
-  const data = CONFIG['Page Setting'].data;
-  const index = data.findIndex((v, i, obj) => {
-    if (v['Page Name'] === 'whitelist') {
-      return true;
-    }
-    return false;
-  });
+// const getStatePage = () => {
+//   const CONFIG = messageStorage.getInstance().getMessage('config');
+//   const data = CONFIG['Page Setting'].data;
+//   const index = data.findIndex((v, i, obj) => {
+//     if (v['Page Name'] === 'whitelist') {
+//       return true;
+//     }
+//     return false;
+//   });
 
-  const pageSetting = data[index];
-  return pageSetting.Toggle === 'TRUE';
-};
+//   const pageSetting = data[index];
+//   return pageSetting.Toggle === 'TRUE';
+// };
 
 const getConfigRoundData = () => {
   const CONFIG = messageStorage.getInstance().getMessage('config');

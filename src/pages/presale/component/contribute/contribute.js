@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import moment from 'moment';
 
-import wallet from '../../../../util/wallet';
+import wallet from "../../../../stores/wallet";
 import ModalFail from '../modal/ModalFail';
 import ModalSucceed from '../modal/ModalSucceed';
-import messageStorage from '../../../../util/messageStorage';
+import messageStorage from "../../../../stores/messageStorage";
 
 const getStatePage = () => {
   const CONFIG = messageStorage.getInstance().getMessage('config');
