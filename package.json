@@ -26,6 +26,7 @@
     "@web3-react/walletlink-connector": "^6.2.8",
     "@web3auth/web3auth": "^0.2.4",
     "animate.css": "^4.1.1",
+    "apisauce": "^2.1.5",
     "assert": "^2.0.0",
     "axios": "^0.25.0",
     "bootstrap": "5.1.3",
