@@ -7,7 +7,7 @@ const getRandomNumberMinMax = (min, max) => {
 };
 
 export default function BackgroundComet(props) {
-  const {url_api} = props;
+  const { urlApi } = props;
   const comets = [
     {
       id: 1,
@@ -35,7 +35,7 @@ export default function BackgroundComet(props) {
     },
   ];
   return (
-    <div style={{position: 'relative'}}>
+    <div style={{ position: 'relative' }}>
       {
         comets.map((comet, index) => {
           const cometStyles = {

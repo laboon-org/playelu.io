@@ -7,7 +7,7 @@ const getRandomNumberMinMax = (min, max) => {
 };
 
 export default function BackgroundStar(props) {
-  const {url_api} = props;
+  const { urlApi } = props;
   const stars = [
     {
       id: 1,
@@ -87,7 +87,7 @@ export default function BackgroundStar(props) {
     },
   ];
   return (
-    <div style={{position: 'relative'}}>
+    <div style={{ position: 'relative' }}>
       {
         stars.map((star, key) => {
           const starStyles = {

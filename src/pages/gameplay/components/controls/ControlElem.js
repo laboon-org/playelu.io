@@ -3,7 +3,7 @@ import React from 'react';
 import './gp_control_elem.scss';
 
 function ControlElem(props) {
-  const {image, alt, clsType, isActivated, name} = props;
+  const { image, alt, clsType, isActivated, name } = props;
 
   return (
     <div className="control-elem">

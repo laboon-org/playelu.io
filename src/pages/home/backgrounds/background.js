@@ -7,7 +7,7 @@ import BackgroundCloud from './backgroundCloud';
 import UrlRescusive from '../../../components/UrlRecursive';
 
 export default function Background(props) {
-  // const {url_api} = props;
+  const { urlApi } = props;
   return (
     <UrlRescusive data={props}>
       <div className='playelu-background'>

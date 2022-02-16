@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {Modal, Container, Row, Col} from 'react-bootstrap';
+import { Modal, Container, Row, Col } from 'react-bootstrap';
 import BoxFeature from '../features/BoxFeature';
 import BoxFeatureComingSoon from '../features/BoxFeatureComingSoon';
 
@@ -15,7 +15,7 @@ import './gp_modal_nest_mobile.scss';
 import UrlRecursive from '../../../../components/UrlRecursive';
 
 export default function NestFeaturesModal(props) {
-  const {show, onHide, url_api} = props;
+  const { show, onHide, urlApi } = props;
 
   const imgFramingMode = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupNest.farming1;
   const imgBattlingMode = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupNest.battle;

@@ -10,21 +10,10 @@ const starStyles = {
 };
 
 export default function Stars(props) {
-  // Initialize the values
-  const marginLeftInitial = getRandomNumberMinMax(1, window.innerWidth / 2);
-  const marginTopInitial = 0;
-  const startWidthInitial = (window.innerWidth * 0.6 / 100, window.innerWidth * 1.2 / 100);
-
-  // Hooks states
-  const [marginLeft, setMarginLeft] = React.useState(marginLeftInitial);
-  const [marginTop, setMarginTop] = React.useState(marginTopInitial);
-  const [startWidth, setStateWidth] = React.useState(startWidthInitial);
-
-  // Hooks refs
-  // const marginLeftRef = React.useRef(marginLeftInitial);
-  // const marginTopRef = React.useRef(marginTopInitial);
-  // const startWidthRef = React.useRef(startWidthInitial);
-
+  const { imgUrl } = props;
+  const [marginLeft, setMarginLeft] = React.useState(getRandomNumberMinMax(1, window.innerWidth / 2));
+  const [marginTop, setMarginTop] = React.useState(0);
+  const [startWidthState, setStateWidth] = React.useState(getRandomNumberMinMax(window.innerWidth * 0.6 / 100, window.innerWidth * 1.2 / 100));
   const [isFirst, setIsFirst] = React.useState(true);
 
   const speedRef = React.useRef(2);
@@ -32,7 +21,7 @@ export default function Stars(props) {
   const moveLapseRef = React.useRef(null);
   const endLapseRef = React.useRef(null);
 
-  const {imgUrl} = props;
+  const { imgUrl } = props;
 
   React.useLayoutEffect(() => {
     if (startWidth < 0) {
@@ -42,10 +31,10 @@ export default function Stars(props) {
       setMarginTop(getRandomNumberMinMax(1, window.innerHeight / 4));
       setMarginLeft(getRandomNumberMinMax(1, window.innerWidth));
       setStateWidth(
-          getRandomNumberMinMax(
-              (window.innerWidth * 0.6) / 100,
-              (window.innerWidth * 1.2) / 100,
-          ),
+        getRandomNumberMinMax(
+          (window.innerWidth * 0.6) / 100,
+          (window.innerWidth * 1.2) / 100,
+        ),
       );
       setIsFirst(true);
     }
