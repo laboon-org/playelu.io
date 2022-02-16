@@ -23,6 +23,7 @@ Extensions:
 - 16. TODO Tree
 - 17. Short Line
 - 18. Rainbow Brackets
+- 19. Moralis Snippets
 ```
 
 ## Prerequisites

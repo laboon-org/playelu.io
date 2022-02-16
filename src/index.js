@@ -1,34 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { MoralisProvider } from "react-moralis";
 
-// Import DAppProvider
-import {DAppProvider} from '@usedapp/core';
-// import {Mainnet} from '@usedapp/core/modal/chain/ethereum';
-// import { Mainnet } from "@usedapp/core/modal/chain/avalanche";
+import './index.css';
 
 import App from './App';
 import 'animate.css';
 
-// const config = {
-//   readOnlyChainId: Mainnet.chainId,
-//   readOnlyUrls: {
-//     [Mainnet.chainId]:
-//       'https://mainnet.infura.io/v3/62687d1a985d4508b2b7a24827551934',
-//   },
-// };
-
 ReactDOM.render(
-    <React.StrictMode>
-      {/*
-        Wrap our app in the provider, config is required,
-        but can be left as an empty object:
-      */}
-      <DAppProvider config={{}}>
-        <App />
-      </DAppProvider>
-    </React.StrictMode>,
-    document.getElementById('root'),
+  <React.StrictMode>
+    <MoralisProvider
+      appId="2VJA54mJp4bsKSpS2JJXxSBq15xjpNXCVEFGdI9s"
+      serverUrl="https://b93ubroafjyx.usemoralis.com:2053/server"
+      initializeOnMount={true}
+    >
+      <App />
+    </MoralisProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
