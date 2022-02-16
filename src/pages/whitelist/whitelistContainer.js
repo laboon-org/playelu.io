@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from "react";
+import { useMoralis } from "react-moralis";
 
 import '../../scss/page_whitelist/whitelist_d.scss';
 import '../../scss/page_whitelist/whitelist_tablet.scss';
@@ -10,7 +11,17 @@ import WhiteListBody from './components/WhiteListBody';
 
 import UrlRecursive from '../../components/UrlRecursive';
 export default function whitelistContainer(props) {
-  const {url_api} = props;
+  // const { initialize, isInitialized } = useMoralis();
+  const { url_api } = props;
+
+  // useEffect(() => {
+  //   if (!isInitialized) {
+  //     initialize({
+  //       appId: "2VJA54mJp4bsKSpS2JJXxSBq15xjpNXCVEFGdI9s",
+  //       serverUrl: "https://b93ubroafjyx.usemoralis.com:2053/server",
+  //     });
+  //   }
+  // }, [initialize]);
 
   return (
     <UrlRecursive data={props}>
