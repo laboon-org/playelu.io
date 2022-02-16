@@ -1,9 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
 
-
 export default function BackgroundCloud(props) {
-  const { urlApi } = props;
+  const { url_api } = props;
   return (
     <div className='background-cloud'>
       <div className='cloud x1'>
