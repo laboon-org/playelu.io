@@ -3,7 +3,7 @@ import React from 'react';
 import '../../../../scss/page_presale/notfound_modal.scss';
 
 import {isMobile} from 'react-device-detect';
-import message from '../../../../util/messageStorage';
+import message from '../../../../stores/messageStorage';
 
 const defineConstant = {
   metamask: {
@@ -35,14 +35,8 @@ export default function NotfoundModal(props) {
         alt=''
       />
       <div className='notfound__text'>
-        <span
-          className='notfound__title'
-        >{name} not found
-        </span>
-        <span
-          className='notfound__sub'
-        >You need to set up {name} wallet to continue
-        </span>
+        <span className='notfound__title'>{name} not found </span>
+        <span className='notfound__sub'>You need to set up {name} wallet to continue</span>
       </div>
       <div className='notfound__btn'>
         <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_modal.webp' alt='' />
@@ -55,11 +49,9 @@ export default function NotfoundModal(props) {
           <img
             className='notfound__btn-icon'
             src={icon}
-            alt=''
+            alt='Not Found Icon'
           />
-          <p className='notfound__btn-title'>
-                        Download {name}
-          </p>
+          <p className='notfound__btn-title'>Download {name}</p>
         </div>
       </div>
     </div>

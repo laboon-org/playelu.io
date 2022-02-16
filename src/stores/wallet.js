@@ -1,14 +1,15 @@
 const wallet_support = {
   metamask: true,
-  coinbase: true,
-  walletConnect: true,
+  coin98: true,
+  walletConnect: false,
+  coinbase: false,
 };
 class wallet {
   static instance = new wallet();
 
   provider = null;
-  wallet_name = '';
   account = null;
+  wallet_name = '';
 
   static getInstance() {
     return this.instance;
@@ -19,7 +20,7 @@ class wallet {
     }
   }
   setAddress(address) {
-    this.account=address;
+    this.account = address;
   }
 }
 

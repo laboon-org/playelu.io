@@ -1,32 +1,32 @@
 import React, {useState} from 'react';
+
 import moment from 'moment';
 import axios from 'axios';
 
-// import "../../../scss/page_whitelist/whitelist_mobile.scss";
-
 import ModalSucceedWhiteList from './modal/ModalSucceed_whiteList';
 
-import wallet from '../../../util/wallet';
-import messageStorage from '../../../util/messageStorage';
+import wallet from '../../../stores/wallet';
+import messageStorage from "../../../stores/messageStorage";
 
 //* Get Config
-const getStatePage = () => {
-  const CONFIG = messageStorage.getInstance().getMessage('config');
-  const data = CONFIG['Page Setting'].data;
-  const index = data.findIndex((v, i, obj) => {
-    if (v['Page Name'] == 'whitelist') {
-      return true;
-    }
-  });
+// const getStatePage = () => {
+//   const CONFIG = messageStorage.getInstance().getMessage('config');
+//   const data = CONFIG['Page Setting'].data;
+//   const index = data.findIndex((v, i, obj) => {
+//     if (v['Page Name'] === 'whitelist') {
+//       return true;
+//     }
+//     return false;
+//   });
 
-  const pageSetting = data[index];
-  return pageSetting.Toggle === 'TRUE';
-};
+//   const pageSetting = data[index];
+//   return pageSetting.Toggle === 'TRUE';
+// };
 
 const getConfigRoundData = () => {
   const CONFIG = messageStorage.getInstance().getMessage('config');
   let boonData = {};
-  if (CONFIG['Round Setting'] != null) {
+  if (CONFIG['Round Setting'] !== null) {
     const data = CONFIG['Round Setting'].data;
 
     const index = data.findIndex((v, i, obj) => {
@@ -36,9 +36,10 @@ const getConfigRoundData = () => {
       ) {
         return true;
       }
+      return false;
     });
 
-    if (index != -1) {
+    if (index !== -1) {
       boonData = data[index];
     }
     return boonData;
@@ -48,16 +49,17 @@ const getConfigRoundData = () => {
 const findAvaxValue = () => {
   const CONFIG = messageStorage.getInstance().getMessage('config');
 
-  if (CONFIG.Common != null) {
+  if (CONFIG.Common !== null) {
     const dataCommon = CONFIG.Common.data;
     let avaxValue = 0;
     const index = dataCommon.findIndex((v, i, obj) => {
-      if (v.Key == 'avax_value') {
+      if (v.Key === 'avax_value') {
         return true;
       }
+      return false;
     });
 
-    if (index != -1) {
+    if (index !== -1) {
       avaxValue = dataCommon[index].Value;
     }
     return parseFloat(avaxValue);
@@ -67,7 +69,7 @@ const findAvaxValue = () => {
 
 const findBoonValue = () => {
   const CONFIG = messageStorage.getInstance().getMessage('config');
-  if (CONFIG['Round Setting'] != null) {
+  if (CONFIG['Round Setting'] !== null) {
     const data = CONFIG['Round Setting'].data;
     let boonValue = 0;
     const index = data.findIndex((v, i, obj) => {
@@ -77,11 +79,12 @@ const findBoonValue = () => {
       ) {
         return true;
       }
+      return false;
     });
 
     // console.log("index = " + index);
 
-    if (index != -1) {
+    if (index !== -1) {
       boonValue = data[index]['Sell Price'];
     }
     return parseFloat(boonValue);
@@ -110,7 +113,7 @@ export default function WhiteList_Registration() {
   );
   const [deposit, setDeposit] = useState('');
   const [modalSucceedShow, setModalSucceedShow] = useState(false);
-  const [modalCommingShow, setModalCommingShow] = useState(!getStatePage());
+  // const [modalCommingShow, setModalCommingShow] = useState(!getStatePage());
   const [messageState, setMessageState] = useState(
       'Thanks you! for register whitelist.',
   );
@@ -118,10 +121,6 @@ export default function WhiteList_Registration() {
   //* Function callback
   const setValueDeposit = (amount) => {
     setDeposit(calValueDeposit(amount));
-  };
-
-  const showModalSucceed = () => {
-    setModalSucceedShow(true);
   };
 
   const register = async () => {
@@ -141,9 +140,9 @@ export default function WhiteList_Registration() {
         });
 
     // console.log(checkWallet);
-    if (checkWallet.status == 200) {
+    if (checkWallet.status === 200) {
       setMessageState('ALREADY_SIGNED');
-      showModalSucceed();
+      setModalSucceedShow(true);
       return;
     }
 
@@ -152,7 +151,7 @@ export default function WhiteList_Registration() {
     //* Get ref code
     const storage = window.localStorage;
     let id = storage.getItem('id');
-    if (id == null || id == undefined) {
+    if (id === null || id === undefined) {
       id = -1;
     }
 
@@ -162,7 +161,7 @@ export default function WhiteList_Registration() {
           .post(URL, {
             address_wallet: wallet.getInstance().account,
             boon_amount: boonValue,
-            [id == -1 ? null : 'ref_code']: id,
+            [id === -1 ? null : 'ref_code']: id,
           })
           .then((res) => {
             return res.data;
@@ -171,9 +170,9 @@ export default function WhiteList_Registration() {
             throw err;
           });
 
-      if (callRegister.status == 200) {
+      if (callRegister.status === 200) {
         setMessageState('SUCCEED');
-        showModalSucceed();
+        setModalSucceedShow(true);
       } else {
         //* Never error
       }
@@ -187,7 +186,7 @@ export default function WhiteList_Registration() {
       {!modalSucceedShow ? (
         <>
           <div className="white-list__title">
-            <span>WHITE LIST: REGISTRATION</span>
+            <span>White List: Registration</span>
             <div className="white-list__subtitle">
               <span>Round:</span>
               <span className="white-list__strategy">
@@ -235,7 +234,7 @@ export default function WhiteList_Registration() {
                     placeholder="0.00"
                     value={amount}
                     onChange={(e) => {
-                      if (e.target.value == '') {
+                      if (e.target.value === '') {
                         setAmount('');
                         setDeposit('');
                       }
@@ -289,15 +288,15 @@ export default function WhiteList_Registration() {
                     await register();
                   }}
                 >
-                  <span>REGISTRATION</span>
+                  <span>Register</span>
                 </div>
               </div>
               {/* </div> */}
             </div>
           </div>
 
-          {window.localStorage.getItem('id') == undefined ||
-          window.localStorage.getItem('id') == null ? (
+          {window.localStorage.getItem('id') === undefined ||
+          window.localStorage.getItem('id') === null ? (
             <></>
           ) : (
             <span className="white-list__code">

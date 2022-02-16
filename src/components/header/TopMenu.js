@@ -5,7 +5,7 @@ import _ from 'lodash';
 import '../../scss/common/header/top_menu.scss';
 
 export default function TopMenu(props) {
-  const {urlApi} = props;
+  const {url_api} = props;
 
   return (
     <div className="navbar-header">
@@ -19,7 +19,7 @@ export default function TopMenu(props) {
       <div className="menu">
         <a
           className="playelu__menu-element"
-          href={_.isEmpty(urlApi) ? '/#' : urlApi.docs.roadmap}
+          href={_.isEmpty(url_api) ? '/#' : url_api.docs.roadmap}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -27,7 +27,7 @@ export default function TopMenu(props) {
         </a>
         <a
           className="playelu__menu-element"
-          href={_.isEmpty(urlApi) ? '/#' : urlApi.docs.tokenomic}
+          href={_.isEmpty(url_api) ? '/#' : url_api.docs.tokenomic}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -35,7 +35,7 @@ export default function TopMenu(props) {
         </a>
         <a
           className="playelu__menu-element"
-          href={_.isEmpty(urlApi) ? '/#' : urlApi.docs.litepaper}
+          href={_.isEmpty(url_api) ? '/#' : url_api.docs.litepaper}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -55,8 +55,8 @@ export default function TopMenu(props) {
         <img
           className="home-btn__gameplay--background"
           src={
-            _.isEmpty(urlApi) ? '/#' : urlApi.image.homeBackground.gameplayBtn
-          }
+            _.isEmpty(url_api) ? '/#' : url_api.image.homeBackground.gameplayBtn
+          } alt="Gameplay Button"
         />
         <Link to="/gameplay" className="home-btn__gameplay--text">
           <span>Gameplay</span>

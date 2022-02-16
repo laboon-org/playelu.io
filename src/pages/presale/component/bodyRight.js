@@ -1,12 +1,12 @@
-import React, { useState, useCallback } from "react";
-import Contribute from "./contribute/contribute";
-import ModalInProcessing from "./modal/ModalProcessing";
-import Connector from "./Connector";
-import ModalNotification from "./modal/ModalNotification";
+import React, {useState, useCallback} from 'react';
+import Contribute from './contribute/contribute';
+import ModalInProcessing from './modal/ModalProcessing';
+import Connector from './Connector';
+import ModalNotification from './modal/ModalNotification';
 
 export default function BodyRight(props) {
   //* Props
-  const { showModalNotFound, changeStateWarning } = props;
+  const {showModalNotFound, changeStateWarning} = props;
 
   //* State
   const [contributeShow, setContributeShow] = useState(false);
@@ -56,7 +56,7 @@ export default function BodyRight(props) {
         <LoginProcess />
       ) : (
         <div className="body-right">
-          <span className="body-right__title">TRANSACTION</span>
+          <span className="body-right__title">Transaction</span>
           <Contribute
             data={contributeData}
             showLoading={(bool) => {
