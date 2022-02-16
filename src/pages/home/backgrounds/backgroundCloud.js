@@ -3,7 +3,7 @@ import _ from 'lodash';
 
 
 export default function BackgroundCloud(props) {
-  const {urlApi} = props;
+  const { urlApi } = props;
   return (
     <div className='background-cloud'>
       <div className='cloud x1'>

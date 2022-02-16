@@ -9,7 +9,7 @@ const starStyles = {
   opacity: 1,
 };
 export default function Stars(props) {
-  const {imgUrl} = props;
+  const { imgUrl } = props;
   const [marginLeft, setMarginLeft] = React.useState(getRandomNumberMinMax(1, window.innerWidth / 2));
   const [marginTop, setMarginTop] = React.useState(0);
   const [startWidthState, setStateWidth] = React.useState(getRandomNumberMinMax(window.innerWidth * 0.6 / 100, window.innerWidth * 1.2 / 100));

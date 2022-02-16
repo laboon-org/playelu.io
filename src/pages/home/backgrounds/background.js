@@ -7,7 +7,7 @@ import UrlRescusive from '../../../components/UrlRecursive';
 import _ from 'lodash';
 
 export default function Background(props) {
-  const {urlApi} = props;
+  const { urlApi } = props;
   return (
     <UrlRescusive data={props}>
       <div className='playelu-background'>

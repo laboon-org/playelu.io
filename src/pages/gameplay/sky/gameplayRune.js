@@ -3,7 +3,7 @@ import _ from 'lodash';
 
 
 export default function GameplayRune(props) {
-  const {urlApi} = props;
+  const { urlApi } = props;
   console.log('test', urlApi);
   return (
     <div className="gameplay__rune">
