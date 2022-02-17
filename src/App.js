@@ -4,11 +4,15 @@ import {
   BrowserRouter as Router,
   Route,
 } from 'react-router-dom';
-import usePromise from 'react-promise-suspense';
+
 import {useState, useEffect, useRef} from 'react';
 
 // Api
 import axios from 'axios';
+
+// Services
+import { loadDataConfig } from './services/loadDataService.js';
+
 import {graphQLEndPoint, Query, querySetting} from './api/graphql/graphQLSchema.js';
 
 // Style
@@ -28,10 +32,15 @@ const WhiteListPage = React.lazy(() => import('./pages/whitelist/whitelistContai
 // const PreSalePage = React.lazy(() => import('./pages/presale/presaleContainer'));
 // const Claim = React.lazy(() => import('./pages/claim/ClaimPage'));
 
+// ---------- APP -------------
 function App(_props) {
   const [imgList, setImgList] = useState({});
   const [setting, setSetting] = useState([]);
   const isFirst = useRef(true);
+
+  useEffect(() => {
+    loadDataConfig();
+  }, []);
 
   useEffect(() => {
     if (isFirst.current) {
@@ -103,24 +112,6 @@ function App(_props) {
     }
   }, []);
 
-  const LoadData = () => {
-    const load = usePromise((_a) =>
-      new Promise(async (resolve) => {
-        const data = await axios.post('https://laboon.as.r.appspot.com/config')
-            .then((value) => {
-              return value.data.content;
-            }).catch((_err) => {
-              return {};
-            //* Not to be error
-            });
-        messageStorage.getInstance().setMessage('config', data);
-        resolve(true);
-      })
-    , {});
-
-    return (<div></div>);
-  };
-
   // CMS: Data (Remote Config)
   const UrlRecursiveContainer = ({Comp}) => {
     return (
@@ -137,7 +128,6 @@ function App(_props) {
 
   return (
     <React.Suspense fallback={<Loading />}>
-      <LoadData />
       <Router>
         <Routes>
           <Route path="/" element={<UrlRecursiveContainer Comp={HomePage} />} />

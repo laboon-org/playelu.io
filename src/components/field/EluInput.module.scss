@@ -1,0 +1,66 @@
+.contribute-sec {
+  margin-bottom: 20px;
+  .contribute-title {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    p {
+      color: #fdcd2f;
+      font-size: 18px;
+    }
+    .wallet-name {
+      color: #e8821e;
+      font-size: 14px;
+    }
+    .avax-quantity {
+      color: #e84142;
+      font-size: 14px;
+    }
+    .boon-quantity {
+      color: #fed34e;
+      font-size: 14px;
+    }
+  }
+  .input {
+    position: relative;
+    width: 100%;
+    color: #ffff;
+    background: rgba(24, 23, 23, 0.6);
+    border-radius: 10px;
+    border: 1px solid #ffff;
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #b6b6b6;
+      opacity: 1; /* Firefox */
+    }
+    :input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #b6b6b6;
+    }
+    ::input-placeholder {
+      /* Microsoft Edge */
+      color: #b6b6b6;
+    }
+    .input-text {
+      width: calc(100% - 30px);
+      width: calc(100% - 30px);
+      width: calc(100% - 30px);
+      font-size: 16px;
+      padding: 14px;
+      color: #b6b6b6;
+      background: rgb(24 23 23 / 60%);
+      border-radius: 10px;
+      outline: none;
+      border: none;
+    }
+    .input-img {
+      position: absolute;
+      max-width: 30px;
+      width: 10%;
+      top: 25%;
+      bottom: 0;
+      right: 10px;
+    }
+  }
+}

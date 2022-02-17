@@ -1,119 +1,32 @@
 import React, {useState} from 'react';
 
-import moment from 'moment';
+import { calValueDeposit, findAvaxValue } from '../../../utilities/calcUtil';
+import {
+  findBoonValue,
+  getStatePage,
+  getConfigRoundData,
+} from "../../../services/findDataService";
+import EluInput from 'src/components/field/EluInput';
+
 import axios from 'axios';
 
 import ModalSucceedWhiteList from './modal/ModalSucceed_whiteList';
 
 import wallet from '../../../stores/wallet';
-import messageStorage from "../../../stores/messageStorage";
 
-//* Get Config
-// const getStatePage = () => {
-//   const CONFIG = messageStorage.getInstance().getMessage('config');
-//   const data = CONFIG['Page Setting'].data;
-//   const index = data.findIndex((v, i, obj) => {
-//     if (v['Page Name'] === 'whitelist') {
-//       return true;
-//     }
-//     return false;
-//   });
-
-//   const pageSetting = data[index];
-//   return pageSetting.Toggle === 'TRUE';
-// };
-
-const getConfigRoundData = () => {
-  const CONFIG = messageStorage.getInstance().getMessage('config');
-  let boonData = {};
-  if (CONFIG['Round Setting'] !== null) {
-    const data = CONFIG['Round Setting'].data;
-
-    const index = data.findIndex((v, i, obj) => {
-      if (
-        moment(v.Start).subtract(1, 'days').isBefore(moment()) &&
-        moment(v.End).add(1, 'days').isAfter(moment())
-      ) {
-        return true;
-      }
-      return false;
-    });
-
-    if (index !== -1) {
-      boonData = data[index];
-    }
-    return boonData;
-  }
-  return {};
-};
-const findAvaxValue = () => {
-  const CONFIG = messageStorage.getInstance().getMessage('config');
-
-  if (CONFIG.Common !== null) {
-    const dataCommon = CONFIG.Common.data;
-    let avaxValue = 0;
-    const index = dataCommon.findIndex((v, i, obj) => {
-      if (v.Key === 'avax_value') {
-        return true;
-      }
-      return false;
-    });
-
-    if (index !== -1) {
-      avaxValue = dataCommon[index].Value;
-    }
-    return parseFloat(avaxValue);
-  }
-  return 0;
-};
-
-const findBoonValue = () => {
-  const CONFIG = messageStorage.getInstance().getMessage('config');
-  if (CONFIG['Round Setting'] !== null) {
-    const data = CONFIG['Round Setting'].data;
-    let boonValue = 0;
-    const index = data.findIndex((v, i, obj) => {
-      if (
-        moment(v.Start).subtract(1, 'days').isBefore(moment()) &&
-        moment(v.End).add(1, 'days').isAfter(moment())
-      ) {
-        return true;
-      }
-      return false;
-    });
-
-    // console.log("index = " + index);
-
-    if (index !== -1) {
-      boonValue = data[index]['Sell Price'];
-    }
-    return parseFloat(boonValue);
-  }
-  return 0;
-};
-
-//* Function
-const calValueDeposit = (amount) => {
-  const avaxValueUSD = findAvaxValue();
-  const boonValueUSD = findBoonValue();
-
-  const calAvaxAmount = (boonAmount) => {
-    const USD = boonAmount * boonValueUSD;
-    return USD / avaxValueUSD;
-  };
-
-  const boonAmount = parseInt(amount.split('.').join(''));
-  const avaxAmount = Math.round(calAvaxAmount(boonAmount) * 1000) / 1000 + '';
-  return avaxAmount.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
-};
+const iconMetaMask = "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp";
+const iconBoon = "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp";
+const iconAvax = "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/avax1-icon.webp";
 
 export default function WhiteList_Registration() {
-  const [amount, setAmount] = useState(''.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'));
+  // const [amount, setAmount] = useState(''.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'));
+  const [amount, setAmount] = useState('');
   const [deposit, setDeposit] = useState('');
   const [modalSucceedShow, setModalSucceedShow] = useState(false);
   // const [modalCommingShow, setModalCommingShow] = useState(!getStatePage());
+
   const [messageState, setMessageState] = useState(
-      'Thanks you! for register whitelist.',
+    'Thanks you! for register the Whitelist.',
   );
 
   //* Function callback
@@ -188,8 +101,8 @@ export default function WhiteList_Registration() {
             <div className="white-list__subtitle">
               <span>Round:</span>
               <span className="white-list__strategy">
-                {' '}
-                {getConfigRoundData()['Round Name']} ({findBoonValue()}$)
+                {" "}
+                {/* {getConfigRoundData()["Round Name"]} ({findBoonValue()}$) */}
               </span>
             </div>
           </div>
@@ -197,27 +110,14 @@ export default function WhiteList_Registration() {
           <div className="contribute">
             <span className="contribute--shadow"></span>
             <div className="contribute-frame">
-              {/* Wallet */}
-              <div className="contribute-sec">
-                <div className="contribute-title">
-                  <p>Wallet Address:</p>
-                  <span className="wallet-name">MetaMask</span>
-                </div>
-                <div className="input">
-                  <input
-                    className="input-text"
-                    type="text"
-                    name="name"
-                    value={wallet.getInstance().account}
-                    placeholder=""
-                  />
-                  <img
-                    className="input-img"
-                    src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp"
-                    alt=""
-                  />
-                </div>
-              </div>
+              <EluInput
+                label={"Wallet Address: "}
+                symbol={"Metamask"}
+                value={wallet.getInstance().account}
+                placeholder={"0x..."}
+                icon={iconMetaMask}
+                alt={"Icon Metamask"}
+              />
               {/* Amount */}
               <div className="contribute-sec">
                 <div className="contribute-title">
@@ -232,26 +132,22 @@ export default function WhiteList_Registration() {
                     placeholder="0.00"
                     value={amount}
                     onChange={(e) => {
-                      if (e.target.value === '') {
-                        setAmount('');
-                        setDeposit('');
-                      }
-                      const reg = new RegExp('^[0-9]+$');
-                      if (reg.test(e.target.value.split('.').join(''))) {
-                        const amount = e.target.value
-                            .split('.')
-                            .join('')
-                            .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
-                        setAmount(amount);
-                        setValueDeposit(amount);
-                      }
+                      // if (e.target.value === "") {
+                      //   setAmount("");
+                      //   setDeposit("");
+                      // }
+                      // const reg = new RegExp("^[0-9]+$");
+                      // if (reg.test(e.target.value.split(".").join(""))) {
+                      //   const amount = e.target.value
+                      //     .split(".")
+                      //     .join("")
+                      //     .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+                      //   setAmount(amount);
+                      //   setValueDeposit(amount);
+                      // }
                     }}
                   />
-                  <img
-                    className="input-img"
-                    src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp"
-                    alt=""
-                  />
+                  <img className="input-img" src={iconBoon} alt="Boon Icon" />
                 </div>
               </div>
               {/* Avax */}
@@ -265,17 +161,13 @@ export default function WhiteList_Registration() {
                     value={deposit}
                     className="input-text"
                     style={{
-                      color: '#B6B6B6',
+                      color: "#B6B6B6",
                     }}
                     name="name"
                     placeholder="0.00"
                     readOnly={true}
                   />
-                  <img
-                    className="input-img"
-                    src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/avax1-icon.webp"
-                    alt=""
-                  />
+                  <img className="input-img" src={iconAvax} alt="Avax Icon" />
                 </div>
               </div>
               <div className="contribute-footer">
@@ -293,12 +185,12 @@ export default function WhiteList_Registration() {
             </div>
           </div>
 
-          {window.localStorage.getItem('id') === undefined ||
-          window.localStorage.getItem('id') === null ? (
+          {window.localStorage.getItem("id") === undefined ||
+          window.localStorage.getItem("id") === null ? (
             <></>
           ) : (
             <span className="white-list__code">
-              *Code: {window.localStorage.getItem('id')}
+              *Code: {window.localStorage.getItem("id")}
             </span>
           )}
         </>

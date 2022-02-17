@@ -4,30 +4,6 @@ a {
   color: #efa059;
   cursor: pointer;
 }
-.input {
-  position: relative;
-}
-.input {
-  width: 100%;
-  color: #ffff;
-  background: rgb(24 23 23 / 60%);
-  border-radius: 10px;
-  border: 1px solid #ffff;
-  ::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #b6b6b6;
-    opacity: 1; /* Firefox */
-  }
-  :input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: #b6b6b6;
-  }
-  ::input-placeholder {
-    /* Microsoft Edge */
-    color: #b6b6b6;
-  }
-}
-
 /** Main Styles */
 .white-list_succceed__frame {
   height: 100%;
@@ -87,6 +63,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #fff;
 }
 
 .body-right__title {
@@ -190,62 +167,14 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
-.contribute-sec {
-  margin-bottom: 20px;
-}
-.contribute-title {
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 10px;
-  justify-content: space-between;
-}
-.contribute-title p {
-  color: #fdcd2f;
-  font-size: 18px;
-}
-.contribute-title .wallet-name {
-  color: #e8821e;
-  font-size: 14px;
-}
-.contribute-title .avax-quantity {
-  color: #e84142;
-  font-size: 14px;
-}
-.contribute-title .boon-quantity {
-  color: #fed34e;
-  font-size: 14px;
-}
-.input-text {
-  width: calc(100% - 30px);
-  width: calc(100% - 30px);
-  width: calc(100% - 30px);
-  font-size: 16px;
-  padding: 14px;
-  color: #b6b6b6;
-  background: rgb(24 23 23 / 60%);
-  border-radius: 10px;
-  outline: none;
-  border: none;
-}
 .boon-quantity__input {
   color: #ffff;
 }
-
-.input-img {
-  position: absolute;
-  max-width: 30px;
-  width: 10%;
-  top: 25%;
-  bottom: 0;
-  right: 10px;
-}
-
 .contribute-footer {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .contribute-btn {
   display: flex;
   justify-content: center;
@@ -261,7 +190,6 @@ a {
   cursor: pointer;
   font-weight: bold;
 }
-
 .contribute-btn span {
   cursor: pointer;
 }

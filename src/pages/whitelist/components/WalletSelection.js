@@ -1,6 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Spinner, Alert } from "react-bootstrap";
-import { useMoralis } from "react-moralis";
+import {
+  Spinner,
+  Alert,
+  Container,
+} from "react-bootstrap";
+import {
+  useMoralis,
+  useMoralisWeb3ApiCall,
+  useMoralisWeb3Api,
+  useMoralisQuery,
+  useMoralisCloudFunction
+} from "react-moralis";
+
+const chain = "avalanche";
+const chainId = "0xa86a"; // Avax Main Net
 
 // import wallet from "../../../stores/wallet";
 // import messageStorage from "../../../stores/messageStorage";
@@ -31,12 +44,13 @@ function ConnectButton(props) {
 
 export default function WalletSelection(props) {
   const [logged, setLogged] = useState(false);
+
   const [currentUser, setCurrentUser] = useState(null);
+  const [openModel, setOpenModel] = useState(false);
 
   const {
     isAuthenticated,
     user,
-    logout,
     chainId,
     Moralis,
     isAuthenticating,
@@ -50,6 +64,53 @@ export default function WalletSelection(props) {
     showModalNotFound,
   } = props;
 
+  const Web3Api = useMoralisWeb3Api();
+
+  //------ Moralis Web3 API methods for Native, ERC20 & NFT  ---------
+  const { fetch, data, error, isLoading } = useMoralisWeb3ApiCall(
+    Web3Api.account.getNativeBalance,
+    {
+      chain: chain,
+    }
+  );
+
+  // const {
+  //   fetch: tokenFetch,
+  //   data: tokenData,
+  //   error: tokenError,
+  //   isLoading: tokenIsLoading,
+  // } = useMoralisWeb3ApiCall(Web3Api.account.getTokenBalances, {
+  //   chain: chain,
+  // });
+
+  // useEffect(() => {
+  //   //call API every 5 seconds
+  //   const interval = setInterval(() => {
+  //     if (currentUser) {
+  //       setCurrentUser(currentUser);
+  //       fetch();
+  //       // tokenFetch();
+  //     }
+  //   }, 5000);
+  //   //clear the interval
+  //   // console.log(currentUser, "USER");
+  //   return () => clearInterval(interval);
+  // }, [currentUser]);
+
+  const _isAvalancheNetwork = (chain) => {
+    if (chain !== chainId) {
+      setOpenModel(true);
+    } else {
+      setOpenModel(false);
+    }
+  };
+
+  //if chain is changed let the user know
+  Moralis.onChainChanged(async function (chain) {
+    console.log("chain changed", chain);
+    _isAvalancheNetwork(chain);
+  });
+
   useEffect(() => {
     if (!Moralis.isWeb3Enabled) {
       Moralis.enableWeb3();
@@ -58,6 +119,7 @@ export default function WalletSelection(props) {
       setLogged(true);
     }
     setCurrentUser(user);
+    _isAvalancheNetwork(chain);
   }, []);
 
   const _connectWalletMetaMask = () => {
@@ -68,6 +130,7 @@ export default function WalletSelection(props) {
           .then(function (user) {
             setLogged(true);
             setCurrentUser(user);
+            showWhiteList();
             console.log(user.get("ethAddress"));
           })
           .catch(function (error) {
@@ -102,21 +165,24 @@ export default function WalletSelection(props) {
   return (
     <div className="body-right">
       <span className="body-right__title">Wallet Selection</span>
-      {!logged && <div>{_renderConnectButtons()}</div>}
+      {openModel && (
+        <Alert variant="error" className="network-warning">
+          Please switch to Avalanche Network
+        </Alert>
+      )}
+      {!logged && <Container>{_renderConnectButtons()}</Container>}
       {logged && (
         <div>
-          <h6 className="body-right__title">
+          {/* <h6 className="body-right__title">
             {currentUser && (
               <div>
                 <span>Welcome {currentUser.get("username")}</span>
                 <br />
                 <span>{currentUser.get("ethAddress")} </span>
                 <br />
-                {/* <span>{chainId && { chainId }}</span> */}
-                <br />
               </div>
             )}
-          </h6>
+          </h6> */}
           <button onClick={() => _logout()}>Logout</button>
         </div>
       )}

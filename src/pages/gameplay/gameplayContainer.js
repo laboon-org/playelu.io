@@ -32,6 +32,9 @@ function reveal() {
   }
 }
 
+// TODO: Hiep - Mobile Responsive - Fix, 4 flying stores should be under shining BOON token.
+// TODO: Hiep - Replace big flying island from Hieu's design of adventure.
+// TODO: Hiep - Nest: Features => Border of Screen Gameplay should be yellow and to be rounded.
 export default function gameplayContainer(props) {
   const {url_api} = props;
 

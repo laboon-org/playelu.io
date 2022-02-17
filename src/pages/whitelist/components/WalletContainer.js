@@ -11,7 +11,7 @@ const WhiteListRegistration = React.lazy(() =>
   import('./WhiteList_Registration'),
 );
 export default function WalletContainer(props) {
-  const {showModalNotFound} = props;
+  const { showModalNotFound } = props;
 
   const [whiteListShow, setWhiteListShow] = useState(false);
   const [whiteListComingSoonShow, setWhiteListComingSoonShow] = useState(true);

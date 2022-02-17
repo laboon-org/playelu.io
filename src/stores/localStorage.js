@@ -1,0 +1,5 @@
+const localStorage = () => {
+
+}
+
+export { localStorage };
