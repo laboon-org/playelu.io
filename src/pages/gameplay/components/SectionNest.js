@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
 
 import './../../../scss/page_gameplay/beach.scss';
@@ -21,7 +21,7 @@ function opacity() {
   }
 }
 export default function SectionNest(props) {
-  const {url_api} = props;
+  const { urlApi } = props;
   const [nestShow, setNestShow] = useState(false);
   const onPressShowNest = () => {
     setNestShow(true);
@@ -38,9 +38,9 @@ export default function SectionNest(props) {
             <img
               className="ocean-img_back"
               src={
-                _.isEmpty(url_api) ?
+                _.isEmpty(urlApi) ?
                   '' :
-                  url_api.imageGamePlay.ocean.backgroundOcean
+                  urlApi.imageGamePlay.ocean.backgroundOcean
               }
               alt=""
             ></img>
@@ -48,9 +48,9 @@ export default function SectionNest(props) {
             <img
               className="ocean-img"
               src={
-                _.isEmpty(url_api) ?
+                _.isEmpty(urlApi) ?
                   '' :
-                  url_api.imageGamePlay.ocean.backgroundOcean
+                  urlApi.imageGamePlay.ocean.backgroundOcean
               }
               alt=""
             ></img>
@@ -85,14 +85,14 @@ export default function SectionNest(props) {
                 <img
                   className="pinwheel"
                   src={
-                    _.isEmpty(url_api) ? '' : url_api.imageGamePlay.ocean.pinwheel
+                    _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.ocean.pinwheel
                   }
                   alt=""
                 />
                 <img
                   className="house-img"
                   src={
-                    _.isEmpty(url_api) ? '' : url_api.imageGamePlay.ocean.house
+                    _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.ocean.house
                   }
                   alt=""
                 />
@@ -100,7 +100,7 @@ export default function SectionNest(props) {
               <img
                 className="boulder-img"
                 src={
-                  _.isEmpty(url_api) ? '' : url_api.imageGamePlay.ocean.boulder
+                  _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.ocean.boulder
                 }
                 alt=""
               />
@@ -114,16 +114,16 @@ export default function SectionNest(props) {
                 loop
                 preload="metadata"
                 poster={
-                  _.isEmpty(url_api) ?
+                  _.isEmpty(urlApi) ?
                     '' :
-                    url_api.imageGamePlay.ocean.oceanIsland_img
+                    urlApi.imageGamePlay.ocean.oceanIsland_img
                 }
               >
                 <source
                   src={
-                    _.isEmpty(url_api) ?
+                    _.isEmpty(urlApi) ?
                       '' :
-                      url_api.imageGamePlay.ocean.oceanIsland
+                      urlApi.imageGamePlay.ocean.oceanIsland
                   }
                   alt=""
                 />
@@ -145,7 +145,7 @@ export default function SectionNest(props) {
           <img
             className="land-img"
             src={
-              _.isEmpty(url_api) ? '' : url_api.imageGamePlay.land.backgroundLand
+              _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.land.backgroundLand
             }
             alt=""
           />
@@ -154,7 +154,7 @@ export default function SectionNest(props) {
               <img
                 className="woodsign-img"
                 src={
-                  _.isEmpty(url_api) ? '' : url_api.imageGamePlay.land.woodsign
+                  _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.land.woodsign
                 }
                 alt=""
               />
@@ -162,16 +162,16 @@ export default function SectionNest(props) {
                 <img
                   className="woodsign-img"
                   src={
-                    _.isEmpty(url_api) ? '' : url_api.imageGamePlay.land.soutText
+                    _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.land.soutText
                   }
                   alt=""
                 />
                 <img
                   className="woodsign-img"
                   src={
-                    _.isEmpty(url_api) ?
+                    _.isEmpty(urlApi) ?
                       '' :
-                      url_api.imageGamePlay.land.comingsoonText
+                      urlApi.imageGamePlay.land.comingsoonText
                   }
                   alt=""
                 />
@@ -181,13 +181,13 @@ export default function SectionNest(props) {
           <div className="bone rightEntrance">
             <img
               className="bone-img"
-              src={_.isEmpty(url_api) ? '' : url_api.imageGamePlay.land.bone}
+              src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.land.bone}
               alt=""
             />
           </div>
           <img
             className="fruitBasket-img"
-            src={_.isEmpty(url_api) ? '' : url_api.imageGamePlay.land.fuitBasket}
+            src={_.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.land.fuitBasket}
             alt=""
           />
           <div className="core">
@@ -195,14 +195,14 @@ export default function SectionNest(props) {
               <img
                 className="circle-img"
                 src={
-                  _.isEmpty(url_api) ? '' : url_api.imageGamePlay.land.core.circle
+                  _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.land.core.circle
                 }
                 alt=""
               />
               <img
                 className="effigy-img"
                 src={
-                  _.isEmpty(url_api) ? '' : url_api.imageGamePlay.land.core.effigy
+                  _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.land.core.effigy
                 }
                 alt=""
               />
@@ -240,9 +240,9 @@ export default function SectionNest(props) {
               <img
                 className="character-eluLight"
                 src={
-                  _.isEmpty(url_api) ?
+                  _.isEmpty(urlApi) ?
                     '' :
-                    url_api.imageGamePlay.land.character.eluLight
+                    urlApi.imageGamePlay.land.character.eluLight
                 }
                 alt=""
               />
@@ -251,9 +251,9 @@ export default function SectionNest(props) {
               <img
                 className="eluNestBtn-eluFire"
                 src={
-                  _.isEmpty(url_api) ?
+                  _.isEmpty(urlApi) ?
                     '' :
-                    url_api.imageGamePlay.land.character.eluFire
+                    urlApi.imageGamePlay.land.character.eluFire
                 }
                 alt=""
               />
@@ -262,9 +262,9 @@ export default function SectionNest(props) {
               <img
                 className="eluNestBtn-eluWater"
                 src={
-                  _.isEmpty(url_api) ?
+                  _.isEmpty(urlApi) ?
                     '' :
-                    url_api.imageGamePlay.land.character.eluWater
+                    urlApi.imageGamePlay.land.character.eluWater
                 }
                 alt=""
               />

@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {Modal, Container, Row, Col} from 'react-bootstrap';
+import { Modal, Container, Row, Col } from 'react-bootstrap';
 import BoxFeature from './../features/BoxFeature';
 import BoxFeatureComingSoon from './../features/BoxFeatureComingSoon';
 
@@ -12,14 +12,14 @@ import './gp_modal_mobile.scss';
 import UrlRecursive from './../../../../components/UrlRecursive';
 
 export default function DropFeaturesModal(props) {
-  const {show, onHide, url_api} = props;
+  const { show, onHide, urlApi } = props;
 
-  const imgCompetingMode = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupDrop.competing;
-  const imgHuntingMode = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupDrop.HuntHexBoard;
-  const imgAdventureMode1 = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupDrop.adventure;
-  const imgAdventureMode2 = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupDrop.adventure1;
+  const imgCompetingMode = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.competing;
+  const imgHuntingMode = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.HuntHexBoard;
+  const imgAdventureMode1 = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.adventure;
+  const imgAdventureMode2 = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.adventure1;
 
-  const imgMascot = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupDrop.coomingsoon;
+  const imgMascot = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.coomingsoon;
 
   return (
     <UrlRecursive data={props}>

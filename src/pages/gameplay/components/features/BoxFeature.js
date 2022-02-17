@@ -9,7 +9,7 @@ import UrlRecursive from './../../../../components/UrlRecursive';
 import BoardTypeControl from '../controls/BoardTypeControl';
 
 export default function BoxFeature(props) {
-  const { title, image, disabledControl, url_api } = props;
+  const { title, image, disabledControl, urlApi } = props;
 
   return (
     <UrlRecursive data={props}>
@@ -21,7 +21,7 @@ export default function BoxFeature(props) {
           <Image className="image" fluid src={image}></Image>
           {!disabledControl && (
             <div className="layout">
-              <BoardTypeControl url_api={url_api} />
+              <BoardTypeControl urlApi={urlApi} />
             </div>
           )}
         </div>

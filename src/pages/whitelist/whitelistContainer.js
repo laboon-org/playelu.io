@@ -11,9 +11,7 @@ import WhiteListBody from './components/WhiteListBody';
 
 import UrlRecursive from '../../components/UrlRecursive';
 export default function whitelistContainer(props) {
-  // const { initialize, isInitialized } = useMoralis();
-  const { url_api } = props;
-
+  const { urlApi } = props;
   // useEffect(() => {
   //   if (!isInitialized) {
   //     initialize({
@@ -22,17 +20,16 @@ export default function whitelistContainer(props) {
   //     });
   //   }
   // }, [initialize]);
-
   return (
     <UrlRecursive data={props}>
       <div className="white-list">
         <div className="header">
-          <HeaderContainer url_api={url_api} />
+          <HeaderContainer urlApi={urlApi} />
         </div>
         <WhiteListBody />
       </div>
       <div className="playelu-footer">
-        <FooterContainer url_api={url_api} />
+        <FooterContainer urlApi={urlApi} />
       </div>
     </UrlRecursive>
   );
