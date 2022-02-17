@@ -6,9 +6,9 @@ import './gp_board_type_control.scss';
 function BoardTypeControl(props) {
   const { urlApi } = props;
 
-  const layout1 = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupDrop.boardType3;
-  const layout2 = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupDrop.boardType2;
-  const layout3 = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupDrop.boardType5;
+  const layout1 = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.boardType3;
+  const layout2 = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.boardType2;
+  const layout3 = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.boardType5;
 
   return (
     <div className="board-type">

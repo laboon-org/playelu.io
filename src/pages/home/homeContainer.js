@@ -15,22 +15,22 @@ import Background from './backgrounds/background';
 import HomeContent from './HomeContent';
 
 export default function HomeContainer(props) {
-  const {url_api} = props;
+  const { urlApi } = props;
 
   return (
     <UrlRecursive data={props}>
       <div className="playelu-body">
         <div className="header">
-          <HeaderContainer url_api={url_api} sourceUrl={Assets.sound.sound1} />
+          <HeaderContainer urlApi={urlApi} sourceUrl={Assets.sound.sound1} />
         </div>
         <div className="playelu">
           <Background />
-          <HomeContent url_api={url_api} />
+          <HomeContent urlApi={urlApi} />
         </div>
       </div>
       <div className="playelu-footer">
-        <FooterContainer url_api={url_api} />
-        <FloatingDiscord url_api={url_api} />
+        <FooterContainer urlApi={urlApi} />
+        <FloatingDiscord urlApi={urlApi} />
       </div>
     </UrlRecursive>
   );

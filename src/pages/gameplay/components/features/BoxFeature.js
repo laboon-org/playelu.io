@@ -21,7 +21,7 @@ export default function BoxFeature(props) {
           <Image className="image" fluid src={image}></Image>
           {!disabledControl && (
             <div className="layout">
-              <BoardTypeControl url_api={url_api} />
+              <BoardTypeControl urlApi={urlApi} />
             </div>
           )}
         </div>

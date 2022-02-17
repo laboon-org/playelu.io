@@ -5,7 +5,7 @@ import './../../scss/common/footer/floating_discord.scss';
 
 import UrlRecursive from '../UrlRecursive';
 export default function FloatingDiscord(props) {
-  const {url_api} = props;
+  const { urlApi } = props;
 
   return (
     <UrlRecursive data={props}>
@@ -13,12 +13,12 @@ export default function FloatingDiscord(props) {
         <a href="https://discord.io/EluVerse">
           <img
             className="discord-img"
-            src={_.isEmpty(url_api) ? '' : url_api.image.discord}
+            src={_.isEmpty(urlApi) ? '' : urlApi.image.discord}
             alt=""
           />
           <img
             className="mobile__discord-img"
-            src={_.isEmpty(url_api) ? '' : url_api.image.mobileDiscord}
+            src={_.isEmpty(urlApi) ? '' : urlApi.image.mobileDiscord}
             alt=""
           />
         </a>

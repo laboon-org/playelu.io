@@ -16,12 +16,12 @@ export default function Background(props) {
         <BackgroundStar />
         {/* FIXME: Memory Leak of React Hook */}
         {/* <div className='shooting-star'>
-          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
-          <Stars imgUrl={_.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
+          <Stars imgUrl={_.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5} />
         </div> */}
         {/* <CloudBottom /> */}
       </div>

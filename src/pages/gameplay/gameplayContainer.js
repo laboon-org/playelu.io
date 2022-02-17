@@ -33,13 +33,13 @@ function reveal() {
 }
 
 export default function gameplayContainer(props) {
-  const {url_api} = props;
+  const { urlApi } = props;
 
   return (
     <UrlRecursive data={props}>
       <div className="gameplay-body">
         <div className="header">
-          <HeaderContainer url_api={url_api} sourceUrl={Assets.sound.sound2} />
+          <HeaderContainer urlApi={urlApi} sourceUrl={Assets.sound.sound2} />
         </div>
         <div className="sky">
           <SkyTop />
@@ -51,7 +51,7 @@ export default function gameplayContainer(props) {
       </div>
       <div className="playelu-footer">
         <FooterContainer />
-        <FloatingDiscord url_api={url_api} />
+        <FloatingDiscord urlApi={urlApi} />
       </div>
     </UrlRecursive>
   );

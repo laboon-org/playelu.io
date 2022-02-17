@@ -9,15 +9,15 @@ import ClaimBody from './component/ClaimBody';
 import UrlRecursive from 'src/components/UrlRecursive';
 
 export default function ClaimPage(props) {
-  const {url_api} = props;
+  const { urlApi } = props;
 
   return (
     <UrlRecursive data={props}>
       <div className="claim">
         <div className="header">
-          <HeaderContainer url_api={url_api} />
+          <HeaderContainer urlApi={urlApi} />
         </div>
-        <ClaimBody url_api={url_api} />
+        <ClaimBody urlApi={urlApi} />
       </div>
     </UrlRecursive>
   );

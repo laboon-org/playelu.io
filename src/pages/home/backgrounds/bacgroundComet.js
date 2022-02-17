@@ -11,27 +11,27 @@ export default function BackgroundComet(props) {
   const comets = [
     {
       id: 1,
-      img: _.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5,
+      img: _.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5,
     },
     {
       id: 2,
-      img: _.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5,
+      img: _.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5,
     },
     {
       id: 3,
-      img: _.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5,
+      img: _.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5,
     },
     {
       id: 4,
-      img: _.isEmpty(url_api) ? '' : url_api.image.homeBackground.star4,
+      img: _.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star4,
     },
     {
       id: 5,
-      img: _.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5,
+      img: _.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5,
     },
     {
       id: 6,
-      img: _.isEmpty(url_api) ? '' : url_api.image.homeBackground.star5,
+      img: _.isEmpty(urlApi) ? '' : urlApi.image.homeBackground.star5,
     },
   ];
   return (
