@@ -34,6 +34,11 @@ function SocialLink(props) {
       img: _.isEmpty(urlApi) ? '' : urlApi.image.social.opensea,
       href: 'https://opensea.io/eluverse',
     },
+    {
+      id: 7,
+      img: _.isEmpty(urlApi) ? '' : urlApi.image.social.github,
+      href: 'https://github.com/laboon-org/playelu.io',
+    },
   ];
   return (
     <div className="playelu__link">
