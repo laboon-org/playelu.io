@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 
-import { calValueDeposit, findAvaxValue } from '../../../utilities/calcUtil';
-import {
-  findBoonValue,
-  getStatePage,
-  getConfigRoundData,
-} from "../../../services/findDataService";
+import { calValueDeposit, findAvaxValue, findBoonValue } from './../../../utilities/calcUtil';
+
+import { getRefCode } from './../../../stores/localStorage';
+
+// import {
+//   getStatePage,
+//   getConfigRoundData,
+// } from "./../../../utilities/configUtil";
 import EluInput from 'src/components/field/EluInput';
 
 import axios from 'axios';
@@ -59,9 +61,7 @@ export default function WhiteList_Registration() {
 
     const boonValue = parseInt(amount.split('.').join(''));
 
-    //* Get ref code
-    const storage = window.localStorage;
-    let id = storage.getItem('id');
+    let id = getRefCode();
     if (id === null || id === undefined) {
       id = -1;
     }

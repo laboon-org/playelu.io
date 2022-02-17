@@ -7,6 +7,7 @@ const loadDataConfig = async () => {
   const data = await restApi
     .post("/config")
     .then((response) => response.data.content);
+
   messageStorage.getInstance().setMessage("config", data);
 };
 

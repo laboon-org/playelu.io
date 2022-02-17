@@ -9,9 +9,17 @@ import {useState, useEffect, useRef} from 'react';
 
 // Api
 import axios from 'axios';
+import restApi from "./api/rest/RestApi.js";
 
 // Services
 import { loadDataConfig } from './services/loadDataService.js';
+
+// Utils
+import {
+  processData,
+  mapSettingData,
+  mapDynamicContent,
+} from "./utilities/calcUtil.js";
 
 import {graphQLEndPoint, Query, querySetting} from './api/graphql/graphQLSchema.js';
 
@@ -52,62 +60,21 @@ function App(_props) {
           query: Query,
         },
       })
-          .then((response) => {
-            const data = response.data.data.dynamicContents;
-            const process = (obj, name, value) => {
-            // Gia su name =[A,B,C]
-              if (name.length === 1) {
-                return {
-                  [name[0]]: value,
-                };
-              } else {
-                if (name[0] in obj) { // Trương hợp đã có
-                  const temp = [...name]; // Bỏ phần tử đầu tiên
-                  temp.shift();
-                  const valueNew = process(obj[name[0]], temp, value);
-                  obj[name[0]] = {
-                    ...valueNew,
-                    ...obj[name[0]],
-                  };
-                } else {// Trương hoợp lần đầu tiên
-                  obj[name[0]] = {};
-                  const temp = [...name];// Bỏ phần tử đầu tiên
-                  temp.shift();
-                  const valueNew = process(obj[name[0]], temp, value);
-                  obj[name[0]] = {
-                    ...valueNew,
-                  };
-                }
-              }
-            };
-            const mainObj = {};
-            for (let key = 0; key < data.length; key++) {
-              const pack = data[key];
-              const name = pack.key.split('_');
-              const value = pack.value;
-              process(mainObj, name, value);
-            }
-
+        .then((response) => {
+            const mainObj = mapDynamicContent(response.data.data.dynamicContents);
             resolve({...mainObj});
-          })).then((img) => {
-        axios({
-          url: graphQLEndPoint,
-          method: 'POST',
-          data: {
-            query: querySetting,
-          },
-        }).then((response) => {
-          const data = response.data.data.settings;
-          const setting = {};
-          for (let i = 0; i < data.length; i++) {
-            const pa = data[i];
-            const name = pa.key;
-            const value = pa.value;
-            setting[name] = value;
-          }
-          setImgList(img);
-          setSetting(setting);
-        });
+        })).then((img) => {
+          axios({
+            url: graphQLEndPoint,
+            method: 'POST',
+            data: {
+              query: querySetting,
+            },
+          }).then((response) => {
+            const setting = mapSettingData(response.data.data.settings);
+            setImgList(img);
+            setSetting(setting);
+          });
       });
     }
   }, []);

@@ -61,4 +61,64 @@ const findAvaxValue = () => {
   return 0;
 };
 
-export { calValueDeposit, findAvaxValue, findBoonValue };
+// Recursive function
+const processData = (obj, name, value) => {
+  // Gia su name =[A,B,C]
+  if (name.length === 1) {
+    return {
+      [name[0]]: value,
+    };
+  } else {
+    if (name[0] in obj) {
+      // Trương hợp đã có
+      const temp = [...name]; // Bỏ phần tử đầu tiên
+      temp.shift();
+      const valueNew = processData(obj[name[0]], temp, value);
+      obj[name[0]] = {
+        ...valueNew,
+        ...obj[name[0]],
+      };
+    } else {
+      // Trương hoợp lần đầu tiên
+      obj[name[0]] = {};
+      const temp = [...name]; // Bỏ phần tử đầu tiên
+      temp.shift();
+      const valueNew = processData(obj[name[0]], temp, value);
+      obj[name[0]] = {
+        ...valueNew,
+      };
+    }
+  }
+};
+
+const mapSettingData = (data) => {
+  const setting = {};
+  for (let i = 0; i < data.length; i++) {
+    const pa = data[i];
+    const name = pa.key;
+    const value = pa.value;
+    setting[name] = value;
+  }
+  return setting;
+}
+
+// GraphQL Data
+const mapDynamicContent = (data) => {
+  const mainObj = {};
+  for (let key = 0; key < data.length; key++) {
+    const pack = data[key];
+    const name = pack.key.split("_");
+    const value = pack.value;
+    processData(mainObj, name, value);
+  }
+  return mainObj;
+};
+
+export {
+  calValueDeposit,
+  findAvaxValue,
+  findBoonValue,
+  processData,
+  mapSettingData,
+  mapDynamicContent,
+};

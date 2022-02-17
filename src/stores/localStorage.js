@@ -1,5 +1,7 @@
-const localStorage = () => {
-
+const getRefCode = () => {
+  const storage = window.localStorage;
+  let id = storage.getItem("id");
+  return id;
 }
 
-export { localStorage };
+export { getRefCode };
