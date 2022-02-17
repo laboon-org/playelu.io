@@ -15,7 +15,7 @@ import './gp_modal_nest_mobile.scss';
 import UrlRecursive from '../../../../components/UrlRecursive';
 
 export default function NestFeaturesModal(props) {
-  const { show, onHide, urlApi } = props;
+  const { show, onHide, url_api } = props;
 
   const imgFramingMode = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.farming1;
   const imgBattlingMode = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.battle;

@@ -108,9 +108,7 @@ const calValueDeposit = (amount) => {
 };
 
 export default function WhiteList_Registration() {
-  const [amount, setAmount] = useState(
-      ''.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'),
-  );
+  const [amount, setAmount] = useState(''.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'));
   const [deposit, setDeposit] = useState('');
   const [modalSucceedShow, setModalSucceedShow] = useState(false);
   // const [modalCommingShow, setModalCommingShow] = useState(!getStatePage());
@@ -129,15 +127,15 @@ export default function WhiteList_Registration() {
     }
 
     const checkWallet = await axios
-        .post('https://laboon.as.r.appspot.com/check_wallet_wl', {
-          wallet_address: wallet.getInstance().account,
-        })
-        .then((res) => {
-          return res.data;
-        })
-        .catch((err) => {
-          throw err;
-        });
+      .post('https://laboon.as.r.appspot.com/check_wallet_wl', {
+        wallet_address: wallet.getInstance().account,
+      })
+      .then((res) => {
+        return res.data;
+      })
+      .catch((err) => {
+        throw err;
+      });
 
     // console.log(checkWallet);
     if (checkWallet.status === 200) {
@@ -158,17 +156,17 @@ export default function WhiteList_Registration() {
     try {
       const URL = 'https://laboon.as.r.appspot.com/whitelist';
       const callRegister = await axios
-          .post(URL, {
-            address_wallet: wallet.getInstance().account,
-            boon_amount: boonValue,
-            [id === -1 ? null : 'ref_code']: id,
-          })
-          .then((res) => {
-            return res.data;
-          })
-          .catch((err) => {
-            throw err;
-          });
+        .post(URL, {
+          address_wallet: wallet.getInstance().account,
+          boon_amount: boonValue,
+          [id === -1 ? null : 'ref_code']: id,
+        })
+        .then((res) => {
+          return res.data;
+        })
+        .catch((err) => {
+          throw err;
+        });
 
       if (callRegister.status === 200) {
         setMessageState('SUCCEED');
