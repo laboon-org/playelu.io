@@ -11,7 +11,7 @@ import GameplayRune from './gameplayRune';
 import UrlRecursive from '../../../components/UrlRecursive';
 
 export default function SkyTop(props) {
-  const { urlApi, setting } = props;
+  const { url_api, setting } = props;
 
   const [showPopup, setShowPopup] = useState(false);
   const handleClosePopup = () => setShowPopup(false);
@@ -21,15 +21,15 @@ export default function SkyTop(props) {
     handleShowPopup();
   };
 
-  const shadowStone = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.shadowStone;
-  const boonMoon = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.boonMoon;
+  const shadowStone = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.shadowStone;
+  const boonMoon = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.boonMoon;
 
-  const imgDrop = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.drop;
-  const imgNest = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.nest;
-  const imgScout = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.scout;
-  const imgMetaVerse = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.skyTop.metaVerse;
+  const imgDrop = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.drop;
+  const imgNest = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.nest;
+  const imgScout = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.scout;
+  const imgMetaVerse = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.metaVerse;
 
-  const imgEluLogo = _.isEmpty(urlApi) ? '' : urlApi.image.eluLogo1;
+  const imgEluLogo = _.isEmpty(url_api) ? '' : url_api.image.eluLogo1;
 
   return (
     <UrlRecursive data={props}>
@@ -46,9 +46,9 @@ export default function SkyTop(props) {
             <div className="close-popup" onClick={() => handleClosePopup()}>
               <img
                 src={
-                  _.isEmpty(urlApi) ?
+                  _.isEmpty(url_api) ?
                     '' :
-                    urlApi.imageGamePlay.popupComingSoon.closePopup
+                    url_api.imageGamePlay.popupComingSoon.closePopup
                 }
                 alt=""
               />
@@ -57,9 +57,9 @@ export default function SkyTop(props) {
               <div className="popup-title__box">
                 <img
                   src={
-                    _.isEmpty(urlApi) ?
+                    _.isEmpty(url_api) ?
                       '' :
-                      urlApi.imageGamePlay.popupComingSoon.frameComingSoon
+                      url_api.imageGamePlay.popupComingSoon.frameComingSoon
                   }
                   alt=""
                 />

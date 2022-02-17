@@ -11,7 +11,7 @@ import WhiteListBody from './components/WhiteListBody';
 
 import UrlRecursive from '../../components/UrlRecursive';
 export default function whitelistContainer(props) {
-  const { urlApi } = props;
+  const { url_api } = props;
   // useEffect(() => {
   //   if (!isInitialized) {
   //     initialize({
@@ -24,12 +24,12 @@ export default function whitelistContainer(props) {
     <UrlRecursive data={props}>
       <div className="white-list">
         <div className="header">
-          <HeaderContainer urlApi={urlApi} />
+          <HeaderContainer url_api={url_api} />
         </div>
         <WhiteListBody />
       </div>
       <div className="playelu-footer">
-        <FooterContainer urlApi={urlApi} />
+        <FooterContainer url_api={url_api} />
       </div>
     </UrlRecursive>
   );

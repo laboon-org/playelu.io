@@ -15,12 +15,12 @@ import './gp_modal_nest_mobile.scss';
 import UrlRecursive from '../../../../components/UrlRecursive';
 
 export default function NestFeaturesModal(props) {
-  const { show, onHide, urlApi } = props;
+  const { show, onHide, url_api } = props;
 
-  const imgFramingMode = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.farming1;
-  const imgBattlingMode = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupNest.battle;
+  const imgFramingMode = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupNest.farming1;
+  const imgBattlingMode = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupNest.battle;
 
-  const imgMascot = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.coomingsoon;
+  const imgMascot = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.popupDrop.coomingsoon;
 
   return (
     <UrlRecursive data={props}>

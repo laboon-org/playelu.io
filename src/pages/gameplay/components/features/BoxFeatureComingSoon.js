@@ -8,7 +8,7 @@ import './gp_box_feature_coming_soon_mobile.scss';
 import UrlRecursive from '../../../../components/UrlRecursive';
 
 export default function BoxFeatureComingSoon(props) {
-  const { title, notice, mascot, urlApi } = props;
+  const { title, notice, mascot, url_api } = props;
 
   return (
     <UrlRecursive data={props}>

@@ -7,14 +7,14 @@ import Sound from './Sound';
 import NavbarMobile from '../../components/header/NavbarMobile';
 
 export default function HeaderContainer(props) {
-  const { urlApi, sourceUrl } = props;
+  const { url_api, sourceUrl } = props;
   return (
     <div className='header'>
-      <TopMenu urlApi={urlApi} />
-      <NavbarMobile urlApi={urlApi} />
-      <ContractAddress urlApi={urlApi} />
+      <TopMenu url_api={url_api} />
+      <NavbarMobile url_api={url_api} />
+      <ContractAddress url_api={url_api} />
       <Cursor />
-      <Sound urlApi={urlApi} sourceUrl={sourceUrl} />
+      <Sound url_api={url_api} sourceUrl={sourceUrl} />
     </div>
   );
 }

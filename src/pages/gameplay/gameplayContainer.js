@@ -36,13 +36,13 @@ function reveal() {
 // TODO: Hiep - Replace big flying island from Hieu's design of adventure.
 // TODO: Hiep - Nest: Features => Border of Screen Gameplay should be yellow and to be rounded.
 export default function gameplayContainer(props) {
-  const { urlApi } = props;
+  const { url_api } = props;
 
   return (
     <UrlRecursive data={props}>
       <div className="gameplay-body">
         <div className="header">
-          <HeaderContainer urlApi={urlApi} sourceUrl={Assets.sound.sound2} />
+          <HeaderContainer url_api={url_api} sourceUrl={Assets.sound.sound2} />
         </div>
         <div className="sky">
           <SkyTop />
@@ -54,7 +54,7 @@ export default function gameplayContainer(props) {
       </div>
       <div className="playelu-footer">
         <FooterContainer />
-        <FloatingDiscord urlApi={urlApi} />
+        <FloatingDiscord url_api={url_api} />
       </div>
     </UrlRecursive>
   );

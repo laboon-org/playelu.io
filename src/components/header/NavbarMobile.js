@@ -9,14 +9,14 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 
 export default function NavbarMobile(props) {
-  const { urlApi } = props;
+  const { url_api } = props;
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
 
-  const url_roadmap = _.isEmpty(urlApi) ? '#' : urlApi.docs.roadmap;
-  const url_tokenomic = _.isEmpty(urlApi) ? '#' : urlApi.docs.tokenomic;
-  const url_litepaper = _.isEmpty(urlApi) ? '#' : urlApi.docs.litepaper;
+  const url_roadmap = _.isEmpty(url_api) ? '#' : url_api.docs.roadmap;
+  const url_tokenomic = _.isEmpty(url_api) ? '#' : url_api.docs.tokenomic;
+  const url_litepaper = _.isEmpty(url_api) ? '#' : url_api.docs.litepaper;
 
   return (
     <div>
@@ -28,7 +28,7 @@ export default function NavbarMobile(props) {
         />
       </a>
       <div className="navbar-btn" onClick={() => setShow(true)}>
-        <img src={_.isEmpty(urlApi) ? "" : urlApi.image.navbarBtn} alt="" />
+        <img src={_.isEmpty(url_api) ? "" : url_api.image.navbarBtn} alt="" />
       </div>
       <Modal
         show={show}
@@ -40,13 +40,13 @@ export default function NavbarMobile(props) {
           <div className="header__modal-navbar">
             <a href="/">
               <img
-                src={_.isEmpty(urlApi) ? "" : urlApi.common.homeIcon}
+                src={_.isEmpty(url_api) ? "" : url_api.common.homeIcon}
                 alt="Home Icon"
               />
             </a>
             <div className="close__modal-navbar" onClick={() => handleClose()}>
               <img
-                src={_.isEmpty(urlApi) ? "" : urlApi.common.closeBtn}
+                src={_.isEmpty(url_api) ? "" : url_api.common.closeBtn}
                 alt="Close Icon"
               />
             </div>
@@ -54,14 +54,14 @@ export default function NavbarMobile(props) {
           <div className="body__modal-navbar">
             <div className="modal-logo">
               <img
-                src={_.isEmpty(urlApi) ? "" : urlApi.image.eluLogo1}
+                src={_.isEmpty(url_api) ? "" : url_api.image.eluLogo1}
                 alt="Elu Logo"
               />
             </div>
             <div className="modal-element">
               <a href={url_roadmap} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
+                  src={_.isEmpty(url_api) ? "" : url_api.modal.backgroundBtn}
                   alt=""
                 />
                 <div className="modal-element--text">
@@ -72,7 +72,7 @@ export default function NavbarMobile(props) {
             <div className="modal-element">
               <a href={url_tokenomic} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
+                  src={_.isEmpty(url_api) ? "" : url_api.modal.backgroundBtn}
                   alt=""
                 />
                 <div className="modal-element--text">
@@ -83,7 +83,7 @@ export default function NavbarMobile(props) {
             <div className="modal-element">
               <a href={url_litepaper} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
+                  src={_.isEmpty(url_api) ? "" : url_api.modal.backgroundBtn}
                   alt="LitePaper"
                 />
                 <div className="modal-element--text">
@@ -94,7 +94,7 @@ export default function NavbarMobile(props) {
             <div className="modal-element">
               <a href="https://laboon.org/crew">
                 <img
-                  src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
+                  src={_.isEmpty(url_api) ? "" : url_api.modal.backgroundBtn}
                   alt="Whitelist"
                 />
                 <div className="modal-element--text">
@@ -105,7 +105,7 @@ export default function NavbarMobile(props) {
             <div className="modal-element">
               <Link to="/whitelist">
                 <img
-                  src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
+                  src={_.isEmpty(url_api) ? "" : url_api.modal.backgroundBtn}
                   alt="Whitelist"
                 />
                 <div className="modal-element--text">
@@ -116,7 +116,7 @@ export default function NavbarMobile(props) {
             <div className="modal-element">
               <Link to="/#">
                 <img
-                  src={_.isEmpty(urlApi) ? "" : urlApi.modal.backgroundBtn}
+                  src={_.isEmpty(url_api) ? "" : url_api.modal.backgroundBtn}
                   alt=""
                 />
                 <div className="modal-element--text">
@@ -128,9 +128,9 @@ export default function NavbarMobile(props) {
               <img
                 className="home-btn__gameplay--background"
                 src={
-                  _.isEmpty(urlApi)
+                  _.isEmpty(url_api)
                     ? ""
-                    : urlApi.image.homeBackground.gameplayBtn
+                    : url_api.image.homeBackground.gameplayBtn
                 }
                 alt="Home Background"
               />

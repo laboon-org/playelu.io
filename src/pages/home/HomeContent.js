@@ -11,7 +11,7 @@ const validateEmail = (email) => {
 
 const URI = 'https://api.playelu.io/subemail';
 function HomeContent(props) {
-  const { urlApi } = props;
+  const { url_api } = props;
 
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState('');
@@ -61,12 +61,12 @@ function HomeContent(props) {
       >
         <div className="close-modal" onClick={() => handleClose()}>
           <img
-            src={_.isEmpty(urlApi) ? '' : urlApi.image.modal.closeModal}
+            src={_.isEmpty(url_api) ? '' : url_api.image.modal.closeModal}
             alt=""
           />
         </div>
         <div className="modal-container">
-          <img src={_.isEmpty(urlApi) ? '' : urlApi.image.eluLogo} alt="" />
+          <img src={_.isEmpty(url_api) ? '' : url_api.image.eluLogo} alt="" />
           <h1>thank you!</h1>
           <p className="name-email">{email}</p>
         </div>
@@ -76,7 +76,7 @@ function HomeContent(props) {
           <div className="playelu-top">
             <div className="playelu-img">
               <img
-                src={_.isEmpty(urlApi) ? '' : urlApi.image.eluLogo1}
+                src={_.isEmpty(url_api) ? '' : url_api.image.eluLogo1}
                 alt=""
               />
             </div>
