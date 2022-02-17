@@ -7,7 +7,7 @@ const getRandomNumberMinMax = (min, max) => {
 };
 
 export default function BackgroundStar(props) {
-  const { url_api } = props;
+  const { urlApi } = props;
   const stars = [
     {
       id: 1,

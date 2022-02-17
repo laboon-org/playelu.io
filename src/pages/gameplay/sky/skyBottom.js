@@ -4,7 +4,7 @@ import _ from 'lodash';
 import '../../../scss/page_gameplay/skyScss/skyBottom.scss';
 
 export default function SkyBottom(props) {
-  const { url_api } = props;
+  const { urlApi } = props;
   return (
     <div className='skyBottom'>
       <video

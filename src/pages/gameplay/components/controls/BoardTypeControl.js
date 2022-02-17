@@ -4,7 +4,7 @@ import ControlElem from './ControlElem';
 
 import './gp_board_type_control.scss';
 function BoardTypeControl(props) {
-  const { url_api } = props;
+  const { urlApi } = props;
 
   const layout1 = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.boardType3;
   const layout2 = _.isEmpty(urlApi) ? '' : urlApi.imageGamePlay.popupDrop.boardType2;
