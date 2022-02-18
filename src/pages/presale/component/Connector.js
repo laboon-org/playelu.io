@@ -1,13 +1,22 @@
-import React, {useState, useRef} from 'react';
+import React, { useState, useRef } from 'react';
+import { useEagerConnect, useInactiveListener } from "./hooks";
+import { useWeb3React } from "@web3-react/core";
+import detectEthereumProvider from "@metamask/detect-provider";
+
+// Api
 import axios from 'axios';
-import {useEagerConnect, useInactiveListener} from './hooks';
-import {useWeb3React} from '@web3-react/core';
+
+// Constants
 import setting from '../../../constant/setting';
-import detectEthereumProvider from '@metamask/detect-provider';
 import connectorConst from './connector/connectorConst';
-import wallet from "../../../stores/wallet";
+
+// Stores
+import wallet from "../../../stores/walletStorage";
 import messageStorage from "../../../stores/messageStorage";
+
 import message from '../../../constant/message';
+
+// Style
 import './modal/modal-loader.scss';
 
 // Deprecated

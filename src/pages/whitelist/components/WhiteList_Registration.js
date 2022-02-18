@@ -1,20 +1,22 @@
 import React, {useState} from 'react';
 
+// Utils
 import { calValueDeposit, findAvaxValue, findBoonValue } from './../../../utilities/calcUtil';
-import { getRefCode } from './../../../stores/localStorage';
-
 // import {
 //   getStatePage,
 //   getConfigRoundData,
 // } from "./../../../utilities/configUtil";
 
+// Components
 import EluInput from 'src/components/field/EluInput';
+import ModalSucceedWhiteList from "./modal/ModalSucceed_whiteList";
 
+// Api
 import restApi from "../../../api/rest/RestApi.js";
 
-import ModalSucceedWhiteList from './modal/ModalSucceed_whiteList';
-
-import wallet from '../../../stores/wallet';
+// Stores
+import { getRefCode } from './../../../stores/localStorage';
+import walletStorage from "../../../stores/walletStorage";
 
 const iconMetaMask = "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp";
 const iconBoon = "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp";
@@ -31,7 +33,7 @@ export default function WhiteList_Registration() {
     'Thanks you! for register the Whitelist.',
   );
 
-  const walletAccount = wallet.getInstance().account === null ? "0x..." : wallet.getInstance().account;
+  const walletAccount = walletStorage.getInstance().account === null ? "0x..." : walletStorage.getInstance().account;
 
   //* Function callback
   const setValueDeposit = (amount) => {
@@ -42,7 +44,7 @@ export default function WhiteList_Registration() {
 
     const checkWallet = await restApi
       .post("/check_wallet_wl", {
-        wallet_address: wallet.getInstance().account,
+        wallet_address: walletAccount,
       })
       .then((response) => response.data);
 
@@ -63,7 +65,7 @@ export default function WhiteList_Registration() {
 
     const callRegister = await restApi
       .post("/whitelist", {
-        address_wallet: wallet.getInstance().account,
+        address_wallet: walletAccount,
         boon_amount: boonValue,
         [id === -1 ? null : "ref_code"]: id,
       })
@@ -123,12 +125,7 @@ export default function WhiteList_Registration() {
                   //   setAmount("");
                   //   setDeposit("");
                   // }
-                  // const reg = new RegExp("^[0-9]+$");
-                  // if (reg.test(e.target.value.split(".").join(""))) {
-                  //   const amount = e.target.value
-                  //     .split(".")
-                  //     .join("")
-                  //     .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+                  // const amount = formatAmount(amount);
                   //   setAmount(amount);
                   //   setValueDeposit(amount);
                   // }
@@ -138,7 +135,7 @@ export default function WhiteList_Registration() {
               <EluInput
                 label={"Preparing Amount: "}
                 symbol={"AVAX"}
-                value={walletAccount}
+                value={"0.00"}
                 placeholder={"0.00"}
                 icon={iconAvax}
                 alt={"Icon Avax"}

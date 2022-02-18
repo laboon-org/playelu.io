@@ -1,5 +1,5 @@
-class message {
-  static instance = new message();
+class messageStorage {
+  static instance = new messageStorage();
   messages = {};
   static getInstance() {
     return this.instance;
@@ -11,8 +11,8 @@ class message {
     if (name in this.messages) {
       return this.messages[name];
     } else {
-      return '';
+      return "";
     }
   }
 }
-export default message;
+export default messageStorage;

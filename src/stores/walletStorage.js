@@ -4,12 +4,12 @@ const wallet_support = {
   walletConnect: false,
   coinbase: false,
 };
-class wallet {
-  static instance = new wallet();
+class walletStorage {
+  static instance = new walletStorage();
 
   provider = null;
   account = null;
-  wallet_name = '';
+  wallet_name = "";
 
   static getInstance() {
     return this.instance;
@@ -24,4 +24,4 @@ class wallet {
   }
 }
 
-export default wallet;
+export default walletStorage;

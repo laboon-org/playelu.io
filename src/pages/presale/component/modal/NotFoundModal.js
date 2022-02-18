@@ -3,7 +3,7 @@ import React from 'react';
 import '../../../../scss/page_presale/notfound_modal.scss';
 
 import {isMobile} from 'react-device-detect';
-import message from '../../../../stores/messageStorage';
+import messageStorage from "../../../../stores/messageStorage";
 
 const defineConstant = {
   metamask: {
@@ -23,9 +23,15 @@ const defineConstant = {
 };
 
 export default function NotfoundModal(props) {
-  const name = defineConstant[message.getInstance().getMessage('NotFoundModal')].name;
-  const icon = defineConstant[message.getInstance().getMessage('NotFoundModal')].icon;
-  const link = defineConstant[message.getInstance().getMessage('NotFoundModal')].link_download;
+  const name =
+    defineConstant[messageStorage.getInstance().getMessage("NotFoundModal")]
+      .name;
+  const icon =
+    defineConstant[messageStorage.getInstance().getMessage("NotFoundModal")]
+      .icon;
+  const link =
+    defineConstant[messageStorage.getInstance().getMessage("NotFoundModal")]
+      .link_download;
 
   return (
     <div className='notfound'>

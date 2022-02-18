@@ -12,10 +12,11 @@ import {
   useMoralisCloudFunction
 } from "react-moralis";
 
-const chain = "avalanche";
-const chainId = "0xa86a"; // Avax Main Net
+// Constants
+import { chain, chainId } from "../../../constant/chainNetworkConst";
 
-// import wallet from "../../../stores/wallet";
+// Stores
+import walletStorage from "../../../stores/walletStorage";
 // import messageStorage from "../../../stores/messageStorage";
 
 const iconMetaMask = "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp";
@@ -35,7 +36,7 @@ function ConnectButton(props) {
   return (
     <div className="login" onClick={onClick}>
       <div className="login-frame">
-        <img className="login-icon" src={icon} alt="" />
+        <img className="login-icon" src={icon} alt="Login Icon" />
         <span className="white-list__login login-title">{title}</span>
       </div>
     </div>
@@ -130,8 +131,9 @@ export default function WalletSelection(props) {
           .then(function (user) {
             setLogged(true);
             setCurrentUser(user);
-            showWhiteList();
+            walletStorage.getInstance().account = user.get("ethAddress");
             console.log(user.get("ethAddress"));
+            showWhiteList();
           })
           .catch(function (error) {
             console.log(error);

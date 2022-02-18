@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import moment from 'moment';
 
-import wallet from "../../../../stores/wallet";
+import wallet from "../../../../stores/walletStorage";
 import ModalFail from '../modal/ModalFail';
 import ModalSucceed from '../modal/ModalSucceed';
 import messageStorage from "../../../../stores/messageStorage";
