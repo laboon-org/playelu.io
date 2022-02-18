@@ -1,8 +1,6 @@
-
 import { create } from 'apisauce';
 
-// define the api
-// google sheet api
+// define the google sheet api
 const restApi = create({
   baseURL: "https://laboon.as.r.appspot.com",
   headers: { Accept: "application/json" },

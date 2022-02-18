@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 
 import { calValueDeposit, findAvaxValue, findBoonValue } from './../../../utilities/calcUtil';
-
 import { getRefCode } from './../../../stores/localStorage';
 
 // import {
 //   getStatePage,
 //   getConfigRoundData,
 // } from "./../../../utilities/configUtil";
+
 import EluInput from 'src/components/field/EluInput';
 
-import axios from 'axios';
+import restApi from "../../../api/rest/RestApi.js";
 
 import ModalSucceedWhiteList from './modal/ModalSucceed_whiteList';
 
@@ -31,65 +31,57 @@ export default function WhiteList_Registration() {
     'Thanks you! for register the Whitelist.',
   );
 
+  const walletAccount = wallet.getInstance().account === null ? "0x..." : wallet.getInstance().account;
+
   //* Function callback
   const setValueDeposit = (amount) => {
     setDeposit(calValueDeposit(amount));
   };
 
-  const register = async () => {
-    if (!window.confirm('Are you sure about your choice?')) {
-      return;
-    }
+  const _loadDataCheckWhiteList = async () => {
 
-    const checkWallet = await axios
-      .post('https://laboon.as.r.appspot.com/check_wallet_wl', {
+    const checkWallet = await restApi
+      .post("/check_wallet_wl", {
         wallet_address: wallet.getInstance().account,
       })
-      .then((res) => {
-        return res.data;
-      })
-      .catch((err) => {
-        throw err;
-      });
+      .then((response) => response.data);
 
-    // console.log(checkWallet);
     if (checkWallet.status === 200) {
-      setMessageState('ALREADY_SIGNED');
+      setMessageState("ALREADY_SIGNED");
       setModalSucceedShow(true);
       return;
     }
+  }
 
-    const boonValue = parseInt(amount.split('.').join(''));
+  const _loadDataWhiteList = async () => {
+    const boonValue = parseInt(amount.split(".").join(""));
 
     let id = getRefCode();
     if (id === null || id === undefined) {
       id = -1;
     }
 
-    try {
-      const URL = 'https://laboon.as.r.appspot.com/whitelist';
-      const callRegister = await axios
-        .post(URL, {
-          address_wallet: wallet.getInstance().account,
-          boon_amount: boonValue,
-          [id === -1 ? null : 'ref_code']: id,
-        })
-        .then((res) => {
-          return res.data;
-        })
-        .catch((err) => {
-          throw err;
-        });
+    const callRegister = await restApi
+      .post("/whitelist", {
+        address_wallet: wallet.getInstance().account,
+        boon_amount: boonValue,
+        [id === -1 ? null : "ref_code"]: id,
+      })
+      .then((response) => response.data);
 
-      if (callRegister.status === 200) {
-        setMessageState('SUCCEED');
-        setModalSucceedShow(true);
-      } else {
-        //* Never error
-      }
-    } catch (err) {
-      console.error(err);
+    if (callRegister.status === 200) {
+      setMessageState("SUCCEED");
+      setModalSucceedShow(true);
     }
+  }
+
+  const register = async () => {
+    if (!window.confirm('Are you sure about your choice?')) {
+      return;
+    }
+
+    _loadDataCheckWhiteList();
+    _loadDataWhiteList();
   };
 
   return (
@@ -113,67 +105,52 @@ export default function WhiteList_Registration() {
               <EluInput
                 label={"Wallet Address: "}
                 symbol={"Metamask"}
-                value={wallet.getInstance().account}
+                value={walletAccount}
                 placeholder={"0x..."}
                 icon={iconMetaMask}
                 alt={"Icon Metamask"}
+                onChange={(e) => setValueDeposit(e.target.value)}
               />
-              {/* Amount */}
-              <div className="contribute-sec">
-                <div className="contribute-title">
-                  <p>Contribution Amount</p>
-                  <span className="boon-quantity">$BOON</span>
-                </div>
-                <div className="input">
-                  <input
-                    className="input-text boon-quantity__input"
-                    type="text"
-                    name="name"
-                    placeholder="0.00"
-                    value={amount}
-                    onChange={(e) => {
-                      // if (e.target.value === "") {
-                      //   setAmount("");
-                      //   setDeposit("");
-                      // }
-                      // const reg = new RegExp("^[0-9]+$");
-                      // if (reg.test(e.target.value.split(".").join(""))) {
-                      //   const amount = e.target.value
-                      //     .split(".")
-                      //     .join("")
-                      //     .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
-                      //   setAmount(amount);
-                      //   setValueDeposit(amount);
-                      // }
-                    }}
-                  />
-                  <img className="input-img" src={iconBoon} alt="Boon Icon" />
-                </div>
-              </div>
-              {/* Avax */}
-              <div className="contribute-sec">
-                <div className="contribute-title">
-                  <p>Preparing Amount</p>
-                  <span className="avax-quantity">AVAX</span>
-                </div>
-                <div className="input">
-                  <input
-                    value={deposit}
-                    className="input-text"
-                    style={{
-                      color: "#B6B6B6",
-                    }}
-                    name="name"
-                    placeholder="0.00"
-                    readOnly={true}
-                  />
-                  <img className="input-img" src={iconAvax} alt="Avax Icon" />
-                </div>
-              </div>
+              <EluInput
+                label={"Contribution Amount: "}
+                symbol={"$BOON"}
+                value={amount}
+                placeholder={"0.00"}
+                icon={iconBoon}
+                alt={"Icon Avax"}
+                onChange={(e) => {
+                  // if (e.target.value === "") {
+                  //   setAmount("");
+                  //   setDeposit("");
+                  // }
+                  // const reg = new RegExp("^[0-9]+$");
+                  // if (reg.test(e.target.value.split(".").join(""))) {
+                  //   const amount = e.target.value
+                  //     .split(".")
+                  //     .join("")
+                  //     .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+                  //   setAmount(amount);
+                  //   setValueDeposit(amount);
+                  // }
+                }}
+                symbolStyle={"boon-quantity"}
+              />
+              <EluInput
+                label={"Preparing Amount: "}
+                symbol={"AVAX"}
+                value={walletAccount}
+                placeholder={"0.00"}
+                icon={iconAvax}
+                alt={"Icon Avax"}
+                onChange={(e) => setValueDeposit(e.target.value)}
+                inputStyle={{
+                  color: "#B6B6B6",
+                }}
+                symbolStyle={"avax-quantity"}
+              />
               <div className="contribute-footer">
                 <div
                   className="contribute-btn"
-                  // onClick={async () => await onPressContribute()}
                   onClick={async () => {
                     await register();
                   }}
@@ -181,7 +158,6 @@ export default function WhiteList_Registration() {
                   <span>Register</span>
                 </div>
               </div>
-              {/* </div> */}
             </div>
           </div>
 

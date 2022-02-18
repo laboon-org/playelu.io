@@ -62,7 +62,7 @@ const findAvaxValue = () => {
 };
 
 // Recursive function
-const processData = (obj, name, value) => {
+const _processData = (obj, name, value) => {
   // Gia su name =[A,B,C]
   if (name.length === 1) {
     return {
@@ -73,7 +73,7 @@ const processData = (obj, name, value) => {
       // Trương hợp đã có
       const temp = [...name]; // Bỏ phần tử đầu tiên
       temp.shift();
-      const valueNew = processData(obj[name[0]], temp, value);
+      const valueNew = _processData(obj[name[0]], temp, value);
       obj[name[0]] = {
         ...valueNew,
         ...obj[name[0]],
@@ -83,7 +83,7 @@ const processData = (obj, name, value) => {
       obj[name[0]] = {};
       const temp = [...name]; // Bỏ phần tử đầu tiên
       temp.shift();
-      const valueNew = processData(obj[name[0]], temp, value);
+      const valueNew = _processData(obj[name[0]], temp, value);
       obj[name[0]] = {
         ...valueNew,
       };
@@ -109,7 +109,7 @@ const mapDynamicContent = (data) => {
     const pack = data[key];
     const name = pack.key.split("_");
     const value = pack.value;
-    processData(mainObj, name, value);
+    _processData(mainObj, name, value);
   }
   return mainObj;
 };
@@ -118,7 +118,6 @@ export {
   calValueDeposit,
   findAvaxValue,
   findBoonValue,
-  processData,
   mapSettingData,
   mapDynamicContent,
 };

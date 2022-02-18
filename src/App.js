@@ -9,14 +9,12 @@ import {useState, useEffect, useRef} from 'react';
 
 // Api
 import axios from 'axios';
-import restApi from "./api/rest/RestApi.js";
 
 // Services
 import { loadDataConfig } from './services/loadDataService.js';
 
 // Utils
 import {
-  processData,
   mapSettingData,
   mapDynamicContent,
 } from "./utilities/calcUtil.js";
@@ -29,9 +27,6 @@ import './scss/common/global.scss';
 // Components
 import UrlRecursive from './components/UrlRecursive';
 import Loading from "./components/Loading";
-
-// Stores
-import messageStorage from "./stores/messageStorage";
 
 // Pages
 const HomePage = React.lazy(() => import('./pages/home/homeContainer'));
@@ -47,37 +42,39 @@ function App(_props) {
   const isFirst = useRef(true);
 
   useEffect(() => {
+    if (isFirst.current) {
+      isFirst.current = false;
+      _loadCMSData();
+    }
     loadDataConfig();
   }, []);
 
-  useEffect(() => {
-    if (isFirst.current) {
-      isFirst.current = false;
-      new Promise((resolve) => axios({
+  const _loadCMSData = () => {
+    new Promise((resolve) =>
+      axios({
         url: graphQLEndPoint,
-        method: 'POST',
+        method: "POST",
         data: {
           query: Query,
         },
+      }).then((response) => {
+        const mainObj = mapDynamicContent(response.data.data.dynamicContents);
+        resolve({ ...mainObj });
       })
-        .then((response) => {
-            const mainObj = mapDynamicContent(response.data.data.dynamicContents);
-            resolve({...mainObj});
-        })).then((img) => {
-          axios({
-            url: graphQLEndPoint,
-            method: 'POST',
-            data: {
-              query: querySetting,
-            },
-          }).then((response) => {
-            const setting = mapSettingData(response.data.data.settings);
-            setImgList(img);
-            setSetting(setting);
-          });
+    ).then((img) => {
+      axios({
+        url: graphQLEndPoint,
+        method: "POST",
+        data: {
+          query: querySetting,
+        },
+      }).then((response) => {
+        const setting = mapSettingData(response.data.data.settings);
+        setImgList(img);
+        setSetting(setting);
       });
-    }
-  }, []);
+    });
+  }
 
   // CMS: Data (Remote Config)
   const UrlRecursiveContainer = ({Comp}) => {

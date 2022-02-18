@@ -1,14 +1,14 @@
 import React from "react";
 
-import './EluInput.module.scss';
+import './EluInput.scss';
 
-export default function EluInput(props) {
-  const { label, symbol, value, placeholder, icon, alt } = props;
+function EluInput(props) {
+  const { label, symbol, value, placeholder, icon, alt, onChange, inputStyle, symbolStyle } = props;
   return (
     <div className="contribute-sec">
       <div className="contribute-title">
         <p>{label}</p>
-        <span className="wallet-name">{symbol}</span>
+        <span className={["wallet-name", symbolStyle].join(" ")}>{symbol}</span>
       </div>
       <div className="input">
         <input
@@ -17,9 +17,22 @@ export default function EluInput(props) {
           name="name"
           value={value}
           placeholder={placeholder}
+          onChange={onChange}
+          style={inputStyle}
         />
         <img className="input-img" src={icon} alt={alt} />
       </div>
     </div>
   );
 }
+
+EluInput.defaultProps = {
+  label: "Wallet Address: ",
+  symbol: "Metamask",
+  value: "0x...",
+  placeholder: "0x...",
+  icon: "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp",
+  alt: "Icon Metamask",
+}
+
+export default EluInput;
