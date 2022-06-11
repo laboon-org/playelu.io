@@ -234,7 +234,9 @@ export default function Contribute(props) {
       }
 
       // setInfoState(true)
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   };
   const TransactionResult = (result) => {
     if (result) {
@@ -281,8 +283,8 @@ export default function Contribute(props) {
                 />
                 <img
                   className="input-img"
-                  src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp"
-                  alt=""
+                  src="https://media.graphassets.com/d8yVK0RpTcWjoCEL9ocu"
+                  alt="Metamask icon"
                 />
               </div>
             </div>
@@ -312,14 +314,13 @@ export default function Contribute(props) {
                           .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
                       setAmount(amount);
                       setValueDeposit(amount);
-                    } else {
-                    }
+                    } // else {}
                   }}
                 />
                 <img
                   className="input-img"
-                  src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp"
-                  alt=""
+                  src="https://media.graphassets.com/sO8XkAWbQcOJ3kAFkG6B"
+                  alt="Boon Icon"
                 />
               </div>
             </div>
@@ -340,8 +341,8 @@ export default function Contribute(props) {
                 />
                 <img
                   className="input-img"
-                  src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/avax1-icon.webp"
-                  alt=""
+                  src="https://media.graphassets.com/pqTA20kQ6C7d3vIUGNbX"
+                  alt="Avax Icon"
                 />
               </div>
             </div>

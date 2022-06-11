@@ -42,7 +42,7 @@ export default function NestFeaturesModal(props) {
             <Row>
               <Col sm={6}>
                 <BoxFeature
-                  title={'Framing'}
+                  title={'Farming'}
                   image={imgFramingMode}
                   disabledControl={true}
                 />

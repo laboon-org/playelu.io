@@ -1,1 +1,11 @@
 /** Define Soon */
+
+a span {
+    user-select: none;
+    cursor: pointer;
+}
+
+div > span {
+    user-select: none;
+    cursor: inherit;
+}

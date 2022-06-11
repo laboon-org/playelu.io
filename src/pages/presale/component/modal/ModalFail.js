@@ -10,7 +10,7 @@ export default function ModalFail(props) {
       <div className='modal-succeed__body'>
         <img
           className='modal-succeed__body__img'
-          src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/pig.webp'
+          src='https://media.graphassets.com/74I13I2TQNyUz3urkhEQ'
           alt=''
         />
         <span className='modal-fail__body__content'>

@@ -217,8 +217,8 @@ export default function WhiteList_Registration() {
                   />
                   <img
                     className="input-img"
-                    src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp"
-                    alt=""
+                    src="https://media.graphassets.com/d8yVK0RpTcWjoCEL9ocu"
+                    alt="Metamask Icon"
                   />
                 </div>
               </div>
@@ -253,8 +253,8 @@ export default function WhiteList_Registration() {
                   />
                   <img
                     className="input-img"
-                    src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp"
-                    alt=""
+                    src="https://media.graphassets.com/sO8XkAWbQcOJ3kAFkG6B"
+                    alt="Boon Icon"
                   />
                 </div>
               </div>
@@ -277,8 +277,8 @@ export default function WhiteList_Registration() {
                   />
                   <img
                     className="input-img"
-                    src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/avax1-icon.webp"
-                    alt=""
+                    src="https://media.graphassets.com/pqTA20kQ6C7d3vIUGNbX"
+                    alt="Avax Icon"
                   />
                 </div>
               </div>

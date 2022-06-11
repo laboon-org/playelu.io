@@ -47,7 +47,7 @@ export default function WhiteListComingSoon(props) {
       <div className='modal-comingsoon__whitelist'>
         <img
           className='modal-succeed__body__img modal-comingsoon__whitelist--img'
-          src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/comingsoon.webp'
+          src='https://media.graphassets.com/T4AaxQQDOzB8IdrLiKg8'
           alt=''
         />
         <div className='modal-succeed__body__content modal-comingSoon__content'>

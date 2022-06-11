@@ -8,7 +8,7 @@
 .modal-thankyou > .modal-content,
 .modal-comingsoon > .modal-content {
   width: 50vw;
-  height: 33.5vw;
+  height: 40vw;
   border-radius: 37px;
   .modal-container {
     width: 100%;
@@ -34,6 +34,10 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 46px;
+      line-height: 56px;
+    }
+    p {
+      line-height: 30px;
     }
   }
 }
@@ -71,7 +75,7 @@
   .modal-thankyou > .modal-content,
   .modal-comingsoon > .modal-content {
     width: 70vw;
-    height: 50vw;
+    height: 60vw;
     border-radius: 37px;
 
     .modal-container {

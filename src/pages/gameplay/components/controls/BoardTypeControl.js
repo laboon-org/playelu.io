@@ -12,13 +12,12 @@ function BoardTypeControl(props) {
 
   return (
     <div className="board-type">
-      <ControlElem image={layout1} alt={'Box'} clsType="square" name={'Box'} />
+      <ControlElem image={layout1} alt={'Box'} clsType="square" name={'Box'} isActivated={true}/>
       <ControlElem
         image={layout2}
         alt={'Hex'}
         clsType="circle"
         name={'Hex'}
-        isActivated={true}
       />
       <ControlElem
         image={layout3}

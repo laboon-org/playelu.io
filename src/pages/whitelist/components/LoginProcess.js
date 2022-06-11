@@ -52,7 +52,7 @@ export default function LoginProcess(props) {
     showModalNotFound,
   } = props;
 
-  const iconMetaMask = 'https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp';
+  const iconMetaMask = 'https://media.graphassets.com/d8yVK0RpTcWjoCEL9ocu';
   // const iconCoin98 = 'https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/icon_coin98.png';
 
   //* Function

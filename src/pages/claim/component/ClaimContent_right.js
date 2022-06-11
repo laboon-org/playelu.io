@@ -8,11 +8,11 @@ export default function ClaimContentright() {
     <div className='claim-right__frame'>
       <div className='claim-right__header'>
         <div className='claim-right__header--title'>
-          <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp' alt='' />
+          <img src='https://media.graphassets.com/O5F689n8SIWaxdyUwwFK' alt='Boon Icon' />
           <span>
             BOON
           </span>
-          <img src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp' alt='' />
+          <img src='https://media.graphassets.com/O5F689n8SIWaxdyUwwFK' alt='Boon Icon' />
         </div>
         <span className='claim-right__header--sub'>
           TOKEN CLAIM DASHBOARD
@@ -25,7 +25,7 @@ export default function ClaimContentright() {
               Address
             </span>
             <div className='address-wallet__input'>
-              <img className='address-wallet__input-img' src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp' alt='' />
+              <img className='address-wallet__input-img' src='https://media.graphassets.com/d8yVK0RpTcWjoCEL9ocu' alt='Metamask Icon' />
               <input type='text' placeholder='Connect your wallet' />
             </div>
           </div>

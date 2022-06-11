@@ -53,7 +53,7 @@ export default function ModalSucceed(props) {
         <div className='modal-succeed white-list__succeed'>
           <img
             className='white-list__succeed__img'
-            src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/white-list/boon_wallet.webp'
+            src='https://media.graphassets.com/je7RSQoyRmKTYqLJHhfP'
             alt=''
           />
           <div className='modal-succeed__body__content white-list__succeed__content'>
