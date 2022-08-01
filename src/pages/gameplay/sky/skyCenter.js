@@ -5,13 +5,6 @@ import _ from 'lodash';
 import DropFeaturesModal from './../components/modals/DropFeaturesModal';
 import UrlRecursive from './../../../components/UrlRecursive';
 
-import IMG_ISLAND_BLANK_1 from '../../../assets/images/gameplay_page/island_blank_1.png';
-import IMG_ISLAND_BLANK_2 from '../../../assets/images/gameplay_page/island_blank_2.png';
-import IMG_ISLAND_BLANK_3 from '../../../assets/images/gameplay_page/island_blank_3.png';
-import IMG_ISLAND_FOUNTAIN from '../../../assets/images/gameplay_page/island_fountain.png';
-import IMG_ISLAND_WATER from '../../../assets/images/gameplay_page/island_water.png';
-import IMG_ISLAND_FIRE from '../../../assets/images/gameplay_page/island_fire.png';
-
 window.addEventListener('scroll', zoom);
 function zoom() {
   const zoom = document.querySelectorAll('.zoom');
@@ -30,27 +23,27 @@ export default function SkyCenter(props) {
   const listIslandUrl = [
     {
       url1: _.isEmpty(url_api) ?
-        '' : IMG_ISLAND_BLANK_1, // url_api.imageGamePlay.skyCenter.islandBlank1,
+        '' : url_api.imageGamePlay.skyCenter.islandBlank1,
       url2: _.isEmpty(url_api) ?
-        '' : IMG_ISLAND_FIRE, // url_api.imageGamePlay.skyCenter.fireIsland,
+        '' : url_api.imageGamePlay.skyCenter.fireIsland,
       url3: _.isEmpty(url_api) ?
-        '' : IMG_ISLAND_FIRE, // url_api.imageGamePlay.skyCenter.fireIslandImg,
+        '' : url_api.imageGamePlay.skyCenter.fireIslandImg,
     },
     {
       url1: _.isEmpty(url_api) ?
-        '' : IMG_ISLAND_BLANK_2, // url_api.imageGamePlay.skyCenter.islandBlank2,
+        '' : url_api.imageGamePlay.skyCenter.islandBlank2,
       url2: _.isEmpty(url_api) ?
-        '' : IMG_ISLAND_FOUNTAIN, // url_api.imageGamePlay.skyCenter.fountain,
+        '' : url_api.imageGamePlay.skyCenter.fountain,
       url3: _.isEmpty(url_api) ?
-        '' : IMG_ISLAND_FOUNTAIN, // url_api.imageGamePlay.skyCenter.fountainImg,
+        '' : url_api.imageGamePlay.skyCenter.fountainImg,
     },
     {
       url1: _.isEmpty(url_api) ?
-        '' : IMG_ISLAND_BLANK_1, // url_api.imageGamePlay.skyCenter.islandBlank3,
+        '' : url_api.imageGamePlay.skyCenter.islandBlank1, // url_api.imageGamePlay.skyCenter.islandBlank3,
       url2: _.isEmpty(url_api) ?
-        '' : IMG_ISLAND_WATER, // url_api.imageGamePlay.skyCenter.islandWater,
+        '' : url_api.imageGamePlay.skyCenter.islandWater,
       url3: _.isEmpty(url_api) ?
-        '' : IMG_ISLAND_WATER, // url_api.imageGamePlay.skyCenter.islandWaterImg,
+        '' : url_api.imageGamePlay.skyCenter.islandWaterImg,
     },
   ];
   const [dropShow, setDropShow] = useState(false);

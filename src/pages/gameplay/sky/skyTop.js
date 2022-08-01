@@ -10,13 +10,6 @@ import Modal from 'react-bootstrap/Modal';
 import GameplayRune from './gameplayRune';
 import UrlRecursive from '../../../components/UrlRecursive';
 
-import IMG_SHADOWSTONE from '../../../assets/images/gameplay_page/đá/shadow_stone.png';
-import IMG_BOONMOON from '../../../assets/images/gameplay_page/boon_moon.png';
-import IMG_DROP from '../../../assets/images/gameplay_page/đá/drop.png';
-import IMG_NEST from '../../../assets/images/gameplay_page/đá/nest.png';
-import IMG_SCOUT from '../../../assets/images/gameplay_page/đá/scout.png';
-import IMG_METAVERSE from '../../../assets/images/gameplay_page/đá/metaverse.png';
-
 export default function SkyTop(props) {
   const {url_api, setting} = props;
 
@@ -28,13 +21,13 @@ export default function SkyTop(props) {
     handleShowPopup();
   };
 
-  const shadowStone = _.isEmpty(url_api) ? '' : IMG_SHADOWSTONE; // url_api.imageGamePlay.skyTop.shadowStone;
+  const shadowStone = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.shadowStone;
   // const boonMoon = _.isEmpty(url_api) ? '' : IMG_BOONMOON; // url_api.imageGamePlay.skyTop.boonMoon
 
-  const imgDrop = _.isEmpty(url_api) ? '' : IMG_DROP; // url_api.imageGamePlay.skyTop.drop;
-  const imgNest = _.isEmpty(url_api) ? '' : IMG_NEST; // url_api.imageGamePlay.skyTop.nest;
-  const imgScout = _.isEmpty(url_api) ? '' : IMG_SCOUT; // url_api.imageGamePlay.skyTop.scout;
-  const imgMetaVerse = _.isEmpty(url_api) ? '' : IMG_METAVERSE; // url_api.imageGamePlay.skyTop.metaVerse;
+  const imgDrop = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.drop;
+  const imgNest = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.nest;
+  const imgScout = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.scout;
+  const imgMetaVerse = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.metaVerse;
 
   const imgEluLogo = _.isEmpty(url_api) ? '' : url_api.image.eluLogo1;
 
