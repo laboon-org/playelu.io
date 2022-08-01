@@ -20,7 +20,9 @@ export default function SkyBottom(props) {
       </video>
       <div className='sailboat'>
         <div className='sailboat-left'>
-          <img src={_.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyBottom.sailboatLeft} alt="sailboat-left" />
+          <img src={_.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyBottom.sailboatLeft} alt="sailboat-left"
+            style={{position: 'relative', top: '10%'}}
+          />
         </div>
         <div className='sailboat-right'>
           <img src={_.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyBottom.sailboatRight} alt="sailboat-right" />

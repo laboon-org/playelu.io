@@ -46,10 +46,13 @@
       .pinwheel {
         position: absolute;
         right: -12%;
-        top: 15%;
+        top: 28%;
         width: 40%;
         z-index: -1;
         animation: pinwheel 3s linear infinite;
+      }
+      .house-img {
+        margin-top: 60px;
       }
     }
 
@@ -85,9 +88,9 @@
 
   .woodsign {
     position: absolute;
-    top: -8%;
+    top: -25%;
     left: 7.5%;
-    width: 14%;
+    width: 20%;
   }
 
   .woodsign-content {
@@ -95,10 +98,10 @@
 
     .woodsign-text {
       position: absolute;
-      top: 10%;
-      left: 5%;
-      width: 55%;
-      height: 45%;
+      top: 14%;
+      left: 13%;
+      width: 45%;
+      height: 35%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -106,7 +109,6 @@
 
       img {
         width: 100%;
-        cursor: pointer;
       }
     }
   }
