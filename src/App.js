@@ -168,9 +168,4 @@ function App(_props) {
 }
 export default App;
 
-/*
-  TODO:
-  Create a new database
-  Add 104 items from old database to new one.
-  Replace database
-*/
+

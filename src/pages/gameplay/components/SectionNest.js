@@ -8,6 +8,8 @@ import NestFeaturesModal from './../components/modals/NestFeaturesModal';
 // import NestOnBoarding from '../nest_onboarding/nest_onBoarding';
 import UrlRecursive from '../../../components/UrlRecursive';
 
+import IMG_BG_OCEAN from '../../../assets/images/gameplay_page/background_ocean.png';
+
 window.addEventListener('scroll', opacity);
 function opacity() {
   const opacity = document.querySelectorAll('.opacity');
@@ -39,8 +41,7 @@ export default function SectionNest(props) {
               className="ocean-img_back"
               src={
                 _.isEmpty(url_api) ?
-                  '' :
-                  url_api.imageGamePlay.ocean.backgroundOcean
+                  '' : IMG_BG_OCEAN // url_api.imageGamePlay.ocean.backgroundOcean
               }
               alt=""
             ></img>
@@ -49,8 +50,7 @@ export default function SectionNest(props) {
               className="ocean-img"
               src={
                 _.isEmpty(url_api) ?
-                  '' :
-                  url_api.imageGamePlay.ocean.backgroundOcean
+                  '' : url_api.imageGamePlay.ocean.backgroundOcean
               }
               alt=""
             ></img>
@@ -206,7 +206,7 @@ export default function SectionNest(props) {
                 }
                 alt=""
               />
-              <div className="lightColumn-img">
+              {/* <div className="lightColumn-img">
                 <div className="ag-number_light">
                   <img
                     className="light_column"
@@ -219,7 +219,7 @@ export default function SectionNest(props) {
                     alt=""
                   />
                 </div>
-              </div>
+              </div> */}
               <div className="eluNest-btn">
                 <div
                   className="elu-btn nest-btn"

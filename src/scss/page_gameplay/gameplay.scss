@@ -5,7 +5,7 @@
 }
 
 .sky {
-  background: url("https://storage.googleapis.com/laboon-img-storage/play-elu/gameplay/skyBackground.webp")
+  background: url('../../assets/images/gameplay_page/background.png')
     no-repeat center / cover;
   position: relative;
   margin-top: 56px;
@@ -50,6 +50,7 @@
   margin: auto;
   align-items: center;
   p {
+    cursor: pointer;
     display: inline-block;
     width: 100%;
     text-align: center;
