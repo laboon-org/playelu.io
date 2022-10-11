@@ -31,7 +31,7 @@ EluInput.defaultProps = {
   symbol: "Metamask",
   value: "0x...",
   placeholder: "0x...",
-  icon: "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp",
+  icon: "https://media.graphassets.com/d8yVK0RpTcWjoCEL9ocu",
   alt: "Icon Metamask",
 }
 

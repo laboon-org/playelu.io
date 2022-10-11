@@ -9,13 +9,13 @@ import 'animate.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MoralisProvider
+    {/* <MoralisProvider
       appId="2VJA54mJp4bsKSpS2JJXxSBq15xjpNXCVEFGdI9s"
       serverUrl="https://b93ubroafjyx.usemoralis.com:2053/server"
       initializeOnMount={true}
-    >
+    > */}
       <App />
-    </MoralisProvider>
+    {/* </MoralisProvider> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

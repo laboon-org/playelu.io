@@ -14,13 +14,16 @@ import ModalSucceedWhiteList from "./modal/ModalSucceed_whiteList";
 // Api
 import restApi from "../../../api/rest/RestApi.js";
 
+// Util
+import wallet from '../../../utilities/wallet';
+
 // Stores
 import { getRefCode } from './../../../stores/localStorage';
 import walletStorage from "../../../stores/walletStorage";
 
-const iconMetaMask = "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp";
-const iconBoon = "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp";
-const iconAvax = "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/avax1-icon.webp";
+// const iconMetaMask = "https://media.graphassets.com/d8yVK0RpTcWjoCEL9ocu";
+// const iconBoon = "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp";
+// const iconAvax = "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/avax1-icon.webp";
 
 export default function WhiteList_Registration() {
   // const [amount, setAmount] = useState(''.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'));

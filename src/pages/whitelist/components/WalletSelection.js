@@ -19,7 +19,7 @@ import { chain, chainId } from "../../../constant/chainNetworkConst";
 import walletStorage from "../../../stores/walletStorage";
 // import messageStorage from "../../../stores/messageStorage";
 
-const iconMetaMask = "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp";
+const iconMetaMask = "https://media.graphassets.com/d8yVK0RpTcWjoCEL9ocu";
 
 // enum AuthenticationState {
 //   UNDEFINED = "undefined",
