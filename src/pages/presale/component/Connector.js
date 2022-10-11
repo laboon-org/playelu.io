@@ -331,13 +331,13 @@ export default function Connector(props) {
     <div className="body-right">
       <span className="body-right__title">WALLET SELECTION</span>
       <Web3Connector
-        icon="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp"
+        icon="https://media.graphassets.com/d8yVK0RpTcWjoCEL9ocu"
         title="Login with Metamask"
         wallet_name="metamask"
       />
 
       <Web3Connector
-        icon="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/icon_coin98.png"
+        icon="https://media.graphassets.com/BoCtDBgSf2gQ6oI2wqkk"
         title="Login with Coin98"
         wallet_name="coin98"
       />

@@ -38,12 +38,12 @@ export default function LogoArea() {
         <Col className="logo-frame" sm={12}>
           <img
             className="elu-logo"
-            src="https://storage.googleapis.com/laboon-img-storage/play-elu/common/Elu_Verse_V5.webp"
+            src="https://media.graphassets.com/jdlqQJ7TQKRdIZixvzwg"
             alt=""
           />
           <img
             className="boon-coin"
-            src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp"
+            src="https://media.graphassets.com/FI0NIFZmREaAYK0QZHkn"
             alt=""
           />
         </Col>

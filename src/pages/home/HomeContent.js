@@ -66,7 +66,7 @@ function HomeContent(props) {
           />
         </div>
         <div className="modal-container">
-          <img src={_.isEmpty(url_api) ? '' : url_api.image.eluLogo} alt="" />
+          <img src={_.isEmpty(url_api) ? '' : url_api.image.eluLogo} alt="Elu logo" />
           <h1>thank you!</h1>
           <p className="name-email">{email}</p>
         </div>
@@ -101,7 +101,7 @@ function HomeContent(props) {
               ></input>
               <img
                 className="iconEmail"
-                src="https://storage.googleapis.com/laboon-img-storage/play-elu/playelu/icon_mail.png"
+                src={_.isEmpty(url_api) ? '#' : url_api.image.iconEmail}
                 alt=""
               />
               <button
@@ -112,7 +112,7 @@ function HomeContent(props) {
                 <div className="subcribe__playelu-btn--frame">
                   <img
                     className=" subcribe__playelu-btn--background"
-                    src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/button_gameplays.webp"
+                    src={_.isEmpty(url_api) ? '#' : url_api.image.subsBtn}
                     alt=""
                   />
                   <span className="subcribe__playelu-btn--text">Subscribe</span>

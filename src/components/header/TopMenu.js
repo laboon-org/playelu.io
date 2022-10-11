@@ -12,7 +12,7 @@ export default function TopMenu(props) {
       <a className="home-icon__link" href="/">
         <img
           className="home-icon__img"
-          src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/Home-icon.webp"
+          src={_.isEmpty(url_api) ? '/#' : url_api.common.homeIcon}
           alt="Home Icon"
         />
       </a>

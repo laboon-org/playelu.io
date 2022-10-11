@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import '../../../scss/page_gameplay/skyScss/skyBottom.scss';
 
+
 export default function SkyBottom(props) {
   const { url_api } = props;
   return (
@@ -19,7 +20,9 @@ export default function SkyBottom(props) {
       </video>
       <div className='sailboat'>
         <div className='sailboat-left'>
-          <img src={_.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyBottom.sailboatLeft} alt="sailboat-left" />
+          <img src={_.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyBottom.sailboatLeft} alt="sailboat-left"
+            style={{position: 'relative', top: '10%'}}
+          />
         </div>
         <div className='sailboat-right'>
           <img src={_.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyBottom.sailboatRight} alt="sailboat-right" />
@@ -28,3 +31,8 @@ export default function SkyBottom(props) {
     </div>
   );
 }
+
+// url_api.imageGamePlay.skyBottom.boatImg
+// url_api.imageGamePlay.skyBottom.boatImg
+// url_api.imageGamePlay.skyBottom.sailboatLeft
+// url_api.imageGamePlay.skyBottom.sailboatRight

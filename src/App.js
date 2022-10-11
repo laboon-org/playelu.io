@@ -61,20 +61,92 @@ function App(_props) {
         const mainObj = mapDynamicContent(response.data.data.dynamicContents);
         resolve({ ...mainObj });
       })
-    ).then((img) => {
-      axios({
-        url: graphQLEndPoint,
-        method: "POST",
-        data: {
-          query: querySetting,
-        },
-      }).then((response) => {
-        const setting = mapSettingData(response.data.data.settings);
-        setImgList(img);
-        setSetting(setting);
+          .then((response) => {
+            console.log('dynamicContents: ', response.data.data.dynamicContents);
+            const data = response.data.data.dynamicContents;
+
+            // Process url api list function: methodExplaning.js
+            const process = (obj, name, value) => {
+              // Trường hợp 3
+              if (name.length === 1) {
+                return {
+                  [name[0]]: value,
+                };
+              } else {
+                // Trường hợp 2
+                if (name[0] in obj) {
+                  const temp = [...name];
+                  temp.shift();
+                  const valueNew = process(obj[name[0]], temp, value);
+                  obj[name[0]] = {
+                    ...valueNew,
+                    ...obj[name[0]],
+                  };
+                } else {
+                  // Trường hợp 1
+                  obj[name[0]] = {};
+                  const temp = [...name];
+                  temp.shift();
+                  const valueNew = process(obj[name[0]], temp, value);
+                  obj[name[0]] = {
+                    ...valueNew,
+                    ...obj[name[0]],
+                  };
+                }
+              }
+            };
+
+            const mainObj = {};
+            for (let key = 0; key < data.length; key++) {
+              const pack = data[key];
+              const name = pack.key.split('_');
+              const value = pack.image === null ? pack.value : pack.image.url;
+              process(mainObj, name, value);
+            }
+            console.log('mainObj: ', mainObj);
+            resolve({...mainObj});
+          })).then((img) => { // img là object chứa image list đã được resolve
+        // Lấy các thiết lập dc lưu trên API về.
+        axios({
+          url: graphQLEndPoint,
+          method: 'POST',
+          data: {
+            query: querySetting,
+          },
+        }).then((response) => {
+          // console.log('Settings: ', response.data.data.settings);
+          const data = response.data.data.settings;
+          const setting = {};
+          for (let i = 0; i < data.length; i++) {
+            const pa = data[i];
+            const name = pa.key;
+            const value = pa.value;
+            setting[name] = value;
+          }
+          setImgList(img);
+          setSetting(setting);
+        });
       });
-    });
-  }
+  };
+
+
+  const LoadData = () => {
+    const load = usePromise((_a) =>
+      new Promise((resolve) => {
+        const data = axios.post('https://laboon.as.r.appspot.com/config')
+            .then((value) => {
+              return value.data.content;
+            }).catch((_err) => {
+              return {};
+            //* Not to be error
+            });
+        messageStorage.getInstance().setMessage('config', data);
+        resolve(true);
+      })
+    , {});
+
+    return (<div></div>);
+  };
 
   // CMS: Data (Remote Config)
   const UrlRecursiveContainer = ({Comp}) => {
@@ -91,7 +163,8 @@ function App(_props) {
   };
 
   return (
-    <React.Suspense fallback={<Loading />}>
+    <React.Suspense fallback={<Loading />}> {/* Màn hình loading trong lúc web đang lấy dữ liệu */}
+      <LoadData />
       <Router>
         <Routes>
           <Route path="/" element={<UrlRecursiveContainer Comp={HomePage} />} />
@@ -114,3 +187,5 @@ function App(_props) {
   );
 }
 export default App;
+
+

@@ -23,28 +23,27 @@ export default function SkyCenter(props) {
   const listIslandUrl = [
     {
       url1: _.isEmpty(url_api) ?
-        '' :
-        url_api.imageGamePlay.skyCenter.islandBlank1,
-      url2: _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyCenter.fireIsland,
+        '' : url_api.imageGamePlay.skyCenter.islandBlank1,
+      url2: _.isEmpty(url_api) ?
+        '' : url_api.imageGamePlay.skyCenter.fireIsland,
       url3: _.isEmpty(url_api) ?
-        '' :
-        url_api.imageGamePlay.skyCenter.fireIslandImg,
+        '' : url_api.imageGamePlay.skyCenter.fireIslandImg,
     },
     {
       url1: _.isEmpty(url_api) ?
-        '' :
-        url_api.imageGamePlay.skyCenter.islandBlank2,
-      url2: _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyCenter.fountain,
-      url3: _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyCenter.fountainImg,
+        '' : url_api.imageGamePlay.skyCenter.islandBlank2,
+      url2: _.isEmpty(url_api) ?
+        '' : url_api.imageGamePlay.skyCenter.fountain,
+      url3: _.isEmpty(url_api) ?
+        '' : url_api.imageGamePlay.skyCenter.fountainImg,
     },
     {
       url1: _.isEmpty(url_api) ?
-        '' :
-        url_api.imageGamePlay.skyCenter.islandBlank3,
-      url2: _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyCenter.islandWater,
+        '' : url_api.imageGamePlay.skyCenter.islandBlank1, // url_api.imageGamePlay.skyCenter.islandBlank3,
+      url2: _.isEmpty(url_api) ?
+        '' : url_api.imageGamePlay.skyCenter.islandWater,
       url3: _.isEmpty(url_api) ?
-        '' :
-        url_api.imageGamePlay.skyCenter.islandWaterImg,
+        '' : url_api.imageGamePlay.skyCenter.islandWaterImg,
     },
   ];
   const [dropShow, setDropShow] = useState(false);

@@ -2,10 +2,10 @@
 export default {
   icon: {
     metamask:
-      "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/meta-icon.webp",
+      "https://media.graphassets.com/d8yVK0RpTcWjoCEL9ocu",
     trust_wallet:
-      "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/trust1.webp",
-    avax: "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/avax1-icon.webp",
-    boon: "https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/boon-coin1.webp",
+      "https://media.graphassets.com/LMu9hREDRiuoWIOrRR2r",
+    avax: "https://media.graphassets.com/pqTA20kQ6C7d3vIUGNbX",
+    boon: "https://media.graphassets.com/sO8XkAWbQcOJ3kAFkG6B",
   },
 };

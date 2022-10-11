@@ -26,7 +26,7 @@ export default function whitelistContainer(props) {
         <div className="header">
           <HeaderContainer url_api={url_api} />
         </div>
-        <WhiteListBody />
+        <WhiteListBody url_api={url_api}/>
       </div>
       <div className="playelu-footer">
         <FooterContainer url_api={url_api} />

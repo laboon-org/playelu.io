@@ -22,7 +22,7 @@ export default function SkyTop(props) {
   };
 
   const shadowStone = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.shadowStone;
-  const boonMoon = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.boonMoon;
+  // const boonMoon = _.isEmpty(url_api) ? '' : IMG_BOONMOON; // url_api.imageGamePlay.skyTop.boonMoon
 
   const imgDrop = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.drop;
   const imgNest = _.isEmpty(url_api) ? '' : url_api.imageGamePlay.skyTop.nest;
@@ -76,9 +76,8 @@ export default function SkyTop(props) {
               <img
                 className="shadow-stone shadow-stone-1"
                 src={shadowStone}
-                alt="Game-1: Drop (Match-3)"
               />
-              <img src={imgDrop} alt="" />
+              <img src={imgDrop} alt="Game-1: Drop (Match-3)" />
             </Link>
           </div>
           <div className="gameplay__selection-img">
@@ -86,7 +85,6 @@ export default function SkyTop(props) {
               <img
                 className="shadow-stone shadow-stone-2"
                 src={shadowStone}
-                alt="Boon Token"
               />
               <img src={imgNest} alt="Game-2: Nest (Framing & Battling)" />
             </Link>
@@ -94,7 +92,7 @@ export default function SkyTop(props) {
           <div className="rune">
             <Link to="/">
               <GameplayRune />
-              <img className="gameplay__boonmoon-img" src={boonMoon} alt="" />
+              {/* <img className="gameplay__boonmoon-img" src={boonMoon} alt="" /> */}
             </Link>
           </div>
           {setting.page_gameplay_section_scout_game_feature_enabled === true ? (

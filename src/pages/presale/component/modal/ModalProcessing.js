@@ -10,7 +10,7 @@ export default function ModalInProcessing(props) {
         </span>
         <img
           className='modal-sale__img'
-          src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/pig-boon.webp'
+          src='https://media.graphassets.com/U766yZCPTtqMDJ5mwgCF'
           alt=''
         />
         <ModalLoader />

@@ -104,47 +104,87 @@ export default function WhiteList_Registration() {
           <div className="contribute">
             <span className="contribute--shadow"></span>
             <div className="contribute-frame">
-              <EluInput
-                label={"Wallet Address: "}
-                symbol={"Metamask"}
-                value={walletAccount}
-                placeholder={"0x..."}
-                icon={iconMetaMask}
-                alt={"Icon Metamask"}
-                onChange={(e) => setValueDeposit(e.target.value)}
-              />
-              <EluInput
-                label={"Contribution Amount: "}
-                symbol={"$BOON"}
-                value={amount}
-                placeholder={"0.00"}
-                icon={iconBoon}
-                alt={"Icon Avax"}
-                onChange={(e) => {
-                  // if (e.target.value === "") {
-                  //   setAmount("");
-                  //   setDeposit("");
-                  // }
-                  // const amount = formatAmount(amount);
-                  //   setAmount(amount);
-                  //   setValueDeposit(amount);
-                  // }
-                }}
-                symbolStyle={"boon-quantity"}
-              />
-              <EluInput
-                label={"Preparing Amount: "}
-                symbol={"AVAX"}
-                value={"0.00"}
-                placeholder={"0.00"}
-                icon={iconAvax}
-                alt={"Icon Avax"}
-                onChange={(e) => setValueDeposit(e.target.value)}
-                inputStyle={{
-                  color: "#B6B6B6",
-                }}
-                symbolStyle={"avax-quantity"}
-              />
+              {/* Wallet */}
+              <div className="contribute-sec">
+                <div className="contribute-title">
+                  <p>Wallet Address:</p>
+                  <span className="wallet-name">MetaMask</span>
+                </div>
+                <div className="input">
+                  <input
+                    className="input-text"
+                    type="text"
+                    name="name"
+                    value={wallet.getInstance().account}
+                    placeholder=""
+                  />
+                  <img
+                    className="input-img"
+                    src="https://media.graphassets.com/d8yVK0RpTcWjoCEL9ocu"
+                    alt="Metamask Icon"
+                  />
+                </div>
+              </div>
+              {/* Amount */}
+              <div className="contribute-sec">
+                <div className="contribute-title">
+                  <p>Contribution Amount</p>
+                  <span className="boon-quantity">$BOON</span>
+                </div>
+                <div className="input">
+                  <input
+                    className="input-text boon-quantity__input"
+                    type="text"
+                    name="name"
+                    placeholder="0.00"
+                    value={amount}
+                    onChange={(e) => {
+                      if (e.target.value === '') {
+                        setAmount('');
+                        setDeposit('');
+                      }
+                      const reg = new RegExp('^[0-9]+$');
+                      if (reg.test(e.target.value.split('.').join(''))) {
+                        const amount = e.target.value
+                            .split('.')
+                            .join('')
+                            .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+                        setAmount(amount);
+                        setValueDeposit(amount);
+                      }
+                    }}
+                  />
+                  <img
+                    className="input-img"
+                    src="https://media.graphassets.com/sO8XkAWbQcOJ3kAFkG6B"
+                    alt="Boon Icon"
+                  />
+                </div>
+              </div>
+              {/* Avax */}
+              <div className="contribute-sec">
+                <div className="contribute-title">
+                  <p>Preparing Amount</p>
+                  <span className="avax-quantity">AVAX</span>
+                </div>
+                <div className="input">
+                  <input
+                    value={deposit}
+                    className="input-text"
+                    style={{
+                      color: '#B6B6B6',
+                    }}
+                    name="name"
+                    placeholder="0.00"
+                    readOnly={true}
+                  />
+                  <img
+                    className="input-img"
+                    src="https://media.graphassets.com/pqTA20kQ6C7d3vIUGNbX"
+                    alt="Avax Icon"
+                  />
+                </div>
+              </div>
               <div className="contribute-footer">
                 <div
                   className="contribute-btn"

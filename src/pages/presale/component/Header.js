@@ -6,7 +6,7 @@ export default function Header() {
       <a className="link-home" href="https://playelu.io/">
         <img
           className="home-icon"
-          src="https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/button/Home-icon.webp"
+          src="https://media.graphassets.com/j2S1gGpRc6Vawrb6CFXw"
           alt=""
         />
       </a>

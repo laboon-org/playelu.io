@@ -6,8 +6,8 @@ export default function ClaimModal() {
     <div className='claim-comingsoon'>
       <img
         className='claim-comingsoon__img'
-        src='https://storage.googleapis.com/laboon-img-storage/play-elu/seed-sale/comingsoon.webp'
-        alt=''
+        src='https://media.graphassets.com/T4AaxQQDOzB8IdrLiKg8'
+        alt='Cooming soon'
       />
       <span className='claim-comingsoon__content'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor consectetur convallis.

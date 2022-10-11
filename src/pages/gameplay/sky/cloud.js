@@ -12,3 +12,5 @@ export default function Cloud(props) {
     </div>
   );
 }
+// url_api.imageGamePlay.cloud1
+// url_api.imageGamePlay.cloud2
